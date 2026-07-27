@@ -1,3 +1,4 @@
+import type { Prisma } from "@prisma/client";
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@tiladys/db';
 import { requireUser, assertOrigin } from '@/lib/security';
@@ -43,8 +44,9 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     const payload = parseProjectPayload(body?.payload ?? body);
     const removeImageIds = imageIds(body?.removeImageIds);
 
-    const row = await db.$transaction(async (tx) => {
-      if (removeImageIds.length) {
+    const row = await db.$transaction(
+      async (tx: Prisma.TransactionClient) => {      
+        if (removeImageIds.length) {
         await tx.projectImage.deleteMany({ where: { projectId: id, id: { in: removeImageIds } } });
       }
       return tx.project.update({
