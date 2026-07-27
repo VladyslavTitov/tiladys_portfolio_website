@@ -1,0 +1,32 @@
+{
+  "name": "@tiladys/control",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build --webpack",
+    "start": "next start -p 3001",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tiladys/db": "*",
+    "@tiladys/shared": "*",
+    "argon2": "^0.43.1",
+    "jose": "^6.0.11",
+    "lucide-react": "^0.536.0",
+    "next": "16.2.11",
+    "nodemailer": "^7.0.5",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "zod": "^4.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.31.0",
+    "eslint-config-next": "16.2.11",
+    "typescript": "^5.8.3"
+  }
+}

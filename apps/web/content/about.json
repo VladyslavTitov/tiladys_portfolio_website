@@ -1,0 +1,560 @@
+{
+  "en": {
+    "hero": {
+      "title": "About & Qualifications",
+      "subtitle": "Practical IT help for home users and small businesses in NRW."
+    },
+    "whoIAm": {
+      "title": "Who I Am",
+      "items": [
+        "Founder of TiLADYS",
+        "Practical IT support and websites",
+        "Clear communication, reliable help"
+      ]
+    },
+    "helpWith": {
+      "title": "What I Help With",
+      "items": [
+        {"label": "Websites", "icon": "globe"},
+        {"label": "PC & Laptop Help", "icon": "laptop"},
+        {"label": "Digital Support", "icon": "message"},
+        {"label": "Linux & Server Basics", "icon": "server"},
+        {"label": "Troubleshooting", "icon": "tools"},
+        {"label": "Google Business", "icon": "store"}
+      ]
+    },
+    "whyChoose": {
+      "title": "Why Clients Choose Me",
+      "items": [
+        "Clear explanations",
+        "Friendly support",
+        "Fair prices",
+        "Reliable help"
+      ]
+    },
+    "technical": {
+      "title": "Technical Background",
+      "items": [
+        {"label": "HTML / CSS / JavaScript Basics", "icon": "code"},
+        {"label": "WordPress (Themes & Plugins)", "icon": "wordpress"},
+        {"label": "Linux Basics (Ubuntu / Debian)", "icon": "linux"},
+        {"label": "Docker & Container Basics", "icon": "docker"},
+        {"label": "Networking Basics (IP, DNS, DHCP, Router)", "icon": "network"},
+        {"label": "Google Workspace / Office", "icon": "document"}
+      ]
+    },
+    "education": {
+      "title": "Education & Learning",
+      "items": [
+        {
+          "school": "Secondary Industrial School of Electrical Engineering, Slovakia",
+          "fieldLabel": "Field of Study",
+          "field": "Intelligent Technologies",
+          "period": "2011 – 2020"
+        },
+        {
+          "school": "Higher Vocational School No. 7, Ukraine",
+          "fieldLabel": "Field of Study",
+          "field": "Information and Software Processing Operator",
+          "period": "2020 – 2022"
+        },
+        {
+          "school": "General Integration Course — German Language",
+          "fieldLabel": "Provider",
+          "field": "Diakonisches Werk Märkisches e.V., Berlin",
+          "period": "In progress"
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "items": [
+        {"name": "Ukrainian", "level": "Native", "flag": "🇺🇦"},
+        {"name": "Russian", "level": "Native", "flag": "🇷🇺"},
+        {"name": "English", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
+        {"name": "Slovak", "level": "B2", "flag": "🇸🇰"},
+        {"name": "German", "level": "Basic / Learning", "flag": "🇩🇪"}
+      ]
+    },
+    "work": {
+      "title": "How I Work",
+      "items": [
+        "Plain language",
+        "Step-by-step help",
+        "Transparent about what I can do",
+        "Focused on practical solutions"
+      ]
+    },
+    "benefits": [
+      {"label": "Clear communication", "icon": "chat"},
+      {"label": "Personal support", "icon": "user"},
+      {"label": "Practical solutions", "icon": "idea"},
+      {"label": "Multi-language communication", "icon": "globe"}
+    ]
+  },
+  "de": {
+    "hero": {
+      "title": "Über mich & Qualifikationen",
+      "subtitle": "Praktische IT-Hilfe für Privatkunden und kleine Unternehmen in NRW."
+    },
+    "whoIAm": {
+      "title": "Wer ich bin",
+      "items": [
+        "Gründer von TiLADYS",
+        "Praktischer IT-Support und Websites",
+        "Klare Kommunikation und zuverlässige Hilfe"
+      ]
+    },
+    "helpWith": {
+      "title": "Wobei ich helfe",
+      "items": [
+        {"label": "Websites", "icon": "globe"},
+        {"label": "PC- & Laptop-Hilfe", "icon": "laptop"},
+        {"label": "Digitale Unterstützung", "icon": "message"},
+        {"label": "Linux- & Server-Grundlagen", "icon": "server"},
+        {"label": "Fehlersuche", "icon": "tools"},
+        {"label": "Google Business", "icon": "store"}
+      ]
+    },
+    "whyChoose": {
+      "title": "Warum Kunden mich wählen",
+      "items": [
+        "Klare Erklärungen",
+        "Freundliche Unterstützung",
+        "Faire Preise",
+        "Zuverlässige Hilfe"
+      ]
+    },
+    "technical": {
+      "title": "Technischer Hintergrund",
+      "items": [
+        {"label": "HTML / CSS / JavaScript Grundlagen", "icon": "code"},
+        {"label": "WordPress (Themes & Plugins)", "icon": "wordpress"},
+        {"label": "Linux-Grundlagen (Ubuntu / Debian)", "icon": "linux"},
+        {"label": "Docker- & Container-Grundlagen", "icon": "docker"},
+        {"label": "Netzwerk-Grundlagen (IP, DNS, DHCP, Router)", "icon": "network"},
+        {"label": "Google Workspace / Office", "icon": "document"}
+      ]
+    },
+    "education": {
+      "title": "Ausbildung & Weiterbildung",
+      "items": [
+        {
+          "school": "Sekundäre Industrieschule für Elektrotechnik, Slowakei",
+          "fieldLabel": "Fachrichtung",
+          "field": "Intelligente Technologien",
+          "period": "2011 – 2020"
+        },
+        {
+          "school": "Höhere Berufsschule Nr. 7, Ukraine",
+          "fieldLabel": "Fachrichtung",
+          "field": "Informations- und Softwareverarbeitung",
+          "period": "2020 – 2022"
+        },
+        {
+          "school": "Allgemeiner Integrationskurs — Deutsch",
+          "fieldLabel": "Anbieter",
+          "field": "Diakonisches Werk Märkisches e.V., Berlin",
+          "period": "Laufend"
+        }
+      ]
+    },
+    "languages": {
+      "title": "Sprachen",
+      "items": [
+        {"name": "Ukrainisch", "level": "Muttersprache", "flag": "🇺🇦"},
+        {"name": "Russisch", "level": "Muttersprache", "flag": "🇷🇺"},
+        {"name": "Englisch", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
+        {"name": "Slowakisch", "level": "B2", "flag": "🇸🇰"},
+        {"name": "Deutsch", "level": "Grundkenntnisse / Lernen", "flag": "🇩🇪"}
+      ]
+    },
+    "work": {
+      "title": "So arbeite ich",
+      "items": [
+        "Verständliche Sprache",
+        "Schritt-für-Schritt-Hilfe",
+        "Transparenz über meine Möglichkeiten",
+        "Fokus auf praktische Lösungen"
+      ]
+    },
+    "benefits": [
+      {"label": "Klare Kommunikation", "icon": "chat"},
+      {"label": "Persönliche Unterstützung", "icon": "user"},
+      {"label": "Praktische Lösungen", "icon": "idea"},
+      {"label": "Mehrsprachige Kommunikation", "icon": "globe"}
+    ]
+  },
+  "uk": {
+    "hero": {
+      "title": "Про мене та кваліфікації",
+      "subtitle": "Практична IT-допомога для домашніх користувачів і малого бізнесу в NRW."
+    },
+    "whoIAm": {
+      "title": "Хто я",
+      "items": [
+        "Засновник TiLADYS",
+        "Практична IT-підтримка та вебсайти",
+        "Зрозуміле спілкування і надійна допомога"
+      ]
+    },
+    "helpWith": {
+      "title": "З чим я допомагаю",
+      "items": [
+        {"label": "Вебсайти", "icon": "globe"},
+        {"label": "Допомога з ПК і ноутбуками", "icon": "laptop"},
+        {"label": "Цифрова підтримка", "icon": "message"},
+        {"label": "Основи Linux і серверів", "icon": "server"},
+        {"label": "Пошук і усунення проблем", "icon": "tools"},
+        {"label": "Google Business", "icon": "store"}
+      ]
+    },
+    "whyChoose": {
+      "title": "Чому клієнти обирають мене",
+      "items": [
+        "Зрозумілі пояснення",
+        "Доброзичлива підтримка",
+        "Справедливі ціни",
+        "Надійна допомога"
+      ]
+    },
+    "technical": {
+      "title": "Технічна підготовка",
+      "items": [
+        {"label": "Основи HTML / CSS / JavaScript", "icon": "code"},
+        {"label": "WordPress (теми та плагіни)", "icon": "wordpress"},
+        {"label": "Основи Linux (Ubuntu / Debian)", "icon": "linux"},
+        {"label": "Основи Docker і контейнерів", "icon": "docker"},
+        {"label": "Основи мереж (IP, DNS, DHCP, Router)", "icon": "network"},
+        {"label": "Google Workspace / Office", "icon": "document"}
+      ]
+    },
+    "education": {
+      "title": "Освіта та навчання",
+      "items": [
+        {
+          "school": "Середня промислова школа електротехніки, Словаччина",
+          "fieldLabel": "Напрям навчання",
+          "field": "Інтелектуальні технології",
+          "period": "2011 – 2020"
+        },
+        {
+          "school": "Вище професійне училище № 7, Україна",
+          "fieldLabel": "Напрям навчання",
+          "field": "Оператор обробки інформації та програмного забезпечення",
+          "period": "2020 – 2022"
+        },
+        {
+          "school": "Загальний інтеграційний курс — німецька мова",
+          "fieldLabel": "Організація",
+          "field": "Diakonisches Werk Märkisches e.V., Berlin",
+          "period": "Навчання триває"
+        }
+      ]
+    },
+    "languages": {
+      "title": "Мови",
+      "items": [
+        {"name": "Українська", "level": "Рідна", "flag": "🇺🇦"},
+        {"name": "Російська", "level": "Рідна", "flag": "🇷🇺"},
+        {"name": "Англійська", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
+        {"name": "Словацька", "level": "B2", "flag": "🇸🇰"},
+        {"name": "Німецька", "level": "Базова / вивчаю", "flag": "🇩🇪"}
+      ]
+    },
+    "work": {
+      "title": "Як я працюю",
+      "items": [
+        "Проста мова",
+        "Покрокова допомога",
+        "Відверто пояснюю межі своїх можливостей",
+        "Зосереджуюся на практичних рішеннях"
+      ]
+    },
+    "benefits": [
+      {"label": "Зрозуміле спілкування", "icon": "chat"},
+      {"label": "Особиста підтримка", "icon": "user"},
+      {"label": "Практичні рішення", "icon": "idea"},
+      {"label": "Багатомовне спілкування", "icon": "globe"}
+    ]
+  },
+  "ru": {
+    "hero": {
+      "title": "Обо мне и квалификации",
+      "subtitle": "Практическая IT-помощь для домашних пользователей и малого бизнеса в NRW."
+    },
+    "whoIAm": {
+      "title": "Кто я",
+      "items": [
+        "Основатель TiLADYS",
+        "Практическая IT-поддержка и сайты",
+        "Понятное общение и надёжная помощь"
+      ]
+    },
+    "helpWith": {
+      "title": "С чем я помогаю",
+      "items": [
+        {"label": "Сайты", "icon": "globe"},
+        {"label": "Помощь с ПК и ноутбуками", "icon": "laptop"},
+        {"label": "Цифровая поддержка", "icon": "message"},
+        {"label": "Основы Linux и серверов", "icon": "server"},
+        {"label": "Поиск и устранение проблем", "icon": "tools"},
+        {"label": "Google Business", "icon": "store"}
+      ]
+    },
+    "whyChoose": {
+      "title": "Почему клиенты выбирают меня",
+      "items": [
+        "Понятные объяснения",
+        "Дружелюбная поддержка",
+        "Честные цены",
+        "Надёжная помощь"
+      ]
+    },
+    "technical": {
+      "title": "Техническая подготовка",
+      "items": [
+        {"label": "Основы HTML / CSS / JavaScript", "icon": "code"},
+        {"label": "WordPress (темы и плагины)", "icon": "wordpress"},
+        {"label": "Основы Linux (Ubuntu / Debian)", "icon": "linux"},
+        {"label": "Основы Docker и контейнеров", "icon": "docker"},
+        {"label": "Основы сетей (IP, DNS, DHCP, Router)", "icon": "network"},
+        {"label": "Google Workspace / Office", "icon": "document"}
+      ]
+    },
+    "education": {
+      "title": "Образование и обучение",
+      "items": [
+        {
+          "school": "Средняя промышленная школа электротехники, Словакия",
+          "fieldLabel": "Направление обучения",
+          "field": "Интеллектуальные технологии",
+          "period": "2011 – 2020"
+        },
+        {
+          "school": "Высшее профессиональное училище № 7, Украина",
+          "fieldLabel": "Направление обучения",
+          "field": "Оператор обработки информации и программного обеспечения",
+          "period": "2020 – 2022"
+        },
+        {
+          "school": "Общий интеграционный курс — немецкий язык",
+          "fieldLabel": "Организация",
+          "field": "Diakonisches Werk Märkisches e.V., Berlin",
+          "period": "Обучение продолжается"
+        }
+      ]
+    },
+    "languages": {
+      "title": "Языки",
+      "items": [
+        {"name": "Украинский", "level": "Родной", "flag": "🇺🇦"},
+        {"name": "Русский", "level": "Родной", "flag": "🇷🇺"},
+        {"name": "Английский", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
+        {"name": "Словацкий", "level": "B2", "flag": "🇸🇰"},
+        {"name": "Немецкий", "level": "Базовый / изучаю", "flag": "🇩🇪"}
+      ]
+    },
+    "work": {
+      "title": "Как я работаю",
+      "items": [
+        "Простой язык",
+        "Пошаговая помощь",
+        "Честно объясняю границы своих возможностей",
+        "Сосредоточен на практических решениях"
+      ]
+    },
+    "benefits": [
+      {"label": "Понятное общение", "icon": "chat"},
+      {"label": "Личная поддержка", "icon": "user"},
+      {"label": "Практические решения", "icon": "idea"},
+      {"label": "Многоязычное общение", "icon": "globe"}
+    ]
+  },
+  "sk": {
+    "hero": {
+      "title": "O mne a kvalifikácie",
+      "subtitle": "Praktická IT pomoc pre domácich používateľov a malé firmy v NRW."
+    },
+    "whoIAm": {
+      "title": "Kto som",
+      "items": [
+        "Zakladateľ TiLADYS",
+        "Praktická IT podpora a webstránky",
+        "Jasná komunikácia a spoľahlivá pomoc"
+      ]
+    },
+    "helpWith": {
+      "title": "S čím pomáham",
+      "items": [
+        {"label": "Webstránky", "icon": "globe"},
+        {"label": "Pomoc s PC a notebookmi", "icon": "laptop"},
+        {"label": "Digitálna podpora", "icon": "message"},
+        {"label": "Základy Linuxu a serverov", "icon": "server"},
+        {"label": "Riešenie problémov", "icon": "tools"},
+        {"label": "Google Business", "icon": "store"}
+      ]
+    },
+    "whyChoose": {
+      "title": "Prečo si ma klienti vyberajú",
+      "items": [
+        "Jasné vysvetlenia",
+        "Priateľská podpora",
+        "Férové ceny",
+        "Spoľahlivá pomoc"
+      ]
+    },
+    "technical": {
+      "title": "Technické skúsenosti",
+      "items": [
+        {"label": "Základy HTML / CSS / JavaScript", "icon": "code"},
+        {"label": "WordPress (témy a pluginy)", "icon": "wordpress"},
+        {"label": "Základy Linuxu (Ubuntu / Debian)", "icon": "linux"},
+        {"label": "Základy Dockeru a kontajnerov", "icon": "docker"},
+        {"label": "Základy sietí (IP, DNS, DHCP, Router)", "icon": "network"},
+        {"label": "Google Workspace / Office", "icon": "document"}
+      ]
+    },
+    "education": {
+      "title": "Vzdelanie a učenie",
+      "items": [
+        {
+          "school": "Stredná priemyselná škola elektrotechnická, Slovensko",
+          "fieldLabel": "Odbor",
+          "field": "Inteligentné technológie",
+          "period": "2011 – 2020"
+        },
+        {
+          "school": "Vyššia odborná škola č. 7, Ukrajina",
+          "fieldLabel": "Odbor",
+          "field": "Operátor spracovania informácií a softvéru",
+          "period": "2020 – 2022"
+        },
+        {
+          "school": "Všeobecný integračný kurz — nemecký jazyk",
+          "fieldLabel": "Poskytovateľ",
+          "field": "Diakonisches Werk Märkisches e.V., Berlin",
+          "period": "Prebieha"
+        }
+      ]
+    },
+    "languages": {
+      "title": "Jazyky",
+      "items": [
+        {"name": "Ukrajinčina", "level": "Rodný jazyk", "flag": "🇺🇦"},
+        {"name": "Ruština", "level": "Rodný jazyk", "flag": "🇷🇺"},
+        {"name": "Angličtina", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
+        {"name": "Slovenčina", "level": "B2", "flag": "🇸🇰"},
+        {"name": "Nemčina", "level": "Základy / učím sa", "flag": "🇩🇪"}
+      ]
+    },
+    "work": {
+      "title": "Ako pracujem",
+      "items": [
+        "Jednoduchý jazyk",
+        "Pomoc krok za krokom",
+        "Transparentne vysvetľujem, čo môžem urobiť",
+        "Zameranie na praktické riešenia"
+      ]
+    },
+    "benefits": [
+      {"label": "Jasná komunikácia", "icon": "chat"},
+      {"label": "Osobná podpora", "icon": "user"},
+      {"label": "Praktické riešenia", "icon": "idea"},
+      {"label": "Viacjazyčná komunikácia", "icon": "globe"}
+    ]
+  },
+  "fr": {
+    "hero": {
+      "title": "À propos et qualifications",
+      "subtitle": "Aide informatique pratique pour les particuliers et les petites entreprises en NRW."
+    },
+    "whoIAm": {
+      "title": "Qui je suis",
+      "items": [
+        "Fondateur de TiLADYS",
+        "Assistance informatique pratique et sites web",
+        "Communication claire et aide fiable"
+      ]
+    },
+    "helpWith": {
+      "title": "Mes domaines d'aide",
+      "items": [
+        {"label": "Sites web", "icon": "globe"},
+        {"label": "Aide PC et ordinateur portable", "icon": "laptop"},
+        {"label": "Assistance numérique", "icon": "message"},
+        {"label": "Bases Linux et serveur", "icon": "server"},
+        {"label": "Dépannage", "icon": "tools"},
+        {"label": "Google Business", "icon": "store"}
+      ]
+    },
+    "whyChoose": {
+      "title": "Pourquoi les clients me choisissent",
+      "items": [
+        "Explications claires",
+        "Assistance conviviale",
+        "Prix équitables",
+        "Aide fiable"
+      ]
+    },
+    "technical": {
+      "title": "Compétences techniques",
+      "items": [
+        {"label": "Bases HTML / CSS / JavaScript", "icon": "code"},
+        {"label": "WordPress (thèmes et extensions)", "icon": "wordpress"},
+        {"label": "Bases Linux (Ubuntu / Debian)", "icon": "linux"},
+        {"label": "Bases Docker et conteneurs", "icon": "docker"},
+        {"label": "Bases réseau (IP, DNS, DHCP, Router)", "icon": "network"},
+        {"label": "Google Workspace / Office", "icon": "document"}
+      ]
+    },
+    "education": {
+      "title": "Formation et apprentissage",
+      "items": [
+        {
+          "school": "École secondaire industrielle d'électrotechnique, Slovaquie",
+          "fieldLabel": "Domaine d'étude",
+          "field": "Technologies intelligentes",
+          "period": "2011 – 2020"
+        },
+        {
+          "school": "École professionnelle supérieure n° 7, Ukraine",
+          "fieldLabel": "Domaine d'étude",
+          "field": "Opérateur de traitement de l'information et des logiciels",
+          "period": "2020 – 2022"
+        },
+        {
+          "school": "Cours général d'intégration — allemand",
+          "fieldLabel": "Organisme",
+          "field": "Diakonisches Werk Märkisches e.V., Berlin",
+          "period": "En cours"
+        }
+      ]
+    },
+    "languages": {
+      "title": "Langues",
+      "items": [
+        {"name": "Ukrainien", "level": "Langue maternelle", "flag": "🇺🇦"},
+        {"name": "Russe", "level": "Langue maternelle", "flag": "🇷🇺"},
+        {"name": "Anglais", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
+        {"name": "Slovaque", "level": "B2", "flag": "🇸🇰"},
+        {"name": "Allemand", "level": "Bases / apprentissage", "flag": "🇩🇪"}
+      ]
+    },
+    "work": {
+      "title": "Ma façon de travailler",
+      "items": [
+        "Langage simple",
+        "Aide étape par étape",
+        "Transparence sur ce que je peux faire",
+        "Priorité aux solutions pratiques"
+      ]
+    },
+    "benefits": [
+      {"label": "Communication claire", "icon": "chat"},
+      {"label": "Assistance personnelle", "icon": "user"},
+      {"label": "Solutions pratiques", "icon": "idea"},
+      {"label": "Communication multilingue", "icon": "globe"}
+    ]
+  }
+}

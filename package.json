@@ -1,0 +1,28 @@
+{
+  "name": "tiladys-platform",
+  "private": true,
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n WEB,CONTROL -c auto npm:dev:web npm:dev:control",
+    "dev:web": "npm --workspace @tiladys/web run dev",
+    "dev:control": "npm --workspace @tiladys/control run dev",
+    "build": "npm run db:generate && npm run build:control && npm run build:web",
+    "build:web": "npm --workspace @tiladys/web run build",
+    "build:control": "npm --workspace @tiladys/control run build",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "node tests/project.test.mjs",
+    "db:generate": "npm --workspace @tiladys/db run generate",
+    "db:migrate": "npm --workspace @tiladys/db run migrate",
+    "db:seed": "npm --workspace @tiladys/db run seed",
+    "setup:admin": "node scripts/setup-admin.mjs",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "db:deploy": "npm --workspace @tiladys/db run deploy"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

@@ -1,0 +1,1 @@
+import {redirect} from 'next/navigation';import {currentUser} from '@/lib/security';export default async function P(){redirect((await currentUser())?'/dashboard':'/login')}

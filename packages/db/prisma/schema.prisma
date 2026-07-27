@@ -1,0 +1,162 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+enum MessageStatus {
+  NEW
+  READ
+  REPLIED
+  ARCHIVED
+  SPAM
+}
+
+enum ProjectStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+model AdminUser {
+  id             String     @id @default(cuid())
+  email          String     @unique
+  passwordHash   String
+  secretWordHash String
+  displayName    String     @default("Administrator")
+  failedLogins   Int        @default(0)
+  lockedUntil    DateTime?
+  lastLoginAt    DateTime?
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  sessions       Session[]
+  audits         AuditLog[]
+}
+
+model Session {
+  id        String    @id @default(cuid())
+  tokenHash String    @unique
+  userId    String
+  user      AdminUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ipHash    String?
+  userAgent String?
+  expiresAt DateTime
+  createdAt DateTime  @default(now())
+
+  @@index([userId, expiresAt])
+}
+
+model Project {
+  id           String        @id @default(cuid())
+  slug         String        @unique
+  category     String
+  status       ProjectStatus @default(DRAFT)
+  featured     Boolean       @default(false)
+  sortOrder    Int           @default(0)
+  title        Json
+  summary      Json
+  description  Json?
+  type         Json?
+  role         Json?
+  workItems    Json?
+  clientName   String?
+  projectDate  DateTime?
+  websiteUrl   String?
+  githubUrl    String?
+  coverImage   String?
+  gallery      Json?
+  technologies Json?
+  results      Json?
+  images       ProjectImage[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  @@index([status, category, sortOrder])
+}
+
+
+model ProjectImage {
+  id        String   @id @default(cuid())
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  filename  String
+  mimeType  String
+  size      Int
+  data      Bytes
+  alt       Json?
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+
+  @@index([projectId, sortOrder])
+}
+
+model PriceSection {
+  id        String      @id @default(cuid())
+  number    String
+  title     Json
+  subtitle  Json?
+  sortOrder Int         @default(0)
+  active    Boolean     @default(true)
+  items     PriceItem[]
+}
+
+model PriceItem {
+  id        String       @id @default(cuid())
+  sectionId String
+  section   PriceSection @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  code      String       @unique
+  name      Json
+  price     String
+  note      Json?
+  sortOrder Int          @default(0)
+  active    Boolean      @default(true)
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+
+  @@index([sectionId, active, sortOrder])
+}
+
+model ContactMessage {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  service   String?
+  locale    String        @default("en")
+  message   String
+  status    MessageStatus @default(NEW)
+  replyText String?
+  repliedAt DateTime?
+  consent   Boolean       @default(false)
+  ipHash    String?
+  userAgent String?
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@index([status, createdAt])
+}
+
+model VisitorDay {
+  id        String   @id @default(cuid())
+  day       DateTime @unique
+  sessions  Int      @default(0)
+  pageViews Int      @default(0)
+}
+
+model AuditLog {
+  id        String     @id @default(cuid())
+  userId    String?
+  user      AdminUser? @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action    String
+  entity    String?
+  entityId  String?
+  ipHash    String?
+  metadata  Json?
+  createdAt DateTime   @default(now())
+
+  @@index([createdAt, action])
+}

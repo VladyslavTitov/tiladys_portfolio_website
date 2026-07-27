@@ -1,0 +1,3311 @@
+[
+  {
+    "number": "01",
+    "title": {
+      "ru": "Форматы работы, диагностика и поддержка",
+      "en": "Work formats, diagnostics and support",
+      "de": "Arbeitsformate, Diagnose und Support",
+      "uk": "Формати роботи, діагностика та підтримка",
+      "sk": "Formy práce, diagnostika a podpora",
+      "fr": "Formats de travail, diagnostic et assistance"
+    },
+    "subtitle": {
+      "ru": "Базовые тарифы и правила расчёта",
+      "en": "Base rates and calculation rules",
+      "de": "Basistarife und Berechnungsregeln",
+      "uk": "Базові тарифи та правила розрахунку",
+      "sk": "Základné sadzby a pravidlá výpočtu",
+      "fr": "Tarifs de base et règles de calcul"
+    },
+    "sortOrder": 0,
+    "items": [
+      {
+        "code": "A01",
+        "name": {
+          "ru": "Первичная консультация до 10 минут",
+          "en": "Initial consultation up to 10 minutes",
+          "de": "Erstberatung bis 10 Minuten",
+          "uk": "Первинна консультація до 10 хвилин",
+          "sk": "Úvodná konzultácia do 10 minút",
+          "fr": "Consultation initiale jusqu’à 10 minutes"
+        },
+        "price": "0 €",
+        "note": {
+          "ru": "Краткое определение задачи, без диагностики устройства",
+          "en": "Brief task assessment without device diagnostics",
+          "de": "Kurze Einschätzung der Aufgabe ohne Gerätediagnose",
+          "uk": "Коротка оцінка завдання без діагностики пристрою",
+          "sk": "Krátke posúdenie úlohy bez diagnostiky zariadenia",
+          "fr": "Évaluation rapide de la demande sans diagnostic de l’appareil"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "A02",
+        "name": {
+          "ru": "Базовая диагностика ПК / ноутбука",
+          "en": "Basic PC / laptop diagnostics",
+          "de": "Basisdiagnose für PC / Laptop",
+          "uk": "Базова діагностика ПК / ноутбука",
+          "sk": "Základná diagnostika PC / notebooku",
+          "fr": "Diagnostic de base pour PC / ordinateur portable"
+        },
+        "price": "29 €",
+        "note": {
+          "ru": "Зачитывается в стоимость работ при заказе от 100 €",
+          "en": "Credited toward work costing €100 or more",
+          "de": "Wird bei Aufträgen ab 100 € auf die Arbeitskosten angerechnet",
+          "uk": "Зараховується у вартість робіт при замовленні від 100 €",
+          "sk": "Započíta sa do ceny práce pri objednávke od 100 €",
+          "fr": "Déduit du coût des travaux pour une commande à partir de 100 €"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "A03",
+        "name": {
+          "ru": "Расширенная диагностика с письменным отчётом",
+          "en": "Extended diagnostics with a written report",
+          "de": "Erweiterte Diagnose mit schriftlichem Bericht",
+          "uk": "Розширена діагностика з письмовим звітом",
+          "sk": "Rozšírená diagnostika s písomnou správou",
+          "fr": "Diagnostic approfondi avec rapport écrit"
+        },
+        "price": "59 €",
+        "note": {
+          "ru": "Причина, варианты решения, ориентировочная смета",
+          "en": "Cause, solution options and estimated cost",
+          "de": "Ursache, Lösungsmöglichkeiten und voraussichtliche Kosten",
+          "uk": "Причина, варіанти вирішення та орієнтовна вартість",
+          "sk": "Príčina, možnosti riešenia a orientačné náklady",
+          "fr": "Cause, solutions possibles et estimation du coût"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "A04",
+        "name": {
+          "ru": "Удалённая IT-поддержка",
+          "en": "Remote IT support",
+          "de": "Remote-IT-Support",
+          "uk": "Віддалена IT-підтримка",
+          "sk": "Vzdialená IT podpora",
+          "fr": "Assistance informatique à distance"
+        },
+        "price": "49 €/час",
+        "note": {
+          "ru": "Минимум 30 минут, далее по 15 минут",
+          "en": "Minimum 30 minutes, then billed in 15-minute increments",
+          "de": "Mindestens 30 Minuten, danach Abrechnung in 15-Minuten-Schritten",
+          "uk": "Мінімум 30 хвилин, далі оплата кроками по 15 хвилин",
+          "sk": "Minimálne 30 minút, potom účtovanie po 15 minútach",
+          "fr": "Minimum 30 minutes, puis facturation par tranches de 15 minutes"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "A05",
+        "name": {
+          "ru": "Работа в мастерской / на устройстве клиента",
+          "en": "Workshop service / work on the client’s device",
+          "de": "Werkstattservice / Arbeit am Kundengerät",
+          "uk": "Робота в майстерні / на пристрої клієнта",
+          "sk": "Servis v dielni / práca na zariadení klienta",
+          "fr": "Service en atelier / intervention sur l’appareil du client"
+        },
+        "price": "59 €/час",
+        "note": {
+          "ru": "Минимум 30 минут, если нет фиксированной цены",
+          "en": "Minimum 30 minutes when no fixed price applies",
+          "de": "Mindestens 30 Minuten, sofern kein Festpreis gilt",
+          "uk": "Мінімум 30 хвилин, якщо не встановлено фіксовану ціну",
+          "sk": "Minimálne 30 minút, ak neplatí pevná cena",
+          "fr": "Minimum 30 minutes lorsqu’aucun tarif fixe ne s’applique"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "A06",
+        "name": {
+          "ru": "Выездная IT-поддержка для частных клиентов",
+          "en": "On-site IT support for private clients",
+          "de": "IT-Support vor Ort für Privatkunden",
+          "uk": "Виїзна IT-підтримка для приватних клієнтів",
+          "sk": "IT podpora na mieste pre súkromných klientov",
+          "fr": "Assistance informatique sur site pour particuliers"
+        },
+        "price": "69 €/час",
+        "note": {
+          "ru": "Минимум 1 час; выезд оплачивается отдельно",
+          "en": "Minimum 1 hour; travel is charged separately",
+          "de": "Mindestens 1 Stunde; Anfahrt wird separat berechnet",
+          "uk": "Мінімум 1 година; виїзд оплачується окремо",
+          "sk": "Minimálne 1 hodina; doprava sa účtuje samostatne",
+          "fr": "Minimum 1 heure ; le déplacement est facturé séparément"
+        },
+        "sortOrder": 5
+      },
+      {
+        "code": "A07",
+        "name": {
+          "ru": "Поддержка малого бизнеса",
+          "en": "Small business support",
+          "de": "Support für kleine Unternehmen",
+          "uk": "Підтримка малого бізнесу",
+          "sk": "Podpora malých firiem",
+          "fr": "Assistance pour petites entreprises"
+        },
+        "price": "79 €/час",
+        "note": {
+          "ru": "Удалённо или в мастерской; выезд 89 €/час",
+          "en": "Remote or workshop service; on-site rate €89/hour",
+          "de": "Remote oder in der Werkstatt; Vor-Ort-Satz 89 €/Stunde",
+          "uk": "Віддалено або в майстерні; виїзна ставка 89 €/год",
+          "sk": "Vzdialene alebo v dielni; sadzba na mieste 89 €/hod.",
+          "fr": "À distance ou en atelier ; tarif sur site 89 €/heure"
+        },
+        "sortOrder": 6
+      },
+      {
+        "code": "A08",
+        "name": {
+          "ru": "Экспресс-обработка в день обращения",
+          "en": "Same-day express handling",
+          "de": "Expressbearbeitung am selben Tag",
+          "uk": "Термінова обробка в день звернення",
+          "sk": "Expresné spracovanie v deň požiadavky",
+          "fr": "Traitement express le jour même"
+        },
+        "price": "+30 %",
+        "note": {
+          "ru": "При наличии свободного времени",
+          "en": "Subject to availability",
+          "de": "Je nach Verfügbarkeit",
+          "uk": "За наявності вільного часу",
+          "sk": "Podľa dostupnosti",
+          "fr": "Selon les disponibilités"
+        },
+        "sortOrder": 7
+      },
+      {
+        "code": "A09",
+        "name": {
+          "ru": "Вечер / суббота",
+          "en": "Evening / Saturday service",
+          "de": "Abend- / Samstagsservice",
+          "uk": "Робота ввечері / у суботу",
+          "sk": "Večerný / sobotný servis",
+          "fr": "Service en soirée / le samedi"
+        },
+        "price": "+50 %",
+        "note": {
+          "ru": "По предварительной договорённости",
+          "en": "By prior arrangement",
+          "de": "Nach vorheriger Vereinbarung",
+          "uk": "За попередньою домовленістю",
+          "sk": "Po predchádzajúcej dohode",
+          "fr": "Sur accord préalable"
+        },
+        "sortOrder": 8
+      }
+    ]
+  },
+  {
+    "number": "02",
+    "title": {
+      "ru": "Настройка компьютеров, систем и программ",
+      "en": "Computer, system and software setup",
+      "de": "Einrichtung von Computern, Systemen und Programmen",
+      "uk": "Налаштування комп’ютерів, систем і програм",
+      "sk": "Nastavenie počítačov, systémov a programov",
+      "fr": "Configuration des ordinateurs, systèmes et logiciels"
+    },
+    "subtitle": {
+      "ru": "Windows, macOS, Linux, приложения, учётные записи и периферия",
+      "en": "Windows, macOS, Linux, applications, user accounts and peripherals",
+      "de": "Windows, macOS, Linux, Anwendungen, Benutzerkonten und Peripherie",
+      "uk": "Windows, macOS, Linux, програми, облікові записи та периферія",
+      "sk": "Windows, macOS, Linux, aplikácie, používateľské účty a periférie",
+      "fr": "Windows, macOS, Linux, applications, comptes utilisateurs et périphériques"
+    },
+    "sortOrder": 1,
+    "items": [
+      {
+        "code": "B01",
+        "name": {
+          "ru": "Базовая настройка нового ПК / ноутбука",
+          "en": "Basic setup of a new PC / laptop",
+          "de": "Basiseinrichtung eines neuen PCs / Laptops",
+          "uk": "Базове налаштування нового ПК / ноутбука",
+          "sk": "Základné nastavenie nového PC / notebooku",
+          "fr": "Configuration de base d’un nouveau PC / ordinateur portable"
+        },
+        "price": "69 €",
+        "note": {
+          "ru": "Учётная запись, обновления, браузер, базовые параметры",
+          "en": "User account, updates, browser and basic settings",
+          "de": "Benutzerkonto, Updates, Browser und Grundeinstellungen",
+          "uk": "Обліковий запис користувача, оновлення, браузер і базові параметри",
+          "sk": "Používateľský účet, aktualizácie, prehliadač a základné nastavenia",
+          "fr": "Compte utilisateur, mises à jour, navigateur et réglages de base"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "B02",
+        "name": {
+          "ru": "Полная настройка нового ПК / ноутбука",
+          "en": "Complete setup of a new PC / laptop",
+          "de": "Kompletteinrichtung eines neuen PCs / Laptops",
+          "uk": "Повне налаштування нового ПК / ноутбука",
+          "sk": "Kompletné nastavenie nového PC / notebooku",
+          "fr": "Configuration complète d’un nouveau PC / ordinateur portable"
+        },
+        "price": "129 €",
+        "note": {
+          "ru": "До 5 программ, почта, безопасность, персональные настройки",
+          "en": "Up to 5 applications, email, security and personal settings",
+          "de": "Bis zu 5 Programme, E-Mail, Sicherheit und persönliche Einstellungen",
+          "uk": "До 5 програм, електронна пошта, безпека й персональні налаштування",
+          "sk": "Do 5 programov, e-mail, bezpečnosť a osobné nastavenia",
+          "fr": "Jusqu’à 5 programmes, e-mail, sécurité et réglages personnels"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "B03",
+        "name": {
+          "ru": "Установка Windows с базовой настройкой",
+          "en": "Windows installation with basic setup",
+          "de": "Windows-Installation mit Basiseinrichtung",
+          "uk": "Встановлення Windows із базовим налаштуванням",
+          "sk": "Inštalácia Windows so základným nastavením",
+          "fr": "Installation de Windows avec configuration de base"
+        },
+        "price": "99 €",
+        "note": {
+          "ru": "Лицензия не включена",
+          "en": "License not included",
+          "de": "Lizenz nicht enthalten",
+          "uk": "Ліцензія не включена",
+          "sk": "Licencia nie je zahrnutá",
+          "fr": "Licence non incluse"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "B04",
+        "name": {
+          "ru": "Windows + перенос пользовательских данных",
+          "en": "Windows installation plus user data transfer",
+          "de": "Windows-Installation mit Übertragung der Benutzerdaten",
+          "uk": "Встановлення Windows і перенесення даних користувача",
+          "sk": "Inštalácia Windows a prenos používateľských údajov",
+          "fr": "Installation de Windows avec transfert des données utilisateur"
+        },
+        "price": "от 149 €",
+        "note": {
+          "ru": "До 250 ГБ, при читаемом источнике",
+          "en": "Up to 250 GB from a readable source",
+          "de": "Bis zu 250 GB von einer lesbaren Quelle",
+          "uk": "До 250 ГБ із читабельного джерела",
+          "sk": "Do 250 GB z čitateľného zdroja",
+          "fr": "Jusqu’à 250 Go depuis une source lisible"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "B05",
+        "name": {
+          "ru": "Установка Linux",
+          "en": "Linux installation",
+          "de": "Linux-Installation",
+          "uk": "Встановлення Linux",
+          "sk": "Inštalácia Linuxu",
+          "fr": "Installation de Linux"
+        },
+        "price": "99 €",
+        "note": {
+          "ru": "Один дистрибутив, базовая настройка",
+          "en": "One distribution with basic setup",
+          "de": "Eine Distribution mit Basiseinrichtung",
+          "uk": "Один дистрибутив із базовим налаштуванням",
+          "sk": "Jedna distribúcia so základným nastavením",
+          "fr": "Une distribution avec configuration de base"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "B06",
+        "name": {
+          "ru": "Установка / восстановление macOS",
+          "en": "macOS installation / recovery",
+          "de": "macOS-Installation / Wiederherstellung",
+          "uk": "Встановлення / відновлення macOS",
+          "sk": "Inštalácia / obnovenie macOS",
+          "fr": "Installation / récupération de macOS"
+        },
+        "price": "от 109 €",
+        "note": {
+          "ru": "Только поддерживаемые модели и официальные средства",
+          "en": "Supported models and official tools only",
+          "de": "Nur unterstützte Modelle und offizielle Werkzeuge",
+          "uk": "Лише підтримувані моделі та офіційні засоби",
+          "sk": "Len podporované modely a oficiálne nástroje",
+          "fr": "Uniquement les modèles pris en charge et les outils officiels"
+        },
+        "sortOrder": 5
+      },
+      {
+        "code": "B07",
+        "name": {
+          "ru": "Настройка двойной загрузки Dual Boot",
+          "en": "Dual Boot setup",
+          "de": "Dual-Boot-Einrichtung",
+          "uk": "Налаштування подвійного завантаження Dual Boot",
+          "sk": "Nastavenie Dual Boot",
+          "fr": "Configuration Dual Boot"
+        },
+        "price": "от 149 €",
+        "note": {
+          "ru": "После проверки совместимости и резервной копии",
+          "en": "After compatibility check and backup",
+          "de": "Nach Kompatibilitätsprüfung und Datensicherung",
+          "uk": "Після перевірки сумісності та створення резервної копії",
+          "sk": "Po kontrole kompatibility a vytvorení zálohy",
+          "fr": "Après vérification de la compatibilité et sauvegarde"
+        },
+        "sortOrder": 6
+      },
+      {
+        "code": "B08",
+        "name": {
+          "ru": "Обновления Windows / драйверов",
+          "en": "Windows / driver updates",
+          "de": "Windows- / Treiber-Updates",
+          "uk": "Оновлення Windows / драйверів",
+          "sk": "Aktualizácie Windows / ovládačov",
+          "fr": "Mises à jour de Windows / des pilotes"
+        },
+        "price": "39 €",
+        "note": {
+          "ru": "До 60 минут",
+          "en": "Up to 60 minutes",
+          "de": "Bis zu 60 Minuten",
+          "uk": "До 60 хвилин",
+          "sk": "Do 60 minút",
+          "fr": "Jusqu’à 60 minutes"
+        },
+        "sortOrder": 7
+      },
+      {
+        "code": "B09",
+        "name": {
+          "ru": "Обновление BIOS / UEFI / прошивки",
+          "en": "BIOS / UEFI / firmware update",
+          "de": "BIOS- / UEFI- / Firmware-Update",
+          "uk": "Оновлення BIOS / UEFI / прошивки",
+          "sk": "Aktualizácia BIOS / UEFI / firmvéru",
+          "fr": "Mise à jour du BIOS / UEFI / micrologiciel"
+        },
+        "price": "39 €",
+        "note": {
+          "ru": "После проверки модели и рисков",
+          "en": "After model and risk verification",
+          "de": "Nach Prüfung von Modell und Risiken",
+          "uk": "Після перевірки моделі та ризиків",
+          "sk": "Po overení modelu a rizík",
+          "fr": "Après vérification du modèle et des risques"
+        },
+        "sortOrder": 8
+      },
+      {
+        "code": "B10",
+        "name": {
+          "ru": "Установка стандартной программы",
+          "en": "Standard application installation",
+          "de": "Installation eines Standardprogramms",
+          "uk": "Встановлення стандартної програми",
+          "sk": "Inštalácia štandardného programu",
+          "fr": "Installation d’un programme standard"
+        },
+        "price": "15 €",
+        "note": {
+          "ru": "За 1 программу, лицензия клиента",
+          "en": "Per application; client provides the license",
+          "de": "Pro Programm; Lizenz wird vom Kunden bereitgestellt",
+          "uk": "За одну програму; ліцензію надає клієнт",
+          "sk": "Za jeden program; licenciu poskytuje klient",
+          "fr": "Par programme ; la licence est fournie par le client"
+        },
+        "sortOrder": 9
+      },
+      {
+        "code": "B11",
+        "name": {
+          "ru": "Установка и настройка Microsoft Office",
+          "en": "Microsoft Office installation and setup",
+          "de": "Installation und Einrichtung von Microsoft Office",
+          "uk": "Встановлення та налаштування Microsoft Office",
+          "sk": "Inštalácia a nastavenie Microsoft Office",
+          "fr": "Installation et configuration de Microsoft Office"
+        },
+        "price": "39 €",
+        "note": {
+          "ru": "Лицензия / подписка клиента",
+          "en": "Client provides license / subscription",
+          "de": "Lizenz / Abonnement wird vom Kunden bereitgestellt",
+          "uk": "Ліцензію / підписку надає клієнт",
+          "sk": "Licenciu / predplatné poskytuje klient",
+          "fr": "Licence / abonnement fourni par le client"
+        },
+        "sortOrder": 10
+      },
+      {
+        "code": "B12",
+        "name": {
+          "ru": "Настройка электронной почты",
+          "en": "Email account setup",
+          "de": "Einrichtung eines E-Mail-Kontos",
+          "uk": "Налаштування електронної пошти",
+          "sk": "Nastavenie e-mailového účtu",
+          "fr": "Configuration d’un compte e-mail"
+        },
+        "price": "29 €",
+        "note": {
+          "ru": "1 аккаунт на 1 устройстве",
+          "en": "One account on one device",
+          "de": "Ein Konto auf einem Gerät",
+          "uk": "Один обліковий запис на одному пристрої",
+          "sk": "Jeden účet na jednom zariadení",
+          "fr": "Un compte sur un appareil"
+        },
+        "sortOrder": 11
+      },
+      {
+        "code": "B13",
+        "name": {
+          "ru": "Дополнительная учётная запись пользователя",
+          "en": "Additional user account",
+          "de": "Zusätzliches Benutzerkonto",
+          "uk": "Додатковий обліковий запис користувача",
+          "sk": "Ďalší používateľský účet",
+          "fr": "Compte utilisateur supplémentaire"
+        },
+        "price": "25 €",
+        "note": {
+          "ru": "Локальная или Microsoft/Apple/Google",
+          "en": "Local or Microsoft / Apple / Google account",
+          "de": "Lokales Konto oder Microsoft-, Apple- bzw. Google-Konto",
+          "uk": "Локальний обліковий запис або Microsoft / Apple / Google",
+          "sk": "Lokálny účet alebo účet Microsoft / Apple / Google",
+          "fr": "Compte local ou Microsoft / Apple / Google"
+        },
+        "sortOrder": 12
+      },
+      {
+        "code": "B14",
+        "name": {
+          "ru": "Настройка принтера / сканера",
+          "en": "Printer / scanner setup",
+          "de": "Drucker- / Scanner-Einrichtung",
+          "uk": "Налаштування принтера / сканера",
+          "sk": "Nastavenie tlačiarne / skenera",
+          "fr": "Configuration d’une imprimante / d’un scanner"
+        },
+        "price": "39 €",
+        "note": {
+          "ru": "USB или готовое Wi-Fi-подключение",
+          "en": "USB or an existing Wi-Fi connection",
+          "de": "USB oder vorhandene WLAN-Verbindung",
+          "uk": "USB або наявне підключення Wi-Fi",
+          "sk": "USB alebo existujúce pripojenie Wi-Fi",
+          "fr": "USB ou connexion Wi-Fi existante"
+        },
+        "sortOrder": 13
+      },
+      {
+        "code": "B15",
+        "name": {
+          "ru": "Оптимизация производительности",
+          "en": "Performance optimization",
+          "de": "Leistungsoptimierung",
+          "uk": "Оптимізація продуктивності",
+          "sk": "Optimalizácia výkonu",
+          "fr": "Optimisation des performances"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "Автозагрузка, обновления, очистка, базовые настройки",
+          "en": "Startup items, updates, cleanup and basic settings",
+          "de": "Autostart, Updates, Bereinigung und Grundeinstellungen",
+          "uk": "Автозапуск, оновлення, очищення та базові параметри",
+          "sk": "Položky po spustení, aktualizácie, čistenie a základné nastavenia",
+          "fr": "Démarrage, mises à jour, nettoyage et réglages de base"
+        },
+        "sortOrder": 14
+      },
+      {
+        "code": "B16",
+        "name": {
+          "ru": "Устранение программной ошибки / сбоя загрузки",
+          "en": "Software error / startup failure troubleshooting",
+          "de": "Behebung von Softwarefehlern / Startproblemen",
+          "uk": "Усунення програмної помилки / збою запуску",
+          "sk": "Riešenie softvérovej chyby / problému so spustením",
+          "fr": "Dépannage d’une erreur logicielle / d’un échec de démarrage"
+        },
+        "price": "от 49 €",
+        "note": {
+          "ru": "По фактическому времени и сложности",
+          "en": "Based on actual time and complexity",
+          "de": "Abrechnung nach tatsächlichem Zeitaufwand und Komplexität",
+          "uk": "За фактичним часом і складністю",
+          "sk": "Podľa skutočného času a zložitosti",
+          "fr": "Selon le temps réel et la complexité"
+        },
+        "sortOrder": 15
+      }
+    ]
+  },
+  {
+    "number": "03",
+    "title": {
+      "ru": "Безопасность и защита аккаунтов",
+      "en": "Security and account protection",
+      "de": "Sicherheit und Kontoschutz",
+      "uk": "Безпека та захист облікових записів",
+      "sk": "Bezpečnosť a ochrana účtov",
+      "fr": "Sécurité et protection des comptes"
+    },
+    "subtitle": {
+      "ru": "Технические меры без юридического аудита и сертификации",
+      "en": "Technical measures without legal audit or certification",
+      "de": "Technische Maßnahmen ohne Rechtsaudit oder Zertifizierung",
+      "uk": "Технічні заходи без юридичного аудиту чи сертифікації",
+      "sk": "Technické opatrenia bez právneho auditu alebo certifikácie",
+      "fr": "Mesures techniques sans audit juridique ni certification"
+    },
+    "sortOrder": 2,
+    "items": [
+      {
+        "code": "C01",
+        "name": {
+          "ru": "Проверка на вирусы и нежелательные программы",
+          "en": "Virus and unwanted software scan",
+          "de": "Prüfung auf Viren und unerwünschte Software",
+          "uk": "Перевірка на віруси та небажані програми",
+          "sk": "Kontrola vírusov a nežiaduceho softvéru",
+          "fr": "Recherche de virus et de logiciels indésirables"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "Сканирование и отчёт",
+          "en": "Scanning and report",
+          "de": "Scan und Bericht",
+          "uk": "Сканування та звіт",
+          "sk": "Skenovanie a správa",
+          "fr": "Analyse et rapport"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "C02",
+        "name": {
+          "ru": "Удаление вирусов / malware",
+          "en": "Virus / malware removal",
+          "de": "Entfernung von Viren / Malware",
+          "uk": "Видалення вірусів / шкідливого ПЗ",
+          "sk": "Odstránenie vírusov / malvéru",
+          "fr": "Suppression de virus / logiciels malveillants"
+        },
+        "price": "от 79 €",
+        "note": {
+          "ru": "Без гарантии сохранения заражённой системы",
+          "en": "No guarantee that the infected system can be preserved",
+          "de": "Keine Garantie, dass das infizierte System erhalten werden kann",
+          "uk": "Без гарантії збереження зараженої системи",
+          "sk": "Bez záruky zachovania infikovaného systému",
+          "fr": "Aucune garantie de conservation du système infecté"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "C03",
+        "name": {
+          "ru": "Базовое усиление безопасности устройства",
+          "en": "Basic device security hardening",
+          "de": "Grundlegende Absicherung des Geräts",
+          "uk": "Базове посилення безпеки пристрою",
+          "sk": "Základné zabezpečenie zariadenia",
+          "fr": "Renforcement de base de la sécurité de l’appareil"
+        },
+        "price": "69 €",
+        "note": {
+          "ru": "Обновления, Defender/антивирус, firewall, настройки",
+          "en": "Updates, Defender / antivirus, firewall and settings",
+          "de": "Updates, Defender / Antivirus, Firewall und Einstellungen",
+          "uk": "Оновлення, Defender / антивірус, брандмауер і налаштування",
+          "sk": "Aktualizácie, Defender / antivírus, firewall a nastavenia",
+          "fr": "Mises à jour, Defender / antivirus, pare-feu et réglages"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "C04",
+        "name": {
+          "ru": "Настройка двухфакторной аутентификации",
+          "en": "Two-factor authentication setup",
+          "de": "Einrichtung der Zwei-Faktor-Authentifizierung",
+          "uk": "Налаштування двофакторної автентифікації",
+          "sk": "Nastavenie dvojfaktorového overenia",
+          "fr": "Configuration de l’authentification à deux facteurs"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "До 3 аккаунтов",
+          "en": "Up to 3 accounts",
+          "de": "Bis zu 3 Konten",
+          "uk": "До 3 облікових записів",
+          "sk": "Do 3 účtov",
+          "fr": "Jusqu’à 3 comptes"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "C05",
+        "name": {
+          "ru": "Настройка менеджера паролей",
+          "en": "Password manager setup",
+          "de": "Einrichtung eines Passwortmanagers",
+          "uk": "Налаштування менеджера паролів",
+          "sk": "Nastavenie správcu hesiel",
+          "fr": "Configuration d’un gestionnaire de mots de passe"
+        },
+        "price": "39 €",
+        "note": {
+          "ru": "1 пользователь, до 3 устройств",
+          "en": "One user, up to 3 devices",
+          "de": "Ein Benutzer, bis zu 3 Geräte",
+          "uk": "Один користувач, до 3 пристроїв",
+          "sk": "Jeden používateľ, do 3 zariadení",
+          "fr": "Un utilisateur, jusqu’à 3 appareils"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "C06",
+        "name": {
+          "ru": "Очистка браузера и проверка расширений",
+          "en": "Browser cleanup and extension review",
+          "de": "Browserbereinigung und Prüfung der Erweiterungen",
+          "uk": "Очищення браузера та перевірка розширень",
+          "sk": "Vyčistenie prehliadača a kontrola rozšírení",
+          "fr": "Nettoyage du navigateur et vérification des extensions"
+        },
+        "price": "29 €",
+        "note": {
+          "ru": "До 2 браузеров",
+          "en": "Up to 2 browsers",
+          "de": "Bis zu 2 Browser",
+          "uk": "До 2 браузерів",
+          "sk": "Do 2 prehliadačov",
+          "fr": "Jusqu’à 2 navigateurs"
+        },
+        "sortOrder": 5
+      },
+      {
+        "code": "C07",
+        "name": {
+          "ru": "Родительский контроль",
+          "en": "Parental controls",
+          "de": "Kindersicherung",
+          "uk": "Батьківський контроль",
+          "sk": "Rodičovská kontrola",
+          "fr": "Contrôle parental"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "1 устройство / семейная группа",
+          "en": "One device / family group",
+          "de": "Ein Gerät / eine Familiengruppe",
+          "uk": "Один пристрій / сімейна група",
+          "sk": "Jedno zariadenie / rodinná skupina",
+          "fr": "Un appareil / groupe familial"
+        },
+        "sortOrder": 6
+      },
+      {
+        "code": "C08",
+        "name": {
+          "ru": "Помощь с восстановлением аккаунта",
+          "en": "Account recovery assistance",
+          "de": "Unterstützung bei der Kontowiederherstellung",
+          "uk": "Допомога з відновленням облікового запису",
+          "sk": "Pomoc s obnovením účtu",
+          "fr": "Aide à la récupération d’un compte"
+        },
+        "price": "от 39 €",
+        "note": {
+          "ru": "Только законному владельцу; без обхода защиты",
+          "en": "For the lawful owner only; no security bypass",
+          "de": "Nur für den rechtmäßigen Inhaber; keine Umgehung von Schutzmaßnahmen",
+          "uk": "Лише законному власнику; без обходу захисту",
+          "sk": "Len pre zákonného vlastníka; bez obchádzania ochrany",
+          "fr": "Uniquement pour le propriétaire légitime ; aucun contournement de sécurité"
+        },
+        "sortOrder": 7
+      },
+      {
+        "code": "C09",
+        "name": {
+          "ru": "Базовая проверка безопасности рабочего места",
+          "en": "Basic workstation security check",
+          "de": "Grundlegende Sicherheitsprüfung eines Arbeitsplatzes",
+          "uk": "Базова перевірка безпеки робочого місця",
+          "sk": "Základná bezpečnostná kontrola pracoviska",
+          "fr": "Contrôle de sécurité de base d’un poste de travail"
+        },
+        "price": "79 €",
+        "note": {
+          "ru": "Не является аудитом, пентестом или DSGVO-сертификацией",
+          "en": "Not an audit, penetration test or DSGVO certification",
+          "de": "Kein Audit, Penetrationstest oder keine DSGVO-Zertifizierung",
+          "uk": "Не є аудитом, тестом на проникнення чи сертифікацією DSGVO",
+          "sk": "Nie je auditom, penetračným testom ani certifikáciou DSGVO",
+          "fr": "Ne constitue pas un audit, un test d’intrusion ou une certification DSGVO"
+        },
+        "sortOrder": 8
+      },
+      {
+        "code": "C10",
+        "name": {
+          "ru": "Обучение защите от фишинга и мошенничества",
+          "en": "Phishing and fraud prevention training",
+          "de": "Schulung zum Schutz vor Phishing und Betrug",
+          "uk": "Навчання захисту від фішингу та шахрайства",
+          "sk": "Školenie ochrany pred phishingom a podvodmi",
+          "fr": "Formation à la prévention du phishing et de la fraude"
+        },
+        "price": "59 €/час",
+        "note": {
+          "ru": "Индивидуально или для небольшой команды",
+          "en": "Individual session or small team",
+          "de": "Einzelschulung oder kleines Team",
+          "uk": "Індивідуально або для невеликої команди",
+          "sk": "Individuálne alebo pre malý tím",
+          "fr": "Séance individuelle ou petite équipe"
+        },
+        "sortOrder": 9
+      }
+    ]
+  },
+  {
+    "number": "04",
+    "title": {
+      "ru": "Данные, резервные копии и перенос",
+      "en": "Data, backups and transfer",
+      "de": "Daten, Sicherungen und Übertragung",
+      "uk": "Дані, резервні копії та перенесення",
+      "sk": "Údaje, zálohy a prenos",
+      "fr": "Données, sauvegardes et transfert"
+    },
+    "subtitle": {
+      "ru": "Работа только с доступными и читаемыми носителями",
+      "en": "Work only with accessible and readable storage media",
+      "de": "Arbeiten nur mit zugänglichen und lesbaren Datenträgern",
+      "uk": "Робота лише з доступними й читабельними носіями",
+      "sk": "Práca iba s dostupnými a čitateľnými médiami",
+      "fr": "Travail uniquement avec des supports accessibles et lisibles"
+    },
+    "sortOrder": 3,
+    "items": [
+      {
+        "code": "D01",
+        "name": {
+          "ru": "Перенос данных до 250 ГБ",
+          "en": "Data transfer up to 250 GB",
+          "de": "Datenübertragung bis 250 GB",
+          "uk": "Перенесення даних до 250 ГБ",
+          "sk": "Prenos údajov do 250 GB",
+          "fr": "Transfert de données jusqu’à 250 Go"
+        },
+        "price": "59 €",
+        "note": {
+          "ru": "С одного исправного устройства на другое",
+          "en": "From one working device to another",
+          "de": "Von einem funktionsfähigen Gerät auf ein anderes",
+          "uk": "З одного справного пристрою на інший",
+          "sk": "Z jedného funkčného zariadenia na druhé",
+          "fr": "D’un appareil fonctionnel vers un autre"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "D02",
+        "name": {
+          "ru": "Перенос данных 250 ГБ–1 ТБ",
+          "en": "Data transfer from 250 GB to 1 TB",
+          "de": "Datenübertragung von 250 GB bis 1 TB",
+          "uk": "Перенесення даних від 250 ГБ до 1 ТБ",
+          "sk": "Prenos údajov od 250 GB do 1 TB",
+          "fr": "Transfert de données de 250 Go à 1 To"
+        },
+        "price": "99 €",
+        "note": {
+          "ru": "При нормальной скорости чтения",
+          "en": "With normal read speed",
+          "de": "Bei normaler Lesegeschwindigkeit",
+          "uk": "За нормальної швидкості читання",
+          "sk": "Pri bežnej rýchlosti čítania",
+          "fr": "Avec une vitesse de lecture normale"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "D03",
+        "name": {
+          "ru": "Клонирование системного SSD / HDD",
+          "en": "System SSD / HDD cloning",
+          "de": "Klonen einer System-SSD / -HDD",
+          "uk": "Клонування системного SSD / HDD",
+          "sk": "Klonovanie systémového SSD / HDD",
+          "fr": "Clonage d’un SSD / HDD système"
+        },
+        "price": "79 €",
+        "note": {
+          "ru": "Без стоимости нового накопителя",
+          "en": "New storage device not included",
+          "de": "Neuer Datenträger nicht enthalten",
+          "uk": "Новий накопичувач не включений",
+          "sk": "Nový disk nie je zahrnutý",
+          "fr": "Nouveau support de stockage non inclus"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "D04",
+        "name": {
+          "ru": "Настройка локальной резервной копии",
+          "en": "Local backup setup",
+          "de": "Einrichtung einer lokalen Datensicherung",
+          "uk": "Налаштування локальної резервної копії",
+          "sk": "Nastavenie lokálnej zálohy",
+          "fr": "Configuration d’une sauvegarde locale"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "Windows Backup / Time Machine / аналог",
+          "en": "Windows Backup / Time Machine / equivalent",
+          "de": "Windows-Sicherung / Time Machine / vergleichbare Lösung",
+          "uk": "Windows Backup / Time Machine / аналог",
+          "sk": "Windows Backup / Time Machine / ekvivalent",
+          "fr": "Sauvegarde Windows / Time Machine / équivalent"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "D05",
+        "name": {
+          "ru": "Настройка облачной резервной копии",
+          "en": "Cloud backup setup",
+          "de": "Einrichtung einer Cloud-Datensicherung",
+          "uk": "Налаштування хмарної резервної копії",
+          "sk": "Nastavenie cloudovej zálohy",
+          "fr": "Configuration d’une sauvegarde cloud"
+        },
+        "price": "59 €",
+        "note": {
+          "ru": "OneDrive, Google Drive, iCloud или другое",
+          "en": "OneDrive, Google Drive, iCloud or another service",
+          "de": "OneDrive, Google Drive, iCloud oder anderer Dienst",
+          "uk": "OneDrive, Google Drive, iCloud або інший сервіс",
+          "sk": "OneDrive, Google Drive, iCloud alebo iná služba",
+          "fr": "OneDrive, Google Drive, iCloud ou autre service"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "D06",
+        "name": {
+          "ru": "Комбинированная схема 3-2-1 для дома / микробизнеса",
+          "en": "Combined 3-2-1 backup plan for home / microbusiness",
+          "de": "Kombinierter 3-2-1-Sicherungsplan für Zuhause / Kleinstunternehmen",
+          "uk": "Комбінована схема резервного копіювання 3-2-1 для дому / мікробізнесу",
+          "sk": "Kombinovaný zálohovací plán 3-2-1 pre domácnosť / mikropodnik",
+          "fr": "Plan de sauvegarde 3-2-1 combiné pour domicile / microentreprise"
+        },
+        "price": "от 129 €",
+        "note": {
+          "ru": "Проектирование и базовая настройка",
+          "en": "Planning and basic setup",
+          "de": "Planung und Basiseinrichtung",
+          "uk": "Планування та базове налаштування",
+          "sk": "Plánovanie a základné nastavenie",
+          "fr": "Planification et configuration de base"
+        },
+        "sortOrder": 5
+      },
+      {
+        "code": "D07",
+        "name": {
+          "ru": "Логическое восстановление удалённых данных",
+          "en": "Logical recovery of deleted data",
+          "de": "Logische Wiederherstellung gelöschter Daten",
+          "uk": "Логічне відновлення видалених даних",
+          "sk": "Logické obnovenie odstránených údajov",
+          "fr": "Récupération logique de données supprimées"
+        },
+        "price": "от 129 €",
+        "note": {
+          "ru": "Только читаемый носитель, без вскрытия и ремонта",
+          "en": "Readable media only; no opening or hardware repair",
+          "de": "Nur lesbare Datenträger; kein Öffnen oder Hardware-Reparatur",
+          "uk": "Лише читабельний носій; без розкриття та апаратного ремонту",
+          "sk": "Len čitateľné médium; bez otvorenia alebo opravy hardvéru",
+          "fr": "Support lisible uniquement ; aucune ouverture ni réparation matérielle"
+        },
+        "sortOrder": 6
+      },
+      {
+        "code": "D08",
+        "name": {
+          "ru": "Безопасное программное стирание накопителя",
+          "en": "Secure software-based drive erasure",
+          "de": "Sicheres softwarebasiertes Löschen eines Datenträgers",
+          "uk": "Безпечне програмне стирання накопичувача",
+          "sk": "Bezpečné softvérové vymazanie disku",
+          "fr": "Effacement logiciel sécurisé d’un disque"
+        },
+        "price": "35 €",
+        "note": {
+          "ru": "За 1 накопитель; физическое уничтожение не входит",
+          "en": "Per drive; physical destruction is not included",
+          "de": "Pro Datenträger; physische Vernichtung nicht enthalten",
+          "uk": "За один накопичувач; фізичне знищення не включене",
+          "sk": "Za jeden disk; fyzické zničenie nie je zahrnuté",
+          "fr": "Par disque ; destruction physique non incluse"
+        },
+        "sortOrder": 7
+      },
+      {
+        "code": "D09",
+        "name": {
+          "ru": "Организация файлов и папок",
+          "en": "File and folder organization",
+          "de": "Organisation von Dateien und Ordnern",
+          "uk": "Організація файлів і папок",
+          "sk": "Usporiadanie súborov a priečinkov",
+          "fr": "Organisation des fichiers et dossiers"
+        },
+        "price": "49 €/час",
+        "note": {
+          "ru": "Структура, перенос, базовая дедупликация",
+          "en": "Structure, transfer and basic deduplication",
+          "de": "Struktur, Übertragung und einfache Duplikatbereinigung",
+          "uk": "Структура, перенесення та базове видалення дублікатів",
+          "sk": "Štruktúra, prenos a základné odstránenie duplicít",
+          "fr": "Structure, transfert et déduplication de base"
+        },
+        "sortOrder": 8
+      },
+      {
+        "code": "D10",
+        "name": {
+          "ru": "Организация фотоархива",
+          "en": "Photo archive organization",
+          "de": "Organisation eines Fotoarchivs",
+          "uk": "Організація фотоархіву",
+          "sk": "Usporiadanie fotoarchívu",
+          "fr": "Organisation d’une photothèque"
+        },
+        "price": "от 79 €",
+        "note": {
+          "ru": "По годам/папкам, резервная копия отдельно",
+          "en": "By year / folder; backup charged separately",
+          "de": "Nach Jahr / Ordner; Datensicherung wird separat berechnet",
+          "uk": "За роками / папками; резервна копія оплачується окремо",
+          "sk": "Podľa rokov / priečinkov; záloha sa účtuje samostatne",
+          "fr": "Par année / dossier ; sauvegarde facturée séparément"
+        },
+        "sortOrder": 9
+      }
+    ]
+  },
+  {
+    "number": "05",
+    "title": {
+      "ru": "Чистка, сборка и модульный апгрейд",
+      "en": "Cleaning, PC building and modular upgrades",
+      "de": "Reinigung, PC-Zusammenbau und modulare Upgrades",
+      "uk": "Чистка, збірка та модульний апгрейд",
+      "sk": "Čistenie, zostavenie PC a modulárne vylepšenia",
+      "fr": "Nettoyage, montage PC et mises à niveau modulaires"
+    },
+    "subtitle": {
+      "ru": "Без пайки, ремонта плат, экранов и силовой электроники",
+      "en": "No soldering or repair of circuit boards, screens or power electronics",
+      "de": "Ohne Löten oder Reparatur von Platinen, Bildschirmen und Leistungselektronik",
+      "uk": "Без пайки й ремонту плат, екранів та силової електроніки",
+      "sk": "Bez spájkovania a opravy dosiek, obrazoviek alebo výkonovej elektroniky",
+      "fr": "Sans soudure ni réparation de cartes, écrans ou électronique de puissance"
+    },
+    "sortOrder": 4,
+    "items": [
+      {
+        "code": "E01",
+        "name": {
+          "ru": "Внутренняя чистка стационарного ПК",
+          "en": "Internal cleaning of a desktop PC",
+          "de": "Innenreinigung eines Desktop-PCs",
+          "uk": "Внутрішнє чищення стаціонарного ПК",
+          "sk": "Vnútorné čistenie stolného PC",
+          "fr": "Nettoyage interne d’un PC de bureau"
+        },
+        "price": "45 €",
+        "note": {
+          "ru": "Пыль, фильтры, вентиляторы, визуальная проверка",
+          "en": "Dust, filters, fans and visual inspection",
+          "de": "Staub, Filter, Lüfter und Sichtprüfung",
+          "uk": "Пил, фільтри, вентилятори та візуальна перевірка",
+          "sk": "Prach, filtre, ventilátory a vizuálna kontrola",
+          "fr": "Poussière, filtres, ventilateurs et contrôle visuel"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "E02",
+        "name": {
+          "ru": "Внутренняя чистка ноутбука",
+          "en": "Internal laptop cleaning",
+          "de": "Innenreinigung eines Laptops",
+          "uk": "Внутрішнє чищення ноутбука",
+          "sk": "Vnútorné čistenie notebooku",
+          "fr": "Nettoyage interne d’un ordinateur portable"
+        },
+        "price": "от 69 €",
+        "note": {
+          "ru": "После проверки разборки конкретной модели",
+          "en": "After checking the disassembly requirements of the model",
+          "de": "Nach Prüfung der Demontageanforderungen des Modells",
+          "uk": "Після перевірки вимог до розбирання конкретної моделі",
+          "sk": "Po overení požiadaviek na rozobratie konkrétneho modelu",
+          "fr": "Après vérification des exigences de démontage du modèle"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "E03",
+        "name": {
+          "ru": "Замена термопасты в стационарном ПК",
+          "en": "Desktop PC thermal paste replacement",
+          "de": "Austausch der Wärmeleitpaste bei einem Desktop-PC",
+          "uk": "Заміна термопасти у стаціонарному ПК",
+          "sk": "Výmena teplovodivej pasty v stolnom PC",
+          "fr": "Remplacement de la pâte thermique d’un PC de bureau"
+        },
+        "price": "39 €",
+        "note": {
+          "ru": "Материал включён; вместе с чисткой дешевле",
+          "en": "Material included; lower price when combined with cleaning",
+          "de": "Material enthalten; günstiger in Verbindung mit einer Reinigung",
+          "uk": "Матеріал включений; дешевше разом із чищенням",
+          "sk": "Materiál je zahrnutý; nižšia cena spolu s čistením",
+          "fr": "Matériau inclus ; tarif réduit avec un nettoyage"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "E04",
+        "name": {
+          "ru": "Замена термопасты в ноутбуке",
+          "en": "Laptop thermal paste replacement",
+          "de": "Austausch der Wärmeleitpaste bei einem Laptop",
+          "uk": "Заміна термопасти в ноутбуці",
+          "sk": "Výmena teplovodivej pasty v notebooku",
+          "fr": "Remplacement de la pâte thermique d’un ordinateur portable"
+        },
+        "price": "от 59 €",
+        "note": {
+          "ru": "Без пайки и ремонта системы питания",
+          "en": "No soldering or power-system repair",
+          "de": "Keine Lötarbeiten oder Reparatur der Stromversorgung",
+          "uk": "Без паяння та ремонту системи живлення",
+          "sk": "Bez spájkovania a opravy napájacieho systému",
+          "fr": "Aucune soudure ni réparation du système d’alimentation"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "E05",
+        "name": {
+          "ru": "Установка RAM / SSD / HDD в ПК",
+          "en": "RAM / SSD / HDD installation in a desktop PC",
+          "de": "Einbau von RAM / SSD / HDD in einen Desktop-PC",
+          "uk": "Встановлення RAM / SSD / HDD у стаціонарний ПК",
+          "sk": "Inštalácia RAM / SSD / HDD do stolného PC",
+          "fr": "Installation de RAM / SSD / HDD dans un PC de bureau"
+        },
+        "price": "25 € за модуль",
+        "note": {
+          "ru": "Комплектующие отдельно",
+          "en": "Components charged separately",
+          "de": "Komponenten werden separat berechnet",
+          "uk": "Комплектуючі оплачуються окремо",
+          "sk": "Komponenty sa účtujú samostatne",
+          "fr": "Composants facturés séparément"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "E06",
+        "name": {
+          "ru": "Установка RAM / SSD в ноутбук",
+          "en": "RAM / SSD installation in a laptop",
+          "de": "Einbau von RAM / SSD in einen Laptop",
+          "uk": "Встановлення RAM / SSD у ноутбук",
+          "sk": "Inštalácia RAM / SSD do notebooku",
+          "fr": "Installation de RAM / SSD dans un ordinateur portable"
+        },
+        "price": "от 39 €",
+        "note": {
+          "ru": "Только сменные модули, без распайки",
+          "en": "Replaceable modules only; no soldered components",
+          "de": "Nur austauschbare Module; keine verlöteten Komponenten",
+          "uk": "Лише змінні модулі; без розпаяних компонентів",
+          "sk": "Len vymeniteľné moduly; bez spájkovaných komponentov",
+          "fr": "Uniquement les modules remplaçables ; aucun composant soudé"
+        },
+        "sortOrder": 5
+      },
+      {
+        "code": "E07",
+        "name": {
+          "ru": "Установка видеокарты / PCIe-карты",
+          "en": "Graphics card / PCIe card installation",
+          "de": "Einbau einer Grafikkarte / PCIe-Karte",
+          "uk": "Встановлення відеокарти / PCIe-карти",
+          "sk": "Inštalácia grafickej / PCIe karty",
+          "fr": "Installation d’une carte graphique / carte PCIe"
+        },
+        "price": "35 €",
+        "note": {
+          "ru": "Проверка питания и совместимости",
+          "en": "Power and compatibility check",
+          "de": "Prüfung von Stromversorgung und Kompatibilität",
+          "uk": "Перевірка живлення та сумісності",
+          "sk": "Kontrola napájania a kompatibility",
+          "fr": "Vérification de l’alimentation et de la compatibilité"
+        },
+        "sortOrder": 6
+      },
+      {
+        "code": "E08",
+        "name": {
+          "ru": "Замена блока питания модулем",
+          "en": "Power supply module replacement",
+          "de": "Austausch eines Netzteilmoduls",
+          "uk": "Модульна заміна блока живлення",
+          "sk": "Modulárna výmena napájacieho zdroja",
+          "fr": "Remplacement modulaire du bloc d’alimentation"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "Без ремонта блока питания",
+          "en": "No power supply repair",
+          "de": "Keine Reparatur des Netzteils",
+          "uk": "Без ремонту блока живлення",
+          "sk": "Bez opravy napájacieho zdroja",
+          "fr": "Aucune réparation du bloc d’alimentation"
+        },
+        "sortOrder": 7
+      },
+      {
+        "code": "E09",
+        "name": {
+          "ru": "Замена вентилятора / кулера модулем",
+          "en": "Fan / cooler module replacement",
+          "de": "Austausch eines Lüfter- / Kühlermoduls",
+          "uk": "Модульна заміна вентилятора / кулера",
+          "sk": "Modulárna výmena ventilátora / chladiča",
+          "fr": "Remplacement modulaire d’un ventilateur / refroidisseur"
+        },
+        "price": "от 39 €",
+        "note": {
+          "ru": "Компонент отдельно",
+          "en": "Component charged separately",
+          "de": "Komponente wird separat berechnet",
+          "uk": "Компонент оплачується окремо",
+          "sk": "Komponent sa účtuje samostatne",
+          "fr": "Composant facturé séparément"
+        },
+        "sortOrder": 8
+      },
+      {
+        "code": "E10",
+        "name": {
+          "ru": "SSD / HDD с переносом системы",
+          "en": "SSD / HDD installation with system transfer",
+          "de": "Einbau einer SSD / HDD mit Systemübertragung",
+          "uk": "Встановлення SSD / HDD із перенесенням системи",
+          "sk": "Inštalácia SSD / HDD s prenosom systému",
+          "fr": "Installation d’un SSD / HDD avec transfert du système"
+        },
+        "price": "от 89 €",
+        "note": {
+          "ru": "Установка + клонирование при исправном источнике",
+          "en": "Installation and cloning from a working source",
+          "de": "Installation und Klonen von einer funktionsfähigen Quelle",
+          "uk": "Встановлення та клонування зі справного джерела",
+          "sk": "Inštalácia a klonovanie z funkčného zdroja",
+          "fr": "Installation et clonage depuis une source fonctionnelle"
+        },
+        "sortOrder": 9
+      },
+      {
+        "code": "E11",
+        "name": {
+          "ru": "Сборка офисного ПК",
+          "en": "Office PC assembly",
+          "de": "Zusammenbau eines Büro-PCs",
+          "uk": "Збірка офісного ПК",
+          "sk": "Zostavenie kancelárskeho PC",
+          "fr": "Montage d’un PC de bureau"
+        },
+        "price": "89 €",
+        "note": {
+          "ru": "Из совместимых готовых компонентов",
+          "en": "Built from compatible ready-made components",
+          "de": "Aus kompatiblen, fertigen Komponenten",
+          "uk": "Із сумісних готових компонентів",
+          "sk": "Z kompatibilných hotových komponentov",
+          "fr": "À partir de composants compatibles prêts à l’emploi"
+        },
+        "sortOrder": 10
+      },
+      {
+        "code": "E12",
+        "name": {
+          "ru": "Сборка игрового / производительного ПК",
+          "en": "Gaming / high-performance PC assembly",
+          "de": "Zusammenbau eines Gaming- / Hochleistungs-PCs",
+          "uk": "Збірка ігрового / продуктивного ПК",
+          "sk": "Zostavenie herného / výkonného PC",
+          "fr": "Montage d’un PC gaming / haute performance"
+        },
+        "price": "129 €",
+        "note": {
+          "ru": "Сборка, BIOS, кабель-менеджмент, тест",
+          "en": "Assembly, BIOS setup, cable management and testing",
+          "de": "Montage, BIOS-Einrichtung, Kabelmanagement und Test",
+          "uk": "Збірка, налаштування BIOS, кабель-менеджмент і тестування",
+          "sk": "Montáž, nastavenie BIOS, správa káblov a testovanie",
+          "fr": "Montage, configuration du BIOS, gestion des câbles et tests"
+        },
+        "sortOrder": 11
+      },
+      {
+        "code": "E13",
+        "name": {
+          "ru": "Подбор конфигурации и комплектующих",
+          "en": "Configuration and component selection",
+          "de": "Auswahl von Konfiguration und Komponenten",
+          "uk": "Підбір конфігурації та комплектуючих",
+          "sk": "Výber konfigurácie a komponentov",
+          "fr": "Choix de la configuration et des composants"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "Зачитывается при заказе сборки",
+          "en": "Credited when PC assembly is ordered",
+          "de": "Wird bei Beauftragung des PC-Zusammenbaus angerechnet",
+          "uk": "Зараховується при замовленні збірки ПК",
+          "sk": "Započíta sa pri objednaní zostavenia PC",
+          "fr": "Déduit du prix lors de la commande du montage du PC"
+        },
+        "sortOrder": 12
+      },
+      {
+        "code": "E14",
+        "name": {
+          "ru": "Тест стабильности и температур",
+          "en": "Stability and temperature test",
+          "de": "Stabilitäts- und Temperaturtest",
+          "uk": "Тест стабільності та температур",
+          "sk": "Test stability a teplôt",
+          "fr": "Test de stabilité et de température"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "CPU/GPU/RAM/накопители, краткий отчёт",
+          "en": "CPU, GPU, RAM and storage test with short report",
+          "de": "Test von CPU, GPU, RAM und Datenträgern mit Kurzbericht",
+          "uk": "Тест CPU, GPU, RAM і накопичувачів із коротким звітом",
+          "sk": "Test CPU, GPU, RAM a diskov s krátkou správou",
+          "fr": "Test du CPU, GPU, de la RAM et du stockage avec rapport court"
+        },
+        "sortOrder": 13
+      },
+      {
+        "code": "E15",
+        "name": {
+          "ru": "Замена материнской платы готовым модулем",
+          "en": "Motherboard module replacement",
+          "de": "Austausch eines Mainboard-Moduls",
+          "uk": "Модульна заміна материнської плати",
+          "sk": "Modulárna výmena základnej dosky",
+          "fr": "Remplacement modulaire de la carte mère"
+        },
+        "price": "от 119 €",
+        "note": {
+          "ru": "Только модульная замена, без ремонта платы",
+          "en": "Modular replacement only; no board repair",
+          "de": "Nur modularer Austausch; keine Platinenreparatur",
+          "uk": "Лише модульна заміна; без ремонту плати",
+          "sk": "Len modulárna výmena; bez opravy dosky",
+          "fr": "Remplacement modulaire uniquement ; aucune réparation de la carte"
+        },
+        "sortOrder": 14
+      }
+    ]
+  },
+  {
+    "number": "06",
+    "title": {
+      "ru": "Роутеры, Wi-Fi, готовые сетевые компоненты и NAS",
+      "en": "Routers, Wi-Fi, ready-made network components and NAS",
+      "de": "Router, WLAN, fertige Netzwerkkomponenten und NAS",
+      "uk": "Роутери, Wi-Fi, готові мережеві компоненти та NAS",
+      "sk": "Routery, Wi-Fi, hotové sieťové komponenty a NAS",
+      "fr": "Routeurs, Wi-Fi, composants réseau prêts à l’emploi et NAS"
+    },
+    "subtitle": {
+      "ru": "Только настройка уже установленных устройств; без прокладки кабеля и электрических работ",
+      "en": "Configuration of already installed devices only; no cabling or electrical work",
+      "de": "Nur Konfiguration bereits installierter Geräte; keine Kabel- oder Elektroarbeiten",
+      "uk": "Лише налаштування вже встановлених пристроїв; без прокладання кабелів та електромонтажу",
+      "sk": "Iba konfigurácia už nainštalovaných zariadení; bez kabeláže a elektroinštalácie",
+      "fr": "Configuration d’appareils déjà installés uniquement ; sans câblage ni travaux électriques"
+    },
+    "sortOrder": 5,
+    "items": [
+      {
+        "code": "F01",
+        "name": {
+          "ru": "Настройка роутера / FRITZ!Box",
+          "en": "Router / FRITZ!Box setup",
+          "de": "Einrichtung eines Routers / einer FRITZ!Box",
+          "uk": "Налаштування роутера / FRITZ!Box",
+          "sk": "Nastavenie smerovača / FRITZ!Box",
+          "fr": "Configuration d’un routeur / FRITZ!Box"
+        },
+        "price": "59 €",
+        "note": {
+          "ru": "Интернет, Wi-Fi, пароль, обновление, базовая безопасность",
+          "en": "Internet, Wi-Fi, password, update and basic security",
+          "de": "Internet, WLAN, Passwort, Update und grundlegende Sicherheit",
+          "uk": "Інтернет, Wi-Fi, пароль, оновлення та базова безпека",
+          "sk": "Internet, Wi-Fi, heslo, aktualizácia a základné zabezpečenie",
+          "fr": "Internet, Wi-Fi, mot de passe, mise à jour et sécurité de base"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "F02",
+        "name": {
+          "ru": "Настройка Wi-Fi Mesh",
+          "en": "Wi-Fi Mesh setup",
+          "de": "Einrichtung eines WLAN-Mesh",
+          "uk": "Налаштування Wi-Fi Mesh",
+          "sk": "Nastavenie Wi-Fi Mesh",
+          "fr": "Configuration d’un réseau Wi-Fi Mesh"
+        },
+        "price": "от 79 €",
+        "note": {
+          "ru": "До 3 готовых устройств",
+          "en": "Up to 3 ready-to-use devices",
+          "de": "Bis zu 3 betriebsbereite Geräte",
+          "uk": "До 3 готових пристроїв",
+          "sk": "Do 3 pripravených zariadení",
+          "fr": "Jusqu’à 3 appareils prêts à l’emploi"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "F03",
+        "name": {
+          "ru": "Настройка точки доступа",
+          "en": "Access point setup",
+          "de": "Einrichtung eines Access Points",
+          "uk": "Налаштування точки доступу",
+          "sk": "Nastavenie prístupového bodu",
+          "fr": "Configuration d’un point d’accès"
+        },
+        "price": "59 €",
+        "note": {
+          "ru": "Устройство уже подключено и установлено",
+          "en": "Device must already be connected and installed",
+          "de": "Gerät muss bereits angeschlossen und installiert sein",
+          "uk": "Пристрій має бути вже підключений і встановлений",
+          "sk": "Zariadenie musí byť už pripojené a nainštalované",
+          "fr": "L’appareil doit déjà être connecté et installé"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "F04",
+        "name": {
+          "ru": "Настройка управляемого switch",
+          "en": "Managed switch setup",
+          "de": "Einrichtung eines Managed Switch",
+          "uk": "Налаштування керованого комутатора",
+          "sk": "Nastavenie riadeného prepínača",
+          "fr": "Configuration d’un commutateur administrable"
+        },
+        "price": "от 69 €",
+        "note": {
+          "ru": "Готовое питание и кабельные подключения",
+          "en": "Power and cable connections must already be available",
+          "de": "Stromversorgung und Kabelverbindungen müssen bereits vorhanden sein",
+          "uk": "Живлення та кабельні підключення мають бути вже готові",
+          "sk": "Napájanie a káblové pripojenia musia byť už pripravené",
+          "fr": "L’alimentation et les connexions câblées doivent déjà être disponibles"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "F05",
+        "name": {
+          "ru": "Гостевая сеть / родительские правила",
+          "en": "Guest network / parental rules",
+          "de": "Gastnetzwerk / Regeln für Kindersicherung",
+          "uk": "Гостьова мережа / батьківські правила",
+          "sk": "Hosťovská sieť / rodičovské pravidlá",
+          "fr": "Réseau invité / règles parentales"
+        },
+        "price": "39 €",
+        "note": {
+          "ru": "На готовом роутере",
+          "en": "On an existing router",
+          "de": "Auf einem vorhandenen Router",
+          "uk": "На наявному роутері",
+          "sk": "Na existujúcom smerovači",
+          "fr": "Sur un routeur existant"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "F06",
+        "name": {
+          "ru": "Настройка сетевого принтера",
+          "en": "Network printer setup",
+          "de": "Einrichtung eines Netzwerkdruckers",
+          "uk": "Налаштування мережевого принтера",
+          "sk": "Nastavenie sieťovej tlačiarne",
+          "fr": "Configuration d’une imprimante réseau"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "До 3 рабочих мест",
+          "en": "Up to 3 workstations",
+          "de": "Bis zu 3 Arbeitsplätze",
+          "uk": "До 3 робочих місць",
+          "sk": "Do 3 pracovných staníc",
+          "fr": "Jusqu’à 3 postes de travail"
+        },
+        "sortOrder": 5
+      },
+      {
+        "code": "F07",
+        "name": {
+          "ru": "Настройка NAS — базовая",
+          "en": "Basic NAS setup",
+          "de": "Basiseinrichtung eines NAS",
+          "uk": "Базове налаштування NAS",
+          "sk": "Základné nastavenie NAS",
+          "fr": "Configuration de base d’un NAS"
+        },
+        "price": "99 €",
+        "note": {
+          "ru": "Пользователи, папки, обновления, доступ в локальной сети",
+          "en": "Users, folders, updates and local network access",
+          "de": "Benutzer, Ordner, Updates und Zugriff im lokalen Netzwerk",
+          "uk": "Користувачі, папки, оновлення та доступ у локальній мережі",
+          "sk": "Používatelia, priečinky, aktualizácie a prístup v lokálnej sieti",
+          "fr": "Utilisateurs, dossiers, mises à jour et accès au réseau local"
+        },
+        "sortOrder": 6
+      },
+      {
+        "code": "F08",
+        "name": {
+          "ru": "NAS + резервные копии и права доступа",
+          "en": "NAS with backups and access rights",
+          "de": "NAS mit Datensicherungen und Zugriffsrechten",
+          "uk": "NAS із резервними копіями та правами доступу",
+          "sk": "NAS so zálohami a prístupovými právami",
+          "fr": "NAS avec sauvegardes et droits d’accès"
+        },
+        "price": "от 149 €",
+        "note": {
+          "ru": "До 3 пользователей / рабочих мест",
+          "en": "Up to 3 users / workstations",
+          "de": "Bis zu 3 Benutzer / Arbeitsplätze",
+          "uk": "До 3 користувачів / робочих місць",
+          "sk": "Do 3 používateľov / pracovných staníc",
+          "fr": "Jusqu’à 3 utilisateurs / postes de travail"
+        },
+        "sortOrder": 7
+      },
+      {
+        "code": "F09",
+        "name": {
+          "ru": "Диагностика Wi-Fi и рекомендации",
+          "en": "Wi-Fi diagnostics and recommendations",
+          "de": "WLAN-Diagnose und Empfehlungen",
+          "uk": "Діагностика Wi-Fi та рекомендації",
+          "sk": "Diagnostika Wi-Fi a odporúčania",
+          "fr": "Diagnostic Wi-Fi et recommandations"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "Без радиоизмерений и сертификации",
+          "en": "No professional radio measurements or certification",
+          "de": "Keine professionellen Funkmessungen oder Zertifizierung",
+          "uk": "Без професійних радіовимірювань і сертифікації",
+          "sk": "Bez profesionálnych rádiových meraní alebo certifikácie",
+          "fr": "Aucune mesure radio professionnelle ni certification"
+        },
+        "sortOrder": 8
+      },
+      {
+        "code": "F10",
+        "name": {
+          "ru": "VLAN / расширенная конфигурация готового оборудования",
+          "en": "VLAN / advanced configuration of existing equipment",
+          "de": "VLAN / erweiterte Konfiguration vorhandener Geräte",
+          "uk": "VLAN / розширена конфігурація наявного обладнання",
+          "sk": "VLAN / rozšírená konfigurácia existujúceho zariadenia",
+          "fr": "VLAN / configuration avancée d’un équipement existant"
+        },
+        "price": "от 119 €",
+        "note": {
+          "ru": "После проверки оборудования и задачи",
+          "en": "After checking the equipment and requirements",
+          "de": "Nach Prüfung der Geräte und Anforderungen",
+          "uk": "Після перевірки обладнання та вимог",
+          "sk": "Po kontrole zariadenia a požiadaviek",
+          "fr": "Après vérification de l’équipement et des besoins"
+        },
+        "sortOrder": 9
+      },
+      {
+        "code": "F11",
+        "name": {
+          "ru": "Схема и документация малой сети",
+          "en": "Small network diagram and documentation",
+          "de": "Diagramm und Dokumentation eines kleinen Netzwerks",
+          "uk": "Схема та документація малої мережі",
+          "sk": "Schéma a dokumentácia malej siete",
+          "fr": "Schéma et documentation d’un petit réseau"
+        },
+        "price": "от 79 €",
+        "note": {
+          "ru": "Устройства, адреса, доступы, рекомендации",
+          "en": "Devices, addresses, access details and recommendations",
+          "de": "Geräte, Adressen, Zugangsdaten und Empfehlungen",
+          "uk": "Пристрої, адреси, дані доступу та рекомендації",
+          "sk": "Zariadenia, adresy, prístupové údaje a odporúčania",
+          "fr": "Appareils, adresses, données d’accès et recommandations"
+        },
+        "sortOrder": 10
+      },
+      {
+        "code": "F12",
+        "name": {
+          "ru": "Обновление прошивки роутера / switch / NAS",
+          "en": "Router / switch / NAS firmware update",
+          "de": "Firmware-Update für Router / Switch / NAS",
+          "uk": "Оновлення прошивки роутера / комутатора / NAS",
+          "sk": "Aktualizácia firmvéru smerovača / prepínača / NAS",
+          "fr": "Mise à jour du micrologiciel d’un routeur / commutateur / NAS"
+        },
+        "price": "39 €",
+        "note": {
+          "ru": "За 1 устройство, после проверки совместимости",
+          "en": "Per device, after compatibility check",
+          "de": "Pro Gerät, nach Kompatibilitätsprüfung",
+          "uk": "За один пристрій, після перевірки сумісності",
+          "sk": "Za jedno zariadenie, po kontrole kompatibility",
+          "fr": "Par appareil, après vérification de la compatibilité"
+        },
+        "sortOrder": 11
+      }
+    ]
+  },
+  {
+    "number": "07",
+    "title": {
+      "ru": "Почта, облачные сервисы и рабочие места",
+      "en": "Email, cloud services and workstations",
+      "de": "E-Mail, Cloud-Dienste und Arbeitsplätze",
+      "uk": "Пошта, хмарні сервіси та робочі місця",
+      "sk": "E-mail, cloudové služby a pracoviská",
+      "fr": "E-mail, services cloud et postes de travail"
+    },
+    "subtitle": {
+      "ru": "Для частных клиентов, самозанятых и малого бизнеса",
+      "en": "For private clients, self-employed professionals and small businesses",
+      "de": "Für Privatkunden, Selbstständige und Kleinunternehmen",
+      "uk": "Для приватних клієнтів, самозайнятих і малого бізнесу",
+      "sk": "Pre súkromných klientov, živnostníkov a malé firmy",
+      "fr": "Pour particuliers, indépendants et petites entreprises"
+    },
+    "sortOrder": 6,
+    "items": [
+      {
+        "code": "G01",
+        "name": {
+          "ru": "Доменная почта — до 3 ящиков",
+          "en": "Domain email — up to 3 mailboxes",
+          "de": "Domain-E-Mail — bis zu 3 Postfächer",
+          "uk": "Доменна пошта — до 3 скриньок",
+          "sk": "Doménový e-mail — do 3 schránok",
+          "fr": "E-mail professionnel sur domaine — jusqu’à 3 boîtes"
+        },
+        "price": "79 €",
+        "note": {
+          "ru": "Домен/подписка провайдера отдельно",
+          "en": "Domain / provider subscription charged separately",
+          "de": "Domain / Anbieterabonnement wird separat berechnet",
+          "uk": "Домен / підписка провайдера оплачуються окремо",
+          "sk": "Doména / predplatné poskytovateľa sa účtuje samostatne",
+          "fr": "Domaine / abonnement du fournisseur facturé séparément"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "G02",
+        "name": {
+          "ru": "Microsoft 365 — до 3 пользователей",
+          "en": "Microsoft 365 — up to 3 users",
+          "de": "Microsoft 365 — bis zu 3 Benutzer",
+          "uk": "Microsoft 365 — до 3 користувачів",
+          "sk": "Microsoft 365 — do 3 používateľov",
+          "fr": "Microsoft 365 — jusqu’à 3 utilisateurs"
+        },
+        "price": "99 €",
+        "note": {
+          "ru": "Подписки отдельно",
+          "en": "Subscriptions charged separately",
+          "de": "Abonnements werden separat berechnet",
+          "uk": "Підписки оплачуються окремо",
+          "sk": "Predplatné sa účtuje samostatne",
+          "fr": "Abonnements facturés séparément"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "G03",
+        "name": {
+          "ru": "Google Workspace — до 3 пользователей",
+          "en": "Google Workspace — up to 3 users",
+          "de": "Google Workspace — bis zu 3 Benutzer",
+          "uk": "Google Workspace — до 3 користувачів",
+          "sk": "Google Workspace — do 3 používateľov",
+          "fr": "Google Workspace — jusqu’à 3 utilisateurs"
+        },
+        "price": "99 €",
+        "note": {
+          "ru": "Подписки отдельно",
+          "en": "Subscriptions charged separately",
+          "de": "Abonnements werden separat berechnet",
+          "uk": "Підписки оплачуються окремо",
+          "sk": "Predplatné sa účtuje samostatne",
+          "fr": "Abonnements facturés séparément"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "G04",
+        "name": {
+          "ru": "Миграция одного почтового ящика",
+          "en": "Migration of one mailbox",
+          "de": "Migration eines Postfachs",
+          "uk": "Міграція однієї поштової скриньки",
+          "sk": "Migrácia jednej e-mailovej schránky",
+          "fr": "Migration d’une boîte e-mail"
+        },
+        "price": "от 49 €",
+        "note": {
+          "ru": "При наличии доступа к старому и новому сервису",
+          "en": "Access to both old and new services is required",
+          "de": "Zugriff auf den alten und den neuen Dienst ist erforderlich",
+          "uk": "Потрібен доступ до старого й нового сервісів",
+          "sk": "Vyžaduje sa prístup k starej aj novej službe",
+          "fr": "Accès requis à l’ancien et au nouveau service"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "G05",
+        "name": {
+          "ru": "OneDrive / Google Drive / Dropbox",
+          "en": "OneDrive / Google Drive / Dropbox setup",
+          "de": "Einrichtung von OneDrive / Google Drive / Dropbox",
+          "uk": "Налаштування OneDrive / Google Drive / Dropbox",
+          "sk": "Nastavenie OneDrive / Google Drive / Dropbox",
+          "fr": "Configuration de OneDrive / Google Drive / Dropbox"
+        },
+        "price": "59 €",
+        "note": {
+          "ru": "Синхронизация на 1–2 устройствах",
+          "en": "Synchronization on 1–2 devices",
+          "de": "Synchronisierung auf 1–2 Geräten",
+          "uk": "Синхронізація на 1–2 пристроях",
+          "sk": "Synchronizácia na 1–2 zariadeniach",
+          "fr": "Synchronisation sur 1 à 2 appareils"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "G06",
+        "name": {
+          "ru": "Общие папки и права доступа",
+          "en": "Shared folders and access rights",
+          "de": "Freigegebene Ordner und Zugriffsrechte",
+          "uk": "Спільні папки та права доступу",
+          "sk": "Zdieľané priečinky a prístupové práva",
+          "fr": "Dossiers partagés et droits d’accès"
+        },
+        "price": "79 €",
+        "note": {
+          "ru": "До 3 пользователей",
+          "en": "Up to 3 users",
+          "de": "Bis zu 3 Benutzer",
+          "uk": "До 3 користувачів",
+          "sk": "Do 3 používateľov",
+          "fr": "Jusqu’à 3 utilisateurs"
+        },
+        "sortOrder": 5
+      },
+      {
+        "code": "G07",
+        "name": {
+          "ru": "Teams / Zoom / Google Meet",
+          "en": "Teams / Zoom / Google Meet setup",
+          "de": "Einrichtung von Teams / Zoom / Google Meet",
+          "uk": "Налаштування Teams / Zoom / Google Meet",
+          "sk": "Nastavenie Teams / Zoom / Google Meet",
+          "fr": "Configuration de Teams / Zoom / Google Meet"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "Учётная запись, камера, микрофон, тест",
+          "en": "Account, camera, microphone and test",
+          "de": "Konto, Kamera, Mikrofon und Test",
+          "uk": "Обліковий запис, камера, мікрофон і тест",
+          "sk": "Účet, kamera, mikrofón a test",
+          "fr": "Compte, caméra, microphone et test"
+        },
+        "sortOrder": 6
+      },
+      {
+        "code": "G08",
+        "name": {
+          "ru": "Пакет «Новое рабочее место»",
+          "en": "“New workstation” package",
+          "de": "Paket „Neuer Arbeitsplatz“",
+          "uk": "Пакет «Нове робоче місце»",
+          "sk": "Balík „Nové pracovisko“",
+          "fr": "Pack « Nouveau poste de travail »"
+        },
+        "price": "149 €",
+        "note": {
+          "ru": "ПК, почта, Office, облако, принтер — лицензии отдельно",
+          "en": "PC, email, Office, cloud and printer; licenses charged separately",
+          "de": "PC, E-Mail, Office, Cloud und Drucker; Lizenzen werden separat berechnet",
+          "uk": "ПК, пошта, Office, хмара та принтер; ліцензії оплачуються окремо",
+          "sk": "PC, e-mail, Office, cloud a tlačiareň; licencie sa účtujú samostatne",
+          "fr": "PC, e-mail, Office, cloud et imprimante ; licences facturées séparément"
+        },
+        "sortOrder": 7
+      },
+      {
+        "code": "G09",
+        "name": {
+          "ru": "Инвентаризация IT-устройств",
+          "en": "IT device inventory",
+          "de": "Inventarisierung von IT-Geräten",
+          "uk": "Інвентаризація IT-пристроїв",
+          "sk": "Inventarizácia IT zariadení",
+          "fr": "Inventaire des appareils informatiques"
+        },
+        "price": "от 99 €",
+        "note": {
+          "ru": "До 10 устройств, таблица оборудования",
+          "en": "Up to 10 devices with an equipment table",
+          "de": "Bis zu 10 Geräte mit einer Gerätetabelle",
+          "uk": "До 10 пристроїв із таблицею обладнання",
+          "sk": "Do 10 zariadení s tabuľkou vybavenia",
+          "fr": "Jusqu’à 10 appareils avec tableau du matériel"
+        },
+        "sortOrder": 8
+      },
+      {
+        "code": "G10",
+        "name": {
+          "ru": "Техническая документация малого бизнеса",
+          "en": "Small business IT documentation",
+          "de": "IT-Dokumentation für kleine Unternehmen",
+          "uk": "IT-документація малого бізнесу",
+          "sk": "IT dokumentácia pre malú firmu",
+          "fr": "Documentation informatique pour petite entreprise"
+        },
+        "price": "от 129 €",
+        "note": {
+          "ru": "Список устройств, сервисов, доступов и резервных копий",
+          "en": "List of devices, services, access details and backups",
+          "de": "Liste der Geräte, Dienste, Zugangsdaten und Datensicherungen",
+          "uk": "Перелік пристроїв, сервісів, даних доступу та резервних копій",
+          "sk": "Zoznam zariadení, služieb, prístupových údajov a záloh",
+          "fr": "Liste des appareils, services, données d’accès et sauvegardes"
+        },
+        "sortOrder": 9
+      },
+      {
+        "code": "G11",
+        "name": {
+          "ru": "IT-поддержка Basic",
+          "en": "Basic IT support plan",
+          "de": "IT-Support-Paket Basic",
+          "uk": "План IT-підтримки Basic",
+          "sk": "Plán IT podpory Basic",
+          "fr": "Formule d’assistance informatique Basic"
+        },
+        "price": "79 €/месяц",
+        "note": {
+          "ru": "1 час удалённой помощи, приоритет 2 рабочих дня",
+          "en": "1 hour of remote help; two-business-day priority",
+          "de": "1 Stunde Remote-Hilfe; Priorität innerhalb von zwei Werktagen",
+          "uk": "1 година віддаленої допомоги; пріоритет упродовж двох робочих днів",
+          "sk": "1 hodina vzdialenej pomoci; priorita do dvoch pracovných dní",
+          "fr": "1 heure d’aide à distance ; priorité sous deux jours ouvrés"
+        },
+        "sortOrder": 10
+      },
+      {
+        "code": "G12",
+        "name": {
+          "ru": "IT-поддержка Business",
+          "en": "Business IT support plan",
+          "de": "IT-Support-Paket Business",
+          "uk": "План IT-підтримки Business",
+          "sk": "Plán IT podpory Business",
+          "fr": "Formule d’assistance informatique Business"
+        },
+        "price": "149 €/месяц",
+        "note": {
+          "ru": "2 часа удалённо + ежемесячная проверка обновлений/backup",
+          "en": "2 remote hours plus monthly update / backup check",
+          "de": "2 Remote-Stunden plus monatliche Prüfung von Updates / Datensicherungen",
+          "uk": "2 години віддаленої допомоги та щомісячна перевірка оновлень / резервних копій",
+          "sk": "2 hodiny vzdialenej pomoci a mesačná kontrola aktualizácií / záloh",
+          "fr": "2 heures à distance et contrôle mensuel des mises à jour / sauvegardes"
+        },
+        "sortOrder": 11
+      },
+      {
+        "code": "G13",
+        "name": {
+          "ru": "IT-поддержка Plus",
+          "en": "Plus IT support plan",
+          "de": "IT-Support-Paket Plus",
+          "uk": "План IT-підтримки Plus",
+          "sk": "Plán IT podpory Plus",
+          "fr": "Formule d’assistance informatique Plus"
+        },
+        "price": "249 €/месяц",
+        "note": {
+          "ru": "4 часа, приоритет, 1 плановый выезд до 30 минут",
+          "en": "4 hours, priority and one scheduled visit up to 30 minutes",
+          "de": "4 Stunden, Priorität und ein geplanter Vor-Ort-Termin bis 30 Minuten",
+          "uk": "4 години, пріоритет і один плановий виїзд до 30 хвилин",
+          "sk": "4 hodiny, priorita a jedna plánovaná návšteva do 30 minút",
+          "fr": "4 heures, priorité et une visite planifiée jusqu’à 30 minutes"
+        },
+        "sortOrder": 12
+      }
+    ]
+  },
+  {
+    "number": "08",
+    "title": {
+      "ru": "Создание сайтов и веб-функции",
+      "en": "Website creation and web features",
+      "de": "Website-Erstellung und Webfunktionen",
+      "uk": "Створення сайтів і вебфункції",
+      "sk": "Tvorba webstránok a webové funkcie",
+      "fr": "Création de sites web et fonctionnalités web"
+    },
+    "subtitle": {
+      "ru": "Дизайн, разработка, запуск и обновление сайтов",
+      "en": "Design, development, launch and website updates",
+      "de": "Design, Entwicklung, Veröffentlichung und Aktualisierung von Websites",
+      "uk": "Дизайн, розробка, запуск та оновлення сайтів",
+      "sk": "Dizajn, vývoj, spustenie a aktualizácie webstránok",
+      "fr": "Design, développement, mise en ligne et mises à jour de sites"
+    },
+    "sortOrder": 7,
+    "items": [
+      {
+        "code": "H01",
+        "name": {
+          "ru": "Консультация и техническое задание",
+          "en": "Consultation and technical specification",
+          "de": "Beratung und technische Spezifikation",
+          "uk": "Консультація та технічне завдання",
+          "sk": "Konzultácia a technická špecifikácia",
+          "fr": "Consultation et cahier des charges technique"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "Зачитывается при заказе сайта",
+          "en": "Credited when a website is ordered",
+          "de": "Wird bei Beauftragung einer Website angerechnet",
+          "uk": "Зараховується при замовленні сайту",
+          "sk": "Započíta sa pri objednaní webstránky",
+          "fr": "Déduit du prix lors de la commande d’un site web"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "H02",
+        "name": {
+          "ru": "Сайт по подписке Start",
+          "en": "Start subscription website",
+          "de": "Website im Start-Abonnement",
+          "uk": "Сайт за підпискою Start",
+          "sk": "Webstránka s predplatným Start",
+          "fr": "Site web avec abonnement Start"
+        },
+        "price": "75 €/месяц",
+        "note": {
+          "ru": "One-page, хостинг, SSL, поддержка; договор от 12 мес.",
+          "en": "One-page site, hosting, SSL and support; minimum 12-month agreement",
+          "de": "One-Page-Website, Hosting, SSL und Support; Mindestlaufzeit 12 Monate",
+          "uk": "Односторінковий сайт, хостинг, SSL і підтримка; договір щонайменше на 12 місяців",
+          "sk": "Jednostránkový web, hosting, SSL a podpora; minimálna zmluva na 12 mesiacov",
+          "fr": "Site one-page, hébergement, SSL et assistance ; engagement minimum de 12 mois"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "H03",
+        "name": {
+          "ru": "Сайт по подписке Business",
+          "en": "Business subscription website",
+          "de": "Website im Business-Abonnement",
+          "uk": "Сайт за підпискою Business",
+          "sk": "Webstránka s predplatným Business",
+          "fr": "Site web avec abonnement Business"
+        },
+        "price": "99 €/месяц",
+        "note": {
+          "ru": "До 3 страниц, базовое SEO, до 30 мин. правок/мес.",
+          "en": "Up to 3 pages, basic SEO and up to 30 minutes of edits per month",
+          "de": "Bis zu 3 Seiten, Basis-SEO und bis zu 30 Minuten Änderungen pro Monat",
+          "uk": "До 3 сторінок, базове SEO та до 30 хвилин правок на місяць",
+          "sk": "Do 3 strán, základné SEO a do 30 minút úprav mesačne",
+          "fr": "Jusqu’à 3 pages, SEO de base et jusqu’à 30 minutes de modifications par mois"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "H04",
+        "name": {
+          "ru": "Сайт по подписке Premium",
+          "en": "Premium subscription website",
+          "de": "Website im Premium-Abonnement",
+          "uk": "Сайт за підпискою Premium",
+          "sk": "Webstránka s predplatným Premium",
+          "fr": "Site web avec abonnement Premium"
+        },
+        "price": "149 €/месяц",
+        "note": {
+          "ru": "До 5 страниц, приоритет, до 60 мин. правок/мес.",
+          "en": "Up to 5 pages, priority and up to 60 minutes of edits per month",
+          "de": "Bis zu 5 Seiten, Priorität und bis zu 60 Minuten Änderungen pro Monat",
+          "uk": "До 5 сторінок, пріоритет і до 60 хвилин правок на місяць",
+          "sk": "Do 5 strán, priorita a do 60 minút úprav mesačne",
+          "fr": "Jusqu’à 5 pages, priorité et jusqu’à 60 minutes de modifications par mois"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "H05",
+        "name": {
+          "ru": "Промо: создание one-page сайта",
+          "en": "Promotion: one-page website creation",
+          "de": "Aktion: Erstellung einer One-Page-Website",
+          "uk": "Акція: створення односторінкового сайту",
+          "sk": "Akcia: vytvorenie jednostránkovej webstránky",
+          "fr": "Promotion : création d’un site one-page"
+        },
+        "price": "0 €",
+        "note": {
+          "ru": "При подписке Start на 12 месяцев по 75 €/мес.",
+          "en": "With a 12-month Start subscription at €75/month",
+          "de": "Bei einem 12-monatigen Start-Abonnement für 75 €/Monat",
+          "uk": "За підписки Start на 12 місяців по 75 €/місяць",
+          "sk": "Pri 12-mesačnom predplatnom Start za 75 €/mesiac",
+          "fr": "Avec un abonnement Start de 12 mois à 75 €/mois"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "H06",
+        "name": {
+          "ru": "Одностраничный сайт в собственность",
+          "en": "One-page website with full ownership",
+          "de": "One-Page-Website mit vollständigem Eigentum",
+          "uk": "Односторінковий сайт у власність",
+          "sk": "Jednostránková webstránka do vlastníctva",
+          "fr": "Site one-page en pleine propriété"
+        },
+        "price": "от 450 €",
+        "note": {
+          "ru": "Индивидуальный дизайн, адаптивность, базовый запуск",
+          "en": "Custom design, responsive layout and basic launch",
+          "de": "Individuelles Design, responsives Layout und Basisveröffentlichung",
+          "uk": "Індивідуальний дизайн, адаптивна верстка та базовий запуск",
+          "sk": "Individuálny dizajn, responzívne rozloženie a základné spustenie",
+          "fr": "Design personnalisé, mise en page responsive et mise en ligne de base"
+        },
+        "sortOrder": 5
+      },
+      {
+        "code": "H07",
+        "name": {
+          "ru": "Сайт до 3 страниц",
+          "en": "Website up to 3 pages",
+          "de": "Website mit bis zu 3 Seiten",
+          "uk": "Сайт до 3 сторінок",
+          "sk": "Webstránka do 3 strán",
+          "fr": "Site web jusqu’à 3 pages"
+        },
+        "price": "от 750 €",
+        "note": {
+          "ru": "Типовой малый бизнес-сайт",
+          "en": "Standard small-business website",
+          "de": "Standard-Website für ein kleines Unternehmen",
+          "uk": "Стандартний сайт для малого бізнесу",
+          "sk": "Štandardná webstránka pre malú firmu",
+          "fr": "Site standard pour petite entreprise"
+        },
+        "sortOrder": 6
+      },
+      {
+        "code": "H08",
+        "name": {
+          "ru": "Сайт до 5 страниц",
+          "en": "Website up to 5 pages",
+          "de": "Website mit bis zu 5 Seiten",
+          "uk": "Сайт до 5 сторінок",
+          "sk": "Webstránka do 5 strán",
+          "fr": "Site web jusqu’à 5 pages"
+        },
+        "price": "от 1 050 €",
+        "note": {
+          "ru": "Расширенная структура и контентные блоки",
+          "en": "Expanded structure and content sections",
+          "de": "Erweiterte Struktur und Inhaltsbereiche",
+          "uk": "Розширена структура та контентні блоки",
+          "sk": "Rozšírená štruktúra a obsahové bloky",
+          "fr": "Structure étendue et blocs de contenu"
+        },
+        "sortOrder": 7
+      },
+      {
+        "code": "H09",
+        "name": {
+          "ru": "Индивидуальный сайт",
+          "en": "Custom website",
+          "de": "Individuelle Website",
+          "uk": "Індивідуальний сайт",
+          "sk": "Individuálna webstránka",
+          "fr": "Site web personnalisé"
+        },
+        "price": "от 1 400 €",
+        "note": {
+          "ru": "По техническому заданию",
+          "en": "Based on a technical specification",
+          "de": "Auf Grundlage einer technischen Spezifikation",
+          "uk": "За технічним завданням",
+          "sk": "Podľa technickej špecifikácie",
+          "fr": "Selon un cahier des charges technique"
+        },
+        "sortOrder": 8
+      },
+      {
+        "code": "H10",
+        "name": {
+          "ru": "Landing page для услуги / рекламы",
+          "en": "Landing page for a service / advertising",
+          "de": "Landingpage für eine Leistung / Werbung",
+          "uk": "Лендінг для послуги / реклами",
+          "sk": "Vstupná stránka pre službu / reklamu",
+          "fr": "Landing page pour un service / une publicité"
+        },
+        "price": "от 350 €",
+        "note": {
+          "ru": "Одна цель, форма или CTA",
+          "en": "One goal, form or call to action",
+          "de": "Ein Ziel, Formular oder Call-to-Action",
+          "uk": "Одна ціль, форма або заклик до дії",
+          "sk": "Jeden cieľ, formulár alebo výzva na akciu",
+          "fr": "Un objectif, un formulaire ou un appel à l’action"
+        },
+        "sortOrder": 9
+      },
+      {
+        "code": "H11",
+        "name": {
+          "ru": "Базовый интернет-магазин",
+          "en": "Basic online store",
+          "de": "Einfacher Onlineshop",
+          "uk": "Базовий інтернет-магазин",
+          "sk": "Základný internetový obchod",
+          "fr": "Boutique en ligne de base"
+        },
+        "price": "от 1 500 €",
+        "note": {
+          "ru": "До 10 товаров; платежи/правовые тексты отдельно",
+          "en": "Up to 10 products; payment integration and legal texts charged separately",
+          "de": "Bis zu 10 Produkte; Zahlungsintegration und Rechtstexte werden separat berechnet",
+          "uk": "До 10 товарів; підключення платежів і юридичні тексти оплачуються окремо",
+          "sk": "Do 10 produktov; platobná integrácia a právne texty sa účtujú samostatne",
+          "fr": "Jusqu’à 10 produits ; paiement et textes juridiques facturés séparément"
+        },
+        "sortOrder": 10
+      },
+      {
+        "code": "H12",
+        "name": {
+          "ru": "Редизайн существующего сайта",
+          "en": "Existing website redesign",
+          "de": "Redesign einer vorhandenen Website",
+          "uk": "Редизайн наявного сайту",
+          "sk": "Redizajn existujúcej webstránky",
+          "fr": "Refonte d’un site web existant"
+        },
+        "price": "от 450 €",
+        "note": {
+          "ru": "После аудита текущей системы",
+          "en": "After an audit of the current system",
+          "de": "Nach Prüfung des aktuellen Systems",
+          "uk": "Після аудиту поточної системи",
+          "sk": "Po audite aktuálneho systému",
+          "fr": "Après audit du système actuel"
+        },
+        "sortOrder": 11
+      },
+      {
+        "code": "H13",
+        "name": {
+          "ru": "Мобильная адаптация существующего сайта",
+          "en": "Mobile optimization of an existing website",
+          "de": "Mobile Optimierung einer vorhandenen Website",
+          "uk": "Мобільна оптимізація наявного сайту",
+          "sk": "Mobilná optimalizácia existujúcej webstránky",
+          "fr": "Optimisation mobile d’un site web existant"
+        },
+        "price": "от 250 €",
+        "note": {
+          "ru": "Если код и CMS позволяют",
+          "en": "When the code and CMS allow it",
+          "de": "Wenn Code und CMS dies ermöglichen",
+          "uk": "Якщо код і CMS це дозволяють",
+          "sk": "Ak to kód a CMS umožňujú",
+          "fr": "Lorsque le code et le CMS le permettent"
+        },
+        "sortOrder": 12
+      },
+      {
+        "code": "H14",
+        "name": {
+          "ru": "Контактная форма",
+          "en": "Contact form",
+          "de": "Kontaktformular",
+          "uk": "Контактна форма",
+          "sk": "Kontaktný formulár",
+          "fr": "Formulaire de contact"
+        },
+        "price": "79 €",
+        "note": {
+          "ru": "С защитой от спама, без платных сервисов",
+          "en": "Spam protection included; no paid services",
+          "de": "Spamschutz enthalten; keine kostenpflichtigen Dienste",
+          "uk": "Із захистом від спаму; без платних сервісів",
+          "sk": "Ochrana proti spamu je zahrnutá; bez platených služieb",
+          "fr": "Protection antispam incluse ; aucun service payant"
+        },
+        "sortOrder": 13
+      },
+      {
+        "code": "H15",
+        "name": {
+          "ru": "Интеграция записи / календаря",
+          "en": "Booking / calendar integration",
+          "de": "Integration von Buchung / Kalender",
+          "uk": "Інтеграція запису / календаря",
+          "sk": "Integrácia rezervácie / kalendára",
+          "fr": "Intégration de réservation / calendrier"
+        },
+        "price": "от 149 €",
+        "note": {
+          "ru": "Готовый внешний сервис",
+          "en": "Using an existing external service",
+          "de": "Über einen vorhandenen externen Dienst",
+          "uk": "Через готовий зовнішній сервіс",
+          "sk": "Pomocou existujúcej externej služby",
+          "fr": "Avec un service externe existant"
+        },
+        "sortOrder": 14
+      },
+      {
+        "code": "H16",
+        "name": {
+          "ru": "Дополнительный язык сайта",
+          "en": "Additional website language",
+          "de": "Zusätzliche Website-Sprache",
+          "uk": "Додаткова мова сайту",
+          "sk": "Ďalší jazyk webstránky",
+          "fr": "Langue supplémentaire du site web"
+        },
+        "price": "от 250 €",
+        "note": {
+          "ru": "Перевод текста клиентом или отдельно",
+          "en": "Translation supplied by the client or ordered separately",
+          "de": "Übersetzung wird vom Kunden geliefert oder separat beauftragt",
+          "uk": "Переклад надає клієнт або замовляє окремо",
+          "sk": "Preklad dodá klient alebo sa objedná samostatne",
+          "fr": "Traduction fournie par le client ou commandée séparément"
+        },
+        "sortOrder": 15
+      },
+      {
+        "code": "H17",
+        "name": {
+          "ru": "Базовое SEO сайта",
+          "en": "Basic website SEO",
+          "de": "Basis-SEO für eine Website",
+          "uk": "Базове SEO сайту",
+          "sk": "Základné SEO webstránky",
+          "fr": "SEO de base du site web"
+        },
+        "price": "149 €",
+        "note": {
+          "ru": "Title, description, headings, sitemap, базовая индексация",
+          "en": "Title, description, headings, sitemap and basic indexing",
+          "de": "Title, Description, Überschriften, Sitemap und grundlegende Indexierung",
+          "uk": "Title, description, заголовки, sitemap і базова індексація",
+          "sk": "Title, description, nadpisy, sitemap a základná indexácia",
+          "fr": "Title, description, titres, sitemap et indexation de base"
+        },
+        "sortOrder": 16
+      },
+      {
+        "code": "H18",
+        "name": {
+          "ru": "Google Search Console + аналитика",
+          "en": "Google Search Console and analytics",
+          "de": "Google Search Console und Analyse",
+          "uk": "Google Search Console та аналітика",
+          "sk": "Google Search Console a analytika",
+          "fr": "Google Search Console et analyse"
+        },
+        "price": "99 €",
+        "note": {
+          "ru": "Настройка без рекламного бюджета",
+          "en": "Setup without advertising budget",
+          "de": "Einrichtung ohne Werbebudget",
+          "uk": "Налаштування без рекламного бюджету",
+          "sk": "Nastavenie bez reklamného rozpočtu",
+          "fr": "Configuration sans budget publicitaire"
+        },
+        "sortOrder": 17
+      },
+      {
+        "code": "H19",
+        "name": {
+          "ru": "Оптимизация скорости сайта",
+          "en": "Website speed optimization",
+          "de": "Optimierung der Website-Geschwindigkeit",
+          "uk": "Оптимізація швидкості сайту",
+          "sk": "Optimalizácia rýchlosti webstránky",
+          "fr": "Optimisation de la vitesse du site web"
+        },
+        "price": "от 149 €",
+        "note": {
+          "ru": "После технического аудита",
+          "en": "After a technical audit",
+          "de": "Nach einem technischen Audit",
+          "uk": "Після технічного аудиту",
+          "sk": "Po technickom audite",
+          "fr": "Après un audit technique"
+        },
+        "sortOrder": 18
+      },
+      {
+        "code": "H20",
+        "name": {
+          "ru": "Улучшение базовой доступности сайта",
+          "en": "Basic website accessibility improvements",
+          "de": "Grundlegende Verbesserungen der Barrierefreiheit",
+          "uk": "Базове покращення доступності сайту",
+          "sk": "Základné zlepšenia prístupnosti webstránky",
+          "fr": "Améliorations de base de l’accessibilité du site"
+        },
+        "price": "от 149 €",
+        "note": {
+          "ru": "Без юридической гарантии соответствия BFSG/WCAG",
+          "en": "No legal guarantee of BFSG / WCAG compliance",
+          "de": "Keine rechtliche Garantie für BFSG- / WCAG-Konformität",
+          "uk": "Без юридичної гарантії відповідності BFSG / WCAG",
+          "sk": "Bez právnej záruky súladu s BFSG / WCAG",
+          "fr": "Aucune garantie juridique de conformité BFSG / WCAG"
+        },
+        "sortOrder": 19
+      },
+      {
+        "code": "H21",
+        "name": {
+          "ru": "Настройка домена, хостинга и SSL",
+          "en": "Domain, hosting and SSL setup",
+          "de": "Einrichtung von Domain, Hosting und SSL",
+          "uk": "Налаштування домену, хостингу та SSL",
+          "sk": "Nastavenie domény, hostingu a SSL",
+          "fr": "Configuration du domaine, de l’hébergement et du SSL"
+        },
+        "price": "59 €",
+        "note": {
+          "ru": "Оплата провайдера отдельно",
+          "en": "Provider fees charged separately",
+          "de": "Anbietergebühren werden separat berechnet",
+          "uk": "Послуги провайдера оплачуються окремо",
+          "sk": "Poplatky poskytovateľa sa účtujú samostatne",
+          "fr": "Frais du fournisseur facturés séparément"
+        },
+        "sortOrder": 20
+      },
+      {
+        "code": "H22",
+        "name": {
+          "ru": "Хостинг и SSL",
+          "en": "Hosting and SSL",
+          "de": "Hosting und SSL",
+          "uk": "Хостинг і SSL",
+          "sk": "Hosting a SSL",
+          "fr": "Hébergement et SSL"
+        },
+        "price": "от 15 €/месяц",
+        "note": {
+          "ru": "В зависимости от проекта",
+          "en": "Depends on the project",
+          "de": "Abhängig vom Projekt",
+          "uk": "Залежить від проєкту",
+          "sk": "Podľa projektu",
+          "fr": "Selon le projet"
+        },
+        "sortOrder": 21
+      },
+      {
+        "code": "H23",
+        "name": {
+          "ru": "Базовое обслуживание сайта",
+          "en": "Basic website maintenance",
+          "de": "Basiswartung einer Website",
+          "uk": "Базове обслуговування сайту",
+          "sk": "Základná údržba webstránky",
+          "fr": "Maintenance de base du site web"
+        },
+        "price": "29 €/месяц",
+        "note": {
+          "ru": "Обновления и проверка; без контентных работ",
+          "en": "Updates and checks; no content work",
+          "de": "Updates und Prüfungen; keine Inhaltsarbeiten",
+          "uk": "Оновлення та перевірки; без роботи з контентом",
+          "sk": "Aktualizácie a kontroly; bez práce s obsahom",
+          "fr": "Mises à jour et contrôles ; aucun travail sur le contenu"
+        },
+        "sortOrder": 22
+      },
+      {
+        "code": "H24",
+        "name": {
+          "ru": "Расширенное обслуживание сайта",
+          "en": "Extended website maintenance",
+          "de": "Erweiterte Website-Wartung",
+          "uk": "Розширене обслуговування сайту",
+          "sk": "Rozšírená údržba webstránky",
+          "fr": "Maintenance étendue du site web"
+        },
+        "price": "59 €/месяц",
+        "note": {
+          "ru": "До 30 минут правок и резервная копия",
+          "en": "Up to 30 minutes of edits and a backup",
+          "de": "Bis zu 30 Minuten Änderungen und eine Datensicherung",
+          "uk": "До 30 хвилин правок і резервна копія",
+          "sk": "Do 30 minút úprav a jedna záloha",
+          "fr": "Jusqu’à 30 minutes de modifications et une sauvegarde"
+        },
+        "sortOrder": 23
+      },
+      {
+        "code": "H25",
+        "name": {
+          "ru": "Премиум-обслуживание сайта",
+          "en": "Premium website maintenance",
+          "de": "Premium-Wartung einer Website",
+          "uk": "Преміум-обслуговування сайту",
+          "sk": "Prémiová údržba webstránky",
+          "fr": "Maintenance Premium du site web"
+        },
+        "price": "99 €/месяц",
+        "note": {
+          "ru": "До 60 минут правок, приоритет",
+          "en": "Up to 60 minutes of edits and priority support",
+          "de": "Bis zu 60 Minuten Änderungen und Prioritätssupport",
+          "uk": "До 60 хвилин правок і пріоритетна підтримка",
+          "sk": "Do 60 minút úprav a prioritná podpora",
+          "fr": "Jusqu’à 60 minutes de modifications et assistance prioritaire"
+        },
+        "sortOrder": 24
+      },
+      {
+        "code": "H26",
+        "name": {
+          "ru": "Разовые правки сайта",
+          "en": "One-time website edits",
+          "de": "Einmalige Website-Änderungen",
+          "uk": "Разові правки сайту",
+          "sk": "Jednorazové úpravy webstránky",
+          "fr": "Modifications ponctuelles du site web"
+        },
+        "price": "49 €/час",
+        "note": {
+          "ru": "Минимум 30 минут",
+          "en": "Minimum 30 minutes",
+          "de": "Mindestens 30 Minuten",
+          "uk": "Мінімум 30 хвилин",
+          "sk": "Minimálne 30 minút",
+          "fr": "Minimum 30 minutes"
+        },
+        "sortOrder": 25
+      },
+      {
+        "code": "H27",
+        "name": {
+          "ru": "Загрузка контента",
+          "en": "Content upload",
+          "de": "Hochladen von Inhalten",
+          "uk": "Завантаження контенту",
+          "sk": "Nahranie obsahu",
+          "fr": "Mise en ligne de contenu"
+        },
+        "price": "49 €/час",
+        "note": {
+          "ru": "Тексты и файлы предоставляет клиент",
+          "en": "Client supplies texts and files",
+          "de": "Texte und Dateien werden vom Kunden bereitgestellt",
+          "uk": "Тексти та файли надає клієнт",
+          "sk": "Texty a súbory dodá klient",
+          "fr": "Textes et fichiers fournis par le client"
+        },
+        "sortOrder": 26
+      },
+      {
+        "code": "H28",
+        "name": {
+          "ru": "Загрузка товара в магазин",
+          "en": "Store product upload",
+          "de": "Hochladen von Produkten in den Shop",
+          "uk": "Завантаження товарів у магазин",
+          "sk": "Nahranie produktov do obchodu",
+          "fr": "Ajout de produits dans la boutique"
+        },
+        "price": "от 8 € / товар",
+        "note": {
+          "ru": "Минимум 10 товаров, материалы клиента",
+          "en": "Minimum 10 products; client supplies materials",
+          "de": "Mindestens 10 Produkte; Materialien werden vom Kunden bereitgestellt",
+          "uk": "Мінімум 10 товарів; матеріали надає клієнт",
+          "sk": "Minimálne 10 produktov; materiály dodá klient",
+          "fr": "Minimum 10 produits ; éléments fournis par le client"
+        },
+        "sortOrder": 27
+      }
+    ]
+  },
+  {
+    "number": "09",
+    "title": {
+      "ru": "Google Business и локальная видимость",
+      "en": "Google Business and local visibility",
+      "de": "Google Business und lokale Sichtbarkeit",
+      "uk": "Google Business і локальна видимість",
+      "sk": "Google Business a miestna viditeľnosť",
+      "fr": "Google Business et visibilité locale"
+    },
+    "subtitle": {
+      "ru": "Настройка профиля и регулярное сопровождение без гарантий позиции",
+      "en": "Profile setup and ongoing support without ranking guarantees",
+      "de": "Profileinrichtung und laufende Betreuung ohne Ranking-Garantie",
+      "uk": "Налаштування профілю та регулярна підтримка без гарантії позицій",
+      "sk": "Nastavenie profilu a pravidelná podpora bez záruky pozície",
+      "fr": "Configuration du profil et suivi régulier sans garantie de classement"
+    },
+    "sortOrder": 8,
+    "items": [
+      {
+        "code": "I01",
+        "name": {
+          "ru": "Google Business Start",
+          "en": "Google Business Start",
+          "de": "Google Business Start",
+          "uk": "Google Business Start",
+          "sk": "Google Business Start",
+          "fr": "Google Business Start"
+        },
+        "price": "99 €",
+        "note": {
+          "ru": "Создание/настройка, категории, контакты, базовое описание",
+          "en": "Creation / setup, categories, contact details and basic description",
+          "de": "Erstellung / Einrichtung, Kategorien, Kontaktdaten und Basisbeschreibung",
+          "uk": "Створення / налаштування, категорії, контакти та базовий опис",
+          "sk": "Vytvorenie / nastavenie, kategórie, kontaktné údaje a základný opis",
+          "fr": "Création / configuration, catégories, coordonnées et description de base"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "I02",
+        "name": {
+          "ru": "Google Business Professional",
+          "en": "Google Business Professional",
+          "de": "Google Business Professional",
+          "uk": "Google Business Professional",
+          "sk": "Google Business Professional",
+          "fr": "Google Business Professional"
+        },
+        "price": "149 €",
+        "note": {
+          "ru": "Расширенное описание, услуги, фото, вопросы/ответы, рекомендации",
+          "en": "Extended description, services, photos, questions and answers, recommendations",
+          "de": "Erweiterte Beschreibung, Leistungen, Fotos, Fragen und Antworten, Empfehlungen",
+          "uk": "Розширений опис, послуги, фото, запитання й відповіді, рекомендації",
+          "sk": "Rozšírený opis, služby, fotografie, otázky a odpovede, odporúčania",
+          "fr": "Description détaillée, services, photos, questions-réponses et recommandations"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "I03",
+        "name": {
+          "ru": "Аудит существующего профиля Google",
+          "en": "Existing Google profile audit",
+          "de": "Audit eines vorhandenen Google-Profils",
+          "uk": "Аудит наявного профілю Google",
+          "sk": "Audit existujúceho profilu Google",
+          "fr": "Audit d’un profil Google existant"
+        },
+        "price": "59 €",
+        "note": {
+          "ru": "Ошибки, полнота, рекомендации",
+          "en": "Errors, completeness and recommendations",
+          "de": "Fehler, Vollständigkeit und Empfehlungen",
+          "uk": "Помилки, повнота та рекомендації",
+          "sk": "Chyby, úplnosť a odporúčania",
+          "fr": "Erreurs, exhaustivité et recommandations"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "I04",
+        "name": {
+          "ru": "Ежемесячная поддержка профиля",
+          "en": "Monthly profile support",
+          "de": "Monatliche Profilbetreuung",
+          "uk": "Щомісячна підтримка профілю",
+          "sk": "Mesačná podpora profilu",
+          "fr": "Assistance mensuelle du profil"
+        },
+        "price": "от 39 €/месяц",
+        "note": {
+          "ru": "Контроль, обновления, 1 публикация",
+          "en": "Monitoring, updates and one post",
+          "de": "Kontrolle, Updates und ein Beitrag",
+          "uk": "Контроль, оновлення та одна публікація",
+          "sk": "Kontrola, aktualizácie a jeden príspevok",
+          "fr": "Suivi, mises à jour et une publication"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "I05",
+        "name": {
+          "ru": "Пакет 4 публикаций Google",
+          "en": "Package of 4 Google posts",
+          "de": "Paket mit 4 Google-Beiträgen",
+          "uk": "Пакет із 4 публікацій Google",
+          "sk": "Balík 4 príspevkov Google",
+          "fr": "Pack de 4 publications Google"
+        },
+        "price": "69 €",
+        "note": {
+          "ru": "Тексты и оформление по материалам клиента",
+          "en": "Text and design based on client materials",
+          "de": "Text und Gestaltung auf Grundlage der Kundenmaterialien",
+          "uk": "Текст і оформлення за матеріалами клієнта",
+          "sk": "Text a dizajn podľa materiálov klienta",
+          "fr": "Texte et design à partir des éléments du client"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "I06",
+        "name": {
+          "ru": "Шаблоны ответов на отзывы",
+          "en": "Review response templates",
+          "de": "Vorlagen für Antworten auf Bewertungen",
+          "uk": "Шаблони відповідей на відгуки",
+          "sk": "Šablóny odpovedí na recenzie",
+          "fr": "Modèles de réponse aux avis"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "До 10 шаблонов",
+          "en": "Up to 10 templates",
+          "de": "Bis zu 10 Vorlagen",
+          "uk": "До 10 шаблонів",
+          "sk": "Do 10 šablón",
+          "fr": "Jusqu’à 10 modèles"
+        },
+        "sortOrder": 5
+      },
+      {
+        "code": "I07",
+        "name": {
+          "ru": "QR-набор для получения отзывов",
+          "en": "QR review collection kit",
+          "de": "QR-Set zum Sammeln von Bewertungen",
+          "uk": "QR-набір для отримання відгуків",
+          "sk": "QR sada na získavanie recenzií",
+          "fr": "Kit QR pour recueillir des avis"
+        },
+        "price": "39 €",
+        "note": {
+          "ru": "QR-код + макет для печати/экрана",
+          "en": "QR code and layout for print / screen",
+          "de": "QR-Code und Layout für Druck / Bildschirm",
+          "uk": "QR-код і макет для друку / екрана",
+          "sk": "QR kód a návrh pre tlač / obrazovku",
+          "fr": "Code QR et mise en page pour impression / écran"
+        },
+        "sortOrder": 6
+      },
+      {
+        "code": "I08",
+        "name": {
+          "ru": "Локальный SEO-аудит",
+          "en": "Local SEO audit",
+          "de": "Lokales SEO-Audit",
+          "uk": "Локальний SEO-аудит",
+          "sk": "Lokálny SEO audit",
+          "fr": "Audit SEO local"
+        },
+        "price": "149 €",
+        "note": {
+          "ru": "Сайт, профиль, основные каталоги и рекомендации",
+          "en": "Website, profile, main directories and recommendations",
+          "de": "Website, Profil, wichtigste Verzeichnisse und Empfehlungen",
+          "uk": "Сайт, профіль, основні каталоги та рекомендації",
+          "sk": "Webstránka, profil, hlavné katalógy a odporúčania",
+          "fr": "Site web, profil, principaux annuaires et recommandations"
+        },
+        "sortOrder": 7
+      },
+      {
+        "code": "I09",
+        "name": {
+          "ru": "Размещение в локальных каталогах",
+          "en": "Local directory listings",
+          "de": "Einträge in lokalen Verzeichnissen",
+          "uk": "Розміщення в локальних каталогах",
+          "sk": "Zápisy v lokálnych katalógoch",
+          "fr": "Inscriptions dans des annuaires locaux"
+        },
+        "price": "от 99 €",
+        "note": {
+          "ru": "До 5 площадок, аккаунты клиента",
+          "en": "Up to 5 platforms using client accounts",
+          "de": "Bis zu 5 Plattformen mit Konten des Kunden",
+          "uk": "До 5 платформ з обліковими записами клієнта",
+          "sk": "Do 5 platforiem pomocou účtov klienta",
+          "fr": "Jusqu’à 5 plateformes avec les comptes du client"
+        },
+        "sortOrder": 8
+      }
+    ]
+  },
+  {
+    "number": "10",
+    "title": {
+      "ru": "Фото и визуальный контент для бизнеса",
+      "en": "Photography and visual content for business",
+      "de": "Fotografie und visueller Content für Unternehmen",
+      "uk": "Фото та візуальний контент для бізнесу",
+      "sk": "Fotografie a vizuálny obsah pre firmy",
+      "fr": "Photographie et contenu visuel pour entreprises"
+    },
+    "subtitle": {
+      "ru": "Для сайта, Google Business и социальных сетей",
+      "en": "For websites, Google Business and social media",
+      "de": "Für Websites, Google Business und soziale Medien",
+      "uk": "Для сайту, Google Business і соціальних мереж",
+      "sk": "Pre webstránky, Google Business a sociálne siete",
+      "fr": "Pour sites web, Google Business et réseaux sociaux"
+    },
+    "sortOrder": 9,
+    "items": [
+      {
+        "code": "J01",
+        "name": {
+          "ru": "Мини-фотосъёмка",
+          "en": "Mini photo session",
+          "de": "Mini-Fotoshooting",
+          "uk": "Мініфотосесія",
+          "sk": "Mini fotografovanie",
+          "fr": "Mini séance photo"
+        },
+        "price": "100 €",
+        "note": {
+          "ru": "До 30 минут, 10 обработанных фото",
+          "en": "Up to 30 minutes and 10 edited photos",
+          "de": "Bis zu 30 Minuten und 10 bearbeitete Fotos",
+          "uk": "До 30 хвилин і 10 оброблених фото",
+          "sk": "Do 30 minút a 10 upravených fotografií",
+          "fr": "Jusqu’à 30 minutes et 10 photos retouchées"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "J02",
+        "name": {
+          "ru": "Бизнес-фотосъёмка",
+          "en": "Business photo session",
+          "de": "Business-Fotoshooting",
+          "uk": "Бізнес-фотосесія",
+          "sk": "Firemné fotografovanie",
+          "fr": "Séance photo professionnelle"
+        },
+        "price": "160 €",
+        "note": {
+          "ru": "До 60 минут, 20 обработанных фото",
+          "en": "Up to 60 minutes and 20 edited photos",
+          "de": "Bis zu 60 Minuten und 20 bearbeitete Fotos",
+          "uk": "До 60 хвилин і 20 оброблених фото",
+          "sk": "Do 60 minút a 20 upravených fotografií",
+          "fr": "Jusqu’à 60 minutes et 20 photos retouchées"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "J03",
+        "name": {
+          "ru": "Фото для сайта и Google",
+          "en": "Photography for website and Google",
+          "de": "Fotografie für Website und Google",
+          "uk": "Фотозйомка для сайту та Google",
+          "sk": "Fotografovanie pre webstránku a Google",
+          "fr": "Photographie pour site web et Google"
+        },
+        "price": "220 €",
+        "note": {
+          "ru": "До 90 минут, 30 обработанных фото",
+          "en": "Up to 90 minutes and 30 edited photos",
+          "de": "Bis zu 90 Minuten und 30 bearbeitete Fotos",
+          "uk": "До 90 хвилин і 30 оброблених фото",
+          "sk": "Do 90 minút a 30 upravených fotografií",
+          "fr": "Jusqu’à 90 minutes et 30 photos retouchées"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "J04",
+        "name": {
+          "ru": "Предметная съёмка товара",
+          "en": "Product photography",
+          "de": "Produktfotografie",
+          "uk": "Предметна зйомка товарів",
+          "sk": "Produktová fotografia",
+          "fr": "Photographie de produits"
+        },
+        "price": "от 12 € / предмет",
+        "note": {
+          "ru": "Минимум 10 предметов, простой фон",
+          "en": "Minimum 10 items on a simple background",
+          "de": "Mindestens 10 Artikel vor einem einfachen Hintergrund",
+          "uk": "Мінімум 10 предметів на простому фоні",
+          "sk": "Minimálne 10 predmetov na jednoduchom pozadí",
+          "fr": "Minimum 10 objets sur fond simple"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "J05",
+        "name": {
+          "ru": "Обработка готового фото",
+          "en": "Editing an existing photo",
+          "de": "Bearbeitung eines vorhandenen Fotos",
+          "uk": "Обробка готового фото",
+          "sk": "Úprava existujúcej fotografie",
+          "fr": "Retouche d’une photo existante"
+        },
+        "price": "8 € / фото",
+        "note": {
+          "ru": "Цвет, кадрирование, базовая ретушь",
+          "en": "Color, cropping and basic retouching",
+          "de": "Farbe, Zuschnitt und einfache Retusche",
+          "uk": "Колір, кадрування та базова ретуш",
+          "sk": "Farby, orezanie a základná retuš",
+          "fr": "Couleur, recadrage et retouche de base"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "J06",
+        "name": {
+          "ru": "Пакет форматов для сайта и соцсетей",
+          "en": "Image format package for website and social media",
+          "de": "Bildformat-Paket für Website und soziale Medien",
+          "uk": "Пакет форматів для сайту й соціальних мереж",
+          "sk": "Balík formátov obrázkov pre web a sociálne siete",
+          "fr": "Pack de formats d’image pour site web et réseaux sociaux"
+        },
+        "price": "39 €",
+        "note": {
+          "ru": "До 10 изображений в нужных пропорциях",
+          "en": "Up to 10 images in the required proportions",
+          "de": "Bis zu 10 Bilder in den erforderlichen Proportionen",
+          "uk": "До 10 зображень у потрібних пропорціях",
+          "sk": "Do 10 obrázkov v požadovaných pomeroch",
+          "fr": "Jusqu’à 10 images aux proportions requises"
+        },
+        "sortOrder": 5
+      }
+    ]
+  },
+  {
+    "number": "11",
+    "title": {
+      "ru": "Цифровые материалы и присутствие бизнеса",
+      "en": "Digital materials and business presence",
+      "de": "Digitale Materialien und Unternehmenspräsenz",
+      "uk": "Цифрові матеріали та присутність бізнесу",
+      "sk": "Digitálne materiály a firemná prezentácia",
+      "fr": "Supports numériques et présence de l’entreprise"
+    },
+    "subtitle": {
+      "ru": "Дополнительные услуги без специального допуска",
+      "en": "Additional services that do not require special authorization",
+      "de": "Zusatzleistungen ohne besondere Zulassung",
+      "uk": "Додаткові послуги без спеціального дозволу",
+      "sk": "Doplnkové služby bez osobitného povolenia",
+      "fr": "Services complémentaires sans autorisation spéciale"
+    },
+    "sortOrder": 10,
+    "items": [
+      {
+        "code": "K01",
+        "name": {
+          "ru": "Настройка бизнес-профилей в соцсетях",
+          "en": "Business social profile setup",
+          "de": "Einrichtung von Business-Profilen in sozialen Netzwerken",
+          "uk": "Налаштування бізнес-профілів у соціальних мережах",
+          "sk": "Nastavenie firemných profilov na sociálnych sieťach",
+          "fr": "Configuration de profils professionnels sur les réseaux sociaux"
+        },
+        "price": "79 €",
+        "note": {
+          "ru": "До 2 платформ, базовая информация и оформление",
+          "en": "Up to 2 platforms with basic information and design",
+          "de": "Bis zu 2 Plattformen mit Basisinformationen und Gestaltung",
+          "uk": "До 2 платформ із базовою інформацією та оформленням",
+          "sk": "Do 2 platforiem so základnými informáciami a dizajnom",
+          "fr": "Jusqu’à 2 plateformes avec informations de base et design"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "K02",
+        "name": {
+          "ru": "Фирменная подпись электронной почты",
+          "en": "Branded email signature",
+          "de": "Gebrandete E-Mail-Signatur",
+          "uk": "Фірмовий підпис електронної пошти",
+          "sk": "Firemný e-mailový podpis",
+          "fr": "Signature e-mail professionnelle"
+        },
+        "price": "39 €",
+        "note": {
+          "ru": "1 дизайн, установка на 1–2 устройства",
+          "en": "One design, installed on 1–2 devices",
+          "de": "Ein Design, Installation auf 1–2 Geräten",
+          "uk": "Один дизайн, встановлення на 1–2 пристрої",
+          "sk": "Jeden dizajn, inštalácia na 1–2 zariadenia",
+          "fr": "Un design, installation sur 1 à 2 appareils"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "K03",
+        "name": {
+          "ru": "Цифровая визитка + QR-код",
+          "en": "Digital business card and QR code",
+          "de": "Digitale Visitenkarte und QR-Code",
+          "uk": "Цифрова візитівка та QR-код",
+          "sk": "Digitálna vizitka a QR kód",
+          "fr": "Carte de visite numérique et code QR"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "Контакты, сайт, соцсети",
+          "en": "Contact details, website and social media",
+          "de": "Kontaktdaten, Website und soziale Medien",
+          "uk": "Контакти, сайт і соціальні мережі",
+          "sk": "Kontaktné údaje, webstránka a sociálne siete",
+          "fr": "Coordonnées, site web et réseaux sociaux"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "K04",
+        "name": {
+          "ru": "Дизайн визитной карточки",
+          "en": "Business card design",
+          "de": "Design einer Visitenkarte",
+          "uk": "Дизайн візитної картки",
+          "sk": "Dizajn vizitky",
+          "fr": "Design d’une carte de visite"
+        },
+        "price": "79 €",
+        "note": {
+          "ru": "1 концепция + 2 круга правок",
+          "en": "One concept and two revision rounds",
+          "de": "Ein Konzept und zwei Korrekturrunden",
+          "uk": "Одна концепція та два кола правок",
+          "sk": "Jeden koncept a dve kolá úprav",
+          "fr": "Un concept et deux séries de corrections"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "K05",
+        "name": {
+          "ru": "Дизайн прайс-листа / листа услуг",
+          "en": "Price list / service sheet design",
+          "de": "Design einer Preisliste / Leistungsübersicht",
+          "uk": "Дизайн прайс-листа / переліку послуг",
+          "sk": "Dizajn cenníka / prehľadu služieb",
+          "fr": "Design d’une grille tarifaire / fiche de services"
+        },
+        "price": "от 120 €",
+        "note": {
+          "ru": "До 3 страниц, контент клиента",
+          "en": "Up to 3 pages; client supplies content",
+          "de": "Bis zu 3 Seiten; Inhalte werden vom Kunden bereitgestellt",
+          "uk": "До 3 сторінок; контент надає клієнт",
+          "sk": "Do 3 strán; obsah dodá klient",
+          "fr": "Jusqu’à 3 pages ; contenu fourni par le client"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "K06",
+        "name": {
+          "ru": "Базовый бренд-кит",
+          "en": "Basic brand kit",
+          "de": "Basis-Brand-Kit",
+          "uk": "Базовий бренд-кит",
+          "sk": "Základný brand kit",
+          "fr": "Kit de marque de base"
+        },
+        "price": "от 149 €",
+        "note": {
+          "ru": "Цвета, шрифты, правила использования имеющегося логотипа",
+          "en": "Colors, fonts and rules for using the existing logo",
+          "de": "Farben, Schriften und Regeln zur Verwendung des vorhandenen Logos",
+          "uk": "Кольори, шрифти та правила використання наявного логотипу",
+          "sk": "Farby, písma a pravidlá používania existujúceho loga",
+          "fr": "Couleurs, polices et règles d’utilisation du logo existant"
+        },
+        "sortOrder": 5
+      },
+      {
+        "code": "K07",
+        "name": {
+          "ru": "Цифровой каталог / меню",
+          "en": "Digital catalogue / menu",
+          "de": "Digitaler Katalog / Menü",
+          "uk": "Цифровий каталог / меню",
+          "sk": "Digitálny katalóg / menu",
+          "fr": "Catalogue numérique / menu"
+        },
+        "price": "от 149 €",
+        "note": {
+          "ru": "До 10 страниц, PDF или веб-формат",
+          "en": "Up to 10 pages in PDF or web format",
+          "de": "Bis zu 10 Seiten im PDF- oder Webformat",
+          "uk": "До 10 сторінок у PDF- або вебформаті",
+          "sk": "Do 10 strán vo formáte PDF alebo web",
+          "fr": "Jusqu’à 10 pages au format PDF ou web"
+        },
+        "sortOrder": 6
+      },
+      {
+        "code": "K08",
+        "name": {
+          "ru": "Настройка онлайн-формы / анкеты",
+          "en": "Online form / questionnaire setup",
+          "de": "Einrichtung eines Online-Formulars / Fragebogens",
+          "uk": "Налаштування онлайн-форми / анкети",
+          "sk": "Nastavenie online formulára / dotazníka",
+          "fr": "Configuration d’un formulaire / questionnaire en ligne"
+        },
+        "price": "59 €",
+        "note": {
+          "ru": "Google Forms / Microsoft Forms / аналог",
+          "en": "Google Forms, Microsoft Forms or equivalent",
+          "de": "Google Forms, Microsoft Forms oder vergleichbare Lösung",
+          "uk": "Google Forms, Microsoft Forms або аналог",
+          "sk": "Google Forms, Microsoft Forms alebo ekvivalent",
+          "fr": "Google Forms, Microsoft Forms ou équivalent"
+        },
+        "sortOrder": 7
+      },
+      {
+        "code": "K09",
+        "name": {
+          "ru": "Простая автоматизация без кода",
+          "en": "Simple no-code automation",
+          "de": "Einfache No-Code-Automatisierung",
+          "uk": "Проста автоматизація без коду",
+          "sk": "Jednoduchá automatizácia bez kódu",
+          "fr": "Automatisation simple sans code"
+        },
+        "price": "от 99 €",
+        "note": {
+          "ru": "Форма → таблица → уведомление, на готовых сервисах",
+          "en": "Form → spreadsheet → notification using existing services",
+          "de": "Formular → Tabelle → Benachrichtigung mit vorhandenen Diensten",
+          "uk": "Форма → таблиця → сповіщення на базі готових сервісів",
+          "sk": "Formulár → tabuľka → upozornenie pomocou existujúcich služieb",
+          "fr": "Formulaire → feuille de calcul → notification avec des services existants"
+        },
+        "sortOrder": 8
+      }
+    ]
+  },
+  {
+    "number": "12",
+    "title": {
+      "ru": "Обучение, консультации и логистика",
+      "en": "Training, consulting and logistics",
+      "de": "Schulung, Beratung und Logistik",
+      "uk": "Навчання, консультації та логістика",
+      "sk": "Školenia, konzultácie a logistika",
+      "fr": "Formation, conseil et logistique"
+    },
+    "subtitle": {
+      "ru": "Понятные инструкции, закупка и доставка устройств",
+      "en": "Clear instructions, purchasing and delivery of devices",
+      "de": "Verständliche Anleitungen, Beschaffung und Lieferung von Geräten",
+      "uk": "Зрозумілі інструкції, закупівля та доставка пристроїв",
+      "sk": "Jasné pokyny, nákup a doručenie zariadení",
+      "fr": "Instructions claires, achat et livraison d’appareils"
+    },
+    "sortOrder": 11,
+    "items": [
+      {
+        "code": "L01",
+        "name": {
+          "ru": "Индивидуальное обучение работе с ПК",
+          "en": "Individual PC training",
+          "de": "Individuelle PC-Schulung",
+          "uk": "Індивідуальне навчання роботі з ПК",
+          "sk": "Individuálne školenie práce s PC",
+          "fr": "Formation individuelle à l’utilisation d’un PC"
+        },
+        "price": "49 €/час",
+        "note": {
+          "ru": "Windows, интернет, документы, почта, безопасность",
+          "en": "Windows, internet, documents, email and security",
+          "de": "Windows, Internet, Dokumente, E-Mail und Sicherheit",
+          "uk": "Windows, інтернет, документи, пошта та безпека",
+          "sk": "Windows, internet, dokumenty, e-mail a bezpečnosť",
+          "fr": "Windows, internet, documents, e-mail et sécurité"
+        },
+        "sortOrder": 0
+      },
+      {
+        "code": "L02",
+        "name": {
+          "ru": "Обучение для небольшой команды",
+          "en": "Training for a small team",
+          "de": "Schulung für ein kleines Team",
+          "uk": "Навчання для невеликої команди",
+          "sk": "Školenie pre malý tím",
+          "fr": "Formation pour une petite équipe"
+        },
+        "price": "79 €/час",
+        "note": {
+          "ru": "До 5 человек",
+          "en": "Up to 5 people",
+          "de": "Bis zu 5 Personen",
+          "uk": "До 5 осіб",
+          "sk": "Do 5 osôb",
+          "fr": "Jusqu’à 5 personnes"
+        },
+        "sortOrder": 1
+      },
+      {
+        "code": "L03",
+        "name": {
+          "ru": "Консультация по покупке ПК / ноутбука",
+          "en": "PC / laptop purchase consultation",
+          "de": "Kaufberatung für PC / Laptop",
+          "uk": "Консультація з купівлі ПК / ноутбука",
+          "sk": "Konzultácia pri kúpe PC / notebooku",
+          "fr": "Conseil pour l’achat d’un PC / ordinateur portable"
+        },
+        "price": "49 €",
+        "note": {
+          "ru": "До 3 вариантов под бюджет и задачу",
+          "en": "Up to 3 options for the budget and task",
+          "de": "Bis zu 3 Optionen passend zu Budget und Aufgabe",
+          "uk": "До 3 варіантів під бюджет і завдання",
+          "sk": "Do 3 možností podľa rozpočtu a úlohy",
+          "fr": "Jusqu’à 3 options selon le budget et le besoin"
+        },
+        "sortOrder": 2
+      },
+      {
+        "code": "L04",
+        "name": {
+          "ru": "Мини-аудит цифровизации малого бизнеса",
+          "en": "Small business digitalization mini-audit",
+          "de": "Mini-Audit zur Digitalisierung eines kleinen Unternehmens",
+          "uk": "Мініаудит цифровізації малого бізнесу",
+          "sk": "Mini audit digitalizácie malej firmy",
+          "fr": "Mini-audit de numérisation d’une petite entreprise"
+        },
+        "price": "149 €",
+        "note": {
+          "ru": "Рабочие места, почта, облако, сайт, backup, план действий",
+          "en": "Workstations, email, cloud, website, backup and action plan",
+          "de": "Arbeitsplätze, E-Mail, Cloud, Website, Datensicherung und Maßnahmenplan",
+          "uk": "Робочі місця, пошта, хмара, сайт, резервні копії та план дій",
+          "sk": "Pracoviská, e-mail, cloud, webstránka, záloha a akčný plán",
+          "fr": "Postes de travail, e-mail, cloud, site web, sauvegarde et plan d’action"
+        },
+        "sortOrder": 3
+      },
+      {
+        "code": "L05",
+        "name": {
+          "ru": "Вывоз / доставка устройства по Мюльхайму",
+          "en": "Device pickup / delivery within Mülheim",
+          "de": "Abholung / Lieferung eines Geräts innerhalb Mülheims",
+          "uk": "Забір / доставка пристрою в межах Мюльгайма",
+          "sk": "Vyzdvihnutie / doručenie zariadenia v Mülheime",
+          "fr": "Collecte / livraison d’un appareil à Mülheim"
+        },
+        "price": "15 € в одну сторону",
+        "note": {
+          "ru": "По предварительной договорённости",
+          "en": "By prior arrangement",
+          "de": "Nach vorheriger Vereinbarung",
+          "uk": "За попередньою домовленістю",
+          "sk": "Po predchádzajúcej dohode",
+          "fr": "Sur accord préalable"
+        },
+        "sortOrder": 4
+      },
+      {
+        "code": "L06",
+        "name": {
+          "ru": "Выезд за пределы Мюльхайма",
+          "en": "Travel outside Mülheim",
+          "de": "Anfahrt außerhalb Mülheims",
+          "uk": "Виїзд за межі Мюльгайма",
+          "sk": "Cesta mimo Mülheimu",
+          "fr": "Déplacement hors de Mülheim"
+        },
+        "price": "0,70 €/км",
+        "note": {
+          "ru": "Считается фактический маршрут туда и обратно",
+          "en": "Calculated for the actual round trip",
+          "de": "Berechnung nach der tatsächlichen Hin- und Rückfahrt",
+          "uk": "Розраховується за фактичний маршрут туди й назад",
+          "sk": "Vypočíta sa podľa skutočnej cesty tam a späť",
+          "fr": "Calculé selon le trajet aller-retour réel"
+        },
+        "sortOrder": 5
+      },
+      {
+        "code": "L07",
+        "name": {
+          "ru": "Закупка оборудования по поручению клиента",
+          "en": "Equipment purchasing on behalf of the client",
+          "de": "Gerätekauf im Auftrag des Kunden",
+          "uk": "Закупівля обладнання за дорученням клієнта",
+          "sk": "Nákup vybavenia v mene klienta",
+          "fr": "Achat de matériel pour le compte du client"
+        },
+        "price": "10 % от суммы, мин. 25 €",
+        "note": {
+          "ru": "Предоплата; гарантия производителя/магазина",
+          "en": "Prepayment; manufacturer / retailer warranty",
+          "de": "Vorauszahlung; Garantie des Herstellers / Händlers",
+          "uk": "Передоплата; гарантія виробника / продавця",
+          "sk": "Platba vopred; záruka výrobcu / predajcu",
+          "fr": "Paiement anticipé ; garantie du fabricant / revendeur"
+        },
+        "sortOrder": 6
+      },
+      {
+        "code": "L08",
+        "name": {
+          "ru": "Письменная инструкция после работ",
+          "en": "Written instructions after the work",
+          "de": "Schriftliche Anleitung nach Abschluss der Arbeiten",
+          "uk": "Письмова інструкція після виконання робіт",
+          "sk": "Písomný návod po dokončení práce",
+          "fr": "Instructions écrites après l’intervention"
+        },
+        "price": "от 25 €",
+        "note": {
+          "ru": "Пошаговая памятка для клиента",
+          "en": "Step-by-step guide for the client",
+          "de": "Schritt-für-Schritt-Anleitung für den Kunden",
+          "uk": "Покрокова пам’ятка для клієнта",
+          "sk": "Podrobný návod krok za krokom pre klienta",
+          "fr": "Guide étape par étape pour le client"
+        },
+        "sortOrder": 7
+      }
+    ]
+  }
+]

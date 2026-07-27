@@ -1,0 +1,1 @@
+import {NextResponse} from 'next/server';import {destroySession,assertOrigin} from '@/lib/security';export async function POST(){await assertOrigin();await destroySession();return NextResponse.redirect(new URL('/login',process.env.CONTROL_URL??'http://localhost:3001'),303)}
