@@ -20,8 +20,7 @@
     "db:seed": "npm --workspace @tiladys/db run seed",
     "setup:admin": "node scripts/setup-admin.mjs",
     "typecheck": "npm run typecheck --workspaces --if-present",
-    "db:deploy": "npm --workspace @tiladys/db run deploy",
-    "postinstall": "prisma generate --schema=packages/db/prisma/schema.prisma"
+    "db:deploy": "npm --workspace @tiladys/db run deploy"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"
