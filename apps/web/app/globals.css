@@ -1993,10 +1993,30 @@ td:nth-child(3) {
 .contact-channel__action--green { color: #19a848; }
 .contact-channel__action--pink { color: #e62685; }
 
+.contact-channel__action--blue {
+  --action-color: #087fff;
+  color: var(--action-color);
+}
+
+.contact-channel__action--sky {
+  --action-color: #13a3e8;
+  color: var(--action-color);
+}
+
+.contact-channel__action--green {
+  --action-color: #19a848;
+  color: var(--action-color);
+}
+
+.contact-channel__action--pink {
+  --action-color: #e62685;
+  color: var(--action-color);
+}
+
 .contact-channel__action:hover,
 .contact-channel__action:focus-visible {
-  background: currentColor;
-  color: #fff;
+  background: color-mix(in srgb, var(--action-color) 14%, transparent);
+  color: var(--action-color);
 }
 
 .contact-form--visual {

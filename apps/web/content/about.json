@@ -47,10 +47,16 @@
       "title": "Education & Learning",
       "items": [
         {
+          "school": "Rhine-Waal University of Applied Sciences, Kamp-Lintfort Campus, Germany",
+          "fieldLabel": "Degree Program",
+          "field": "Infotronic Systems Engineering, B.Sc.",
+          "period": "2026 – Present"
+        },
+        {
           "school": "Secondary Industrial School of Electrical Engineering, Slovakia",
           "fieldLabel": "Field of Study",
           "field": "Intelligent Technologies",
-          "period": "2011 – 2020"
+          "period": "2022 – 2025"
         },
         {
           "school": "Higher Vocational School No. 7, Ukraine",
@@ -59,10 +65,10 @@
           "period": "2020 – 2022"
         },
         {
-          "school": "General Integration Course — German Language",
-          "fieldLabel": "Provider",
-          "field": "Diakonisches Werk Märkisches e.V., Berlin",
-          "period": "In progress"
+          "school": "General Secondary School",
+          "fieldLabel": "",
+          "field": "Kremenchuk, Ukraine",
+          "period": "2011 – 2020"
         }
       ]
     },
@@ -140,22 +146,28 @@
       "title": "Ausbildung & Weiterbildung",
       "items": [
         {
+          "school": "Hochschule Rhein-Waal, Campus Kamp-Lintfort, Deutschland",
+          "fieldLabel": "Studiengang",
+          "field": "Infotronic Systems Engineering, B.Sc.",
+          "period": "2026 – heute"
+        },
+        {
           "school": "Sekundäre Industrieschule für Elektrotechnik, Slowakei",
           "fieldLabel": "Fachrichtung",
           "field": "Intelligente Technologien",
-          "period": "2011 – 2020"
+          "period": "2022 – 2025"
         },
         {
           "school": "Höhere Berufsschule Nr. 7, Ukraine",
           "fieldLabel": "Fachrichtung",
-          "field": "Informations- und Softwareverarbeitung",
+          "field": "Operator für Informations- und Softwareverarbeitung",
           "period": "2020 – 2022"
         },
         {
-          "school": "Allgemeiner Integrationskurs — Deutsch",
-          "fieldLabel": "Anbieter",
-          "field": "Diakonisches Werk Märkisches e.V., Berlin",
-          "period": "Laufend"
+          "school": "Allgemeinbildende Schule",
+          "fieldLabel": "",
+          "field": "Krementschuk, Ukraine",
+          "period": "2011 – 2020"
         }
       ]
     },
@@ -233,22 +245,28 @@
       "title": "Освіта та навчання",
       "items": [
         {
+          "school": "Університет прикладних наук Рейн-Вааль, кампус Камп-Лінтфорт, Німеччина",
+          "fieldLabel": "Освітня програма",
+          "field": "Інфотронні системи та інженерія, бакалавр наук (B.Sc.)",
+          "period": "2026 – дотепер"
+        },
+        {
           "school": "Середня промислова школа електротехніки, Словаччина",
           "fieldLabel": "Напрям навчання",
           "field": "Інтелектуальні технології",
-          "period": "2011 – 2020"
+          "period": "2022 – 2025"
         },
         {
           "school": "Вище професійне училище № 7, Україна",
           "fieldLabel": "Напрям навчання",
-          "field": "Оператор обробки інформації та програмного забезпечення",
+          "field": "Оператор з обробки інформації та програмного забезпечення",
           "period": "2020 – 2022"
         },
         {
-          "school": "Загальний інтеграційний курс — німецька мова",
-          "fieldLabel": "Організація",
-          "field": "Diakonisches Werk Märkisches e.V., Berlin",
-          "period": "Навчання триває"
+          "school": "Загальноосвітня школа",
+          "fieldLabel": "",
+          "field": "Кременчук, Україна",
+          "period": "2011 – 2020"
         }
       ]
     },
@@ -326,22 +344,28 @@
       "title": "Образование и обучение",
       "items": [
         {
+          "school": "Университет прикладных наук Рейн-Вааль, кампус Камп-Линтфорт, Германия",
+          "fieldLabel": "Образовательная программа",
+          "field": "Инфотронные системы и инженерия, бакалавр наук (B.Sc.)",
+          "period": "2026 – настоящее время"
+        },
+        {
           "school": "Средняя промышленная школа электротехники, Словакия",
           "fieldLabel": "Направление обучения",
           "field": "Интеллектуальные технологии",
-          "period": "2011 – 2020"
+          "period": "2022 – 2025"
         },
         {
           "school": "Высшее профессиональное училище № 7, Украина",
           "fieldLabel": "Направление обучения",
-          "field": "Оператор обработки информации и программного обеспечения",
+          "field": "Оператор по обработке информации и программного обеспечения",
           "period": "2020 – 2022"
         },
         {
-          "school": "Общий интеграционный курс — немецкий язык",
-          "fieldLabel": "Организация",
-          "field": "Diakonisches Werk Märkisches e.V., Berlin",
-          "period": "Обучение продолжается"
+          "school": "Общеобразовательная школа",
+          "fieldLabel": "",
+          "field": "Кременчуг, Украина",
+          "period": "2011 – 2020"
         }
       ]
     },
@@ -419,22 +443,28 @@
       "title": "Vzdelanie a učenie",
       "items": [
         {
+          "school": "Univerzita aplikovaných vied Rhine-Waal, kampus Kamp-Lintfort, Nemecko",
+          "fieldLabel": "Študijný program",
+          "field": "Infotronic Systems Engineering, B.Sc.",
+          "period": "2026 – súčasnosť"
+        },
+        {
           "school": "Stredná priemyselná škola elektrotechnická, Slovensko",
-          "fieldLabel": "Odbor",
+          "fieldLabel": "Študijný odbor",
           "field": "Inteligentné technológie",
-          "period": "2011 – 2020"
+          "period": "2022 – 2025"
         },
         {
           "school": "Vyššia odborná škola č. 7, Ukrajina",
-          "fieldLabel": "Odbor",
+          "fieldLabel": "Študijný odbor",
           "field": "Operátor spracovania informácií a softvéru",
           "period": "2020 – 2022"
         },
         {
-          "school": "Všeobecný integračný kurz — nemecký jazyk",
-          "fieldLabel": "Poskytovateľ",
-          "field": "Diakonisches Werk Märkisches e.V., Berlin",
-          "period": "Prebieha"
+          "school": "Všeobecná stredná škola",
+          "fieldLabel": "",
+          "field": "Kremenčuk, Ukrajina",
+          "period": "2011 – 2020"
         }
       ]
     },
@@ -512,22 +542,28 @@
       "title": "Formation et apprentissage",
       "items": [
         {
-          "school": "École secondaire industrielle d'électrotechnique, Slovaquie",
-          "fieldLabel": "Domaine d'étude",
+          "school": "Université des sciences appliquées Rhine-Waal, campus de Kamp-Lintfort, Allemagne",
+          "fieldLabel": "Programme d’études",
+          "field": "Ingénierie des systèmes infotronic, B.Sc.",
+          "period": "2026 – aujourd’hui"
+        },
+        {
+          "school": "École secondaire industrielle d’électrotechnique, Slovaquie",
+          "fieldLabel": "Domaine d’études",
           "field": "Technologies intelligentes",
-          "period": "2011 – 2020"
+          "period": "2022 – 2025"
         },
         {
           "school": "École professionnelle supérieure n° 7, Ukraine",
-          "fieldLabel": "Domaine d'étude",
-          "field": "Opérateur de traitement de l'information et des logiciels",
+          "fieldLabel": "Domaine d’études",
+          "field": "Opérateur de traitement de l’information et des logiciels",
           "period": "2020 – 2022"
         },
         {
-          "school": "Cours général d'intégration — allemand",
-          "fieldLabel": "Organisme",
-          "field": "Diakonisches Werk Märkisches e.V., Berlin",
-          "period": "En cours"
+          "school": "École secondaire générale",
+          "fieldLabel": "",
+          "field": "Krementchouk, Ukraine",
+          "period": "2011 – 2020"
         }
       ]
     },
