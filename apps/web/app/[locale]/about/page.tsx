@@ -78,7 +78,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <p>{data.hero.subtitle}</p>
           </div>
           <div className="about-hero__visual">
-            <Image src="/portfolio/placeholders/project-4.png" width={856} height={512} alt="TiLADYS laptop workspace" priority />
+            <Image src="/hero/tiladys-hero.png" width={856} height={512} alt="TiLADYS laptop workspace" priority />
           </div>
         </div>
       </section>

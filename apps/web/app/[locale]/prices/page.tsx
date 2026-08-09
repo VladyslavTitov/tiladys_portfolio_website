@@ -22,7 +22,7 @@ export default async function PricesPage({ params }: { params: Promise<{ locale:
 
   return (
     <Shell locale={locale}>
-      <PageHero title={c.heroTitle} accent={c.heroAccent} text={c.heroText} image="/portfolio/placeholders/project-4.png" className="prices-hero" />
+      <PageHero title={c.heroTitle} accent={c.heroAccent} text={c.heroText} image="/hero/tiladys-hero.png" className="prices-hero" />
       <PriceExplorer locale={locale} sections={sections} />
       <ContactCta locale={locale} title={c.ctaTitle} text={c.ctaText} />
     </Shell>

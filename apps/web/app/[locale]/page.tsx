@@ -54,7 +54,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <span>{extra.trust[2]}</span>
           </div>
         </div>
-        <Image src="/portfolio/placeholders/project-4.png" width={760} height={600} alt={extra.heroAlt} priority />
+        <Image src="/hero/tiladys-hero.png" width={760} height={600} alt={extra.heroAlt} priority />
       </section>
 
       <section className="services-section section" aria-labelledby="services-heading">

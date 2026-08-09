@@ -21,7 +21,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
 
   return (
     <Shell locale={locale}>
-      <PageHero kicker={c.kicker} title={c.title} accentLead={c.accentLead} accent={c.accent} text={c.intro} image="/portfolio/placeholders/project-4.png" className="portfolio-hero" />
+      <PageHero kicker={c.kicker} title={c.title} accentLead={c.accentLead} accent={c.accent} text={c.intro} image="/hero/tiladys-hero.png" className="portfolio-hero" />
       <PortfolioExplorer locale={locale} projects={projects} />
       <ContactCta locale={locale} title={c.ctaTitle} text={c.ctaText} />
     </Shell>

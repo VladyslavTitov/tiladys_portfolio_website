@@ -36,7 +36,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <Shell locale={locale}>
-      <PageHero title={c.heroTitle} accent={c.heroAccent} text={c.heroText} image="/portfolio/placeholders/project-4.png"/>
+      <PageHero title={c.heroTitle} accent={c.heroAccent} text={c.heroText} image="/hero/tiladys-hero.png"/>
       <section className="section contact-page-grid">
         <div className="contact-channel-list">
           {contacts.map(({ key, value, href, Icon, tone }) => {
