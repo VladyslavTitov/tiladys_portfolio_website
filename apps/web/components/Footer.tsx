@@ -1,13 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Mail, MapPin, Music2, Phone, Send, Youtube } from 'lucide-react';
+import { Instagram, Mail, MapPin, Phone, Send } from 'lucide-react';
 import { t } from '@/lib/i18n';
 
 const socialLinks = [
   { label: 'Telegram', handle: '@tiladys_support', href: 'https://t.me/tiladys_support', Icon: Send },
   { label: 'Instagram', handle: '@tiladys.de', href: 'https://www.instagram.com/tiladys.de', Icon: Instagram },
-  { label: 'YouTube', handle: '@tiladys_de', href: 'https://www.youtube.com/@tiladys_de', Icon: Youtube },
-  { label: 'TikTok', handle: '@tiladys_it', href: 'https://www.tiktok.com/@tiladys_it', Icon: Music2 },
 ] as const;
 
 export function Footer({ locale }: { locale: string }) {
@@ -45,7 +43,7 @@ export function Footer({ locale }: { locale: string }) {
         <section className="footer-column">
           <h2>{c.footer.linksTitle}</h2>
           {c.nav.map((name: string, index: number) => {
-            const routes = ['', 'portfolio', 'about', 'prices', 'contact'];
+            const routes = ['', 'services', 'portfolio', 'about', 'contact'];
             const suffix = routes[index];
             return (
               <Link key={name} href={suffix ? `/${locale}/${suffix}` : `/${locale}`}>
@@ -58,7 +56,7 @@ export function Footer({ locale }: { locale: string }) {
         <section className="footer-column">
           <h2>{c.footer.socialTitle}</h2>
           {socialLinks.map(({ label, handle, href, Icon }) => (
-            <a key={label} href={href} target="_blank" rel="noreferrer" className="social-link">
+            <a key={label} href={href} target="_blank" rel="noreferrer" className="social-link" aria-label={`${label}: ${handle}`}>
               <span className="social-link__icon"><Icon aria-hidden="true" size={18} /></span>
               <span>{handle}</span>
             </a>

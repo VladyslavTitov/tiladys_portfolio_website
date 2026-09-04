@@ -16,7 +16,7 @@ const languages = [
   { code: 'fr', label: 'Français' },
 ] as const;
 
-const routeNames = ['', 'portfolio', 'about', 'prices', 'contact'] as const;
+const routeNames = ['', 'services', 'portfolio', 'about', 'contact'] as const;
 
 export function Header({ locale }: { locale: string }) {
   const c = t(locale);
@@ -24,11 +24,6 @@ export function Header({ locale }: { locale: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const languageRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    setMenuOpen(false);
-    setLanguageOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     function handlePointerDown(event: MouseEvent) {
@@ -66,7 +61,7 @@ export function Header({ locale }: { locale: string }) {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Link href={`/${locale}`} className="site-brand" aria-label="TiLADYS home">
+        <Link href={`/${locale}`} className="site-brand" aria-label="TiLADYS home" onClick={() => { setMenuOpen(false); setLanguageOpen(false); }}>
           <Image src="/brand/icon.svg" width={445} height={106} alt="TiLADYS" priority />
         </Link>
 
@@ -80,7 +75,7 @@ export function Header({ locale }: { locale: string }) {
               const suffix = routeNames[index];
               const href = suffix ? `/${locale}/${suffix}` : `/${locale}`;
               return (
-                <Link key={name} href={href} className="site-nav__link">
+                <Link key={name} href={href} className="site-nav__link" onClick={() => setMenuOpen(false)}>
                   {name}
                 </Link>
               );
@@ -88,7 +83,7 @@ export function Header({ locale }: { locale: string }) {
           </div>
 
           <div className="site-nav__actions">
-            <Link className="header-help" href={`/${locale}/contact`}>
+            <Link className="header-help" href={`/${locale}/contact`} onClick={() => setMenuOpen(false)}>
               <Headphones aria-hidden="true" size={19} />
               <span>{c.header.getHelp}</span>
             </Link>
@@ -114,6 +109,7 @@ export function Header({ locale }: { locale: string }) {
                       href={localeHref(language.code)}
                       className={language.code === locale ? 'is-active' : undefined}
                       role="menuitem"
+                      onClick={() => { setLanguageOpen(false); setMenuOpen(false); }}
                     >
                       <span>{language.label}</span>
                       <small>{language.code.toUpperCase()}</small>

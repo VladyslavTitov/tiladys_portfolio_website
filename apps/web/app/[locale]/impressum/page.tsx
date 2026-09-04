@@ -1,5 +1,12 @@
 import { LegalPlaceholder } from '@/components/LegalPlaceholder';
 import { t } from '@/lib/i18n';
+import { p } from '@/lib/page-copy';
+import { localizedMetadata } from '@/lib/seo';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return localizedMetadata({ locale, pathname: 'impressum', title: t(locale).footer.impressum, description: p(locale).legal.subtitle });
+}
 
 export default async function ImpressumPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

@@ -14,16 +14,23 @@ import { ContactForm } from '@/components/ContactForm';
 import { ContactCta } from '@/components/ContactCta';
 import { PageHero } from '@/components/PageHero';
 import { p } from '@/lib/page-copy';
+import { localizedMetadata } from '@/lib/seo';
+import { contactServiceId, serviceCopy, serviceDefinitions } from '@/lib/services';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const c = p(locale).contact;
-  return { title: c.heroTitle, description: c.heroText };
+  return localizedMetadata({ locale, pathname: 'contact', title: c.heroTitle, description: c.heroText });
 }
 
-export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function ContactPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ service?: string | string[] }> }) {
   const { locale } = await params;
+  const requested = (await searchParams).service;
+  const requestedService = (Array.isArray(requested) ? requested[0] : requested)?.slice(0, 120) ?? '';
   const c = p(locale).contact;
+  const serviceOptions = serviceDefinitions.map((service) => serviceCopy(service.id, locale).title);
+  const requestedServiceId = contactServiceId(requestedService);
+  const initialService = requestedServiceId ? serviceCopy(requestedServiceId, locale).title : requestedService;
   const locationLabel: Record<string, string> = { en: 'NRW, Germany', de: 'NRW, Deutschland', uk: 'NRW, Німеччина', ru: 'NRW, Германия', sk: 'NRW, Nemecko', fr: 'NRW, Allemagne' };
   const contacts = [
     { key: 'email', value: 'mail@tiladys.com', href: 'mailto:mail@tiladys.com', Icon: Mail, tone: 'blue' },
@@ -36,7 +43,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <Shell locale={locale}>
-      <PageHero title={c.heroTitle} accent={c.heroAccent} text={c.heroText} image="/hero/tiladys-hero.png"/>
+      <PageHero title={c.heroTitle} accent={c.heroAccent} text={c.heroText} />
       <section className="section contact-page-grid">
         <div className="contact-channel-list">
           {contacts.map(({ key, value, href, Icon, tone }) => {
@@ -52,7 +59,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             );
           })}
         </div>
-        <ContactForm locale={locale} />
+        <ContactForm locale={locale} copy={c} serviceOptions={serviceOptions} initialService={initialService} />
       </section>
       <section className="section contact-benefits-section">
         <div className="contact-benefits">

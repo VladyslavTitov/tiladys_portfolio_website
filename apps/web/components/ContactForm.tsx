@@ -1,40 +1,34 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import { LockKeyhole, Send } from 'lucide-react';
-import { p } from '@/lib/page-copy';
+import type { PageCopy } from '@/lib/page-copy';
 
 type ContactPayload = {
   website: string;
   name: string;
   email: string;
-  phone: string;
   service: string;
   message: string;
   locale: string;
   consent: boolean;
 };
 
-export function ContactForm({ locale }: { locale: string }) {
-  const c = p(locale).contact;
-  const serviceOptions = c.services as readonly string[];
+export function ContactForm({ locale, copy: c, serviceOptions, initialService = '' }: { locale: string; copy: PageCopy['contact']; serviceOptions: string[]; initialService?: string }) {
   const [state, setState] = useState('');
-  const [selectedService, setSelectedService] = useState('');
-
-  useEffect(() => {
-    const requested = new URLSearchParams(window.location.search).get('service');
-    if (requested) setSelectedService(requested.slice(0, 120));
-  }, []);
+  const [submitting, setSubmitting] = useState(false);
+  const [selectedService, setSelectedService] = useState(initialService);
+  const statusRef = useRef<HTMLParagraphElement>(null);
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (submitting) return;
     const form = event.currentTarget;
     const formData = new FormData(form);
     const body: ContactPayload = {
       website: String(formData.get('website') ?? ''),
       name: String(formData.get('name') ?? ''),
       email: String(formData.get('email') ?? ''),
-      phone: '',
       service: String(formData.get('service') ?? ''),
       message: String(formData.get('message') ?? ''),
       locale,
@@ -42,6 +36,7 @@ export function ContactForm({ locale }: { locale: string }) {
     };
 
     setState(c.sending);
+    setSubmitting(true);
     try {
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_CONTROL_API_URL ?? 'http://localhost:3001'}/api/public/contact`,
@@ -49,27 +44,32 @@ export function ContactForm({ locale }: { locale: string }) {
       );
       if (!response.ok) {
         setState(c.error);
+        statusRef.current?.focus();
         return;
       }
       setState(c.success);
       form.reset();
       setSelectedService('');
+      statusRef.current?.focus();
     } catch {
       setState(c.connectionError);
+      statusRef.current?.focus();
+    } finally {
+      setSubmitting(false);
     }
   }
 
   return (
-    <form id="contact-form" className="contact-form contact-form--visual" onSubmit={submit}>
+    <form id="contact-form" className="contact-form contact-form--visual" onSubmit={submit} aria-busy={submitting}>
       <input name="website" className="trap" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <h2>{c.formTitle}</h2>
       <label>
         {c.name}
-        <input name="name" required minLength={2} placeholder={c.namePlaceholder} autoComplete="name" />
+        <input name="name" required minLength={2} maxLength={80} placeholder={c.namePlaceholder} autoComplete="name" />
       </label>
       <label>
         {c.email}
-        <input name="email" type="email" required placeholder={c.emailPlaceholder} autoComplete="email" />
+        <input name="email" type="email" required maxLength={254} placeholder={c.emailPlaceholder} autoComplete="email" />
       </label>
       <label>
         {c.service}
@@ -81,15 +81,15 @@ export function ContactForm({ locale }: { locale: string }) {
       </label>
       <label>
         {c.message}
-        <textarea name="message" required minLength={10} rows={6} placeholder={c.messagePlaceholder} />
+        <textarea name="message" required minLength={10} maxLength={5000} rows={6} placeholder={c.messagePlaceholder} />
       </label>
       <label className="check contact-form__consent">
         <input name="consent" type="checkbox" required />
         <span>{c.consent}</span>
       </label>
-      <button className="primary contact-form__submit" type="submit"><Send aria-hidden="true" size={19} />{c.send}</button>
+      <button className="primary contact-form__submit" type="submit" disabled={submitting}><Send aria-hidden="true" size={19} />{submitting ? c.sending : c.send}</button>
       <div className="contact-form__secure"><LockKeyhole aria-hidden="true" size={16} />{c.secure}</div>
-      <p className="contact-form__state" aria-live="polite">{state}</p>
+      <p ref={statusRef} className="contact-form__state" aria-live="polite" tabIndex={-1}>{state}</p>
     </form>
   );
 }

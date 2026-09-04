@@ -53,10 +53,11 @@ test('shared header and footer remain global public components', () => {
   assert.match(footer, /site-footer__grid/);
 });
 
-test('home page keeps the requested five services and five process steps', () => {
+test('home page keeps three service pillars, a contact handoff and five process steps', () => {
   const content = read('apps/web/lib/i18n.ts');
   const home = read('apps/web/app/[locale]/page.tsx');
-  assert.match(home, /serviceIcons = \[Globe2, Laptop, Store, Headphones, UsersRound\]/);
+  assert.match(home, /<ServiceVisual service=\{serviceById\[service\.id\]\}/);
+  assert.match(home, /service-contact-card/);
   assert.match(home, /processIcons = \[MessageSquareText, Search, ClipboardList, Wrench, ShieldCheck\]/);
   assert.match(content, /processSteps/);
   for (const locale of locales) assert.match(content, new RegExp(`\\b${locale}: \\{`));
@@ -117,6 +118,72 @@ test('price page includes filters, responsive table and per-service Get Help lin
   assert.match(page, /price-table/);
   assert.match(page, /contact\?service=/);
   assert.match(page, /price-help-button/);
+});
+
+test('public services architecture keeps stable ids and explicit price references', () => {
+  const services = read('apps/web/lib/services.ts');
+  const overview = read('apps/web/app/[locale]/services/page.tsx');
+  const detail = read('apps/web/app/[locale]/services/[slug]/page.tsx');
+  assert.match(services, /serviceIds = \[\s*'pc-laptop', 'websites', 'business-it'/);
+  for (const code of ['A02', 'B10', 'E01', 'E05', 'E11', 'D04', 'F01', 'G01', 'H02', 'H06', 'H10', 'I01', 'J01', 'K02']) {
+    assert.match(services, new RegExp(`code: '${code}'`));
+  }
+  assert.match(overview, /getPublicPrices/);
+  assert.match(read('apps/web/lib/public-prices.ts'), /api\/public\/prices/);
+  assert.match(read('apps/web/lib/public-prices.ts'), /revalidate: 60/);
+  assert.match(detail, /ServiceDetail/);
+  assert.doesNotMatch(services, /Math\.min/);
+});
+
+test('removed public service routes redirect and three consolidated service visuals exist', () => {
+  const detail = read('apps/web/app/[locale]/services/[slug]/page.tsx');
+  const services = read('apps/web/lib/services.ts');
+  assert.match(detail, /permanentRedirect/);
+  assert.match(services, /pc-cleaning-upgrades': 'pc-laptop'/);
+  assert.match(services, /security: 'pc-laptop'/);
+  assert.match(services, /training-consulting': 'business-it'/);
+  for (const asset of ['tiladys-service-pc-laptop', 'tiladys-service-website-creation', 'tiladys-service-business-it-digital']) {
+    assert.ok(exists(`apps/web/public/services/${asset}.webp`));
+  }
+});
+
+test('homepage exposes three service pillars and footer only real social channels', () => {
+  const home = read('apps/web/lib/home-services.ts');
+  const footer = read('apps/web/components/Footer.tsx');
+  assert.match(home, /PC & Laptop Services/);
+  assert.match(home, /Website Creation/);
+  assert.match(home, /Business IT & Digital Services/);
+  assert.match(home, /Can't find what you need/);
+  assert.match(footer, /Telegram/);
+  assert.match(footer, /Instagram/);
+  assert.doesNotMatch(footer, /YouTube|TikTok/);
+});
+
+test('public Prices route redirects permanently and navigation uses Services', () => {
+  const prices = read('apps/web/app/[locale]/prices/page.tsx');
+  const header = read('apps/web/components/Header.tsx');
+  const footer = read('apps/web/components/Footer.tsx');
+  assert.match(prices, /permanentRedirect/);
+  assert.match(prices, /services/);
+  assert.match(header, /'services'/);
+  assert.match(footer, /'services'/);
+  assert.doesNotMatch(header, /'prices'/);
+});
+
+test('service contact handoff, localized SEO and sitemap are wired', () => {
+  const contact = read('apps/web/components/ContactForm.tsx');
+  const contactPage = read('apps/web/app/[locale]/contact/page.tsx');
+  const detail = read('apps/web/components/services/ServiceDetail.tsx');
+  const seo = read('apps/web/lib/seo.ts');
+  const sitemap = read('apps/web/app/sitemap.ts');
+  const layout = read('apps/web/app/layout.tsx');
+  assert.match(detail, /contact\?service=\$\{service\.id\}/);
+  assert.match(contactPage, /contactServiceId/);
+  assert.match(contactPage, /serviceCopy/);
+  assert.match(seo, /x-default/);
+  assert.match(seo, /canonical/);
+  assert.match(sitemap, /serviceIds/);
+  assert.match(layout, /html lang=\{lang\}/);
 });
 
 test('admin price editor supports six translation tabs and one bulk save endpoint', () => {
@@ -221,9 +288,7 @@ test('production database migration and seed scripts are documented and availabl
 
 test('reference assets and all redesigned public routes are included', () => {
   for (const file of [
-    'apps/web/public/contact/hero-visual.webp',
-    'apps/web/public/prices/hero-visual.webp',
-    'apps/web/public/portfolio/hero-visual.webp',
+    'apps/web/public/hero/tiladys-hero.webp',
     'apps/web/app/[locale]/contact/page.tsx',
     'apps/web/app/[locale]/prices/page.tsx',
     'apps/web/app/[locale]/portfolio/page.tsx',

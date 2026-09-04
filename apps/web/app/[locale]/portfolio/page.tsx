@@ -4,11 +4,12 @@ import { PortfolioExplorer, type PublicProject } from '@/components/PortfolioExp
 import { Shell } from '@/components/Shell';
 import { api } from '@/lib/api';
 import { p } from '@/lib/page-copy';
+import { localizedMetadata } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const c = p(locale).portfolio;
-  return { title: c.title, description: c.intro };
+  return localizedMetadata({ locale, pathname: 'portfolio', title: c.title, description: c.intro });
 }
 
 export default async function PortfolioPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -21,7 +22,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
 
   return (
     <Shell locale={locale}>
-      <PageHero kicker={c.kicker} title={c.title} accentLead={c.accentLead} accent={c.accent} text={c.intro} image="/hero/tiladys-hero.png" className="portfolio-hero" />
+      <PageHero kicker={c.kicker} title={c.title} accentLead={c.accentLead} accent={c.accent} text={c.intro} className="portfolio-hero" />
       <PortfolioExplorer locale={locale} projects={projects} />
       <ContactCta locale={locale} title={c.ctaTitle} text={c.ctaText} />
     </Shell>

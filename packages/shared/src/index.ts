@@ -50,14 +50,13 @@ const optionalCoverImageSchema = z.preprocess(
 
 export const contactSchema = z.object({
   name: z.string().trim().min(2).max(80),
-  email: z.email().max(160),
-  phone: z.string().trim().max(40).optional().or(z.literal('')),
+  email: z.email().max(254),
   service: z.string().trim().max(120).optional().or(z.literal('')),
   locale: z.enum(locales).default('en'),
-  message: z.string().trim().min(10).max(4000),
+  message: z.string().trim().min(10).max(5000),
   consent: z.literal(true),
-  website: z.string().max(0).optional(),
-});
+  website: z.string().max(200).optional(),
+}).strict();
 
 export const projectPayloadSchema = z.object({
   slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).max(100),

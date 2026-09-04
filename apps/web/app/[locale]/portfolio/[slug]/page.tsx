@@ -7,6 +7,7 @@ import { Shell } from '@/components/Shell';
 import { api } from '@/lib/api';
 import { p } from '@/lib/page-copy';
 import { projectCategoryLabel, projectLinksAvailable } from '@/lib/project-categories';
+import { localizedMetadata } from '@/lib/seo';
 
 type Localized = Record<string, string>;
 type ProjectImage = { id: string; url: string; alt?: Localized | null; sortOrder: number };
@@ -38,9 +39,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const project = await api<ProjectDetail>(`/api/public/projects/${encodeURIComponent(slug)}`, { cache: 'no-store' });
     const title = translated(project.title, locale);
     const description = translated(project.summary, locale);
-    return { title: title || p(locale).project.notFound, description };
+    return localizedMetadata({ locale, pathname: `portfolio/${slug}`, title: title || p(locale).project.notFound, description });
   } catch {
-    return { title: p(locale).project.notFound };
+    return localizedMetadata({ locale, pathname: `portfolio/${slug}`, title: p(locale).project.notFound, description: p(locale).project.notFound });
   }
 }
 

@@ -5,33 +5,33 @@ import {
   Check,
   ClipboardList,
   ExternalLink,
-  Globe2,
   Headphones,
-  Laptop,
   MessageSquareText,
   Search,
   ShieldCheck,
-  Store,
-  UsersRound,
   Wrench,
 } from 'lucide-react';
 import { Shell } from '@/components/Shell';
+import { ServiceVisual } from '@/components/services/ServiceVisual';
 import { t } from '@/lib/i18n';
 import { homePageCopy } from '@/lib/home-page-copy';
+import { homeServices } from '@/lib/home-services';
+import { localizedMetadata } from '@/lib/seo';
+import { serviceById } from '@/lib/services';
 
-const serviceIcons = [Globe2, Laptop, Store, Headphones, UsersRound];
 const processIcons = [MessageSquareText, Search, ClipboardList, Wrench, ShieldCheck];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const c = t(locale);
-  return { title: c.hero, description: c.sub };
+  return localizedMetadata({ locale, title: c.hero, description: c.sub });
 }
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const c = t(locale);
   const extra = homePageCopy(locale);
+  const homeServiceCopy = homeServices(locale);
 
   return (
     <Shell locale={locale}>
@@ -41,7 +41,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           <h1>{c.hero}</h1>
           <p>{c.sub}</p>
           <div className="actions">
-            <Link className="primary" href={`/${locale}/prices`}>
+            <Link className="primary" href={`/${locale}/services`}>
               {extra.viewServices} <ArrowRight aria-hidden="true" />
             </Link>
             <Link className="secondary secondary--light" href={`/${locale}/contact`}>
@@ -54,7 +54,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <span>{extra.trust[2]}</span>
           </div>
         </div>
-        <Image src="/hero/tiladys-hero.png" width={760} height={600} alt={extra.heroAlt} priority />
+        <Image className="hero-visual" src="/hero/tiladys-hero.webp" width={1536} height={1024} sizes="(max-width: 768px) 100vw, 50vw" alt="" aria-hidden="true" priority />
       </section>
 
       <section className="services-section section" aria-labelledby="services-heading">
@@ -67,11 +67,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
 
         <div className="service-cards">
-          {c.home.services.map((service, index) => {
-            const Icon = serviceIcons[index];
+          {homeServiceCopy.services.map((service) => {
             return (
               <article className="service-card" key={service.title}>
-                <div className="service-card__icon"><Icon aria-hidden="true" /></div>
+                <ServiceVisual service={serviceById[service.id]} title={service.title} compact />
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <ul>
@@ -79,12 +78,18 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                     <li key={item}><Check aria-hidden="true" size={16} />{item}</li>
                   ))}
                 </ul>
+                <Link className="service-card__link" href={`/${locale}/services/${service.id}`}>{service.cta}<ArrowRight aria-hidden="true" size={17} /></Link>
               </article>
             );
           })}
         </div>
 
-        <Link className="primary services-section__button" href={`/${locale}/prices`}>
+        <aside className="service-contact-card">
+          <div><h3>{homeServiceCopy.contact.title}</h3><p>{homeServiceCopy.contact.text}</p></div>
+          <Link className="primary" href={`/${locale}/contact`}>{homeServiceCopy.contact.cta}<ArrowRight aria-hidden="true" size={18} /></Link>
+        </aside>
+
+        <Link className="primary services-section__button" href={`/${locale}/services`}>
           {c.home.servicesButton} <ArrowRight aria-hidden="true" size={18} />
         </Link>
       </section>

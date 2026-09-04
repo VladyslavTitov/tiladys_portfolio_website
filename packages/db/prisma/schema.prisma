@@ -9,7 +9,7 @@ datasource db {
 }
 
 enum MessageStatus {
-  NEW
+  UNREAD
   READ
   REPLIED
   ARCHIVED
@@ -128,7 +128,7 @@ model ContactMessage {
   service   String?
   locale    String        @default("en")
   message   String
-  status    MessageStatus @default(NEW)
+  status    MessageStatus @default(UNREAD)
   replyText String?
   repliedAt DateTime?
   consent   Boolean       @default(false)

@@ -44,7 +44,7 @@ export type SiteCopy = {
 
 export const copy: Record<Locale, SiteCopy> = {
   en: {
-    nav: ['Home', 'Portfolio', 'About', 'Prices', 'Contact'],
+    nav: ['Home', 'Services', 'Portfolio', 'About', 'Contact'],
     hero: 'Simple IT help and websites for home users and small businesses.',
     sub: 'Websites, PC & laptop setup, cleaning, upgrades, Google Business and everyday digital support — clear, reliable and practical.',
     services: 'Services that make IT simple.',
@@ -59,7 +59,7 @@ export const copy: Record<Locale, SiteCopy> = {
       servicesTitle: 'Services that make IT',
       servicesAccent: 'simple.',
       servicesIntro: 'Everything you need — in one place.',
-      servicesButton: 'See All Services + Prices',
+      servicesButton: 'See All Services',
       services: [
         { title: 'Websites', description: 'Modern, fast and mobile-friendly websites that bring results.', items: ['One-page & multi-page', 'Hosting & domain', 'SSL security', 'Updates & support'] },
         { title: 'PC & Laptop Help', description: 'Setup, cleaning, upgrades and troubleshooting — for home and office.', items: ['System setup', 'Cleaning & optimization', 'Upgrades', 'Problem solving'] },
@@ -85,7 +85,7 @@ export const copy: Record<Locale, SiteCopy> = {
       tagline: 'Practical IT and web solutions for home users and small businesses in NRW.',
       contactTitle: 'Contact',
       linksTitle: 'Links',
-      socialTitle: 'Follow / Social',
+      socialTitle: 'Connect',
       legalTitle: 'Legal',
       terms: 'Terms of Use',
       privacy: 'Privacy Policy',
@@ -95,7 +95,7 @@ export const copy: Record<Locale, SiteCopy> = {
     }
   },
   de: {
-    nav: ['Start', 'Portfolio', 'Über mich', 'Preise', 'Kontakt'],
+    nav: ['Start', 'Services', 'Portfolio', 'Über mich', 'Kontakt'],
     hero: 'Einfache IT-Hilfe und Websites für Privatkunden und kleine Unternehmen.',
     sub: 'Websites, PC- und Laptop-Einrichtung, Reinigung, Upgrades, Google Business und digitale Unterstützung in NRW.',
     services: 'IT-Services, einfach erklärt.',
@@ -110,7 +110,7 @@ export const copy: Record<Locale, SiteCopy> = {
       servicesTitle: 'Services, die IT',
       servicesAccent: 'einfach machen.',
       servicesIntro: 'Alles, was Sie brauchen — an einem Ort.',
-      servicesButton: 'Alle Services + Preise',
+      servicesButton: 'Alle Services ansehen',
       services: [
         { title: 'Websites', description: 'Moderne, schnelle und mobilfreundliche Websites mit klarem Nutzen.', items: ['One-Page & mehrseitig', 'Hosting & Domain', 'SSL-Sicherheit', 'Updates & Support'] },
         { title: 'PC- & Laptop-Hilfe', description: 'Einrichtung, Reinigung, Upgrades und Fehlerbehebung für Zuhause und Büro.', items: ['Systemeinrichtung', 'Reinigung & Optimierung', 'Upgrades', 'Problemlösung'] },
@@ -134,13 +134,13 @@ export const copy: Record<Locale, SiteCopy> = {
     },
     footer: {
       tagline: 'Praktische IT- und Weblösungen für Privatkunden und kleine Unternehmen in NRW.',
-      contactTitle: 'Kontakt', linksTitle: 'Links', socialTitle: 'Folgen / Social', legalTitle: 'Rechtliches',
+      contactTitle: 'Kontakt', linksTitle: 'Links', socialTitle: 'Vernetzen', legalTitle: 'Rechtliches',
       terms: 'Nutzungsbedingungen', privacy: 'Datenschutz', impressum: 'Impressum',
       copyright: 'TiLADYS — IT Services & Webdesign. Alle Rechte vorbehalten.', location: 'NRW, Deutschland'
     }
   },
   uk: {
-    nav: ['Головна', 'Портфоліо', 'Про мене', 'Ціни', 'Контакти'],
+    nav: ['Головна', 'Послуги', 'Портфоліо', 'Про мене', 'Контакти'],
     hero: 'Проста IT-допомога та сайти для приватних клієнтів і малого бізнесу.',
     sub: 'Сайти, налаштування ПК і ноутбуків, чистка, модернізація, Google Business та цифрова підтримка.',
     services: 'Послуги, що роблять IT простішим.',
@@ -148,7 +148,7 @@ export const copy: Record<Locale, SiteCopy> = {
     prices: 'Ціни та послуги', contact: 'Контакти', about: 'Про мене та кваліфікації', send: 'Надіслати',
     header: { getHelp: 'Отримати допомогу', language: 'Мова', navigation: 'Головна навігація', openMenu: 'Відкрити меню', closeMenu: 'Закрити меню' },
     home: {
-      servicesKicker: 'ЧИМ Я МОЖУ ДОПОМОГТИ?', servicesTitle: 'Послуги, що роблять IT', servicesAccent: 'простішим.', servicesIntro: 'Усе необхідне — в одному місці.', servicesButton: 'Усі послуги + ціни',
+      servicesKicker: 'ЧИМ Я МОЖУ ДОПОМОГТИ?', servicesTitle: 'Послуги, що роблять IT', servicesAccent: 'простішим.', servicesIntro: 'Усе необхідне — в одному місці.', servicesButton: 'Переглянути всі послуги',
       services: [
         { title: 'Сайти', description: 'Сучасні, швидкі й адаптивні сайти, які допомагають бізнесу.', items: ['Односторінкові й багатосторінкові', 'Хостинг і домен', 'SSL-безпека', 'Оновлення та підтримка'] },
         { title: 'Допомога з ПК і ноутбуками', description: 'Налаштування, чистка, модернізація та усунення проблем.', items: ['Налаштування системи', 'Чистка й оптимізація', 'Модернізація', 'Вирішення проблем'] },
@@ -166,16 +166,16 @@ export const copy: Record<Locale, SiteCopy> = {
       ],
       ctaTitle: 'Потрібна допомога з IT або сайтом?', ctaText: 'Опишіть завдання, і ми запропонуємо просте рішення.', ctaPrimary: 'Зв’язатися', ctaSecondary: 'Відкрити контактну форму'
     },
-    footer: { tagline: 'Практичні IT- та вебрішення для домашніх користувачів і малого бізнесу в NRW.', contactTitle: 'Контакти', linksTitle: 'Посилання', socialTitle: 'Соціальні мережі', legalTitle: 'Правова інформація', terms: 'Умови використання', privacy: 'Політика конфіденційності', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Усі права захищені.', location: 'NRW, Німеччина' }
+    footer: { tagline: 'Практичні IT- та вебрішення для домашніх користувачів і малого бізнесу в NRW.', contactTitle: 'Контакти', linksTitle: 'Посилання', socialTitle: 'Зв’язок', legalTitle: 'Правова інформація', terms: 'Умови використання', privacy: 'Політика конфіденційності', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Усі права захищені.', location: 'NRW, Німеччина' }
   },
   ru: {
-    nav: ['Главная', 'Портфолио', 'Обо мне', 'Цены', 'Контакты'],
+    nav: ['Главная', 'Услуги', 'Портфолио', 'Обо мне', 'Контакты'],
     hero: 'Простая IT-помощь и сайты для частных клиентов и малого бизнеса.',
     sub: 'Сайты, настройка ПК и ноутбуков, чистка, апгрейды, Google Business и цифровая поддержка.',
     services: 'Услуги, которые делают IT проще.', projects: 'Недавние проекты.', prices: 'Цены и услуги', contact: 'Контакты', about: 'Обо мне и квалификации', send: 'Отправить',
     header: { getHelp: 'Получить помощь', language: 'Язык', navigation: 'Основная навигация', openMenu: 'Открыть меню', closeMenu: 'Закрыть меню' },
     home: {
-      servicesKicker: 'ЧЕМ Я МОГУ ПОМОЧЬ?', servicesTitle: 'Услуги, которые делают IT', servicesAccent: 'проще.', servicesIntro: 'Всё необходимое — в одном месте.', servicesButton: 'Все услуги + цены',
+      servicesKicker: 'ЧЕМ Я МОГУ ПОМОЧЬ?', servicesTitle: 'Услуги, которые делают IT', servicesAccent: 'проще.', servicesIntro: 'Всё необходимое — в одном месте.', servicesButton: 'Посмотреть все услуги',
       services: [
         { title: 'Сайты', description: 'Современные, быстрые и адаптивные сайты, которые помогают бизнесу.', items: ['Одностраничные и многостраничные', 'Хостинг и домен', 'SSL-безопасность', 'Обновления и поддержка'] },
         { title: 'Помощь с ПК и ноутбуками', description: 'Настройка, чистка, модернизация и устранение проблем.', items: ['Настройка системы', 'Чистка и оптимизация', 'Апгрейды', 'Решение проблем'] },
@@ -193,16 +193,16 @@ export const copy: Record<Locale, SiteCopy> = {
       ],
       ctaTitle: 'Нужна помощь с IT или сайтом?', ctaText: 'Опишите задачу, и мы предложим простое решение.', ctaPrimary: 'Связаться', ctaSecondary: 'Открыть контактную форму'
     },
-    footer: { tagline: 'Практичные IT- и веб-решения для домашних пользователей и малого бизнеса в NRW.', contactTitle: 'Контакты', linksTitle: 'Ссылки', socialTitle: 'Социальные сети', legalTitle: 'Правовая информация', terms: 'Условия использования', privacy: 'Политика конфиденциальности', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Все права защищены.', location: 'NRW, Германия' }
+    footer: { tagline: 'Практичные IT- и веб-решения для домашних пользователей и малого бизнеса в NRW.', contactTitle: 'Контакты', linksTitle: 'Ссылки', socialTitle: 'Связь', legalTitle: 'Правовая информация', terms: 'Условия использования', privacy: 'Политика конфиденциальности', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Все права защищены.', location: 'NRW, Германия' }
   },
   sk: {
-    nav: ['Domov', 'Portfólio', 'O mne', 'Ceny', 'Kontakt'],
+    nav: ['Domov', 'Služby', 'Portfólio', 'O mne', 'Kontakt'],
     hero: 'Jednoduchá IT pomoc a webstránky pre domácnosti a malé firmy.',
     sub: 'Webstránky, nastavenie PC a notebookov, čistenie, vylepšenia, Google Business a digitálna podpora.',
     services: 'Služby, ktoré zjednodušujú IT.', projects: 'Výber posledných projektov.', prices: 'Ceny a služby', contact: 'Kontakt', about: 'O mne a kvalifikácie', send: 'Odoslať',
     header: { getHelp: 'Získať pomoc', language: 'Jazyk', navigation: 'Hlavná navigácia', openMenu: 'Otvoriť menu', closeMenu: 'Zavrieť menu' },
     home: {
-      servicesKicker: 'AKO MÔŽEM POMÔCŤ?', servicesTitle: 'Služby, ktoré robia IT', servicesAccent: 'jednoduchším.', servicesIntro: 'Všetko, čo potrebujete — na jednom mieste.', servicesButton: 'Všetky služby + ceny',
+      servicesKicker: 'AKO MÔŽEM POMÔCŤ?', servicesTitle: 'Služby, ktoré robia IT', servicesAccent: 'jednoduchším.', servicesIntro: 'Všetko, čo potrebujete — na jednom mieste.', servicesButton: 'Pozrieť všetky služby',
       services: [
         { title: 'Webstránky', description: 'Moderné, rýchle a responzívne webstránky, ktoré prinášajú výsledky.', items: ['Jednostránkové a viacstránkové', 'Hosting a doména', 'SSL bezpečnosť', 'Aktualizácie a podpora'] },
         { title: 'Pomoc s PC a notebookmi', description: 'Nastavenie, čistenie, vylepšenia a riešenie problémov.', items: ['Nastavenie systému', 'Čistenie a optimalizácia', 'Vylepšenia', 'Riešenie problémov'] },
@@ -220,16 +220,16 @@ export const copy: Record<Locale, SiteCopy> = {
       ],
       ctaTitle: 'Potrebujete pomoc s IT alebo webstránkou?', ctaText: 'Opíšte úlohu a navrhneme jednoduché riešenie.', ctaPrimary: 'Kontaktovať', ctaSecondary: 'Otvoriť kontaktný formulár'
     },
-    footer: { tagline: 'Praktické IT a webové riešenia pre domácnosti a malé firmy v NRW.', contactTitle: 'Kontakt', linksTitle: 'Odkazy', socialTitle: 'Sociálne siete', legalTitle: 'Právne informácie', terms: 'Podmienky používania', privacy: 'Ochrana súkromia', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Všetky práva vyhradené.', location: 'NRW, Nemecko' }
+    footer: { tagline: 'Praktické IT a webové riešenia pre domácnosti a malé firmy v NRW.', contactTitle: 'Kontakt', linksTitle: 'Odkazy', socialTitle: 'Spojenie', legalTitle: 'Právne informácie', terms: 'Podmienky používania', privacy: 'Ochrana súkromia', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Všetky práva vyhradené.', location: 'NRW, Nemecko' }
   },
   fr: {
-    nav: ['Accueil', 'Portfolio', 'À propos', 'Tarifs', 'Contact'],
+    nav: ['Accueil', 'Services', 'Portfolio', 'À propos', 'Contact'],
     hero: 'Aide informatique simple et sites web pour particuliers et petites entreprises.',
     sub: 'Sites web, configuration PC, nettoyage, mises à niveau, Google Business et assistance numérique.',
     services: 'Des services qui simplifient l’informatique.', projects: 'Une sélection de projets récents.', prices: 'Tarifs et services', contact: 'Contact', about: 'À propos et qualifications', send: 'Envoyer',
     header: { getHelp: 'Obtenir de l’aide', language: 'Langue', navigation: 'Navigation principale', openMenu: 'Ouvrir le menu', closeMenu: 'Fermer le menu' },
     home: {
-      servicesKicker: 'COMMENT PUIS-JE AIDER ?', servicesTitle: 'Des services qui rendent l’informatique', servicesAccent: 'simple.', servicesIntro: 'Tout ce dont vous avez besoin — au même endroit.', servicesButton: 'Tous les services + tarifs',
+      servicesKicker: 'COMMENT PUIS-JE AIDER ?', servicesTitle: 'Des services qui rendent l’informatique', servicesAccent: 'simple.', servicesIntro: 'Tout ce dont vous avez besoin — au même endroit.', servicesButton: 'Voir tous les services',
       services: [
         { title: 'Sites web', description: 'Des sites modernes, rapides et adaptés aux mobiles qui produisent des résultats.', items: ['One-page et multipage', 'Hébergement et domaine', 'Sécurité SSL', 'Mises à jour et assistance'] },
         { title: 'Aide PC et ordinateur portable', description: 'Configuration, nettoyage, mises à niveau et dépannage.', items: ['Configuration du système', 'Nettoyage et optimisation', 'Mises à niveau', 'Résolution de problèmes'] },
@@ -247,7 +247,7 @@ export const copy: Record<Locale, SiteCopy> = {
       ],
       ctaTitle: 'Besoin d’aide pour l’informatique ou votre site web ?', ctaText: 'Décrivez votre besoin et nous proposerons une solution simple.', ctaPrimary: 'Me contacter', ctaSecondary: 'Ouvrir le formulaire'
     },
-    footer: { tagline: 'Solutions informatiques et web pratiques pour les particuliers et petites entreprises en NRW.', contactTitle: 'Contact', linksTitle: 'Liens', socialTitle: 'Réseaux sociaux', legalTitle: 'Mentions légales', terms: 'Conditions d’utilisation', privacy: 'Politique de confidentialité', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Tous droits réservés.', location: 'NRW, Allemagne' }
+    footer: { tagline: 'Solutions informatiques et web pratiques pour les particuliers et petites entreprises en NRW.', contactTitle: 'Contact', linksTitle: 'Liens', socialTitle: 'Nous suivre', legalTitle: 'Mentions légales', terms: 'Conditions d’utilisation', privacy: 'Politique de confidentialité', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Tous droits réservés.', location: 'NRW, Allemagne' }
   }
 };
 

@@ -1,30 +1,11 @@
-import { ContactCta } from '@/components/ContactCta';
-import { PageHero } from '@/components/PageHero';
-import { PriceExplorer, type PriceSection } from '@/components/PriceExplorer';
-import { Shell } from '@/components/Shell';
-import { api } from '@/lib/api';
-import { p } from '@/lib/page-copy';
-import fallback from '../../../../../packages/db/prisma/price-data.json';
+import { permanentRedirect } from 'next/navigation';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export default async function PricesPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const { locale } = await params;
-  const c = p(locale).prices;
-  return { title: c.heroTitle, description: c.heroText };
-}
-
-export default async function PricesPage({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  const c = p(locale).prices;
-  let sections: PriceSection[] = fallback as PriceSection[];
-  try {
-    sections = await api<PriceSection[]>('/api/public/prices', { cache: 'no-store' });
-  } catch {}
-
-  return (
-    <Shell locale={locale}>
-      <PageHero title={c.heroTitle} accent={c.heroAccent} text={c.heroText} image="/hero/tiladys-hero.png" className="prices-hero" />
-      <PriceExplorer locale={locale} sections={sections} />
-      <ContactCta locale={locale} title={c.ctaTitle} text={c.ctaText} />
-    </Shell>
-  );
+  const query = new URLSearchParams();
+  for (const [key, value] of Object.entries(await searchParams)) {
+    if (Array.isArray(value)) value.forEach((item) => query.append(key, item));
+    else if (value !== undefined) query.set(key, value);
+  }
+  permanentRedirect(`/${locale}/services${query.size ? `?${query}` : ''}`);
 }

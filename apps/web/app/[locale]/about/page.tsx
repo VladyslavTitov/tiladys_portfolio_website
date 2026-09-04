@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { Shell } from '@/components/Shell';
 import aboutContent from '@/content/about.json';
+import { localizedMetadata } from '@/lib/seo';
 
 const iconMap = {
   globe: Globe2,
@@ -46,7 +47,7 @@ type AboutLocaleContent = (typeof aboutContent)['en'];
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const data = ((aboutContent as Record<string, AboutLocaleContent>)[locale] ?? aboutContent.en) as AboutLocaleContent;
-  return { title: data.hero.title, description: data.hero.subtitle };
+  return localizedMetadata({ locale, pathname: 'about', title: data.hero.title, description: data.hero.subtitle });
 }
 
 function ListCard({ title, items, Icon }: { title: string; items: string[]; Icon: typeof UserRound }) {
@@ -77,8 +78,8 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <h1>{data.hero.title}</h1>
             <p>{data.hero.subtitle}</p>
           </div>
-          <div className="about-hero__visual">
-            <Image src="/hero/tiladys-hero.png" width={856} height={512} alt="TiLADYS laptop workspace" priority />
+          <div className="about-hero__visual hero-visual">
+            <Image src="/hero/tiladys-hero.webp" width={1536} height={1024} sizes="(max-width: 768px) 100vw, 50vw" alt="" aria-hidden="true" priority />
           </div>
         </div>
       </section>
