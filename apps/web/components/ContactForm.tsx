@@ -14,8 +14,11 @@ type ContactPayload = {
   consent: boolean;
 };
 
-export function ContactForm({ locale, copy: c, serviceOptions, initialService = '' }: { locale: string; copy: PageCopy['contact']; serviceOptions: string[]; initialService?: string }) {
+type ServiceOption = { value: string; label: string };
+
+export function ContactForm({ locale, copy: c, serviceOptions, initialService = '' }: { locale: string; copy: PageCopy['contact']; serviceOptions: ServiceOption[]; initialService?: string }) {
   const [state, setState] = useState('');
+  const [resultKind, setResultKind] = useState<'idle' | 'submitting' | 'success' | 'validation' | 'security' | 'rate-limit' | 'server' | 'network'>('idle');
   const [submitting, setSubmitting] = useState(false);
   const [selectedService, setSelectedService] = useState(initialService);
   const statusRef = useRef<HTMLParagraphElement>(null);
@@ -36,23 +39,28 @@ export function ContactForm({ locale, copy: c, serviceOptions, initialService = 
     };
 
     setState(c.sending);
+    setResultKind('submitting');
     setSubmitting(true);
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_CONTROL_API_URL ?? 'http://localhost:3001'}/api/public/contact`,
-        { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) },
-      );
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
       if (!response.ok) {
+        setResultKind(response.status === 400 ? 'validation' : response.status === 403 ? 'security' : response.status === 429 ? 'rate-limit' : 'server');
         setState(c.error);
         statusRef.current?.focus();
         return;
       }
       setState(c.success);
+      setResultKind('success');
       form.reset();
       setSelectedService('');
       statusRef.current?.focus();
     } catch {
       setState(c.connectionError);
+      setResultKind('network');
       statusRef.current?.focus();
     } finally {
       setSubmitting(false);
@@ -75,8 +83,7 @@ export function ContactForm({ locale, copy: c, serviceOptions, initialService = 
         {c.service}
         <select name="service" value={selectedService} onChange={(event) => setSelectedService(event.target.value)}>
           <option value="">{c.servicePlaceholder}</option>
-          {serviceOptions.map((service) => <option key={service} value={service}>{service}</option>)}
-          {selectedService && !serviceOptions.includes(selectedService) ? <option value={selectedService}>{selectedService}</option> : null}
+          {serviceOptions.map((service) => <option key={service.value} value={service.value}>{service.label}</option>)}
         </select>
       </label>
       <label>
@@ -89,7 +96,7 @@ export function ContactForm({ locale, copy: c, serviceOptions, initialService = 
       </label>
       <button className="primary contact-form__submit" type="submit" disabled={submitting}><Send aria-hidden="true" size={19} />{submitting ? c.sending : c.send}</button>
       <div className="contact-form__secure"><LockKeyhole aria-hidden="true" size={16} />{c.secure}</div>
-      <p ref={statusRef} className="contact-form__state" aria-live="polite" tabIndex={-1}>{state}</p>
+      <p ref={statusRef} className="contact-form__state" aria-live="polite" tabIndex={-1} data-result={resultKind}>{state}</p>
     </form>
   );
 }

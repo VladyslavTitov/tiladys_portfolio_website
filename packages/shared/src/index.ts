@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 export const locales = ['en', 'de', 'uk', 'ru', 'sk', 'fr'] as const;
 export type Locale = (typeof locales)[number];
+export const contactServiceIds = ['pc-laptop', 'websites', 'business-it'] as const;
 
 export const localizedOptionalTextSchema = z.record(z.string(), z.string().max(10_000));
 
@@ -51,7 +52,7 @@ const optionalCoverImageSchema = z.preprocess(
 export const contactSchema = z.object({
   name: z.string().trim().min(2).max(80),
   email: z.email().max(254),
-  service: z.string().trim().max(120).optional().or(z.literal('')),
+  service: z.enum(contactServiceIds).optional().or(z.literal('')),
   locale: z.enum(locales).default('en'),
   message: z.string().trim().min(10).max(5000),
   consent: z.literal(true),

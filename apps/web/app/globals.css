@@ -2064,10 +2064,15 @@ td:nth-child(3) {
   font-size: 20px;
 }
 
+.contact-channel__copy {
+  min-width: 0;
+}
+
 .contact-channel__copy p {
   margin: 0;
   color: #50627a;
   font-size: 16px;
+  white-space: pre-line;
 }
 
 .contact-channel__action {

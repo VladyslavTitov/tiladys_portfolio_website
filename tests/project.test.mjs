@@ -66,14 +66,14 @@ test('home page keeps three service pillars, a contact handoff and five process 
 test('contact redesign and existing message API integration are present', () => {
   const page = read('apps/web/app/[locale]/contact/page.tsx');
   const form = read('apps/web/components/ContactForm.tsx');
-  const route = read('apps/control/app/api/public/contact/route.ts');
+  const route = read('apps/web/app/api/contact/route.ts');
   assert.match(page, /contact-page-grid/);
   assert.match(page, /contact-channel-list/);
   assert.match(page, /contact-benefits/);
-  assert.match(form, /NEXT_PUBLIC_CONTROL_API_URL/);
+  assert.match(form, /fetch\('\/api\/contact'/);
   assert.match(form, /contact-form--visual/);
   assert.match(route, /contactSchema/);
-  assert.match(route, /Access-Control-Allow-Origin/);
+  assert.match(route, /https:\/\/tiladys\.com/);
 });
 
 test('price catalog has exactly 12 sections and 145 services', () => {

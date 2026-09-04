@@ -24,6 +24,7 @@ const contentSecurityPolicy = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  transpilePackages: ["@tiladys/db", "@tiladys/shared"],
 
   images: {
     remotePatterns: [],

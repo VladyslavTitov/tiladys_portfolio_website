@@ -3,12 +3,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
+    "prebuild": "npm --prefix ../.. run db:generate",
     "build": "next build --webpack",
     "start": "next start -p 3000",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@tiladys/db": "*",
     "@tiladys/shared": "*",
     "lucide-react": "^0.536.0",
     "next": "16.2.11",

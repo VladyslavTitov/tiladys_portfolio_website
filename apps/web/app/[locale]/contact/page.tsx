@@ -28,17 +28,16 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
   const requested = (await searchParams).service;
   const requestedService = (Array.isArray(requested) ? requested[0] : requested)?.slice(0, 120) ?? '';
   const c = p(locale).contact;
-  const serviceOptions = serviceDefinitions.map((service) => serviceCopy(service.id, locale).title);
+  const serviceOptions = serviceDefinitions.map((service) => ({ value: service.id, label: serviceCopy(service.id, locale).title }));
   const requestedServiceId = contactServiceId(requestedService);
-  const initialService = requestedServiceId ? serviceCopy(requestedServiceId, locale).title : requestedService;
-  const locationLabel: Record<string, string> = { en: 'NRW, Germany', de: 'NRW, Deutschland', uk: 'NRW, Німеччина', ru: 'NRW, Германия', sk: 'NRW, Nemecko', fr: 'NRW, Allemagne' };
+  const initialService = requestedServiceId ?? '';
   const contacts = [
     { key: 'email', value: 'mail@tiladys.com', href: 'mailto:mail@tiladys.com', Icon: Mail, tone: 'blue' },
     { key: 'phone', value: '+49 163 7235608', href: 'tel:+491637235608', Icon: Phone, tone: 'blue' },
     { key: 'whatsapp', value: '+49 163 7235608', href: 'https://wa.me/491637235608', Icon: MessageCircleMore, tone: 'green' },
     { key: 'telegram', value: 't.me/tiladys_support', href: 'https://t.me/tiladys_support', Icon: Send, tone: 'sky' },
     { key: 'instagram', value: '@tiladys.de', href: 'https://www.instagram.com/tiladys.de', Icon: Instagram, tone: 'pink' },
-    { key: 'location', value: locationLabel[locale] ?? locationLabel.en, href: 'https://www.google.com/maps/search/?api=1&query=NRW%2C%20Deutschland', Icon: MapPin, tone: 'blue' },
+    { key: 'location', value: 'Kronenstraße 19\n45479 Mülheim an der Ruhr', href: 'https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6', Icon: MapPin, tone: 'blue' },
   ] as const;
 
   return (
@@ -52,7 +51,7 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
               <article className="contact-channel" key={key}>
                 <span className={`contact-channel__icon contact-channel__icon--${tone}`}><Icon aria-hidden="true" /></span>
                 <div className="contact-channel__copy"><h2>{labels}</h2><p>{value}</p></div>
-                <Link className={`contact-channel__action contact-channel__action--${tone}`} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noreferrer' : undefined}>
+                <Link className={`contact-channel__action contact-channel__action--${tone}`} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}>
                   <Icon aria-hidden="true" size={17} />{c.cards[`${key}Action` as keyof typeof c.cards]}
                 </Link>
               </article>
