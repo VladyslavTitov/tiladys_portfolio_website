@@ -1,5 +1,5 @@
 import './globals.css';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { headers } from 'next/headers';
 import { locales } from '@tiladys/shared';
 
@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: { default: 'TiLADYS — IT Services & Webdesign', template: '%s | TiLADYS' },
   description: 'Practical IT support, websites, PC services and digital solutions in NRW, Germany.',
   openGraph: { type: 'website', siteName: 'TiLADYS' },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
