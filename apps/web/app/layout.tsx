@@ -6,7 +6,7 @@ import { locales } from '@tiladys/shared';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tiladys.com'),
   title: { default: 'TiLADYS — IT Services & Webdesign', template: '%s | TiLADYS' },
-  description: 'Practical IT support, websites, PC services and digital solutions in NRW, Germany.',
+  description: 'Practical IT support, websites, PC services and digital solutions in Mülheim an der Ruhr, NRW, Germany.',
   openGraph: { type: 'website', siteName: 'TiLADYS' },
 };
 

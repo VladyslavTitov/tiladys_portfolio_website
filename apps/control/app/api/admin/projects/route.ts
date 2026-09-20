@@ -26,7 +26,7 @@ function projectError(error: unknown) {
     return NextResponse.json({ error: message, details }, { status: 400 });
   }
 
-  console.error('[PROJECT_CREATE_FAILED]', error);
+  console.error('[PROJECT_CREATE_FAILED]');
   return NextResponse.json({ error: 'PROJECT_CREATE_FAILED' }, { status: 500 });
 }
 

@@ -29,7 +29,7 @@ export type ServiceDefinition = {
 const label = (en: string, de: string, uk: string, ru: string, sk: string, fr: string): Record<Locale, string> => ({ en, de, uk, ru, sk, fr });
 
 export const serviceDefinitions: ServiceDefinition[] = [
-  { id: 'pc-laptop', image: '/services/tiladys-service-pc-laptop.webp', priceRefs: [
+  { id: 'pc-laptop', image: '/services/tiladys-service-pc-laptop.webp?v=20260920', priceRefs: [
     { code: 'B10', label: label('Software installation', 'Softwareinstallation', 'Встановлення програм', 'Установка программ', 'Inštalácia softvéru', 'Installation de logiciel') },
     { code: 'A02', label: label('Basic diagnostics', 'Basisdiagnose', 'Базова діагностика', 'Базовая диагностика', 'Základná diagnostika', 'Diagnostic de base') },
     { code: 'E01', label: label('Desktop cleaning', 'Desktop-PC-Reinigung', 'Чищення настільного ПК', 'Чистка настольного ПК', 'Čistenie stolného PC', 'Nettoyage PC fixe') },
@@ -37,12 +37,12 @@ export const serviceDefinitions: ServiceDefinition[] = [
     { code: 'E11', label: label('Office PC assembly', 'Office-PC-Zusammenbau', 'Складання офісного ПК', 'Сборка офисного ПК', 'Zostavenie kancelárskeho PC', 'Assemblage PC bureautique') },
     { code: 'D04', label: label('Local backup setup', 'Lokale Backup-Einrichtung', 'Налаштування локальної копії', 'Настройка локальной копии', 'Nastavenie lokálnej zálohy', 'Configuration de sauvegarde locale') },
   ], related: ['websites', 'business-it'] },
-  { id: 'websites', image: '/services/tiladys-service-website-creation.webp', priceRefs: [
+  { id: 'websites', image: '/services/tiladys-service-website-creation.webp?v=20260920', priceRefs: [
     { code: 'H02', label: label('Subscription website', 'Website im Abonnement', 'Сайт за підпискою', 'Сайт по подписке', 'Web na predplatné', 'Site web par abonnement') },
     { code: 'H06', label: label('One-page website ownership', 'Onepage-Website zum Kauf', 'Односторінковий сайт у власність', 'Одностраничный сайт в собственность', 'Jednostránkový web do vlastníctva', 'Site one-page en pleine propriété') },
     { code: 'H10', label: label('Landing page', 'Landingpage', 'Лендінг', 'Лендинг', 'Landing page', 'Page d’atterrissage') },
   ], related: ['pc-laptop', 'business-it'] },
-  { id: 'business-it', image: '/services/tiladys-service-business-it-digital.webp', priceRefs: [
+  { id: 'business-it', image: '/services/tiladys-service-business-it-digital.webp?v=20260920', priceRefs: [
     { code: 'G01', label: label('Business IT setup', 'Business-IT-Einrichtung', 'Налаштування IT для бізнесу', 'Настройка IT для бизнеса', 'Nastavenie firemného IT', 'Configuration IT professionnelle') },
     { code: 'F01', label: label('Network setup', 'Netzwerk-Einrichtung', 'Налаштування мережі', 'Настройка сети', 'Nastavenie siete', 'Configuration réseau') },
     { code: 'I01', label: label('Google Business', 'Google Business', 'Google Business', 'Google Business', 'Google Business', 'Google Business') },

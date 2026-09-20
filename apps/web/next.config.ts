@@ -28,6 +28,11 @@ const nextConfig: NextConfig = {
 
   images: {
     remotePatterns: [],
+    localPatterns: [
+      { pathname: '/**', search: '' },
+      { pathname: '/hero/tiladys-hero.webp', search: '?v=20260920' },
+      { pathname: '/services/tiladys-service-*.webp', search: '?v=20260920' },
+    ],
   },
 
   async headers() {

@@ -11,7 +11,7 @@ export default async function ProjectsPage() {
     projectDate: project.projectDate?.toISOString() ?? null,
     createdAt: project.createdAt.toISOString(),
     updatedAt: project.updatedAt.toISOString(),
-    images: project.images.map((image) => ({ ...image, url: `/api/public/media/${image.id}` })),
+    images: project.images.map((image) => ({ ...image, url: `/api/admin/projects/${project.id}/images/${image.id}` })),
   }));
 
   return (

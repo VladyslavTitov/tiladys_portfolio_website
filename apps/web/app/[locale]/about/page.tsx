@@ -1,183 +1,30 @@
 import Image from 'next/image';
-import {
-  Award,
-  Boxes,
-  BriefcaseBusiness,
-  CheckCircle2,
-  Code2,
-  FileText,
-  Globe2,
-  GraduationCap,
-  Lightbulb,
-  Laptop,
-  MessageCircle,
-  MessageSquareText,
-  MonitorCog,
-  Network,
-  Server,
-  Settings,
-  Store,
-  UserRound,
-  Wrench,
-} from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, Laptop, Globe2, Network } from 'lucide-react';
 import { Shell } from '@/components/Shell';
-import aboutContent from '@/content/about.json';
+import content from '@/content/about.json';
 import { localizedMetadata } from '@/lib/seo';
 
-const iconMap = {
-  globe: Globe2,
-  laptop: Laptop,
-  message: MessageSquareText,
-  server: Server,
-  tools: Wrench,
-  store: Store,
-  code: Code2,
-  wordpress: MonitorCog,
-  linux: Settings,
-  docker: Boxes,
-  network: Network,
-  document: FileText,
-  chat: MessageCircle,
-  user: UserRound,
-  idea: Lightbulb,
-} as const;
-
-type AboutLocaleContent = (typeof aboutContent)['en'];
-
+const copy = (locale: string) => content[locale as keyof typeof content] ?? content.en;
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const data = ((aboutContent as Record<string, AboutLocaleContent>)[locale] ?? aboutContent.en) as AboutLocaleContent;
+  const data = copy(locale);
   return localizedMetadata({ locale, pathname: 'about', title: data.hero.title, description: data.hero.subtitle });
 }
-
-function ListCard({ title, items, Icon }: { title: string; items: string[]; Icon: typeof UserRound }) {
-  return (
-    <article className="about-card about-card--compact">
-      <div className="about-card__heading">
-        <span className="about-card__heading-icon"><Icon aria-hidden="true" /></span>
-        <h2>{title}</h2>
-      </div>
-      <ul className="about-check-list">
-        {items.map((item) => (
-          <li key={item}><CheckCircle2 aria-hidden="true" size={18} />{item}</li>
-        ))}
-      </ul>
-    </article>
-  );
-}
-
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const data = ((aboutContent as Record<string, AboutLocaleContent>)[locale] ?? aboutContent.en) as AboutLocaleContent;
-
-  return (
-    <Shell locale={locale}>
-      <section className="about-hero">
-        <div className="about-hero__inner">
-          <div className="about-hero__copy">
-            <h1>{data.hero.title}</h1>
-            <p>{data.hero.subtitle}</p>
-          </div>
-          <div className="about-hero__visual hero-visual">
-            <Image src="/hero/tiladys-hero.webp" width={1536} height={1024} sizes="(max-width: 768px) 100vw, 50vw" alt="" aria-hidden="true" priority />
-          </div>
-        </div>
-      </section>
-
-      <section className="about-page section">
-        <div className="about-top-grid">
-          <ListCard title={data.whoIAm.title} items={data.whoIAm.items} Icon={UserRound} />
-
-          <article className="about-card about-card--compact about-help-card">
-            <div className="about-card__heading">
-              <span className="about-card__heading-icon"><BriefcaseBusiness aria-hidden="true" /></span>
-              <h2>{data.helpWith.title}</h2>
-            </div>
-            <div className="about-help-grid">
-              {data.helpWith.items.map((item) => {
-                const Icon = iconMap[item.icon as keyof typeof iconMap] ?? Wrench;
-                return (
-                  <div key={item.label} className="about-help-item">
-                    <Icon aria-hidden="true" />
-                    <span>{item.label}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </article>
-
-          <ListCard title={data.whyChoose.title} items={data.whyChoose.items} Icon={Award} />
-        </div>
-
-        <div className="about-main-grid">
-          <article className="about-card">
-            <div className="about-card__heading">
-              <span className="about-card__heading-icon about-card__heading-icon--filled"><MonitorCog aria-hidden="true" /></span>
-              <h2>{data.technical.title}</h2>
-            </div>
-            <div className="technical-list">
-              {data.technical.items.map((item) => {
-                const Icon = iconMap[item.icon as keyof typeof iconMap] ?? Code2;
-                return (
-                  <div key={item.label} className="technical-list__item">
-                    <Icon aria-hidden="true" />
-                    <span>{item.label}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </article>
-
-          <article className="about-card">
-            <div className="about-card__heading">
-              <span className="about-card__heading-icon about-card__heading-icon--large"><GraduationCap aria-hidden="true" /></span>
-              <h2>{data.education.title}</h2>
-            </div>
-            <ol className="education-timeline">
-              {data.education.items.map((item) => (
-                <li key={`${item.school}-${item.period}`}>
-                  <div className="education-timeline__dot" aria-hidden="true" />
-                  <h3>{item.school}</h3>
-                  <p><span>{item.fieldLabel}:</span> {item.field}</p>
-                  <small>{item.period}</small>
-                </li>
-              ))}
-            </ol>
-          </article>
-        </div>
-
-        <div className="about-bottom-grid">
-          <article className="about-card">
-            <div className="about-card__heading">
-              <span className="about-card__heading-icon"><Globe2 aria-hidden="true" /></span>
-              <h2>{data.languages.title}</h2>
-            </div>
-            <div className="language-skills">
-              {data.languages.items.map((item) => (
-                <div key={item.name} className="language-skill">
-                  <span className="language-skill__flag" aria-hidden="true">{item.flag}</span>
-                  <strong>{item.name}</strong>
-                  <span>{item.level}</span>
-                </div>
-              ))}
-            </div>
-          </article>
-
-          <ListCard title={data.work.title} items={data.work.items} Icon={Settings} />
-        </div>
-
-        <div className="about-benefits" aria-label="Service advantages">
-          {data.benefits.map((benefit) => {
-            const Icon = iconMap[benefit.icon as keyof typeof iconMap] ?? Globe2;
-            return (
-              <div key={benefit.label} className="about-benefit">
-                <Icon aria-hidden="true" />
-                <strong>{benefit.label}</strong>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-    </Shell>
-  );
+  const data = copy(locale);
+  const icons = [Laptop, Globe2, Network];
+  return <Shell locale={locale}>
+    <section className="about-introduction section">
+      <div><span className="eyebrow">TiLADYS · Mülheim an der Ruhr</span><h1>{data.hero.title}</h1><p>{data.hero.subtitle}</p>
+        <Link className="primary" href={`/${locale}/contact`}>{data.contact}<ArrowRight aria-hidden="true" /></Link></div>
+      <Image src="/hero/tiladys-hero.webp?v=20260920" width={1942} height={809} sizes="(max-width: 900px) 100vw, 50vw" alt="" priority />
+    </section>
+    <section className="section about-support"><h2>{data.supportTitle}</h2><div className="about-support-grid">
+      {data.support.map((text, index) => { const Icon = icons[index]; return <article key={text}><Icon aria-hidden="true" /><p>{text}</p></article>; })}
+    </div><Link className="about-services-link" href={`/${locale}/services`}>{data.services}<ArrowRight aria-hidden="true" size={18} /></Link></section>
+    <section className="section about-expect"><h2>{data.expectTitle}</h2><ol>{data.steps.map((step) => <li key={step.title}><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol></section>
+    <section className="section about-contact"><h2>{data.ctaTitle}</h2><p>{data.ctaText}</p><Link className="primary" href={`/${locale}/contact`}>{data.contact}<ArrowRight aria-hidden="true" /></Link></section>
+  </Shell>;
 }

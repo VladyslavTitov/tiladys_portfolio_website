@@ -1,9 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Instagram, Mail, MapPin, Phone, Send, MessageCircleMore, AtSign } from 'lucide-react';
+import { threadsAccountConfirmed, threadsUrl } from '@/lib/business';
 import { t } from '@/lib/i18n';
 
 const socialLinks = [
+  ...(threadsAccountConfirmed ? [{ label: 'Threads', handle: '@tiladys.de', href: threadsUrl, Icon: AtSign }] : []),
+  { label: 'WhatsApp', handle: '+49 163 7235608', href: 'https://wa.me/491637235608', Icon: MessageCircleMore },
   { label: 'Telegram', handle: '@tiladys_support', href: 'https://t.me/tiladys_support', Icon: Send },
   { label: 'Instagram', handle: '@tiladys.de', href: 'https://www.instagram.com/tiladys.de', Icon: Instagram },
 ] as const;
@@ -26,9 +29,9 @@ export function Footer({ locale }: { locale: string }) {
 
         <section className="footer-column">
           <h2>{c.footer.contactTitle}</h2>
-          <a href="mailto:mail@tiladys.com" className="footer-contact-link">
+          <a href="mailto:contact@tiladys.com" className="footer-contact-link">
             <Mail aria-hidden="true" size={19} />
-            <span>mail@tiladys.com</span>
+            <span>contact@tiladys.com</span>
           </a>
           <a href="tel:+491637235608" className="footer-contact-link">
             <Phone aria-hidden="true" size={19} />
@@ -56,7 +59,7 @@ export function Footer({ locale }: { locale: string }) {
         <section className="footer-column">
           <h2>{c.footer.socialTitle}</h2>
           {socialLinks.map(({ label, handle, href, Icon }) => (
-            <a key={label} href={href} target="_blank" rel="noreferrer" className="social-link" aria-label={`${label}: ${handle}`}>
+            <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="social-link" aria-label={`${label}: ${handle}`}>
               <span className="social-link__icon"><Icon aria-hidden="true" size={18} /></span>
               <span>{handle}</span>
             </a>

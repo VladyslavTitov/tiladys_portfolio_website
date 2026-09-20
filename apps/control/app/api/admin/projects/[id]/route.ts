@@ -26,7 +26,7 @@ function projectError(error: unknown, fallback: 'PROJECT_UPDATE_FAILED' | 'PROJE
   if (code === 'P2025') return NextResponse.json({ error: 'PROJECT_NOT_FOUND' }, { status: 404 });
   if (message === 'INVALID_PROJECT') return NextResponse.json({ error: message, details }, { status: 400 });
 
-  console.error(`[${fallback}]`, error);
+  console.error(`[${fallback}]`);
   return NextResponse.json({ error: fallback }, { status: 500 });
 }
 

@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import { ProjectImage } from '@/components/ProjectImage';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, CalendarDays, Code2, ExternalLink, Github, Layers3, Link2 } from 'lucide-react';
@@ -61,7 +61,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
   const type = translated(project.type, locale);
   const workItems: string[] = project.workItems?.[locale] || project.workItems?.en || project.workItems?.ru || [];
   const images: ProjectImage[] = project.images ?? [];
-  const cover = images[0]?.url || project.coverImage || '/portfolio/placeholders/project-2.png';
+  const cover = images[0]?.url || project.coverImage || '/services/tiladys-service-website-creation.webp?v=20260920';
   const date = project.projectDate ? new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric' }).format(new Date(project.projectDate)) : '—';
   const category = projectCategoryLabel(project.category, locale);
   const linksLabel = projectLinksAvailable(locale);
@@ -79,7 +79,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
               <Link className="secondary secondary--dark" href={`/${locale}/portfolio`}><ArrowLeft aria-hidden="true" size={18} />{c.back}</Link>
             </div>
           </div>
-          <div className="project-detail-hero__image"><img src={cover} alt={title} /></div>
+          <div className="project-detail-hero__image"><ProjectImage src={cover} alt={title} sizes="(max-width: 900px) 100vw, 50vw" priority /></div>
         </div>
         <div className="project-meta">
           <div><CalendarDays aria-hidden="true" /><span><strong>{c.completed}</strong>{date}</span></div>
@@ -95,10 +95,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
           {role ? <><h2>{c.role}</h2><p>{role}</p></> : null}
           {workItems.length ? <><h2>{c.work}</h2><ul>{workItems.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul></> : null}
         </div>
-        <div className="project-detail-main-image"><img src={cover} alt={title} /></div>
+        <div className="project-detail-main-image"><ProjectImage src={cover} alt={title} sizes="(max-width: 900px) 100vw, 50vw" /></div>
       </section>
 
-      {images.length ? <section className="section project-gallery-section"><h2>{c.screenshots}</h2><div className={`project-gallery project-gallery--${Math.min(images.length, 4)}`}>{images.map((image) => <figure key={image.id}><img src={image.url} alt={translated(image.alt, locale) || title} /></figure>)}</div></section> : null}
+      {images.length ? <section className="section project-gallery-section"><h2>{c.screenshots}</h2><div className={`project-gallery project-gallery--${Math.min(images.length, 4)}`}>{images.map((image) => <figure key={image.id}><ProjectImage src={image.url} alt={translated(image.alt, locale) || title} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw" /></figure>)}</div></section> : null}
       {project.technologies?.length ? <section className="section project-tools"><h2>{c.tools}</h2><div>{project.technologies.map((tool: string) => <span key={tool}>{tool}</span>)}</div></section> : null}
       <ContactCta locale={locale} title={c.similarTitle} text={c.similarText} />
     </Shell>

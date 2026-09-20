@@ -1,3 +1,4 @@
+import { businessStructuredData } from '@/lib/business';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { ServiceDetail } from '@/components/services/ServiceDetail';
 import { Shell } from '@/components/Shell';
@@ -32,7 +33,7 @@ export default async function ServicePage({ params, searchParams }: { params: Pr
   const common = ui(locale);
   const url = `${siteUrl}/${locale}/services/${slug}`;
   const structuredData = [
-    { '@context': 'https://schema.org', '@type': 'Service', name: copy.title, description: copy.short, url, provider: { '@type': 'ProfessionalService', name: 'TiLADYS', areaServed: ['Mülheim an der Ruhr', 'Nordrhein-Westfalen'] }, hasOfferCatalog: { '@type': 'OfferCatalog', name: copy.title, itemListElement: copy.groups?.map((group) => ({ '@type': 'OfferCatalog', name: group.title, itemListElement: group.items.map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })) })) } },
+    { '@context': 'https://schema.org', '@type': 'Service', name: copy.title, description: copy.short, url, provider: businessStructuredData, hasOfferCatalog: { '@type': 'OfferCatalog', name: copy.title, itemListElement: copy.groups?.map((group) => ({ '@type': 'OfferCatalog', name: group.title, itemListElement: group.items.map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })) })) } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: common.breadcrumb, item: `${siteUrl}/${locale}/services` },
       { '@type': 'ListItem', position: 2, name: copy.title, item: url },

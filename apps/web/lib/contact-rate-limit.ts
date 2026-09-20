@@ -1,20 +1,16 @@
-import { createHash } from 'node:crypto';
+import { createHmac } from 'node:crypto';
+import { isIP } from 'node:net';
 
-const hits = new Map<string, { count: number; reset: number }>();
-
-function sourceKey(source: string) {
-  return createHash('sha256').update(source).digest('hex');
+export function requestSource(headers: Headers, trustedHeader?: string) {
+  // Configure ONLY a header overwritten by the trusted ingress. Never trust arbitrary forwarded headers.
+  if (!trustedHeader || !['x-forwarded-for', 'x-real-ip', 'x-vercel-forwarded-for'].includes(trustedHeader)) return 'unknown';
+  const ip = headers.get(trustedHeader)?.split(',')[0]?.trim() ?? '';
+  return isIP(ip) ? ip.toLowerCase() : 'unknown';
 }
 
-export function contactRateLimit(source: string, limit = 5, windowMs = 10 * 60_000) {
-  const key = sourceKey(source);
-  const now = Date.now();
-  const item = hits.get(key);
-  if (!item || item.reset < now) {
-    hits.set(key, { count: 1, reset: now + windowMs });
-    return true;
-  }
-  if (item.count >= limit) return false;
-  item.count += 1;
-  return true;
+export async function contactRateLimit(source: string, increment: (key: string, expiresAt: Date) => Promise<number>, secret: string, now = Date.now()) {
+  const windowMs = 10 * 60_000;
+  const bucket = Math.floor(now / windowMs);
+  const key = createHmac('sha256', secret).update(`${bucket}:${source}`).digest('hex');
+  return (await increment(key, new Date((bucket + 1) * windowMs))) <= 5;
 }

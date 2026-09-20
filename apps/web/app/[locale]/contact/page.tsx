@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import {
+  AtSign,
   Bolt,
   Globe2,
   Instagram,
@@ -9,10 +10,12 @@ import {
   Phone,
   Send,
 } from 'lucide-react';
+import { threadsAccountConfirmed, threadsUrl } from '@/lib/business';
 import { Shell } from '@/components/Shell';
 import { ContactForm } from '@/components/ContactForm';
 import { ContactCta } from '@/components/ContactCta';
 import { PageHero } from '@/components/PageHero';
+import { t } from '@/lib/i18n';
 import { p } from '@/lib/page-copy';
 import { localizedMetadata } from '@/lib/seo';
 import { contactServiceId, serviceCopy, serviceDefinitions } from '@/lib/services';
@@ -32,12 +35,13 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
   const requestedServiceId = contactServiceId(requestedService);
   const initialService = requestedServiceId ?? '';
   const contacts = [
-    { key: 'email', value: 'mail@tiladys.com', href: 'mailto:mail@tiladys.com', Icon: Mail, tone: 'blue' },
+    ...(threadsAccountConfirmed ? [{ key: 'threads' as const, value: '@tiladys.de', href: threadsUrl, Icon: AtSign, tone: 'blue' }] : []),
+    { key: 'email', value: 'contact@tiladys.com', href: 'mailto:contact@tiladys.com', Icon: Mail, tone: 'blue' },
     { key: 'phone', value: '+49 163 7235608', href: 'tel:+491637235608', Icon: Phone, tone: 'blue' },
     { key: 'whatsapp', value: '+49 163 7235608', href: 'https://wa.me/491637235608', Icon: MessageCircleMore, tone: 'green' },
     { key: 'telegram', value: 't.me/tiladys_support', href: 'https://t.me/tiladys_support', Icon: Send, tone: 'sky' },
     { key: 'instagram', value: '@tiladys.de', href: 'https://www.instagram.com/tiladys.de', Icon: Instagram, tone: 'pink' },
-    { key: 'location', value: 'Kronenstraße 19\n45479 Mülheim an der Ruhr', href: 'https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6', Icon: MapPin, tone: 'blue' },
+    { key: 'location', value: t(locale).footer.location, href: 'https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6', Icon: MapPin, tone: 'blue' },
   ] as const;
 
   return (
@@ -58,7 +62,7 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
             );
           })}
         </div>
-        <ContactForm locale={locale} copy={c} serviceOptions={serviceOptions} initialService={initialService} />
+        <ContactForm uploadsEnabled={process.env.CONTACT_UPLOADS_ENABLED === 'true'} locale={locale} copy={c} serviceOptions={serviceOptions} initialService={initialService} />
       </section>
       <section className="section contact-benefits-section">
         <div className="contact-benefits">

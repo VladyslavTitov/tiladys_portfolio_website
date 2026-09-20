@@ -5,7 +5,7 @@ export default async function MessagesPage() {
   const rows = await db.contactMessage.findMany({
     orderBy: { createdAt: 'desc' },
     take: 100,
-    select: { id: true, name: true, email: true, service: true, locale: true, message: true, status: true, createdAt: true },
+    select: { attachments: { select: { id: true, filename: true, size: true, width: true, height: true } }, id: true, name: true, email: true, service: true, locale: true, message: true, status: true, createdAt: true },
   });
 
   return (

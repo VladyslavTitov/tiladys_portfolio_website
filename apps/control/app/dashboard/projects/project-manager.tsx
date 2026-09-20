@@ -1,7 +1,7 @@
 'use client';
 
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ImagePlus, Plus, Save, Trash2, X } from 'lucide-react';
 
 const locales = ['en', 'de', 'uk', 'ru', 'sk', 'fr'] as const;
@@ -115,13 +115,13 @@ function normalize(project: Record<string, unknown>): Project {
 }
 
 function PendingImage({ file, onRemove }: { file: File; onRemove: () => void }) {
-  const [url, setUrl] = useState('');
+  const preview = useRef<HTMLImageElement>(null);
   useEffect(() => {
     const objectUrl = URL.createObjectURL(file);
-    setUrl(objectUrl);
+    if (preview.current) preview.current.src = objectUrl;
     return () => URL.revokeObjectURL(objectUrl);
   }, [file]);
-  return <figure>{url ? <img src={url} alt={file.name} /> : null}<figcaption>{file.name}<button type="button" title="Remove new image" onClick={onRemove}><X size={16} /></button></figcaption></figure>;
+  return <figure><img ref={preview} alt={file.name} /><figcaption>{file.name}<button type="button" title="Remove new image" onClick={onRemove}><X size={16} /></button></figcaption></figure>;
 }
 
 export function ProjectManager({ initialProjects }: { initialProjects: Array<Record<string, unknown>> }) {
@@ -236,7 +236,7 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
               filename: typeof image.filename === 'string' ? image.filename : 'project-image',
               size: typeof image.size === 'number' ? image.size : 0,
               sortOrder: typeof image.sortOrder === 'number' ? image.sortOrder : 0,
-              url: typeof image.url === 'string' ? image.url : `/api/public/media/${id}`,
+              url: `/api/admin/projects/${projectId}/images/${id}`,
             } satisfies ImageInfo;
           }).filter((image) => image.id)
         : [];
@@ -266,7 +266,7 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
         if (typeof image.id !== 'string' || typeof image.url !== 'string') throw new Error(`${newImages[index].name}: unexpected upload response`);
         uploaded.push({
           id: image.id,
-          url: image.url,
+          url: `/api/admin/projects/${projectId}/images/${image.id}`,
           filename: typeof image.filename === 'string' ? image.filename : newImages[index].name,
           size: typeof image.size === 'number' ? image.size : newImages[index].size,
           sortOrder: typeof image.sortOrder === 'number' ? image.sortOrder : existing.length + uploaded.length,
@@ -323,7 +323,7 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
           <label>Status<select value={draft.status} onChange={(event) => setDraft({ ...draft, status: event.target.value as Project['status'] })}><option value="DRAFT">Draft</option><option value="PUBLISHED">Published</option><option value="ARCHIVED">Archived</option></select></label>
           <label>Display order<input type="number" min="0" value={draft.sortOrder} onChange={(event) => setDraft({ ...draft, sortOrder: Number(event.target.value) })} /></label>
           <label>Completed date<input type="date" value={draft.projectDate?.slice(0, 10) ?? ''} onChange={(event) => setDraft({ ...draft, projectDate: event.target.value || null })} /></label>
-          <label className="admin-checkbox"><input type="checkbox" checked={draft.featured} onChange={(event) => setDraft({ ...draft, featured: event.target.checked })} />Featured project</label>
+          <label className="admin-checkbox"><input type="checkbox" checked={draft.featured} onChange={(event) => setDraft({ ...draft, featured: event.target.checked })} />Include in featured rotation</label><p className="admin-intro">Published projects checked here rotate on the portfolio page every 15 seconds. Display order determines their sequence.</p>
           <label>Website URL<input type="url" value={draft.websiteUrl} onChange={(event) => setDraft({ ...draft, websiteUrl: event.target.value })} placeholder="https://..." /></label>
           <label>GitHub URL<input type="url" value={draft.githubUrl} onChange={(event) => setDraft({ ...draft, githubUrl: event.target.value })} placeholder="https://github.com/..." /></label>
           <label className="admin-span-2">External cover image URL (optional)<input type="url" value={draft.coverImage} onChange={(event) => setDraft({ ...draft, coverImage: event.target.value })} placeholder="Used only when no uploaded image exists" /></label>

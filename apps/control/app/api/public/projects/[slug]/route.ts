@@ -1,62 +1,11 @@
-import type { ProjectImage } from "@prisma/client";
-import { NextRequest, NextResponse } from "next/server";
-import { db } from "@tiladys/db";
+import { NextRequest, NextResponse } from 'next/server';
+import { db } from '@tiladys/db';
+import { publicProject, publicProjectSelect } from '@/lib/public-projects';
 
-type PublicProjectImage = Pick<
-  ProjectImage,
-  "id" | "alt" | "sortOrder"
->;
-
-export async function GET(
-  req: NextRequest,
-  { params }: { params: Promise<{ slug: string }> }
-) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-
-  const project = await db.project.findFirst({
-    where: {
-      slug,
-      status: "PUBLISHED",
-    },
-    include: {
-      images: {
-        select: {
-          id: true,
-          alt: true,
-          sortOrder: true,
-        },
-        orderBy: {
-          sortOrder: "asc",
-        },
-      },
-    },
+  const project = await db.project.findFirst({ where: { slug, status: 'PUBLISHED' }, select: publicProjectSelect });
+  return NextResponse.json(project ? publicProject(project, req.nextUrl.origin) : { error: 'NOT_FOUND' }, {
+    status: project ? 200 : 404, headers: { 'Cache-Control': 'no-store' },
   });
-
-  if (!project) {
-    return NextResponse.json(
-      { error: "NOT_FOUND" },
-      { status: 404 }
-    );
-  }
-
-  const origin = req.nextUrl.origin;
-
-  const images = project.images.map(
-    (image: PublicProjectImage) => ({
-      ...image,
-      url: `${origin}/api/public/media/${image.id}`,
-    })
-  );
-
-  return NextResponse.json(
-    {
-      ...project,
-      images,
-    },
-    {
-      headers: {
-        "Cache-Control": "no-store",
-      },
-    }
-  );
 }

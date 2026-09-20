@@ -37,8 +37,8 @@ test('about page JSON is complete for every public locale', () => {
   for (const locale of locales) {
     assert.ok(content[locale]);
     assert.ok(content[locale].hero.title.length > 3);
-    assert.equal(content[locale].helpWith.items.length, 6);
-    assert.equal(content[locale].benefits.length, 4);
+    assert.equal(content[locale].support.length, 3);
+    assert.equal(content[locale].steps.length, 3);
   }
 });
 
@@ -247,7 +247,8 @@ test('portfolio image storage model, migration and media endpoint are present', 
   assert.match(schema, /images\s+ProjectImage\[\]/);
   assert.match(migration, /CREATE TABLE IF NOT EXISTS "ProjectImage"/);
   assert.match(media, /Content-Type/);
-  assert.match(media, /immutable/);
+  assert.match(media, /no-store/);
+  assert.match(media, /project: \{ status: 'PUBLISHED' \}/);
   assert.match(media, /nosniff/);
 });
 

@@ -121,6 +121,7 @@ model PriceItem {
 }
 
 model ContactMessage {
+  attachments ContactAttachment[]
   id        String        @id @default(cuid())
   name      String
   email     String
@@ -159,4 +160,27 @@ model AuditLog {
   createdAt DateTime   @default(now())
 
   @@index([createdAt, action])
+}
+
+model ContactAttachment {
+  id        String         @id @default(cuid())
+  messageId String
+  message   ContactMessage @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  filename  String
+  mimeType  String
+  size      Int
+  width     Int
+  height    Int
+  data      Bytes
+  createdAt DateTime       @default(now())
+
+  @@index([messageId])
+}
+
+model ContactRateLimit {
+  key       String   @id
+  count     Int      @default(1)
+  expiresAt DateTime
+
+  @@index([expiresAt])
 }

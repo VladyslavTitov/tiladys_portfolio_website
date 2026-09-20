@@ -7,7 +7,7 @@ export function PageHero({
   accentLead,
   accent,
   text,
-  image = '/hero/tiladys-hero.webp',
+  image = '/hero/tiladys-hero.webp?v=20260920',
 }: {
   className?: string;
   kicker?: string;
@@ -30,7 +30,7 @@ export function PageHero({
           <p>{text}</p>
         </div>
         <div className="visual-page-hero__visual hero-visual" aria-hidden="true">
-          <Image src={image} width={1536} height={1024} sizes="(max-width: 768px) 100vw, 50vw" alt="" priority />
+          <Image src={image} width={1942} height={809} sizes="(max-width: 768px) 100vw, 50vw" alt="" priority />
         </div>
       </div>
     </section>

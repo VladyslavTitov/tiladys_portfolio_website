@@ -20,7 +20,7 @@ export function ServicesOverview({ locale, sections }: { locale: string; section
               <Link className="secondary secondary--light" href={`/${locale}/contact`}>{common.contact}</Link>
             </div>
           </div>
-          <ServiceVisual service={serviceDefinitions[0]} image="/hero/tiladys-hero.webp" title={common.heroTitle} priority />
+          <ServiceVisual service={serviceDefinitions[0]} image="/hero/tiladys-hero.webp?v=20260920" title={common.heroTitle} priority />
         </div>
       </section>
 

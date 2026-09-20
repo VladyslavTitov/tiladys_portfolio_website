@@ -62,7 +62,7 @@ export function Header({ locale }: { locale: string }) {
     <header className="site-header">
       <div className="site-header__inner">
         <Link href={`/${locale}`} className="site-brand" aria-label="TiLADYS home" onClick={() => { setMenuOpen(false); setLanguageOpen(false); }}>
-          <Image src="/brand/icon.svg" width={445} height={106} alt="TiLADYS" priority />
+          <Image src="/brand/icon.svg" width={445} height={106} alt="TiLADYS" />
         </Link>
 
         <nav

@@ -91,7 +91,7 @@ export const copy: Record<Locale, SiteCopy> = {
       privacy: 'Privacy Policy',
       impressum: 'Impressum',
       copyright: 'TiLADYS — IT Services & Webdesign. All rights reserved.',
-      location: 'NRW, Germany'
+      location: 'Kronenstraße 19, 45479 Mülheim an der Ruhr, Germany'
     }
   },
   de: {
@@ -136,7 +136,7 @@ export const copy: Record<Locale, SiteCopy> = {
       tagline: 'Praktische IT- und Weblösungen für Privatkunden und kleine Unternehmen in NRW.',
       contactTitle: 'Kontakt', linksTitle: 'Links', socialTitle: 'Vernetzen', legalTitle: 'Rechtliches',
       terms: 'Nutzungsbedingungen', privacy: 'Datenschutz', impressum: 'Impressum',
-      copyright: 'TiLADYS — IT Services & Webdesign. Alle Rechte vorbehalten.', location: 'NRW, Deutschland'
+      copyright: 'TiLADYS — IT Services & Webdesign. Alle Rechte vorbehalten.', location: 'Kronenstraße 19, 45479 Mülheim an der Ruhr, Deutschland'
     }
   },
   uk: {
@@ -166,7 +166,7 @@ export const copy: Record<Locale, SiteCopy> = {
       ],
       ctaTitle: 'Потрібна допомога з IT або сайтом?', ctaText: 'Опишіть завдання, і ми запропонуємо просте рішення.', ctaPrimary: 'Зв’язатися', ctaSecondary: 'Відкрити контактну форму'
     },
-    footer: { tagline: 'Практичні IT- та вебрішення для домашніх користувачів і малого бізнесу в NRW.', contactTitle: 'Контакти', linksTitle: 'Посилання', socialTitle: 'Зв’язок', legalTitle: 'Правова інформація', terms: 'Умови використання', privacy: 'Політика конфіденційності', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Усі права захищені.', location: 'NRW, Німеччина' }
+    footer: { tagline: 'Практичні IT- та вебрішення для домашніх користувачів і малого бізнесу в NRW.', contactTitle: 'Контакти', linksTitle: 'Посилання', socialTitle: 'Зв’язок', legalTitle: 'Правова інформація', terms: 'Умови використання', privacy: 'Політика конфіденційності', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Усі права захищені.', location: 'Kronenstraße 19, 45479 Mülheim an der Ruhr, Німеччина' }
   },
   ru: {
     nav: ['Главная', 'Услуги', 'Портфолио', 'Обо мне', 'Контакты'],
@@ -193,7 +193,7 @@ export const copy: Record<Locale, SiteCopy> = {
       ],
       ctaTitle: 'Нужна помощь с IT или сайтом?', ctaText: 'Опишите задачу, и мы предложим простое решение.', ctaPrimary: 'Связаться', ctaSecondary: 'Открыть контактную форму'
     },
-    footer: { tagline: 'Практичные IT- и веб-решения для домашних пользователей и малого бизнеса в NRW.', contactTitle: 'Контакты', linksTitle: 'Ссылки', socialTitle: 'Связь', legalTitle: 'Правовая информация', terms: 'Условия использования', privacy: 'Политика конфиденциальности', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Все права защищены.', location: 'NRW, Германия' }
+    footer: { tagline: 'Практичные IT- и веб-решения для домашних пользователей и малого бизнеса в NRW.', contactTitle: 'Контакты', linksTitle: 'Ссылки', socialTitle: 'Связь', legalTitle: 'Правовая информация', terms: 'Условия использования', privacy: 'Политика конфиденциальности', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Все права защищены.', location: 'Kronenstraße 19, 45479 Mülheim an der Ruhr, Германия' }
   },
   sk: {
     nav: ['Domov', 'Služby', 'Portfólio', 'O mne', 'Kontakt'],
@@ -220,7 +220,7 @@ export const copy: Record<Locale, SiteCopy> = {
       ],
       ctaTitle: 'Potrebujete pomoc s IT alebo webstránkou?', ctaText: 'Opíšte úlohu a navrhneme jednoduché riešenie.', ctaPrimary: 'Kontaktovať', ctaSecondary: 'Otvoriť kontaktný formulár'
     },
-    footer: { tagline: 'Praktické IT a webové riešenia pre domácnosti a malé firmy v NRW.', contactTitle: 'Kontakt', linksTitle: 'Odkazy', socialTitle: 'Spojenie', legalTitle: 'Právne informácie', terms: 'Podmienky používania', privacy: 'Ochrana súkromia', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Všetky práva vyhradené.', location: 'NRW, Nemecko' }
+    footer: { tagline: 'Praktické IT a webové riešenia pre domácnosti a malé firmy v NRW.', contactTitle: 'Kontakt', linksTitle: 'Odkazy', socialTitle: 'Spojenie', legalTitle: 'Právne informácie', terms: 'Podmienky používania', privacy: 'Ochrana súkromia', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Všetky práva vyhradené.', location: 'Kronenstraße 19, 45479 Mülheim an der Ruhr, Nemecko' }
   },
   fr: {
     nav: ['Accueil', 'Services', 'Portfolio', 'À propos', 'Contact'],
@@ -247,7 +247,7 @@ export const copy: Record<Locale, SiteCopy> = {
       ],
       ctaTitle: 'Besoin d’aide pour l’informatique ou votre site web ?', ctaText: 'Décrivez votre besoin et nous proposerons une solution simple.', ctaPrimary: 'Me contacter', ctaSecondary: 'Ouvrir le formulaire'
     },
-    footer: { tagline: 'Solutions informatiques et web pratiques pour les particuliers et petites entreprises en NRW.', contactTitle: 'Contact', linksTitle: 'Liens', socialTitle: 'Nous suivre', legalTitle: 'Mentions légales', terms: 'Conditions d’utilisation', privacy: 'Politique de confidentialité', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Tous droits réservés.', location: 'NRW, Allemagne' }
+    footer: { tagline: 'Solutions informatiques et web pratiques pour les particuliers et petites entreprises en NRW.', contactTitle: 'Contact', linksTitle: 'Liens', socialTitle: 'Nous suivre', legalTitle: 'Mentions légales', terms: 'Conditions d’utilisation', privacy: 'Politique de confidentialité', impressum: 'Impressum', copyright: 'TiLADYS — IT Services & Webdesign. Tous droits réservés.', location: 'Kronenstraße 19, 45479 Mülheim an der Ruhr, Allemagne' }
   }
 };
 

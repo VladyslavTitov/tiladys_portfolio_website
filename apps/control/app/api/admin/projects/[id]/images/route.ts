@@ -22,7 +22,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       select: { id: true, filename: true, size: true, sortOrder: true },
     });
     await db.auditLog.create({ data: { userId: user.id, action: 'PROJECT_IMAGE_CREATE', entity: 'Project', entityId: id, metadata: { imageId: image.id } } });
-    return NextResponse.json({ ...image, url: `/api/public/media/${image.id}` }, { status: 201 });
+    return NextResponse.json({ ...image, url: `/api/admin/projects/${id}/images/${image.id}` }, { status: 201 });
   } catch (error) {
     const message = error instanceof Error ? error.message : 'IMAGE_UPLOAD_FAILED';
     const status = message === 'UNAUTHORIZED' ? 401 : message === 'INVALID_ORIGIN' ? 403 : 400;

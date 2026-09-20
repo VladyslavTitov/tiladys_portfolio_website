@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Attachments } from './attachments';
 import { ReplyForm } from './reply-form';
 
 type MessageRow = {
+  attachments: Array<{ id: string; filename: string; size: number; width: number; height: number }>;
   id: string;
   name: string;
   email: string;
@@ -67,6 +69,7 @@ export function MessageList({ messages }: { messages: MessageRow[] }) {
               <button type="button" className="admin-secondary" disabled={pendingId === message.id || isUnread} onClick={() => setStatus(message.id, 'UNREAD')}>Mark unread</button>
               <button type="button" className="admin-primary" disabled={pendingId === message.id || message.status === 'READ'} onClick={() => setStatus(message.id, 'READ')}>Mark read</button>
             </div>
+            <Attachments messageId={message.id} attachments={message.attachments} />
             <ReplyForm id={message.id} email={message.email} />
           </article>
         );

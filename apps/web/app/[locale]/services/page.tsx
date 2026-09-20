@@ -1,3 +1,4 @@
+import { businessStructuredData } from '@/lib/business';
 import { ServicesOverview } from '@/components/services/ServicesOverview';
 import { Shell } from '@/components/Shell';
 import { getPublicPrices } from '@/lib/public-prices';
@@ -15,7 +16,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   const sections = await getPublicPrices();
   const copy = ui(locale);
   const structuredData = {
-    '@context': 'https://schema.org', '@type': 'ProfessionalService', name: 'TiLADYS',
+    '@context': 'https://schema.org', ...businessStructuredData,
     url: `${siteUrl}/${locale}/services`, areaServed: ['Mülheim an der Ruhr', 'Nordrhein-Westfalen'],
     description: copy.heroText,
   };
