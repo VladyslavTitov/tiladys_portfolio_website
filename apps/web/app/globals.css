@@ -2945,11 +2945,11 @@ img.hero-visual { aspect-ratio: 1; height: auto; object-position: center; backgr
 }
 
 /* Founder profile and readable legal navigation. */
-.founder-profile { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); align-items: center; gap: clamp(28px, 5vw, 72px); }
+.founder-profile { display: grid; grid-template-columns: minmax(0, 480px) minmax(0, 1fr); align-items: center; gap: clamp(28px, 5vw, 72px); }
 .founder-profile h2, .founder-details h2 { color: #071837; font-size: clamp(28px, 3vw, 40px); margin-bottom: 20px; }
 .founder-profile p, .founder-details p { color: #536277; line-height: 1.7; }
-.founder-portrait { position: relative; aspect-ratio: 4 / 5; width: 100%; max-width: 320px; overflow: hidden; border-radius: 20px; background: #071837; }
-.founder-portrait img { object-fit: cover; }
+.founder-portrait { position: relative; aspect-ratio: 3583 / 5374; width: 100%; max-width: 480px; overflow: hidden; border-radius: 20px; background: #071837; }
+.founder-portrait img { display: block; width: 100%; height: auto; object-fit: contain; object-position: center; }
 .founder-portrait__fallback { position: absolute; inset: 0; display: grid; place-items: center; color: #8cdeef; background: radial-gradient(circle at 70% 25%, #154366, #071837 75%); font-size: clamp(64px, 8vw, 110px); font-weight: 700; }
 .founder-details { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 72px); padding-top: 0; }
 .founder-languages { margin: 0; }

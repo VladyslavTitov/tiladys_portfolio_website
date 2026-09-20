@@ -10,6 +10,6 @@ export function FounderPortrait({ name, label, src = "/about/vladyslav-titov.jpe
   const [failed, setFailed] = useState(false);
   return <div className="founder-portrait">
     {!loaded && <div className="founder-portrait__fallback" role="img" aria-label={name}><ImageIcon aria-hidden="true" size={48} strokeWidth={1} /><span>{label}</span></div>}
-    {src && !failed && <Image src={src} alt={name} fill sizes="(max-width: 760px) 100vw, 320px" style={{ opacity: loaded ? 1 : 0 }} onLoad={() => setLoaded(true)} onError={() => { setFailed(true); setLoaded(false); }} />}
+    {src && !failed && <Image src={src} alt={name} width={3583} height={5374} sizes="(max-width: 516px) calc(100vw - 36px), 480px" style={{ opacity: loaded ? 1 : 0 }} onLoad={() => setLoaded(true)} onError={() => { setFailed(true); setLoaded(false); }} />}
   </div>;
 }
