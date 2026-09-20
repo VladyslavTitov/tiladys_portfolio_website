@@ -3002,8 +3002,8 @@ img.hero-visual { aspect-ratio: 1; height: auto; object-position: center; backgr
 .services-card > .service-visual--compact { aspect-ratio: 16 / 10; min-height: 0; width: 100%; margin: 0; padding: 0; }
 .services-card > .service-visual--compact img { object-fit: cover; object-position: center; }
 .founder-portrait__fallback { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; font-size: 16px; }
-.founder-details { padding-top: 56px; }
-.founder-profile { padding-top: 0; }
+.founder-details { padding-top: 0; }
+.founder-profile { padding-top: 56px; }
 @media (max-width: 900px) {
   .services-overview-hero__inner, .service-detail-hero, .visual-page-hero__inner,
   .about-introduction, .project-detail-hero__inner { grid-template-columns: minmax(0, 1fr); }
