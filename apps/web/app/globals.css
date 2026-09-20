@@ -2969,3 +2969,47 @@ img.hero-visual { aspect-ratio: 1; height: auto; object-position: center; backgr
   .founder-portrait { justify-self: center; }
   .legal-content { padding-block: 36px; }
 }
+
+/* Compact secondary heroes share spacing; content determines their height. */
+.services-overview-hero, .service-detail-hero, .visual-page-hero,
+.about-introduction, .project-detail-hero, .page-hero { background: #071837; }
+.services-overview-hero__inner, .service-detail-hero, .visual-page-hero__inner,
+.about-introduction, .project-detail-hero__inner {
+  min-height: 0;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 56px);
+}
+.services-overview-hero__inner, .service-detail-hero, .visual-page-hero__inner,
+.about-introduction, .project-detail-hero, .page-hero { padding-block: 40px; }
+.visual-page-hero__copy { padding: 0; }
+.services-overview-hero__copy h1, .service-detail-hero__copy h1,
+.visual-page-hero h1, .about-introduction h1, .project-detail-hero__copy h1,
+.page-hero h1 { font-size: clamp(32px, 3.5vw, 52px); line-height: 1.12; overflow-wrap: anywhere; }
+.services-overview-hero__inner > *, .service-detail-hero > *, .visual-page-hero__inner > *,
+.about-introduction > *, .project-detail-hero__inner > * { min-width: 0; }
+.services-overview-hero .service-visual, .service-detail-hero > .service-visual,
+.visual-page-hero__visual {
+  width: min(100%, 380px); height: auto; min-height: 0; max-height: 380px;
+  aspect-ratio: 1; margin: 0; justify-self: center; align-self: center;
+}
+.service-visual--panorama { background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+.visual-page-hero__visual img, .about-introduction > img, .project-detail-hero__image img {
+  display: block; width: 100%; height: auto; min-height: 0; max-height: 380px; object-fit: contain; object-position: center;
+}
+.about-introduction > img { width: min(100%, 380px); justify-self: center; }
+.services-overview-hero .service-visual img, .service-detail-hero > .service-visual img { object-fit: contain; }
+.services-card > .service-visual--compact { aspect-ratio: 16 / 10; min-height: 0; width: 100%; margin: 0; padding: 0; }
+.services-card > .service-visual--compact img { object-fit: cover; object-position: center; }
+.founder-portrait__fallback { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; font-size: 16px; }
+.founder-details { padding-top: 56px; }
+.founder-profile { padding-top: 0; }
+@media (max-width: 900px) {
+  .services-overview-hero__inner, .service-detail-hero, .visual-page-hero__inner,
+  .about-introduction, .project-detail-hero__inner { grid-template-columns: minmax(0, 1fr); }
+  .visual-page-hero__inner { width: calc(100% - 40px); }
+  .services-overview-hero__inner, .service-detail-hero, .visual-page-hero__inner,
+  .about-introduction, .project-detail-hero, .page-hero { padding-block: 32px; }
+  .visual-page-hero__copy { padding: 0; }
+  .project-detail-hero__image { order: 0; }
+}

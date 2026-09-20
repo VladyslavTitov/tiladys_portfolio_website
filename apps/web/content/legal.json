@@ -1,7 +1,5 @@
 {
   "en": {
-    "review": "Owner review required — incomplete draft",
-    "notice": "These pages document confirmed contact details and the website’s current functions. Required business and privacy information is still unresolved; these are not final legal notices.",
     "contact": "Contact details",
     "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [
@@ -33,8 +31,6 @@
     "socialText": "You can also contact TiLADYS through its social media accounts, explore our services or browse the portfolio."
   },
   "de": {
-    "review": "Prüfung durch den Betreiber erforderlich — unvollständiger Entwurf",
-    "notice": "Diese Seiten beschreiben bestätigte Kontaktdaten und die aktuellen Funktionen der Website. Erforderliche Unternehmens- und Datenschutzangaben sind noch offen; dies sind keine abschließenden Rechtstexte.",
     "contact": "Kontaktdaten",
     "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [
@@ -66,8 +62,6 @@
     "socialText": "Sie können TiLADYS auch über die Social-Media-Konten kontaktieren, unsere Services ansehen oder das Portfolio durchstöbern."
   },
   "uk": {
-    "review": "Потрібна перевірка власника — неповна чернетка",
-    "notice": "Ці сторінки описують підтверджені контакти та поточні функції сайту. Обов’язкові відомості про діяльність і конфіденційність ще не з’ясовані; це не остаточні правові тексти.",
     "contact": "Контактні дані",
     "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [
@@ -99,8 +93,6 @@
     "socialText": "Ви також можете зв’язатися з TiLADYS через соціальні мережі, переглянути послуги або портфоліо."
   },
   "ru": {
-    "review": "Нужна проверка владельца — неполный черновик",
-    "notice": "Эти страницы описывают подтверждённые контакты и текущие функции сайта. Обязательные сведения о деятельности и конфиденциальности ещё не уточнены; это не окончательные правовые тексты.",
     "contact": "Контактные данные",
     "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [
@@ -132,8 +124,6 @@
     "socialText": "Вы также можете связаться с TiLADYS через социальные сети, посмотреть услуги или портфолио."
   },
   "sk": {
-    "review": "Vyžaduje sa kontrola prevádzkovateľa — neúplný návrh",
-    "notice": "Tieto stránky opisujú potvrdené kontaktné údaje a aktuálne funkcie webu. Povinné obchodné údaje a informácie o ochrane súkromia ešte nie sú vyriešené; nejde o konečné právne texty.",
     "contact": "Kontaktné údaje",
     "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [
@@ -165,8 +155,6 @@
     "socialText": "TiLADYS môžete kontaktovať aj cez sociálne siete, pozrieť si služby alebo portfólio."
   },
   "fr": {
-    "review": "Vérification du propriétaire requise — projet incomplet",
-    "notice": "Ces pages décrivent les coordonnées confirmées et les fonctions actuelles du site. Des informations obligatoires sur l’activité et la confidentialité restent à préciser ; ces textes ne sont pas définitifs.",
     "contact": "Coordonnées",
     "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [

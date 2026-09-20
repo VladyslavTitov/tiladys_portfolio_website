@@ -2,7 +2,7 @@
   "en": {
     "hero": {
       "title": "About TiLADYS",
-      "subtitle": "TiLADYS supports home users and small businesses in Mülheim an der Ruhr and NRW with computers, websites and everyday digital tasks."
+      "subtitle": "TiLADYS is a local IT and web services business in Mülheim an der Ruhr, helping households and small businesses with computer support, websites and everyday digital tasks. Support is practical, with direct and clear communication."
     },
     "ctaTitle": "Let’s discuss your request",
     "ctaText": "TiLADYS can help with your IT problem. Explore the services or get in touch to discuss what you need.",
@@ -10,7 +10,7 @@
     "services": "Explore services",
     "founderTitle": "Founder",
     "founderName": "Vladyslav Titov",
-    "founderText": "Vladyslav Titov founded TiLADYS, personally runs the business and provides its IT services.",
+    "founderText": "Vladyslav Titov founded TiLADYS and personally carries out its IT and website work. Clients communicate directly with the IT professional handling their request, from explaining the problem to clarifying the next steps.",
     "languagesTitle": "Languages",
     "educationTitle": "Education",
     "languages": [
@@ -51,12 +51,13 @@
         "course": "Information and Software Processing Operator",
         "period": "2020–2022"
       }
-    ]
+    ],
+    "portraitLabel": "Portrait"
   },
   "de": {
     "hero": {
       "title": "Über TiLADYS",
-      "subtitle": "TiLADYS unterstützt Privatkunden und kleine Unternehmen in Mülheim an der Ruhr und NRW bei Computern, Websites und digitalen Alltagsaufgaben."
+      "subtitle": "TiLADYS ist ein lokaler IT- und Webdienstleister in Mülheim an der Ruhr. Das Unternehmen hilft Privathaushalten und kleinen Unternehmen bei Computerproblemen, Websites und digitalen Alltagsaufgaben. Die Unterstützung ist praxisnah, die Kommunikation direkt und klar."
     },
     "ctaTitle": "Besprechen wir Ihr Anliegen",
     "ctaText": "TiLADYS hilft Ihnen bei Ihrem IT-Problem. Entdecken Sie die Services oder kontaktieren Sie uns, um Ihr Anliegen zu besprechen.",
@@ -64,7 +65,7 @@
     "services": "Services ansehen",
     "founderTitle": "Gründer",
     "founderName": "Vladyslav Titov",
-    "founderText": "Vladyslav Titov hat TiLADYS gegründet, führt das Unternehmen persönlich und erbringt dessen IT-Dienstleistungen.",
+    "founderText": "Vladyslav Titov hat TiLADYS gegründet und führt die IT- und Website-Arbeiten persönlich aus. Kunden sprechen direkt mit dem IT-Fachmann, der ihr Anliegen bearbeitet – von der Beschreibung des Problems bis zur Klärung der nächsten Schritte.",
     "languagesTitle": "Sprachen",
     "educationTitle": "Ausbildung",
     "languages": [
@@ -105,12 +106,13 @@
         "course": "Bediener für Informations- und Softwareverarbeitung",
         "period": "2020–2022"
       }
-    ]
+    ],
+    "portraitLabel": "Porträt"
   },
   "uk": {
     "hero": {
       "title": "Про TiLADYS",
-      "subtitle": "TiLADYS допомагає приватним клієнтам і малому бізнесу в Мюльгаймі-на-Рурі та NRW з комп’ютерами, вебсайтами й повсякденними цифровими завданнями."
+      "subtitle": "TiLADYS — місцевий бізнес у сфері IT та вебпослуг у Мюльгаймі-на-Рурі. Він допомагає домогосподарствам і малому бізнесу з комп’ютерами, вебсайтами та повсякденними цифровими завданнями. Допомога практична, а спілкування пряме й зрозуміле."
     },
     "ctaTitle": "Обговорімо ваше звернення",
     "ctaText": "TiLADYS допоможе з вашою IT-проблемою. Перегляньте послуги або зв’яжіться з нами, щоб обговорити вашу потребу.",
@@ -118,7 +120,7 @@
     "services": "Переглянути послуги",
     "founderTitle": "Засновник",
     "founderName": "Vladyslav Titov",
-    "founderText": "Владислав Тітов заснував TiLADYS, особисто керує бізнесом і надає його IT-послуги.",
+    "founderText": "Владислав Тітов заснував TiLADYS і особисто виконує IT-роботи та роботи з вебсайтами. Клієнти спілкуються безпосередньо з IT-фахівцем, який займається їхнім зверненням — від опису проблеми до уточнення наступних кроків.",
     "languagesTitle": "Мови",
     "educationTitle": "Освіта",
     "languages": [
@@ -159,12 +161,13 @@
         "course": "Оператор з обробки інформації та програмного забезпечення",
         "period": "2020–2022"
       }
-    ]
+    ],
+    "portraitLabel": "Портрет"
   },
   "ru": {
     "hero": {
       "title": "О TiLADYS",
-      "subtitle": "TiLADYS помогает частным клиентам и малому бизнесу в Мюльхайме-на-Руре и NRW с компьютерами, сайтами и повседневными цифровыми задачами."
+      "subtitle": "TiLADYS — местный бизнес в сфере IT и веб-услуг в Мюльхайме-на-Руре. Он помогает домохозяйствам и малому бизнесу с компьютерами, сайтами и повседневными цифровыми задачами. Помощь практическая, а общение прямое и понятное."
     },
     "ctaTitle": "Обсудим ваше обращение",
     "ctaText": "TiLADYS поможет с вашей IT-проблемой. Посмотрите услуги или свяжитесь с нами, чтобы обсудить вашу задачу.",
@@ -172,7 +175,7 @@
     "services": "Посмотреть услуги",
     "founderTitle": "Основатель",
     "founderName": "Vladyslav Titov",
-    "founderText": "Владислав Титов основал TiLADYS, лично управляет бизнесом и предоставляет его IT-услуги.",
+    "founderText": "Владислав Титов основал TiLADYS и лично выполняет IT-работы и работы с сайтами. Клиенты общаются напрямую с IT-специалистом, который занимается их обращением — от описания проблемы до уточнения следующих шагов.",
     "languagesTitle": "Языки",
     "educationTitle": "Образование",
     "languages": [
@@ -213,12 +216,13 @@
         "course": "Оператор по обработке информации и программного обеспечения",
         "period": "2020–2022"
       }
-    ]
+    ],
+    "portraitLabel": "Портрет"
   },
   "sk": {
     "hero": {
       "title": "O TiLADYS",
-      "subtitle": "TiLADYS pomáha domácnostiam a malým firmám v Mülheime an der Ruhr a NRW s počítačmi, webovými stránkami a bežnými digitálnymi úlohami."
+      "subtitle": "TiLADYS je miestny poskytovateľ IT a webových služieb v Mülheime an der Ruhr. Pomáha domácnostiam a malým firmám s počítačmi, webovými stránkami a každodennými digitálnymi úlohami. Podpora je praktická a komunikácia priama a jasná."
     },
     "ctaTitle": "Porozprávajme sa o vašej požiadavke",
     "ctaText": "TiLADYS vám pomôže s IT problémom. Pozrite si služby alebo nás kontaktujte a opíšte, čo potrebujete.",
@@ -226,7 +230,7 @@
     "services": "Pozrieť služby",
     "founderTitle": "Zakladateľ",
     "founderName": "Vladyslav Titov",
-    "founderText": "Vladyslav Titov založil TiLADYS, osobne vedie podnikanie a poskytuje jeho IT služby.",
+    "founderText": "Vladyslav Titov založil TiLADYS a osobne vykonáva IT práce a práce na webových stránkach. Klienti komunikujú priamo s IT odborníkom, ktorý rieši ich požiadavku – od opisu problému až po objasnenie ďalších krokov.",
     "languagesTitle": "Jazyky",
     "educationTitle": "Vzdelanie",
     "languages": [
@@ -267,12 +271,13 @@
         "course": "Operátor spracovania informácií a softvéru",
         "period": "2020–2022"
       }
-    ]
+    ],
+    "portraitLabel": "Portrét"
   },
   "fr": {
     "hero": {
       "title": "À propos de TiLADYS",
-      "subtitle": "TiLADYS accompagne les particuliers et petites entreprises à Mülheim an der Ruhr et en NRW pour leurs ordinateurs, sites web et tâches numériques du quotidien."
+      "subtitle": "TiLADYS est une entreprise locale de services informatiques et web à Mülheim an der Ruhr. Elle aide les particuliers et les petites entreprises avec leurs ordinateurs, leurs sites web et leurs tâches numériques quotidiennes. Son accompagnement est pratique et sa communication directe et claire."
     },
     "ctaTitle": "Parlons de votre demande",
     "ctaText": "TiLADYS peut vous aider à résoudre votre problème informatique. Découvrez les services ou contactez-nous pour expliquer votre besoin.",
@@ -280,7 +285,7 @@
     "services": "Découvrir les services",
     "founderTitle": "Fondateur",
     "founderName": "Vladyslav Titov",
-    "founderText": "Vladyslav Titov a fondé TiLADYS, dirige personnellement l’activité et assure ses prestations informatiques.",
+    "founderText": "Vladyslav Titov a fondé TiLADYS et réalise personnellement les travaux informatiques et web. Les clients échangent directement avec le professionnel informatique qui traite leur demande, de la description du problème à la clarification des prochaines étapes.",
     "languagesTitle": "Langues",
     "educationTitle": "Formation",
     "languages": [
@@ -321,6 +326,7 @@
         "course": "Opérateur de traitement de l’information et des logiciels",
         "period": "2020–2022"
       }
-    ]
+    ],
+    "portraitLabel": "Portrait"
   }
 }

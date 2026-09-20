@@ -37,8 +37,9 @@ test('about page JSON is complete for every public locale', () => {
   for (const locale of locales) {
     assert.ok(content[locale]);
     assert.ok(content[locale].hero.title.length > 3);
-    assert.equal(content[locale].support.length, 3);
-    assert.equal(content[locale].steps.length, 3);
+    assert.equal(content[locale].languages.length, 5);
+    assert.equal(content[locale].education.length, 3);
+    assert.ok(content[locale].founderText.length > 40);
   }
 });
 
@@ -142,8 +143,8 @@ test('removed public service routes redirect and three consolidated service visu
   assert.match(services, /pc-cleaning-upgrades': 'pc-laptop'/);
   assert.match(services, /security: 'pc-laptop'/);
   assert.match(services, /training-consulting': 'business-it'/);
-  for (const asset of ['tiladys-service-pc-laptop', 'tiladys-service-website-creation', 'tiladys-service-business-it-digital']) {
-    assert.ok(exists(`apps/web/public/services/${asset}.webp`));
+  for (const asset of ['tiladys-service-pc-laptop.webp', 'tiladys-service-website-creation.png', 'tiladys-service-business-it-digital.webp']) {
+    assert.ok(exists(`apps/web/public/services/${asset}`));
   }
 });
 
@@ -154,9 +155,11 @@ test('homepage exposes three service pillars and footer only real social channel
   assert.match(home, /Website Creation/);
   assert.match(home, /Business IT & Digital Services/);
   assert.match(home, /Can't find what you need/);
-  assert.match(footer, /Telegram/);
-  assert.match(footer, /Instagram/);
-  assert.doesNotMatch(footer, /YouTube|TikTok/);
+  assert.match(footer, /SocialLinks/);
+  const accounts = read('apps/web/lib/business.ts');
+  assert.match(accounts, /Telegram/);
+  assert.match(accounts, /Instagram/);
+  assert.doesNotMatch(accounts, /YouTube|TikTok/);
 });
 
 test('public Prices route redirects permanently and navigation uses Services', () => {
@@ -289,7 +292,7 @@ test('production database migration and seed scripts are documented and availabl
 
 test('reference assets and all redesigned public routes are included', () => {
   for (const file of [
-    'apps/web/public/hero/tiladys-hero.webp',
+    'apps/web/public/hero/tiladys-hero-objects-transparent.png',
     'apps/web/app/[locale]/contact/page.tsx',
     'apps/web/app/[locale]/prices/page.tsx',
     'apps/web/app/[locale]/portfolio/page.tsx',
