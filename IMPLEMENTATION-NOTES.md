@@ -19,7 +19,7 @@ The repository has Vercel-compatible code but no confirmed deployment/provider r
 - Actual hosting, database, SMTP and external image providers; processing locations, recipients/transfers, and host-level logging/integrations.
 - Applicable legal bases, rights information, supervisory authority, inquiry/reply/attachment retention, and session/audit/backup retention and deletion.
 - Actual service contract formation and any required consumer, payment, cancellation, warranty or liability terms. No policy was invented.
-- Confirm ownership of `https://www.threads.net/@tiladys.de`. The integration is prepared in `apps/web/lib/business.ts` and remains hidden while `threadsAccountConfirmed` is false because the account was inaccessible for verification.
+- The owner supplied and confirmed `https://www.threads.com/@tiladys.de`; it is now shared by footer, Contact and legal social links. No external account access was performed in this correction pass.
 
 ## Images and dependencies
 
@@ -129,3 +129,15 @@ Final production build: `npm run build` passed for both applications after all c
 - `tests/contact-security.test.ts`
 - `tests/project.test.mjs`
 - `tests/public-safety.test.ts`
+
+## Local visual/content corrections — 20 September 2026
+
+The About page now introduces the business on navy, followed by the founder, languages and education in all six existing locales (Ukrainian uses `uk` routes). The B.Sc. is explicitly in progress. No approved founder portrait exists in public assets. `FounderPortrait` currently renders initials without requesting a missing image; after the owner supplies `apps/web/public/about/vladyslav-titov.webp`, pass `/about/vladyslav-titov.webp` as its `src`. No substitute face was used.
+
+The owner-confirmed existing hero and website service PNG paths remain in use: `/hero/tiladys-hero-objects-transparent.png` and `/services/tiladys-service-website-creation.png`. The proposed `tiladys-hero-v2.png` and `tiladys-service-website-creation-front-v2.png` are absent. No image was renamed, converted or generated in this pass; PC/Laptop and Business IT assets remain unchanged. A new front-facing composition cannot be confirmed from an absent v2 asset.
+
+Legal pages use the supplied label `TiLADYS — Vladyslav Titov`, wider responsive content and working email, phone, social and internal navigation links. Public owner-checklist fields and the final retention sentence about completing legal bases/rights/authority information were removed in all locales. The incomplete-draft notice, noindex and limited provider/retention statements remain. Before launch, compare the operator wording with the Gewerbeanmeldung; the reported self-employment registration does not establish a separate legal entity or legal form. Confirm registered name, applicable register/VAT/professional details, controller, providers/locations/transfers/recipients, hosting logs, legal bases and rights, competent authority, inquiry/reply/attachment/session/audit/backup retention and deletion, and applicable contract/consumer/payment/cancellation/warranty/liability facts. These remain unresolved, not legally reviewed.
+
+This correction pass did not run tests or builds, add dependencies, change upload/database/SMTP configuration, run migrations, access production, commit, push or deploy. Earlier verification above predates these corrections; source/diff review only was performed for this pass.
+
+Files changed in this correction pass: `apps/web/app/[locale]/about/page.tsx`, `apps/web/app/[locale]/contact/page.tsx`, `apps/web/app/globals.css`, `apps/web/components/Footer.tsx`, `apps/web/components/LegalPage.tsx`, new `apps/web/components/FounderPortrait.tsx`, new `apps/web/components/SocialLinks.tsx`, `apps/web/content/about.json`, `apps/web/content/legal.json`, `apps/web/lib/business.ts`, and this file. The preceding image-path corrections and owner asset replacements were preserved.

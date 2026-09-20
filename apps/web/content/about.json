@@ -1,188 +1,326 @@
 {
   "en": {
     "hero": {
-      "title": "Practical IT help, with a clear next step.",
+      "title": "About TiLADYS",
       "subtitle": "TiLADYS supports home users and small businesses in Mülheim an der Ruhr and NRW with computers, websites and everyday digital tasks."
     },
-    "supportTitle": "Support for your next task",
-    "support": [
-      "PC and laptop setup, cleaning, upgrades and troubleshooting.",
-      "Website creation, improvements and ongoing technical maintenance.",
-      "Business IT, networks and practical help with digital tools."
-    ],
-    "expectTitle": "What to expect",
-    "steps": [
+    "ctaTitle": "Let’s discuss your request",
+    "ctaText": "TiLADYS can help with your IT problem. Explore the services or get in touch to discuss what you need.",
+    "contact": "Contact TiLADYS",
+    "services": "Explore services",
+    "founderTitle": "Founder",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Vladyslav Titov founded TiLADYS, personally runs the business and provides its IT services.",
+    "languagesTitle": "Languages",
+    "educationTitle": "Education",
+    "languages": [
       {
-        "title": "Describe what you need",
-        "text": "Tell us what is happening, what you want to achieve and any relevant constraints."
+        "name": "Ukrainian",
+        "level": "Native"
       },
       {
-        "title": "Discuss the options",
-        "text": "We review the request and discuss the proposed work, scope and price before starting."
+        "name": "Russian",
+        "level": "Native"
       },
       {
-        "title": "Agree on the next step",
-        "text": "Ask questions, clarify the details and decide how you would like to proceed."
+        "name": "English",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Slovak",
+        "level": "B2"
+      },
+      {
+        "name": "German",
+        "level": "A1 completed; currently learning A2"
       }
     ],
-    "ctaTitle": "Let’s discuss your request",
-    "ctaText": "You do not need to know the technical diagnosis. A short description is a useful starting point.",
-    "contact": "Contact TiLADYS",
-    "services": "Explore services"
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–present · Student; degree in progress"
+      },
+      {
+        "school": "Secondary Industrial School of Electrical Engineering, Slovakia",
+        "course": "Intelligent Technologies",
+        "period": "2022–2025"
+      },
+      {
+        "school": "Higher Vocational School No. 7, Ukraine",
+        "course": "Information and Software Processing Operator",
+        "period": "2020–2022"
+      }
+    ]
   },
   "de": {
     "hero": {
-      "title": "Praktische IT-Hilfe mit einem klaren nächsten Schritt.",
+      "title": "Über TiLADYS",
       "subtitle": "TiLADYS unterstützt Privatkunden und kleine Unternehmen in Mülheim an der Ruhr und NRW bei Computern, Websites und digitalen Alltagsaufgaben."
     },
-    "supportTitle": "Unterstützung für Ihr Vorhaben",
-    "support": [
-      "Einrichtung, Reinigung, Upgrades und Fehlersuche für PCs und Laptops.",
-      "Erstellung und Verbesserung von Websites sowie technische Wartung.",
-      "Unternehmens-IT, Netzwerke und praktische Hilfe mit digitalen Werkzeugen."
-    ],
-    "expectTitle": "Was Sie erwarten können",
-    "steps": [
+    "ctaTitle": "Besprechen wir Ihr Anliegen",
+    "ctaText": "TiLADYS hilft Ihnen bei Ihrem IT-Problem. Entdecken Sie die Services oder kontaktieren Sie uns, um Ihr Anliegen zu besprechen.",
+    "contact": "TiLADYS kontaktieren",
+    "services": "Services ansehen",
+    "founderTitle": "Gründer",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Vladyslav Titov hat TiLADYS gegründet, führt das Unternehmen persönlich und erbringt dessen IT-Dienstleistungen.",
+    "languagesTitle": "Sprachen",
+    "educationTitle": "Ausbildung",
+    "languages": [
       {
-        "title": "Beschreiben Sie Ihr Anliegen",
-        "text": "Erzählen Sie, was passiert, was Sie erreichen möchten und welche Rahmenbedingungen wichtig sind."
+        "name": "Ukrainisch",
+        "level": "Muttersprache"
       },
       {
-        "title": "Möglichkeiten besprechen",
-        "text": "Wir prüfen Ihre Anfrage und besprechen die geplanten Arbeiten, den Umfang und den Preis vor Beginn."
+        "name": "Russisch",
+        "level": "Muttersprache"
       },
       {
-        "title": "Nächsten Schritt abstimmen",
-        "text": "Stellen Sie Fragen, klären Sie Einzelheiten und entscheiden Sie, wie Sie fortfahren möchten."
+        "name": "Englisch",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Slowakisch",
+        "level": "B2"
+      },
+      {
+        "name": "Deutsch",
+        "level": "A1 abgeschlossen; lernt derzeit A2"
       }
     ],
-    "ctaTitle": "Besprechen wir Ihr Anliegen",
-    "ctaText": "Sie müssen die technische Ursache nicht kennen. Eine kurze Beschreibung ist ein guter Anfang.",
-    "contact": "TiLADYS kontaktieren",
-    "services": "Services ansehen"
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–heute · Student; Studium läuft"
+      },
+      {
+        "school": "Sekundäre Industriefachschule für Elektrotechnik, Slowakei",
+        "course": "Intelligente Technologien",
+        "period": "2022–2025"
+      },
+      {
+        "school": "Höhere Berufsschule Nr. 7, Ukraine",
+        "course": "Bediener für Informations- und Softwareverarbeitung",
+        "period": "2020–2022"
+      }
+    ]
   },
   "uk": {
     "hero": {
-      "title": "Практична IT-допомога та зрозумілий наступний крок.",
+      "title": "Про TiLADYS",
       "subtitle": "TiLADYS допомагає приватним клієнтам і малому бізнесу в Мюльгаймі-на-Рурі та NRW з комп’ютерами, вебсайтами й повсякденними цифровими завданнями."
     },
-    "supportTitle": "Допомога з вашим завданням",
-    "support": [
-      "Налаштування, очищення, модернізація та діагностика ПК і ноутбуків.",
-      "Створення, покращення й технічне обслуговування вебсайтів.",
-      "IT для бізнесу, мережі та практична допомога з цифровими інструментами."
-    ],
-    "expectTitle": "Чого очікувати",
-    "steps": [
+    "ctaTitle": "Обговорімо ваше звернення",
+    "ctaText": "TiLADYS допоможе з вашою IT-проблемою. Перегляньте послуги або зв’яжіться з нами, щоб обговорити вашу потребу.",
+    "contact": "Зв’язатися з TiLADYS",
+    "services": "Переглянути послуги",
+    "founderTitle": "Засновник",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Владислав Тітов заснував TiLADYS, особисто керує бізнесом і надає його IT-послуги.",
+    "languagesTitle": "Мови",
+    "educationTitle": "Освіта",
+    "languages": [
       {
-        "title": "Опишіть потребу",
-        "text": "Розкажіть, що відбувається, чого хочете досягти та які обмеження важливі."
+        "name": "Українська",
+        "level": "Рідна"
       },
       {
-        "title": "Обговоримо варіанти",
-        "text": "Ми розглянемо звернення та обговоримо заплановані роботи, обсяг і ціну до початку."
+        "name": "Російська",
+        "level": "Рідна"
       },
       {
-        "title": "Узгодимо наступний крок",
-        "text": "Поставте запитання, уточніть деталі та вирішіть, як бажаєте діяти далі."
+        "name": "Англійська",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Словацька",
+        "level": "B2"
+      },
+      {
+        "name": "Німецька",
+        "level": "A1 завершено; зараз вивчає A2"
       }
     ],
-    "ctaTitle": "Обговорімо ваше звернення",
-    "ctaText": "Не потрібно самостійно визначати технічну причину. Почніть із короткого опису.",
-    "contact": "Зв’язатися з TiLADYS",
-    "services": "Переглянути послуги"
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–дотепер · Студент; навчання триває"
+      },
+      {
+        "school": "Середня промислова електротехнічна школа, Словаччина",
+        "course": "Інтелектуальні технології",
+        "period": "2022–2025"
+      },
+      {
+        "school": "Вище професійне училище № 7, Україна",
+        "course": "Оператор з обробки інформації та програмного забезпечення",
+        "period": "2020–2022"
+      }
+    ]
   },
   "ru": {
     "hero": {
-      "title": "Практическая IT-помощь и понятный следующий шаг.",
+      "title": "О TiLADYS",
       "subtitle": "TiLADYS помогает частным клиентам и малому бизнесу в Мюльхайме-на-Руре и NRW с компьютерами, сайтами и повседневными цифровыми задачами."
     },
-    "supportTitle": "Помощь с вашей задачей",
-    "support": [
-      "Настройка, чистка, модернизация и диагностика ПК и ноутбуков.",
-      "Создание, улучшение и техническое обслуживание сайтов.",
-      "IT для бизнеса, сети и практическая помощь с цифровыми инструментами."
-    ],
-    "expectTitle": "Чего ожидать",
-    "steps": [
+    "ctaTitle": "Обсудим ваше обращение",
+    "ctaText": "TiLADYS поможет с вашей IT-проблемой. Посмотрите услуги или свяжитесь с нами, чтобы обсудить вашу задачу.",
+    "contact": "Связаться с TiLADYS",
+    "services": "Посмотреть услуги",
+    "founderTitle": "Основатель",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Владислав Титов основал TiLADYS, лично управляет бизнесом и предоставляет его IT-услуги.",
+    "languagesTitle": "Языки",
+    "educationTitle": "Образование",
+    "languages": [
       {
-        "title": "Опишите потребность",
-        "text": "Расскажите, что происходит, чего вы хотите достичь и какие ограничения важны."
+        "name": "Украинский",
+        "level": "Родной"
       },
       {
-        "title": "Обсудим варианты",
-        "text": "Мы рассмотрим обращение и обсудим планируемые работы, объём и цену до начала."
+        "name": "Русский",
+        "level": "Родной"
       },
       {
-        "title": "Согласуем следующий шаг",
-        "text": "Задайте вопросы, уточните детали и решите, как хотите действовать дальше."
+        "name": "Английский",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Словацкий",
+        "level": "B2"
+      },
+      {
+        "name": "Немецкий",
+        "level": "A1 завершён; сейчас изучает A2"
       }
     ],
-    "ctaTitle": "Обсудим ваше обращение",
-    "ctaText": "Не нужно самостоятельно определять техническую причину. Начните с короткого описания.",
-    "contact": "Связаться с TiLADYS",
-    "services": "Посмотреть услуги"
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–настоящее время · Студент; обучение продолжается"
+      },
+      {
+        "school": "Средняя промышленная электротехническая школа, Словакия",
+        "course": "Интеллектуальные технологии",
+        "period": "2022–2025"
+      },
+      {
+        "school": "Высшее профессиональное училище № 7, Украина",
+        "course": "Оператор по обработке информации и программного обеспечения",
+        "period": "2020–2022"
+      }
+    ]
   },
   "sk": {
     "hero": {
-      "title": "Praktická IT pomoc a jasný ďalší krok.",
+      "title": "O TiLADYS",
       "subtitle": "TiLADYS pomáha domácnostiam a malým firmám v Mülheime an der Ruhr a NRW s počítačmi, webovými stránkami a bežnými digitálnymi úlohami."
     },
-    "supportTitle": "Podpora pre vašu úlohu",
-    "support": [
-      "Nastavenie, čistenie, modernizácia a diagnostika PC a notebookov.",
-      "Tvorba, úpravy a technická údržba webových stránok.",
-      "Firemné IT, siete a praktická pomoc s digitálnymi nástrojmi."
-    ],
-    "expectTitle": "Čo môžete očakávať",
-    "steps": [
+    "ctaTitle": "Porozprávajme sa o vašej požiadavke",
+    "ctaText": "TiLADYS vám pomôže s IT problémom. Pozrite si služby alebo nás kontaktujte a opíšte, čo potrebujete.",
+    "contact": "Kontaktovať TiLADYS",
+    "services": "Pozrieť služby",
+    "founderTitle": "Zakladateľ",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Vladyslav Titov založil TiLADYS, osobne vedie podnikanie a poskytuje jeho IT služby.",
+    "languagesTitle": "Jazyky",
+    "educationTitle": "Vzdelanie",
+    "languages": [
       {
-        "title": "Opíšte svoju požiadavku",
-        "text": "Povedzte nám, čo sa deje, čo chcete dosiahnuť a aké obmedzenia sú dôležité."
+        "name": "Ukrajinčina",
+        "level": "Materinský jazyk"
       },
       {
-        "title": "Prediskutujeme možnosti",
-        "text": "Posúdime požiadavku a pred začatím preberieme navrhované práce, rozsah a cenu."
+        "name": "Ruština",
+        "level": "Materinský jazyk"
       },
       {
-        "title": "Dohodneme ďalší krok",
-        "text": "Pýtajte sa, objasnite si podrobnosti a rozhodnite sa, ako chcete pokračovať."
+        "name": "Angličtina",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Slovenčina",
+        "level": "B2"
+      },
+      {
+        "name": "Nemčina",
+        "level": "A1 ukončená; aktuálne sa učí A2"
       }
     ],
-    "ctaTitle": "Porozprávajme sa o vašej požiadavke",
-    "ctaText": "Technickú príčinu nemusíte poznať. Začnite krátkym opisom.",
-    "contact": "Kontaktovať TiLADYS",
-    "services": "Pozrieť služby"
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–súčasnosť · Študent; štúdium prebieha"
+      },
+      {
+        "school": "Stredná priemyselná škola elektrotechnická, Slovensko",
+        "course": "Inteligentné technológie",
+        "period": "2022–2025"
+      },
+      {
+        "school": "Vyššia odborná škola č. 7, Ukrajina",
+        "course": "Operátor spracovania informácií a softvéru",
+        "period": "2020–2022"
+      }
+    ]
   },
   "fr": {
     "hero": {
-      "title": "Une aide informatique pratique et une prochaine étape claire.",
+      "title": "À propos de TiLADYS",
       "subtitle": "TiLADYS accompagne les particuliers et petites entreprises à Mülheim an der Ruhr et en NRW pour leurs ordinateurs, sites web et tâches numériques du quotidien."
     },
-    "supportTitle": "Un accompagnement pour votre besoin",
-    "support": [
-      "Installation, nettoyage, mises à niveau et diagnostic de PC et ordinateurs portables.",
-      "Création, amélioration et maintenance technique de sites web.",
-      "Informatique professionnelle, réseaux et aide pratique avec les outils numériques."
-    ],
-    "expectTitle": "À quoi vous attendre",
-    "steps": [
+    "ctaTitle": "Parlons de votre demande",
+    "ctaText": "TiLADYS peut vous aider à résoudre votre problème informatique. Découvrez les services ou contactez-nous pour expliquer votre besoin.",
+    "contact": "Contacter TiLADYS",
+    "services": "Découvrir les services",
+    "founderTitle": "Fondateur",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Vladyslav Titov a fondé TiLADYS, dirige personnellement l’activité et assure ses prestations informatiques.",
+    "languagesTitle": "Langues",
+    "educationTitle": "Formation",
+    "languages": [
       {
-        "title": "Décrivez votre besoin",
-        "text": "Expliquez ce qui se passe, votre objectif et les contraintes importantes."
+        "name": "Ukrainien",
+        "level": "Langue maternelle"
       },
       {
-        "title": "Discutons des possibilités",
-        "text": "Nous examinons la demande et discutons des travaux proposés, de leur périmètre et du prix avant de commencer."
+        "name": "Russe",
+        "level": "Langue maternelle"
       },
       {
-        "title": "Convenons de la prochaine étape",
-        "text": "Posez vos questions, précisez les détails et décidez comment vous souhaitez poursuivre."
+        "name": "Anglais",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Slovaque",
+        "level": "B2"
+      },
+      {
+        "name": "Allemand",
+        "level": "A1 terminé ; apprentissage du niveau A2 en cours"
       }
     ],
-    "ctaTitle": "Parlons de votre demande",
-    "ctaText": "Vous n’avez pas besoin de connaître la cause technique. Une courte description suffit pour commencer.",
-    "contact": "Contacter TiLADYS",
-    "services": "Découvrir les services"
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–aujourd’hui · Étudiant ; diplôme en cours"
+      },
+      {
+        "school": "École secondaire industrielle de génie électrique, Slovaquie",
+        "course": "Technologies intelligentes",
+        "period": "2022–2025"
+      },
+      {
+        "school": "École professionnelle supérieure n° 7, Ukraine",
+        "course": "Opérateur de traitement de l’information et des logiciels",
+        "period": "2020–2022"
+      }
+    ]
   }
 }

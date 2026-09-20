@@ -30,7 +30,6 @@ const nextConfig: NextConfig = {
     remotePatterns: [],
     localPatterns: [
       { pathname: '/**', search: '' },
-      { pathname: '/hero/tiladys-hero.webp', search: '?v=20260920' },
       { pathname: '/services/tiladys-service-*.webp', search: '?v=20260920' },
     ],
   },

@@ -347,9 +347,9 @@ main {
   max-height: 520px;
   object-fit: contain;
   object-position: top center;
-  border: 1px solid rgba(80, 218, 255, 0.25);
-  border-radius: 18px;
-  box-shadow: 0 26px 60px rgba(0, 8, 26, 0.38);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .hero h1 {
@@ -2891,11 +2891,11 @@ img.hero-visual {
 }
 
 /* Image proportions preserve the supplied devices and tools without cropping. */
-img.hero-visual { aspect-ratio: 1942 / 809; height: auto; object-position: center; background: #edf4fb; }
+img.hero-visual { aspect-ratio: 1; height: auto; object-position: center; background: transparent; }
 .service-visual { background: #eef5fa; border-color: #d1e6f0; box-shadow: 0 12px 30px rgba(7,24,55,.08); }
 .service-visual--compact { aspect-ratio: 3 / 2; }
 .service-visual--compact img { object-fit: contain; }
-.service-visual--panorama { aspect-ratio: 1942 / 809; min-height: 0; }
+.service-visual--panorama { aspect-ratio: 1; min-height: 0; }
 .services-card, .service-card { border-color: #d5e6ee; background: linear-gradient(160deg,#fff,#f5fbff); transition: border-color .18s ease, box-shadow .18s ease; }
 .services-card:hover, .service-card:hover { border-color: #8ecedc; box-shadow: 0 14px 30px rgba(7,24,55,.1); transform: none; }
 .footer-contact-link span { overflow-wrap: anywhere; }
@@ -2908,9 +2908,9 @@ img.hero-visual { aspect-ratio: 1942 / 809; height: auto; object-position: cente
 .featured-controls button:focus-visible { outline: 3px solid #00aee8; outline-offset: 3px; }
 .featured-project__image img, .project-detail-hero__image img, .project-detail-main-image img, .project-gallery img { height: auto; object-fit: contain; }
 .portfolio-card__image img { height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
-.about-introduction { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; padding-block: 80px; }
-.about-introduction h1 { color: #071837; font-size: clamp(36px,4vw,62px); line-height: 1.08; letter-spacing: -.035em; margin: 20px 0; }
-.about-introduction p { font-size: 19px; color: #536277; line-height: 1.7; margin-bottom: 28px; }
+.about-introduction { background: #071837; color: #fff; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; padding-block: 80px; }
+.about-introduction h1 { color: #fff; font-size: clamp(36px,4vw,62px); line-height: 1.08; letter-spacing: -.035em; margin: 20px 0; }
+.about-introduction p { font-size: 19px; color: #d4e5f7; line-height: 1.7; margin-bottom: 28px; }
 .about-introduction img { width: 100%; height: auto; border-radius: 20px; }
 .about-support-grid, .about-expect ol { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 .about-support h2, .about-expect h2, .about-contact h2 { color: #071837; font-size: clamp(28px,3vw,40px); }
@@ -2923,7 +2923,8 @@ img.hero-visual { aspect-ratio: 1942 / 809; height: auto; object-position: cente
 .about-expect p, .about-contact p { color: #536277; line-height: 1.7; }
 .about-contact { border-top: 1px solid #d8e8ef; padding-bottom: 80px; }
 .legal-review { padding: 24px; background: #fff8e9; border: 1px solid #ead7ac; border-radius: 12px; }
-.legal-content { max-width: 900px; line-height: 1.8; overflow-wrap: anywhere; }
+.legal-content { width: min(100%, 1120px); max-width: none; margin-inline: auto; padding: 56px clamp(20px, 4vw, 48px); line-height: 1.8; overflow-wrap: anywhere; }
+.legal-content section > p, .legal-review p { max-width: 80ch; }
 .legal-content section { margin-block: 36px; }
 .legal-content address { font-style: normal; }
 @media (max-width: 900px) {
@@ -2935,10 +2936,36 @@ img.hero-visual { aspect-ratio: 1942 / 809; height: auto; object-position: cente
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .portfolio-card:hover, .portfolio-card:hover img { transform: none; }
 }
-/* The panorama no longer needs the old overlapping hero gradient. */
-.visual-page-hero__visual { aspect-ratio: 1942 / 809; height: auto; min-height: 0; align-self: center; }
+/* Keep the transparent foreground artwork fully visible. */
+.visual-page-hero__visual { aspect-ratio: 1; height: auto; min-height: 0; align-self: center; }
 .visual-page-hero__visual::before { display: none; }
 .visual-page-hero__visual img { min-height: 0; height: auto; border-radius: 18px; }
 @media (max-width: 1100px) {
   .visual-page-hero__visual { width: calc(100% - 36px); margin: 0 auto 32px; }
+}
+
+/* Founder profile and readable legal navigation. */
+.founder-profile { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); align-items: center; gap: clamp(28px, 5vw, 72px); }
+.founder-profile h2, .founder-details h2 { color: #071837; font-size: clamp(28px, 3vw, 40px); margin-bottom: 20px; }
+.founder-profile p, .founder-details p { color: #536277; line-height: 1.7; }
+.founder-portrait { position: relative; aspect-ratio: 4 / 5; width: 100%; max-width: 320px; overflow: hidden; border-radius: 20px; background: #071837; }
+.founder-portrait img { object-fit: cover; }
+.founder-portrait__fallback { position: absolute; inset: 0; display: grid; place-items: center; color: #8cdeef; background: radial-gradient(circle at 70% 25%, #154366, #071837 75%); font-size: clamp(64px, 8vw, 110px); font-weight: 700; }
+.founder-details { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 72px); padding-top: 0; }
+.founder-languages { margin: 0; }
+.founder-languages > div { padding: 16px 0; border-bottom: 1px solid #d8e8ef; }
+.founder-languages dt { font-weight: 700; color: #071837; }
+.founder-languages dd { margin: 6px 0 0; color: #536277; line-height: 1.6; }
+.founder-education { list-style: none; margin: 0; padding: 0; }
+.founder-education li { padding: 20px 24px; margin-bottom: 16px; border: 1px solid #d8e8ef; border-radius: 16px; background: #f2f8fc; }
+.founder-education h3 { margin: 0 0 8px; color: #071837; }
+.founder-education p { margin: 0 0 8px; }
+.founder-education small { color: #365569; font-size: 14px; }
+.legal-social-links { display: flex; flex-wrap: wrap; gap: 16px 28px; margin-block: 24px; }
+.legal-social-links .social-link { color: #071837; overflow-wrap: anywhere; }
+.legal-social-links .social-link__icon { color: #087baf; background: #eaf4fa; flex-shrink: 0; }
+@media (max-width: 760px) {
+  .founder-profile, .founder-details { grid-template-columns: minmax(0, 1fr); }
+  .founder-portrait { justify-self: center; }
+  .legal-content { padding-block: 36px; }
 }

@@ -3,8 +3,7 @@
     "review": "Owner review required — incomplete draft",
     "notice": "These pages document confirmed contact details and the website’s current functions. Required business and privacy information is still unresolved; these are not final legal notices.",
     "contact": "Contact details",
-    "operator": "Registered operator and legal form: OWNER CONFIRMATION REQUIRED. TiLADYS is the confirmed brand name; it does not identify a verified legal entity.",
-    "impressumMissing": "Confirm the full registered operator name, legal form, representative where applicable, registration details and VAT identification where applicable, and any legally required professional or supervisory details.",
+    "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [
       [
         "Inquiries and replies",
@@ -24,23 +23,20 @@
       ],
       [
         "Retention and requests",
-        "A retention period for inquiries, replies and security records has not been confirmed. The code does not automatically delete inquiries on a schedule. Contact TiLADYS using the details below for questions about your data. Applicable rights, legal bases, recipients and supervisory-authority information must be completed after owner review."
+        "A retention period for inquiries, replies and security records has not been confirmed. The code does not automatically delete inquiries on a schedule. Contact TiLADYS using the details below for questions about your data."
       ]
     ],
     "attachments": "Optional images, when enabled, are limited to two JPEG, PNG or WebP files of up to 1 MiB each. The server checks file signatures, dimensions and total size, converts images to WebP, resizes them and removes metadata. Converted files are stored with the inquiry in PostgreSQL. Authenticated administrators can preview, download and delete attachments; there is no public attachment URL or email attachment forwarding. No automatic customer-file deletion period is configured. Backup deletion behavior requires confirmation.",
     "attachmentsTitle": "Optional inquiry images",
-    "privacyMissing": "Confirm the data controller; hosting, database, SMTP and any external image providers; processing locations and transfers; applicable legal bases and rights; hosting logs; retention and backup deletion for inquiries, attachments, sessions and audits; and the competent supervisory authority. Upload activation also requires confirmation of the deployed request limits and retention policy.",
     "processTitle": "How this website handles a request",
     "process": "TiLADYS presents PC/laptop, website and business IT services. The contact form sends an inquiry to the dashboard. It contains no checkout, payment or automatic appointment-booking function. The service pages describe discussing the requested work, scope and price before starting. Any further agreement requires the actual service details to be clarified.",
-    "termsMissing": "Owner review is required for the contracting entity, how contracts are concluded, any applicable consumer information, and any payment, cancellation, warranty or liability terms. No unconfirmed policy is stated here.",
-    "missing": "Information still to be confirmed"
+    "socialText": "You can also contact TiLADYS through its social media accounts, explore our services or browse the portfolio."
   },
   "de": {
     "review": "Prüfung durch den Betreiber erforderlich — unvollständiger Entwurf",
     "notice": "Diese Seiten beschreiben bestätigte Kontaktdaten und die aktuellen Funktionen der Website. Erforderliche Unternehmens- und Datenschutzangaben sind noch offen; dies sind keine abschließenden Rechtstexte.",
     "contact": "Kontaktdaten",
-    "operator": "Eingetragener Betreiber und Rechtsform: BESTÄTIGUNG DURCH DEN BETREIBER ERFORDERLICH. TiLADYS ist der bestätigte Markenname, aber keine verifizierte Angabe zur juristischen Person.",
-    "impressumMissing": "Vollständigen eingetragenen Betreibernamen, Rechtsform, gegebenenfalls Vertretung, Registerangaben und Umsatzsteuer-Identifikationsnummer sowie gegebenenfalls erforderliche Berufs- oder Aufsichtsangaben bestätigen.",
+    "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [
       [
         "Anfragen und Antworten",
@@ -60,23 +56,20 @@
       ],
       [
         "Speicherung und Auskunft",
-        "Eine Speicherdauer für Anfragen, Antworten und Sicherheitsdaten ist nicht bestätigt. Der Code löscht Anfragen nicht automatisch nach einem Zeitplan. Bei Fragen zu Ihren Daten kontaktieren Sie TiLADYS über die unten genannten Kontaktdaten. Anwendbare Rechte, Rechtsgrundlagen, Empfänger und Aufsichtsbehördenangaben müssen nach Betreiberprüfung ergänzt werden."
+        "Eine Speicherdauer für Anfragen, Antworten und Sicherheitsdaten ist nicht bestätigt. Der Code löscht Anfragen nicht automatisch nach einem Zeitplan. Bei Fragen zu Ihren Daten kontaktieren Sie TiLADYS über die unten genannten Kontaktdaten."
       ]
     ],
     "attachments": "Optionale Bilder sind bei aktivierter Funktion auf zwei JPEG-, PNG- oder WebP-Dateien mit jeweils höchstens 1 MiB begrenzt. Der Server prüft Dateisignaturen, Abmessungen und Gesamtgröße, wandelt Bilder in WebP um, verkleinert sie und entfernt Metadaten. Die umgewandelten Dateien werden mit der Anfrage in PostgreSQL gespeichert. Authentifizierte Administratoren können Anhänge ansehen, herunterladen und löschen. Es gibt keine öffentliche Anhang-URL und keine Weiterleitung als E-Mail-Anhang. Eine automatische Löschfrist für Kundendateien ist nicht konfiguriert. Die Löschung aus Sicherungen muss geklärt werden.",
     "attachmentsTitle": "Optionale Bilder zur Anfrage",
-    "privacyMissing": "Verantwortlichen, Hosting-, Datenbank-, SMTP- und gegebenenfalls externe Bildanbieter, Verarbeitungsorte und Übermittlungen, anwendbare Rechtsgrundlagen und Rechte, Hosting-Protokolle, Speicherfristen und Sicherungslöschung für Anfragen, Anhänge, Sitzungen und Protokolle sowie die zuständige Aufsichtsbehörde bestätigen. Vor Aktivierung der Uploads sind die tatsächlichen Anfragegrößenlimits und die Aufbewahrungsregelung zu bestätigen.",
     "processTitle": "So verarbeitet diese Website eine Anfrage",
     "process": "TiLADYS stellt PC-/Laptop-, Website- und Unternehmens-IT-Services vor. Das Kontaktformular sendet eine Anfrage an das Dashboard. Es enthält weder Checkout noch Zahlung oder automatische Terminbuchung. Die Serviceseiten beschreiben die Abstimmung von Arbeit, Umfang und Preis vor Beginn. Weitere Vereinbarungen erfordern die Klärung der konkreten Leistung.",
-    "termsMissing": "Der Betreiber muss Vertragspartner, Vertragsschluss, gegebenenfalls erforderliche Verbraucherinformationen sowie Zahlungs-, Widerrufs-, Gewährleistungs- oder Haftungsbedingungen prüfen. Hier werden keine unbestätigten Regelungen festgelegt.",
-    "missing": "Noch zu bestätigende Angaben"
+    "socialText": "Sie können TiLADYS auch über die Social-Media-Konten kontaktieren, unsere Services ansehen oder das Portfolio durchstöbern."
   },
   "uk": {
     "review": "Потрібна перевірка власника — неповна чернетка",
     "notice": "Ці сторінки описують підтверджені контакти та поточні функції сайту. Обов’язкові відомості про діяльність і конфіденційність ще не з’ясовані; це не остаточні правові тексти.",
     "contact": "Контактні дані",
-    "operator": "Зареєстрований оператор і правова форма: ПОТРІБНЕ ПІДТВЕРДЖЕННЯ ВЛАСНИКА. TiLADYS — підтверджена назва бренду, а не перевірена назва юридичної особи.",
-    "impressumMissing": "Підтвердити повне зареєстроване ім’я або найменування оператора, правову форму, представника за потреби, реєстраційні дані, ідентифікатор ПДВ за наявності та необхідні професійні чи наглядові відомості.",
+    "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [
       [
         "Звернення та відповіді",
@@ -96,23 +89,20 @@
       ],
       [
         "Зберігання та звернення щодо даних",
-        "Строк зберігання звернень, відповідей і записів безпеки не підтверджено. Код не видаляє звернення автоматично за розкладом. Із запитаннями про дані звертайтеся до TiLADYS за контактами нижче. Застосовні права, правові підстави, одержувачів і дані наглядового органу потрібно доповнити після перевірки власника."
+        "Строк зберігання звернень, відповідей і записів безпеки не підтверджено. Код не видаляє звернення автоматично за розкладом. Із запитаннями про дані звертайтеся до TiLADYS за контактами нижче."
       ]
     ],
     "attachments": "Якщо функцію ввімкнено, можна додати два зображення JPEG, PNG або WebP до 1 МіБ кожне. Сервер перевіряє сигнатури, розміри й загальний обсяг, перетворює зображення на WebP, зменшує їх і видаляє метадані. Перетворені файли зберігаються зі зверненням у PostgreSQL. Авторизовані адміністратори можуть переглядати, завантажувати й видаляти вкладення. Публічної адреси вкладень та пересилання їх поштою немає. Автоматичний строк видалення клієнтських файлів не налаштовано. Видалення з резервних копій потребує уточнення.",
     "attachmentsTitle": "Необов’язкові зображення до звернення",
-    "privacyMissing": "Підтвердити відповідального за дані; постачальників хостингу, бази, SMTP та зовнішніх зображень; місця обробки й передачі; правові підстави та права; журнали хостингу; строки зберігання й видалення резервних копій звернень, вкладень, сесій і журналів; компетентний наглядовий орган. Перед увімкненням завантажень підтвердити фактичні ліміти запитів і правила зберігання.",
     "processTitle": "Як сайт обробляє звернення",
     "process": "TiLADYS представляє послуги для ПК і ноутбуків, вебсайтів та IT для бізнесу. Контактна форма надсилає звернення до панелі. Вона не містить оформлення покупки, оплати чи автоматичного бронювання. Сторінки послуг описують обговорення робіт, обсягу й ціни до початку. Подальші домовленості потребують уточнення конкретної послуги.",
-    "termsMissing": "Власник має перевірити сторону договору, порядок його укладення, необхідну інформацію для споживачів та умови оплати, скасування, гарантій або відповідальності. Тут не встановлюються непідтверджені правила.",
-    "missing": "Відомості, що потребують підтвердження"
+    "socialText": "Ви також можете зв’язатися з TiLADYS через соціальні мережі, переглянути послуги або портфоліо."
   },
   "ru": {
     "review": "Нужна проверка владельца — неполный черновик",
     "notice": "Эти страницы описывают подтверждённые контакты и текущие функции сайта. Обязательные сведения о деятельности и конфиденциальности ещё не уточнены; это не окончательные правовые тексты.",
     "contact": "Контактные данные",
-    "operator": "Зарегистрированный оператор и правовая форма: НУЖНО ПОДТВЕРЖДЕНИЕ ВЛАДЕЛЬЦА. TiLADYS — подтверждённое название бренда, а не проверенное наименование юридического лица.",
-    "impressumMissing": "Подтвердить полное зарегистрированное имя или наименование оператора, правовую форму, представителя при необходимости, регистрационные данные, идентификатор НДС при наличии и необходимые профессиональные или надзорные сведения.",
+    "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [
       [
         "Обращения и ответы",
@@ -132,23 +122,20 @@
       ],
       [
         "Хранение и вопросы о данных",
-        "Срок хранения обращений, ответов и записей безопасности не подтверждён. Код не удаляет обращения автоматически по расписанию. С вопросами о данных обращайтесь в TiLADYS по контактам ниже. Применимые права, правовые основания, получателей и сведения надзорного органа необходимо дополнить после проверки владельца."
+        "Срок хранения обращений, ответов и записей безопасности не подтверждён. Код не удаляет обращения автоматически по расписанию. С вопросами о данных обращайтесь в TiLADYS по контактам ниже."
       ]
     ],
     "attachments": "Если функция включена, можно добавить два изображения JPEG, PNG или WebP до 1 МиБ каждое. Сервер проверяет сигнатуры, размеры и общий объём, преобразует изображения в WebP, уменьшает их и удаляет метаданные. Преобразованные файлы хранятся с обращением в PostgreSQL. Авторизованные администраторы могут просматривать, скачивать и удалять вложения. Публичных адресов вложений и пересылки их по почте нет. Автоматический срок удаления клиентских файлов не настроен. Удаление из резервных копий требует уточнения.",
     "attachmentsTitle": "Необязательные изображения к обращению",
-    "privacyMissing": "Подтвердить ответственного за данные; поставщиков хостинга, базы, SMTP и внешних изображений; места обработки и передачи; правовые основания и права; журналы хостинга; сроки хранения и удаления резервных копий обращений, вложений, сессий и журналов; компетентный надзорный орган. Перед включением загрузок подтвердить фактические лимиты запросов и правила хранения.",
     "processTitle": "Как сайт обрабатывает обращение",
     "process": "TiLADYS представляет услуги для ПК и ноутбуков, сайтов и IT для бизнеса. Контактная форма отправляет обращение в панель. В ней нет оформления покупки, оплаты или автоматического бронирования. Страницы услуг описывают обсуждение работ, объёма и цены до начала. Дальнейшие договорённости требуют уточнения конкретной услуги.",
-    "termsMissing": "Владелец должен проверить сторону договора, порядок его заключения, необходимую информацию для потребителей и условия оплаты, отмены, гарантий или ответственности. Здесь не устанавливаются неподтверждённые правила.",
-    "missing": "Сведения, требующие подтверждения"
+    "socialText": "Вы также можете связаться с TiLADYS через социальные сети, посмотреть услуги или портфолио."
   },
   "sk": {
     "review": "Vyžaduje sa kontrola prevádzkovateľa — neúplný návrh",
     "notice": "Tieto stránky opisujú potvrdené kontaktné údaje a aktuálne funkcie webu. Povinné obchodné údaje a informácie o ochrane súkromia ešte nie sú vyriešené; nejde o konečné právne texty.",
     "contact": "Kontaktné údaje",
-    "operator": "Registrovaný prevádzkovateľ a právna forma: VYŽADUJE SA POTVRDENIE PREVÁDZKOVATEĽA. TiLADYS je potvrdená značka, nie overené označenie právnickej osoby.",
-    "impressumMissing": "Potvrďte úplné registrované meno alebo názov prevádzkovateľa, právnu formu, prípadného zástupcu, registračné údaje a prípadné IČ DPH a požadované profesijné alebo dozorné údaje.",
+    "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [
       [
         "Požiadavky a odpovede",
@@ -168,23 +155,20 @@
       ],
       [
         "Uchovávanie a otázky o údajoch",
-        "Doba uchovávania požiadaviek, odpovedí a bezpečnostných záznamov nie je potvrdená. Kód neodstraňuje požiadavky automaticky podľa plánu. S otázkami o údajoch kontaktujte TiLADYS pomocou údajov nižšie. Príslušné práva, právne základy, príjemcov a dozorný orgán treba doplniť po kontrole prevádzkovateľa."
+        "Doba uchovávania požiadaviek, odpovedí a bezpečnostných záznamov nie je potvrdená. Kód neodstraňuje požiadavky automaticky podľa plánu. S otázkami o údajoch kontaktujte TiLADYS pomocou údajov nižšie."
       ]
     ],
     "attachments": "Ak je funkcia zapnutá, možno pridať dva obrázky JPEG, PNG alebo WebP do 1 MiB každý. Server kontroluje signatúry, rozmery a celkovú veľkosť, prevádza obrázky na WebP, zmenšuje ich a odstraňuje metadáta. Súbory sa ukladajú s požiadavkou v PostgreSQL. Prihlásení správcovia môžu prílohy zobraziť, stiahnuť a odstrániť. Prílohy nemajú verejnú URL a neposielajú sa ako e-mailové prílohy. Automatická lehota odstránenia zákazníckych súborov nie je nastavená. Odstránenie zo záloh treba potvrdiť.",
     "attachmentsTitle": "Voliteľné obrázky k požiadavke",
-    "privacyMissing": "Potvrďte prevádzkovateľa údajov; poskytovateľov hostingu, databázy, SMTP a externých obrázkov; lokality a prenosy; právne základy a práva; hostingové záznamy; lehoty uchovávania a mazanie záloh požiadaviek, príloh, relácií a auditov; príslušný dozorný orgán. Pred aktiváciou nahrávania potvrďte skutočné limity požiadaviek a pravidlá uchovávania.",
     "processTitle": "Ako tento web spracúva požiadavku",
     "process": "TiLADYS predstavuje služby pre PC a notebooky, webové stránky a firemné IT. Kontaktný formulár odošle požiadavku do administrácie. Neobsahuje pokladňu, platbu ani automatickú rezerváciu termínu. Stránky služieb opisujú prerokovanie práce, rozsahu a ceny pred začatím. Ďalšia dohoda vyžaduje objasnenie konkrétnej služby.",
-    "termsMissing": "Prevádzkovateľ musí preveriť zmluvnú stranu, spôsob uzavretia zmluvy, príslušné informácie pre spotrebiteľa a podmienky platby, zrušenia, záruky alebo zodpovednosti. Tu sa nestanovujú nepotvrdené pravidlá.",
-    "missing": "Údaje, ktoré treba potvrdiť"
+    "socialText": "TiLADYS môžete kontaktovať aj cez sociálne siete, pozrieť si služby alebo portfólio."
   },
   "fr": {
     "review": "Vérification du propriétaire requise — projet incomplet",
     "notice": "Ces pages décrivent les coordonnées confirmées et les fonctions actuelles du site. Des informations obligatoires sur l’activité et la confidentialité restent à préciser ; ces textes ne sont pas définitifs.",
     "contact": "Coordonnées",
-    "operator": "Exploitant enregistré et forme juridique : CONFIRMATION DU PROPRIÉTAIRE REQUISE. TiLADYS est la marque confirmée, sans identification vérifiée d’une personne morale.",
-    "impressumMissing": "Confirmer le nom complet enregistré de l’exploitant, sa forme juridique, son représentant le cas échéant, son immatriculation et son numéro de TVA le cas échéant, ainsi que les informations professionnelles ou de contrôle requises.",
+    "operator": "TiLADYS — Vladyslav Titov",
     "privacySections": [
       [
         "Demandes et réponses",
@@ -204,15 +188,13 @@
       ],
       [
         "Conservation et demandes relatives aux données",
-        "La durée de conservation des demandes, réponses et données de sécurité n’est pas confirmée. Le code ne supprime pas automatiquement les demandes selon un calendrier. Pour toute question sur vos données, contactez TiLADYS aux coordonnées ci-dessous. Les droits applicables, bases juridiques, destinataires et autorité de contrôle doivent être précisés après vérification du propriétaire."
+        "La durée de conservation des demandes, réponses et données de sécurité n’est pas confirmée. Le code ne supprime pas automatiquement les demandes selon un calendrier. Pour toute question sur vos données, contactez TiLADYS aux coordonnées ci-dessous."
       ]
     ],
     "attachments": "Lorsque la fonction est activée, deux images JPEG, PNG ou WebP de 1 Mio chacune au maximum peuvent être jointes. Le serveur vérifie les signatures, dimensions et taille totale, convertit les images en WebP, les redimensionne et supprime les métadonnées. Les fichiers convertis sont conservés avec la demande dans PostgreSQL. Les administrateurs authentifiés peuvent les consulter, télécharger et supprimer. Il n’existe aucune URL publique de pièce jointe ni transmission en pièce jointe par e-mail. Aucun délai automatique de suppression des fichiers clients n’est configuré. La suppression des sauvegardes reste à confirmer.",
     "attachmentsTitle": "Images facultatives des demandes",
-    "privacyMissing": "Confirmer le responsable du traitement ; les prestataires d’hébergement, de base de données, SMTP et d’images externes ; les lieux et transferts ; les bases juridiques et droits ; les journaux d’hébergement ; les durées de conservation et suppression des sauvegardes des demandes, pièces jointes, sessions et audits ; l’autorité de contrôle compétente. Avant d’activer les images, confirmer les limites réelles des requêtes et la politique de conservation.",
     "processTitle": "Comment ce site traite une demande",
     "process": "TiLADYS présente des services pour PC et ordinateurs portables, sites web et informatique professionnelle. Le formulaire envoie une demande au tableau de bord. Il ne comprend ni commande avec paiement, ni paiement, ni prise de rendez-vous automatique. Les pages de services décrivent une discussion sur les travaux, leur périmètre et le prix avant de commencer. Tout accord ultérieur nécessite de préciser le service concerné.",
-    "termsMissing": "Le propriétaire doit vérifier l’entité contractante, la conclusion des contrats, les informations applicables aux consommateurs et les conditions de paiement, annulation, garantie ou responsabilité. Aucune politique non confirmée n’est définie ici.",
-    "missing": "Informations restant à confirmer"
+    "socialText": "Vous pouvez aussi contacter TiLADYS sur ses réseaux sociaux, découvrir les services ou parcourir le portfolio."
   }
 }

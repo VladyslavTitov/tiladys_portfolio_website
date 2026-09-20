@@ -1,16 +1,14 @@
 import Link from 'next/link';
 import {
-  AtSign,
   Bolt,
   Globe2,
-  Instagram,
   Mail,
   MapPin,
   MessageCircleMore,
   Phone,
-  Send,
 } from 'lucide-react';
-import { threadsAccountConfirmed, threadsUrl } from '@/lib/business';
+import { socialAccounts } from '@/lib/business';
+import { socialIcons } from '@/components/SocialLinks';
 import { Shell } from '@/components/Shell';
 import { ContactForm } from '@/components/ContactForm';
 import { ContactCta } from '@/components/ContactCta';
@@ -35,12 +33,9 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
   const requestedServiceId = contactServiceId(requestedService);
   const initialService = requestedServiceId ?? '';
   const contacts = [
-    ...(threadsAccountConfirmed ? [{ key: 'threads' as const, value: '@tiladys.de', href: threadsUrl, Icon: AtSign, tone: 'blue' }] : []),
+    ...socialAccounts.map(({ key, handle, href, tone }) => ({ key, value: handle, href, tone, Icon: socialIcons[key] })),
     { key: 'email', value: 'contact@tiladys.com', href: 'mailto:contact@tiladys.com', Icon: Mail, tone: 'blue' },
     { key: 'phone', value: '+49 163 7235608', href: 'tel:+491637235608', Icon: Phone, tone: 'blue' },
-    { key: 'whatsapp', value: '+49 163 7235608', href: 'https://wa.me/491637235608', Icon: MessageCircleMore, tone: 'green' },
-    { key: 'telegram', value: 't.me/tiladys_support', href: 'https://t.me/tiladys_support', Icon: Send, tone: 'sky' },
-    { key: 'instagram', value: '@tiladys.de', href: 'https://www.instagram.com/tiladys.de', Icon: Instagram, tone: 'pink' },
     { key: 'location', value: t(locale).footer.location, href: 'https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6', Icon: MapPin, tone: 'blue' },
   ] as const;
 

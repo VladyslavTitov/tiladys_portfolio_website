@@ -61,7 +61,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
   const type = translated(project.type, locale);
   const workItems: string[] = project.workItems?.[locale] || project.workItems?.en || project.workItems?.ru || [];
   const images: ProjectImage[] = project.images ?? [];
-  const cover = images[0]?.url || project.coverImage || '/services/tiladys-service-website-creation.webp?v=20260920';
+  const cover = images[0]?.url || project.coverImage || '/services/tiladys-service-website-creation.png';
   const date = project.projectDate ? new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric' }).format(new Date(project.projectDate)) : '—';
   const category = projectCategoryLabel(project.category, locale);
   const linksLabel = projectLinksAvailable(locale);

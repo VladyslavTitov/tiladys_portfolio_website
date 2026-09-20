@@ -1,7 +1,7 @@
 'use client';
 import Image, { type ImageLoaderProps } from 'next/image';
 
-const fallback = '/services/tiladys-service-website-creation.webp?v=20260920';
+const fallback = '/services/tiladys-service-website-creation.png';
 function mediaLoader({ src, width }: ImageLoaderProps) {
   const url = new URL(src, 'http://local.invalid');
   url.searchParams.set('w', String(Math.min(width, 1920)));

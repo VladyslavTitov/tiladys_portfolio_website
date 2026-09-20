@@ -37,7 +37,7 @@ export const serviceDefinitions: ServiceDefinition[] = [
     { code: 'E11', label: label('Office PC assembly', 'Office-PC-Zusammenbau', 'Складання офісного ПК', 'Сборка офисного ПК', 'Zostavenie kancelárskeho PC', 'Assemblage PC bureautique') },
     { code: 'D04', label: label('Local backup setup', 'Lokale Backup-Einrichtung', 'Налаштування локальної копії', 'Настройка локальной копии', 'Nastavenie lokálnej zálohy', 'Configuration de sauvegarde locale') },
   ], related: ['websites', 'business-it'] },
-  { id: 'websites', image: '/services/tiladys-service-website-creation.webp?v=20260920', priceRefs: [
+  { id: 'websites', image: '/services/tiladys-service-website-creation.png', priceRefs: [
     { code: 'H02', label: label('Subscription website', 'Website im Abonnement', 'Сайт за підпискою', 'Сайт по подписке', 'Web na predplatné', 'Site web par abonnement') },
     { code: 'H06', label: label('One-page website ownership', 'Onepage-Website zum Kauf', 'Односторінковий сайт у власність', 'Одностраничный сайт в собственность', 'Jednostránkový web do vlastníctva', 'Site one-page en pleine propriété') },
     { code: 'H10', label: label('Landing page', 'Landingpage', 'Лендінг', 'Лендинг', 'Landing page', 'Page d’atterrissage') },

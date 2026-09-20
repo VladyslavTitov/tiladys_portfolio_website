@@ -36,7 +36,7 @@ function translated(value: Record<string, string> | undefined, locale: string) {
 }
 
 function imageFor(project: PublicProject) {
-  return project.images?.[0]?.url || project.coverImage || '/services/tiladys-service-website-creation.webp?v=20260920';
+  return project.images?.[0]?.url || project.coverImage || '/services/tiladys-service-website-creation.png';
 }
 
 export function PortfolioExplorer({ locale, projects }: { locale: string; projects: PublicProject[] }) {

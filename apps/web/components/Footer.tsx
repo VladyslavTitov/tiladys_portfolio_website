@@ -1,15 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Mail, MapPin, Phone, Send, MessageCircleMore, AtSign } from 'lucide-react';
-import { threadsAccountConfirmed, threadsUrl } from '@/lib/business';
+import { Mail, MapPin, Phone } from 'lucide-react';
+import { SocialLinks } from './SocialLinks';
 import { t } from '@/lib/i18n';
-
-const socialLinks = [
-  ...(threadsAccountConfirmed ? [{ label: 'Threads', handle: '@tiladys.de', href: threadsUrl, Icon: AtSign }] : []),
-  { label: 'WhatsApp', handle: '+49 163 7235608', href: 'https://wa.me/491637235608', Icon: MessageCircleMore },
-  { label: 'Telegram', handle: '@tiladys_support', href: 'https://t.me/tiladys_support', Icon: Send },
-  { label: 'Instagram', handle: '@tiladys.de', href: 'https://www.instagram.com/tiladys.de', Icon: Instagram },
-] as const;
 
 export function Footer({ locale }: { locale: string }) {
   const c = t(locale);
@@ -58,12 +51,7 @@ export function Footer({ locale }: { locale: string }) {
 
         <section className="footer-column">
           <h2>{c.footer.socialTitle}</h2>
-          {socialLinks.map(({ label, handle, href, Icon }) => (
-            <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="social-link" aria-label={`${label}: ${handle}`}>
-              <span className="social-link__icon"><Icon aria-hidden="true" size={18} /></span>
-              <span>{handle}</span>
-            </a>
-          ))}
+          <SocialLinks />
         </section>
 
         <section className="footer-column footer-legal-column">

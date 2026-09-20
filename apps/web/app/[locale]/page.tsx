@@ -54,7 +54,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <span>{extra.trust[2]}</span>
           </div>
         </div>
-        <Image className="hero-visual" src="/hero/tiladys-hero.webp?v=20260920" width={1942} height={809} sizes="(max-width: 768px) 100vw, 50vw" alt="" aria-hidden="true" priority />
+        <Image className="hero-visual" src="/hero/tiladys-hero-objects-transparent.png" width={1254} height={1254} sizes="(max-width: 768px) 100vw, 50vw" alt="" aria-hidden="true" priority />
       </section>
 
       <section className="services-section section" aria-labelledby="services-heading">

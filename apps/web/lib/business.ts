@@ -8,6 +8,11 @@ export const businessStructuredData = {
   areaServed: ['Mülheim an der Ruhr', 'Nordrhein-Westfalen'],
 };
 
-// Enable after the owner confirms that this Threads account belongs to TiLADYS.
-export const threadsAccountConfirmed: boolean = false;
-export const threadsUrl = 'https://www.threads.net/@tiladys.de';
+// Profile supplied and confirmed by the owner.
+export const threadsUrl = 'https://www.threads.com/@tiladys.de';
+export const socialAccounts = [
+  { key: 'threads', label: 'Threads', handle: '@tiladys.de', href: threadsUrl, tone: 'blue' },
+  { key: 'whatsapp', label: 'WhatsApp', handle: '+49 163 7235608', href: 'https://wa.me/491637235608', tone: 'green' },
+  { key: 'telegram', label: 'Telegram', handle: '@tiladys_support', href: 'https://t.me/tiladys_support', tone: 'sky' },
+  { key: 'instagram', label: 'Instagram', handle: '@tiladys.de', href: 'https://www.instagram.com/tiladys.de', tone: 'pink' },
+] as const;
