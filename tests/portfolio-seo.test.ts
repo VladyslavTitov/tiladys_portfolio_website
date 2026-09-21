@@ -86,3 +86,16 @@ test('featured migration is one isolated forward-only column drop', () => {
   const additive = readFileSync(new URL('../packages/db/prisma/migrations/20260921101000_project_seo_and_slug_history/migration.sql', import.meta.url), 'utf8');
   assert.doesNotMatch(additive, /\b(DROP|TRUNCATE|DELETE FROM|UPDATE "Project")\b/i);
 });
+
+
+test('portfolio distinguishes successful empty results from API failure and malformed responses', async () => {
+  const { loadPortfolio, portfolioStateCopy } = await import('../apps/web/lib/portfolio-state');
+  assert.deepEqual(await loadPortfolio(async () => []), { state: 'ready', projects: [] });
+  assert.deepEqual(await loadPortfolio(async () => { throw new Error('API 500'); }), { state: 'unavailable' });
+  assert.deepEqual(await loadPortfolio(async () => { throw new DOMException('Timed out', 'TimeoutError'); }), { state: 'unavailable' });
+  assert.deepEqual(await loadPortfolio(async () => ({ error: 'upstream failure' }) as never), { state: 'unavailable' });
+  for (const locale of locales) {
+    const copy = portfolioStateCopy(locale);
+    assert.ok(copy.loading && copy.title && copy.text && copy.retry);
+  }
+});

@@ -25,11 +25,16 @@ const projects = ['alpha', 'beta', 'gamma', 'draft', 'archived'].map((slug, inde
 }));
 const priceData = await readFile('packages/db/prisma/price-data.json', 'utf8');
 let visible = projects;
+let listFailure = false;
+let listDelay = 0;
 const fixture = createServer((req, res) => {
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Cache-Control', 'no-store');
   if (req.url === '/api/public/prices') return res.end(priceData);
-  if (req.url === '/api/public/projects') return res.end(JSON.stringify(visible.filter((project) => project.status === 'PUBLISHED')));
+  if (req.url === '/api/public/projects') return setTimeout(() => {
+    if (listFailure) { res.statusCode = 500; res.end(JSON.stringify({ error: 'Synthetic upstream error' })); }
+    else res.end(JSON.stringify(visible.filter((project) => project.status === 'PUBLISHED')));
+  }, listDelay);
   const slug = decodeURIComponent(req.url.split('/').pop());
   const project = visible.find((project) => project.status === 'PUBLISHED' && (project.slug === slug || `old-${project.slug}` === slug));
   if (project) return res.end(JSON.stringify(project));
@@ -170,6 +175,24 @@ try {
   assert.equal(await connection.evaluate(`document.querySelectorAll('.featured-project').length`), 0);
   assert.equal(await connection.evaluate(`document.querySelectorAll('.empty-state').length`), 1);
   console.log('PASS: mobile EN/DE service areas, remote web-service scope, founder, portfolio, zero/one-project static states.');
+  listFailure = true;
+  await connection.navigate(`${web}/de/portfolio`);
+  assert.equal(await connection.evaluate(`document.querySelectorAll('.portfolio-error[role=alert]').length`), 1);
+  assert.equal(await connection.evaluate(`document.querySelectorAll('.empty-state').length`), 0);
+  assert.match(await connection.evaluate(`document.querySelector('.portfolio-error').textContent`), /vorübergehend/);
+  assert.doesNotMatch(await connection.evaluate(`document.querySelector('.portfolio-error').textContent`), /Synthetic upstream|Prisma|P2022/);
+  listFailure = false;
+  visible = projects;
+  await connection.evaluate(`document.querySelector('.portfolio-error a').click()`);
+  await until(() => connection.evaluate(`document.querySelectorAll('.portfolio-card').length === 3`), 'retry recovers projects');
+  listDelay = 3000;
+  await connection.send('Page.navigate', { url: `${web}/en/portfolio` });
+  await until(() => connection.evaluate(`Boolean(document.querySelector('[role=status][aria-busy=true]'))`), 'portfolio loading state');
+  assert.match(await connection.evaluate(`document.querySelector('[role=status]').textContent`), /Loading projects/);
+  await until(() => connection.evaluate(`document.querySelectorAll('.portfolio-card').length === 3`), 'loading resolves');
+  listDelay = 0;
+  console.log('PASS: API 500 shows localized error, not empty state; retry recovers; slow API shows accessible loading state.');
+
   for (const width of [390, 1440]) {
     await connection.send('Emulation.setDeviceMetricsOverride', { width, height: 900, deviceScaleFactor: 1, mobile: width < 500 });
     await connection.navigate(`${control}/login`);
