@@ -13,10 +13,14 @@ type Project = {
   slug: string;
   category: string;
   status: 'DRAFT' | 'PUBLISHED' | 'ARCHIVED';
-  featured: boolean;
   sortOrder: number;
   title: Localized;
   summary: Localized;
+  seoTitle: Localized;
+  seoDescription: Localized;
+  socialTitle: Localized;
+  socialDescription: Localized;
+  socialImageId: string;
   description: Localized;
   type: Localized;
   role: Localized;
@@ -82,8 +86,9 @@ function projectApiError(payload: Record<string, unknown>, status: number) {
 
 function emptyProject(): Project {
   return {
-    slug: '', category: 'web-development', status: 'DRAFT', featured: false, sortOrder: 0,
+    slug: '', category: 'web-development', status: 'DRAFT', sortOrder: 0,
     title: emptyLocalized(), summary: emptyLocalized(), description: emptyLocalized(), type: emptyLocalized(), role: emptyLocalized(), workItems: emptyWork(),
+    seoTitle: emptyLocalized(), seoDescription: emptyLocalized(), socialTitle: emptyLocalized(), socialDescription: emptyLocalized(), socialImageId: '',
     websiteUrl: '', githubUrl: '', coverImage: '', technologies: [], projectDate: null, images: [],
   };
 }
@@ -101,6 +106,9 @@ function normalize(project: Record<string, unknown>): Project {
     ...project,
     title: localized(project.title),
     summary: localized(project.summary),
+    seoTitle: localized(project.seoTitle), seoDescription: localized(project.seoDescription),
+    socialTitle: localized(project.socialTitle), socialDescription: localized(project.socialDescription),
+    socialImageId: typeof project.socialImageId === 'string' ? project.socialImageId : '',
     description: localized(project.description),
     type: localized(project.type),
     role: localized(project.role),
@@ -145,7 +153,7 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
     setMessage('');
   }
 
-  function setLocalized(field: 'title' | 'summary' | 'description' | 'type' | 'role', value: string) {
+  function setLocalized(field: 'title' | 'summary' | 'description' | 'type' | 'role' | 'seoTitle' | 'seoDescription' | 'socialTitle' | 'socialDescription', value: string) {
     setDraft((current) => ({ ...current, [field]: { ...current[field], [language]: value } }));
   }
 
@@ -191,10 +199,12 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
         slug: draft.slug.trim(),
         category: draft.category,
         status: draft.status,
-        featured: draft.featured,
         sortOrder: Number(draft.sortOrder) || 0,
         title: draft.title,
         summary: draft.summary,
+        seoTitle: draft.seoTitle, seoDescription: draft.seoDescription,
+        socialTitle: draft.socialTitle, socialDescription: draft.socialDescription,
+        socialImageId: visibleImages.some((image) => image.id === draft.socialImageId) ? draft.socialImageId : '',
         description: draft.description,
         type: draft.type,
         role: draft.role,
@@ -323,7 +333,6 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
           <label>Status<select value={draft.status} onChange={(event) => setDraft({ ...draft, status: event.target.value as Project['status'] })}><option value="DRAFT">Draft</option><option value="PUBLISHED">Published</option><option value="ARCHIVED">Archived</option></select></label>
           <label>Display order<input type="number" min="0" value={draft.sortOrder} onChange={(event) => setDraft({ ...draft, sortOrder: Number(event.target.value) })} /></label>
           <label>Completed date<input type="date" value={draft.projectDate?.slice(0, 10) ?? ''} onChange={(event) => setDraft({ ...draft, projectDate: event.target.value || null })} /></label>
-          <label className="admin-checkbox"><input type="checkbox" checked={draft.featured} onChange={(event) => setDraft({ ...draft, featured: event.target.checked })} />Include in featured rotation</label><p className="admin-intro">Published projects checked here rotate on the portfolio page every 15 seconds. Display order determines their sequence.</p>
           <label>Website URL<input type="url" value={draft.websiteUrl} onChange={(event) => setDraft({ ...draft, websiteUrl: event.target.value })} placeholder="https://..." /></label>
           <label>GitHub URL<input type="url" value={draft.githubUrl} onChange={(event) => setDraft({ ...draft, githubUrl: event.target.value })} placeholder="https://github.com/..." /></label>
           <label className="admin-span-2">External cover image URL (optional)<input type="url" value={draft.coverImage} onChange={(event) => setDraft({ ...draft, coverImage: event.target.value })} placeholder="Used only when no uploaded image exists" /></label>
@@ -339,6 +348,19 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
           <label className="admin-span-2">Your role<textarea rows={2} value={draft.role[language]} onChange={(event) => setLocalized('role', event.target.value)} /></label>
           <label className="admin-span-2">What you did — one item per line<textarea rows={7} value={draft.workItems[language].join('\n')} onChange={(event) => updateWork(event.target.value)} /></label>
         </div>
+
+        <section aria-labelledby="project-seo-title">
+          <h3 id="project-seo-title">Search & sharing ({language.toUpperCase()})</h3>
+          <p>Optional. Empty fields use this language’s project title and summary. Published projects appear in both the carousel and grid. Old slugs redirect automatically after saving.</p>
+          <div className="admin-form-grid">
+            <label>SEO title<input maxLength={200} value={draft.seoTitle[language]} onChange={(event) => setLocalized('seoTitle', event.target.value)} /></label>
+            <label>Social title<input maxLength={200} value={draft.socialTitle[language]} onChange={(event) => setLocalized('socialTitle', event.target.value)} /></label>
+            <label>Meta description<textarea maxLength={500} value={draft.seoDescription[language]} onChange={(event) => setLocalized('seoDescription', event.target.value)} /></label>
+            <label>Social description<textarea maxLength={500} value={draft.socialDescription[language]} onChange={(event) => setLocalized('socialDescription', event.target.value)} /></label>
+            <label>Social preview image<select value={visibleImages.some((image) => image.id === draft.socialImageId) ? draft.socialImageId : ''} onChange={(event) => setDraft({ ...draft, socialImageId: event.target.value })}><option value="">Project cover (default)</option>{visibleImages.map((image) => <option key={image.id} value={image.id}>{image.filename}</option>)}</select></label>
+          </div>
+          <p>Choose from this project’s saved images. Images become public only when the project is published.</p>
+        </section>
 
         <section className="project-images-admin">
           <div className="project-images-admin__heading"><div><h3>Project images</h3><p>Upload JPG, PNG, WebP or AVIF. Maximum 10 images, 4 MB each. Files are uploaded separately to avoid serverless request-size errors. The first image is used as the cover.</p></div><label className="admin-upload"><ImagePlus size={18} />Add images<input type="file" accept="image/jpeg,image/png,image/webp,image/avif" multiple onChange={(event) => { addImages(Array.from(event.target.files ?? [])); event.currentTarget.value = ''; }} /></label></div>

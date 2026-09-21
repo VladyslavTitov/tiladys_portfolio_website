@@ -9,3 +9,18 @@
 @media(max-width:1100px){.project-admin-layout{grid-template-columns:1fr}.project-admin-list{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}.project-admin-list .admin-primary{grid-column:1/-1}.project-images-admin__grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:720px){.admin-form-grid{grid-template-columns:1fr}.admin-span-2{grid-column:auto}.project-editor__toolbar,.project-images-admin__heading,.price-admin__sticky{align-items:stretch;flex-direction:column}.project-editor__toolbar>div,.price-admin__sticky>div{flex-wrap:wrap}.project-images-admin__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project-admin-list{grid-template-columns:1fr}.price-sheet-section>header{grid-template-columns:58px minmax(0,1fr) auto}.price-sheet-section>header .admin-checkbox{grid-column:2}.price-sheet-section>header .icon-danger{grid-column:3;grid-row:1}}
 
 .message-list{display:grid;gap:16px}.message-list>.panel{margin:0}.message{border-left:4px solid #aab8c7}.message--unread{border-left-color:#087fff;background:#fbfdff}.message header{display:grid;grid-template-columns:minmax(220px,1fr) auto auto;align-items:center;gap:20px}.message header>div{display:grid;gap:4px}.message header a{color:#0872d5}.message header time{color:#62748a;font-size:13px}.message-status{padding:6px 9px;border-radius:999px;background:#e9eef4;color:#53657a;font-size:11px;font-weight:900}.message-status--unread{background:#e6f3ff;color:#086fc9}.message-meta{margin-top:14px;display:flex;gap:14px;color:#62748a;font-size:13px}.message details{margin-top:16px}.message summary{cursor:pointer;color:#263d5a;line-height:1.55}.message-full-text{padding:14px;border-radius:8px;background:#f5f8fb;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6}.message-actions{margin-top:16px;display:flex;gap:10px}@media(max-width:850px){.message header{grid-template-columns:1fr}.message-meta,.message-actions{flex-wrap:wrap}}
+
+/* Keep the existing light logo on its intended navy background. */
+.login { padding: 36px 20px; }
+.login-shell { width: min(440px, 100%); }
+.login-brand { text-align: center; color: #c4edfa; margin-bottom: 28px; }
+.login .login-brand img { width: min(260px, 85%); height: auto; }
+.login-brand p { margin: 12px 0 0; font-size: 14px; letter-spacing: .12em; }
+.login form { width: 100%; padding: clamp(24px, 6vw, 38px); box-shadow: 0 20px 60px #0004; gap: 18px; }
+.login h1 { margin: 0; font-size: clamp(23px, 5vw, 28px); }
+.login-intro { margin: 0 0 6px; color: #475569; line-height: 1.5; }
+.login label { font-weight: 600; }
+.login input { width: 100%; min-width: 0; font: inherit; }
+.login button { background: #075b83; min-height: 46px; font: inherit; font-weight: 700; }
+.login button:hover { background: #064768; }
+.login :is(input, button):focus-visible { outline: 3px solid #00a9d6; outline-offset: 3px; }

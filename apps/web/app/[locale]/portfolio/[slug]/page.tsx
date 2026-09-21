@@ -1,17 +1,18 @@
 import { ProjectImage } from '@/components/ProjectImage';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { cache } from 'react';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { ArrowLeft, CalendarDays, Code2, ExternalLink, Github, Layers3, Link2 } from 'lucide-react';
 import { ContactCta } from '@/components/ContactCta';
 import { Shell } from '@/components/Shell';
 import { api } from '@/lib/api';
 import { p } from '@/lib/page-copy';
 import { projectCategoryLabel, projectLinksAvailable } from '@/lib/project-categories';
-import { localizedMetadata } from '@/lib/seo';
+import { projectMetadata, type ProjectSeo } from '@/lib/project-seo';
 
 type Localized = Record<string, string>;
 type ProjectImage = { id: string; url: string; alt?: Localized | null; sortOrder: number };
-type ProjectDetail = {
+type ProjectDetail = ProjectSeo & {
   id: string;
   slug: string;
   category: string;
@@ -33,26 +34,25 @@ function translated(value: Localized | undefined | null, locale: string) {
   return value?.[locale] || value?.en || value?.ru || '';
 }
 
+const loadProject = cache(async (slug: string): Promise<ProjectDetail | null> => {
+  try {
+    return await api<ProjectDetail>(`/api/public/projects/${encodeURIComponent(slug)}`, { cache: 'no-store' });
+  } catch { return null; }
+});
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
-  try {
-    const project = await api<ProjectDetail>(`/api/public/projects/${encodeURIComponent(slug)}`, { cache: 'no-store' });
-    const title = translated(project.title, locale);
-    const description = translated(project.summary, locale);
-    return localizedMetadata({ locale, pathname: `portfolio/${slug}`, title: title || p(locale).project.notFound, description });
-  } catch {
-    return localizedMetadata({ locale, pathname: `portfolio/${slug}`, title: p(locale).project.notFound, description: p(locale).project.notFound });
-  }
+  const project = await loadProject(slug);
+  if (!project) return { title: p(locale).project.notFound, robots: { index: false, follow: false } };
+  return projectMetadata(project, locale);
 }
 
 export default async function ProjectPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   const c = p(locale).project;
-  let project: ProjectDetail | null = null;
-  try {
-    project = await api<ProjectDetail>(`/api/public/projects/${encodeURIComponent(slug)}`, { cache: 'no-store' });
-  } catch {}
+  const project = await loadProject(slug);
   if (!project) notFound();
+  if (project.slug !== slug) permanentRedirect(`/${locale}/portfolio/${project.slug}`);
 
   const title = translated(project.title, locale);
   const summary = translated(project.summary, locale);

@@ -2,7 +2,8 @@ import type { Prisma } from '@prisma/client';
 
 // Explicit publication boundary, including when new schema fields are added.
 export const publicProjectSelect = {
-  id: true, slug: true, category: true, featured: true,
+  id: true, slug: true, category: true,
+  seoTitle: true, seoDescription: true, socialTitle: true, socialDescription: true, socialImageId: true,
   title: true, summary: true, description: true, type: true, role: true,
   workItems: true, projectDate: true, websiteUrl: true, githubUrl: true,
   coverImage: true, technologies: true,
@@ -12,7 +13,10 @@ export const publicProjectSelect = {
 type PublishedProject = Prisma.ProjectGetPayload<{ select: typeof publicProjectSelect }>;
 export function publicProject(project: PublishedProject, origin: string) {
   return {
-    id: project.id, slug: project.slug, category: project.category, featured: project.featured,
+    id: project.id, slug: project.slug, category: project.category,
+    seoTitle: project.seoTitle, seoDescription: project.seoDescription,
+    socialTitle: project.socialTitle, socialDescription: project.socialDescription,
+    socialImageId: project.socialImageId,
     title: project.title, summary: project.summary, description: project.description,
     type: project.type, role: project.role, workItems: project.workItems,
     projectDate: project.projectDate, websiteUrl: project.websiteUrl, githubUrl: project.githubUrl,

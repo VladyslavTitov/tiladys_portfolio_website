@@ -14,13 +14,15 @@
     "build:web": "npm --workspace @tiladys/web run build",
     "build:control": "npm --workspace @tiladys/control run build",
     "lint": "npm run lint --workspaces --if-present",
-    "test": "node tests/project.test.mjs && node --experimental-strip-types --test tests/contact-security.test.ts tests/contact-images.test.ts tests/public-safety.test.ts",
+    "test": "node tests/project.test.mjs && node --experimental-strip-types --test tests/contact-security.test.ts tests/contact-images.test.ts tests/public-safety.test.ts && node --import tsx --test tests/portfolio-seo.test.ts && TSX_TSCONFIG_PATH=apps/control/tsconfig.json node --import tsx --test tests/portfolio-public-routes.test.ts",
     "db:generate": "npm --workspace @tiladys/db run generate",
     "db:migrate": "npm --workspace @tiladys/db run migrate",
     "db:seed": "npm --workspace @tiladys/db run seed",
     "setup:admin": "node scripts/setup-admin.mjs",
     "typecheck": "npm run typecheck --workspaces --if-present",
-    "db:deploy": "npm --workspace @tiladys/db run deploy"
+    "db:deploy": "npm --workspace @tiladys/db run deploy",
+    "test:browser": "node tests/phase1-browser.mjs",
+    "test:db:phase1": "node --import tsx --test tests/phase1-database.test.ts"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"

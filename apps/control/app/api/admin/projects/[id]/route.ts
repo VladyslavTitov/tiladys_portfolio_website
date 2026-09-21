@@ -1,3 +1,4 @@
+import { reserveProjectSlug, validateSocialImage } from '@/lib/project-slugs';
 import type { Prisma } from "@prisma/client";
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@tiladys/db';
@@ -17,7 +18,8 @@ function projectError(error: unknown, fallback: 'PROJECT_UPDATE_FAILED' | 'PROJE
 
   if (message === 'UNAUTHORIZED') return NextResponse.json({ error: message }, { status: 401 });
   if (message === 'INVALID_ORIGIN') return NextResponse.json({ error: message }, { status: 403 });
-  if (code === 'P2002' || message.includes('Unique constraint')) {
+  if (message === 'INVALID_SOCIAL_IMAGE') return NextResponse.json({ error: message }, { status: 400 });
+  if (message === 'PROJECT_SLUG_EXISTS' || code === 'P2002' || message.includes('Unique constraint')) {
     return NextResponse.json(
       { error: 'PROJECT_SLUG_EXISTS', details: { issues: [{ path: 'slug', message: 'This slug is already used by another project.' }] } },
       { status: 409 },
@@ -44,18 +46,20 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
     const payload = parseProjectPayload(body?.payload ?? body);
     const removeImageIds = imageIds(body?.removeImageIds);
 
-    const row = await db.$transaction(
-      async (tx: Prisma.TransactionClient) => {      
-        if (removeImageIds.length) {
+    const row = await db.$transaction(async (tx: Prisma.TransactionClient) => {
+      await reserveProjectSlug(tx, payload.slug, id);
+      if (removeImageIds.length) {
         await tx.projectImage.deleteMany({ where: { projectId: id, id: { in: removeImageIds } } });
       }
-      return tx.project.update({
+      await validateSocialImage(tx, payload.socialImageId, id);
+      const row = await tx.project.update({
         where: { id },
         data: projectData(payload),
         include: { images: { select: { id: true, filename: true, size: true, sortOrder: true }, orderBy: { sortOrder: 'asc' } } },
       });
+      await tx.auditLog.create({ data: { userId: user.id, action: 'PROJECT_UPDATE', entity: 'Project', entityId: id } });
+      return row;
     });
-    await db.auditLog.create({ data: { userId: user.id, action: 'PROJECT_UPDATE', entity: 'Project', entityId: id } });
     return NextResponse.json(row);
   } catch (error) {
     return projectError(error, 'PROJECT_UPDATE_FAILED');

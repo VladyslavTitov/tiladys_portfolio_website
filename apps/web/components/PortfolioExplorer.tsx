@@ -13,7 +13,6 @@ export type PublicProject = {
   id: string;
   slug: string;
   category: string;
-  featured: boolean;
   title: Record<string, string>;
   summary: Record<string, string>;
   coverImage?: string | null;
@@ -43,9 +42,9 @@ export function PortfolioExplorer({ locale, projects }: { locale: string; projec
   const c = p(locale).portfolio;
   const [filter, setFilter] = useState<Filter>('all');
   const visible = useMemo(() => projects.filter((project) => filter === 'all' || groupFor(project.category) === filter), [filter, projects]);
-  const flagged = visible.filter((project) => project.featured);
-  const candidates = flagged.length ? flagged : visible.slice(0, 1);
-  const cards = visible.filter((project) => !candidates.some((candidate) => candidate.id === project.id));
+  // Both presentations intentionally use the same published, category-filtered list.
+  const candidates = visible;
+  const cards = visible;
 
   return (
     <section className="section portfolio-content">

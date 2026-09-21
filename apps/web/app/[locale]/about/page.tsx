@@ -1,3 +1,4 @@
+import { organizationStructuredData, jsonLd } from '@/lib/business';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -10,12 +11,13 @@ const copy = (locale: string) => content[locale as keyof typeof content] ?? cont
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const data = copy(locale);
-  return localizedMetadata({ locale, pathname: 'about', title: data.hero.title, description: data.hero.subtitle });
+  return localizedMetadata({ locale, pathname: 'about', title: `${data.hero.title} — ${data.founderName}`, description: data.founderText, image: '/about/vladyslav-titov.jpeg' });
 }
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const data = copy(locale);
   return <Shell locale={locale}>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(organizationStructuredData) }} />
     <section className="about-introduction section">
       <div><span className="eyebrow">TiLADYS · Mülheim an der Ruhr</span><h1>{data.hero.title}</h1><p>{data.hero.subtitle}</p>
         <Link className="primary" href={`/${locale}/contact`}>{data.contact}<ArrowRight aria-hidden="true" /></Link></div>

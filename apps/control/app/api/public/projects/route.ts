@@ -5,7 +5,7 @@ import { publicProject, publicProjectSelect } from '@/lib/public-projects';
 export async function GET(req: NextRequest) {
   const rows = await db.project.findMany({
     where: { status: 'PUBLISHED' }, select: publicProjectSelect,
-    orderBy: [{ featured: 'desc' }, { sortOrder: 'asc' }, { updatedAt: 'desc' }],
+    orderBy: [{ sortOrder: 'asc' }, { updatedAt: 'desc' }],
   });
   return NextResponse.json(rows.map((row) => publicProject(row, req.nextUrl.origin)), { headers: { 'Cache-Control': 'no-store' } });
 }

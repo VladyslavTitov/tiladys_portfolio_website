@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { api } from '@/lib/api';
 import { locales } from '@tiladys/shared';
+import { localizedAlternates } from '@/lib/seo';
 import { serviceIds } from '@/lib/services';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -13,6 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   } catch { /* Static routes remain available when the control API is unavailable. */ }
   return locales.flatMap((locale) => routes.map((route) => ({
     url: `${base}/${locale}${route ? `/${route}` : ''}`,
+    alternates: { languages: localizedAlternates(locale, route).languages },
     changeFrequency: route === 'portfolio' ? 'weekly' as const : 'monthly' as const,
     priority: route === '' ? 1 : route === 'services' ? 0.9 : route.startsWith('services/') ? 0.8 : 0.7,
   })));

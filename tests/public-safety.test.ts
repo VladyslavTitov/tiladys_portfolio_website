@@ -5,7 +5,7 @@ import { deliverReply } from '../apps/control/lib/reply-delivery.ts';
 
 test('public project output does not expose private or future database fields', () => {
   const source = {
-    id: 'fixture', slug: 'fixture', category: 'web-development', featured: true,
+    id: 'fixture', slug: 'fixture', category: 'web-development', seoTitle: null, seoDescription: null, socialTitle: null, socialDescription: null, socialImageId: null,
     title: { en: 'Fixture' }, summary: { en: 'Synthetic test project' }, description: null,
     type: null, role: null, workItems: null, projectDate: null, websiteUrl: null, githubUrl: null,
     coverImage: null, technologies: null, clientName: 'PRIVATE_TEST_FIELD', results: { internal: true },

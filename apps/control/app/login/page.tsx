@@ -28,15 +28,18 @@ export default function Login() {
 
   return (
     <main className="login">
-      <form onSubmit={submit}>
-        <Image src="/brand/logo.svg" alt="TiLADYS" width={260} height={72} priority />
-        <h1>Secure Control Panel</h1>
-        <label>Email<input name="email" type="email" required autoComplete="username" /></label>
-        <label>Password<input name="password" type="password" required autoComplete="current-password" /></label>
-        <label>Secret phrase<input name="secretWord" type="password" required autoComplete="off" /></label>
-        <button type="submit">Sign in</button>
-        <p aria-live="polite">{message}</p>
-      </form>
+      <div className="login-shell">
+        <div className="login-brand"><Image src="/brand/logo.svg" alt="TiLADYS" width={260} height={72} priority /><p>Business Control</p></div>
+        <form onSubmit={submit} aria-labelledby="login-title">
+          <h1 id="login-title">Secure Control Panel</h1>
+          <p className="login-intro">Sign in to manage your TiLADYS workspace.</p>
+          <label>Email<input name="email" type="email" required autoComplete="username" /></label>
+          <label>Password<input name="password" type="password" required autoComplete="current-password" /></label>
+          <label>Secret phrase<input name="secretWord" type="password" required autoComplete="off" /></label>
+          <button type="submit">Sign in</button>
+          <p aria-live="polite">{message}</p>
+        </form>
+      </div>
     </main>
   );
 }

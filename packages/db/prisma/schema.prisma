@@ -55,7 +55,6 @@ model Project {
   slug         String        @unique
   category     String
   status       ProjectStatus @default(DRAFT)
-  featured     Boolean       @default(false)
   sortOrder    Int           @default(0)
   title        Json
   summary      Json
@@ -71,7 +70,14 @@ model Project {
   gallery      Json?
   technologies Json?
   results      Json?
-  images       ProjectImage[]
+  seoTitle     Json?
+  seoDescription Json?
+  socialTitle  Json?
+  socialDescription Json?
+  socialImageId String?
+  socialImage  ProjectImage? @relation("SocialPreview", fields: [socialImageId], references: [id], onDelete: SetNull)
+  slugAliases  ProjectSlugAlias[]
+  images       ProjectImage[] @relation("ProjectImages")
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
 
@@ -82,7 +88,8 @@ model Project {
 model ProjectImage {
   id        String   @id @default(cuid())
   projectId String
-  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  project   Project  @relation("ProjectImages", fields: [projectId], references: [id], onDelete: Cascade)
+  socialFor Project[] @relation("SocialPreview")
   filename  String
   mimeType  String
   size      Int
@@ -183,4 +190,14 @@ model ContactRateLimit {
   expiresAt DateTime
 
   @@index([expiresAt])
+}
+
+// Old slugs resolve directly to the current project, never through redirect chains.
+model ProjectSlugAlias {
+  slug String @id
+  projectId String
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@index([projectId])
 }
