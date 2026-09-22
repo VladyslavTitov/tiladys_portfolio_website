@@ -22,6 +22,38 @@ enum ProjectStatus {
   ARCHIVED
 }
 
+enum CustomerType {
+  PERSON
+  BUSINESS
+}
+
+enum CustomerStatus {
+  LEAD
+  ACTIVE
+  INACTIVE
+  ARCHIVED
+}
+
+enum ServiceJobStatus {
+  PLANNED
+  IN_PROGRESS
+  WAITING_CUSTOMER
+  COMPLETED
+  CANCELLED
+}
+
+enum FileAssetKind {
+  BEFORE
+  DURING
+  AFTER
+  DOCUMENT
+  OTHER
+}
+
+enum FileAssetVisibility {
+  PRIVATE
+}
+
 model AdminUser {
   id             String     @id @default(cuid())
   email          String     @unique
@@ -35,6 +67,9 @@ model AdminUser {
   updatedAt      DateTime   @updatedAt
   sessions       Session[]
   audits         AuditLog[]
+  customerNotes  CustomerNote[]
+  customerActivities CustomerActivity[]
+  uploadedFiles  FileAsset[]
 }
 
 model Session {
@@ -123,8 +158,152 @@ model PriceItem {
   active    Boolean      @default(true)
   createdAt DateTime     @default(now())
   updatedAt DateTime     @updatedAt
+  serviceJobs ServiceJob[]
 
   @@index([sectionId, active, sortOrder])
+}
+
+model NumberSequence {
+  scope     String
+  year      Int
+  nextValue Int @default(1)
+
+  @@id([scope, year])
+}
+
+model Company {
+  id          String   @id @default(cuid())
+  name        String
+  email       String?
+  phone       String?
+  street      String?
+  postalCode  String?
+  city        String?
+  country     String   @default("DE")
+  website     String?
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  customers   Customer[]
+  serviceJobs ServiceJob[]
+
+  @@index([name])
+}
+
+model Customer {
+  id                String         @id @default(cuid())
+  customerNumber    String         @unique
+  type              CustomerType   @default(PERSON)
+  status            CustomerStatus @default(LEAD)
+  firstName         String?
+  lastName          String?
+  companyId         String?
+  company           Company?       @relation(fields: [companyId], references: [id], onDelete: SetNull)
+  email             String?
+  phone             String?
+  secondaryPhone    String?
+  street            String?
+  postalCode        String?
+  city              String?
+  country           String         @default("DE")
+  preferredLanguage String         @default("de")
+  source            String?
+  notes             String?
+  archivedAt        DateTime?
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  customerNotes     CustomerNote[]
+  activities        CustomerActivity[]
+  serviceJobs       ServiceJob[]
+  files             FileAsset[]
+
+  @@index([status, updatedAt])
+  @@index([companyId])
+  @@index([email])
+  @@index([lastName, firstName])
+}
+
+model CustomerNote {
+  id          String    @id @default(cuid())
+  customerId  String
+  customer    Customer  @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  body        String
+  createdById String
+  createdBy   AdminUser @relation(fields: [createdById], references: [id], onDelete: Restrict)
+  createdAt   DateTime  @default(now())
+
+  @@index([customerId, createdAt])
+}
+
+model CustomerActivity {
+  id          String    @id @default(cuid())
+  customerId  String
+  customer    Customer  @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  type        String
+  summary     String
+  metadata    Json?
+  createdById String?
+  createdBy   AdminUser? @relation(fields: [createdById], references: [id], onDelete: SetNull)
+  createdAt   DateTime  @default(now())
+
+  @@index([customerId, createdAt])
+}
+
+model ServiceJob {
+  id                   String           @id @default(cuid())
+  jobNumber            String           @unique
+  customerId           String
+  customer             Customer         @relation(fields: [customerId], references: [id], onDelete: Restrict)
+  companyId            String?
+  company              Company?         @relation(fields: [companyId], references: [id], onDelete: SetNull)
+  servicePriceItemId   String?
+  servicePriceItem     PriceItem?        @relation(fields: [servicePriceItemId], references: [id], onDelete: SetNull)
+  serviceType          String?
+  title                String
+  description          String?
+  privateNotes         String?
+  customerVisibleNotes String?
+  serviceDate          DateTime?
+  status               ServiceJobStatus @default(PLANNED)
+  estimatedPrice       Decimal?         @db.Decimal(12, 2)
+  finalPrice           Decimal?         @db.Decimal(12, 2)
+  materialCost         Decimal?         @db.Decimal(12, 2)
+  otherCost            Decimal?         @db.Decimal(12, 2)
+  startTime            DateTime?
+  endTime              DateTime?
+  workDurationMinutes  Int?
+  createdAt            DateTime         @default(now())
+  updatedAt            DateTime         @updatedAt
+  files                FileAsset[]
+
+  @@index([customerId, status, serviceDate])
+  @@index([companyId])
+  @@index([status, serviceDate])
+}
+
+model FileAsset {
+  id               String              @id @default(cuid())
+  customerId       String?
+  customer         Customer?           @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  serviceJobId     String?
+  serviceJob       ServiceJob?         @relation(fields: [serviceJobId], references: [id], onDelete: Cascade)
+  kind             FileAssetKind       @default(DOCUMENT)
+  visibility       FileAssetVisibility @default(PRIVATE)
+  filename         String
+  originalFilename String
+  mimeType         String
+  size             Int
+  storageProvider  String
+  storageKey       String              @unique
+  checksum         String
+  caption          String?
+  sortOrder        Int                 @default(0)
+  uploadedById     String
+  uploadedBy       AdminUser           @relation(fields: [uploadedById], references: [id], onDelete: Restrict)
+  createdAt        DateTime            @default(now())
+
+  @@index([customerId, createdAt])
+  @@index([serviceJobId, sortOrder])
 }
 
 model ContactMessage {

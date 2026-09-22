@@ -1,0 +1,2 @@
+import { db } from '@tiladys/db';import { CompanyManager } from './company-manager';
+export default async function CompaniesPage(){const rows=await db.company.findMany({include:{_count:{select:{customers:true,serviceJobs:true}}},orderBy:{name:'asc'}});return <><span className="eyebrow">CRM</span><h1>Companies</h1><p className="admin-intro">Company records shared by customer contacts and service jobs.</p><CompanyManager initial={rows}/></>}

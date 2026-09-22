@@ -129,3 +129,64 @@ export const priceBulkSchema = z.object({
   deletedSectionIds: z.array(z.string()).default([]),
   deletedItemIds: z.array(z.string()).default([]),
 });
+
+const optionalText = (max: number) => z.string().trim().max(max).optional().or(z.literal(''));
+const optionalEmail = z.string().trim().email().max(254).optional().or(z.literal(''));
+const optionalMoney = z.string().trim().regex(/^\d{1,10}(?:[.,]\d{1,2})?$/, 'Use a positive amount with at most two decimals.').optional().or(z.literal(''));
+
+export const companySchema = z.object({
+  name: z.string().trim().min(2).max(200),
+  email: optionalEmail,
+  phone: optionalText(50),
+  street: optionalText(200),
+  postalCode: optionalText(20),
+  city: optionalText(100),
+  country: z.string().trim().min(2).max(2).default('DE'),
+  website: optionalHttpUrlSchema,
+  notes: optionalText(10_000),
+}).strict();
+
+export const customerSchema = z.object({
+  type: z.enum(['PERSON', 'BUSINESS']).default('PERSON'),
+  status: z.enum(['LEAD', 'ACTIVE', 'INACTIVE', 'ARCHIVED']).default('LEAD'),
+  firstName: optionalText(100),
+  lastName: optionalText(100),
+  companyId: optionalText(100),
+  email: optionalEmail,
+  phone: optionalText(50),
+  secondaryPhone: optionalText(50),
+  street: optionalText(200),
+  postalCode: optionalText(20),
+  city: optionalText(100),
+  country: z.string().trim().min(2).max(2).default('DE'),
+  preferredLanguage: z.enum(locales).default('de'),
+  source: optionalText(100),
+  notes: optionalText(10_000),
+}).strict().refine((value) => Boolean(value.firstName || value.lastName || value.companyId), {
+  message: 'Enter a person name or select a company.',
+  path: ['lastName'],
+});
+
+export const customerNoteSchema = z.object({ body: z.string().trim().min(1).max(10_000) }).strict();
+
+export const serviceJobSchema = z.object({
+  customerId: z.string().min(1).max(100),
+  companyId: optionalText(100),
+  servicePriceItemId: optionalText(100),
+  serviceType: optionalText(200),
+  title: z.string().trim().min(2).max(250),
+  description: optionalText(20_000),
+  privateNotes: optionalText(20_000),
+  customerVisibleNotes: optionalText(20_000),
+  serviceDate: z.string().datetime().optional().or(z.literal('')),
+  status: z.enum(['PLANNED', 'IN_PROGRESS', 'WAITING_CUSTOMER', 'COMPLETED', 'CANCELLED']).default('PLANNED'),
+  estimatedPrice: optionalMoney,
+  finalPrice: optionalMoney,
+  materialCost: optionalMoney,
+  otherCost: optionalMoney,
+  startTime: z.string().datetime().optional().or(z.literal('')),
+  endTime: z.string().datetime().optional().or(z.literal('')),
+  workDurationMinutes: z.number().int().min(0).max(1_000_000).optional().nullable(),
+}).strict().refine((value) => !value.startTime || !value.endTime || new Date(value.endTime) >= new Date(value.startTime), {
+  message: 'End time must be after start time.', path: ['endTime'],
+});
