@@ -23,8 +23,8 @@ const config: NextConfig = {
 
   outputFileTracingIncludes: {
     "/api/admin/invoices/*": [
-      "../../node_modules/@fontsource/noto-sans/files/noto-sans-cyrillic-400-normal.woff",
-      "../../node_modules/@fontsource/noto-sans/files/noto-sans-cyrillic-700-normal.woff",
+      "../../node_modules/dejavu-fonts-ttf/ttf/DejaVuSans.ttf",
+      "../../node_modules/dejavu-fonts-ttf/ttf/DejaVuSans-Bold.ttf",
     ],
   },
 
