@@ -46,10 +46,14 @@ Vercel project `tiladys-control` is linked to GitHub with `main` as the automati
 2. Reconfirm the exact Production deployment/project and direct Neon target (`main`, database `neondb`, schema `public`) without printing credentials.
 3. Create/confirm a fresh recoverable snapshot and record migration ledger plus legacy counts/media-byte totals.
 4. Quiesce admin writers for the transition.
-5. Apply both pending migrations in order with `npm run db:deploy` and the verified direct Production connection. Never use reset, seed, `db push`, or `migrate dev`.
+5. Apply pending migrations in order with `npm run db:deploy` and the verified direct Production connection. For the workflow repair release this is `20260922230000_unique_draft_per_service_job`, after `20260922150000_service_job_line_items` and `20260922170000_invoices`. Never use reset, seed, `db push`, or `migrate dev`.
 6. Verify both ledger entries, new tables/enums/constraints/indexes, and unchanged data baselines.
 7. Only then merge/push the matching commit to `main`, allowing the automatic Vercel Production deployment.
 8. Verify dashboard, customer/job/invoice/PDF/payment flows, public portfolio/project APIs/pages, and runtime logs before resuming writers.
+
+## Workflow repair release
+
+The repair following deployment `dpl_2yk4TUDvBZQm5qcf7u1KZetcFmEh` fixes strict job PATCH payloads, archived-customer hydration, reviewed conversion of legacy estimates to service lines, save-before-draft behavior, field-specific validation, readable scoped panel colours, and mobile overflow. Migration `20260922230000_unique_draft_per_service_job` adds a partial unique index for one active draft per service job. Before applying it, verify no service job has more than one `DRAFT` invoice; stop rather than deleting or merging records if duplicates exist. Apply this additive migration before deploying the matching application revision.
 
 ## Owner configuration still required
 

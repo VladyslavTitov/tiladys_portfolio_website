@@ -16,6 +16,20 @@ test('catalogue price modes do not turn starting or monthly prices into fixed ch
   assert.equal(cataloguePriceDetails('59 €/час').mode, 'HOURLY');
 });
 
+test('job repair keeps persisted associations, explicit payloads, save-before-invoice flow, and scoped navigation CSS', () => {
+  const manager = readFileSync('apps/control/app/dashboard/service-jobs/service-job-manager.tsx', 'utf8');
+  const page = readFileSync('apps/control/app/dashboard/service-jobs/page.tsx', 'utf8');
+  const css = readFileSync('apps/control/app/globals.css', 'utf8');
+  assert.match(manager, /customerId: draft\.customerId/);
+  assert.doesNotMatch(manager, /const body = \{ \.\.\.draft/);
+  assert.match(manager, /Save and create draft/);
+  assert.match(manager, /Create service line from existing estimate/);
+  assert.match(manager, /Add and save at least one service before creating an invoice\./);
+  assert.doesNotMatch(page, /status: \{ not: 'ARCHIVED' \}/);
+  assert.match(css, /\.dash>aside/);
+  assert.doesNotMatch(css, /\.dash aside\{/);
+});
+
 test('long invoice PDFs paginate and omit private job fields by construction', async () => {
   const lines = Array.from({ length: 70 }, (_, index) => ({ serviceName: `Service ${index + 1}`, description: 'A sufficiently detailed customer-facing description for pagination testing.', quantity: { toString: () => '1' }, unit: 'item', unitPrice: { toString: () => '10' }, taxRate: { toString: () => '19' }, subtotal: { toString: () => '10' }, taxAmount: { toString: () => '1.9' }, total: { toString: () => '11.9' }, taxTreatment: 'VAT_STANDARD' }));
   const bytes = await generateInvoicePdf({ status: 'DRAFT', invoiceNumber: null, issueDate: new Date(), dueDate: null, serviceDateFrom: new Date(), serviceDateTo: null, sellerLegalName: 'TiLADYS – Vladyslav Titov', sellerStreet: 'Kronenstraße 19', sellerPostalCode: '45479', sellerCity: 'Mülheim an der Ruhr', sellerCountry: 'Germany', sellerEmail: 'contact@tiladys.com', sellerPhone: '+49 163 7235608', sellerTaxMode: 'UNCONFIRMED', sellerTaxNumber: null, sellerVatId: null, sellerTaxStatement: null, sellerBankAccountHolder: null, sellerIban: null, sellerBic: null, sellerBankName: null, paymentInstructions: null, recipientName: 'Test Customer', recipientCompany: null, recipientEmail: null, recipientStreet: 'Teststraße 1', recipientPostalCode: '45479', recipientCity: 'Mülheim', recipientCountry: 'DE', customerReference: null, notes: null, subtotal: { toString: () => '700' }, taxTotal: { toString: () => '133' }, total: { toString: () => '833' }, lines });
@@ -48,7 +62,7 @@ test('CRM migration preserves legacy data and customer/job workflows persist ato
       db.$executeRawUnsafe(`INSERT INTO "ContactMessage" (id,name,email,message,status,"updatedAt") VALUES ('message','Preserved','preserved@example.test','Keep me','UNREAD',CURRENT_TIMESTAMP)`),
     ]);
     const before = { projects: await db.project.count(), images: await db.projectImage.count(), imageBytes: await db.$queryRaw`SELECT sum(octet_length(data))::text AS bytes FROM "ProjectImage"`, messages: await db.contactMessage.count() };
-    stage('20260922110000_crm_service_jobs'); stage('20260922150000_service_job_line_items'); stage('20260922170000_invoices'); cli(['migrate','deploy','--schema',schemaFile]);
+    stage('20260922110000_crm_service_jobs'); stage('20260922150000_service_job_line_items'); stage('20260922170000_invoices'); stage('20260922230000_unique_draft_per_service_job'); cli(['migrate','deploy','--schema',schemaFile]);
     assert.deepEqual({ projects: await db.project.count(), images: await db.projectImage.count(), imageBytes: await db.$queryRaw`SELECT sum(octet_length(data))::text AS bytes FROM "ProjectImage"`, messages: await db.contactMessage.count() }, before);
     const company = await db.company.create({ data: { name: 'Synthetic GmbH' } });
     const created = await Promise.all(Array.from({ length: 12 }, (_, index) => db.$transaction(async (tx) => {
@@ -86,6 +100,7 @@ test('CRM migration preserves legacy data and customer/job workflows persist ato
     const invoiceSubtotal = invoiceLines.reduce((sum, line) => sum.add(line.subtotal), new Prisma.Decimal(0));
     const invoiceTax = invoiceLines.reduce((sum, line) => sum.add(line.taxAmount ?? 0), new Prisma.Decimal(0));
     const invoice = await db.invoice.create({ data: { customerId: created[0].id, serviceJobId: pricedJob.id, sellerLegalName: 'TiLADYS – Vladyslav Titov', sellerStreet: 'Kronenstraße 19', sellerPostalCode: '45479', sellerCity: 'Mülheim an der Ruhr', sellerCountry: 'Germany', sellerEmail: 'contact@tiladys.com', sellerPhone: '+49 163 7235608', sellerTaxMode: 'VAT', sellerTaxNumber: 'TEST-NOT-REAL', recipientName: 'Synthetic Customer', recipientStreet: 'Teststraße 1', recipientPostalCode: '45479', recipientCity: 'Mülheim', recipientCountry: 'DE', issueDate: new Date(), subtotal: invoiceSubtotal, taxTotal: invoiceTax, total: invoiceSubtotal.add(invoiceTax), lines: { create: invoiceLines } } });
+    await assert.rejects(db.invoice.create({ data: { customerId: created[0].id, serviceJobId: pricedJob.id, sellerLegalName: 'TiLADYS – Vladyslav Titov', sellerStreet: 'Kronenstraße 19', sellerPostalCode: '45479', sellerCity: 'Mülheim an der Ruhr', sellerCountry: 'Germany', sellerEmail: 'contact@tiladys.com', sellerPhone: '+49 163 7235608', sellerTaxMode: 'VAT', recipientName: 'Duplicate Draft', recipientStreet: 'Teststraße 1', recipientPostalCode: '45479', recipientCity: 'Mülheim', recipientCountry: 'DE', subtotal: '1', total: '1' } }), (error: unknown) => error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2002');
     const issued = await Promise.all(Array.from({ length: 6 }, () => issueInvoice(db, invoice.id, 'admin')));
     assert.equal(new Set(issued.map((row) => row.invoiceNumber)).size, 1); assert.match(issued[0].invoiceNumber!, /^INV-\d{4}-0001$/); assert.ok(issued[0].issuedPdfSize! > 1_000);
     const frozenHash = issued[0].issuedPdfChecksum; const frozenBytes = Buffer.from(issued[0].issuedPdf!);

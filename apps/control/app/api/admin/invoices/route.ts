@@ -14,6 +14,8 @@ export async function POST(req: NextRequest) {
     await assertOrigin(); const user = await requireUser(); const body = await req.json(); const serviceJobId = typeof body.serviceJobId === 'string' ? body.serviceJobId : '';
     if (!serviceJobId) throw new Error('INVALID_INVOICE_JOB');
     const row = await db.$transaction(async (tx) => {
+      const existingDraft = await tx.invoice.findFirst({ where: { serviceJobId, status: 'DRAFT' }, include: invoiceInclude });
+      if (existingDraft) return existingDraft;
       const [job, storedSettings] = await Promise.all([
         tx.serviceJob.findUniqueOrThrow({ where: { id: serviceJobId }, include: { customer: { include: { company: true } }, lineItems: { orderBy: { sortOrder: 'asc' } } } }),
         tx.businessBillingSettings.findUnique({ where: { id: 'default' } }),
@@ -28,6 +30,11 @@ export async function POST(req: NextRequest) {
       const invoice = await tx.invoice.create({ data: { customerId: job.customerId, serviceJobId: job.id, ...sellerSnapshot(settings), issueDate, dueDate, serviceDateFrom: job.serviceDate, serviceDateTo: job.serviceDate, recipientName: customerName, recipientCompany: job.customer.company?.name ?? null, recipientEmail: job.customer.email, recipientStreet: job.customer.street ?? job.customer.company?.street ?? '', recipientPostalCode: job.customer.postalCode ?? job.customer.company?.postalCode ?? '', recipientCity: job.customer.city ?? job.customer.company?.city ?? '', recipientCountry: job.customer.country || job.customer.company?.country || 'DE', customerReference: `${job.jobNumber} · ${job.title}`, subtotal, taxTotal, total: subtotal.add(taxTotal ?? 0), lines: { create: lines } }, include: invoiceInclude });
       await tx.customerActivity.create({ data: { customerId: job.customerId, type: 'INVOICE_DRAFT_CREATED', summary: `Invoice draft created for ${job.jobNumber}`, metadata: { invoiceId: invoice.id, serviceJobId: job.id }, createdById: user.id } });
       await tx.auditLog.create({ data: { userId: user.id, action: 'INVOICE_DRAFT_CREATE', entity: 'Invoice', entityId: invoice.id } }); return invoice;
+    }).catch(async (error) => {
+      if (!(error instanceof Prisma.PrismaClientKnownRequestError) || error.code !== 'P2002') throw error;
+      const existing = await db.invoice.findFirst({ where: { serviceJobId, status: 'DRAFT' }, include: invoiceInclude });
+      if (!existing) throw error;
+      return existing;
     });
     return NextResponse.json(serializeInvoice(row), { status: 201 });
   } catch (error) { const e = adminError(error, 'INVOICE_CREATE_FAILED'); return NextResponse.json(e.body, { status: e.status }); }
