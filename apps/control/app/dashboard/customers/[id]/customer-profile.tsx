@@ -2,13 +2,15 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Archive, BriefcaseBusiness, Save, StickyNote } from 'lucide-react';
+import { Archive, BriefcaseBusiness, FileImage, ReceiptText, Save, StickyNote } from 'lucide-react';
 
 type Company = { id: string; name: string };
 type Note = { id: string; body: string; createdAt: string; createdBy: { displayName: string } };
 type Activity = { id: string; type: string; summary: string; createdAt: string; createdBy: { displayName: string } | null };
 type Job = { id: string; jobNumber: string; title: string; status: string; serviceDate: string | null; finalPrice: string | null };
-type Customer = { id: string; customerNumber: string; type: string; status: string; firstName: string | null; lastName: string | null; companyId: string | null; email: string | null; phone: string | null; secondaryPhone: string | null; street: string | null; postalCode: string | null; city: string | null; country: string; preferredLanguage: string; source: string | null; notes: string | null; company: Company | null; customerNotes: Note[]; activities: Activity[]; serviceJobs: Job[] };
+type Invoice = { id: string; invoiceNumber: string | null; status: string; total: string; paidTotal: string; issueDate: string | null };
+type FileSummary = { id: string; filename: string; kind: string; createdAt: string };
+type Customer = { id: string; customerNumber: string; type: string; status: string; firstName: string | null; lastName: string | null; companyId: string | null; email: string | null; phone: string | null; secondaryPhone: string | null; street: string | null; postalCode: string | null; city: string | null; country: string; preferredLanguage: string; source: string | null; notes: string | null; company: Company | null; customerNotes: Note[]; activities: Activity[]; serviceJobs: Job[]; invoices: Invoice[]; files: FileSummary[] };
 
 export function CustomerProfile({ initial, companies }: { initial: Customer; companies: Company[] }) {
   const [customer, setCustomer] = useState(initial); const [notes, setNotes] = useState(initial.customerNotes); const [note, setNote] = useState(''); const [message, setMessage] = useState(''); const [busy, setBusy] = useState(false);
@@ -29,6 +31,8 @@ export function CustomerProfile({ initial, companies }: { initial: Customer; com
       <label className="admin-span-2">General notes<textarea rows={5} value={customer.notes ?? ''} onChange={(e) => set('notes', e.target.value)} /></label>
     </div></section>
     <aside><section className="panel"><h2>Service jobs</h2><Link className="admin-primary full-button" href={`/dashboard/service-jobs?customerId=${customer.id}`}><BriefcaseBusiness size={17} />Create service job</Link>{customer.serviceJobs.length ? <div className="compact-list">{customer.serviceJobs.map((job) => <Link href={`/dashboard/service-jobs?jobId=${job.id}`} key={job.id}><strong>{job.title}</strong><span>{job.jobNumber} · {job.status.replace('_',' ')}</span></Link>)}</div> : <p>No service jobs yet.</p>}</section>
+    <section className="panel"><h2><ReceiptText size={18} /> Invoices</h2>{customer.invoices.length ? <div className="compact-list">{customer.invoices.map((invoice) => <Link href={`/dashboard/invoices?invoiceId=${invoice.id}`} key={invoice.id}><strong>{invoice.invoiceNumber ?? 'DRAFT'} · €{invoice.total}</strong><span>{invoice.status} · paid €{invoice.paidTotal}</span></Link>)}</div> : <p>No invoices yet. Create a draft from a service job.</p>}</section>
+    <section className="panel"><h2><FileImage size={18} /> Photos & files</h2>{customer.files.length ? <p>{customer.files.length} private file records.</p> : <p>No private files. Upload remains disabled until private storage is configured.</p>}</section>
     <section className="panel"><h2><StickyNote size={18} /> Private notes</h2><form className="note-form" onSubmit={addNote}><textarea rows={3} value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a dated internal note" /><button className="admin-primary" disabled={busy}>Add note</button></form><div className="timeline">{notes.map((n) => <article key={n.id}><p>{n.body}</p><small>{new Date(n.createdAt).toLocaleString('de-DE')} · {n.createdBy.displayName}</small></article>)}</div></section></aside></div>
     <section className="panel"><h2>Activity</h2><div className="timeline">{customer.activities.map((a) => <article key={a.id}><strong>{a.summary}</strong><small>{new Date(a.createdAt).toLocaleString('de-DE')} · {a.createdBy?.displayName ?? 'System'}</small></article>)}</div></section>
   </>;

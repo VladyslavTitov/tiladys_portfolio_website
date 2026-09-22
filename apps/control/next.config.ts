@@ -19,6 +19,14 @@ const config: NextConfig = {
   reactStrictMode: true,
 
   transpilePackages: ["@tiladys/db", "@tiladys/shared"],
+  serverExternalPackages: ["pdf-lib", "@pdf-lib/fontkit"],
+
+  outputFileTracingIncludes: {
+    "/api/admin/invoices/*": [
+      "../../node_modules/@fontsource/noto-sans/files/noto-sans-cyrillic-400-normal.woff",
+      "../../node_modules/@fontsource/noto-sans/files/noto-sans-cyrillic-700-normal.woff",
+    ],
+  },
 
   experimental: {
     serverActions: {

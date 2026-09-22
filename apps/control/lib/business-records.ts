@@ -11,7 +11,7 @@ export function businessYear(date = new Date()) {
   return Number(year);
 }
 
-export async function allocateNumber(tx: Tx, scope: 'CUSTOMER' | 'SERVICE_JOB', prefix: 'C' | 'JOB') {
+export async function allocateNumber(tx: Tx, scope: 'CUSTOMER' | 'SERVICE_JOB' | 'INVOICE', prefix: 'C' | 'JOB' | 'INV') {
   const year = businessYear();
   const rows = await tx.$queryRaw<Array<{ value: number }>>(Prisma.sql`
     INSERT INTO "NumberSequence" ("scope", "year", "nextValue") VALUES (${scope}, ${year}, 2)
@@ -116,8 +116,10 @@ export function adminError(error: unknown, fallback: string) {
   if (message === 'INVALID_ORIGIN') return { status: 403, body: { error: message } };
   if (message.startsWith('INVALID_')) return { status: 400, body: { error: message, details } };
   if (message === 'PRICE_CONFIRMATION_REQUIRED') return { status: 400, body: { error: message } };
+  if (['BILLING_SETTINGS_UNCONFIRMED','TAX_IDENTIFIER_REQUIRED','INVOICE_DETAILS_INCOMPLETE','INVOICE_TAX_INCOMPLETE','INVOICE_TAX_MISMATCH','TAX_STATEMENT_REQUIRED','INVOICE_JOB_HAS_NO_LINES'].includes(message)) return { status: 422, body: { error: message } };
+  if (['ISSUED_INVOICE_IMMUTABLE','INVOICE_NOT_ISSUABLE','PAYMENT_REQUIRES_ISSUED_INVOICE','PAYMENT_EXCEEDS_BALANCE'].includes(message)) return { status: 409, body: { error: message } };
   if (code === 'P2025') return { status: 404, body: { error: 'NOT_FOUND' } };
   if (code === 'P2002') return { status: 409, body: { error: 'CONFLICT' } };
-  console.error(`[${fallback}]`);
+  console.error(`[${fallback}]`, error instanceof Error ? { name: error.name, message: error.message, stack: error.stack } : { type: typeof error });
   return { status: 500, body: { error: fallback } };
 }

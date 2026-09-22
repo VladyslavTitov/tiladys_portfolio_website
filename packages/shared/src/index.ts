@@ -149,6 +149,38 @@ export const serviceJobLineItemSchema = z.object({
   sortOrder: z.number().int().min(0).max(10_000),
 }).strict();
 
+export const businessBillingSettingsSchema = z.object({
+  legalName: z.string().trim().min(2).max(200),
+  street: z.string().trim().min(2).max(200), postalCode: z.string().trim().min(2).max(20),
+  city: z.string().trim().min(2).max(100), country: z.string().trim().min(2).max(100),
+  email: z.email().max(254), phone: z.string().trim().min(3).max(50),
+  taxMode: z.enum(['UNCONFIRMED', 'VAT', 'KLEINUNTERNEHMER', 'EXEMPT']),
+  taxNumber: optionalText(100), vatId: optionalText(100), taxStatement: optionalText(500),
+  bankAccountHolder: optionalText(200), iban: optionalText(50), bic: optionalText(20), bankName: optionalText(200),
+  paymentTermsDays: z.number().int().min(0).max(365).nullable(), paymentInstructions: optionalText(1_000),
+  confirmSettings: z.boolean().default(false),
+}).strict();
+
+export const invoiceLineSchema = z.object({
+  serviceName: z.string().trim().min(1).max(250), description: optionalText(5_000),
+  quantity: z.string().trim().regex(/^\d{1,9}(?:[.,]\d{1,3})?$/), unit: z.string().trim().min(1).max(40),
+  unitPrice: requiredMoney,
+  taxTreatment: z.enum(['UNCONFIRMED', 'VAT_STANDARD', 'VAT_REDUCED', 'ZERO_RATED', 'EXEMPT', 'KLEINUNTERNEHMER']),
+}).strict();
+
+export const invoiceDraftSchema = z.object({
+  customerId: z.string().min(1).max(100), serviceJobId: optionalText(100),
+  issueDate: z.string().datetime().optional().or(z.literal('')), dueDate: z.string().datetime().optional().or(z.literal('')),
+  serviceDateFrom: z.string().datetime().optional().or(z.literal('')), serviceDateTo: z.string().datetime().optional().or(z.literal('')),
+  recipientName: z.string().trim().min(1).max(250), recipientCompany: optionalText(250), recipientEmail: optionalEmail,
+  recipientStreet: z.string().trim().max(200), recipientPostalCode: z.string().trim().max(20),
+  recipientCity: z.string().trim().max(100), recipientCountry: z.string().trim().min(2).max(100),
+  customerReference: optionalText(200), notes: optionalText(2_000),
+  lines: z.array(invoiceLineSchema).min(1).max(250),
+}).strict().refine((value) => !value.serviceDateFrom || !value.serviceDateTo || new Date(value.serviceDateTo) >= new Date(value.serviceDateFrom), { message: 'Service end date must not precede start date.', path: ['serviceDateTo'] });
+
+export const invoicePaymentSchema = z.object({ amount: requiredMoney, paidAt: z.string().datetime(), method: optionalText(100), reference: optionalText(200), note: optionalText(1_000) }).strict();
+
 export const companySchema = z.object({
   name: z.string().trim().min(2).max(200),
   email: optionalEmail,

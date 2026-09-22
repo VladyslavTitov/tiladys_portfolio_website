@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { BriefcaseBusiness, Building2, FolderKanban, Gauge, LogOut, MessageSquare, Tags, UsersRound } from 'lucide-react';
+import { BriefcaseBusiness, Building2, FolderKanban, Gauge, LogOut, MessageSquare, ReceiptText, Tags, UsersRound } from 'lucide-react';
 
 export function Nav() {
   return (
@@ -14,6 +14,7 @@ export function Nav() {
         <Link href="/dashboard/messages"><MessageSquare size={17} />Messages</Link>
         <span className="nav-group">Work</span>
         <Link href="/dashboard/service-jobs"><BriefcaseBusiness size={17} />Service jobs</Link>
+        <Link href="/dashboard/invoices"><ReceiptText size={17} />Invoices</Link>
         <span className="nav-group">Website</span>
         <Link href="/dashboard/projects"><FolderKanban size={17} />Portfolio</Link>
         <Link href="/dashboard/prices"><Tags size={17} />Prices</Link>

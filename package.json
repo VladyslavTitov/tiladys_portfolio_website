@@ -23,7 +23,8 @@
     "db:deploy": "npm --workspace @tiladys/db run deploy",
     "test:browser": "node tests/phase1-browser.mjs",
     "test:db:phase1": "node --import tsx --test tests/phase1-database.test.ts",
-    "test:db:crm": "node --import tsx --test tests/crm-service-jobs.test.ts"
+    "test:db:crm": "node --import tsx --test tests/crm-service-jobs.test.ts",
+    "test:browser:invoice": "node tests/invoice-browser.mjs"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"

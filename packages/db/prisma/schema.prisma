@@ -72,6 +72,19 @@ enum CataloguePriceMode {
   MANUAL
 }
 
+enum InvoiceStatus {
+  DRAFT
+  ISSUED
+  CANCELLED
+}
+
+enum BusinessTaxMode {
+  UNCONFIRMED
+  VAT
+  KLEINUNTERNEHMER
+  EXEMPT
+}
+
 model AdminUser {
   id             String     @id @default(cuid())
   email          String     @unique
@@ -88,6 +101,7 @@ model AdminUser {
   customerNotes  CustomerNote[]
   customerActivities CustomerActivity[]
   uploadedFiles  FileAsset[]
+  invoicePayments InvoicePayment[]
 }
 
 model Session {
@@ -235,6 +249,7 @@ model Customer {
   activities        CustomerActivity[]
   serviceJobs       ServiceJob[]
   files             FileAsset[]
+  invoices          Invoice[]
 
   @@index([status, updatedAt])
   @@index([companyId])
@@ -295,10 +310,126 @@ model ServiceJob {
   updatedAt            DateTime         @updatedAt
   files                FileAsset[]
   lineItems            ServiceJobLineItem[]
+  invoices             Invoice[]
 
   @@index([customerId, status, serviceDate])
   @@index([companyId])
   @@index([status, serviceDate])
+}
+
+model BusinessBillingSettings {
+  id                 String          @id @default("default")
+  legalName          String          @default("TiLADYS – Vladyslav Titov")
+  street             String          @default("Kronenstraße 19")
+  postalCode         String          @default("45479")
+  city               String          @default("Mülheim an der Ruhr")
+  country            String          @default("Germany")
+  email              String          @default("contact@tiladys.com")
+  phone              String          @default("+49 163 7235608")
+  taxMode            BusinessTaxMode @default(UNCONFIRMED)
+  taxNumber          String?
+  vatId              String?
+  taxStatement       String?
+  bankAccountHolder  String?
+  iban               String?
+  bic                String?
+  bankName           String?
+  paymentTermsDays   Int?
+  paymentInstructions String?
+  settingsConfirmedAt DateTime?
+  createdAt          DateTime        @default(now())
+  updatedAt          DateTime        @updatedAt
+}
+
+model Invoice {
+  id                    String        @id @default(cuid())
+  invoiceNumber         String?       @unique
+  status                InvoiceStatus @default(DRAFT)
+  customerId            String
+  customer              Customer      @relation(fields: [customerId], references: [id], onDelete: Restrict)
+  serviceJobId          String?
+  serviceJob            ServiceJob?   @relation(fields: [serviceJobId], references: [id], onDelete: SetNull)
+  currency              String        @default("EUR")
+  issueDate             DateTime?
+  dueDate               DateTime?
+  serviceDateFrom       DateTime?
+  serviceDateTo         DateTime?
+  sellerLegalName       String
+  sellerStreet          String
+  sellerPostalCode      String
+  sellerCity            String
+  sellerCountry         String
+  sellerEmail           String
+  sellerPhone           String
+  sellerTaxMode         BusinessTaxMode
+  sellerTaxNumber       String?
+  sellerVatId           String?
+  sellerTaxStatement    String?
+  sellerBankAccountHolder String?
+  sellerIban            String?
+  sellerBic             String?
+  sellerBankName        String?
+  paymentTermsDays      Int?
+  paymentInstructions   String?
+  recipientName         String
+  recipientCompany      String?
+  recipientEmail        String?
+  recipientStreet       String
+  recipientPostalCode   String
+  recipientCity         String
+  recipientCountry      String
+  customerReference     String?
+  notes                 String?
+  subtotal              Decimal       @db.Decimal(14, 2)
+  taxTotal              Decimal?      @db.Decimal(14, 2)
+  total                 Decimal       @db.Decimal(14, 2)
+  issuedPdf              Bytes?
+  issuedPdfChecksum      String?
+  issuedPdfSize          Int?
+  issuedAt               DateTime?
+  createdAt              DateTime      @default(now())
+  updatedAt              DateTime      @updatedAt
+  lines                  InvoiceLine[]
+  payments               InvoicePayment[]
+
+  @@index([customerId, createdAt])
+  @@index([serviceJobId])
+  @@index([status, issueDate])
+}
+
+model InvoiceLine {
+  id             String              @id @default(cuid())
+  invoiceId      String
+  invoice        Invoice             @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  serviceName    String
+  description    String?
+  quantity       Decimal             @db.Decimal(12, 3)
+  unit           String
+  unitPrice      Decimal             @db.Decimal(12, 2)
+  taxTreatment   JobLineTaxTreatment
+  taxRate        Decimal?            @db.Decimal(5, 2)
+  subtotal       Decimal             @db.Decimal(14, 2)
+  taxAmount      Decimal?            @db.Decimal(14, 2)
+  total          Decimal             @db.Decimal(14, 2)
+  sortOrder      Int                 @default(0)
+
+  @@index([invoiceId, sortOrder])
+}
+
+model InvoicePayment {
+  id          String   @id @default(cuid())
+  invoiceId   String
+  invoice     Invoice  @relation(fields: [invoiceId], references: [id], onDelete: Restrict)
+  amount      Decimal  @db.Decimal(14, 2)
+  paidAt      DateTime
+  method      String?
+  reference   String?
+  note        String?
+  createdById String
+  createdBy   AdminUser @relation(fields: [createdById], references: [id], onDelete: Restrict)
+  createdAt   DateTime @default(now())
+
+  @@index([invoiceId, paidAt])
 }
 
 model ServiceJobLineItem {
