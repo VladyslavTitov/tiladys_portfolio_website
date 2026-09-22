@@ -133,6 +133,21 @@ export const priceBulkSchema = z.object({
 const optionalText = (max: number) => z.string().trim().max(max).optional().or(z.literal(''));
 const optionalEmail = z.string().trim().email().max(254).optional().or(z.literal(''));
 const optionalMoney = z.string().trim().regex(/^\d{1,10}(?:[.,]\d{1,2})?$/, 'Use a positive amount with at most two decimals.').optional().or(z.literal(''));
+const requiredMoney = z.string().trim().regex(/^\d{1,10}(?:[.,]\d{1,2})?$/, 'Use a positive amount with at most two decimals.');
+
+export const serviceJobLineItemSchema = z.object({
+  id: optionalText(100),
+  cataloguePriceItemId: optionalText(100),
+  serviceName: z.string().trim().min(1).max(250),
+  description: optionalText(5_000),
+  quantity: z.string().trim().regex(/^\d{1,9}(?:[.,]\d{1,3})?$/, 'Use a positive quantity with at most three decimals.'),
+  unit: z.string().trim().min(1).max(40),
+  agreedUnitPrice: requiredMoney,
+  priceConfirmed: z.boolean(),
+  taxTreatment: z.enum(['UNCONFIRMED', 'VAT_STANDARD', 'VAT_REDUCED', 'ZERO_RATED', 'EXEMPT', 'KLEINUNTERNEHMER']),
+  internalUnitCost: optionalMoney,
+  sortOrder: z.number().int().min(0).max(10_000),
+}).strict();
 
 export const companySchema = z.object({
   name: z.string().trim().min(2).max(200),
@@ -187,6 +202,7 @@ export const serviceJobSchema = z.object({
   startTime: z.string().datetime().optional().or(z.literal('')),
   endTime: z.string().datetime().optional().or(z.literal('')),
   workDurationMinutes: z.number().int().min(0).max(1_000_000).optional().nullable(),
+  lineItems: z.array(serviceJobLineItemSchema).max(100).default([]),
 }).strict().refine((value) => !value.startTime || !value.endTime || new Date(value.endTime) >= new Date(value.startTime), {
   message: 'End time must be after start time.', path: ['endTime'],
 });

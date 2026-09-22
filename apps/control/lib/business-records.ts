@@ -1,4 +1,4 @@
-import { Prisma, type CustomerStatus, type CustomerType, type ServiceJobStatus } from '@prisma/client';
+import { Prisma, type CataloguePriceMode, type CustomerStatus, type CustomerType, type JobLineTaxTreatment, type ServiceJobStatus } from '@prisma/client';
 import { customerSchema, serviceJobSchema, companySchema } from '@tiladys/shared';
 
 type Tx = Prisma.TransactionClient;
@@ -47,7 +47,7 @@ export function parseServiceJob(value: unknown) {
   const parsed = serviceJobSchema.safeParse(value);
   if (!parsed.success) throw Object.assign(new Error('INVALID_SERVICE_JOB'), { details: parsed.error.flatten() });
   const data = parsed.data;
-  return {
+  return { job: {
     customerId: data.customerId, companyId: emptyToNull(data.companyId), servicePriceItemId: emptyToNull(data.servicePriceItemId),
     serviceType: emptyToNull(data.serviceType), title: data.title, description: emptyToNull(data.description),
     privateNotes: emptyToNull(data.privateNotes), customerVisibleNotes: emptyToNull(data.customerVisibleNotes),
@@ -56,7 +56,56 @@ export function parseServiceJob(value: unknown) {
     materialCost: decimalOrNull(data.materialCost), otherCost: decimalOrNull(data.otherCost),
     startTime: data.startTime ? new Date(data.startTime) : null, endTime: data.endTime ? new Date(data.endTime) : null,
     workDurationMinutes: data.workDurationMinutes ?? null,
-  };
+  }, lineItems: data.lineItems };
+}
+
+function localized(value: Prisma.JsonValue | null, fallback = '') {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return fallback;
+  const record = value as Record<string, unknown>;
+  return ['de', 'en', 'uk', 'ru', 'sk', 'fr'].map((key) => record[key]).find((entry): entry is string => typeof entry === 'string' && Boolean(entry.trim())) ?? fallback;
+}
+
+export function cataloguePriceDetails(price: string): { mode: CataloguePriceMode; unit: string; amount: Prisma.Decimal | null } {
+  const lower = price.toLocaleLowerCase('de-DE');
+  const mode: CataloguePriceMode = /(?:\/|pro\s+)(?:месяц|monat|month)|monthly/.test(lower) ? 'MONTHLY'
+    : /(?:от|\bab\b|\bfrom\b)/.test(lower) ? 'FROM'
+    : /(?:\/|pro\s+)(?:час|stunde|hour)/.test(lower) ? 'HOURLY'
+    : lower.includes('%') ? 'PERCENTAGE' : /€/.test(price) ? 'FIXED' : 'MANUAL';
+  const raw = price.match(/\d[\d\s]*(?:[.,]\d{1,2})?/)?.[0]?.replace(/\s/g, '').replace(',', '.');
+  const amount = raw ? new Prisma.Decimal(raw) : null;
+  const unit = mode === 'MONTHLY' ? 'month' : mode === 'HOURLY' ? 'hour' : mode === 'PERCENTAGE' ? 'percent' : 'item';
+  return { mode, unit, amount };
+}
+
+export async function prepareJobLineItems(tx: Tx, items: ReturnType<typeof parseServiceJob>['lineItems']) {
+  const ids = [...new Set(items.map((item) => item.cataloguePriceItemId).filter((id): id is string => Boolean(id)))];
+  const catalogue = await tx.priceItem.findMany({ where: { id: { in: ids } }, select: { id: true, code: true, name: true, note: true, price: true } });
+  const byId = new Map(catalogue.map((item) => [item.id, item]));
+  return items.map((item, index) => {
+    const source = item.cataloguePriceItemId ? byId.get(item.cataloguePriceItemId) : undefined;
+    if (item.cataloguePriceItemId && !source) throw new Error('INVALID_CATALOGUE_ITEM');
+    const details = source ? cataloguePriceDetails(source.price) : { mode: 'MANUAL' as CataloguePriceMode, unit: item.unit, amount: null };
+    if (source && ['FROM', 'MONTHLY', 'PERCENTAGE'].includes(details.mode) && !item.priceConfirmed) throw new Error('PRICE_CONFIRMATION_REQUIRED');
+    const quantity = new Prisma.Decimal(item.quantity.replace(',', '.'));
+    const agreedUnitPrice = new Prisma.Decimal(item.agreedUnitPrice.replace(',', '.'));
+    const subtotal = quantity.mul(agreedUnitPrice).toDecimalPlaces(2, Prisma.Decimal.ROUND_HALF_UP);
+    const rates: Partial<Record<JobLineTaxTreatment, Prisma.Decimal>> = { VAT_STANDARD: new Prisma.Decimal(19), VAT_REDUCED: new Prisma.Decimal(7), ZERO_RATED: new Prisma.Decimal(0) };
+    const taxTreatment = item.taxTreatment as JobLineTaxTreatment;
+    const taxRate = rates[taxTreatment] ?? null;
+    const taxAmount = taxRate ? subtotal.mul(taxRate).div(100).toDecimalPlaces(2, Prisma.Decimal.ROUND_HALF_UP) : taxTreatment === 'UNCONFIRMED' ? null : new Prisma.Decimal(0);
+    return {
+      cataloguePriceItemId: source?.id ?? null,
+      serviceName: item.serviceName || (source ? localized(source.name, source.code) : ''),
+      description: emptyToNull(item.description) || (source ? localized(source.note) || null : null),
+      quantity, unit: item.unit || details.unit,
+      cataloguePriceText: source?.price ?? null, catalogueUnitPrice: details.amount,
+      cataloguePriceMode: details.mode, priceConfirmed: item.priceConfirmed,
+      agreedUnitPrice, taxTreatment, taxRate, subtotal, taxAmount,
+      total: taxAmount ? subtotal.add(taxAmount) : subtotal,
+      internalUnitCost: item.internalUnitCost ? new Prisma.Decimal(item.internalUnitCost.replace(',', '.')) : null,
+      sortOrder: index,
+    };
+  });
 }
 
 export function adminError(error: unknown, fallback: string) {
@@ -66,6 +115,7 @@ export function adminError(error: unknown, fallback: string) {
   if (message === 'UNAUTHORIZED') return { status: 401, body: { error: message } };
   if (message === 'INVALID_ORIGIN') return { status: 403, body: { error: message } };
   if (message.startsWith('INVALID_')) return { status: 400, body: { error: message, details } };
+  if (message === 'PRICE_CONFIRMATION_REQUIRED') return { status: 400, body: { error: message } };
   if (code === 'P2025') return { status: 404, body: { error: 'NOT_FOUND' } };
   if (code === 'P2002') return { status: 409, body: { error: 'CONFLICT' } };
   console.error(`[${fallback}]`);
