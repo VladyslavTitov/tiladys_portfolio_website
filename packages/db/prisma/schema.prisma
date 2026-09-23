@@ -217,6 +217,7 @@ model Company {
   notes       String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  invoices    Invoice[]
   customers   Customer[]
   serviceJobs ServiceJob[]
 
@@ -349,6 +350,9 @@ model Invoice {
   customer              Customer      @relation(fields: [customerId], references: [id], onDelete: Restrict)
   serviceJobId          String?
   serviceJob            ServiceJob?   @relation(fields: [serviceJobId], references: [id], onDelete: SetNull)
+  billingCompanyId      String?
+  billingCompany        Company?      @relation(fields: [billingCompanyId], references: [id], onDelete: Restrict)
+  billingRecipientType  String        @default("INDIVIDUAL")
   currency              String        @default("EUR")
   issueDate             DateTime?
   dueDate               DateTime?
@@ -395,6 +399,7 @@ model Invoice {
   @@index([customerId, createdAt])
   @@index([serviceJobId])
   @@index([status, issueDate])
+  @@index([billingCompanyId, createdAt])
 }
 
 model InvoiceLine {

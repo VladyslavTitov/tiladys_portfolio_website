@@ -16,6 +16,7 @@ const csp = [
 
 const config: NextConfig = {
   poweredByHeader: false,
+  allowedDevOrigins: ['127.0.0.1'],
   reactStrictMode: true,
 
   transpilePackages: ["@tiladys/db", "@tiladys/shared"],
@@ -23,6 +24,7 @@ const config: NextConfig = {
 
   outputFileTracingIncludes: {
     "/api/admin/invoices/*": [
+      "./public/brand/logo.svg",
       "../../node_modules/dejavu-fonts-ttf/ttf/DejaVuSans.ttf",
       "../../node_modules/dejavu-fonts-ttf/ttf/DejaVuSans-Bold.ttf",
     ],

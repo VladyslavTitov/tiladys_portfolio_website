@@ -25,7 +25,10 @@
     "test:db:phase1": "node --import tsx --test tests/phase1-database.test.ts",
     "test:db:crm": "node --import tsx --test tests/crm-service-jobs.test.ts",
     "test:browser:invoice": "node tests/invoice-browser.mjs",
-    "test:pdf:unicode": "node --import tsx --test tests/invoice-unicode-pdf.test.ts"
+    "test:pdf:unicode": "node --import tsx --test tests/invoice-unicode-pdf.test.ts",
+    "test:crm:workflow": "node tests/crm-invoice-workflow.mjs",
+    "db:check:crm": "node scripts/check-crm-schema.mjs",
+    "release:prepare:control": "npm run db:deploy && npm run db:check:crm && npm run build:control"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"

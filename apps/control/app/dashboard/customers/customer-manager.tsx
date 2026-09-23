@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useUnsavedChanges } from '@/lib/use-unsaved-changes';
+import { useMemo, useRef, useState } from 'react';
 import { Plus, Search, UserRound } from 'lucide-react';
 
 type Company = { id: string; name: string };
@@ -15,28 +16,30 @@ export function CustomerManager({ initialCustomers, companies }: { initialCustom
   const [draft, setDraft] = useState(empty);
   const [message, setMessage] = useState('');
   const [busy, setBusy] = useState(false);
-  const filtered = useMemo(() => customers.filter((c) => `${c.customerNumber} ${c.firstName ?? ''} ${c.lastName ?? ''} ${c.company?.name ?? ''} ${c.email ?? ''}`.toLowerCase().includes(query.toLowerCase())), [customers, query]);
+  const lock = useRef(false); const [errors, setErrors] = useState<Record<string, string[]>>({}); const [status, setStatus] = useState('');
+  useUnsavedChanges(JSON.stringify(draft) !== JSON.stringify(empty));
+  const filtered = useMemo(() => customers.filter((c) => (!status || c.status === status) && `${c.customerNumber} ${c.firstName ?? ''} ${c.lastName ?? ''} ${c.company?.name ?? ''} ${c.email ?? ''}`.toLowerCase().includes(query.toLowerCase())), [customers, query, status]);
 
   const name = (c: Customer) => [c.firstName, c.lastName].filter(Boolean).join(' ') || c.company?.name || 'Unnamed customer';
   async function createCustomer(event: React.FormEvent) {
-    event.preventDefault(); setBusy(true); setMessage('Saving customer…');
+    event.preventDefault(); if (lock.current) return; lock.current = true; setErrors({}); setBusy(true); setMessage('Saving customer…');
     try {
       const response = await fetch('/api/admin/customers', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(draft) });
-      const data = await response.json(); if (!response.ok) throw new Error(data.error ?? `HTTP ${response.status}`);
+      const data = await response.json(); if (!response.ok) { setErrors(data.details?.fieldErrors ?? {}); throw new Error(data.error ?? `HTTP ${response.status}`); }
       const created: Customer = { ...data, updatedAt: data.updatedAt, _count: { serviceJobs: 0 } };
       setCustomers((current) => [created, ...current]); setDraft(empty); setShowForm(false); setMessage(`${created.customerNumber} created.`);
     } catch (error) { setMessage(`Could not create customer: ${error instanceof Error ? error.message : 'Unknown error'}`); }
-    finally { setBusy(false); }
+    finally { lock.current = false; setBusy(false); }
   }
 
   return <>
     <div className="admin-page-actions">
       <label className="admin-search"><Search size={17} /><span className="sr-only">Search customers</span><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search name, company, email or number" /></label>
-      <button className="admin-primary" type="button" onClick={() => setShowForm((value) => !value)}><Plus size={18} />New customer</button>
+      <label>Status filter<select value={status} onChange={e => setStatus(e.target.value)}><option value="">All customers</option>{['LEAD','ACTIVE','INACTIVE','ARCHIVED'].map(s => <option key={s}>{s}</option>)}</select></label><button className="admin-primary" type="button" onClick={() => setShowForm((value) => !value)}><Plus size={18} />New customer</button>
     </div>
     {message ? <p className="admin-message" aria-live="polite">{message}</p> : null}
     {showForm ? <form className="panel admin-form-grid" onSubmit={createCustomer}>
-      <h2 className="admin-span-2">New customer</h2>
+      <h2 className="admin-span-2">New customer</h2>{Object.entries(errors).map(([key, values]) => <p className="admin-span-2" role="alert" key={key}>{key}: {values.join(' ')}</p>)}
       <label>Type<select value={draft.type} onChange={(e) => setDraft({ ...draft, type: e.target.value })}><option value="PERSON">Person</option><option value="BUSINESS">Business contact</option></select></label>
       <label>Status<select value={draft.status} onChange={(e) => setDraft({ ...draft, status: e.target.value })}><option value="LEAD">Lead</option><option value="ACTIVE">Active</option><option value="INACTIVE">Inactive</option></select></label>
       <label>First name<input value={draft.firstName} onChange={(e) => setDraft({ ...draft, firstName: e.target.value })} /></label>
@@ -49,7 +52,7 @@ export function CustomerManager({ initialCustomers, companies }: { initialCustom
       <label>Postal code<input value={draft.postalCode} onChange={(e) => setDraft({ ...draft, postalCode: e.target.value })} /></label>
       <label>City<input value={draft.city} onChange={(e) => setDraft({ ...draft, city: e.target.value })} /></label>
       <label>Source<input value={draft.source} onChange={(e) => setDraft({ ...draft, source: e.target.value })} placeholder="Referral, website…" /></label>
-      <label className="admin-span-2">General notes<textarea rows={4} value={draft.notes} onChange={(e) => setDraft({ ...draft, notes: e.target.value })} /></label>
+      <label className="admin-span-2">Internal general notes<textarea rows={4} value={draft.notes} onChange={(e) => setDraft({ ...draft, notes: e.target.value })} /></label>
       <button className="admin-primary admin-span-2" disabled={busy}>Create customer</button>
     </form> : null}
     <div className="record-grid">{filtered.map((customer) => <Link className="record-card" href={`/dashboard/customers/${customer.id}`} key={customer.id}>

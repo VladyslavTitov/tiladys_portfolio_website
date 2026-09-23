@@ -1,3 +1,4 @@
+import { validationDetails } from './validation-details';
 import { Prisma, type CataloguePriceMode, type CustomerStatus, type CustomerType, type JobLineTaxTreatment, type ServiceJobStatus } from '@prisma/client';
 import { customerSchema, serviceJobSchema, companySchema } from '@tiladys/shared';
 
@@ -23,7 +24,7 @@ export async function allocateNumber(tx: Tx, scope: 'CUSTOMER' | 'SERVICE_JOB' |
 
 export function parseCustomer(value: unknown) {
   const parsed = customerSchema.safeParse(value);
-  if (!parsed.success) throw Object.assign(new Error('INVALID_CUSTOMER'), { details: parsed.error.flatten() });
+  if (!parsed.success) throw Object.assign(new Error('INVALID_CUSTOMER'), { details: validationDetails(parsed.error) });
   const data = parsed.data;
   return {
     type: data.type as CustomerType,
@@ -39,13 +40,13 @@ export function parseCustomer(value: unknown) {
 
 export function parseCompany(value: unknown) {
   const parsed = companySchema.safeParse(value);
-  if (!parsed.success) throw Object.assign(new Error('INVALID_COMPANY'), { details: parsed.error.flatten() });
+  if (!parsed.success) throw Object.assign(new Error('INVALID_COMPANY'), { details: validationDetails(parsed.error) });
   return { ...parsed.data, email: emptyToNull(parsed.data.email), phone: emptyToNull(parsed.data.phone), street: emptyToNull(parsed.data.street), postalCode: emptyToNull(parsed.data.postalCode), city: emptyToNull(parsed.data.city), website: emptyToNull(parsed.data.website), notes: emptyToNull(parsed.data.notes), country: parsed.data.country.toUpperCase() };
 }
 
 export function parseServiceJob(value: unknown) {
   const parsed = serviceJobSchema.safeParse(value);
-  if (!parsed.success) throw Object.assign(new Error('INVALID_SERVICE_JOB'), { details: parsed.error.flatten() });
+  if (!parsed.success) throw Object.assign(new Error('INVALID_SERVICE_JOB'), { details: validationDetails(parsed.error) });
   const data = parsed.data;
   return { job: {
     customerId: data.customerId, companyId: emptyToNull(data.companyId), servicePriceItemId: emptyToNull(data.servicePriceItemId),
@@ -117,7 +118,7 @@ export function adminError(error: unknown, fallback: string) {
   if (message.startsWith('INVALID_')) return { status: 400, body: { error: message, details } };
   if (message === 'PRICE_CONFIRMATION_REQUIRED') return { status: 400, body: { error: message } };
   if (['BILLING_SETTINGS_UNCONFIRMED','TAX_IDENTIFIER_REQUIRED','INVOICE_DETAILS_INCOMPLETE','INVOICE_TAX_INCOMPLETE','INVOICE_TAX_MISMATCH','TAX_STATEMENT_REQUIRED','INVOICE_JOB_HAS_NO_LINES'].includes(message)) return { status: 422, body: { error: message } };
-  if (['ISSUED_INVOICE_IMMUTABLE','INVOICE_NOT_ISSUABLE','PAYMENT_REQUIRES_ISSUED_INVOICE','PAYMENT_EXCEEDS_BALANCE'].includes(message)) return { status: 409, body: { error: message } };
+  if (['ISSUED_PDF_MISSING','ISSUED_INVOICE_IMMUTABLE','INVOICE_NOT_ISSUABLE','PAYMENT_REQUIRES_ISSUED_INVOICE','PAYMENT_EXCEEDS_BALANCE'].includes(message)) return { status: 409, body: { error: message } };
   if (code === 'P2025') return { status: 404, body: { error: 'NOT_FOUND' } };
   if (code === 'P2002') return { status: 409, body: { error: 'CONFLICT' } };
   console.error(`[${fallback}]`, error instanceof Error ? { name: error.name, message: error.message, stack: error.stack } : { type: typeof error });

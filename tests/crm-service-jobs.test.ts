@@ -40,7 +40,7 @@ const configured = process.env.CRM_TEST_DATABASE_URL;
 test('CRM migration preserves legacy data and customer/job workflows persist atomically', { skip: !configured }, async () => {
   const url = new URL(configured!);
   assert.ok(['localhost', '127.0.0.1'].includes(url.hostname));
-  assert.equal(url.pathname, '/tiladys_crm_test');
+  assert.match(url.pathname, /^\/tiladys_crm_test(?:_migrations)?$/);
   assert.equal(url.port, '55434');
   const schema = `crm_${Date.now()}`; url.searchParams.set('schema', schema);
   const db = new PrismaClient({ datasourceUrl: url.href, log: [] });
@@ -63,6 +63,16 @@ test('CRM migration preserves legacy data and customer/job workflows persist ato
     ]);
     const before = { projects: await db.project.count(), images: await db.projectImage.count(), imageBytes: await db.$queryRaw`SELECT sum(octet_length(data))::text AS bytes FROM "ProjectImage"`, messages: await db.contactMessage.count() };
     stage('20260922110000_crm_service_jobs'); stage('20260922150000_service_job_line_items'); stage('20260922170000_invoices'); stage('20260922230000_unique_draft_per_service_job'); cli(['migrate','deploy','--schema',schemaFile]);
+    // Rehearse the new migration with an existing issued document, without loading new columns first.
+    await db.$executeRawUnsafe(`INSERT INTO "Customer" (id,"customerNumber","updatedAt") VALUES ('legacy-contact','LEGACY-1',CURRENT_TIMESTAMP)`);
+    await db.$executeRawUnsafe(`INSERT INTO "Invoice" (id,status,"customerId","invoiceNumber","sellerLegalName","sellerStreet","sellerPostalCode","sellerCity","sellerCountry","sellerEmail","sellerPhone","sellerTaxMode","recipientName","recipientCompany","recipientStreet","recipientPostalCode","recipientCity","recipientCountry",subtotal,total,"issuedPdf","issuedPdfChecksum","updatedAt") VALUES ('legacy-invoice','ISSUED','legacy-contact','LEGACY-INV','Original seller','Street','10000','City','DE','a@example.test','123','VAT','Original contact','Ambiguous company name','Original street','10000','City','DE',10,10,decode('255044462d707265736572766564','hex'),'original-checksum',CURRENT_TIMESTAMP)`);
+    names.filter(name => name > '20260922230000_unique_draft_per_service_job').forEach(stage); cli(['migrate','deploy','--schema',schemaFile]);
+    const legacy = await db.invoice.findUniqueOrThrow({ where: { id: 'legacy-invoice' } });
+    assert.equal(legacy.billingCompanyId, null); assert.equal(legacy.billingRecipientType, 'LEGACY');
+    assert.equal(legacy.recipientCompany, 'Ambiguous company name'); assert.equal(legacy.recipientStreet, 'Original street');
+    assert.equal(legacy.status, 'ISSUED'); assert.equal(legacy.issuedPdfChecksum, 'original-checksum');
+    assert.equal(Buffer.from(legacy.issuedPdf!).toString(), '%PDF-preserved');
+    await db.invoice.delete({ where: { id: legacy.id } }); await db.customer.delete({ where: { id: 'legacy-contact' } });
     assert.deepEqual({ projects: await db.project.count(), images: await db.projectImage.count(), imageBytes: await db.$queryRaw`SELECT sum(octet_length(data))::text AS bytes FROM "ProjectImage"`, messages: await db.contactMessage.count() }, before);
     const company = await db.company.create({ data: { name: 'Synthetic GmbH' } });
     const created = await Promise.all(Array.from({ length: 12 }, (_, index) => db.$transaction(async (tx) => {

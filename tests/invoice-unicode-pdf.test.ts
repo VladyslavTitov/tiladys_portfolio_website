@@ -43,5 +43,34 @@ test('invoice PDF embeds full Unicode fonts, extracts exact text, and paginates 
   const extracted = spawnSync('pdftotext', ['-layout', 'docs/business-control/samples/invoice-unicode-sample.pdf', '-'], { encoding: 'utf8' });
   assert.equal(extracted.status, 0, extracted.stderr);
   const text = extracted.stdout.normalize('NFC');
-  for (const expected of ['DRAFT', 'TiLADYS – Vladyslav Titov', 'Kronenstraße 19', '45479 Mülheim an der Ruhr', ...unicodeLines]) assert.ok(text.includes(expected.normalize('NFC')), `Missing extracted text: ${expected}`);
+  for (const expected of ['Draft', 'TiLADYS – Vladyslav Titov', 'Kronenstraße 19', '45479 Mülheim an der Ruhr', ...unicodeLines]) assert.ok(text.includes(expected.normalize('NFC')), `Missing extracted text: ${expected}`);
+});
+
+test('draft/final layout, repeated headers, oversized descriptions and footer bounds', async () => {
+  const stress = fixture(12);
+  stress.recipientName = 'Олена Коваль · François Müller · ľščťž '.repeat(6).trim();
+  stress.recipientStreet = 'Kronenstraße · вулиця Незалежності '.repeat(5).trim();
+  stress.recipientCity = 'Mülheim an der Ruhr / Bratislava / Київ';
+  stress.lines[0].description = ('Long customer-facing description: English, Deutsch, Українська, Русский, Slovensky, Français. ').repeat(50);
+  stress.lines[0].unit = 'a deliberately long unit of measurement';
+  const directory = 'docs/business-control/samples/crm-workflow'; mkdirSync(directory, { recursive: true });
+  for (const status of ['DRAFT', 'ISSUED']) {
+    const path = `${directory}/multilingual-${status.toLowerCase()}.pdf`;
+    const bytes = await generateInvoicePdf({ ...stress, status, invoiceNumber: status === 'ISSUED' ? 'INV-SAMPLE-2026' : null });
+    writeFileSync(path, bytes);
+    const text = spawnSync('pdftotext', ['-layout', path, '-'], { encoding: 'utf8' }); assert.equal(text.status, 0);
+    assert.equal(text.stdout.includes('Draft'), status === 'DRAFT'); assert.ok(!text.stdout.includes('DRAFT'));
+    const pages = text.stdout.split('\f').filter(p => p.trim()); assert.ok(pages.length > 2);
+    pages.forEach((page, index) => { assert.match(page, new RegExp(`Page ${index + 1} / ${pages.length}`)); if (page.includes('multilingual service') || page.includes('Long customer-facing')) assert.match(page, /Description\s+Qty \/ unit\s+Unit price\s+Total/); });
+    assert.equal((text.stdout.match(/TOTAL:/g) ?? []).length, 0);
+    // Bounding boxes verify selectable glyphs remain inside the A4 page and above reserved footer space.
+    const bbox = spawnSync('pdftotext', ['-bbox', path, '-'], { encoding: 'utf8' }); assert.equal(bbox.status, 0);
+    for (const match of bbox.stdout.matchAll(/<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" yMax="([\d.]+)">([^<]*)<\/word>/g)) {
+      const [, x1, y1, x2, y2] = match;
+      assert.ok(Number(x1) >= 40 && Number(x2) <= 555, `Horizontal clipping: ${match[0]}`);
+      assert.ok(Number(y1) >= 30 && Number(y2) <= 832, `Vertical clipping: ${match[0]}`);
+      assert.ok(Number(y2) < 785 || Number(y1) > 800, `Text collides with footer separator: ${match[0]}`);
+    }
+    assert.ok(text.stdout.includes('Français')); assert.ok(text.stdout.includes('Українська'));
+  }
 });

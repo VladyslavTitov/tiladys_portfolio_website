@@ -168,16 +168,23 @@ export const invoiceLineSchema = z.object({
   taxTreatment: z.enum(['UNCONFIRMED', 'VAT_STANDARD', 'VAT_REDUCED', 'ZERO_RATED', 'EXEMPT', 'KLEINUNTERNEHMER']),
 }).strict();
 
+export const invoiceFromJobSchema = z.object({
+  serviceJobId: z.string().min(1).max(100),
+  billingRecipientType: z.enum(['INDIVIDUAL', 'COMPANY']).default('INDIVIDUAL'),
+  billingCompanyId: optionalText(100),
+}).strict();
+
 export const invoiceDraftSchema = z.object({
+  billingCompanyId: optionalText(100), billingRecipientType: z.enum(["INDIVIDUAL", "COMPANY", "LEGACY"]).default("INDIVIDUAL"),
   customerId: z.string().min(1).max(100), serviceJobId: optionalText(100),
   issueDate: z.string().datetime().optional().or(z.literal('')), dueDate: z.string().datetime().optional().or(z.literal('')),
   serviceDateFrom: z.string().datetime().optional().or(z.literal('')), serviceDateTo: z.string().datetime().optional().or(z.literal('')),
-  recipientName: z.string().trim().min(1).max(250), recipientCompany: optionalText(250), recipientEmail: optionalEmail,
+  recipientName: z.string().trim().max(250), recipientCompany: optionalText(250), recipientEmail: optionalEmail,
   recipientStreet: z.string().trim().max(200), recipientPostalCode: z.string().trim().max(20),
   recipientCity: z.string().trim().max(100), recipientCountry: z.string().trim().min(2).max(100),
   customerReference: optionalText(200), notes: optionalText(2_000),
   lines: z.array(invoiceLineSchema).min(1).max(250),
-}).strict().refine((value) => !value.serviceDateFrom || !value.serviceDateTo || new Date(value.serviceDateTo) >= new Date(value.serviceDateFrom), { message: 'Service end date must not precede start date.', path: ['serviceDateTo'] });
+}).strict().refine(value => value.billingRecipientType !== 'INDIVIDUAL' || Boolean(value.recipientName), { message: 'Enter the individual recipient name.', path: ['recipientName'] }).refine((value) => !value.serviceDateFrom || !value.serviceDateTo || new Date(value.serviceDateTo) >= new Date(value.serviceDateFrom), { message: 'Service end date must not precede start date.', path: ['serviceDateTo'] });
 
 export const invoicePaymentSchema = z.object({ amount: requiredMoney, paidAt: z.string().datetime(), method: optionalText(100), reference: optionalText(200), note: optionalText(1_000) }).strict();
 
