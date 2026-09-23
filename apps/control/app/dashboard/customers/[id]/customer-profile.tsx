@@ -1,5 +1,7 @@
 'use client';
 
+import { adminDateTime } from '@/lib/admin-dates';
+
 import Link from 'next/link';
 import { ProfileInvoices, type ProfileInvoice } from '../../invoices/profile-invoices';
 import { useUnsavedChanges } from '@/lib/use-unsaved-changes';
@@ -40,8 +42,8 @@ export function CustomerProfile({ initial, companies }: { initial: Customer; com
     <aside><section className="panel"><h2>Service jobs</h2><Link className="admin-primary full-button" href={`/dashboard/service-jobs?customerId=${customer.id}`}><BriefcaseBusiness size={17} />Create service job</Link>{customer.serviceJobs.length ? <div className="compact-list">{customer.serviceJobs.map((job) => <Link href={`/dashboard/service-jobs?jobId=${job.id}`} key={job.id}><strong>{job.title}</strong><span>{job.jobNumber} · {job.status.replace('_',' ')}</span><span>Create invoice from job →</span></Link>)}</div> : <p>No service jobs yet.</p>}</section>
 
     <section className="panel"><h2><FileImage size={18} /> Photos & files</h2>{customer.files.length ? <p>{customer.files.length} private file records.</p> : <p>No private files. Upload remains disabled until private storage is configured.</p>}</section>
-    <section className="panel"><h2><StickyNote size={18} /> Private notes</h2><form className="note-form" onSubmit={addNote}><textarea rows={3} value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a dated internal note" /><button className="admin-primary" disabled={busy}>Add note</button></form><div className="timeline">{notes.map((n) => <article key={n.id}><p>{n.body}</p><small>{new Date(n.createdAt).toLocaleString('de-DE')} · {n.createdBy.displayName}</small></article>)}</div></section></aside></div>
+    <section className="panel"><h2><StickyNote size={18} /> Private notes</h2><form className="note-form" onSubmit={addNote}><textarea rows={3} value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a dated internal note" /><button className="admin-primary" disabled={busy}>Add note</button></form><div className="timeline">{notes.map((n) => <article key={n.id}><p>{n.body}</p><small>{adminDateTime(n.createdAt)} · {n.createdBy.displayName}</small></article>)}</div></section></aside></div>
     <ProfileInvoices invoices={initial.invoices} />
-    <section className="panel"><h2>Activity</h2><div className="timeline">{initial.activities.map((a) => <article key={a.id}><strong>{a.summary}</strong><small>{new Date(a.createdAt).toLocaleString('de-DE')} · {a.createdBy?.displayName ?? 'System'}</small></article>)}</div></section>
+    <section className="panel"><h2>Activity</h2><div className="timeline">{initial.activities.map((a) => <article key={a.id}><strong>{a.summary}</strong><small>{adminDateTime(a.createdAt)} · {a.createdBy?.displayName ?? 'System'}</small></article>)}</div></section>
   </>;
 }

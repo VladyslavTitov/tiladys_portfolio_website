@@ -1,5 +1,7 @@
 'use client';
 
+import { adminDateTime } from '@/lib/admin-dates';
+
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Attachments } from './attachments';
@@ -54,7 +56,7 @@ export function MessageList({ messages }: { messages: MessageRow[] }) {
           <article className={`panel message message--${isUnread ? 'unread' : 'read'}`} key={message.id}>
             <header>
               <div><b>{message.name}</b><a href={`mailto:${message.email}`}>{message.email}</a></div>
-              <time dateTime={message.createdAt}>{new Date(message.createdAt).toLocaleString()}</time>
+              <time dateTime={message.createdAt}>{adminDateTime(message.createdAt)}</time>
               <span className={`message-status message-status--${isUnread ? 'unread' : 'read'}`}>{message.status}</span>
             </header>
             <div className="message-meta">

@@ -1,3 +1,4 @@
+import { adminDate } from '@/lib/admin-dates';
 import Link from 'next/link';
 
 export type ProfileInvoice = {
@@ -7,7 +8,7 @@ export type ProfileInvoice = {
   recipientName: string; billingRecipientType: string;
 };
 const money = (value: string) => Number(value).toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
-const date = (value: string | null) => value ? new Date(value).toLocaleDateString('de-DE') : '—';
+const date = adminDate;
 export function ProfileInvoices({ invoices }: { invoices: ProfileInvoice[] }) {
   return <section className="panel profile-invoices"><h2>Invoices</h2>{invoices.length ? <div className="profile-invoice-grid">{invoices.map(invoice => <article className="profile-invoice" key={invoice.id}>
     <div className="profile-invoice-heading"><Link href={`/dashboard/invoices?invoiceId=${invoice.id}`}><strong>{invoice.invoiceNumber ?? 'Draft'}</strong></Link><span className="status-pill">{invoice.status}</span><span className="status-pill">{invoice.paymentStatus}</span></div>
