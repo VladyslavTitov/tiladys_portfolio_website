@@ -1,3 +1,4 @@
+import { invoiceIssuanceRequirements } from './invoice-issuance-requirements';
 import { validationDetails } from './validation-details';
 import crypto from 'node:crypto';
 import { Prisma, type BusinessBillingSettings, type BusinessTaxMode, type JobLineTaxTreatment, type PrismaClient } from '@prisma/client';
@@ -64,13 +65,8 @@ export function parsePayment(value: unknown) {
 type BillingSettings = Omit<BusinessBillingSettings, 'createdAt' | 'updatedAt'>;
 
 export function assertInvoiceIssuable(invoice: { billingRecipientType?: string; recipientCompany?: string | null; recipientName: string; recipientStreet: string; recipientPostalCode: string; recipientCity: string; issueDate: Date | null; lines: Array<{ taxTreatment: JobLineTaxTreatment }> }, settings: BillingSettings) {
-  if (!settings.settingsConfirmedAt || settings.taxMode === 'UNCONFIRMED') throw new Error('BILLING_SETTINGS_UNCONFIRMED');
-  if (!settings.taxNumber && !settings.vatId) throw new Error('TAX_IDENTIFIER_REQUIRED');
-  if ((invoice.billingRecipientType === 'COMPANY' ? !invoice.recipientCompany : !invoice.recipientName) || !invoice.recipientStreet || !invoice.recipientPostalCode || !invoice.recipientCity || !invoice.issueDate) throw new Error('INVOICE_DETAILS_INCOMPLETE');
-  if (!invoice.lines.length || invoice.lines.some((line) => line.taxTreatment === 'UNCONFIRMED')) throw new Error('INVOICE_TAX_INCOMPLETE');
-  if (settings.taxMode === 'VAT' && invoice.lines.some((line) => line.taxTreatment === 'KLEINUNTERNEHMER')) throw new Error('INVOICE_TAX_MISMATCH');
-  if (settings.taxMode === 'KLEINUNTERNEHMER' && invoice.lines.some((line) => line.taxTreatment !== 'KLEINUNTERNEHMER')) throw new Error('INVOICE_TAX_MISMATCH');
-  if (settings.taxMode === 'KLEINUNTERNEHMER' && !settings.taxStatement) throw new Error('TAX_STATEMENT_REQUIRED');
+  const requirements = invoiceIssuanceRequirements(invoice, settings);
+  if (requirements.length) throw Object.assign(new Error(requirements[0].code), { requirements });
 }
 
 export function sellerSnapshot(settings: BillingSettings) {
