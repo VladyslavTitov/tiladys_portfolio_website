@@ -136,6 +136,9 @@ const optionalMoney = z.string().trim().regex(/^\d{1,10}(?:[.,]\d{1,2})?$/, 'Use
 const requiredMoney = z.string().trim().regex(/^\d{1,10}(?:[.,]\d{1,2})?$/, 'Use a positive amount with at most two decimals.');
 
 export const serviceJobLineItemSchema = z.object({
+  serviceNameDe: optionalText(250), descriptionDe: optionalText(5_000), unitDe: optionalText(40),
+  billingPeriodFrom: z.string().date().optional().or(z.literal('')), billingPeriodTo: z.string().date().optional().or(z.literal('')),
+
   id: optionalText(100),
   cataloguePriceItemId: optionalText(100),
   serviceName: z.string().trim().min(1).max(250),
@@ -155,6 +158,7 @@ export const businessBillingSettingsSchema = z.object({
   city: z.string().trim().min(2).max(100), country: z.string().trim().min(2).max(100),
   email: z.email().max(254), phone: z.string().trim().min(3).max(50),
   taxMode: z.enum(['UNCONFIRMED', 'VAT', 'KLEINUNTERNEHMER', 'EXEMPT']),
+  taxStatementDe: optionalText(500), paymentInstructionsDe: optionalText(1_000),
   taxNumber: optionalText(100), vatId: optionalText(100), taxStatement: optionalText(500),
   bankAccountHolder: optionalText(200), iban: optionalText(50), bic: optionalText(20), bankName: optionalText(200),
   paymentTermsDays: z.number().int().min(0).max(365).nullable(), paymentInstructions: optionalText(1_000),
@@ -162,6 +166,10 @@ export const businessBillingSettingsSchema = z.object({
 }).strict();
 
 export const invoiceLineSchema = z.object({
+  serviceNameDe: optionalText(250), descriptionDe: optionalText(5_000), unitDe: optionalText(40),
+  billingPeriodFrom: z.string().date().optional().or(z.literal('')), billingPeriodTo: z.string().date().optional().or(z.literal('')),
+  priceMode: z.enum(['FIXED','FROM','HOURLY','MONTHLY','PERCENTAGE','MANUAL']).default('MANUAL'), priceConfirmed: z.boolean().default(false),
+
   serviceName: z.string().trim().min(1).max(250), description: optionalText(5_000),
   quantity: z.string().trim().regex(/^\d{1,9}(?:[.,]\d{1,3})?$/), unit: z.string().trim().min(1).max(40),
   unitPrice: requiredMoney,
@@ -182,6 +190,7 @@ export const invoiceDraftSchema = z.object({
   recipientName: z.string().trim().max(250), recipientCompany: optionalText(250), recipientEmail: optionalEmail,
   recipientStreet: z.string().trim().max(200), recipientPostalCode: z.string().trim().max(20),
   recipientCity: z.string().trim().max(100), recipientCountry: z.string().trim().min(2).max(100),
+  notesDe: optionalText(2_000),
   customerReference: optionalText(200), notes: optionalText(2_000),
   lines: z.array(invoiceLineSchema).min(1).max(250),
 }).strict().refine(value => value.billingRecipientType !== 'INDIVIDUAL' || Boolean(value.recipientName), { message: 'Enter the individual recipient name.', path: ['recipientName'] }).refine((value) => !value.serviceDateFrom || !value.serviceDateTo || new Date(value.serviceDateTo) >= new Date(value.serviceDateFrom), { message: 'Service end date must not precede start date.', path: ['serviceDateTo'] });

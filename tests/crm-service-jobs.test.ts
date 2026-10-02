@@ -66,7 +66,18 @@ test('CRM migration preserves legacy data and customer/job workflows persist ato
     // Rehearse the new migration with an existing issued document, without loading new columns first.
     await db.$executeRawUnsafe(`INSERT INTO "Customer" (id,"customerNumber","updatedAt") VALUES ('legacy-contact','LEGACY-1',CURRENT_TIMESTAMP)`);
     await db.$executeRawUnsafe(`INSERT INTO "Invoice" (id,status,"customerId","invoiceNumber","sellerLegalName","sellerStreet","sellerPostalCode","sellerCity","sellerCountry","sellerEmail","sellerPhone","sellerTaxMode","recipientName","recipientCompany","recipientStreet","recipientPostalCode","recipientCity","recipientCountry",subtotal,total,"issuedPdf","issuedPdfChecksum","updatedAt") VALUES ('legacy-invoice','ISSUED','legacy-contact','LEGACY-INV','Original seller','Street','10000','City','DE','a@example.test','123','VAT','Original contact','Ambiguous company name','Original street','10000','City','DE',10,10,decode('255044462d707265736572766564','hex'),'original-checksum',CURRENT_TIMESTAMP)`);
-    names.filter(name => name > '20260922230000_unique_draft_per_service_job').forEach(stage); cli(['migrate','deploy','--schema',schemaFile]);
+    names.filter(name => name > '20260922230000_unique_draft_per_service_job' && name < '20260927').forEach(stage); cli(['migrate','deploy','--schema',schemaFile]);
+    await db.$executeRawUnsafe(`INSERT INTO "Company" (id,name,"updatedAt") VALUES ('pre-bilingual-company','Preserved company',CURRENT_TIMESTAMP)`);
+    await db.$executeRawUnsafe(`INSERT INTO "ServiceJob" (id,"jobNumber","customerId","companyId",title,"updatedAt") VALUES ('pre-bilingual-job','JOB-PRESERVED','legacy-contact','pre-bilingual-company','Preserved job',CURRENT_TIMESTAMP)`);
+    await db.$executeRawUnsafe(`UPDATE "Invoice" SET "serviceJobId"='pre-bilingual-job' WHERE id='legacy-invoice'`);
+    await db.$executeRawUnsafe(`INSERT INTO "InvoicePayment" (id,"invoiceId",amount,"paidAt","createdById") VALUES ('pre-bilingual-payment','legacy-invoice',3.25,CURRENT_TIMESTAMP,'admin')`);
+    names.filter(name => name >= '20260927').forEach(stage); cli(['migrate','deploy','--schema',schemaFile]);
+    assert.equal((await db.invoicePayment.findUniqueOrThrow({where:{id:'pre-bilingual-payment'}})).amount.toString(), '3.25');
+    assert.equal((await db.serviceJob.findUniqueOrThrow({where:{id:'pre-bilingual-job'}})).title, 'Preserved job');
+    assert.equal((await db.company.findUniqueOrThrow({where:{id:'pre-bilingual-company'}})).name, 'Preserved company');
+    await db.invoicePayment.delete({where:{id:'pre-bilingual-payment'}});
+    await db.serviceJob.delete({where:{id:'pre-bilingual-job'}});
+    await db.company.delete({where:{id:'pre-bilingual-company'}});
     const legacy = await db.invoice.findUniqueOrThrow({ where: { id: 'legacy-invoice' } });
     assert.equal(legacy.billingCompanyId, null); assert.equal(legacy.billingRecipientType, 'LEGACY');
     assert.equal(legacy.recipientCompany, 'Ambiguous company name'); assert.equal(legacy.recipientStreet, 'Original street');
@@ -91,10 +102,10 @@ test('CRM migration preserves legacy data and customer/job workflows persist ato
     assert.match(job.jobNumber, /^JOB-\d{4}-0001$/); assert.equal((await db.serviceJob.findUniqueOrThrow({ where: { id: job.id } })).estimatedPrice.toString(), '89');
     const section = await db.priceSection.create({ data: { number: 'T', title: { en: 'Test' } } });
     const catalogueItem = await db.priceItem.create({ data: { sectionId: section.id, code: 'TEST-1', name: { en: 'Monthly care' }, note: { en: 'No automatic renewal' }, price: '149 €/month' } });
-    await assert.rejects(db.$transaction(async (tx) => prepareJobLineItems(tx, [{ id: '', cataloguePriceItemId: catalogueItem.id, serviceName: 'Monthly care', description: '', quantity: '1', unit: 'month', agreedUnitPrice: '160', priceConfirmed: false, taxTreatment: 'UNCONFIRMED', internalUnitCost: '', sortOrder: 0 }])), /PRICE_CONFIRMATION_REQUIRED/);
+    await assert.rejects(db.$transaction(async (tx) => prepareJobLineItems(tx, [{ id: '', cataloguePriceItemId: catalogueItem.id, serviceNameDe: 'Monatliche Betreuung', billingPeriodFrom: '2026-09-01', billingPeriodTo: '2026-09-30', serviceName: 'Monthly care', description: '', quantity: '1', unit: 'month', agreedUnitPrice: '160', priceConfirmed: false, taxTreatment: 'UNCONFIRMED', internalUnitCost: '', sortOrder: 0 }])), /PRICE_CONFIRMATION_REQUIRED/);
     const pricedJob = await db.$transaction(async (tx) => {
       const lines = await prepareJobLineItems(tx, [
-        { id: '', cataloguePriceItemId: catalogueItem.id, serviceName: 'Monthly care', description: 'One month only', quantity: '2', unit: 'month', agreedUnitPrice: '160', priceConfirmed: true, taxTreatment: 'VAT_STANDARD', internalUnitCost: '30', sortOrder: 0 },
+        { id: '', cataloguePriceItemId: catalogueItem.id, serviceNameDe: 'Monatliche Betreuung', billingPeriodFrom: '2026-09-01', billingPeriodTo: '2026-09-30', serviceName: 'Monthly care', description: 'One month only', quantity: '2', unit: 'month', agreedUnitPrice: '160', priceConfirmed: true, taxTreatment: 'VAT_STANDARD', internalUnitCost: '30', sortOrder: 0 },
         { id: '', cataloguePriceItemId: '', serviceName: 'Private custom service', description: '', quantity: '1.5', unit: 'hour', agreedUnitPrice: '80', priceConfirmed: true, taxTreatment: 'UNCONFIRMED', internalUnitCost: '', sortOrder: 1 },
       ]);
       return tx.serviceJob.create({ data: { jobNumber: 'JOB-2099-9999', customerId: created[0].id, title: 'Priced job', lineItems: { create: lines } }, include: { lineItems: { orderBy: { sortOrder: 'asc' } } } });
@@ -106,7 +117,7 @@ test('CRM migration preserves legacy data and customer/job workflows persist ato
     assert.equal(snapshot.serviceName, 'Monthly care'); assert.equal(snapshot.cataloguePriceText, '149 €/month'); assert.equal(snapshot.agreedUnitPrice.toString(), '160');
     assert.equal((await db.priceItem.findUniqueOrThrow({ where: { id: catalogueItem.id } })).price, '999 €');
     await db.businessBillingSettings.create({ data: { id: 'default', taxMode: 'VAT', taxNumber: 'TEST-NOT-REAL', settingsConfirmedAt: new Date(), paymentTermsDays: 14 } });
-    const invoiceLines = calculateInvoiceLines(pricedJob.lineItems.map((line) => ({ serviceName: line.serviceName, description: line.description ?? '', quantity: line.quantity.toString(), unit: line.unit, unitPrice: line.agreedUnitPrice.toString(), taxTreatment: line.taxTreatment === 'UNCONFIRMED' ? 'VAT_STANDARD' : line.taxTreatment })));
+    const invoiceLines = calculateInvoiceLines(pricedJob.lineItems.map((line) => ({ serviceNameDe: 'Testleistung', descriptionDe: line.description ? 'Testbeschreibung' : '', serviceName: line.serviceName, description: line.description ?? '', quantity: line.quantity.toString(), unit: line.unit, unitPrice: line.agreedUnitPrice.toString(), taxTreatment: line.taxTreatment === 'UNCONFIRMED' ? 'VAT_STANDARD' : line.taxTreatment })));
     const invoiceSubtotal = invoiceLines.reduce((sum, line) => sum.add(line.subtotal), new Prisma.Decimal(0));
     const invoiceTax = invoiceLines.reduce((sum, line) => sum.add(line.taxAmount ?? 0), new Prisma.Decimal(0));
     const invoice = await db.invoice.create({ data: { customerId: created[0].id, serviceJobId: pricedJob.id, sellerLegalName: 'TiLADYS – Vladyslav Titov', sellerStreet: 'Kronenstraße 19', sellerPostalCode: '45479', sellerCity: 'Mülheim an der Ruhr', sellerCountry: 'Germany', sellerEmail: 'contact@tiladys.com', sellerPhone: '+49 163 7235608', sellerTaxMode: 'VAT', sellerTaxNumber: 'TEST-NOT-REAL', recipientName: 'Synthetic Customer', recipientStreet: 'Teststraße 1', recipientPostalCode: '45479', recipientCity: 'Mülheim', recipientCountry: 'DE', issueDate: new Date(), subtotal: invoiceSubtotal, taxTotal: invoiceTax, total: invoiceSubtotal.add(invoiceTax), lines: { create: invoiceLines } } });

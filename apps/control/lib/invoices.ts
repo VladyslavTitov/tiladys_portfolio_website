@@ -11,7 +11,7 @@ export const defaultBillingSettings = {
   city: 'Mülheim an der Ruhr', country: 'Germany', email: 'contact@tiladys.com', phone: '+49 163 7235608',
   taxMode: 'UNCONFIRMED' as BusinessTaxMode, taxNumber: null, vatId: null, taxStatement: null,
   bankAccountHolder: null, iban: null, bic: null, bankName: null, paymentTermsDays: null,
-  paymentInstructions: null, settingsConfirmedAt: null,
+  paymentInstructionsDe: null, taxStatementDe: null, paymentInstructions: null, settingsConfirmedAt: null,
 };
 
 const nullable = (value?: string) => value || null;
@@ -23,6 +23,7 @@ export function parseBillingSettings(value: unknown) {
   if (!parsed.success) throw Object.assign(new Error('INVALID_BILLING_SETTINGS'), { details: validationDetails(parsed.error) });
   const data = parsed.data;
   return {
+    taxStatementDe: nullable(data.taxStatementDe), paymentInstructionsDe: nullable(data.paymentInstructionsDe),
     legalName: data.legalName, street: data.street, postalCode: data.postalCode, city: data.city, country: data.country,
     email: data.email, phone: data.phone, taxMode: data.taxMode as BusinessTaxMode,
     taxNumber: nullable(data.taxNumber), vatId: nullable(data.vatId), taxStatement: nullable(data.taxStatement),
@@ -32,15 +33,17 @@ export function parseBillingSettings(value: unknown) {
   };
 }
 
-export function calculateInvoiceLines(lines: Array<{ serviceName: string; description?: string; quantity: string; unit: string; unitPrice: string; taxTreatment: string }>) {
+export function calculateInvoiceLines(lines: Array<{ serviceNameDe?: string | null; descriptionDe?: string | null; unitDe?: string | null; billingPeriodFrom?: string | null; billingPeriodTo?: string | null; priceMode?: import('@prisma/client').CataloguePriceMode; priceConfirmed?: boolean; serviceName: string; description?: string; quantity: string; unit: string; unitPrice: string; taxTreatment: string }>) {
   return lines.map((line, sortOrder) => {
+    if (['FROM', 'PERCENTAGE'].includes(line.priceMode ?? '') && !line.priceConfirmed) throw Object.assign(new Error('PRICE_CONFIRMATION_REQUIRED'), { details: { fieldErrors: { [`lines.${sortOrder}.priceConfirmed`]: ['Confirm the agreed amount.'] } } });
+    if (line.priceMode === 'MONTHLY' && (!line.billingPeriodFrom || !line.billingPeriodTo || line.billingPeriodTo < line.billingPeriodFrom)) throw Object.assign(new Error('INVALID_BILLING_PERIOD'), { details: { fieldErrors: { [`lines.${sortOrder}.billingPeriodFrom`]: ['Enter an ordered monthly billing period.'] } } });
     const quantity = new Prisma.Decimal(line.quantity.replace(',', '.'));
     const unitPrice = money(line.unitPrice);
     const subtotal = quantity.mul(unitPrice).toDecimalPlaces(2, Prisma.Decimal.ROUND_HALF_UP);
     const taxTreatment = line.taxTreatment as JobLineTaxTreatment;
     const taxRate = taxTreatment === 'VAT_STANDARD' ? new Prisma.Decimal(19) : taxTreatment === 'VAT_REDUCED' ? new Prisma.Decimal(7) : ['ZERO_RATED', 'EXEMPT', 'KLEINUNTERNEHMER'].includes(taxTreatment) ? new Prisma.Decimal(0) : null;
     const taxAmount = taxRate === null ? null : subtotal.mul(taxRate).div(100).toDecimalPlaces(2, Prisma.Decimal.ROUND_HALF_UP);
-    return { serviceName: line.serviceName, description: nullable(line.description), quantity, unit: line.unit, unitPrice, taxTreatment, taxRate, subtotal, taxAmount, total: subtotal.add(taxAmount ?? 0), sortOrder };
+    return { serviceNameDe: line.serviceNameDe || null, descriptionDe: line.descriptionDe || null, unitDe: line.unitDe || null, billingPeriodFrom: line.billingPeriodFrom || null, billingPeriodTo: line.billingPeriodTo || null, priceMode: line.priceMode ?? 'MANUAL', priceConfirmed: line.priceConfirmed ?? false, serviceName: line.serviceName, description: nullable(line.description), quantity, unit: line.unit, unitPrice, taxTreatment, taxRate, subtotal, taxAmount, total: subtotal.add(taxAmount ?? 0), sortOrder };
   });
 }
 
@@ -52,7 +55,7 @@ export function parseInvoiceDraft(value: unknown) {
   const hasUnknownTax = lines.some((line) => line.taxAmount === null);
   const taxTotal = hasUnknownTax ? null : lines.reduce((sum, line) => sum.add(line.taxAmount ?? 0), new Prisma.Decimal(0));
   return {
-    invoice: { billingCompanyId: nullable(data.billingCompanyId), billingRecipientType: data.billingRecipientType, customerId: data.customerId, serviceJobId: nullable(data.serviceJobId), issueDate: date(data.issueDate), dueDate: date(data.dueDate), serviceDateFrom: date(data.serviceDateFrom), serviceDateTo: date(data.serviceDateTo), recipientName: data.recipientName, recipientCompany: nullable(data.recipientCompany), recipientEmail: nullable(data.recipientEmail), recipientStreet: data.recipientStreet, recipientPostalCode: data.recipientPostalCode, recipientCity: data.recipientCity, recipientCountry: data.recipientCountry, customerReference: nullable(data.customerReference), notes: nullable(data.notes), subtotal, taxTotal, total: subtotal.add(taxTotal ?? 0) }, lines,
+    invoice: { documentVersion: 2, notesDe: nullable(data.notesDe), billingCompanyId: nullable(data.billingCompanyId), billingRecipientType: data.billingRecipientType, customerId: data.customerId, serviceJobId: nullable(data.serviceJobId), issueDate: date(data.issueDate), dueDate: date(data.dueDate), serviceDateFrom: date(data.serviceDateFrom), serviceDateTo: date(data.serviceDateTo), recipientName: data.recipientName, recipientCompany: nullable(data.recipientCompany), recipientEmail: nullable(data.recipientEmail), recipientStreet: data.recipientStreet, recipientPostalCode: data.recipientPostalCode, recipientCity: data.recipientCity, recipientCountry: data.recipientCountry, customerReference: nullable(data.customerReference), notes: nullable(data.notes), subtotal, taxTotal, total: subtotal.add(taxTotal ?? 0) }, lines,
   };
 }
 
@@ -70,7 +73,7 @@ export function assertInvoiceIssuable(invoice: { billingRecipientType?: string; 
 }
 
 export function sellerSnapshot(settings: BillingSettings) {
-  return { sellerLegalName: settings.legalName, sellerStreet: settings.street, sellerPostalCode: settings.postalCode, sellerCity: settings.city, sellerCountry: settings.country, sellerEmail: settings.email, sellerPhone: settings.phone, sellerTaxMode: settings.taxMode, sellerTaxNumber: settings.taxNumber, sellerVatId: settings.vatId, sellerTaxStatement: settings.taxStatement, sellerBankAccountHolder: settings.bankAccountHolder, sellerIban: settings.iban, sellerBic: settings.bic, sellerBankName: settings.bankName, paymentTermsDays: settings.paymentTermsDays, paymentInstructions: settings.paymentInstructions };
+  return { sellerTaxStatementDe: settings.taxStatementDe, paymentInstructionsDe: settings.paymentInstructionsDe, sellerLegalName: settings.legalName, sellerStreet: settings.street, sellerPostalCode: settings.postalCode, sellerCity: settings.city, sellerCountry: settings.country, sellerEmail: settings.email, sellerPhone: settings.phone, sellerTaxMode: settings.taxMode, sellerTaxNumber: settings.taxNumber, sellerVatId: settings.vatId, sellerTaxStatement: settings.taxStatement, sellerBankAccountHolder: settings.bankAccountHolder, sellerIban: settings.iban, sellerBic: settings.bic, sellerBankName: settings.bankName, paymentTermsDays: settings.paymentTermsDays, paymentInstructions: settings.paymentInstructions };
 }
 
 export const invoiceInclude = { lines: { orderBy: { sortOrder: 'asc' as const } }, payments: { orderBy: { paidAt: 'asc' as const } }, billingCompany: { select: { id: true, name: true } }, customer: { select: { customerNumber: true, firstName: true, lastName: true } }, serviceJob: { select: { jobNumber: true, title: true } } };
@@ -92,8 +95,8 @@ export async function issueInvoice(database: PrismaClient, id: string, userId: s
     if (invoice.billingRecipientType === 'LEGACY') throw new Error('INVALID_BILLING_RECIPIENT');
     assertInvoiceIssuable(invoice, settings);
     const invoiceNumber = await allocateNumber(tx, 'INVOICE', 'INV'); const issuedAt = new Date();
-    const pdf = await generateInvoicePdf({ ...invoice, ...sellerSnapshot(settings), invoiceNumber, status: 'ISSUED' });
-    const updated = await tx.invoice.update({ where: { id }, data: { ...sellerSnapshot(settings), invoiceNumber, status: 'ISSUED', issuedAt, issuedPdf: pdf, issuedPdfChecksum: crypto.createHash('sha256').update(pdf).digest('hex'), issuedPdfSize: pdf.byteLength }, include: invoiceInclude });
+    const pdf = await generateInvoicePdf({ ...invoice, ...sellerSnapshot(settings), documentVersion: 2, invoiceNumber, status: 'ISSUED' });
+    const updated = await tx.invoice.update({ where: { id }, data: { ...sellerSnapshot(settings), documentVersion: 2, invoiceNumber, status: 'ISSUED', issuedAt, issuedPdf: pdf, issuedPdfChecksum: crypto.createHash('sha256').update(pdf).digest('hex'), issuedPdfSize: pdf.byteLength }, include: invoiceInclude });
     await tx.customerActivity.create({ data: { customerId: invoice.customerId, type: 'INVOICE_ISSUED', summary: `Invoice ${invoiceNumber} issued`, metadata: { invoiceId: id, serviceJobId: invoice.serviceJobId }, createdById: userId } });
     await tx.auditLog.create({ data: { userId, action: 'INVOICE_ISSUE', entity: 'Invoice', entityId: id, metadata: { invoiceNumber, pdfChecksum: updated.issuedPdfChecksum } } });
     return updated;

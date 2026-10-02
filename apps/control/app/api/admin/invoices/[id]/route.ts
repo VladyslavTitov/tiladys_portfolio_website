@@ -8,7 +8,7 @@ type Context = { params: Promise<{ id: string }> };
 export async function GET(_req: NextRequest, { params }: Context) {
   try {
     await requireUser(); const { id } = await params;
-    const invoice = await db.invoice.findUniqueOrThrow({ where: { id }, include: invoiceInclude });
+    const invoice = await db.invoice.findUniqueOrThrow({ where: { id }, include: invoiceInclude, omit: { issuedPdf: true } });
     return NextResponse.json(serializeInvoice(invoice));
   } catch (error) {
     const e = adminError(error, 'INVOICE_READ_FAILED');
@@ -37,7 +37,7 @@ export async function PATCH(req: NextRequest, { params }: Context) {
       if (parsed.invoice.billingCompanyId) await tx.company.findUniqueOrThrow({ where: { id: parsed.invoice.billingCompanyId } });
       if (parsed.invoice.billingRecipientType === 'INDIVIDUAL') parsed.invoice.recipientCompany = null;
       await tx.invoiceLine.deleteMany({ where: { invoiceId: id } });
-      const invoice = await tx.invoice.update({ where: { id }, data: { ...parsed.invoice, lines: { create: parsed.lines } }, include: invoiceInclude });
+      const invoice = await tx.invoice.update({ where: { id }, data: { ...parsed.invoice, lines: { create: parsed.lines } }, include: invoiceInclude, omit: { issuedPdf: true } });
       await tx.auditLog.create({ data: { userId: user.id, action: 'INVOICE_DRAFT_UPDATE', entity: 'Invoice', entityId: id } });
       return invoice;
     });

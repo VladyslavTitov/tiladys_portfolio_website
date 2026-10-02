@@ -1,3 +1,4 @@
+import { germanText, germanUnits } from './invoice-translations';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import sharp from 'sharp';
@@ -5,19 +6,21 @@ import fontkit from '@pdf-lib/fontkit';
 import { PDFDocument, rgb, type PDFFont, type PDFPage } from 'pdf-lib';
 
 type PdfInvoice = {
+  documentVersion?: number; notesDe?: string | null; sellerTaxStatementDe?: string | null; paymentInstructionsDe?: string | null;
   status: string; invoiceNumber: string | null; issueDate: Date | null; dueDate: Date | null; serviceDateFrom: Date | null; serviceDateTo: Date | null;
   sellerLegalName: string; sellerStreet: string; sellerPostalCode: string; sellerCity: string; sellerCountry: string; sellerEmail: string; sellerPhone: string;
   sellerTaxMode: string; sellerTaxNumber: string | null; sellerVatId: string | null; sellerTaxStatement: string | null;
   sellerBankAccountHolder: string | null; sellerIban: string | null; sellerBic: string | null; sellerBankName: string | null; paymentInstructions: string | null;
   recipientName: string; recipientCompany: string | null; recipientEmail: string | null; recipientStreet: string; recipientPostalCode: string; recipientCity: string; recipientCountry: string;
   customerReference: string | null; notes: string | null; subtotal: { toString(): string }; taxTotal: { toString(): string } | null; total: { toString(): string };
-  lines: Array<{ serviceName: string; description: string | null; quantity: { toString(): string }; unit: string; unitPrice: { toString(): string }; taxRate: { toString(): string } | null; subtotal: { toString(): string }; taxAmount: { toString(): string } | null; total: { toString(): string }; taxTreatment: string }>;
+  lines: Array<{ serviceNameDe?: string | null; descriptionDe?: string | null; unitDe?: string | null; billingPeriodFrom?: string | null; billingPeriodTo?: string | null; serviceName: string; description: string | null; quantity: { toString(): string }; unit: string; unitPrice: { toString(): string }; taxRate: { toString(): string } | null; subtotal: { toString(): string }; taxAmount: { toString(): string } | null; total: { toString(): string }; taxTreatment: string }>;
 };
 
 const PAGE = { width: 595.28, height: 841.89, margin: 46 };
 const navy = rgb(0.012, 0.102, 0.22); const cyan = rgb(0.02, 0.67, 0.85); const slate = rgb(0.31, 0.39, 0.48); const pale = rgb(0.94, 0.97, 0.98);
 const euro = (value: { toString(): string }) => `${Number(value.toString()).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} EUR`;
 const formattedDate = (value: Date | null) => value ? new Intl.DateTimeFormat('de-DE', { timeZone: 'Europe/Berlin' }).format(value) : '—';
+
 
 function wrap(font: PDFFont, text: string, size: number, width: number) {
   const paragraphs = text.replace(/\r/g, '').split('\n'); const lines: string[] = [];
@@ -29,19 +32,32 @@ function wrap(font: PDFFont, text: string, size: number, width: number) {
   return lines;
 }
 
-export async function generateInvoicePdf(invoice: PdfInvoice) {
+let assetPromise: Promise<{ regular: Buffer; bold: Buffer; logo: Buffer }> | undefined;
+async function assets() {
+  if (!assetPromise) assetPromise = (async () => {
+    const readAsset = async (paths: string[]) => { for (const path of paths) { try { return await readFile(path); } catch {} } throw new Error("INVOICE_ASSET_NOT_FOUND"); };
+    const roots = [process.cwd(), join(process.cwd(), "..", "..")];
+    const [regular, bold, svg] = await Promise.all([
+      readAsset(roots.map(root => join(root, "node_modules/dejavu-fonts-ttf/ttf/DejaVuSans.ttf"))),
+      readAsset(roots.map(root => join(root, "node_modules/dejavu-fonts-ttf/ttf/DejaVuSans-Bold.ttf"))),
+      readAsset([join(process.cwd(), "public/brand/logo.svg"), join(process.cwd(), "apps/control/public/brand/logo.svg")]),
+    ]);
+    return { regular, bold, logo: await sharp(svg).resize(392).png().toBuffer() };
+  })().catch(error => { assetPromise = undefined; throw error; });
+  return assetPromise;
+}
+
+export async function generateInvoicePdf(snapshot: PdfInvoice) {
+  const invoice = snapshot;
   const pdf = await PDFDocument.create(); pdf.registerFontkit(fontkit);
-  const loadFont = async (filename: string) => { for (const root of [process.cwd(), join(process.cwd(), '..', '..')]) { try { return await readFile(join(root, 'node_modules', 'dejavu-fonts-ttf', 'ttf', filename)); } catch {} } throw new Error(`INVOICE_FONT_NOT_FOUND:${filename}`); };
-  // These are complete, licensed TTFs rather than Fontsource Unicode-range
-  // web subsets. A single embedded face therefore maps both Latin Extended
-  // and Cyrillic text through fontkit without fallback or manual recoding.
-  const regularBytes = await loadFont('DejaVuSans.ttf');
-  const boldBytes = await loadFont('DejaVuSans-Bold.ttf');
-  const font = await pdf.embedFont(regularBytes, { subset: true }); const bold = await pdf.embedFont(boldBytes, { subset: true });
+  const bytes = await assets();
+  const font = await pdf.embedFont(bytes.regular, { subset: true }); const bold = await pdf.embedFont(bytes.bold, { subset: true });
+  const logo = await pdf.embedPng(bytes.logo);
   const left = PAGE.margin, right = PAGE.width - PAGE.margin, width = right - left;
   const bottom = 66;
   const lineHeight = Math.ceil(Math.max(font.heightAtSize(9), bold.heightAtSize(9))) + 3;
-  let page!: PDFPage; let y = 0;
+  let page!: PDFPage; let y = 0; let currentLanguage: 'en' | 'de' = 'en';
+  const pageLanguages: Array<'en' | 'de'> = [];
   const draw = (value: string, x: number, baseline: number, size = 9, face = font, color = navy) => {
     page.drawText(value, { x, y: baseline, size, font: face, color });
   };
@@ -49,31 +65,34 @@ export async function generateInvoicePdf(invoice: PdfInvoice) {
     const fitted = Math.min(size, size * maxWidth / Math.max(1, face.widthOfTextAtSize(value, size)));
     draw(value, edge - face.widthOfTextAtSize(value, fitted), baseline, fitted, face);
   };
-  const addPage = () => {
-    page = pdf.addPage([PAGE.width, PAGE.height]); y = PAGE.height - PAGE.margin;
-    if (pdf.getPageCount() > 1) { draw(invoice.invoiceNumber ?? 'Invoice', left, y, 10, bold); y -= 28; }
-    if (invoice.status === 'DRAFT') draw('Draft', right - 28, PAGE.height - PAGE.margin, 8, font, slate);
+  const addPage = (continuation = true) => {
+    page = pdf.addPage([PAGE.width, PAGE.height]); pageLanguages.push(currentLanguage); y = PAGE.height - PAGE.margin;
+    if (continuation && pdf.getPageCount() > 1) { draw(invoice.invoiceNumber ?? 'Invoice', left, y, 10, bold); y -= 28; }
+    if (invoice.status === 'DRAFT') draw(currentLanguage === 'en' ? 'Draft' : 'Entwurf', right - 28, PAGE.height - PAGE.margin, 8, font, slate);
   };
   const ensure = (height: number) => { if (y - height < bottom) addPage(); };
   const block = (value: string, x = left, available = width, size = 9, face = font, color = navy) => {
     for (const line of wrap(face, value, size, available)) { ensure(size + 5); draw(line, x, y, size, face, color); y -= size + 5; }
   };
   const label = (value: string) => { ensure(32); draw(value, left, y, 8, bold, slate); y -= 18; };
-  addPage();
-  // Reuse the actual brand mark; only the logo is rasterized, all invoice text stays searchable.
-  let logoBytes: Buffer | undefined;
-  for (const root of [process.cwd(), join(process.cwd(), 'apps', 'control')]) {
-    try { logoBytes = await sharp(await readFile(join(root, 'public', 'brand', 'logo.svg'))).resize(392).png().toBuffer(); break; } catch {}
-  }
-  if (!logoBytes) throw new Error('INVOICE_LOGO_NOT_FOUND');
-  const logo = await pdf.embedPng(logoBytes);
+  for (const language of ['en', 'de'] as const) {
+  currentLanguage = language;
+  const bilingual = (english: string, german: string) => language === 'en' ? english : german;
+  const invoice = language === 'en' ? snapshot : { ...snapshot,
+    notes: germanText(snapshot.notes, snapshot.notesDe),
+    sellerTaxStatement: germanText(snapshot.sellerTaxStatement, snapshot.sellerTaxStatementDe),
+    paymentInstructions: germanText(snapshot.paymentInstructions, snapshot.paymentInstructionsDe),
+    lines: snapshot.lines.map(line => ({ ...line, serviceName: germanText(line.serviceName, line.serviceNameDe), description: germanText(line.description, line.descriptionDe), unit: line.unitDe || germanUnits[line.unit] || germanText(line.unit, null) })),
+  };
+  addPage(false);
   page.drawRectangle({ x: left - 5, y: y - 57, width: 80, height: 62, color: navy });
   page.drawImage(logo, { x: left, y: y - 52, width: 70, height: 52 });
   draw('TiLADYS', left + 84, y - 17, 22, bold);
   draw('DIGITAL SERVICES', left + 85, y - 35, 8, font, slate);
   y -= 85;
-  draw('INVOICE', left, y, 22, bold); y -= 23;
-  block(invoice.invoiceNumber ?? 'Number assigned on issue', left, width, 10, bold);
+  draw(bilingual('INVOICE', 'RECHNUNG'), left, y, 22, bold); y -= 23;
+  block(invoice.invoiceNumber ?? bilingual('Number assigned on issue', 'Nummer wird bei Ausgabe vergeben'), left, width, 10, bold);
+  if (language === 'de') block('Deutsche Fassung derselben Rechnung. Keine zusätzliche Zahlungspflicht.', left, width, 8);
   y -= 8;
   page.drawLine({ start: { x: left, y }, end: { x: right, y }, thickness: 1, color: cyan }); y -= 23;
   const addressTop = y;
@@ -82,18 +101,18 @@ export async function generateInvoicePdf(invoice: PdfInvoice) {
     lines.filter(Boolean).forEach((line, index) => block(line, x, 233, 9, index === 0 ? bold : font));
     return y;
   };
-  const recipientBottom = address('BILL TO', [invoice.recipientCompany ?? '', invoice.recipientName, invoice.recipientStreet, `${invoice.recipientPostalCode} ${invoice.recipientCity}`, invoice.recipientCountry, invoice.recipientEmail ?? ''], left);
-  const sellerBottom = address('SELLER', [invoice.sellerLegalName, invoice.sellerStreet, `${invoice.sellerPostalCode} ${invoice.sellerCity}`, invoice.sellerCountry, invoice.sellerEmail, invoice.sellerPhone], left + 269);
+  const recipientBottom = address(bilingual('Bill to', 'Rechnungsempfänger'), [invoice.recipientCompany ?? '', invoice.recipientName, invoice.recipientStreet, `${invoice.recipientPostalCode} ${invoice.recipientCity}`, invoice.recipientCountry, invoice.recipientEmail ?? ''], left);
+  const sellerBottom = address(bilingual('Seller', 'Verkäufer'), [invoice.sellerLegalName, invoice.sellerStreet, `${invoice.sellerPostalCode} ${invoice.sellerCity}`, invoice.sellerCountry, invoice.sellerEmail, invoice.sellerPhone], left + 269);
   y = Math.min(recipientBottom, sellerBottom) - 16;
-  label('INVOICE INFORMATION');
-  block(`Invoice date: ${formattedDate(invoice.issueDate)}    ·    Due date: ${formattedDate(invoice.dueDate)}`);
-  block(`Service date/period: ${formattedDate(invoice.serviceDateFrom)}${invoice.serviceDateTo && invoice.serviceDateTo.getTime() !== invoice.serviceDateFrom?.getTime() ? ` – ${formattedDate(invoice.serviceDateTo)}` : ''}`);
-  if (invoice.customerReference) block(`Reference: ${invoice.customerReference}`);
+  label(bilingual('Invoice information', 'Rechnungsdaten'));
+  block(`${bilingual('Invoice date', 'Rechnungsdatum')}: ${formattedDate(invoice.issueDate)}    ·    ${bilingual('Due date', 'Fälligkeitsdatum')}: ${formattedDate(invoice.dueDate)}`);
+  block(`${bilingual('Service date / period', 'Leistungszeitraum')}: ${formattedDate(invoice.serviceDateFrom)}${invoice.serviceDateTo && invoice.serviceDateTo.getTime() !== invoice.serviceDateFrom?.getTime() ? ` – ${formattedDate(invoice.serviceDateTo)}` : ''}`);
+  if (invoice.customerReference) block(`${bilingual('Reference', 'Referenz')}: ${invoice.customerReference}`);
   y -= 12;
   const tableHeader = () => {
     page.drawRectangle({ x: left, y: y - 22, width, height: 26, color: navy });
-    draw('Description', left + 8, y - 13, 8, bold, rgb(1, 1, 1));
-    for (const [value, edge] of [['Qty / unit', 383], ['Unit price', 463], ['Total', right - 8]] as const) {
+    draw(bilingual('Description', 'Leistung'), left + 8, y - 13, 8, bold, rgb(1, 1, 1));
+    for (const [value, edge] of [[bilingual('Qty / unit', 'Menge'), 383], [bilingual('Unit price', 'Einzelpreis'), 463], [bilingual('Total', 'Gesamt'), right - 8]] as const) {
       draw(value, edge - bold.widthOfTextAtSize(value, 8), y - 13, 8, bold, rgb(1, 1, 1));
     }
     y -= 34;
@@ -102,7 +121,8 @@ export async function generateInvoicePdf(invoice: PdfInvoice) {
   const firstHeight = firstLine ? Math.max(44, (wrap(bold, firstLine.serviceName, 9, 253).length + (firstLine.description ? wrap(font, firstLine.description, 8.5, 253).length : 0)) * lineHeight + 16) : 44;
   ensure((firstHeight <= 620 ? firstHeight : 44) + 34); tableHeader();
   for (const line of invoice.lines) {
-    const parts = [...wrap(bold, line.serviceName, 9, 253).map(text => ({ text, face: bold })), ...((line.description ? wrap(font, line.description, 8.5, 253) : []).map(text => ({ text, face: font })))];
+    const description = [line.description, line.billingPeriodFrom && line.billingPeriodTo ? `${bilingual('Billing period', 'Abrechnungszeitraum')}: ${line.billingPeriodFrom} – ${line.billingPeriodTo}` : ''].filter(Boolean).join('\n');
+    const parts = [...wrap(bold, line.serviceName, 9, 253).map(text => ({ text, face: bold })), ...((description ? wrap(font, description, 8.5, 253) : []).map(text => ({ text, face: font })))];
     const quantity = wrap(font, `${line.quantity.toString()} ${line.unit}`, 8, 58);
     let offset = 0;
     while (offset < parts.length) {
@@ -118,33 +138,34 @@ export async function generateInvoicePdf(invoice: PdfInvoice) {
         quantity.forEach((part, i) => rightText(part, 383, y - 8 - i * lineHeight, 8, font, 58));
         rightText(euro(line.unitPrice), 463, y - 8, 8, font, 72);
         rightText(euro(line.total), right - 8, y - 8, 8, bold, 72);
-        rightText(line.taxRate ? `${line.taxRate.toString()}% tax` : 'Tax: see below', 463, y - 22, 7, font, 72);
+        rightText(line.taxRate ? `${line.taxRate.toString()}% ${bilingual('tax', 'USt.')}` : bilingual('Tax: see below', 'Steuer: s. unten'), 463, y - 22, 7, font, 72);
       }
       offset += segment.length; y -= height + 6;
       if (offset < parts.length) { addPage(); tableHeader(); }
     }
   }
   ensure(105); y -= 14;
-  for (const [title, amount, isTotal] of [['Subtotal', euro(invoice.subtotal), false], ['Tax', invoice.taxTotal ? euro(invoice.taxTotal) : 'Not confirmed', false], ['Total', euro(invoice.total), true]] as const) {
+  for (const [title, amount, isTotal] of [[bilingual('Subtotal', 'Zwischensumme'), euro(invoice.subtotal), false], [bilingual('Tax', 'Steuer'), invoice.taxTotal ? euro(invoice.taxTotal) : bilingual('Not confirmed', 'Nicht bestätigt'), false], [bilingual('Total', 'Gesamt'), euro(invoice.total), true]] as const) {
     if (isTotal) { page.drawLine({ start: { x: 315, y: y + 10 }, end: { x: right, y: y + 10 }, thickness: 1, color: cyan }); y -= 8; }
     draw(title, 315, y, isTotal ? 12 : 9, isTotal ? bold : font);
     rightText(amount, right - 8, y, isTotal ? 12 : 9, isTotal ? bold : font, 163); y -= 23;
   }
   y -= 10;
-  const taxDetails = [invoice.sellerTaxNumber ? `Tax number: ${invoice.sellerTaxNumber}` : '', invoice.sellerVatId ? `VAT ID: ${invoice.sellerVatId}` : '', invoice.sellerTaxStatement ?? ''].filter(Boolean).join('\n');
+  const taxDetails = [invoice.sellerTaxNumber ? `${bilingual('Tax number', 'Steuernummer')}: ${invoice.sellerTaxNumber}` : '', invoice.sellerVatId ? `${bilingual('VAT ID', 'USt-IdNr.')}: ${invoice.sellerVatId}` : '', invoice.sellerTaxStatement ?? ''].filter(Boolean).join('\n');
   if (taxDetails) { block(taxDetails, left, width, 8); y -= 10; }
   const payment = [invoice.sellerBankAccountHolder, invoice.sellerBankName, invoice.sellerIban ? `IBAN: ${invoice.sellerIban}` : '', invoice.sellerBic ? `BIC: ${invoice.sellerBic}` : '', invoice.paymentInstructions].filter(Boolean).join('\n');
-  label('PAYMENT INFORMATION');
-  block(payment || 'Payment details have not yet been provided.', left, width, 8);
-  if (invoice.invoiceNumber) block(`Payment reference: ${invoice.invoiceNumber}`, left, width, 8);
-  if (invoice.notes) { y -= 12; label('NOTES'); block(invoice.notes, left, width, 8); }
+  label(bilingual('Payment information', 'Zahlungsinformationen'));
+  block(payment || bilingual('Payment details have not yet been provided.', 'Zahlungsdetails wurden noch nicht angegeben.'), left, width, 8);
+  if (invoice.invoiceNumber) block(`${bilingual('Payment reference', 'Zahlungsreferenz')}: ${invoice.invoiceNumber}`, left, width, 8);
+  if (invoice.notes) { y -= 12; label(bilingual('Notes', 'Hinweise')); block(invoice.notes, left, width, 8); }
+  }
   const pages = pdf.getPages();
   pages.forEach((item, index) => {
     page = item;
     page.drawLine({ start: { x: left, y: 47 }, end: { x: right, y: 47 }, thickness: 0.5, color: slate });
     const footer = wrap(font, `${invoice.sellerLegalName} · ${invoice.sellerEmail}`, 7, 390).slice(0, 2);
     footer.forEach((line, i) => draw(line, left, 33 - i * 10, 7, font, slate));
-    rightText(`Page ${index + 1} / ${pages.length}`, right, 33, 7);
+    rightText(`${pageLanguages[index] === 'de' ? 'Seite' : 'Page'} ${index + 1} / ${pages.length}`, right, 33, 7);
   });
   pdf.setTitle(`Invoice ${invoice.invoiceNumber ?? 'Draft'}`); pdf.setAuthor(invoice.sellerLegalName); pdf.setCreator('TiLADYS Business Control');
   return Buffer.from(await pdf.save());

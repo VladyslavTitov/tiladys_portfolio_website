@@ -19,31 +19,45 @@ function fixture(lineCount = 1) {
     status: 'DRAFT', invoiceNumber: null, issueDate: new Date('2026-09-22T12:00:00Z'), dueDate: null, serviceDateFrom: new Date('2026-09-22T12:00:00Z'), serviceDateTo: null,
     sellerLegalName: 'TiLADYS – Vladyslav Titov', sellerStreet: 'Kronenstraße 19', sellerPostalCode: '45479', sellerCity: 'Mülheim an der Ruhr', sellerCountry: 'Germany', sellerEmail: 'contact@tiladys.com', sellerPhone: '+49 163 7235608',
     sellerTaxMode: 'UNCONFIRMED', sellerTaxNumber: null, sellerVatId: null, sellerTaxStatement: null, sellerBankAccountHolder: null, sellerIban: null, sellerBic: null, sellerBankName: null, paymentInstructions: null,
-    recipientName: 'Unicode Test', recipientCompany: null, recipientEmail: null, recipientStreet: 'Kronenstraße 19', recipientPostalCode: '45479', recipientCity: 'Mülheim an der Ruhr', recipientCountry: 'DE', customerReference: 'Unicode extraction test', notes: unicodeLines.join('\n'),
+    recipientName: 'Unicode Test', recipientCompany: null, recipientEmail: null, recipientStreet: 'Kronenstraße 19', recipientPostalCode: '45479', recipientCity: 'Mülheim an der Ruhr', recipientCountry: 'DE', customerReference: 'Unicode extraction test', notes: unicodeLines.join('\n'), notesDe: unicodeLines.join('\n'),
     subtotal: value(String(45 * lineCount)), taxTotal: null, total: value(String(45 * lineCount)),
-    lines: Array.from({ length: lineCount }, (_, index) => ({ serviceName: index ? `TiLADYS multilingual service ${index + 1}` : 'TiLADYS – Vladyslav Titov', description: unicodeLines.join('\n'), quantity: value('1'), unit: 'item', unitPrice: value('45'), taxRate: null, subtotal: value('45'), taxAmount: null, total: value('45'), taxTreatment: 'UNCONFIRMED' })),
+    lines: Array.from({ length: lineCount }, (_, index) => ({ serviceNameDe: index ? `Mehrsprachige Leistung ${index + 1}` : 'TiLADYS – Vladyslav Titov', descriptionDe: unicodeLines.join('\n'), serviceName: index ? `TiLADYS multilingual service ${index + 1}` : 'TiLADYS – Vladyslav Titov', description: unicodeLines.join('\n'), quantity: value('1'), unit: 'item', unitPrice: value('45'), taxRate: null, subtotal: value('45'), taxAmount: null, total: value('45'), taxTreatment: 'UNCONFIRMED' })),
   };
 }
 
 test('invoice PDF embeds full Unicode fonts, extracts exact text, and paginates using embedded metrics', async () => {
   const short = await generateInvoicePdf(fixture());
   const long = await generateInvoicePdf(fixture(70));
-  mkdirSync('docs/business-control/samples', { recursive: true });
-  writeFileSync('docs/business-control/samples/invoice-unicode-sample.pdf', short);
+  mkdirSync('docs/business-control/samples/bilingual-review', { recursive: true });
+  writeFileSync('docs/business-control/samples/bilingual-review/unicode.pdf', short);
   writeFileSync('/tmp/tiladys-invoice-unicode-multipage.pdf', long);
-  assert.equal((await PDFDocument.load(short)).getPageCount(), 1);
+  assert.equal((await PDFDocument.load(short)).getPageCount(), 2);
   assert.ok((await PDFDocument.load(long)).getPageCount() > 1);
 
-  const fonts = spawnSync('pdffonts', ['docs/business-control/samples/invoice-unicode-sample.pdf'], { encoding: 'utf8' });
+  const fonts = spawnSync('pdffonts', ['docs/business-control/samples/bilingual-review/unicode.pdf'], { encoding: 'utf8' });
   assert.equal(fonts.status, 0, fonts.stderr);
   assert.match(fonts.stdout, /DejaVuSans/);
   assert.match(fonts.stdout, /DejaVuSans-Bold/);
   for (const row of fonts.stdout.split('\n').filter((line) => line.includes('DejaVuSans'))) assert.match(row, /yes\s+(?:yes|no)\s+yes/);
 
-  const extracted = spawnSync('pdftotext', ['-layout', 'docs/business-control/samples/invoice-unicode-sample.pdf', '-'], { encoding: 'utf8' });
+  const extracted = spawnSync('pdftotext', ['-layout', 'docs/business-control/samples/bilingual-review/unicode.pdf', '-'], { encoding: 'utf8' });
   assert.equal(extracted.status, 0, extracted.stderr);
   const text = extracted.stdout.normalize('NFC');
   for (const expected of ['Draft', 'TiLADYS – Vladyslav Titov', 'Kronenstraße 19', '45479 Mülheim an der Ruhr', ...unicodeLines]) assert.ok(text.includes(expected.normalize('NFC')), `Missing extracted text: ${expected}`);
+});
+
+test('invoice PDF is bilingual and the service picker supports catalogue search', async () => {
+  const short = await generateInvoicePdf({ ...fixture(), status: 'ISSUED', invoiceNumber: 'INV-2026-0001' });
+  const path = '/tmp/tiladys-bilingual-invoice.pdf';
+  writeFileSync(path, short);
+  const extracted = spawnSync('pdftotext', ['-layout', path, '-'], { encoding: 'utf8' });
+  assert.equal(extracted.status, 0, extracted.stderr);
+  assert.match(extracted.stdout, /RECHNUNG/);
+  assert.match(extracted.stdout, /Rechnungsempfänger/);
+
+  const manager = await import('node:fs/promises').then((fs) => fs.readFile('apps/control/components/service-picker.tsx', 'utf8'));
+  assert.match(manager, /Search catalogue|Search services/i);
+  assert.match(manager, /results|query/i);
 });
 
 test('draft/final layout, repeated headers, oversized descriptions and footer bounds', async () => {
@@ -52,8 +66,10 @@ test('draft/final layout, repeated headers, oversized descriptions and footer bo
   stress.recipientStreet = 'Kronenstraße · вулиця Незалежності '.repeat(5).trim();
   stress.recipientCity = 'Mülheim an der Ruhr / Bratislava / Київ';
   stress.lines[0].description = ('Long customer-facing description: English, Deutsch, Українська, Русский, Slovensky, Français. ').repeat(50);
+  stress.lines[0].descriptionDe = ('Lange Beschreibung: Deutsch, Українська, Français. ').repeat(50);
+  stress.lines[0].unitDe = 'eine lange benutzerdefinierte Einheit';
   stress.lines[0].unit = 'a deliberately long unit of measurement';
-  const directory = 'docs/business-control/samples/crm-workflow'; mkdirSync(directory, { recursive: true });
+  const directory = 'docs/business-control/samples/bilingual-review'; mkdirSync(directory, { recursive: true });
   for (const status of ['DRAFT', 'ISSUED']) {
     const path = `${directory}/multilingual-${status.toLowerCase()}.pdf`;
     const bytes = await generateInvoicePdf({ ...stress, status, invoiceNumber: status === 'ISSUED' ? 'INV-SAMPLE-2026' : null });
@@ -61,7 +77,7 @@ test('draft/final layout, repeated headers, oversized descriptions and footer bo
     const text = spawnSync('pdftotext', ['-layout', path, '-'], { encoding: 'utf8' }); assert.equal(text.status, 0);
     assert.equal(text.stdout.includes('Draft'), status === 'DRAFT'); assert.ok(!text.stdout.includes('DRAFT'));
     const pages = text.stdout.split('\f').filter(p => p.trim()); assert.ok(pages.length > 2);
-    pages.forEach((page, index) => { assert.match(page, new RegExp(`Page ${index + 1} / ${pages.length}`)); if (page.includes('multilingual service') || page.includes('Long customer-facing')) assert.match(page, /Description\s+Qty \/ unit\s+Unit price\s+Total/); });
+    pages.forEach((page, index) => { assert.match(page, new RegExp(`(?:Page|Seite) ${index + 1} / ${pages.length}`)); if (page.includes('multilingual service') || page.includes('Long customer-facing')) assert.match(page, /Description\s+Qty \/ unit\s+Unit price\s+Total/); });
     assert.equal((text.stdout.match(/TOTAL:/g) ?? []).length, 0);
     // Bounding boxes verify selectable glyphs remain inside the A4 page and above reserved footer space.
     const bbox = spawnSync('pdftotext', ['-bbox', path, '-'], { encoding: 'utf8' }); assert.equal(bbox.status, 0);
@@ -73,4 +89,25 @@ test('draft/final layout, repeated headers, oversized descriptions and footer bo
     }
     assert.ok(text.stdout.includes('Français')); assert.ok(text.stdout.includes('Українська'));
   }
+});
+
+test('language sections are ordered, financially identical, and mark missing translations', async () => {
+  const data = fixture(24);
+  const bytes = await generateInvoicePdf({ ...data, status: 'ISSUED', invoiceNumber: 'INV-SYNTHETIC-ORDER' });
+  const path = '/tmp/tiladys-section-order.pdf'; writeFileSync(path, bytes);
+  const result = spawnSync('pdftotext', ['-layout', path, '-'], { encoding: 'utf8' });
+  assert.equal(result.status, 0);
+  const pages = result.stdout.split('\f').filter(page => page.trim());
+  const germanStart = pages.findIndex(page => page.includes('RECHNUNG'));
+  assert.ok(germanStart > 1, 'Finish multiple English pages before starting German');
+  assert.ok(pages.slice(0, germanStart).every(page => !page.includes('Mehrsprachige Leistung')));
+  assert.ok(pages.slice(germanStart).every(page => !page.includes('multilingual service')));
+  const english = pages.slice(0, germanStart).join('\n'); const german = pages.slice(germanStart).join('\n');
+  assert.ok(german.includes('Keine zusätzliche Zahlungspflicht'));
+  assert.match(english, /Total\s+1\.080,00 EUR/); assert.match(german, /Gesamt\s+1\.080,00 EUR/);
+  assert.ok(!result.stdout.includes('Draft'));
+  const incomplete = fixture(); incomplete.lines[0].serviceNameDe = ''; incomplete.lines[0].descriptionDe = '';
+  writeFileSync(path, await generateInvoicePdf(incomplete));
+  const missing = spawnSync('pdftotext', [path, '-'], { encoding: 'utf8' });
+  assert.match(missing.stdout, /Deutsche Übersetzung fehlt/);
 });

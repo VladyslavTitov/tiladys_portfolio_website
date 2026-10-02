@@ -5,7 +5,7 @@ import { InvoiceManager } from './invoice-manager';
 export default async function InvoicesPage({ searchParams }: { searchParams: Promise<{ invoiceId?: string }> }) {
   const query = await searchParams;
   const [rows, storedSettings, companies, customers] = await Promise.all([
-    db.invoice.findMany({ where: query.invoiceId ? { id: query.invoiceId } : undefined, include: invoiceInclude, orderBy: { createdAt: 'desc' }, take: 200 }),
+    db.invoice.findMany({ where: query.invoiceId ? { id: query.invoiceId } : undefined, include: invoiceInclude, omit: { issuedPdf: true }, orderBy: { createdAt: 'desc' }, take: 200 }),
     db.businessBillingSettings.findUnique({ where: { id: 'default' } }),
     db.company.findMany({ select: { id: true, name: true, email: true, street: true, postalCode: true, city: true, country: true }, orderBy: { name: 'asc' } }),
     db.customer.findMany({ select: { id: true, firstName: true, lastName: true, email: true, street: true, postalCode: true, city: true, country: true } }),

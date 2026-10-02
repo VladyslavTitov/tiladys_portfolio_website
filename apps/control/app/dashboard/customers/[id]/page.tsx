@@ -6,7 +6,7 @@ import { CustomerProfile } from './customer-profile';
 export default async function CustomerPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const [row, companies] = await Promise.all([
-    db.customer.findUnique({ where: { id }, include: { company: { select: { id: true, name: true } }, customerNotes: { include: { createdBy: { select: { displayName: true } } }, orderBy: { createdAt: 'desc' } }, activities: { include: { createdBy: { select: { displayName: true } } }, orderBy: { createdAt: 'desc' }, take: 100 }, serviceJobs: { select: { id: true, jobNumber: true, title: true, status: true, serviceDate: true, finalPrice: true }, orderBy: { createdAt: 'desc' } }, invoices: { include: invoiceInclude, orderBy: { createdAt: 'desc' } }, files: { select: { id: true, filename: true, kind: true, createdAt: true }, orderBy: { createdAt: 'desc' } } } }),
+    db.customer.findUnique({ where: { id }, include: { company: { select: { id: true, name: true } }, customerNotes: { include: { createdBy: { select: { displayName: true } } }, orderBy: { createdAt: 'desc' } }, activities: { include: { createdBy: { select: { displayName: true } } }, orderBy: { createdAt: 'desc' }, take: 100 }, serviceJobs: { select: { id: true, jobNumber: true, title: true, status: true, serviceDate: true, finalPrice: true }, orderBy: { createdAt: 'desc' } }, invoices: { include: invoiceInclude, omit: { issuedPdf: true }, orderBy: { createdAt: 'desc' } }, files: { select: { id: true, filename: true, kind: true, createdAt: true }, orderBy: { createdAt: 'desc' } } } }),
     db.company.findMany({ select: { id: true, name: true }, orderBy: { name: 'asc' } }),
   ]);
   if (!row) notFound();

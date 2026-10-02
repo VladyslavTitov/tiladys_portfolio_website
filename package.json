@@ -30,7 +30,8 @@
     "db:check:crm": "node scripts/check-crm-schema.mjs",
     "release:prepare:control": "npm run db:generate && npm run db:check:crm && npm run build:control",
     "release:verify:control": "node scripts/verify-control-release.mjs",
-    "test:release:schema": "node --test tests/release-schema.test.mjs"
+    "test:release:schema": "node --test tests/release-schema.test.mjs",
+    "test:bilingual": "node --import tsx --test tests/bilingual-validation.test.ts tests/invoice-unicode-pdf.test.ts"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"

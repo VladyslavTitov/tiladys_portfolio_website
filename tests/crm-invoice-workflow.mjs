@@ -20,9 +20,9 @@ const invoiceBody = invoice => ({
   customerId: invoice.customerId, serviceJobId: invoice.serviceJobId ?? '', billingCompanyId: invoice.billingCompanyId ?? '', billingRecipientType: invoice.billingRecipientType,
   issueDate: invoice.issueDate ?? '', dueDate: invoice.dueDate ?? '', serviceDateFrom: invoice.serviceDateFrom ?? '', serviceDateTo: invoice.serviceDateTo ?? '',
   ...Object.fromEntries(['recipientName','recipientCompany','recipientEmail','recipientStreet','recipientPostalCode','recipientCity','recipientCountry','customerReference','notes'].map(key=>[key,invoice[key] ?? ''])),
-  lines: invoice.lines.map(line => ({ serviceName: line.serviceName, description: line.description ?? '', quantity: line.quantity, unit: line.unit, unitPrice: line.unitPrice, taxTreatment: line.taxTreatment })),
+  lines: invoice.lines.map(line => ({ serviceNameDe: line.serviceNameDe ?? '', descriptionDe: line.descriptionDe ?? '', unitDe: line.unitDe ?? '', serviceName: line.serviceName, description: line.description ?? '', quantity: line.quantity, unit: line.unit, unitPrice: line.unitPrice, taxTreatment: line.taxTreatment })),
 });
-const jobData = (title, companyId) => ({ customerId: customer.id, companyId: companyId ?? '', title, description: '', privateNotes: 'INTERNAL NEVER ON PDF', customerVisibleNotes: '', serviceDate: '2026-09-23T12:00:00Z', status: 'PLANNED', estimatedPrice: '', finalPrice: '', materialCost: '', otherCost: '', startTime: '', endTime: '', workDurationMinutes: null, lineItems: [{ cataloguePriceItemId: '', serviceName: 'Wartung · Підтримка · Maintenance', description: 'Français: é è ê ë ç œ · Slovensky: ľ š č ť ž ý á í é ô ä', quantity: '2', unit: 'hour', agreedUnitPrice: '80', priceConfirmed: true, taxTreatment: 'VAT_STANDARD', internalUnitCost: '20', sortOrder: 0 }] });
+const jobData = (title, companyId) => ({ customerId: customer.id, companyId: companyId ?? '', title, description: '', privateNotes: 'INTERNAL NEVER ON PDF', customerVisibleNotes: '', serviceDate: '2026-09-23T12:00:00Z', status: 'PLANNED', estimatedPrice: '', finalPrice: '', materialCost: '', otherCost: '', startTime: '', endTime: '', workDurationMinutes: null, lineItems: [{ cataloguePriceItemId: '', serviceNameDe: 'Wartung', descriptionDe: 'Mehrsprachige Testbeschreibung', serviceName: 'Wartung · Підтримка · Maintenance', description: 'Français: é è ê ë ç œ · Slovensky: ľ š č ť ž ý á í é ô ä', quantity: '2', unit: 'hour', agreedUnitPrice: '80', priceConfirmed: true, taxTreatment: 'VAT_STANDARD', internalUnitCost: '20', sortOrder: 0 }] });
 try {
   admin = await db.adminUser.create({ data: { email: `workflow-${suffix}@example.test`, passwordHash: 'unused', secretWordHash: 'unused' } });
   await db.session.create({ data: { userId: admin.id, tokenHash: crypto.createHash('sha256').update(token).digest('hex'), expiresAt: new Date(Date.now()+3600000) } });
@@ -49,7 +49,12 @@ try {
   previousSettings = await db.businessBillingSettings.findUnique({ where: { id: 'default' } });
   await db.businessBillingSettings.upsert({ where: { id: 'default' }, create: { taxMode: 'UNCONFIRMED' }, update: { taxMode: 'UNCONFIRMED', settingsConfirmedAt: null } });
   assert.equal((await api(`/api/admin/invoices/${business.id}/issue`, 'POST')).status, 422);
-  await db.businessBillingSettings.update({ where: { id: 'default' }, data: { taxMode: 'VAT', taxNumber: 'SYNTHETIC-TEST', settingsConfirmedAt: new Date(), bankAccountHolder: 'Synthetic Seller', paymentInstructions: 'Use the invoice number as payment reference.' } });
+  await db.businessBillingSettings.update({ where: { id: 'default' }, data: { taxMode: 'VAT', taxNumber: 'SYNTHETIC-TEST', settingsConfirmedAt: new Date(), bankAccountHolder: 'Synthetic Seller', paymentInstructions: 'Use the invoice number as payment reference.', paymentInstructionsDe: 'Bitte die Rechnungsnummer als Verwendungszweck angeben.' } });
+  const untranslated = invoiceBody(business); untranslated.lines[0].serviceNameDe = '';
+  assert.equal((await api(`/api/admin/invoices/${business.id}`, 'PATCH', untranslated)).status, 200);
+  const translationBlocked = await api(`/api/admin/invoices/${business.id}/issue`, 'POST'); assert.equal(translationBlocked.status, 422); assert.equal(translationBlocked.data.error, 'MISSING_TRANSLATION');
+  assert.ok(translationBlocked.data.requirements.some(item => item.field === 'invoice-lines.0.serviceNameDe'));
+  assert.equal((await api(`/api/admin/invoices/${business.id}`, 'PATCH', invoiceBody(business))).status, 200);
   const issued = await api(`/api/admin/invoices/${business.id}/issue`, 'POST'); assert.equal(issued.status, 200, JSON.stringify(issued.data)); assert.equal(issued.data.status, 'ISSUED');
   assert.equal((await api(`/api/admin/invoices/${business.id}`, 'PATCH', invoiceBody(business))).status, 409);
   const frozen = await db.invoice.findUniqueOrThrow({ where: { id: business.id } });
@@ -62,7 +67,7 @@ try {
   assert.equal(paid.status, 200, JSON.stringify(paid.data)); assert.equal(paid.data.paidTotal, '40.4'); assert.equal(paid.data.outstanding, '150'); assert.equal(paid.data.paymentStatus, 'PARTIAL');
   const same = await db.invoice.findUniqueOrThrow({ where: { id: business.id } }); assert.deepEqual(same.issuedPdf, frozen.issuedPdf); assert.equal(same.recipientStreet, 'Geschäftsstraße 20'); assert.equal(same.billingCompanyId, company.id);
   assert.equal((await api(`/api/admin/invoices/${business.id}/issue`, 'POST')).data.issuedPdfChecksum, frozen.issuedPdfChecksum);
-  const sampleDir = 'docs/business-control/samples/crm-workflow'; mkdirSync(sampleDir, { recursive: true }); writeFileSync(`${sampleDir}/company-issued.pdf`, frozen.issuedPdf);
+  const sampleDir = 'docs/business-control/samples/bilingual-review/workflow'; mkdirSync(sampleDir, { recursive: true }); writeFileSync(`${sampleDir}/company-issued.pdf`, frozen.issuedPdf);
   const draftPdf = await fetch(`${base}/api/admin/invoices/${personal.data.id}/pdf?preview=1`, { headers: { Cookie: `tiladys_session=${token}` } }); assert.equal(draftPdf.status, 200); assert.match(draftPdf.headers.get('content-disposition'), /^inline/); writeFileSync(`${sampleDir}/individual-draft.pdf`, Buffer.from(await draftPdf.arrayBuffer()));
   assert.equal((await fetch(`${base}/api/admin/invoices/${business.id}/pdf`)).status, 401);
   await db.invoice.update({ where: { id: business.id }, data: { issuedPdf: null } });

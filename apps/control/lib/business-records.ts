@@ -78,15 +78,18 @@ export function cataloguePriceDetails(price: string): { mode: CataloguePriceMode
   return { mode, unit, amount };
 }
 
-export async function prepareJobLineItems(tx: Tx, items: ReturnType<typeof parseServiceJob>['lineItems']) {
+export async function prepareJobLineItems(tx: Tx, items: ReturnType<typeof parseServiceJob>['lineItems'], serviceJobId?: string) {
+  const saved = serviceJobId ? await tx.serviceJobLineItem.findMany({ where: { serviceJobId } }) : [];
   const ids = [...new Set(items.map((item) => item.cataloguePriceItemId).filter((id): id is string => Boolean(id)))];
   const catalogue = await tx.priceItem.findMany({ where: { id: { in: ids } }, select: { id: true, code: true, name: true, note: true, price: true } });
   const byId = new Map(catalogue.map((item) => [item.id, item]));
   return items.map((item, index) => {
+    const previous = saved.find(line => line.id === item.id && line.cataloguePriceItemId === (item.cataloguePriceItemId || null));
     const source = item.cataloguePriceItemId ? byId.get(item.cataloguePriceItemId) : undefined;
     if (item.cataloguePriceItemId && !source) throw new Error('INVALID_CATALOGUE_ITEM');
-    const details = source ? cataloguePriceDetails(source.price) : { mode: 'MANUAL' as CataloguePriceMode, unit: item.unit, amount: null };
-    if (source && ['FROM', 'MONTHLY', 'PERCENTAGE'].includes(details.mode) && !item.priceConfirmed) throw new Error('PRICE_CONFIRMATION_REQUIRED');
+    const details = previous ? { mode: previous.cataloguePriceMode, unit: previous.unit, amount: previous.catalogueUnitPrice } : source ? cataloguePriceDetails(source.price) : { mode: 'MANUAL' as CataloguePriceMode, unit: item.unit, amount: null };
+    if (['FROM', 'MONTHLY', 'PERCENTAGE'].includes(details.mode) && !item.priceConfirmed) throw new Error('PRICE_CONFIRMATION_REQUIRED');
+    if (details.mode === 'MONTHLY' && (!item.billingPeriodFrom || !item.billingPeriodTo || item.billingPeriodTo < item.billingPeriodFrom)) throw Object.assign(new Error('INVALID_BILLING_PERIOD'), { details: { fieldErrors: { [`lineItems.${index}.billingPeriodFrom`]: ['Enter an ordered billing period for this monthly line.'] } } });
     const quantity = new Prisma.Decimal(item.quantity.replace(',', '.'));
     const agreedUnitPrice = new Prisma.Decimal(item.agreedUnitPrice.replace(',', '.'));
     const subtotal = quantity.mul(agreedUnitPrice).toDecimalPlaces(2, Prisma.Decimal.ROUND_HALF_UP);
@@ -95,11 +98,12 @@ export async function prepareJobLineItems(tx: Tx, items: ReturnType<typeof parse
     const taxRate = rates[taxTreatment] ?? null;
     const taxAmount = taxRate ? subtotal.mul(taxRate).div(100).toDecimalPlaces(2, Prisma.Decimal.ROUND_HALF_UP) : taxTreatment === 'UNCONFIRMED' ? null : new Prisma.Decimal(0);
     return {
+      serviceNameDe: item.serviceNameDe || null, descriptionDe: item.descriptionDe || null, unitDe: item.unitDe || null, billingPeriodFrom: item.billingPeriodFrom || null, billingPeriodTo: item.billingPeriodTo || null,
       cataloguePriceItemId: source?.id ?? null,
       serviceName: item.serviceName || (source ? localized(source.name, source.code) : ''),
-      description: emptyToNull(item.description) || (source ? localized(source.note) || null : null),
+      description: emptyToNull(item.description),
       quantity, unit: item.unit || details.unit,
-      cataloguePriceText: source?.price ?? null, catalogueUnitPrice: details.amount,
+      cataloguePriceText: previous?.cataloguePriceText ?? source?.price ?? null, catalogueUnitPrice: details.amount,
       cataloguePriceMode: details.mode, priceConfirmed: item.priceConfirmed,
       agreedUnitPrice, taxTreatment, taxRate, subtotal, taxAmount,
       total: taxAmount ? subtotal.add(taxAmount) : subtotal,
@@ -116,8 +120,8 @@ export function adminError(error: unknown, fallback: string) {
   if (message === 'UNAUTHORIZED') return { status: 401, body: { error: message } };
   if (message === 'INVALID_ORIGIN') return { status: 403, body: { error: message } };
   if (message.startsWith('INVALID_')) return { status: 400, body: { error: message, details } };
-  if (message === 'PRICE_CONFIRMATION_REQUIRED') return { status: 400, body: { error: message } };
-  if (['BILLING_SETTINGS_UNCONFIRMED','TAX_IDENTIFIER_REQUIRED','INVOICE_DETAILS_INCOMPLETE','INVOICE_TAX_INCOMPLETE','INVOICE_TAX_MISMATCH','TAX_STATEMENT_REQUIRED','INVOICE_JOB_HAS_NO_LINES'].includes(message)) return { status: 422, body: { error: message } };
+  if (message === 'PRICE_CONFIRMATION_REQUIRED') return { status: 400, body: { error: message, details } };
+  if (['BILLING_SETTINGS_UNCONFIRMED','TAX_IDENTIFIER_REQUIRED','INVOICE_DETAILS_INCOMPLETE','INVOICE_TAX_INCOMPLETE','INVOICE_TAX_MISMATCH','TAX_STATEMENT_REQUIRED','INVOICE_JOB_HAS_NO_LINES','MISSING_TRANSLATION'].includes(message)) return { status: 422, body: { error: message, requirements: error instanceof Error && 'requirements' in error ? error.requirements : undefined } };
   if (['ISSUED_PDF_MISSING','ISSUED_INVOICE_IMMUTABLE','INVOICE_NOT_ISSUABLE','PAYMENT_REQUIRES_ISSUED_INVOICE','PAYMENT_EXCEEDS_BALANCE'].includes(message)) return { status: 409, body: { error: message } };
   if (code === 'P2025') return { status: 404, body: { error: 'NOT_FOUND' } };
   if (code === 'P2002') return { status: 409, body: { error: 'CONFLICT' } };

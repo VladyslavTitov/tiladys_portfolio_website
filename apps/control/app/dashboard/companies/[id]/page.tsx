@@ -10,7 +10,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ id: st
   const { id } = await params;
   const company = await db.company.findUnique({ where: { id }, include: {
     customers: { orderBy: { lastName: 'asc' } }, serviceJobs: { orderBy: { createdAt: 'desc' } },
-    invoices: { include: invoiceInclude, orderBy: { createdAt: 'desc' } },
+    invoices: { include: invoiceInclude, omit: { issuedPdf: true }, orderBy: { createdAt: 'desc' } },
   } });
   if (!company) notFound();
   const activity = await db.auditLog.findMany({ where: { OR: [

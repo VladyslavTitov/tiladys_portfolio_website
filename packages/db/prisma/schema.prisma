@@ -319,6 +319,9 @@ model ServiceJob {
 }
 
 model BusinessBillingSettings {
+  taxStatementDe String?
+  paymentInstructionsDe String?
+
   id                 String          @id @default("default")
   legalName          String          @default("TiLADYS – Vladyslav Titov")
   street             String          @default("Kronenstraße 19")
@@ -343,6 +346,11 @@ model BusinessBillingSettings {
 }
 
 model Invoice {
+  documentVersion Int @default(1)
+  notesDe String?
+  sellerTaxStatementDe String?
+  paymentInstructionsDe String?
+
   id                    String        @id @default(cuid())
   invoiceNumber         String?       @unique
   status                InvoiceStatus @default(DRAFT)
@@ -403,6 +411,14 @@ model Invoice {
 }
 
 model InvoiceLine {
+  serviceNameDe String?
+  descriptionDe String?
+  unitDe String?
+  priceMode CataloguePriceMode @default(MANUAL)
+  priceConfirmed Boolean @default(false)
+  billingPeriodFrom String?
+  billingPeriodTo String?
+
   id             String              @id @default(cuid())
   invoiceId      String
   invoice        Invoice             @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
@@ -438,6 +454,12 @@ model InvoicePayment {
 }
 
 model ServiceJobLineItem {
+  serviceNameDe String?
+  descriptionDe String?
+  unitDe String?
+  billingPeriodFrom String?
+  billingPeriodTo String?
+
   id                   String                 @id @default(cuid())
   serviceJobId         String
   serviceJob           ServiceJob             @relation(fields: [serviceJobId], references: [id], onDelete: Cascade)
