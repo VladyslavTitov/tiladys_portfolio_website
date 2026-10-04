@@ -5,7 +5,7 @@ import { notFound, permanentRedirect } from 'next/navigation';
 import { ArrowLeft, CalendarDays, Code2, ExternalLink, Github, Layers3, Link2 } from 'lucide-react';
 import { ContactCta } from '@/components/ContactCta';
 import { Shell } from '@/components/Shell';
-import { api } from '@/lib/api';
+import { getPublishedProjectBySlug } from '@/lib/public-projects-db';
 import { p } from '@/lib/page-copy';
 import { projectCategoryLabel, projectLinksAvailable } from '@/lib/project-categories';
 import { projectMetadata, type ProjectSeo } from '@/lib/project-seo';
@@ -36,7 +36,7 @@ function translated(value: Localized | undefined | null, locale: string) {
 
 const loadProject = cache(async (slug: string): Promise<ProjectDetail | null> => {
   try {
-    return await api<ProjectDetail>(`/api/public/projects/${encodeURIComponent(slug)}`, { cache: 'no-store' });
+    return await getPublishedProjectBySlug(slug);
   } catch { return null; }
 });
 

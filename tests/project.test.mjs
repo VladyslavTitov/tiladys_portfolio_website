@@ -130,8 +130,9 @@ test('public services architecture keeps stable ids and explicit price reference
     assert.match(services, new RegExp(`code: '${code}'`));
   }
   assert.match(overview, /getPublicPrices/);
-  assert.match(read('apps/web/lib/public-prices.ts'), /api\/public\/prices/);
-  assert.match(read('apps/web/lib/public-prices.ts'), /revalidate: 60/);
+  const publicPrices = read('apps/web/lib/public-prices.ts');
+  assert.match(publicPrices, /db\.priceSection\.findMany/);
+  assert.match(publicPrices, /where: \{ active: true \}/);
   assert.match(detail, /ServiceDetail/);
   assert.doesNotMatch(services, /Math\.min/);
 });
@@ -202,13 +203,16 @@ test('admin price editor supports six translation tabs and one bulk save endpoin
 
 test('portfolio page includes category filters and database-backed project cards', () => {
   const page = read('apps/web/components/PortfolioExplorer.tsx');
-  const route = read('apps/control/app/api/public/projects/route.ts');
+  const publicProjects = read('apps/web/lib/public-projects-db.ts');
+  const media = read('apps/web/app/api/public/media/[id]/route.ts');
   assert.match(page, /portfolio-filter/);
   assert.match(page, /web-development/);
   assert.match(page, /pc-support/);
   assert.match(page, /linux-servers/);
-  assert.match(route, /status: 'PUBLISHED'/);
-  assert.match(route, /Cache-Control': 'no-store'/);
+  assert.match(publicProjects, /status: 'PUBLISHED'/);
+  assert.match(publicProjects, /\/api\/public\/media\//);
+  assert.match(media, /project: \{ status: 'PUBLISHED' \}/);
+  assert.match(media, /Vercel-CDN-Cache-Control': 'no-store'/);
 });
 
 test('project detail page supports role, work list, tools, links and variable image gallery', () => {

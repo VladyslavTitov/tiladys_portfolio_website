@@ -2,9 +2,9 @@ import { Suspense } from 'react';
 import { loadPortfolio, portfolioStateCopy } from '@/lib/portfolio-state';
 import { ContactCta } from '@/components/ContactCta';
 import { PageHero } from '@/components/PageHero';
-import { PortfolioExplorer, type PublicProject } from '@/components/PortfolioExplorer';
+import { PortfolioExplorer } from '@/components/PortfolioExplorer';
 import { Shell } from '@/components/Shell';
-import { api } from '@/lib/api';
+import { getPublishedProjects } from '@/lib/public-projects-db';
 import { p } from '@/lib/page-copy';
 import { localizedMetadata } from '@/lib/seo';
 
@@ -31,9 +31,7 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
 }
 
 async function PortfolioResults({ locale }: { locale: string }) {
-  const result = await loadPortfolio(() => api<PublicProject[]>('/api/public/projects', {
-    cache: 'no-store', signal: AbortSignal.timeout(10_000),
-  }));
+  const result = await loadPortfolio(() => getPublishedProjects());
   if (result.state === 'ready') return <PortfolioExplorer locale={locale} projects={result.projects} />;
   // Never include upstream response bodies, connection strings or personal data in logs/UI.
   console.error('[PUBLIC_PORTFOLIO_UNAVAILABLE]');

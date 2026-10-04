@@ -44,7 +44,7 @@ Start the matching application versions only after migrations and the build succ
 
 ### Contact
 
-The Contact page contains the visual hero, direct contact cards, validated message form, benefits section and final contact call-to-action. The form posts to the same-origin web `/api/contact` Node.js handler, which currently writes to PostgreSQL server-side. Database access is not sent to the browser. Moving this storage behind the separate control API and removing web database credentials is a prerequisite in the CRM foundation plan.
+The Contact page contains the visual hero, direct contact cards, validated message form, benefits section and final contact call-to-action. The form posts to the same-origin web `/api/contact` Node.js handler, which writes to PostgreSQL server-side. Database credentials are never sent to the browser. The public app also reads the explicitly public price/project projection from the same canonical database; Control remains deployment-protected and is not exposed as a browser data dependency.
 
 ### Prices
 
@@ -54,13 +54,13 @@ The Prices page now provides:
 - responsive desktop tables and mobile cards;
 - all service names, notes, section titles and subtitles in all six languages;
 - a **Get Help** action for every service that opens the localized Contact page and preselects that service;
-- a static catalog fallback if the control API is temporarily unavailable.
+- a static catalog fallback if the database is temporarily unavailable.
 
 All prices are edited from one spreadsheet-style screen at `apps/control/app/dashboard/prices`. Use the six language tabs, edit rows, add or remove services/sections, and choose **Save all changes**. The public page reads the saved database values immediately.
 
 ### Portfolio
 
-The Portfolio page now provides category filters for web development, PC support, design, Linux/server work and digital projects. Published projects are loaded from the control API.
+The Portfolio page now provides category filters for web development, PC support, design, Linux/server work and digital projects. Only `PUBLISHED` projects are read server-side from PostgreSQL; public images are served from a same-origin route that re-checks publication on every request.
 
 The project editor at `apps/control/app/dashboard/projects` supports:
 
