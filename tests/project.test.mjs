@@ -8,9 +8,9 @@ const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 const exists = (file) => fs.existsSync(path.join(root, file));
 const locales = ['en', 'de', 'uk', 'ru', 'sk', 'fr'];
 
-test('exact Next.js 16.2.11 version is pinned in both applications', () => {
+test('exact Next.js 16.3.8 version is pinned in both applications', () => {
   for (const app of ['apps/web/package.json', 'apps/control/package.json']) {
-    assert.equal(JSON.parse(read(app)).dependencies.next, '16.2.11');
+    assert.equal(JSON.parse(read(app)).dependencies.next, '16.3.8');
   }
 });
 

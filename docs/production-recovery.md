@@ -22,16 +22,18 @@ Set each project's variables in **Vercel → project → Settings → Environmen
 | CONTACT_RATE_LIMIT_SECRET | Web | Server | Secret | Required / separate required | app/api/contact/route.ts; unique CSPRNG HMAC key, distinct from AUTH_SECRET |
 | CONTACT_IP_HEADER | Web | Server | Config | Required on Vercel / required on Vercel | route.ts, lib/contact-rate-limit.ts; `x-vercel-forwarded-for` |
 | CONTACT_UPLOADS_ENABLED | Web | Server; boolean passed to form | Config | Explicit true/false decision / explicit staging decision | route.ts, app/[locale]/contact/page.tsx, components/LegalPage.tsx |
+| CONTACT_AUTO_REPLY_ENABLED | Web | Server | Config | Enable only after SMTP is verified / normally false in Preview | route.ts; sends localized plain-text receipt after the inquiry is stored |
 | NEXT_PUBLIC_SITE_URL | Web | Intentionally public | Config | `https://tiladys.com` / staging site origin | lib/seo.ts, app/layout.tsx, sitemap.ts, robots.ts, contact origin allowlist |
 | AUTH_SECRET | Control | Server | Secret | Required / separate required | lib/security.ts:3; IP pseudonymization; never empty |
 | CONTROL_URL | Control | Server | Config | Required exact canonical origin / exact staging origin | lib/security.ts, lib/trusted-origins.ts, logout route |
 | CONTROL_ALLOWED_ORIGINS | Control | Server | Config | Optional empty / optional exact staging aliases | lib/security.ts; comma-separated exact origins, no wildcards |
 | SITE_URL | Control | Server; emitted CORS origin | Config | `https://tiladys.com` / exact staging web origin | proxy.ts:5; public API CORS, still used |
-| SMTP_HOST | Control | Server | Config | Required for email / staging SMTP or deliberately unavailable | lib/mail.ts:4; replies and login alerts |
-| SMTP_PORT | Control | Server | Config | Provider port / staging port; default 587 | lib/mail.ts:5; implicit TLS at 465, requireTLS otherwise |
-| SMTP_USER | Control | Server | Secret/credential | Authenticated provider requirement / staging account | lib/mail.ts:9; optional only for intentionally unauthenticated transport |
-| SMTP_PASSWORD | Control | Server | Secret | Authenticated provider requirement / staging credential | lib/mail.ts:9; never public |
-| SMTP_FROM | Control | Server | Config | Required provider-approved sender / staging sender | lib/mail.ts:11 |
+| SMTP_HOST | Both | Server | Config | Required for email / staging SMTP or deliberately unavailable | apps/*/lib/mail.ts; Control replies/login alerts and Web receipts |
+| SMTP_PORT | Both | Server | Config | Provider port / staging port; default 587 | apps/*/lib/mail.ts; implicit TLS at 465, requireTLS otherwise |
+| SMTP_USER | Both | Server | Credential | Required for authenticated provider / separate staging account if enabled | apps/*/lib/mail.ts |
+| SMTP_PASSWORD | Both | Server | Secret | Required for authenticated provider / separate staging credential if enabled | apps/*/lib/mail.ts; never client-side |
+| SMTP_FROM | Both | Server | Config | Required provider-approved sender / staging sender | apps/*/lib/mail.ts |
+| SMTP_REPLY_TO | Both | Server | Config | Optional business reply address | apps/*/lib/mail.ts |
 | ADMIN_ALERT_EMAIL | Control | Server | Private operational config | Optional / optional test recipient | login route; defaults to authenticated admin email |
 | SHADOW_DATABASE_URL | DB development | Server | Secret | Not a production deploy target; no production value needed | schema.prisma:8; migrate dev only, separate disposable shadow database |
 | RELEASE_SCHEMA_CHECK | Control build | Server | Config | Optional local opt-in only | scripts/control-prebuild.mjs; VERCEL=1 always verifies, value 0 cannot bypass |
@@ -40,7 +42,7 @@ Set each project's variables in **Vercel → project → Settings → Environmen
 
 Operational-only variables (not application Vercel requirements): `CONTROL_RELEASE_URL`, `AGENT_BROWSER_BIN`, `CONTROL_BROWSER_SESSION`, `CONTROL_CHECK_CUSTOMER_ID`, `CONTROL_CHECK_COMPANY_ID` in scripts/verify-control-release.mjs. Isolated test variables: `RELEASE_TEST_DATABASE_URL`, `SCHEMA_RECOVERY_DATABASE_URL`, `CRM_TEST_DATABASE_URL`, `PHASE1_TEST_DATABASE_URL`, `INVOICE_BROWSER_DATABASE_URL`, `INVOICE_BROWSER_CONTROL_URL`, `CHROME_BIN`, `TZ`, `CI`, `TSX_TSCONFIG_PATH`; tests also inherit PATH/HOME. Never supply production data to these harnesses. setup-admin.mjs uses interactive input, not environment admin passwords.
 
-Use Secret/sensitive storage for credentials. Never configure AUTH_SECRET, SMTP credentials, admin credentials, migration credentials or SHADOW_DATABASE_URL in tiladys-public. `.env.example` contains local placeholders only, no real addresses/passwords. Generate secrets privately using `openssl rand -hex 32`, entering them directly in the Vercel UI; never display them in chat, logs or command arguments. Sensitive values are unreadable after creation; verify their presence and runtime behavior, not their plaintext.
+Use Secret/sensitive storage for credentials. Never configure AUTH_SECRET, admin credentials, migration credentials or SHADOW_DATABASE_URL in tiladys-public. SMTP credentials may exist in tiladys-public only for the server-side contact acknowledgement and must never use a `NEXT_PUBLIC_` name or appear in client bundles. `.env.example` contains local placeholders only, no real passwords. Generate secrets privately using `openssl rand -hex 32`, entering them directly in the Vercel UI; never display them in chat, logs or command arguments. Sensitive values are unreadable after creation; verify their presence and runtime behavior, not their plaintext.
 
 ## Verified settings required before release
 

@@ -4,6 +4,8 @@ import { db } from '@tiladys/db';
 import { contactRateLimit, requestSource } from '@/lib/contact-rate-limit';
 import { boundedBody, ContactInputError, prepareContactImages } from '@/lib/contact-images';
 import { MAX_CONTACT_REQUEST_BYTES } from '@/lib/contact-upload-limits';
+import { sendMail } from '@/lib/mail';
+import { contactAcknowledgement } from '@/lib/contact-acknowledgement';
 
 export const runtime = 'nodejs';
 const MAX_BODY_BYTES = 16 * 1024;
@@ -67,6 +69,17 @@ export async function POST(req: NextRequest) {
     const attachments = await prepareContactImages(files);
     stage = 'message-insert';
     await db.contactMessage.create({ data: { ...data, service: data.service || null, status: 'UNREAD', attachments: { create: attachments } } });
+    if (process.env.CONTACT_AUTO_REPLY_ENABLED === 'true') {
+      stage = 'acknowledgement';
+      try {
+        const acknowledgement = contactAcknowledgement(data.locale, data.name);
+        await sendMail({ to: data.email, ...acknowledgement });
+      } catch {
+        // The inquiry is already safely stored. A mail outage must never make the
+        // browser retry and create duplicate customer inquiries.
+        console.warn('[CONTACT_ACK_DELIVERY_FAILED]');
+      }
+    }
     return json({ ok: true }, 201);
   } catch (error) {
     if (error instanceof ContactInputError) return json({ code: error.code }, error.code === 'REQUEST_SIZE' ? 413 : 400);
