@@ -20,6 +20,7 @@ function allowedOrigins(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  let stage = 'config';
   const origin = req.headers.get('origin');
   if (origin && !allowedOrigins(req).has(origin)) return json({ code: 'SECURITY' }, 403);
   const type = req.headers.get('content-type') ?? '';
@@ -28,7 +29,11 @@ export async function POST(req: NextRequest) {
   if (multipart && process.env.CONTACT_UPLOADS_ENABLED !== 'true') return json({ code: 'UPLOADS_DISABLED' }, 400);
   try {
     const secret = process.env.CONTACT_RATE_LIMIT_SECRET;
-    if (!secret && process.env.NODE_ENV === 'production') return json({ code: 'SERVER' }, 503);
+    if (!secret && process.env.NODE_ENV === 'production') {
+      console.error('[CONTACT_CONFIG_MISSING] key=CONTACT_RATE_LIMIT_SECRET');
+      return json({ code: 'SERVER' }, 503);
+    }
+    stage = 'rate-limit';
     const allowed = await contactRateLimit(requestSource(req.headers, process.env.CONTACT_IP_HEADER), async (key, expiresAt) => {
       // Shared PostgreSQL counter: atomic across concurrent instances, no external provider.
       const rows = await db.$queryRaw<Array<{ count: number }>>`
@@ -39,6 +44,7 @@ export async function POST(req: NextRequest) {
       return rows[0].count;
     }, secret ?? 'local-development-only');
     if (!allowed) return json({ code: 'RATE_LIMIT' }, 429);
+    stage = 'body';
     const raw = await boundedBody(req, multipart ? MAX_CONTACT_REQUEST_BYTES : MAX_BODY_BYTES);
     let payload: unknown;
     let files: File[] = [];
@@ -52,17 +58,20 @@ export async function POST(req: NextRequest) {
       if (entries.some((entry) => !(entry instanceof File))) throw new ContactInputError('VALIDATION');
       files = entries as File[];
     } else payload = JSON.parse(new TextDecoder().decode(raw));
+    stage = 'validation';
     const parsed = contactSchema.safeParse(payload);
     if (!parsed.success) throw new ContactInputError('VALIDATION');
     const { website, ...data } = parsed.data;
-    if (website) return NextResponse.json({ ok: true }, { status: 201 });
+    if (website) return json({ ok: true }, 201);
+    stage = 'attachments';
     const attachments = await prepareContactImages(files);
+    stage = 'message-insert';
     await db.contactMessage.create({ data: { ...data, service: data.service || null, status: 'UNREAD', attachments: { create: attachments } } });
     return json({ ok: true }, 201);
   } catch (error) {
     if (error instanceof ContactInputError) return json({ code: error.code }, error.code === 'REQUEST_SIZE' ? 413 : 400);
-    if (error instanceof SyntaxError || error instanceof TypeError) return json({ code: 'VALIDATION' }, 400);
-    console.error('[CONTACT_CREATE_FAILED]', { stage: 'request-processing' });
+    if (stage === 'body' && (error instanceof SyntaxError || error instanceof TypeError)) return json({ code: 'VALIDATION' }, 400);
+    console.error('[CONTACT_CREATE_FAILED]', { stage });
     return json({ code: 'SERVER' }, 503);
   }
 }

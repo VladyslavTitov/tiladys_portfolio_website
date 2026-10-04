@@ -1,5 +1,7 @@
 # Production schema mismatch: diagnosis and proposed recovery
 
+For the 2026-10-03 contact/build incident, current 13-migration inventory and environment matrix, use [production-recovery.md](../production-recovery.md). The six-migration list and prior log findings below describe the earlier incident; they do not establish the current production ledger state.
+
 The supplied production log findings establish two schema incompatibilities: project queries fail with P2022 for `Project.seoTitle`, and the dashboard unread count fails with PostgreSQL 22P02 for `MessageStatus.UNREAD`. The deployments are production deployments built from `feature/services-redesign`; a feature branch name does not make their database a preview database.
 
 No production database was connected to or inspected during this work. The actual production migration ledger and complete column inventory remain unverified. The tests described below use only synthetic data in disposable local PostgreSQL.

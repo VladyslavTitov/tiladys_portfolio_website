@@ -47,7 +47,7 @@ test('contact validation rejects invalid, oversized, whitespace and unexpected i
 test('honeypot is accepted for indistinguishable discard handling', () => {
   assert.equal(contactSchema.safeParse({ ...valid, website: 'https://spam.example' }).success, true);
   const route = read('apps/web/app/api/contact/route.ts');
-  assert.match(route, /if \(website\) return NextResponse\.json\(\{ ok: true \}/);
+  assert.match(route, /if \(website\) return json\(\{ ok: true \}, 201\)/);
 });
 
 test('shared rate limiter rejects concurrent attempts and separates windows', async () => {

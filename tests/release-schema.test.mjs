@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { PrismaClient } from '@prisma/client';
 import { checkDatabase, verifySchema } from '../scripts/check-crm-schema.mjs';
+import { diagnoseDatabase } from '../scripts/diagnose-production-schema.mjs';
 
 const url = process.env.RELEASE_TEST_DATABASE_URL;
 if (url) {
@@ -12,6 +13,13 @@ test('release gate rejects pending migrations, modified history, missing columns
   const db = new PrismaClient({ datasourceUrl: url });
   try {
     await checkDatabase(db);
+    const report = await diagnoseDatabase(db);
+    assert.equal(report.assessment, 'release-guard-compatible');
+    assert.equal(report.productionTargetVerified, false);
+    assert.ok(report.migrations.every(migration => migration.state === 'verified'));
+    assert.deepEqual(report.missingColumns, []);
+    assert.deepEqual(report.missingEnumValues, []);
+    assert.ok(Object.values(report.counts).every(count => /^\d+$/.test(count.total)));
     for (const sql of [
       `DELETE FROM "_prisma_migrations" WHERE migration_name='20260923140000_invoice_billing_recipient'`,
       `UPDATE "_prisma_migrations" SET checksum='modified' WHERE migration_name='20260725212133_init'`,

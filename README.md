@@ -25,6 +25,8 @@ Credentials are not hard-coded. The setup command hashes the password and secret
 
 ## Applying this update to an existing deployment
 
+For the current contact/Control incident, use the [production recovery runbook and environment inventory](docs/production-recovery.md). Begin with read-only diagnosis; stop at its production mutation checkpoint before migrations, settings changes or deployment.
+
 Read the [portfolio/SEO/login implementation and migration report](docs/business-control/phase-1-implementation.md) before rollout. Back up the database, rehearse on staging and coordinate the control/schema transition: the new migrations remove only the obsolete featured flag, then add SEO fields and slug history. Old control instances cannot run against the removed field.
 
 For an authorized, coordinated rollout after those preparations:

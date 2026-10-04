@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const isDevelopment = process.env.NODE_ENV === "development";
 
 const control =
-  process.env.NEXT_PUBLIC_CONTROL_API_URL ?? "http://localhost:3001";
+  process.env.CONTROL_API_URL ?? process.env.NEXT_PUBLIC_CONTROL_API_URL ?? "http://localhost:3001";
 
 const contentSecurityPolicy = [
   "default-src 'self'",

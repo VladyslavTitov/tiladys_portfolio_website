@@ -8,6 +8,7 @@ import { spawnSync } from 'node:child_process';
 
 const configured = process.env.SCHEMA_RECOVERY_DATABASE_URL;
 test('reproduce P2022/22P02, then migrate forward without losing projects/media/messages/status meaning', { skip: !configured }, async () => {
+  const { diagnoseDatabase } = await import('../scripts/diagnose-production-schema.mjs');
   const url = new URL(configured!);
   assert.ok(['localhost', '127.0.0.1'].includes(url.hostname));
   assert.equal(url.pathname, '/tiladys_schema_recovery');
@@ -51,6 +52,13 @@ test('reproduce P2022/22P02, then migrate forward without losing projects/media/
       await db.$executeRaw`INSERT INTO "ContactMessage" (id,name,email,message,status,"updatedAt") VALUES (${status},'Synthetic','fixture@example.test','Preserve body',${status}::"MessageStatus",'2026-01-01')`;
     }
     const before = await snapshots();
+    const diagnosis = await diagnoseDatabase(db);
+    assert.match(diagnosis.assessment, /^A candidate:/);
+    assert.ok(diagnosis.migrations.some((migration: { name: string; state: string }) => migration.name === '20260904120000_rename_new_message_status_to_unread' && migration.state === 'absent'));
+    assert.ok(diagnosis.missingEnumValues.includes('MessageStatus.UNREAD'));
+    assert.ok(diagnosis.missingColumns.includes('Project.seoTitle'));
+    assert.equal(diagnosis.counts.ContactMessage.total, '5');
+    assert.equal(diagnosis.counts.Invoice.unavailable, true);
     await assert.rejects(db.project.findMany({ select: { seoTitle: true } }), (error: unknown) => (error as { code?: string }).code === 'P2022');
     await assert.rejects(db.contactMessage.count({ where: { status: 'UNREAD' } }), (error: unknown) => /22P02|invalid input value for enum/.test(String(error)));
     const missing = await db.$queryRaw<Array<{ name: string }>>`SELECT name FROM unnest(ARRAY['seoTitle','seoDescription','socialTitle','socialDescription','socialImageId']) name WHERE NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema = ${schema} AND table_name = 'Project' AND column_name = name)`;
@@ -58,6 +66,7 @@ test('reproduce P2022/22P02, then migrate forward without losing projects/media/
     console.log('Reproduced P2022 and invalid UNREAD enum failure; all five SEO columns absent in synthetic old schema.');
     for (const name of migrationNames.filter((name) => name >= '202609')) stageMigration(name);
     cli(['migrate', 'deploy', '--schema', schemaFile]);
+    assert.equal((await diagnoseDatabase(db)).assessment, 'release-guard-compatible');
     assert.deepEqual(await snapshots(), before);
     const enumValues = await db.$queryRaw<Array<{ enumlabel: string }>>`SELECT e.enumlabel FROM pg_enum e JOIN pg_type t ON t.oid=e.enumtypid JOIN pg_namespace n ON n.oid=t.typnamespace WHERE n.nspname=${schema} AND t.typname='MessageStatus' ORDER BY e.enumsortorder`;
     assert.deepEqual(enumValues.map((row) => row.enumlabel), ['UNREAD','READ','REPLIED','ARCHIVED','SPAM']);

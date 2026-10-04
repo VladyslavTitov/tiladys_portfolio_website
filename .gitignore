@@ -8,3 +8,5 @@ coverage
 .DS_Store
 packages/db/prisma/dev.db*
 **/.vercel/
+.vercel
+.env*
