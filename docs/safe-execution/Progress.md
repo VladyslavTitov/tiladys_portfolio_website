@@ -17,7 +17,7 @@ The owner's attached Safe Execution Instructions override the earlier redesign s
 
 - [x] Phase 0: baseline browser review and checkpoint `94a8caa`.
 - [x] Phase 1: public shared layout repaired; 99 production browser cases pass.
-- [ ] Phase 2: inspect and improve dashboard usability without changing business rules; checkpoint.
+- [x] Phase 2: dashboard presentation repaired; 108 production browser cases pass.
 - [ ] Phase 3: compare production performance/accessibility, optimize measured bottlenecks; checkpoint.
 - [ ] Phase 4: structured security review, focused remediation and regression checks; checkpoint.
 - [ ] Phase 5: isolated business-flow/browser/build verification and final handoff.
@@ -39,3 +39,9 @@ Final production browser run: **99/99 passed**, no captured exceptions. Service 
 Checks: `npm test`, `npm run typecheck`, `npm run lint`, `npm run test:rebuild:unit`, `npm run test:bilingual`, `npm run test:rebuild:db` (10 executed isolated database cases), production public build, and `git diff --check` passed. One direct contact-test invocation omitted `TSX_TSCONFIG_PATH` and failed alias resolution; the repository's complete `npm test` command supplied the correct config and passed. No unexecuted integration check is claimed.
 
 Source checkpoint: `/tmp/tiladys-safe-checkpoints/phase-1-source.tar.gz`. Business logic and database schema are unchanged by Phase 1. Production lab measurements remain separate from field data; optimization and comparison follow in Phase 3.
+
+## Phase 2 — verified dashboard usability
+
+Changed only `apps/control/app/globals.css`: desktop filters now share rows and wrap, mobile filters stack, the language picker no longer consumes a full toolbar row, selected List/Board buttons are distinct, and job-section links have separated 44px targets. Removed the existing phone `overflow-x:hidden` workaround. Corrected the underlying long-text, grid-item minimum sizing and inbox reply-form overflow it had concealed. No invoice, quote, payment, job, message, catalogue or customer mutation rules changed.
+
+Final production matrix: **108/108 passed** (12 dashboard routes × 9 widths), German labels, synthetic persisted records, no captured uncaught exceptions. The 320px inbox failed during development and passed after the final grid/reply-form correction; it is not left clipped. Evidence: `evidence/after-control/`, with comparative job screenshots in `evidence/baseline-control/`. Typecheck, lint, isolated domain/database regressions, Control production build and diff whitespace review passed. Source checkpoint: `/tmp/tiladys-safe-checkpoints/phase-2-source.tar.gz`.

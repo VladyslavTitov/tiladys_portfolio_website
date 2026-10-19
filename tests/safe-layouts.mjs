@@ -10,7 +10,9 @@ const phase = process.argv[2];
 assert.ok(['baseline', 'after'].includes(phase));
 const control = process.argv[3] === 'control';
 const base = control ? 'http://127.0.0.1:3101' : 'http://127.0.0.1:3100';
-const directory = `docs/safe-execution/evidence/${phase}${control ? '-control' : ''}${process.env.LAYOUT_WIDTHS ? '-focused' : ''}`;
+const stage = process.env.LAYOUT_STAGE || phase;
+assert.match(stage, /^[a-z0-9-]+$/);
+const directory = `docs/safe-execution/evidence/${stage}${control ? '-control' : ''}${process.env.LAYOUT_WIDTHS ? '-focused' : ''}`;
 await mkdir(directory, { recursive: true });
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 async function until(check, label, timeout = 45000) {
@@ -67,13 +69,15 @@ class CDP {
 const profile = await mkdtemp(join(tmpdir(), 'tiladys-safe-chrome-'));
 const debugPort = control ? 9339 : 9338;
 const chrome = spawn('google-chrome', ['--headless=new', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--no-first-run', '--remote-debugging-address=127.0.0.1', `--remote-debugging-port=${debugPort}`, `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' });
-const rows = [], performance = [], failures = [];
+const rows = [], performance = [], failures = [], accessibility = [];
+const axeSource = process.env.ACCESSIBILITY === '1' ? await readFile(new URL('../node_modules/axe-core/axe.min.js', import.meta.url), 'utf8') : null;
 let c;
 try {
   await until(async () => (await fetch(`http://127.0.0.1:${debugPort}/json`)).ok, 'Chrome');
   const targets = await (await fetch(`http://127.0.0.1:${debugPort}/json`)).json();
   c = new CDP(targets.find(target => target.type === 'page').webSocketDebuggerUrl);
   await c.send('Page.enable'); await c.send('Page.setLifecycleEventsEnabled', { enabled: true }); await c.send('Runtime.enable'); await c.send('Network.enable');
+  await c.send('Accessibility.enable');
   await c.send('Network.setCacheDisabled', { cacheDisabled: true });
   if (control) {
     const fixture = JSON.parse(await readFile('/tmp/tiladys-rebuild/browser-fixtures.json', 'utf8'));
@@ -82,15 +86,21 @@ try {
   }
   await c.send('Page.addScriptToEvaluateOnNewDocument', { source: `window.__lab={lcp:0,cls:0};new PerformanceObserver(list=>{for(const e of list.getEntries())window.__lab.lcp=e.startTime}).observe({type:'largest-contentful-paint',buffered:true});new PerformanceObserver(list=>{for(const e of list.getEntries())if(!e.hadRecentInput)window.__lab.cls+=e.value}).observe({type:'layout-shift',buffered:true});` });
   const routes = control ? ['', '/messages', '/customers', '/companies', '/service-jobs', '/quotes', '/invoices', '/projects', '/products', '/tasks', '/prices', '/settings'] : ['', '/services', '/services/websites', '/services/pc-laptop', '/services/3d-printing', '/portfolio', '/about', '/contact', '/products/framer', '/products/3d-models', '/privacy'];
-  const widths = process.env.LAYOUT_WIDTHS ? process.env.LAYOUT_WIDTHS.split(',').map(Number) : [320, 360, 390, 768, 1024, 1280, 1440, 1920, 2560];
+  const widths = process.env.PERFORMANCE_ONLY === '1' ? [] : process.env.LAYOUT_WIDTHS ? process.env.LAYOUT_WIDTHS.split(',').map(Number) : [320, 360, 390, 768, 1024, 1280, 1440, 1920, 2560];
   for (const width of widths) {
     await c.send('Emulation.setDeviceMetricsOverride', { width, height: 1000, deviceScaleFactor: 1, mobile: width < 768 });
     for (const route of process.env.LAYOUT_ROUTES ? process.env.LAYOUT_ROUTES.split(',') : routes) {
       await c.navigate(`${base}/${control ? 'dashboard' : 'de'}${route}`);
       const layout = await c.evaluate(`({width:innerWidth,scroll:document.documentElement.scrollWidth,h1:document.querySelector('h1')?.textContent,footer:document.querySelectorAll('.site-footer__grid>section').length,sections:[...document.querySelectorAll('main .section')].map(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return{class:e.className,x:r.x,width:r.width,content:r.width-parseFloat(s.paddingLeft)-parseFloat(s.paddingRight)}}),cards:[...document.querySelectorAll('.rebuild-services .rebuild-card')].map(e=>e.getBoundingClientRect().width),unlabelled:[...document.querySelectorAll('input:not([type=hidden]):not(.trap),select,textarea')].filter(e=>!e.labels?.length&&!e.getAttribute('aria-label')).map(e=>e.name)})`);
       layout.viewport = await c.evaluate('document.documentElement.clientWidth');
-      if (layout.scroll > width + 1) layout.overflow = await c.evaluate(`[...document.querySelectorAll('main *')].filter(e=>e.getBoundingClientRect().right>innerWidth+1 || e.scrollWidth>e.clientWidth+1).slice(0,30).map(e=>({tag:e.tagName,class:e.className,right:e.getBoundingClientRect().right,scroll:e.scrollWidth,client:e.clientWidth,text:e.textContent.slice(0,60)}))`);
-      rows.push({ route, ...layout });
+      if (layout.scroll > width + 1) layout.overflow = await c.evaluate(`[...document.querySelectorAll('main *')].filter(e=>e.getBoundingClientRect().right>document.documentElement.clientWidth+1 || e.scrollWidth>e.clientWidth+1).slice(0,30).map(e=>({tag:e.tagName,class:e.className,right:e.getBoundingClientRect().right,scroll:e.scrollWidth,client:e.clientWidth,text:e.textContent.slice(0,60)}))`);
+      rows.push({ route, requestedWidth: width, ...layout });
+      if (axeSource) {
+        await c.evaluate(axeSource + '\n;true');
+        const violations = await c.evaluate(`axe.run(document, {runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']}}).then(r=>r.violations.map(v=>({id:v.id,impact:v.impact,help:v.help,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})))`);
+        accessibility.push({ route, width, violations });
+        if (violations.length) failures.push(`Accessibility: ${route || '/'} ${width}: ${violations.map(v=>v.id).join(',')}`);
+      }
       if (layout.scroll > width + 1) failures.push(`Overflow: ${route || '/'} ${width}: ${layout.scroll}`);
       if (!layout.h1 || (!control && layout.footer !== 5) || layout.unlabelled.length) failures.push(`Semantics: ${route || '/'} ${width}: ${layout.unlabelled.join(',')}`);
       if (width >= 1280 && layout.cards.some(card => card < 300)) failures.push(`Narrow service card: ${route || '/'} ${width}: ${layout.cards.join(',')}`);
@@ -106,16 +116,16 @@ try {
     console.log(`Checked ${control ? 'Control' : 'public'} width ${width}`);
   }
   // Three cold-cache production samples using identical transport/CPU conditions.
-  for (const variant of control || process.env.LAYOUT_WIDTHS ? [] : [{ name: 'mobile-4g', width: 390, mobile: true, cpu: 4 }, { name: 'desktop', width: 1440, mobile: false, cpu: 1 }]) {
+  for (const variant of control || process.env.LAYOUT_WIDTHS || axeSource ? [] : [{ name: 'mobile-4g', width: 390, mobile: true, cpu: 4 }, { name: 'desktop', width: 1440, mobile: false, cpu: 1 }, { name: 'wide-desktop', width: 2560, mobile: false, cpu: 1 }]) {
     await c.send('Emulation.setDeviceMetricsOverride', { width: variant.width, height: 844, deviceScaleFactor: 1, mobile: variant.mobile });
     await c.send('Emulation.setCPUThrottlingRate', { rate: variant.cpu });
     await c.send('Network.emulateNetworkConditions', { offline: false, latency: variant.mobile ? 150 : 0, downloadThroughput: variant.mobile ? 200000 : -1, uploadThroughput: variant.mobile ? 93750 : -1 });
     for (let sample = 0; sample < 3; sample++) {
       await c.navigate(`${base}/de`); await sleep(1800);
-      performance.push(await c.evaluate(`({variant:${JSON.stringify(variant.name)},sample:${sample},lcpMs:window.__lab.lcp,cls:window.__lab.cls,transferBytes:performance.getEntriesByType('resource').reduce((s,e)=>s+e.transferSize,0)})`));
+      performance.push(await c.evaluate(`({variant:${JSON.stringify(variant.name)},sample:${sample},lcpMs:window.__lab.lcp,cls:window.__lab.cls,transferBytes:performance.getEntriesByType('resource').reduce((s,e)=>s+e.transferSize,0),hero:[...document.querySelectorAll('.rebuild-hero img')].map(e=>({url:e.currentSrc,width:e.getBoundingClientRect().width,bytes:performance.getEntriesByName(e.currentSrc).at(-1)?.transferSize}))})`));
     }
   }
-  await writeFile(`${directory}/results.json`, JSON.stringify({ timestamp: new Date().toISOString(), phase, method: 'Native Chrome CDP; production build; synthetic loopback database; cold browser cache; three samples per performance variant; local lab, not field CWV', rows, performance, failures, consoleErrors: c.errors }, null, 2));
+  await writeFile(`${directory}/results.json`, JSON.stringify({ timestamp: new Date().toISOString(), phase, method: 'Native Chrome CDP; production build; synthetic loopback database; cold browser cache; three samples per performance variant; local lab, not field CWV', rows, performance, accessibility, failures, consoleErrors: c.errors }, null, 2));
   if (phase === 'after') { assert.deepEqual(failures, []); assert.deepEqual(c.errors, []); }
   console.log(JSON.stringify({ phase, cases: rows.length, failures, performance }));
 } finally {
