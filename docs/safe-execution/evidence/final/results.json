@@ -1,0 +1,3823 @@
+{
+  "timestamp": "2026-10-19T09:43:55.529Z",
+  "phase": "after",
+  "method": "Native Chrome CDP; production build; synthetic loopback database; cold browser cache; three samples per performance variant; local lab, not field CWV",
+  "rows": [
+    {
+      "route": "",
+      "requestedWidth": 320,
+      "width": 320,
+      "scroll": 320,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section rebuild-process",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section rebuild-founder",
+          "x": 18,
+          "width": 284,
+          "content": 236
+        }
+      ],
+      "cards": [
+        284,
+        284,
+        284
+      ],
+      "unlabelled": [],
+      "viewport": 320
+    },
+    {
+      "route": "/services",
+      "requestedWidth": 320,
+      "width": 320,
+      "scroll": 320,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section services-overview",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        }
+      ],
+      "cards": [
+        284,
+        284,
+        284
+      ],
+      "unlabelled": [],
+      "viewport": 320
+    },
+    {
+      "route": "/services/websites",
+      "requestedWidth": 320,
+      "width": 320,
+      "scroll": 320,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 320
+    },
+    {
+      "route": "/services/pc-laptop",
+      "requestedWidth": 320,
+      "width": 320,
+      "scroll": 320,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 320
+    },
+    {
+      "route": "/services/3d-printing",
+      "requestedWidth": 320,
+      "width": 320,
+      "scroll": 320,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 320
+    },
+    {
+      "route": "/portfolio",
+      "requestedWidth": 320,
+      "width": 320,
+      "scroll": 320,
+      "h1": "Portfolio",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section portfolio-content",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 320
+    },
+    {
+      "route": "/about",
+      "requestedWidth": 320,
+      "width": 320,
+      "scroll": 320,
+      "h1": "Über TiLADYS",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "about-introduction section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section founder-profile",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section founder-details",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section about-contact",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 320
+    },
+    {
+      "route": "/contact",
+      "requestedWidth": 320,
+      "width": 320,
+      "scroll": 320,
+      "h1": "Kontakt",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section contact-page-grid",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        },
+        {
+          "class": "section contact-benefits-section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 320
+    },
+    {
+      "route": "/products/framer",
+      "requestedWidth": 320,
+      "width": 320,
+      "scroll": 320,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 320
+    },
+    {
+      "route": "/products/3d-models",
+      "requestedWidth": 320,
+      "width": 320,
+      "scroll": 320,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 18,
+          "width": 284,
+          "content": 284
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 320
+    },
+    {
+      "route": "/privacy",
+      "requestedWidth": 320,
+      "width": 320,
+      "scroll": 320,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section legal-content",
+          "x": 18,
+          "width": 284,
+          "content": 244
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 320
+    },
+    {
+      "route": "",
+      "requestedWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section rebuild-process",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section rebuild-founder",
+          "x": 18,
+          "width": 324,
+          "content": 276
+        }
+      ],
+      "cards": [
+        324,
+        324,
+        324
+      ],
+      "unlabelled": [],
+      "viewport": 360
+    },
+    {
+      "route": "/services",
+      "requestedWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section services-overview",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        }
+      ],
+      "cards": [
+        324,
+        324,
+        324
+      ],
+      "unlabelled": [],
+      "viewport": 360
+    },
+    {
+      "route": "/services/websites",
+      "requestedWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 360
+    },
+    {
+      "route": "/services/pc-laptop",
+      "requestedWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 360
+    },
+    {
+      "route": "/services/3d-printing",
+      "requestedWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 360
+    },
+    {
+      "route": "/portfolio",
+      "requestedWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "h1": "Portfolio",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section portfolio-content",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 360
+    },
+    {
+      "route": "/about",
+      "requestedWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "h1": "Über TiLADYS",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "about-introduction section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section founder-profile",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section founder-details",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section about-contact",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 360
+    },
+    {
+      "route": "/contact",
+      "requestedWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "h1": "Kontakt",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section contact-page-grid",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        },
+        {
+          "class": "section contact-benefits-section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 360
+    },
+    {
+      "route": "/products/framer",
+      "requestedWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 360
+    },
+    {
+      "route": "/products/3d-models",
+      "requestedWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 18,
+          "width": 324,
+          "content": 324
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 360
+    },
+    {
+      "route": "/privacy",
+      "requestedWidth": 360,
+      "width": 360,
+      "scroll": 360,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section legal-content",
+          "x": 18,
+          "width": 324,
+          "content": 284
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 360
+    },
+    {
+      "route": "",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-process",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-founder",
+          "x": 18,
+          "width": 354,
+          "content": 306
+        }
+      ],
+      "cards": [
+        354,
+        354,
+        354
+      ],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/services",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section services-overview",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [
+        354,
+        354,
+        354
+      ],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/services/websites",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/services/pc-laptop",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/services/3d-printing",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/portfolio",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Portfolio",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section portfolio-content",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/about",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Über TiLADYS",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "about-introduction section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section founder-profile",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section founder-details",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section about-contact",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/contact",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Kontakt",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section contact-page-grid",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section contact-benefits-section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/products/framer",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/products/3d-models",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/privacy",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section legal-content",
+          "x": 18,
+          "width": 354,
+          "content": 314
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "",
+      "requestedWidth": 768,
+      "width": 768,
+      "scroll": 768,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section rebuild-process",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section rebuild-founder",
+          "x": 18,
+          "width": 732,
+          "content": 684
+        }
+      ],
+      "cards": [
+        732,
+        732,
+        732
+      ],
+      "unlabelled": [],
+      "viewport": 768
+    },
+    {
+      "route": "/services",
+      "requestedWidth": 768,
+      "width": 768,
+      "scroll": 768,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section services-overview",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        }
+      ],
+      "cards": [
+        732,
+        732,
+        732
+      ],
+      "unlabelled": [],
+      "viewport": 768
+    },
+    {
+      "route": "/services/websites",
+      "requestedWidth": 768,
+      "width": 768,
+      "scroll": 768,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 768
+    },
+    {
+      "route": "/services/pc-laptop",
+      "requestedWidth": 768,
+      "width": 768,
+      "scroll": 768,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 768
+    },
+    {
+      "route": "/services/3d-printing",
+      "requestedWidth": 768,
+      "width": 768,
+      "scroll": 768,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 768
+    },
+    {
+      "route": "/portfolio",
+      "requestedWidth": 768,
+      "width": 768,
+      "scroll": 768,
+      "h1": "Portfolio",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section portfolio-content",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 768
+    },
+    {
+      "route": "/about",
+      "requestedWidth": 768,
+      "width": 768,
+      "scroll": 768,
+      "h1": "Über TiLADYS",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "about-introduction section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section founder-profile",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section founder-details",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section about-contact",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 768
+    },
+    {
+      "route": "/contact",
+      "requestedWidth": 768,
+      "width": 768,
+      "scroll": 768,
+      "h1": "Kontakt",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section contact-page-grid",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        },
+        {
+          "class": "section contact-benefits-section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 768
+    },
+    {
+      "route": "/products/framer",
+      "requestedWidth": 768,
+      "width": 768,
+      "scroll": 768,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 768
+    },
+    {
+      "route": "/products/3d-models",
+      "requestedWidth": 768,
+      "width": 768,
+      "scroll": 768,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 18,
+          "width": 732,
+          "content": 732
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 768
+    },
+    {
+      "route": "/privacy",
+      "requestedWidth": 768,
+      "width": 768,
+      "scroll": 768,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section legal-content",
+          "x": 18,
+          "width": 732,
+          "content": 670.56
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 768
+    },
+    {
+      "route": "",
+      "requestedWidth": 1024,
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section rebuild-process",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section rebuild-founder",
+          "x": 24,
+          "width": 976,
+          "content": 928
+        }
+      ],
+      "cards": [
+        309.328125,
+        309.328125,
+        309.34375
+      ],
+      "unlabelled": [],
+      "viewport": 1024
+    },
+    {
+      "route": "/services",
+      "requestedWidth": 1024,
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section services-overview",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        }
+      ],
+      "cards": [
+        309.328125,
+        309.328125,
+        309.34375
+      ],
+      "unlabelled": [],
+      "viewport": 1024
+    },
+    {
+      "route": "/services/websites",
+      "requestedWidth": 1024,
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section service-process",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section related-services",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 132,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1024
+    },
+    {
+      "route": "/services/pc-laptop",
+      "requestedWidth": 1024,
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section service-process",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section related-services",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 132,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1024
+    },
+    {
+      "route": "/services/3d-printing",
+      "requestedWidth": 1024,
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section service-process",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section related-services",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 132,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1024
+    },
+    {
+      "route": "/portfolio",
+      "requestedWidth": 1024,
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Portfolio",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section portfolio-content",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1024
+    },
+    {
+      "route": "/about",
+      "requestedWidth": 1024,
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Über TiLADYS",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "about-introduction section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section founder-profile",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section founder-details",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section about-contact",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1024
+    },
+    {
+      "route": "/contact",
+      "requestedWidth": 1024,
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Kontakt",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section contact-page-grid",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        },
+        {
+          "class": "section contact-benefits-section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1024
+    },
+    {
+      "route": "/products/framer",
+      "requestedWidth": 1024,
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1024
+    },
+    {
+      "route": "/products/3d-models",
+      "requestedWidth": 1024,
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 24,
+          "width": 976,
+          "content": 976
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1024
+    },
+    {
+      "route": "/privacy",
+      "requestedWidth": 1024,
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section legal-content",
+          "x": 24,
+          "width": 976,
+          "content": 894.0799999999999
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1024
+    },
+    {
+      "route": "",
+      "requestedWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-process",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-founder",
+          "x": 40,
+          "width": 1200,
+          "content": 1152
+        }
+      ],
+      "cards": [
+        384,
+        384,
+        384
+      ],
+      "unlabelled": [],
+      "viewport": 1280
+    },
+    {
+      "route": "/services",
+      "requestedWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section services-overview",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [
+        384,
+        384,
+        384
+      ],
+      "unlabelled": [],
+      "viewport": 1280
+    },
+    {
+      "route": "/services/websites",
+      "requestedWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 260,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1280
+    },
+    {
+      "route": "/services/pc-laptop",
+      "requestedWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 260,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1280
+    },
+    {
+      "route": "/services/3d-printing",
+      "requestedWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 260,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1280
+    },
+    {
+      "route": "/portfolio",
+      "requestedWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Portfolio",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section portfolio-content",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1280
+    },
+    {
+      "route": "/about",
+      "requestedWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Über TiLADYS",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "about-introduction section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section founder-profile",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section founder-details",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section about-contact",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1280
+    },
+    {
+      "route": "/contact",
+      "requestedWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Kontakt",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section contact-page-grid",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section contact-benefits-section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1280
+    },
+    {
+      "route": "/products/framer",
+      "requestedWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1280
+    },
+    {
+      "route": "/products/3d-models",
+      "requestedWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 40,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1280
+    },
+    {
+      "route": "/privacy",
+      "requestedWidth": 1280,
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section legal-content",
+          "x": 40,
+          "width": 1200,
+          "content": 1104
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1280
+    },
+    {
+      "route": "",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-process",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-founder",
+          "x": 120,
+          "width": 1200,
+          "content": 1152
+        }
+      ],
+      "cards": [
+        384,
+        384,
+        384
+      ],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "/services",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section services-overview",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [
+        384,
+        384,
+        384
+      ],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "/services/websites",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 340,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "/services/pc-laptop",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 340,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "/services/3d-printing",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 340,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "/portfolio",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Portfolio",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section portfolio-content",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "/about",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Über TiLADYS",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "about-introduction section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section founder-profile",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section founder-details",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section about-contact",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "/contact",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Kontakt",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section contact-page-grid",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section contact-benefits-section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "/products/framer",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "/products/3d-models",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 120,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "/privacy",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section legal-content",
+          "x": 120,
+          "width": 1200,
+          "content": 1104
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "",
+      "requestedWidth": 1920,
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-process",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-founder",
+          "x": 360,
+          "width": 1200,
+          "content": 1152
+        }
+      ],
+      "cards": [
+        384,
+        384,
+        384
+      ],
+      "unlabelled": [],
+      "viewport": 1920
+    },
+    {
+      "route": "/services",
+      "requestedWidth": 1920,
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section services-overview",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [
+        384,
+        384,
+        384
+      ],
+      "unlabelled": [],
+      "viewport": 1920
+    },
+    {
+      "route": "/services/websites",
+      "requestedWidth": 1920,
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 580,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1920
+    },
+    {
+      "route": "/services/pc-laptop",
+      "requestedWidth": 1920,
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 580,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1920
+    },
+    {
+      "route": "/services/3d-printing",
+      "requestedWidth": 1920,
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 580,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1920
+    },
+    {
+      "route": "/portfolio",
+      "requestedWidth": 1920,
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Portfolio",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section portfolio-content",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1920
+    },
+    {
+      "route": "/about",
+      "requestedWidth": 1920,
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Über TiLADYS",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "about-introduction section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section founder-profile",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section founder-details",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section about-contact",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1920
+    },
+    {
+      "route": "/contact",
+      "requestedWidth": 1920,
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Kontakt",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section contact-page-grid",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section contact-benefits-section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1920
+    },
+    {
+      "route": "/products/framer",
+      "requestedWidth": 1920,
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1920
+    },
+    {
+      "route": "/products/3d-models",
+      "requestedWidth": 1920,
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 360,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1920
+    },
+    {
+      "route": "/privacy",
+      "requestedWidth": 1920,
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section legal-content",
+          "x": 360,
+          "width": 1200,
+          "content": 1104
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1920
+    },
+    {
+      "route": "",
+      "requestedWidth": 2560,
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-process",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-founder",
+          "x": 680,
+          "width": 1200,
+          "content": 1152
+        }
+      ],
+      "cards": [
+        384,
+        384,
+        384
+      ],
+      "unlabelled": [],
+      "viewport": 2560
+    },
+    {
+      "route": "/services",
+      "requestedWidth": 2560,
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section services-overview",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [
+        384,
+        384,
+        384
+      ],
+      "unlabelled": [],
+      "viewport": 2560
+    },
+    {
+      "route": "/services/websites",
+      "requestedWidth": 2560,
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 900,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 2560
+    },
+    {
+      "route": "/services/pc-laptop",
+      "requestedWidth": 2560,
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 900,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 2560
+    },
+    {
+      "route": "/services/3d-printing",
+      "requestedWidth": 2560,
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 900,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 2560
+    },
+    {
+      "route": "/portfolio",
+      "requestedWidth": 2560,
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Portfolio",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section portfolio-content",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 2560
+    },
+    {
+      "route": "/about",
+      "requestedWidth": 2560,
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Über TiLADYS",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "about-introduction section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section founder-profile",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section founder-details",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section about-contact",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 2560
+    },
+    {
+      "route": "/contact",
+      "requestedWidth": 2560,
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Kontakt",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section contact-page-grid",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section contact-benefits-section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 2560
+    },
+    {
+      "route": "/products/framer",
+      "requestedWidth": 2560,
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 2560
+    },
+    {
+      "route": "/products/3d-models",
+      "requestedWidth": 2560,
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 680,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 2560
+    },
+    {
+      "route": "/privacy",
+      "requestedWidth": 2560,
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section legal-content",
+          "x": 680,
+          "width": 1200,
+          "content": 1104
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 2560
+    }
+  ],
+  "performance": [
+    {
+      "variant": "mobile-4g",
+      "sample": 0,
+      "lcpMs": 708,
+      "cls": 0,
+      "transferBytes": 293276,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=384&q=75",
+          "width": 354,
+          "bytes": 14946
+        }
+      ]
+    },
+    {
+      "variant": "mobile-4g",
+      "sample": 1,
+      "lcpMs": 716,
+      "cls": 0,
+      "transferBytes": 293279,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=384&q=75",
+          "width": 354,
+          "bytes": 14946
+        }
+      ]
+    },
+    {
+      "variant": "mobile-4g",
+      "sample": 2,
+      "lcpMs": 724,
+      "cls": 0,
+      "transferBytes": 293271,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=384&q=75",
+          "width": 354,
+          "bytes": 14946
+        }
+      ]
+    },
+    {
+      "variant": "desktop",
+      "sample": 0,
+      "lcpMs": 96,
+      "cls": 0,
+      "transferBytes": 322746,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 556.203125,
+          "bytes": 30744
+        }
+      ]
+    },
+    {
+      "variant": "desktop",
+      "sample": 1,
+      "lcpMs": 64,
+      "cls": 0,
+      "transferBytes": 322744,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 556.203125,
+          "bytes": 30744
+        }
+      ]
+    },
+    {
+      "variant": "desktop",
+      "sample": 2,
+      "lcpMs": 84,
+      "cls": 0,
+      "transferBytes": 322751,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 556.203125,
+          "bytes": 30744
+        }
+      ]
+    },
+    {
+      "variant": "wide-desktop",
+      "sample": 0,
+      "lcpMs": 80,
+      "cls": 0,
+      "transferBytes": 398369,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 556.203125,
+          "bytes": 30744
+        }
+      ]
+    },
+    {
+      "variant": "wide-desktop",
+      "sample": 1,
+      "lcpMs": 72,
+      "cls": 0,
+      "transferBytes": 398363,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 556.203125,
+          "bytes": 30744
+        }
+      ]
+    },
+    {
+      "variant": "wide-desktop",
+      "sample": 2,
+      "lcpMs": 76,
+      "cls": 0,
+      "transferBytes": 398370,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 556.203125,
+          "bytes": 30744
+        }
+      ]
+    }
+  ],
+  "accessibility": [],
+  "interactions": [
+    "Mobile menu opens; native Escape closes it and restores trigger focus",
+    "Reduced-motion scrolling verified"
+  ],
+  "failures": [],
+  "consoleErrors": []
+}

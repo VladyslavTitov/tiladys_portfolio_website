@@ -1,0 +1,10 @@
+
+> test:rebuild:browser
+> node tests/rebuild-browser.mjs
+
+REUSE previously passed public phase; executing private phase after Control-only changes.
+PASS authenticated Control routes at phone/tablet/desktop using real isolated database.
+PASS German Control dictionary, saved UI language, and long-label responsive layouts.
+PASS phone list/detail Back retains input, explicit repeated DST occurrence persists, and calendar uses the same UTC instant.
+PASS browser direct photo submission, exact stored Unicode, private attachment auth, archived originals/derivatives denied at both origins, private export expiry and account reauthentication denial.
+PASS exact origin, anonymous denial, stale task save, private product media, multilingual contact receipt replay.

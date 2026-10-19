@@ -109,7 +109,11 @@ try {
         if (width >= 1280 && section.width >= 1000 && Math.abs(section.x - (layout.viewport - section.width) / 2) > 2) failures.push(`Uncentred section: ${route || '/'} ${width} ${section.class}`);
       }
       if ((control ? ['', '/service-jobs', '/invoices'] : ['', '/services/websites', '/contact', '/about']).includes(route) && [390, 1440, 2560].includes(width)) {
-        const capture = await c.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+        if (process.env.FULL_SCREENSHOTS === '1') {
+          await c.evaluate(`Promise.all([...document.images].map(img=>{img.loading='eager';return img.decode().catch(()=>{})}))`);
+          await sleep(150);
+        }
+        const capture = await c.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: process.env.FULL_SCREENSHOTS === '1' });
         await writeFile(`${directory}/${route.replaceAll('/', '-') || 'home'}-${width}.png`, Buffer.from(capture.data, 'base64'));
       }
     }

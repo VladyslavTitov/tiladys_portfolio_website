@@ -1,0 +1,26 @@
+
+> test:bilingual
+> node --import tsx --test tests/bilingual-validation.test.ts tests/invoice-unicode-pdf.test.ts
+
+TAP version 13
+# Subtest: tests/bilingual-validation.test.ts
+ok 1 - tests/bilingual-validation.test.ts
+  ---
+  duration_ms: 895.86489
+  type: 'test'
+  ...
+# Subtest: tests/invoice-unicode-pdf.test.ts
+ok 2 - tests/invoice-unicode-pdf.test.ts
+  ---
+  duration_ms: 4434.093382
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4457.297119
