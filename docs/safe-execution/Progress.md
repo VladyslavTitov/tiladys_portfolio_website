@@ -19,7 +19,7 @@ The owner's attached Safe Execution Instructions override the earlier redesign s
 - [x] Phase 1: public shared layout repaired; 99 production browser cases pass.
 - [x] Phase 2: dashboard presentation repaired; 108 production browser cases pass.
 - [x] Phase 3: measured image optimization and automated accessibility checks complete.
-- [ ] Phase 4: structured security review, focused remediation and regression checks; checkpoint.
+- [x] Phase 4: confirmed auth-throttle/logout fixes and structured security review verified.
 - [ ] Phase 5: isolated business-flow/browser/build verification and final handoff.
 
 No production writes, real invoices/payments, customer mail, deployment, production infrastructure or authentication replacement are authorized by this task.
@@ -53,3 +53,13 @@ Changed the homepage hero's `sizes` declaration in the already-modified `apps/we
 Axe 4.12.1 WCAG-tagged checks: final **22 public + 24 private page/viewport combinations passed with zero reported violations**. Native menu opening, Escape/trigger-focus restoration and reduced-motion scrolling also passed in both apps. These are automated checks; complete manual WCAG/device assessment remains outstanding. Baseline and final evidence are under `evidence/phase3-*`. Production builds, npm tests, type checking, lint and whitespace review passed.
 
 Source checkpoint: `/tmp/tiladys-safe-checkpoints/phase-3-source.tar.gz`; exact one-line homepage delta against its owner-supplied initial version: `/tmp/tiladys-safe-checkpoints/phase-3-home.patch`. That page already contained substantial uncommitted owner implementation, so the checkpoint commit intentionally stages the isolated CSS/docs/tests only, retaining the page in the existing working changes. No owner implementation is silently included in an unrelated CSS commit.
+
+## Phase 4 — confirmed security improvements
+
+`Security-review.md` maps the review and limits. Reproduced the spoofable forwarded-IP throttle and logout origin-error 500 against the original production build, then fixed them without replacing auth/session/financial logic. New `request-source.ts` is used by login, account reauthentication and session IP metadata; `.env.example` documents the trusted-ingress selection. Logout now returns explicit 403/private no-store for rejected origins. Default regression command includes the new request-source unit tests.
+
+Final **16/16 real HTTP auth checks passed**, including Secure/HttpOnly/SameSite cookie flags, valid login/logout, stored-session revocation, private API denial, exact-origin protection, JSON/body limits and 429 despite a rotated untrusted forwarding header. **15 existing HTTP business/security groups also passed** against the synthetic database (files/ownership/publication/withdrawal/financial immutability/account access/CSV/XSS and related workflows). npm tests, typecheck, lint, Control production build and whitespace review passed.
+
+Added `scripts/safe-execution.mjs` to make the verified local database/SMTP boundaries repeatable; it does not start containers, migrate, deploy or contact a production database. Public advisory review and locally resolved dependency versions are recorded. The installed Sharp version meets the new image-advisory workaround; Next feature-specific advisories and a separate security-update recommendation remain explicit. No full transitive dependency-audit or production least-privilege claim is made.
+
+Source checkpoint: `/tmp/tiladys-safe-checkpoints/phase-4-source.tar.gz`. Login/account/root package files already contained substantial owner changes; precise additional deltas are retained in that checkpoint rather than staging those unrelated changes into the security commit.
