@@ -1,0 +1,17 @@
+[
+  "apps/control/app/dashboard/page.tsx",
+  "apps/control/app/dashboard/messages/page.tsx",
+  "apps/control/app/dashboard/prices/page.tsx",
+  "apps/control/app/dashboard/projects/page.tsx",
+  "apps/control/app/dashboard/customers/page.tsx",
+  "apps/control/app/dashboard/service-jobs/page.tsx",
+  "apps/control/app/dashboard/companies/page.tsx",
+  "apps/control/app/dashboard/invoices/page.tsx",
+  "apps/control/app/dashboard/search/page.tsx",
+  "apps/control/app/dashboard/settings/[section]/page.tsx",
+  "apps/control/app/dashboard/products/[id]/preview/page.tsx",
+  "apps/control/app/dashboard/quotes/[id]/page.tsx",
+  "apps/control/app/dashboard/companies/[id]/page.tsx",
+  "apps/control/app/dashboard/customers/[id]/page.tsx",
+  "apps/control/app/dashboard/projects/[id]/preview/page.tsx"
+]

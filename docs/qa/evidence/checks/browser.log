@@ -1,0 +1,145 @@
+Geometry public 320: 16 cases
+Geometry public 375: 32 cases
+Geometry public 390: 48 cases
+Geometry public 430: 64 cases
+Geometry public 768: 80 cases
+Geometry public 1024: 96 cases
+Geometry public 1280: 112 cases
+Geometry public 1440: 128 cases
+Geometry public 1920: 144 cases
+Geometry public 2560: 160 cases
+Geometry control 320: 172 cases
+Geometry control 375: 184 cases
+Geometry control 390: 196 cases
+Geometry control 430: 208 cases
+Geometry control 768: 220 cases
+Geometry control 1024: 232 cases
+Geometry control 1280: 244 cases
+Geometry control 1440: 256 cases
+Geometry control 1920: 268 cases
+Geometry control 2560: 280 cases
+{
+  "cases": 376,
+  "geometryFailures": 38,
+  "errors": [
+    {
+      "scope": "http://127.0.0.1:3101/dashboard/invoices",
+      "message": "Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED"
+    },
+    {
+      "scope": "http://127.0.0.1:3101/dashboard/invoices",
+      "message": "Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED"
+    },
+    {
+      "scope": "http://127.0.0.1:3101/dashboard/invoices",
+      "message": "Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED"
+    }
+  ],
+  "network": [],
+  "axeCases": 56,
+  "axeViolations": 0,
+  "checks": [
+    "AUTH-UI: real credential form reaches authenticated dashboard; no session seeding.",
+    "REFLOW: 1440→720 (200%) and 1280→320 (400%) CSS equivalents plus short-height portrait/landscape; this is not OS-level browser zoom.",
+    "KEYBOARD: mobile menu Enter/Escape focus return; debounced search, Tab/Enter clear and focus retention.",
+    "AUTH-UI logout: real session revoked; protected navigation returns login."
+  ]
+}
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   'http://127.0.0.1:3100/en 1920: broken images',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
++   'http://127.0.0.1:3100/en 2560: broken images',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
++   'http://127.0.0.1:3100/uk/portfolio 1440: image aspect'
++ ]
+- []
+
+    at file:///home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/tests/qa-browser.playwright.mjs:53:204 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    'http://127.0.0.1:3100/en 1920: broken images',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en/portfolio 1920: image aspect',
+    'http://127.0.0.1:3100/en 2560: broken images',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/de/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect',
+    'http://127.0.0.1:3100/uk/portfolio 1440: image aspect'
+  ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.1

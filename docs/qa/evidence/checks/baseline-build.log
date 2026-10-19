@@ -1,0 +1,214 @@
+
+> build
+> npm run db:generate && npm run build:control && npm run build:web
+
+
+> db:generate
+> npm --workspace @tiladys/db run generate
+
+
+> generate
+> prisma generate
+
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.19.3) to ./../../node_modules/@prisma/client in 298ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate
+
+
+> build:control
+> npm --workspace @tiladys/control run build
+
+
+> prebuild
+> node ../../scripts/control-prebuild.mjs
+
+
+> db:generate
+> npm --workspace @tiladys/db run generate
+
+
+> generate
+> prisma generate
+
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.19.3) to ./../../node_modules/@prisma/client in 296ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate
+
+
+> build
+> next build --webpack
+
+▲ Next.js 16.3.8 (webpack)
+- Environments: .env.local
+✓ Running next.config.ts took 36ms
+- Experiments (use with caution):
+  · serverActions
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.9s
+  Running TypeScript ...
+  Finished TypeScript in 2.8s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/35) ...
+  Generating static pages using 15 workers (8/35) 
+  Generating static pages using 15 workers (17/35) 
+  Generating static pages using 15 workers (26/35) 
+✓ Generating static pages using 15 workers (35/35) in 314ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ƒ /
+├ ƒ /_not-found
+├ ƒ /api/admin/account
+├ ƒ /api/admin/billing-settings
+├ ƒ /api/admin/catalogue
+├ ƒ /api/admin/catalogue/[id]
+├ ƒ /api/admin/companies
+├ ƒ /api/admin/companies/[id]
+├ ƒ /api/admin/customers
+├ ƒ /api/admin/customers/[id]
+├ ƒ /api/admin/customers/[id]/notes
+├ ƒ /api/admin/estimate
+├ ƒ /api/admin/export
+├ ƒ /api/admin/export/[token]
+├ ƒ /api/admin/invoices
+├ ƒ /api/admin/invoices/[id]
+├ ƒ /api/admin/invoices/[id]/issue
+├ ƒ /api/admin/invoices/[id]/payments
+├ ƒ /api/admin/invoices/[id]/pdf
+├ ƒ /api/admin/messages/[id]/attachments/[attachmentId]
+├ ƒ /api/admin/messages/[id]/draft
+├ ƒ /api/admin/messages/[id]/link
+├ ƒ /api/admin/messages/[id]/reply
+├ ƒ /api/admin/messages/[id]/status
+├ ƒ /api/admin/prices
+├ ƒ /api/admin/products
+├ ƒ /api/admin/products/[id]
+├ ƒ /api/admin/products/[id]/images
+├ ƒ /api/admin/products/[id]/images/[imageId]
+├ ƒ /api/admin/projects
+├ ƒ /api/admin/projects/[id]
+├ ƒ /api/admin/projects/[id]/images
+├ ƒ /api/admin/projects/[id]/images/[imageId]
+├ ƒ /api/admin/quotes
+├ ƒ /api/admin/quotes/[id]
+├ ƒ /api/admin/service-jobs
+├ ƒ /api/admin/service-jobs/[id]
+├ ƒ /api/admin/service-jobs/[id]/brief
+├ ƒ /api/admin/service-jobs/[id]/portfolio
+├ ƒ /api/admin/tasks
+├ ƒ /api/admin/tasks/[id]
+├ ƒ /api/admin/tasks/[id]/complete
+├ ƒ /api/auth/login
+├ ƒ /api/auth/logout
+├ ƒ /api/public/media/[id]
+├ ƒ /api/public/prices
+├ ƒ /api/public/projects
+├ ƒ /api/public/projects/[slug]
+├ ƒ /dashboard
+├ ƒ /dashboard/companies
+├ ƒ /dashboard/companies/[id]
+├ ƒ /dashboard/customers
+├ ƒ /dashboard/customers/[id]
+├ ƒ /dashboard/invoices
+├ ƒ /dashboard/messages
+├ ƒ /dashboard/prices
+├ ƒ /dashboard/products
+├ ƒ /dashboard/products/[id]/preview
+├ ƒ /dashboard/projects
+├ ƒ /dashboard/projects/[id]/preview
+├ ƒ /dashboard/quotes
+├ ƒ /dashboard/quotes/[id]
+├ ƒ /dashboard/search
+├ ƒ /dashboard/service-jobs
+├ ƒ /dashboard/settings
+├ ƒ /dashboard/settings/[section]
+├ ƒ /dashboard/tasks
+└ ƒ /login
+
+
+ƒ Proxy (Middleware)
+
+ƒ  (Dynamic)  server-rendered on demand
+
+
+> build:web
+> npm --workspace @tiladys/web run build
+
+
+> prebuild
+> npm --prefix ../.. run db:generate
+
+
+> db:generate
+> npm --workspace @tiladys/db run generate
+
+
+> generate
+> prisma generate
+
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.19.3) to ./../../node_modules/@prisma/client in 293ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate
+
+
+> build
+> next build --webpack
+
+▲ Next.js 16.3.8 (webpack)
+✓ Running next.config.ts took 35ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.8s
+  Running TypeScript ...
+  Finished TypeScript in 2.6s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/84) ...
+  Generating static pages using 15 workers (21/84) 
+  Generating static pages using 15 workers (42/84) 
+  Generating static pages using 15 workers (63/84) 
+✓ Generating static pages using 15 workers (84/84) in 1008ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ƒ /_not-found
+├ ƒ /[locale]
+├ ƒ /[locale]/about
+├ ƒ /[locale]/contact
+├ ƒ /[locale]/impressum
+├ ƒ /[locale]/portfolio
+├ ƒ /[locale]/portfolio/[slug]
+├ ƒ /[locale]/prices
+├ ƒ /[locale]/privacy
+├ ƒ /[locale]/products/[slug]
+├ ƒ /[locale]/services
+├ ƒ /[locale]/services/[slug]
+├ ƒ /[locale]/terms
+├ ƒ /api/contact
+├ ƒ /api/contact/uploads
+├ ƒ /api/public/media/[id]
+├ ƒ /api/public/product-media/[id]
+├ ○ /icon.svg
+├ ○ /robots.txt
+└ ƒ /sitemap.xml
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

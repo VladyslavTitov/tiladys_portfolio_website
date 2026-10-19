@@ -1,0 +1,30 @@
+▲ Next.js 16.3.8 (Turbopack)
+- Local:         http://127.0.0.1:3104
+- Network:       http://127.0.0.1:3104
+✓ Ready in 789ms
+✓ Running next.config.ts took 113ms
+Creating turbopack project {
+  dir: '/home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/.qa-complete-dev/web',
+  testMode: true
+}
+
+ GET /en/portfolio 200 in 7.7s (next.js: 3.3s, proxy.ts: 742ms, generate-params: 1872ms, application-code: 1764ms)
+ GET /en/portfolio 200 in 558ms (next.js: 30ms, proxy.ts: 15ms, generate-params: 39ms, application-code: 475ms)
+ GET /de/portfolio 200 in 483ms (next.js: 15ms, proxy.ts: 10ms, generate-params: 0.1ms, application-code: 459ms)
+ GET /uk/portfolio 200 in 432ms (next.js: 12ms, proxy.ts: 9ms, generate-params: 0.1ms, application-code: 411ms)
+ GET /ru/portfolio 200 in 408ms (next.js: 11ms, proxy.ts: 10ms, generate-params: 0.1ms, application-code: 387ms)
+ GET /sk/portfolio 200 in 433ms (next.js: 11ms, proxy.ts: 9ms, generate-params: 38ms, application-code: 375ms)
+ GET /fr/portfolio 200 in 414ms (next.js: 12ms, proxy.ts: 8ms, generate-params: 0.1ms, application-code: 394ms)
+ GET /en/portfolio 200 in 467ms (next.js: 11ms, proxy.ts: 8ms, generate-params: 37ms, application-code: 411ms)
+ GET /de/portfolio 200 in 443ms (next.js: 13ms, proxy.ts: 11ms, generate-params: 0.1ms, application-code: 419ms)
+ GET /uk/portfolio 200 in 459ms (next.js: 11ms, proxy.ts: 9ms, generate-params: 0.1ms, application-code: 439ms)
+ GET /ru/portfolio 200 in 413ms (next.js: 13ms, proxy.ts: 9ms, generate-params: 0.1ms, application-code: 391ms)
+ GET /sk/portfolio 200 in 392ms (next.js: 10ms, proxy.ts: 7ms, generate-params: 0.1ms, application-code: 375ms)
+ GET /fr/portfolio 200 in 431ms (next.js: 9ms, proxy.ts: 6ms, generate-params: 38ms, application-code: 378ms)
+ GET /en/portfolio 200 in 490ms (next.js: 14ms, proxy.ts: 10ms, generate-params: 38ms, application-code: 428ms)
+ GET /de/portfolio 200 in 428ms (next.js: 11ms, proxy.ts: 7ms, generate-params: 0.1ms, application-code: 411ms)
+ GET /uk/portfolio 200 in 399ms (next.js: 9ms, proxy.ts: 8ms, generate-params: 0.0ms, application-code: 382ms)
+ GET /ru/portfolio 200 in 376ms (next.js: 9ms, proxy.ts: 6ms, generate-params: 0.0ms, application-code: 361ms)
+ GET /sk/portfolio 200 in 394ms (next.js: 10ms, proxy.ts: 7ms, generate-params: 0.0ms, application-code: 377ms)
+ GET /fr/portfolio 200 in 430ms (next.js: 10ms, proxy.ts: 7ms, generate-params: 38ms, application-code: 375ms)
+[?25h

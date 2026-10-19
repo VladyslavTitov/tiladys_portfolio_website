@@ -1,0 +1,1250 @@
+[
+  {
+    "href": "/en",
+    "status": 200
+  },
+  {
+    "href": "/en/services/websites",
+    "status": 200
+  },
+  {
+    "href": "/en/services/3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/en/services/pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio",
+    "status": 200
+  },
+  {
+    "href": "/en/about",
+    "status": 200
+  },
+  {
+    "href": "/en/contact",
+    "status": 200
+  },
+  {
+    "href": "/en/services",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/portfolio-qa-30147c23-0",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/synthetic-pc-support",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/synthetic-web-development",
+    "status": 200
+  },
+  {
+    "href": "/en/products/framer",
+    "status": 200
+  },
+  {
+    "href": "/en/products/3d-models",
+    "status": 200
+  },
+  {
+    "href": "/en/terms",
+    "status": 200
+  },
+  {
+    "href": "/en/privacy",
+    "status": 200
+  },
+  {
+    "href": "/en/impressum",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=pc-laptop&mode=local",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=pc-laptop&mode=remote",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/synthetic-3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/portfolio-qa-30147c23-1",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/portfolio-qa-30147c23-2",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/portfolio-qa-30147c23-3",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/portfolio-qa-30147c23-4",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/portfolio-qa-30147c23-5",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/portfolio-qa-30147c23-6",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/portfolio-qa-30147c23-7",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/portfolio-qa-30147c23-8",
+    "status": 200
+  },
+  {
+    "href": "/en/services/business-it",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=websites",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=websites&detail=web-business",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=websites&detail=web-landing",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=websites&detail=web-maintenance",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio?category=web-development",
+    "status": 200
+  },
+  {
+    "href": "/en/products/portfolio-qa-30147c23-template",
+    "status": 200
+  },
+  {
+    "href": "/en/products/synthetic-template",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=pc-laptop&detail=pc-setup",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=pc-laptop&detail=pc-troubleshooting",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=pc-laptop&detail=pc-cleaning",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=pc-laptop&detail=pc-upgrade",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=pc-laptop&detail=pc-backup",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=pc-laptop&detail=pc-remote",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio?category=pc-support",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/portfolio-qa-30147c23-14",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=3d-printing&mode=file",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=3d-printing&mode=idea",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=3d-printing&mode=batch",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio?category=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/en/portfolio/portfolio-qa-30147c23-21",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=business-it",
+    "status": 200
+  },
+  {
+    "href": "/en/contact?service=websites&project=portfolio-qa-30147c23-0",
+    "status": 200
+  },
+  {
+    "href": "/de",
+    "status": 200
+  },
+  {
+    "href": "/de/services/websites",
+    "status": 200
+  },
+  {
+    "href": "/de/services/3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/de/services/pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio",
+    "status": 200
+  },
+  {
+    "href": "/de/about",
+    "status": 200
+  },
+  {
+    "href": "/de/contact",
+    "status": 200
+  },
+  {
+    "href": "/de/services",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/portfolio-qa-30147c23-0",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/synthetic-pc-support",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/synthetic-web-development",
+    "status": 200
+  },
+  {
+    "href": "/de/products/framer",
+    "status": 200
+  },
+  {
+    "href": "/de/products/3d-models",
+    "status": 200
+  },
+  {
+    "href": "/de/terms",
+    "status": 200
+  },
+  {
+    "href": "/de/privacy",
+    "status": 200
+  },
+  {
+    "href": "/de/impressum",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=pc-laptop&mode=local",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=pc-laptop&mode=remote",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/synthetic-3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/portfolio-qa-30147c23-1",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/portfolio-qa-30147c23-2",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/portfolio-qa-30147c23-3",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/portfolio-qa-30147c23-4",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/portfolio-qa-30147c23-5",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/portfolio-qa-30147c23-6",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/portfolio-qa-30147c23-7",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/portfolio-qa-30147c23-8",
+    "status": 200
+  },
+  {
+    "href": "/de/services/business-it",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=websites",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=websites&detail=web-business",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=websites&detail=web-landing",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=websites&detail=web-maintenance",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio?category=web-development",
+    "status": 200
+  },
+  {
+    "href": "/de/products/portfolio-qa-30147c23-template",
+    "status": 200
+  },
+  {
+    "href": "/de/products/synthetic-template",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=pc-laptop&detail=pc-setup",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=pc-laptop&detail=pc-troubleshooting",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=pc-laptop&detail=pc-cleaning",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=pc-laptop&detail=pc-upgrade",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=pc-laptop&detail=pc-backup",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=pc-laptop&detail=pc-remote",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio?category=pc-support",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/portfolio-qa-30147c23-14",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=3d-printing&mode=file",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=3d-printing&mode=idea",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=3d-printing&mode=batch",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio?category=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/de/portfolio/portfolio-qa-30147c23-21",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=business-it",
+    "status": 200
+  },
+  {
+    "href": "/de/contact?service=websites&project=portfolio-qa-30147c23-0",
+    "status": 200
+  },
+  {
+    "href": "/uk",
+    "status": 200
+  },
+  {
+    "href": "/uk/services/websites",
+    "status": 200
+  },
+  {
+    "href": "/uk/services/3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/uk/services/pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio",
+    "status": 200
+  },
+  {
+    "href": "/uk/about",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact",
+    "status": 200
+  },
+  {
+    "href": "/uk/services",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/portfolio-qa-30147c23-0",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/synthetic-pc-support",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/synthetic-web-development",
+    "status": 200
+  },
+  {
+    "href": "/uk/products/framer",
+    "status": 200
+  },
+  {
+    "href": "/uk/products/3d-models",
+    "status": 200
+  },
+  {
+    "href": "/uk/terms",
+    "status": 200
+  },
+  {
+    "href": "/uk/privacy",
+    "status": 200
+  },
+  {
+    "href": "/uk/impressum",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=pc-laptop&mode=local",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=pc-laptop&mode=remote",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/synthetic-3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/portfolio-qa-30147c23-1",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/portfolio-qa-30147c23-2",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/portfolio-qa-30147c23-3",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/portfolio-qa-30147c23-4",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/portfolio-qa-30147c23-5",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/portfolio-qa-30147c23-6",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/portfolio-qa-30147c23-7",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/portfolio-qa-30147c23-8",
+    "status": 200
+  },
+  {
+    "href": "/uk/services/business-it",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=websites",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=websites&detail=web-business",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=websites&detail=web-landing",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=websites&detail=web-maintenance",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio?category=web-development",
+    "status": 200
+  },
+  {
+    "href": "/uk/products/portfolio-qa-30147c23-template",
+    "status": 200
+  },
+  {
+    "href": "/uk/products/synthetic-template",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=pc-laptop&detail=pc-setup",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=pc-laptop&detail=pc-troubleshooting",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=pc-laptop&detail=pc-cleaning",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=pc-laptop&detail=pc-upgrade",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=pc-laptop&detail=pc-backup",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=pc-laptop&detail=pc-remote",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio?category=pc-support",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/portfolio-qa-30147c23-14",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=3d-printing&mode=file",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=3d-printing&mode=idea",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=3d-printing&mode=batch",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio?category=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/uk/portfolio/portfolio-qa-30147c23-21",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=business-it",
+    "status": 200
+  },
+  {
+    "href": "/uk/contact?service=websites&project=portfolio-qa-30147c23-0",
+    "status": 200
+  },
+  {
+    "href": "/ru",
+    "status": 200
+  },
+  {
+    "href": "/ru/services/websites",
+    "status": 200
+  },
+  {
+    "href": "/ru/services/3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/ru/services/pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio",
+    "status": 200
+  },
+  {
+    "href": "/ru/about",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact",
+    "status": 200
+  },
+  {
+    "href": "/ru/services",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/portfolio-qa-30147c23-0",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/synthetic-pc-support",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/synthetic-web-development",
+    "status": 200
+  },
+  {
+    "href": "/ru/products/framer",
+    "status": 200
+  },
+  {
+    "href": "/ru/products/3d-models",
+    "status": 200
+  },
+  {
+    "href": "/ru/terms",
+    "status": 200
+  },
+  {
+    "href": "/ru/privacy",
+    "status": 200
+  },
+  {
+    "href": "/ru/impressum",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=pc-laptop&mode=local",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=pc-laptop&mode=remote",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/synthetic-3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/portfolio-qa-30147c23-1",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/portfolio-qa-30147c23-2",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/portfolio-qa-30147c23-3",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/portfolio-qa-30147c23-4",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/portfolio-qa-30147c23-5",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/portfolio-qa-30147c23-6",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/portfolio-qa-30147c23-7",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/portfolio-qa-30147c23-8",
+    "status": 200
+  },
+  {
+    "href": "/ru/services/business-it",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=websites",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=websites&detail=web-business",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=websites&detail=web-landing",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=websites&detail=web-maintenance",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio?category=web-development",
+    "status": 200
+  },
+  {
+    "href": "/ru/products/portfolio-qa-30147c23-template",
+    "status": 200
+  },
+  {
+    "href": "/ru/products/synthetic-template",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=pc-laptop&detail=pc-setup",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=pc-laptop&detail=pc-troubleshooting",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=pc-laptop&detail=pc-cleaning",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=pc-laptop&detail=pc-upgrade",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=pc-laptop&detail=pc-backup",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=pc-laptop&detail=pc-remote",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio?category=pc-support",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/portfolio-qa-30147c23-14",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=3d-printing&mode=file",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=3d-printing&mode=idea",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=3d-printing&mode=batch",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio?category=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/ru/portfolio/portfolio-qa-30147c23-21",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=business-it",
+    "status": 200
+  },
+  {
+    "href": "/ru/contact?service=websites&project=portfolio-qa-30147c23-0",
+    "status": 200
+  },
+  {
+    "href": "/sk",
+    "status": 200
+  },
+  {
+    "href": "/sk/services/websites",
+    "status": 200
+  },
+  {
+    "href": "/sk/services/3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/sk/services/pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio",
+    "status": 200
+  },
+  {
+    "href": "/sk/about",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact",
+    "status": 200
+  },
+  {
+    "href": "/sk/services",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/portfolio-qa-30147c23-0",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/synthetic-pc-support",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/synthetic-web-development",
+    "status": 200
+  },
+  {
+    "href": "/sk/products/framer",
+    "status": 200
+  },
+  {
+    "href": "/sk/products/3d-models",
+    "status": 200
+  },
+  {
+    "href": "/sk/terms",
+    "status": 200
+  },
+  {
+    "href": "/sk/privacy",
+    "status": 200
+  },
+  {
+    "href": "/sk/impressum",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=pc-laptop&mode=local",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=pc-laptop&mode=remote",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/synthetic-3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/portfolio-qa-30147c23-1",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/portfolio-qa-30147c23-2",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/portfolio-qa-30147c23-3",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/portfolio-qa-30147c23-4",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/portfolio-qa-30147c23-5",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/portfolio-qa-30147c23-6",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/portfolio-qa-30147c23-7",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/portfolio-qa-30147c23-8",
+    "status": 200
+  },
+  {
+    "href": "/sk/services/business-it",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=websites",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=websites&detail=web-business",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=websites&detail=web-landing",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=websites&detail=web-maintenance",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio?category=web-development",
+    "status": 200
+  },
+  {
+    "href": "/sk/products/portfolio-qa-30147c23-template",
+    "status": 200
+  },
+  {
+    "href": "/sk/products/synthetic-template",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=pc-laptop&detail=pc-setup",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=pc-laptop&detail=pc-troubleshooting",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=pc-laptop&detail=pc-cleaning",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=pc-laptop&detail=pc-upgrade",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=pc-laptop&detail=pc-backup",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=pc-laptop&detail=pc-remote",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio?category=pc-support",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/portfolio-qa-30147c23-14",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=3d-printing&mode=file",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=3d-printing&mode=idea",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=3d-printing&mode=batch",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio?category=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/sk/portfolio/portfolio-qa-30147c23-21",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=business-it",
+    "status": 200
+  },
+  {
+    "href": "/sk/contact?service=websites&project=portfolio-qa-30147c23-0",
+    "status": 200
+  },
+  {
+    "href": "/fr",
+    "status": 200
+  },
+  {
+    "href": "/fr/services/websites",
+    "status": 200
+  },
+  {
+    "href": "/fr/services/3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/fr/services/pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio",
+    "status": 200
+  },
+  {
+    "href": "/fr/about",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact",
+    "status": 200
+  },
+  {
+    "href": "/fr/services",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/portfolio-qa-30147c23-0",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/synthetic-pc-support",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/synthetic-web-development",
+    "status": 200
+  },
+  {
+    "href": "/fr/products/framer",
+    "status": 200
+  },
+  {
+    "href": "/fr/products/3d-models",
+    "status": 200
+  },
+  {
+    "href": "/fr/terms",
+    "status": 200
+  },
+  {
+    "href": "/fr/privacy",
+    "status": 200
+  },
+  {
+    "href": "/fr/impressum",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=pc-laptop&mode=local",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=pc-laptop&mode=remote",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/synthetic-3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/portfolio-qa-30147c23-1",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/portfolio-qa-30147c23-2",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/portfolio-qa-30147c23-3",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/portfolio-qa-30147c23-4",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/portfolio-qa-30147c23-5",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/portfolio-qa-30147c23-6",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/portfolio-qa-30147c23-7",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/portfolio-qa-30147c23-8",
+    "status": 200
+  },
+  {
+    "href": "/fr/services/business-it",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=websites",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=websites&detail=web-business",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=websites&detail=web-landing",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=websites&detail=web-maintenance",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio?category=web-development",
+    "status": 200
+  },
+  {
+    "href": "/fr/products/portfolio-qa-30147c23-template",
+    "status": 200
+  },
+  {
+    "href": "/fr/products/synthetic-template",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=pc-laptop",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=pc-laptop&detail=pc-setup",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=pc-laptop&detail=pc-troubleshooting",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=pc-laptop&detail=pc-cleaning",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=pc-laptop&detail=pc-upgrade",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=pc-laptop&detail=pc-backup",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=pc-laptop&detail=pc-remote",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio?category=pc-support",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/portfolio-qa-30147c23-14",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=3d-printing&mode=file",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=3d-printing&mode=idea",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=3d-printing&mode=batch",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio?category=3d-printing",
+    "status": 200
+  },
+  {
+    "href": "/fr/portfolio/portfolio-qa-30147c23-21",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=business-it",
+    "status": 200
+  },
+  {
+    "href": "/fr/contact?service=websites&project=portfolio-qa-30147c23-0",
+    "status": 200
+  }
+]

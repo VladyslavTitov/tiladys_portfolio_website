@@ -1,0 +1,242 @@
+--- a/apps/control/app/dashboard/page.tsx
++++ b/apps/control/app/dashboard/page.tsx
+@@ -3,8 +3,8 @@
+ import {ControlText} from '@/components/control-language';
+ import Link from 'next/link';
+ import {db,Prisma} from '@tiladys/db';
+-import {requireUser} from '@/lib/security';
+-export default async function Dashboard(){const user=await requireUser();const now=new Date();const [unread,active,due,balances,jobs,messages,tasks]=await Promise.all([
++import {requirePageUser} from '@/lib/page-user';
++export default async function Dashboard(){const user=await requirePageUser();const now=new Date();const [unread,active,due,balances,jobs,messages,tasks]=await Promise.all([
+  db.contactMessage.count({where:{status:'UNREAD'}}),db.serviceJob.count({where:{status:{in:['PLANNED','IN_PROGRESS','WAITING_CUSTOMER']}}}),db.task.count({where:{status:{in:['TODO','IN_PROGRESS']},dueAt:{lte:now}}}),
+  db.$queryRaw<Array<{currency:string;balance:string}>>(Prisma.sql`SELECT i."currency", COALESCE(SUM(i."total" - COALESCE(p.paid,0)),0)::text AS balance FROM "Invoice" i LEFT JOIN (SELECT "invoiceId", SUM("amount") AS paid FROM "InvoicePayment" GROUP BY "invoiceId") p ON p."invoiceId"=i.id WHERE i.status='ISSUED' GROUP BY i."currency"`),
+  db.serviceJob.findMany({where:{status:{in:['PLANNED','IN_PROGRESS','WAITING_CUSTOMER']}},take:5,orderBy:{updatedAt:'desc'},select:{id:true,jobNumber:true,title:true,status:true}}),db.contactMessage.findMany({where:{status:'UNREAD'},take:5,orderBy:{createdAt:'desc'},select:{id:true,name:true,service:true,createdAt:true}}),db.task.findMany({where:{status:{in:['TODO','IN_PROGRESS']}},take:5,orderBy:[{dueAt:'asc'},{createdAt:'desc'}],select:{id:true,title:true,dueAt:true,status:true,revision:true}})
+--- a/apps/control/app/dashboard/messages/page.tsx
++++ b/apps/control/app/dashboard/messages/page.tsx
+@@ -1,11 +1,11 @@
+ 
+ import {ControlText} from '@/components/control-language';
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ import { db } from '@tiladys/db';
+ import { MessageList } from './message-list';
+ 
+ export default async function MessagesPage({searchParams}:{searchParams:Promise<{q?:string;status?:string;page?:string;messageId?:string}>}) {
+-  await requireUser();
++  await requirePageUser();
+   const query=await searchParams; const page=Math.min(10000,Math.max(1,Number(query.page)||1));const q=(query.q||'').slice(0,120);const status=['UNREAD','READ','REPLIED','ARCHIVED','SPAM'].includes(query.status||'')?query.status as 'UNREAD'|'READ'|'REPLIED'|'ARCHIVED'|'SPAM':undefined;
+   const where={...(status?{status}:{}),...(query.messageId?{id:query.messageId}:{}),...(q?{OR:[{name:{contains:q,mode:'insensitive' as const}},{email:{contains:q,mode:'insensitive' as const}},{message:{contains:q,mode:'insensitive' as const}}]}:{})};
+   const total=await db.contactMessage.count({where});
+--- a/apps/control/app/dashboard/prices/page.tsx
++++ b/apps/control/app/dashboard/prices/page.tsx
+@@ -2,12 +2,12 @@
+ import {ControlText} from '@/components/control-language';
+ import {CatalogueRates} from '@/components/catalogue-rates';
+ import {PrintEstimator} from '@/components/print-estimator';
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ import { db } from '@tiladys/db';
+ import { PriceSpreadsheet } from './price-spreadsheet';
+ 
+ export default async function PricesPage() {
+-  await requireUser();
++  await requirePageUser();
+   const sections = await db.priceSection.findMany({
+     include: { items: { orderBy: { sortOrder: 'asc' } } },
+     orderBy: { sortOrder: 'asc' },
+--- a/apps/control/app/dashboard/projects/page.tsx
++++ b/apps/control/app/dashboard/projects/page.tsx
+@@ -1,11 +1,11 @@
+ 
+ import {ControlText} from '@/components/control-language';
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ import { db } from '@tiladys/db';
+ import { ProjectManager } from './project-manager';
+ 
+ export default async function ProjectsPage() {
+-  await requireUser();
++  await requirePageUser();
+   const rows = await db.project.findMany({
+     include: { images: { where: { archivedAt: null }, select: { id: true, filename: true, size: true, alt: true, sortOrder: true }, orderBy: { sortOrder: 'asc' } } },
+     orderBy: [{ sortOrder: 'asc' }, { updatedAt: 'desc' }],
+--- a/apps/control/app/dashboard/customers/page.tsx
++++ b/apps/control/app/dashboard/customers/page.tsx
+@@ -1,11 +1,11 @@
+ 
+ import {ControlText} from '@/components/control-language';
+ import Link from 'next/link';
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ import {db,Prisma} from '@tiladys/db';
+ import {CustomerManager} from './customer-manager';
+ export default async function CustomersPage({searchParams}:{searchParams:Promise<{q?:string;status?:string;type?:string;page?:string;new?:string}>}) {
+- await requireUser();const query=await searchParams;const page=Math.min(10000,Math.max(1,Math.floor(Number(query.page))||1)),q=(query.q||'').trim().slice(0,100);
++ await requirePageUser();const query=await searchParams;const page=Math.min(10000,Math.max(1,Math.floor(Number(query.page))||1)),q=(query.q||'').trim().slice(0,100);
+  const where:Prisma.CustomerWhereInput={...(['PERSON','BUSINESS'].includes(query.type||'')?{type:query.type as 'PERSON'}:{}),...(['LEAD','ACTIVE','INACTIVE','ARCHIVED'].includes(query.status||'')?{status:query.status as 'LEAD'}:{}),...(q?{OR:[{customerNumber:{contains:q,mode:'insensitive'}},{firstName:{contains:q,mode:'insensitive'}},{lastName:{contains:q,mode:'insensitive'}},{email:{contains:q,mode:'insensitive'}},{phone:{contains:q,mode:'insensitive'}},{company:{name:{contains:q,mode:'insensitive'}}}]}:{})};
+  const [customers,companies,total]=await Promise.all([db.customer.findMany({where,include:{company:{select:{id:true,name:true}},_count:{select:{serviceJobs:true}}},orderBy:{updatedAt:'desc'},take:50,skip:(page-1)*50}),db.company.findMany({select:{id:true,name:true},orderBy:{name:'asc'}}),db.customer.count({where})]);
+  const href=(next:number)=>`?${new URLSearchParams({q,status:query.status||'',type:query.type||'',page:String(next)})}`;
+--- a/apps/control/app/dashboard/service-jobs/page.tsx
++++ b/apps/control/app/dashboard/service-jobs/page.tsx
+@@ -3,12 +3,12 @@
+ import Link from 'next/link';
+ import {Prisma} from '@tiladys/db';
+ import {JobBoard} from '@/components/job-board';
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ import { db } from '@tiladys/db';
+ import { ServiceJobManager } from './service-job-manager';
+ 
+ export default async function ServiceJobsPage({ searchParams }: { searchParams: Promise<{ customerId?: string; jobId?: string;clientId?:string;service?:string;status?:string;from?:string;to?:string;page?:string;q?:string;view?:string;new?:string }> }) {
+-  await requireUser();
++  await requirePageUser();
+   const query = await searchParams;
+   const page=Math.min(10000,Math.max(1,Math.floor(Number(query.page))||1));
+   const where:Prisma.ServiceJobWhereInput = { ...(query.jobId?{id:query.jobId}:{}),...(query.clientId?{customerId:query.clientId}:{}),...(query.service?{serviceType:query.service.slice(0,100)}:{}),...(query.q?{OR:[{title:{contains:query.q.slice(0,120),mode:'insensitive'}},{jobNumber:{contains:query.q.slice(0,120),mode:'insensitive'}}]}:{}),...(query.status==='ACTIVE'?{status:{in:['PLANNED','IN_PROGRESS','WAITING_CUSTOMER']}}:['PLANNED','IN_PROGRESS','WAITING_CUSTOMER','COMPLETED','CANCELLED'].includes(query.status||'')?{status:query.status as 'PLANNED'}:{}) };
+--- a/apps/control/app/dashboard/companies/page.tsx
++++ b/apps/control/app/dashboard/companies/page.tsx
+@@ -1,6 +1,6 @@
+ 
+ import {ControlText} from '@/components/control-language';
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ import { db } from '@tiladys/db';import { CompanyManager } from './company-manager';
+ export default async function CompaniesPage(){
+-  await requireUser();const rows=await db.company.findMany({include:{_count:{select:{customers:true,serviceJobs:true}}},orderBy:{name:'asc'}});return <><span className="eyebrow">CRM</span><h1><ControlText value={"Companies"}/></h1><p className="admin-intro"><ControlText value={"Company records shared by customer contacts and service jobs."}/></p><CompanyManager initial={rows}/></>}
++  await requirePageUser();const rows=await db.company.findMany({include:{_count:{select:{customers:true,serviceJobs:true}}},orderBy:{name:'asc'}});return <><span className="eyebrow">CRM</span><h1><ControlText value={"Companies"}/></h1><p className="admin-intro"><ControlText value={"Company records shared by customer contacts and service jobs."}/></p><CompanyManager initial={rows}/></>}
+--- a/apps/control/app/dashboard/invoices/page.tsx
++++ b/apps/control/app/dashboard/invoices/page.tsx
+@@ -3,13 +3,13 @@
+ import Link from 'next/link';
+ import {invoicePage} from '@/lib/invoice-list';
+ import {NewInvoice} from '@/components/new-invoice';
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ import { db } from '@tiladys/db';
+ import { defaultBillingSettings, serializeInvoice } from '@/lib/invoices';
+ import { InvoiceManager } from './invoice-manager';
+ 
+ export default async function InvoicesPage({ searchParams }: { searchParams: Promise<Record<string,string|undefined>> }) {
+-  await requireUser();
++  await requirePageUser();
+   const query = await searchParams;
+   const [result, storedSettings, companies, customers] = await Promise.all([
+     invoicePage(query),
+--- a/apps/control/app/dashboard/search/page.tsx
++++ b/apps/control/app/dashboard/search/page.tsx
+@@ -2,10 +2,10 @@
+ import {ControlText} from '@/components/control-language';
+ import Link from 'next/link';
+ import {db} from '@tiladys/db';
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ type Result={id:string;label:string;href:string};
+ export default async function Search({searchParams}:{searchParams:Promise<{q?:string;type?:string;page?:string}>}) {
+- await requireUser();const query=await searchParams;const q=(query.q||'').trim().slice(0,120);const page=Math.min(10000,Math.max(1,Math.floor(Number(query.page))||1));const paging={take:11,skip:(page-1)*10};
++ await requirePageUser();const query=await searchParams;const q=(query.q||'').trim().slice(0,120);const page=Math.min(10000,Math.max(1,Math.floor(Number(query.page))||1));const paging={take:11,skip:(page-1)*10};
+  const sources:Record<string,()=>Promise<Result[]>>={
+  Clients:async()=>(await db.customer.findMany({where:{OR:[{firstName:{contains:q,mode:'insensitive'}},{lastName:{contains:q,mode:'insensitive'}},{customerNumber:{contains:q,mode:'insensitive'}},{email:{contains:q,mode:'insensitive'}}]},...paging,orderBy:{customerNumber:'asc'},select:{id:true,customerNumber:true,firstName:true,lastName:true}})).map(c=>({id:c.id,label:`${c.customerNumber} · ${c.firstName||''} ${c.lastName||''}`,href:`/dashboard/customers/${c.id}`})),
+  Jobs:async()=>(await db.serviceJob.findMany({where:{OR:[{title:{contains:q,mode:'insensitive'}},{jobNumber:{contains:q,mode:'insensitive'}}]},...paging,orderBy:{jobNumber:'asc'},select:{id:true,title:true,jobNumber:true}})).map(j=>({id:j.id,label:`${j.jobNumber} · ${j.title}`,href:`/dashboard/service-jobs?jobId=${j.id}`})),
+--- a/apps/control/app/dashboard/settings/[section]/page.tsx
++++ b/apps/control/app/dashboard/settings/[section]/page.tsx
+@@ -1,14 +1,14 @@
+ import {notFound} from 'next/navigation';
+ import Link from 'next/link';
+ import {db,Prisma} from '@tiladys/db';
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ import {dateRange} from '@/lib/admin-response';
+ import {ExportForm} from '@/components/export-form';
+ import {AccountForm} from '@/components/account-form';
+ import {ControlText} from '@/components/control-language';
+ const routes:Record<string,(id:string)=>string>={Customer:id=>`/dashboard/customers/${id}`,Company:id=>`/dashboard/companies/${id}`,ServiceJob:id=>`/dashboard/service-jobs?jobId=${id}`,Invoice:id=>`/dashboard/invoices?invoiceId=${id}`,Quote:id=>`/dashboard/quotes/${id}`,Task:id=>`/dashboard/tasks?taskId=${id}`,Project:id=>`/dashboard/projects/${id}/preview`,Product:id=>`/dashboard/products/${id}/preview`,ContactMessage:id=>`/dashboard/messages?messageId=${id}`};
+ export default async function Settings({params,searchParams}:{params:Promise<{section:string}>;searchParams:Promise<Record<string,string|undefined>>}) {
+- const user=await requireUser();const {section}=await params;
++ const user=await requirePageUser();const {section}=await params;
+  if(section==='account')return <><h1><ControlText value="Account"/></h1><section className="panel"><p>{user.displayName}</p><p><ControlText value="Existing password and secret-phrase sign-in is retained. MFA and email recovery are not configured."/></p><p><ControlText value="Account operations require the current password and secret phrase. Changing the password revokes every session."/></p><AccountForm/><form action="/api/auth/logout" method="post"><button className="admin-secondary"><ControlText value="End this session"/></button></form></section></>;
+  if(section!=='data')notFound();
+  const query=await searchParams;const page=Math.min(10000,Math.max(1,Math.floor(Number(query.page))||1));const action=(query.action||'').slice(0,80),entity=(query.entity||'').slice(0,80);
+--- a/apps/control/app/dashboard/products/[id]/preview/page.tsx
++++ b/apps/control/app/dashboard/products/[id]/preview/page.tsx
+@@ -1,5 +1,5 @@
+ 
+ import {ControlText} from '@/components/control-language';
+ /* eslint-disable @next/next/no-img-element */
+-import Link from 'next/link';import {notFound} from 'next/navigation';import {db} from '@tiladys/db';import {requireUser} from '@/lib/security';
+-export default async function ProductPreview({params,searchParams}:{params:Promise<{id:string}>;searchParams:Promise<{locale?:string}>}){await requireUser();const {id}=await params;const language=(await searchParams).locale||'en';const p=await db.product.findUnique({where:{id},include:{images:{select:{id:true,alt:true,filename:true},orderBy:{sortOrder:'asc'}}}});if(!p)notFound();const text=(v:unknown)=>{const obj=v as Record<string,string>;return obj[language]||obj.en||'';};return <><Link href="/dashboard/products"><ControlText value={"← Product editor"}/></Link><p className="admin-intro"><ControlText value={"Private preview · "}/>{p.status}<ControlText value={". This route requires your owner session and is not indexed."}/></p><h1>{text(p.title)}</h1><div className="private-preview-gallery">{p.images.map(im=><img key={im.id} src={`/api/admin/products/${id}/images/${im.id}`} alt={text(im.alt)||im.filename}/>)}</div><section className="panel"><p style={{whiteSpace:'pre-wrap'}}>{text(p.description)}</p><h2><ControlText value={"Included files / license"}/></h2><p style={{whiteSpace:'pre-wrap'}}>{text(p.included)}</p><p style={{whiteSpace:'pre-wrap'}}>{text(p.license)}</p>{p.demoUrl?<a className="admin-secondary" href={p.demoUrl} target="_blank" rel="noopener noreferrer"><ControlText value={"Open demo ↗"}/></a>:null}{p.purchaseUrl?<a className="admin-secondary" href={p.purchaseUrl} target="_blank" rel="noopener noreferrer"><ControlText value={"Open configured merchant ↗"}/></a>:null}</section></>;}
++import Link from 'next/link';import {notFound} from 'next/navigation';import {db} from '@tiladys/db';import {requirePageUser} from '@/lib/page-user';
++export default async function ProductPreview({params,searchParams}:{params:Promise<{id:string}>;searchParams:Promise<{locale?:string}>}){await requirePageUser();const {id}=await params;const language=(await searchParams).locale||'en';const p=await db.product.findUnique({where:{id},include:{images:{select:{id:true,alt:true,filename:true},orderBy:{sortOrder:'asc'}}}});if(!p)notFound();const text=(v:unknown)=>{const obj=v as Record<string,string>;return obj[language]||obj.en||'';};return <><Link href="/dashboard/products"><ControlText value={"← Product editor"}/></Link><p className="admin-intro"><ControlText value={"Private preview · "}/>{p.status}<ControlText value={". This route requires your owner session and is not indexed."}/></p><h1>{text(p.title)}</h1><div className="private-preview-gallery">{p.images.map(im=><img key={im.id} src={`/api/admin/products/${id}/images/${im.id}`} alt={text(im.alt)||im.filename}/>)}</div><section className="panel"><p style={{whiteSpace:'pre-wrap'}}>{text(p.description)}</p><h2><ControlText value={"Included files / license"}/></h2><p style={{whiteSpace:'pre-wrap'}}>{text(p.included)}</p><p style={{whiteSpace:'pre-wrap'}}>{text(p.license)}</p>{p.demoUrl?<a className="admin-secondary" href={p.demoUrl} target="_blank" rel="noopener noreferrer"><ControlText value={"Open demo ↗"}/></a>:null}{p.purchaseUrl?<a className="admin-secondary" href={p.purchaseUrl} target="_blank" rel="noopener noreferrer"><ControlText value={"Open configured merchant ↗"}/></a>:null}</section></>;}
+--- a/apps/control/app/dashboard/quotes/[id]/page.tsx
++++ b/apps/control/app/dashboard/quotes/[id]/page.tsx
+@@ -3,11 +3,11 @@
+ import Link from 'next/link';
+ import {notFound} from 'next/navigation';
+ import {db} from '@tiladys/db';
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ import {quoteDraftSchema,quoteTotals} from '@/lib/rebuild-domain';
+ 
+ export default async function QuoteDetail({params}:{params:Promise<{id:string}>}) {
+- await requireUser();
++ await requirePageUser();
+  const q=await db.quote.findUnique({where:{id:(await params).id},include:{revisions:{orderBy:{number:'desc'}},customer:{select:{customerNumber:true,firstName:true,lastName:true,street:true,postalCode:true,city:true,country:true}}}});
+  if(!q)notFound();
+  const draft=quoteDraftSchema.parse(q.draft);
+--- a/apps/control/app/dashboard/companies/[id]/page.tsx
++++ b/apps/control/app/dashboard/companies/[id]/page.tsx
+@@ -1,6 +1,6 @@
+ 
+ import {ControlText} from '@/components/control-language';
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ import { adminDateTime } from '@/lib/admin-dates';
+ import Link from 'next/link';
+ import { notFound } from 'next/navigation';
+@@ -10,7 +10,7 @@
+ import { CompanyEditor } from './company-editor';
+ 
+ export default async function CompanyPage({ params }: { params: Promise<{ id: string }> }) {
+-  await requireUser();
++  await requirePageUser();
+   const { id } = await params;
+   const company = await db.company.findUnique({ where: { id }, include: {
+     customers: { orderBy: { lastName: 'asc' } }, serviceJobs: { orderBy: { createdAt: 'desc' } },
+--- a/apps/control/app/dashboard/customers/[id]/page.tsx
++++ b/apps/control/app/dashboard/customers/[id]/page.tsx
+@@ -1,11 +1,11 @@
+-import {requireUser} from '@/lib/security';
++import {requirePageUser} from '@/lib/page-user';
+ import { notFound } from 'next/navigation';
+ import { db } from '@tiladys/db';
+ import { invoiceInclude, serializeInvoice } from '@/lib/invoices';
+ import { CustomerProfile } from './customer-profile';
+ 
+ export default async function CustomerPage({ params }: { params: Promise<{ id: string }> }) {
+-  await requireUser();
++  await requirePageUser();
+   const { id } = await params;
+   const [row, companies, quotes] = await Promise.all([
+     db.customer.findUnique({ where: { id }, include: { company: { select: { id: true, name: true } }, customerNotes: { include: { createdBy: { select: { displayName: true } } }, orderBy: { createdAt: 'desc' } }, activities: { include: { createdBy: { select: { displayName: true } } }, orderBy: { createdAt: 'desc' }, take: 100 }, serviceJobs: { select: { id: true, jobNumber: true, title: true, status: true, serviceDate: true, finalPrice: true }, orderBy: { createdAt: 'desc' } }, invoices: { include: invoiceInclude, omit: { issuedPdf: true }, orderBy: { createdAt: 'desc' } }, files: { select: { id: true, filename: true, kind: true, createdAt: true }, orderBy: { createdAt: 'desc' } } } }),
+--- a/apps/control/app/dashboard/projects/[id]/preview/page.tsx
++++ b/apps/control/app/dashboard/projects/[id]/preview/page.tsx
+@@ -1,5 +1,5 @@
+ 
+ import {ControlText} from '@/components/control-language';
+ /* eslint-disable @next/next/no-img-element */
+-import Link from 'next/link';import {notFound} from 'next/navigation';import {db} from '@tiladys/db';import {requireUser} from '@/lib/security';
+-export default async function ProjectPreview({params,searchParams}:{params:Promise<{id:string}>;searchParams:Promise<{locale?:string}>}){await requireUser();const {id}=await params;const language=(await searchParams).locale||'en';const p=await db.project.findUnique({where:{id},include:{images:{where:{archivedAt:null},select:{id:true,alt:true,filename:true},orderBy:{sortOrder:'asc'}}}});if(!p)notFound();const text=(v:unknown)=>{const obj=(v||{}) as Record<string,string>;return obj[language]||obj.en||'';};return <><Link href="/dashboard/projects"><ControlText value={"← Portfolio editor"}/></Link><p className="admin-intro"><ControlText value={"Private preview · "}/>{p.status}<ControlText value={". This route requires your owner session and is not indexed."}/></p><h1>{text(p.title)}</h1><p>{text(p.summary)}</p><div className="private-preview-gallery">{p.images.map(im=><img key={im.id} src={`/api/admin/projects/${id}/images/${im.id}`} alt={text(im.alt)||im.filename}/>)}</div><section className="panel"><p style={{whiteSpace:'pre-wrap'}}>{text(p.description)}</p><p>{text(p.role)}</p></section></>;}
++import Link from 'next/link';import {notFound} from 'next/navigation';import {db} from '@tiladys/db';import {requirePageUser} from '@/lib/page-user';
++export default async function ProjectPreview({params,searchParams}:{params:Promise<{id:string}>;searchParams:Promise<{locale?:string}>}){await requirePageUser();const {id}=await params;const language=(await searchParams).locale||'en';const p=await db.project.findUnique({where:{id},include:{images:{where:{archivedAt:null},select:{id:true,alt:true,filename:true},orderBy:{sortOrder:'asc'}}}});if(!p)notFound();const text=(v:unknown)=>{const obj=(v||{}) as Record<string,string>;return obj[language]||obj.en||'';};return <><Link href="/dashboard/projects"><ControlText value={"← Portfolio editor"}/></Link><p className="admin-intro"><ControlText value={"Private preview · "}/>{p.status}<ControlText value={". This route requires your owner session and is not indexed."}/></p><h1>{text(p.title)}</h1><p>{text(p.summary)}</p><div className="private-preview-gallery">{p.images.map(im=><img key={im.id} src={`/api/admin/projects/${id}/images/${im.id}`} alt={text(im.alt)||im.filename}/>)}</div><section className="panel"><p style={{whiteSpace:'pre-wrap'}}>{text(p.description)}</p><p>{text(p.role)}</p></section></>;}
+--- /dev/null
++++ b/apps/control/lib/page-user.ts
+@@ -0,0 +1,10 @@
++import { redirect } from 'next/navigation';
++import { currentUser } from './security';
++
++// Layouts and pages can render concurrently. Guard each data-reading page with
++// navigation control flow; API handlers retain requireUser's explicit 401 path.
++export async function requirePageUser() {
++  const user = await currentUser();
++  if (!user) redirect('/login');
++  return user;
++}

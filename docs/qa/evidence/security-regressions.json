@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "SEC-UPLOAD-01",
+    "SEC-UPLOAD-02",
+    "SEC-INPUT-01",
+    "SEC-SSRF-01",
+    "SEC-CONTACT-01",
+    "SEC-AUTH-01"
+  ]
+}

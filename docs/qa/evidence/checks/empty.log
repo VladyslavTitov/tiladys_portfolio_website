@@ -1,0 +1,18 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(await p.getByRole('heading',{name:'No published projects yet.'}).isVisible())
+
+    at <anonymous> (/home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/tests/.qa-runtime-empty.mts:13:353) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v22.23.1

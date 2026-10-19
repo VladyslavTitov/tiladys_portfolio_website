@@ -1,0 +1,873 @@
+{
+  "method": "Five warm loopback interactions/requests each; includes Playwright click overhead and 300ms debounce where relevant. This is not field INP or DB-only query timing. Assets are all emitted chunks, not per-route initial JS.",
+  "rows": [
+    {
+      "kind": "category",
+      "ms": 263.61446399999977
+    },
+    {
+      "kind": "debounced-search",
+      "ms": 416.58534699999973
+    },
+    {
+      "kind": "back",
+      "ms": 31.277026999999634
+    },
+    {
+      "kind": "forward",
+      "ms": 48.501270000000204
+    },
+    {
+      "kind": "category",
+      "ms": 108.16126600000007
+    },
+    {
+      "kind": "debounced-search",
+      "ms": 373.77294600000005
+    },
+    {
+      "kind": "back",
+      "ms": 22.38668400000006
+    },
+    {
+      "kind": "forward",
+      "ms": 26.35773199999994
+    },
+    {
+      "kind": "category",
+      "ms": 107.23088099999995
+    },
+    {
+      "kind": "debounced-search",
+      "ms": 377.28154600000016
+    },
+    {
+      "kind": "back",
+      "ms": 20.986778999999842
+    },
+    {
+      "kind": "forward",
+      "ms": 25.94130999999925
+    },
+    {
+      "kind": "category",
+      "ms": 75.76516100000026
+    },
+    {
+      "kind": "debounced-search",
+      "ms": 375.4786949999998
+    },
+    {
+      "kind": "back",
+      "ms": 22.342791999999463
+    },
+    {
+      "kind": "forward",
+      "ms": 28.07444099999975
+    },
+    {
+      "kind": "category",
+      "ms": 76.89164299999993
+    },
+    {
+      "kind": "debounced-search",
+      "ms": 374.5050790000005
+    },
+    {
+      "kind": "back",
+      "ms": 22.55892700000004
+    },
+    {
+      "kind": "forward",
+      "ms": 26.741150000000744
+    },
+    {
+      "kind": "/api/admin/customers?lookup=1",
+      "ms": 72.85166600000048
+    },
+    {
+      "kind": "/api/admin/customers?lookup=1",
+      "ms": 22.343903999999384
+    },
+    {
+      "kind": "/api/admin/customers?lookup=1",
+      "ms": 21.736214000000473
+    },
+    {
+      "kind": "/api/admin/customers?lookup=1",
+      "ms": 18.722953000000416
+    },
+    {
+      "kind": "/api/admin/customers?lookup=1",
+      "ms": 20.488604999999552
+    },
+    {
+      "kind": "/api/admin/quotes",
+      "ms": 31.86212400000022
+    },
+    {
+      "kind": "/api/admin/quotes",
+      "ms": 28.635913999999502
+    },
+    {
+      "kind": "/api/admin/quotes",
+      "ms": 24.20062599999983
+    },
+    {
+      "kind": "/api/admin/quotes",
+      "ms": 27.7262580000006
+    },
+    {
+      "kind": "/api/admin/quotes",
+      "ms": 24.468378999999914
+    },
+    {
+      "kind": "/api/admin/tasks",
+      "ms": 16.618326000000707
+    },
+    {
+      "kind": "/api/admin/tasks",
+      "ms": 15.316413999999895
+    },
+    {
+      "kind": "/api/admin/tasks",
+      "ms": 15.812635000000228
+    },
+    {
+      "kind": "/api/admin/tasks",
+      "ms": 15.667733000000226
+    },
+    {
+      "kind": "/api/admin/tasks",
+      "ms": 14.392440999999963
+    }
+  ],
+  "summary": [
+    {
+      "kind": "category",
+      "samples": 5,
+      "medianMs": 107.23088099999995,
+      "minMs": 75.76516100000026,
+      "maxMs": 263.61446399999977
+    },
+    {
+      "kind": "debounced-search",
+      "samples": 5,
+      "medianMs": 375.4786949999998,
+      "minMs": 373.77294600000005,
+      "maxMs": 416.58534699999973
+    },
+    {
+      "kind": "back",
+      "samples": 5,
+      "medianMs": 22.38668400000006,
+      "minMs": 20.986778999999842,
+      "maxMs": 31.277026999999634
+    },
+    {
+      "kind": "forward",
+      "samples": 5,
+      "medianMs": 26.741150000000744,
+      "minMs": 25.94130999999925,
+      "maxMs": 48.501270000000204
+    },
+    {
+      "kind": "/api/admin/customers?lookup=1",
+      "samples": 5,
+      "medianMs": 21.736214000000473,
+      "minMs": 18.722953000000416,
+      "maxMs": 72.85166600000048
+    },
+    {
+      "kind": "/api/admin/quotes",
+      "samples": 5,
+      "medianMs": 27.7262580000006,
+      "minMs": 24.20062599999983,
+      "maxMs": 31.86212400000022
+    },
+    {
+      "kind": "/api/admin/tasks",
+      "samples": 5,
+      "medianMs": 15.667733000000226,
+      "minMs": 14.392440999999963,
+      "maxMs": 16.618326000000707
+    }
+  ],
+  "assets": [
+    {
+      "path": "apps/web/.next/static/VBO9dNbyrEwKqo_1F9zID/_buildManifest.js",
+      "bytes": 1133,
+      "gzip": 326
+    },
+    {
+      "path": "apps/web/.next/static/VBO9dNbyrEwKqo_1F9zID/_ssgManifest.js",
+      "bytes": 80,
+      "gzip": 64
+    },
+    {
+      "path": "apps/web/.next/static/chunks/26-3297e1336b507719.js",
+      "bytes": 12217,
+      "gzip": 3968
+    },
+    {
+      "path": "apps/web/.next/static/chunks/540-fe08755521ca7bf4.js",
+      "bytes": 36069,
+      "gzip": 13285
+    },
+    {
+      "path": "apps/web/.next/static/chunks/658-40edaaa8fd11e77a.js",
+      "bytes": 25529,
+      "gzip": 9318
+    },
+    {
+      "path": "apps/web/.next/static/chunks/87c73c54-fd33669cffb637e8.js",
+      "bytes": 201054,
+      "gzip": 63294
+    },
+    {
+      "path": "apps/web/.next/static/chunks/968-a14bcd6af646af5a.js",
+      "bytes": 241049,
+      "gzip": 66474
+    },
+    {
+      "path": "apps/web/.next/static/chunks/984-cb0447315496a650.js",
+      "bytes": 69582,
+      "gzip": 18985
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/about/page-b2288d014fd2883d.js",
+      "bytes": 1140,
+      "gzip": 674
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/contact/page-7c56e1ab053359c0.js",
+      "bytes": 18806,
+      "gzip": 7234
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/error-1308e0f8d26b09b2.js",
+      "bytes": 2054,
+      "gzip": 1183
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/impressum/page-6b3a17e56c5f2d45.js",
+      "bytes": 282,
+      "gzip": 189
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/layout-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/not-found-d63a13b1b7d8d0fd.js",
+      "bytes": 1517,
+      "gzip": 890
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/page-a5918819957aabe2.js",
+      "bytes": 1939,
+      "gzip": 1036
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/portfolio/[slug]/page-3d70de4e45c99b77.js",
+      "bytes": 2899,
+      "gzip": 1410
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/portfolio/page-adf2ef8350f46048.js",
+      "bytes": 52604,
+      "gzip": 18098
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/prices/page-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/privacy/page-6b3a17e56c5f2d45.js",
+      "bytes": 282,
+      "gzip": 189
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/products/[slug]/page-2b5650ca3057cf9c.js",
+      "bytes": 2899,
+      "gzip": 1411
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/services/[slug]/page-a97e2c1e8d43c722.js",
+      "bytes": 1069,
+      "gzip": 676
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/services/loading-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/services/page-6b3a17e56c5f2d45.js",
+      "bytes": 282,
+      "gzip": 189
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/[locale]/terms/page-6b3a17e56c5f2d45.js",
+      "bytes": 282,
+      "gzip": 189
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/_global-error/page-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/_not-found/page-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/contact/route-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/contact/uploads/route-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/public/media/[id]/route-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/api/public/product-media/[id]/route-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/layout-43537507cf76a4fd.js",
+      "bytes": 307,
+      "gzip": 192
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/not-found-d81dd861fc042c85.js",
+      "bytes": 1517,
+      "gzip": 888
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/robots.txt/route-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/app/sitemap.xml/route-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/framework-2e5b338b2dc13b76.js",
+      "bytes": 182610,
+      "gzip": 57760
+    },
+    {
+      "path": "apps/web/.next/static/chunks/main-663deab2300a9197.js",
+      "bytes": 139510,
+      "gzip": 40421
+    },
+    {
+      "path": "apps/web/.next/static/chunks/main-app-3b4819c0e3dde808.js",
+      "bytes": 509,
+      "gzip": 220
+    },
+    {
+      "path": "apps/web/.next/static/chunks/next/dist/client/components/builtin/app-error-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/next/dist/client/components/builtin/forbidden-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/next/dist/client/components/builtin/global-error-b11dafa3b0b65ae3.js",
+      "bytes": 179,
+      "gzip": 160
+    },
+    {
+      "path": "apps/web/.next/static/chunks/next/dist/client/components/builtin/unauthorized-24bccf1cc78c3534.js",
+      "bytes": 182,
+      "gzip": 156
+    },
+    {
+      "path": "apps/web/.next/static/chunks/polyfills-42372ed130431b0a.js",
+      "bytes": 112594,
+      "gzip": 39627
+    },
+    {
+      "path": "apps/web/.next/static/chunks/webpack-72949d6e85d47f4a.js",
+      "bytes": 3326,
+      "gzip": 1672
+    },
+    {
+      "path": "apps/web/.next/static/css/84c3ff2150b5ee6f.css",
+      "bytes": 80642,
+      "gzip": 16267
+    },
+    {
+      "path": "apps/control/.next/static/A3s8_pIN9RtoUwJ3PoiSc/_buildManifest.js",
+      "bytes": 2398,
+      "gzip": 470
+    },
+    {
+      "path": "apps/control/.next/static/A3s8_pIN9RtoUwJ3PoiSc/_ssgManifest.js",
+      "bytes": 80,
+      "gzip": 64
+    },
+    {
+      "path": "apps/control/.next/static/chunks/1968-aad9ddfd306c16c8.js",
+      "bytes": 241050,
+      "gzip": 66475
+    },
+    {
+      "path": "apps/control/.next/static/chunks/4168-ca69254c4396142f.js",
+      "bytes": 10341,
+      "gzip": 3014
+    },
+    {
+      "path": "apps/control/.next/static/chunks/5587-4d713d181b163368.js",
+      "bytes": 8641,
+      "gzip": 3567
+    },
+    {
+      "path": "apps/control/.next/static/chunks/5866-82a5b626bd359d61.js",
+      "bytes": 15183,
+      "gzip": 5685
+    },
+    {
+      "path": "apps/control/.next/static/chunks/593-91d931718679022f.js",
+      "bytes": 36893,
+      "gzip": 12842
+    },
+    {
+      "path": "apps/control/.next/static/chunks/87c73c54-fd33669cffb637e8.js",
+      "bytes": 201054,
+      "gzip": 63294
+    },
+    {
+      "path": "apps/control/.next/static/chunks/9883-eff8ade6448045b2.js",
+      "bytes": 68018,
+      "gzip": 18163
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/_global-error/page-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/_not-found/page-c2632c141a1083f2.js",
+      "bytes": 2670,
+      "gzip": 991
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/account/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/billing-settings/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/catalogue/[id]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/catalogue/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/companies/[id]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/companies/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/customers/[id]/notes/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/customers/[id]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/customers/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/estimate/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/export/[token]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/export/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/invoices/[id]/issue/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/invoices/[id]/payments/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/invoices/[id]/pdf/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/invoices/[id]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/invoices/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/messages/[id]/attachments/[attachmentId]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/messages/[id]/draft/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/messages/[id]/link/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/messages/[id]/reply/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/messages/[id]/status/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/prices/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/products/[id]/images/[imageId]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/products/[id]/images/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/products/[id]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/products/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/projects/[id]/images/[imageId]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/projects/[id]/images/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/projects/[id]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/projects/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/quotes/[id]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/quotes/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/service-jobs/[id]/brief/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/service-jobs/[id]/portfolio/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/service-jobs/[id]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/service-jobs/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/tasks/[id]/complete/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/tasks/[id]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/admin/tasks/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/auth/login/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/auth/logout/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/public/media/[id]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/public/prices/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/public/projects/[slug]/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/api/public/projects/route-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/companies/[id]/page-19a5786a78804558.js",
+      "bytes": 3051,
+      "gzip": 1478
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/companies/page-e8e643da6f2c183a.js",
+      "bytes": 6572,
+      "gzip": 2690
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/customers/[id]/page-5327593a169bade9.js",
+      "bytes": 16234,
+      "gzip": 4718
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/customers/page-5c2c0a78ee38da24.js",
+      "bytes": 10123,
+      "gzip": 3221
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/invoices/page-87ccc87bbf8822c7.js",
+      "bytes": 43675,
+      "gzip": 11588
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/layout-93e9eeb7b9417ccc.js",
+      "bytes": 8789,
+      "gzip": 3475
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/messages/page-eb19f4afaa8f5ce5.js",
+      "bytes": 16096,
+      "gzip": 4828
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/page-f1f893cc848f3b7d.js",
+      "bytes": 1335,
+      "gzip": 756
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/prices/page-9ed5daab9311035a.js",
+      "bytes": 17481,
+      "gzip": 5718
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/products/[id]/preview/page-f7485a8e53a8c260.js",
+      "bytes": 249,
+      "gzip": 189
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/products/page-88a018613ad0888a.js",
+      "bytes": 16299,
+      "gzip": 5217
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/projects/[id]/preview/page-f7485a8e53a8c260.js",
+      "bytes": 249,
+      "gzip": 189
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/projects/page-a9847a8385989541.js",
+      "bytes": 24198,
+      "gzip": 7639
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/quotes/[id]/page-f7485a8e53a8c260.js",
+      "bytes": 249,
+      "gzip": 189
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/quotes/page-729d8a49ae7f7eca.js",
+      "bytes": 12358,
+      "gzip": 3930
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/search/page-f7485a8e53a8c260.js",
+      "bytes": 249,
+      "gzip": 189
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/service-jobs/page-e098e65cc599ef12.js",
+      "bytes": 40655,
+      "gzip": 11576
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/settings/[section]/page-14787a7026e17bf0.js",
+      "bytes": 4913,
+      "gzip": 1694
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/settings/page-f7485a8e53a8c260.js",
+      "bytes": 249,
+      "gzip": 189
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/dashboard/tasks/page-2c411c4f86e28c05.js",
+      "bytes": 9420,
+      "gzip": 3302
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/layout-feb5f5f93cfd9926.js",
+      "bytes": 353,
+      "gzip": 203
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/login/page-c962614e347bb227.js",
+      "bytes": 2795,
+      "gzip": 1294
+    },
+    {
+      "path": "apps/control/.next/static/chunks/app/page-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/framework-15a611399109d52d.js",
+      "bytes": 182611,
+      "gzip": 57762
+    },
+    {
+      "path": "apps/control/.next/static/chunks/main-0d79501aaa499fd2.js",
+      "bytes": 139471,
+      "gzip": 40417
+    },
+    {
+      "path": "apps/control/.next/static/chunks/main-app-9d49d36e5c9bcf64.js",
+      "bytes": 511,
+      "gzip": 222
+    },
+    {
+      "path": "apps/control/.next/static/chunks/next/dist/client/components/builtin/app-error-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/next/dist/client/components/builtin/forbidden-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/next/dist/client/components/builtin/global-error-ec235a18737b4fb4.js",
+      "bytes": 182,
+      "gzip": 163
+    },
+    {
+      "path": "apps/control/.next/static/chunks/next/dist/client/components/builtin/not-found-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/next/dist/client/components/builtin/unauthorized-713a681003dd8e07.js",
+      "bytes": 383,
+      "gzip": 258
+    },
+    {
+      "path": "apps/control/.next/static/chunks/polyfills-42372ed130431b0a.js",
+      "bytes": 112594,
+      "gzip": 39627
+    },
+    {
+      "path": "apps/control/.next/static/chunks/webpack-3f27d0185957d6a3.js",
+      "bytes": 3332,
+      "gzip": 1674
+    },
+    {
+      "path": "apps/control/.next/static/css/42daef816539cf5b.css",
+      "bytes": 40665,
+      "gzip": 8473
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "rows": [
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "",
+      "status": 200,
+      "h1": "Hello, Isolated portfolio QA"
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "/messages",
+      "status": 200,
+      "h1": "Customer messages"
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "/customers",
+      "status": 200,
+      "h1": "Customers"
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "/companies",
+      "status": 200,
+      "h1": "Companies"
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "/service-jobs",
+      "status": 200,
+      "h1": "Service jobs"
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "/quotes",
+      "status": 200,
+      "h1": "Quotes"
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "/invoices",
+      "status": 200,
+      "h1": "Invoices"
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "/projects",
+      "status": 200,
+      "h1": "Portfolio projects"
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "/products",
+      "status": 200,
+      "h1": "Products"
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "/tasks",
+      "status": 200,
+      "h1": "Tasks"
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "/prices",
+      "status": 200,
+      "h1": "Price table editor"
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "route": "/settings",
+      "status": 200,
+      "h1": "Settings"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "",
+      "status": 200,
+      "h1": "Hello, Isolated portfolio QA"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/messages",
+      "status": 200,
+      "h1": "Customer messages"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/customers",
+      "status": 200,
+      "h1": "Customers"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/companies",
+      "status": 200,
+      "h1": "Companies"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/service-jobs",
+      "status": 200,
+      "h1": "Service jobs"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/quotes",
+      "status": 200,
+      "h1": "Quotes"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/invoices",
+      "status": 200,
+      "h1": "Invoices"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/projects",
+      "status": 200,
+      "h1": "Portfolio projects"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/products",
+      "status": 200,
+      "h1": "Products"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/tasks",
+      "status": 200,
+      "h1": "Tasks"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/prices",
+      "status": 200,
+      "h1": "Price table editor"
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/settings",
+      "status": 200,
+      "h1": "Settings"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "",
+      "status": 200,
+      "h1": "Hallo, Isolated portfolio QA"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "/messages",
+      "status": 200,
+      "h1": "Kundennachrichten"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "/customers",
+      "status": 200,
+      "h1": "Kunden"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "/companies",
+      "status": 200,
+      "h1": "Unternehmen"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "/service-jobs",
+      "status": 200,
+      "h1": "Aufträge"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "/quotes",
+      "status": 200,
+      "h1": "Angebote"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "/invoices",
+      "status": 200,
+      "h1": "Rechnungen"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "/projects",
+      "status": 200,
+      "h1": "Portfolioprojekte"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "/products",
+      "status": 200,
+      "h1": "Produkte"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "/tasks",
+      "status": 200,
+      "h1": "Aufgaben"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "/prices",
+      "status": 200,
+      "h1": "Preistabelleneditor"
+    },
+    {
+      "locale": "de",
+      "width": 375,
+      "route": "/settings",
+      "status": 200,
+      "h1": "Einstellungen"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "",
+      "status": 200,
+      "h1": "Hallo, Isolated portfolio QA"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "/messages",
+      "status": 200,
+      "h1": "Kundennachrichten"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "/customers",
+      "status": 200,
+      "h1": "Kunden"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "/companies",
+      "status": 200,
+      "h1": "Unternehmen"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "/service-jobs",
+      "status": 200,
+      "h1": "Aufträge"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "/quotes",
+      "status": 200,
+      "h1": "Angebote"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "/invoices",
+      "status": 200,
+      "h1": "Rechnungen"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "/projects",
+      "status": 200,
+      "h1": "Portfolioprojekte"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "/products",
+      "status": 200,
+      "h1": "Produkte"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "/tasks",
+      "status": 200,
+      "h1": "Aufgaben"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "/prices",
+      "status": 200,
+      "h1": "Preistabelleneditor"
+    },
+    {
+      "locale": "de",
+      "width": 1440,
+      "route": "/settings",
+      "status": 200,
+      "h1": "Einstellungen"
+    }
+  ],
+  "checks": [
+    "DASH-API-01: Inbox read/spam/archive/unread, replay-safe customer link and exact private note persistence.",
+    "DASH-API-02: linked task completes with timezone retained; stale edit cannot overwrite current state.",
+    "DASH-API-03: private calculator returns exact decimal estimate, rejects zero quantity and creates no invoice.",
+    "DASH-UI-01: all 12 modules render in both supported admin locales at phone/desktop; picker preserves URL/filter and updates document language.",
+    "DASH-UI-02: server notification total equals actual unread+due+uncertain-mail fixture counts."
+  ]
+}

@@ -1,0 +1,3211 @@
+▲ Next.js 16.3.8 (Turbopack)
+- Local:         http://127.0.0.1:3105
+- Network:       http://127.0.0.1:3105
+✓ Ready in 634ms
+✓ Running next.config.ts took 48ms
+Creating turbopack project {
+  dir: '/home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/.qa-complete-dev/control',
+  testMode: true
+}
+- Experiments (use with caution):
+  · serverActions
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⨯ Error: UNAUTHORIZED
+    at requireUser (lib/security.ts:7:77)
+    at async Dashboard (app/dashboard/page.tsx:7:54)
+   5 | export async function createSession(userId:string){const raw=crypto.randomBytes(48).toString('base64url');const h=hash(raw);const hd=await headers();await db.session.create({data:{tokenHash:h,userId,expiresAt:new Date(Date.now()+t...
+   6 | export async function currentUser(){const raw=(await cookies()).get(COOKIE)?.value;if(!raw)return null;const s=await db.session.findUnique({where:{tokenHash:hash(raw)},include:{user:true}});if(!s||s.expiresAt<new Date())return nul...
+>  7 | export async function requireUser(){const u=await currentUser();if(!u)throw new Error('UNAUTHORIZED');return u}
+     |                                                                             ^
+   8 | export async function destroySession(){const jar=await cookies();const raw=jar.get(COOKIE)?.value;if(raw)await db.session.deleteMany({where:{tokenHash:hash(raw)}});jar.delete(COOKIE)}
+   9 | export async function assertOrigin(){const h=await headers();if(!isTrustedAdminOrigin(h.get('origin'),{CONTROL_URL:process.env.CONTROL_URL,CONTROL_ALLOWED_ORIGINS:process.env.CONTROL_ALLOWED_ORIGINS,VERCEL:process.env.VERCEL,VERCE...
+  10 | {
+  digest: '1579717045'
+}
+ GET /dashboard 307 in 3.7s (next.js: 2.9s, application-code: 776ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard 200 in 696ms (next.js: 15ms, application-code: 681ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⨯ Error: UNAUTHORIZED
+    at requireUser (lib/security.ts:7:77)
+    at async MessagesPage (app/dashboard/messages/page.tsx:8:3)
+   5 | export async function createSession(userId:string){const raw=crypto.randomBytes(48).toString('base64url');const h=hash(raw);const hd=await headers();await db.session.create({data:{tokenHash:h,userId,expiresAt:new Date(Date.now()+t...
+   6 | export async function currentUser(){const raw=(await cookies()).get(COOKIE)?.value;if(!raw)return null;const s=await db.session.findUnique({where:{tokenHash:hash(raw)},include:{user:true}});if(!s||s.expiresAt<new Date())return nul...
+>  7 | export async function requireUser(){const u=await currentUser();if(!u)throw new Error('UNAUTHORIZED');return u}
+     |                                                                             ^
+   8 | export async function destroySession(){const jar=await cookies();const raw=jar.get(COOKIE)?.value;if(raw)await db.session.deleteMany({where:{tokenHash:hash(raw)}});jar.delete(COOKIE)}
+   9 | export async function assertOrigin(){const h=await headers();if(!isTrustedAdminOrigin(h.get('origin'),{CONTROL_URL:process.env.CONTROL_URL,CONTROL_ALLOWED_ORIGINS:process.env.CONTROL_ALLOWED_ORIGINS,VERCEL:process.env.VERCEL,VERCE...
+  10 | {
+  digest: '524066820'
+}
+ GET /dashboard/messages 307 in 504ms (next.js: 397ms, application-code: 107ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/messages 200 in 168ms (next.js: 4ms, application-code: 164ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⨯ Error: UNAUTHORIZED
+    at requireUser (lib/security.ts:7:77)
+    at async CustomersPage (app/dashboard/customers/page.tsx:8:2)
+   5 | export async function createSession(userId:string){const raw=crypto.randomBytes(48).toString('base64url');const h=hash(raw);const hd=await headers();await db.session.create({data:{tokenHash:h,userId,expiresAt:new Date(Date.now()+t...
+   6 | export async function currentUser(){const raw=(await cookies()).get(COOKIE)?.value;if(!raw)return null;const s=await db.session.findUnique({where:{tokenHash:hash(raw)},include:{user:true}});if(!s||s.expiresAt<new Date())return nul...
+>  7 | export async function requireUser(){const u=await currentUser();if(!u)throw new Error('UNAUTHORIZED');return u}
+     |                                                                             ^
+   8 | export async function destroySession(){const jar=await cookies();const raw=jar.get(COOKIE)?.value;if(raw)await db.session.deleteMany({where:{tokenHash:hash(raw)}});jar.delete(COOKIE)}
+   9 | export async function assertOrigin(){const h=await headers();if(!isTrustedAdminOrigin(h.get('origin'),{CONTROL_URL:process.env.CONTROL_URL,CONTROL_ALLOWED_ORIGINS:process.env.CONTROL_ALLOWED_ORIGINS,VERCEL:process.env.VERCEL,VERCE...
+  10 | {
+  digest: '2194601322'
+}
+ GET /dashboard/customers 307 in 296ms (next.js: 234ms, application-code: 63ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/customers 200 in 167ms (next.js: 4ms, application-code: 164ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⨯ Error: UNAUTHORIZED
+    at requireUser (lib/security.ts:7:77)
+    at async CompaniesPage (app/dashboard/companies/page.tsx:6:3)
+   5 | export async function createSession(userId:string){const raw=crypto.randomBytes(48).toString('base64url');const h=hash(raw);const hd=await headers();await db.session.create({data:{tokenHash:h,userId,expiresAt:new Date(Date.now()+t...
+   6 | export async function currentUser(){const raw=(await cookies()).get(COOKIE)?.value;if(!raw)return null;const s=await db.session.findUnique({where:{tokenHash:hash(raw)},include:{user:true}});if(!s||s.expiresAt<new Date())return nul...
+>  7 | export async function requireUser(){const u=await currentUser();if(!u)throw new Error('UNAUTHORIZED');return u}
+     |                                                                             ^
+   8 | export async function destroySession(){const jar=await cookies();const raw=jar.get(COOKIE)?.value;if(raw)await db.session.deleteMany({where:{tokenHash:hash(raw)}});jar.delete(COOKIE)}
+   9 | export async function assertOrigin(){const h=await headers();if(!isTrustedAdminOrigin(h.get('origin'),{CONTROL_URL:process.env.CONTROL_URL,CONTROL_ALLOWED_ORIGINS:process.env.CONTROL_ALLOWED_ORIGINS,VERCEL:process.env.VERCEL,VERCE...
+  10 | {
+  digest: '2457692652'
+}
+ GET /dashboard/companies 307 in 290ms (next.js: 234ms, application-code: 57ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/companies 200 in 90ms (next.js: 3ms, application-code: 86ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⨯ Error: UNAUTHORIZED
+    at requireUser (lib/security.ts:7:77)
+    at async ServiceJobsPage (app/dashboard/service-jobs/page.tsx:11:3)
+   5 | export async function createSession(userId:string){const raw=crypto.randomBytes(48).toString('base64url');const h=hash(raw);const hd=await headers();await db.session.create({data:{tokenHash:h,userId,expiresAt:new Date(Date.now()+t...
+   6 | export async function currentUser(){const raw=(await cookies()).get(COOKIE)?.value;if(!raw)return null;const s=await db.session.findUnique({where:{tokenHash:hash(raw)},include:{user:true}});if(!s||s.expiresAt<new Date())return nul...
+>  7 | export async function requireUser(){const u=await currentUser();if(!u)throw new Error('UNAUTHORIZED');return u}
+     |                                                                             ^
+   8 | export async function destroySession(){const jar=await cookies();const raw=jar.get(COOKIE)?.value;if(raw)await db.session.deleteMany({where:{tokenHash:hash(raw)}});jar.delete(COOKIE)}
+   9 | export async function assertOrigin(){const h=await headers();if(!isTrustedAdminOrigin(h.get('origin'),{CONTROL_URL:process.env.CONTROL_URL,CONTROL_ALLOWED_ORIGINS:process.env.CONTROL_ALLOWED_ORIGINS,VERCEL:process.env.VERCEL,VERCE...
+  10 | {
+  digest: '4199203434'
+}
+ GET /dashboard/service-jobs 307 in 280ms (next.js: 220ms, application-code: 60ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/service-jobs 200 in 180ms (next.js: 3ms, application-code: 177ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/quotes 307 in 245ms (next.js: 178ms, application-code: 67ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/quotes 200 in 91ms (next.js: 3ms, application-code: 88ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⨯ Error: UNAUTHORIZED
+    at requireUser (lib/security.ts:7:77)
+    at async InvoicesPage (app/dashboard/invoices/page.tsx:12:3)
+   5 | export async function createSession(userId:string){const raw=crypto.randomBytes(48).toString('base64url');const h=hash(raw);const hd=await headers();await db.session.create({data:{tokenHash:h,userId,expiresAt:new Date(Date.now()+t...
+   6 | export async function currentUser(){const raw=(await cookies()).get(COOKIE)?.value;if(!raw)return null;const s=await db.session.findUnique({where:{tokenHash:hash(raw)},include:{user:true}});if(!s||s.expiresAt<new Date())return nul...
+>  7 | export async function requireUser(){const u=await currentUser();if(!u)throw new Error('UNAUTHORIZED');return u}
+     |                                                                             ^
+   8 | export async function destroySession(){const jar=await cookies();const raw=jar.get(COOKIE)?.value;if(raw)await db.session.deleteMany({where:{tokenHash:hash(raw)}});jar.delete(COOKIE)}
+   9 | export async function assertOrigin(){const h=await headers();if(!isTrustedAdminOrigin(h.get('origin'),{CONTROL_URL:process.env.CONTROL_URL,CONTROL_ALLOWED_ORIGINS:process.env.CONTROL_ALLOWED_ORIGINS,VERCEL:process.env.VERCEL,VERCE...
+  10 | {
+  digest: '2616502889'
+}
+ GET /dashboard/invoices 307 in 755ms (next.js: 349ms, application-code: 405ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/invoices 200 in 165ms (next.js: 3ms, application-code: 162ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⨯ Error: UNAUTHORIZED
+    at requireUser (lib/security.ts:7:77)
+    at async ProjectsPage (app/dashboard/projects/page.tsx:8:3)
+   5 | export async function createSession(userId:string){const raw=crypto.randomBytes(48).toString('base64url');const h=hash(raw);const hd=await headers();await db.session.create({data:{tokenHash:h,userId,expiresAt:new Date(Date.now()+t...
+   6 | export async function currentUser(){const raw=(await cookies()).get(COOKIE)?.value;if(!raw)return null;const s=await db.session.findUnique({where:{tokenHash:hash(raw)},include:{user:true}});if(!s||s.expiresAt<new Date())return nul...
+>  7 | export async function requireUser(){const u=await currentUser();if(!u)throw new Error('UNAUTHORIZED');return u}
+     |                                                                             ^
+   8 | export async function destroySession(){const jar=await cookies();const raw=jar.get(COOKIE)?.value;if(raw)await db.session.deleteMany({where:{tokenHash:hash(raw)}});jar.delete(COOKIE)}
+   9 | export async function assertOrigin(){const h=await headers();if(!isTrustedAdminOrigin(h.get('origin'),{CONTROL_URL:process.env.CONTROL_URL,CONTROL_ALLOWED_ORIGINS:process.env.CONTROL_ALLOWED_ORIGINS,VERCEL:process.env.VERCEL,VERCE...
+  10 | {
+  digest: '337490636'
+}
+ GET /dashboard/projects 307 in 263ms (next.js: 208ms, application-code: 56ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/projects 200 in 125ms (next.js: 3ms, application-code: 123ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/products 307 in 404ms (next.js: 326ms, application-code: 78ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/products 200 in 139ms (next.js: 3ms, application-code: 137ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/tasks 307 in 240ms (next.js: 181ms, application-code: 59ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/tasks 200 in 76ms (next.js: 3ms, application-code: 73ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⨯ Error: UNAUTHORIZED
+    at requireUser (lib/security.ts:7:77)
+    at async PricesPage (app/dashboard/prices/page.tsx:10:3)
+   5 | export async function createSession(userId:string){const raw=crypto.randomBytes(48).toString('base64url');const h=hash(raw);const hd=await headers();await db.session.create({data:{tokenHash:h,userId,expiresAt:new Date(Date.now()+t...
+   6 | export async function currentUser(){const raw=(await cookies()).get(COOKIE)?.value;if(!raw)return null;const s=await db.session.findUnique({where:{tokenHash:hash(raw)},include:{user:true}});if(!s||s.expiresAt<new Date())return nul...
+>  7 | export async function requireUser(){const u=await currentUser();if(!u)throw new Error('UNAUTHORIZED');return u}
+     |                                                                             ^
+   8 | export async function destroySession(){const jar=await cookies();const raw=jar.get(COOKIE)?.value;if(raw)await db.session.deleteMany({where:{tokenHash:hash(raw)}});jar.delete(COOKIE)}
+   9 | export async function assertOrigin(){const h=await headers();if(!isTrustedAdminOrigin(h.get('origin'),{CONTROL_URL:process.env.CONTROL_URL,CONTROL_ALLOWED_ORIGINS:process.env.CONTROL_ALLOWED_ORIGINS,VERCEL:process.env.VERCEL,VERCE...
+  10 | {
+  digest: '938731205'
+}
+ GET /dashboard/prices 307 in 246ms (next.js: 192ms, application-code: 53ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/prices 200 in 105ms (next.js: 2ms, application-code: 103ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/settings 307 in 195ms (next.js: 138ms, application-code: 57ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/settings 200 in 72ms (next.js: 3ms, application-code: 70ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/tasks 307 in 164ms (next.js: 35ms, application-code: 130ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/products 307 in 131ms (next.js: 19ms, application-code: 112ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/quotes 307 in 150ms (next.js: 28ms, application-code: 122ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard 307 in 141ms (next.js: 16ms, application-code: 125ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard 200 in 460ms (next.js: 6ms, application-code: 455ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/messages 307 in 164ms (next.js: 14ms, application-code: 150ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/messages 200 in 259ms (next.js: 5ms, application-code: 253ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/customers 307 in 125ms (next.js: 13ms, application-code: 112ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/customers 200 in 298ms (next.js: 6ms, application-code: 292ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/companies 307 in 123ms (next.js: 12ms, application-code: 111ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/companies 200 in 187ms (next.js: 6ms, application-code: 181ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/service-jobs 307 in 125ms (next.js: 14ms, application-code: 111ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/service-jobs 200 in 355ms (next.js: 5ms, application-code: 350ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/quotes 307 in 100ms (next.js: 5ms, application-code: 95ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/quotes 200 in 165ms (next.js: 5ms, application-code: 160ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/invoices 307 in 119ms (next.js: 18ms, application-code: 101ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/invoices 200 in 278ms (next.js: 10ms, application-code: 268ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/projects 307 in 99ms (next.js: 12ms, application-code: 87ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/projects 200 in 177ms (next.js: 4ms, application-code: 173ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/products 307 in 73ms (next.js: 4ms, application-code: 69ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/products 200 in 103ms (next.js: 3ms, application-code: 99ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/tasks 307 in 60ms (next.js: 3ms, application-code: 56ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/tasks 200 in 100ms (next.js: 3ms, application-code: 97ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/prices 307 in 63ms (next.js: 8ms, application-code: 54ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/prices 200 in 124ms (next.js: 3ms, application-code: 120ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/settings 307 in 86ms (next.js: 4ms, application-code: 83ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/settings 200 in 78ms (next.js: 3ms, application-code: 75ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/search 307 in 776ms (next.js: 642ms, application-code: 134ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/search 200 in 204ms (next.js: 5ms, application-code: 199ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/settings/account 307 in 2.3s (next.js: 2.2s, application-code: 125ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/settings/account 200 in 167ms (next.js: 47ms, application-code: 120ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/settings/data 307 in 72ms (next.js: 4ms, application-code: 67ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/settings/data 200 in 274ms (next.js: 3ms, application-code: 270ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/customers/cmv80cfjl003skopzvxgh34dn 307 in 1431ms (next.js: 1368ms, application-code: 63ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/customers/cmv80cfjl003skopzvxgh34dn 200 in 134ms (next.js: 35ms, application-code: 99ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/companies/cmvf5kk8y0000ko6kyqbujgyu 307 in 1428ms (next.js: 1367ms, application-code: 61ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/companies/cmvf5kk8y0000ko6kyqbujgyu 200 in 146ms (next.js: 38ms, application-code: 108ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/quotes/cmvfjbz57002nko205h5yq6dj 307 in 1453ms (next.js: 1384ms, application-code: 70ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/quotes/cmvfjbz57002nko205h5yq6dj 200 in 138ms (next.js: 40ms, application-code: 98ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/projects/cmvfj94mv0001kohztf01wbar/preview 307 in 1153ms (next.js: 1086ms, application-code: 67ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/projects/cmvfj94mv0001kohztf01wbar/preview 200 in 158ms (next.js: 49ms, application-code: 109ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/products/cmvfj956e0027kohzq74bxcbj/preview 307 in 1082ms (next.js: 1020ms, application-code: 62ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/products/cmvfj956e0027kohzq74bxcbj/preview 200 in 162ms (next.js: 45ms, application-code: 117ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard 307 in 49ms (next.js: 3ms, application-code: 46ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard 200 in 163ms (next.js: 3ms, application-code: 159ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/messages 307 in 56ms (next.js: 3ms, application-code: 52ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/messages 200 in 99ms (next.js: 3ms, application-code: 96ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/customers 307 in 55ms (next.js: 3ms, application-code: 52ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/customers 200 in 115ms (next.js: 3ms, application-code: 112ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/companies 307 in 56ms (next.js: 3ms, application-code: 53ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/companies 200 in 75ms (next.js: 3ms, application-code: 72ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/service-jobs 307 in 57ms (next.js: 3ms, application-code: 53ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/service-jobs 200 in 134ms (next.js: 3ms, application-code: 130ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/quotes 307 in 48ms (next.js: 3ms, application-code: 45ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/quotes 200 in 73ms (next.js: 3ms, application-code: 70ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/invoices 307 in 54ms (next.js: 3ms, application-code: 51ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/invoices 200 in 124ms (next.js: 3ms, application-code: 121ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/projects 307 in 53ms (next.js: 3ms, application-code: 50ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/projects 200 in 111ms (next.js: 3ms, application-code: 108ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/products 307 in 50ms (next.js: 3ms, application-code: 47ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/products 200 in 69ms (next.js: 3ms, application-code: 66ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/tasks 307 in 48ms (next.js: 3ms, application-code: 45ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/tasks 200 in 70ms (next.js: 3ms, application-code: 68ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/prices 307 in 48ms (next.js: 3ms, application-code: 45ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/prices 200 in 94ms (next.js: 3ms, application-code: 91ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/settings 307 in 50ms (next.js: 3ms, application-code: 47ms)
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/app/dashboard/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/invoices.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/invoices/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+⚠ [externals]/@prisma/client
+Warning: unexpected export *
+export * used with module [externals]/@prisma/client [external] (@prisma/client, cjs, [project]/node_modules/@prisma/client) which is a CommonJS module with exports only available at runtime
+List all export names manually (`export { a, b, c } from "...") or rewrite the module to ESM, to avoid the additional runtime code.`
+
+Import traces:
+  #1 [external]:
+    [externals]/@prisma/client [external]
+    ./.qa-complete-dev/control/lib/rebuild-domain.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/quotes/[id]/page.tsx [Server Component]
+
+  #2 [external]:
+    [externals]/@prisma/client [external]
+    ./packages/db/src/index.ts [Server Component]
+    ./.qa-complete-dev/control/app/dashboard/layout.tsx [Server Component]
+
+
+ GET /dashboard/settings 200 in 70ms (next.js: 3ms, application-code: 68ms)
+[?25h

@@ -1,0 +1,275 @@
+{
+  "method": "Isolated source copies, same installed Next/Prisma, Turbopack explicit monorepo root; cold compile timings are not production latency. No owner app dev locks touched.",
+  "rows": [
+    {
+      "id": "DEV-PORTFOLIO en",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "id": "DEV-PORTFOLIO de",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "id": "DEV-PORTFOLIO uk",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "id": "DEV-PORTFOLIO ru",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "id": "DEV-PORTFOLIO sk",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "id": "DEV-PORTFOLIO fr",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "id": "DEV-DASHBOARD /search missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /search valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /settings/account missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /settings/account valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /settings/data missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /settings/data valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /customers/cmv80cfjl003skopzvxgh34dn missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /customers/cmv80cfjl003skopzvxgh34dn valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /companies/cmvf5kk8y0000ko6kyqbujgyu missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /companies/cmvf5kk8y0000ko6kyqbujgyu valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /quotes/cmvfjbz57002nko205h5yq6dj missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /quotes/cmvfjbz57002nko205h5yq6dj valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /projects/cmvfj94mv0001kohztf01wbar/preview missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /projects/cmvfj94mv0001kohztf01wbar/preview valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /products/cmvfj956e0027kohzq74bxcbj/preview missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /products/cmvfj956e0027kohzq74bxcbj/preview valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD / missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD / valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /messages missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /messages valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /customers missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /customers valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /companies missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /companies valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /service-jobs missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /service-jobs valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /quotes missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /quotes valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /invoices missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /invoices valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /projects missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /projects valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /products missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /products valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /tasks missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /tasks valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /prices missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /prices valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /settings missing session",
+      "status": 307,
+      "passed": true,
+      "rawUnauthorized": false
+    },
+    {
+      "id": "DEV-DASHBOARD /settings valid session",
+      "status": 200,
+      "passed": true,
+      "rawUnauthorized": false
+    }
+  ]
+}

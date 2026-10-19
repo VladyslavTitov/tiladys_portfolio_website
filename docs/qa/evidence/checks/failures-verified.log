@@ -1,0 +1,18 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Error: strict mode violation: getByRole('alert').filter({ hasText: 'Client options could not load.' }) resolved to 2 elements:
+    1) <div role="alert">…</div> aka locator('section').getByText('Client options could not load')
+    2) <div role="alert">…</div> aka locator('form').filter({ hasText: 'Back to listNew' }).getByRole('alert')
+
+Call log:
+[2m  - waiting for getByRole('alert').filter({ hasText: 'Client options could not load.' }) to be visible[22m
+
+    at /home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/tests/qa-failures.playwright.mjs:7:481 {
+  log: [
+    "  - waiting for getByRole('alert').filter({ hasText: 'Client options could not load.' }) to be visible"
+  ]
+}
+
+Node.js v22.23.1
