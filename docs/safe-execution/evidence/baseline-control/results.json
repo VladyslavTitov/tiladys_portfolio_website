@@ -1,0 +1,1090 @@
+{
+  "timestamp": "2026-10-19T09:20:24.384Z",
+  "phase": "baseline",
+  "method": "Native Chrome CDP; production build; synthetic loopback database; cold browser cache; three samples per performance variant; local lab, not field CWV",
+  "rows": [
+    {
+      "route": "",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Hallo, Synthetic owner",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/messages",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Kundennachrichten",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/customers",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Kunden",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/companies",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Unternehmen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/service-jobs",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Aufträge",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/quotes",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Angebote",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/invoices",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Rechnungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/projects",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Portfolioprojekte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/products",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Produkte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/tasks",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Aufgaben",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/prices",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Preistabelleneditor",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/settings",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Einstellungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Hallo, Synthetic owner",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/messages",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Kundennachrichten",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/customers",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Kunden",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/companies",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Unternehmen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/service-jobs",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Aufträge",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/quotes",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Angebote",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/invoices",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Rechnungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/projects",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Portfolioprojekte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/products",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Produkte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/tasks",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Aufgaben",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/prices",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Preistabelleneditor",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/settings",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Einstellungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Hallo, Synthetic owner",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/messages",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Kundennachrichten",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/customers",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Kunden",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/companies",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Unternehmen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/service-jobs",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Aufträge",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/quotes",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Angebote",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/invoices",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Rechnungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/projects",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Portfolioprojekte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/products",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Produkte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/tasks",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Aufgaben",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/prices",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Preistabelleneditor",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/settings",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Einstellungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Hallo, Synthetic owner",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/messages",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Kundennachrichten",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/customers",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Kunden",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/companies",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Unternehmen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/service-jobs",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Aufträge",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/quotes",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Angebote",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/invoices",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Rechnungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/projects",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Portfolioprojekte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/products",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Produkte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/tasks",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Aufgaben",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/prices",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Preistabelleneditor",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/settings",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Einstellungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Hallo, Synthetic owner",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/messages",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Kundennachrichten",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/customers",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Kunden",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/companies",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Unternehmen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/service-jobs",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Aufträge",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/quotes",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Angebote",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/invoices",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Rechnungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/projects",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Portfolioprojekte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/products",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Produkte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/tasks",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Aufgaben",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/prices",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Preistabelleneditor",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/settings",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Einstellungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Hallo, Synthetic owner",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/messages",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Kundennachrichten",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/customers",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Kunden",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/companies",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Unternehmen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/service-jobs",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Aufträge",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/quotes",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Angebote",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/invoices",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Rechnungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/projects",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Portfolioprojekte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/products",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Produkte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/tasks",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Aufgaben",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/prices",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Preistabelleneditor",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/settings",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Einstellungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Hallo, Synthetic owner",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/messages",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Kundennachrichten",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/customers",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Kunden",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/companies",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Unternehmen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/service-jobs",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Aufträge",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/quotes",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Angebote",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/invoices",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Rechnungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/projects",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Portfolioprojekte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/products",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Produkte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/tasks",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Aufgaben",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/prices",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Preistabelleneditor",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/settings",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Einstellungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Hallo, Synthetic owner",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/messages",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Kundennachrichten",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/customers",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Kunden",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/companies",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Unternehmen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/service-jobs",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Aufträge",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/quotes",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Angebote",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/invoices",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Rechnungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/projects",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Portfolioprojekte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/products",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Produkte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/tasks",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Aufgaben",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/prices",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Preistabelleneditor",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/settings",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": "Einstellungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Hallo, Synthetic owner",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/messages",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Kundennachrichten",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/customers",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Kunden",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/companies",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Unternehmen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/service-jobs",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Aufträge",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/quotes",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Angebote",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/invoices",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Rechnungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/projects",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Portfolioprojekte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/products",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Produkte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/tasks",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Aufgaben",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/prices",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Preistabelleneditor",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    },
+    {
+      "route": "/settings",
+      "width": 2560,
+      "scroll": 2560,
+      "h1": "Einstellungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": []
+    }
+  ],
+  "performance": [],
+  "failures": [],
+  "consoleErrors": []
+}

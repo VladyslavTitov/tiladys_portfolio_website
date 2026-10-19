@@ -2,14 +2,15 @@
 // Run after a production build/start: node tests/safe-layouts.mjs baseline|after
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
-import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
 const phase = process.argv[2];
 assert.ok(['baseline', 'after'].includes(phase));
-const base = 'http://127.0.0.1:3100';
-const directory = `docs/safe-execution/evidence/${phase}`;
+const control = process.argv[3] === 'control';
+const base = control ? 'http://127.0.0.1:3101' : 'http://127.0.0.1:3100';
+const directory = `docs/safe-execution/evidence/${phase}${control ? '-control' : ''}${process.env.LAYOUT_WIDTHS ? '-focused' : ''}`;
 await mkdir(directory, { recursive: true });
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 async function until(check, label, timeout = 45000) {
@@ -21,7 +22,7 @@ async function until(check, label, timeout = 45000) {
   throw Error(`Timeout: ${label}`);
 }
 class CDP {
-  pending = new Map(); next = 0; errors = [];
+  pending = new Map(); next = 0; errors = []; loaded = new Set();
   constructor(url) {
     this.socket = new WebSocket(url);
     this.ready = new Promise((resolve, reject) => {
@@ -30,11 +31,16 @@ class CDP {
     });
     this.socket.addEventListener('message', ({ data }) => {
       const message = JSON.parse(data);
+      if (message.method === 'Page.lifecycleEvent' && message.params.name === 'load') this.loaded.add(message.params.loaderId);
       if (message.method === 'Runtime.exceptionThrown') this.errors.push(message.params.exceptionDetails.text);
       if (!message.id) return;
       const pending = this.pending.get(message.id);
       this.pending.delete(message.id);
       message.error ? pending.reject(message.error) : pending.resolve(message.result);
+    });
+    this.socket.addEventListener('close', () => {
+      for (const pending of this.pending.values()) pending.reject(Error('Browser connection closed'));
+      this.pending.clear();
     });
   }
   async send(method, params = {}) {
@@ -51,45 +57,56 @@ class CDP {
     return result.result.value;
   }
   async navigate(url) {
-    await this.send('Page.navigate', { url });
+    const navigation = await this.send('Page.navigate', { url });
+    if (navigation.errorText) throw Error(navigation.errorText);
+    if (navigation.loaderId) await until(() => this.loaded.has(navigation.loaderId), `Document loaded: ${url}`);
     await until(() => this.evaluate(`location.href === ${JSON.stringify(url)} && document.readyState === 'complete' && [...document.querySelectorAll('h1')].some(e=>e.getBoundingClientRect().width>0 && !e.closest('[hidden]'))`), url);
     await sleep(250);
   }
 }
 const profile = await mkdtemp(join(tmpdir(), 'tiladys-safe-chrome-'));
-const chrome = spawn('google-chrome', ['--headless=new', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--no-first-run', '--remote-debugging-address=127.0.0.1', '--remote-debugging-port=9338', `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' });
+const debugPort = control ? 9339 : 9338;
+const chrome = spawn('google-chrome', ['--headless=new', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--no-first-run', '--remote-debugging-address=127.0.0.1', `--remote-debugging-port=${debugPort}`, `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' });
 const rows = [], performance = [], failures = [];
 let c;
 try {
-  await until(async () => (await fetch('http://127.0.0.1:9338/json')).ok, 'Chrome');
-  const targets = await (await fetch('http://127.0.0.1:9338/json')).json();
+  await until(async () => (await fetch(`http://127.0.0.1:${debugPort}/json`)).ok, 'Chrome');
+  const targets = await (await fetch(`http://127.0.0.1:${debugPort}/json`)).json();
   c = new CDP(targets.find(target => target.type === 'page').webSocketDebuggerUrl);
-  await c.send('Page.enable'); await c.send('Runtime.enable'); await c.send('Network.enable');
+  await c.send('Page.enable'); await c.send('Page.setLifecycleEventsEnabled', { enabled: true }); await c.send('Runtime.enable'); await c.send('Network.enable');
   await c.send('Network.setCacheDisabled', { cacheDisabled: true });
+  if (control) {
+    const fixture = JSON.parse(await readFile('/tmp/tiladys-rebuild/browser-fixtures.json', 'utf8'));
+    await c.send('Network.setCookie', { name: 'tiladys_session', value: fixture.token, url: base, httpOnly: true, sameSite: 'Strict' });
+    await c.send('Network.setCookie', { name: 'control_locale', value: 'de', url: base, sameSite: 'Strict' });
+  }
   await c.send('Page.addScriptToEvaluateOnNewDocument', { source: `window.__lab={lcp:0,cls:0};new PerformanceObserver(list=>{for(const e of list.getEntries())window.__lab.lcp=e.startTime}).observe({type:'largest-contentful-paint',buffered:true});new PerformanceObserver(list=>{for(const e of list.getEntries())if(!e.hadRecentInput)window.__lab.cls+=e.value}).observe({type:'layout-shift',buffered:true});` });
-  const routes = ['', '/services', '/services/websites', '/services/pc-laptop', '/services/3d-printing', '/portfolio', '/about', '/contact', '/products/framer', '/products/3d-models', '/privacy'];
-  for (const width of [320, 360, 390, 768, 1024, 1280, 1440, 1920, 2560]) {
+  const routes = control ? ['', '/messages', '/customers', '/companies', '/service-jobs', '/quotes', '/invoices', '/projects', '/products', '/tasks', '/prices', '/settings'] : ['', '/services', '/services/websites', '/services/pc-laptop', '/services/3d-printing', '/portfolio', '/about', '/contact', '/products/framer', '/products/3d-models', '/privacy'];
+  const widths = process.env.LAYOUT_WIDTHS ? process.env.LAYOUT_WIDTHS.split(',').map(Number) : [320, 360, 390, 768, 1024, 1280, 1440, 1920, 2560];
+  for (const width of widths) {
     await c.send('Emulation.setDeviceMetricsOverride', { width, height: 1000, deviceScaleFactor: 1, mobile: width < 768 });
-    for (const route of routes) {
-      await c.navigate(`${base}/de${route}`);
+    for (const route of process.env.LAYOUT_ROUTES ? process.env.LAYOUT_ROUTES.split(',') : routes) {
+      await c.navigate(`${base}/${control ? 'dashboard' : 'de'}${route}`);
       const layout = await c.evaluate(`({width:innerWidth,scroll:document.documentElement.scrollWidth,h1:document.querySelector('h1')?.textContent,footer:document.querySelectorAll('.site-footer__grid>section').length,sections:[...document.querySelectorAll('main .section')].map(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return{class:e.className,x:r.x,width:r.width,content:r.width-parseFloat(s.paddingLeft)-parseFloat(s.paddingRight)}}),cards:[...document.querySelectorAll('.rebuild-services .rebuild-card')].map(e=>e.getBoundingClientRect().width),unlabelled:[...document.querySelectorAll('input:not([type=hidden]):not(.trap),select,textarea')].filter(e=>!e.labels?.length&&!e.getAttribute('aria-label')).map(e=>e.name)})`);
+      layout.viewport = await c.evaluate('document.documentElement.clientWidth');
+      if (layout.scroll > width + 1) layout.overflow = await c.evaluate(`[...document.querySelectorAll('main *')].filter(e=>e.getBoundingClientRect().right>innerWidth+1 || e.scrollWidth>e.clientWidth+1).slice(0,30).map(e=>({tag:e.tagName,class:e.className,right:e.getBoundingClientRect().right,scroll:e.scrollWidth,client:e.clientWidth,text:e.textContent.slice(0,60)}))`);
       rows.push({ route, ...layout });
       if (layout.scroll > width + 1) failures.push(`Overflow: ${route || '/'} ${width}: ${layout.scroll}`);
-      if (!layout.h1 || layout.footer !== 5 || layout.unlabelled.length) failures.push(`Semantics: ${route || '/'} ${width}`);
+      if (!layout.h1 || (!control && layout.footer !== 5) || layout.unlabelled.length) failures.push(`Semantics: ${route || '/'} ${width}: ${layout.unlabelled.join(',')}`);
       if (width >= 1280 && layout.cards.some(card => card < 300)) failures.push(`Narrow service card: ${route || '/'} ${width}: ${layout.cards.join(',')}`);
       for (const section of layout.sections) {
         if (section.content < 200) failures.push(`Collapsed section: ${route || '/'} ${width} ${section.class}: ${section.content}`);
-        if (width >= 1280 && section.width >= 1000 && Math.abs(section.x - (width - section.width) / 2) > 2) failures.push(`Uncentred section: ${route || '/'} ${width} ${section.class}`);
+        if (width >= 1280 && section.width >= 1000 && Math.abs(section.x - (layout.viewport - section.width) / 2) > 2) failures.push(`Uncentred section: ${route || '/'} ${width} ${section.class}`);
       }
-      if (['', '/services/websites', '/contact', '/about'].includes(route) && [390, 1440, 2560].includes(width)) {
+      if ((control ? ['', '/service-jobs', '/invoices'] : ['', '/services/websites', '/contact', '/about']).includes(route) && [390, 1440, 2560].includes(width)) {
         const capture = await c.send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
         await writeFile(`${directory}/${route.replaceAll('/', '-') || 'home'}-${width}.png`, Buffer.from(capture.data, 'base64'));
       }
     }
-    console.log(`Checked public width ${width}`);
+    console.log(`Checked ${control ? 'Control' : 'public'} width ${width}`);
   }
   // Three cold-cache production samples using identical transport/CPU conditions.
-  for (const variant of [{ name: 'mobile-4g', width: 390, mobile: true, cpu: 4 }, { name: 'desktop', width: 1440, mobile: false, cpu: 1 }]) {
+  for (const variant of control || process.env.LAYOUT_WIDTHS ? [] : [{ name: 'mobile-4g', width: 390, mobile: true, cpu: 4 }, { name: 'desktop', width: 1440, mobile: false, cpu: 1 }]) {
     await c.send('Emulation.setDeviceMetricsOverride', { width: variant.width, height: 844, deviceScaleFactor: 1, mobile: variant.mobile });
     await c.send('Emulation.setCPUThrottlingRate', { rate: variant.cpu });
     await c.send('Network.emulateNetworkConditions', { offline: false, latency: variant.mobile ? 150 : 0, downloadThroughput: variant.mobile ? 200000 : -1, uploadThroughput: variant.mobile ? 93750 : -1 });

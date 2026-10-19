@@ -446,7 +446,16 @@ main {
 }
 
 .section {
-  padding: 70px max(32px, calc((100% - var(--max)) / 2));
+  /* Contained sections already reserve gutters through their width. Applying
+     full-viewport padding here again collapses the content on wide screens. */
+  margin-inline: auto;
+  padding: 70px 0;
+}
+
+.rebuild-card,
+.service-detail-grid > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .alt {
@@ -1598,7 +1607,6 @@ td:nth-child(3) {
   }
 
   .hero,
-  .section,
   .page-hero {
     padding-left: 18px;
     padding-right: 18px;

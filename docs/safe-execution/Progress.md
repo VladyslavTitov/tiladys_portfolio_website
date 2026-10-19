@@ -15,11 +15,27 @@ The owner's attached Safe Execution Instructions override the earlier redesign s
 
 ## Phase status
 
-- [ ] Phase 0: finish fresh baseline browser review and checkpoint.
-- [ ] Phase 1: repair public shared layout; desktop/tablet/mobile checks; checkpoint.
+- [x] Phase 0: baseline browser review and checkpoint `94a8caa`.
+- [x] Phase 1: public shared layout repaired; 99 production browser cases pass.
 - [ ] Phase 2: inspect and improve dashboard usability without changing business rules; checkpoint.
 - [ ] Phase 3: compare production performance/accessibility, optimize measured bottlenecks; checkpoint.
 - [ ] Phase 4: structured security review, focused remediation and regression checks; checkpoint.
 - [ ] Phase 5: isolated business-flow/browser/build verification and final handoff.
 
 No production writes, real invoices/payments, customer mail, deployment, production infrastructure or authentication replacement are authorized by this task.
+
+## Baseline browser qualifications
+
+The first public capture used an H1-presence readiness check. Next.js streaming can place an H1 inside a hidden pending boundary, so some service-route rows/screenshots captured loading UI. Those zero-width rows are invalid layout evidence. The visible homepage screenshots and width measurements independently reproduce the real defect: cards are 357px at 1280px, 144px at 1920px and 2px at 2560px. The initial mobile homepage performance samples are usable; service skeleton captures are not. The harness now waits for the matching document's load lifecycle and a visible H1. Centering checks use the layout viewport, excluding the desktop scrollbar. Separate public/Control Chrome ports prevent browser-session interference; interrupted diagnostic runs are not passing evidence.
+
+The fresh Control baseline passed all 108 route/viewport checks with German labels. Its screenshots are under `evidence/baseline-control/`. No Control records were mutated by these layout checks.
+
+## Phase 1 — verified public layout repair
+
+Changed `apps/web/app/globals.css`: centered contained sections, removed the duplicate desktop and phone gutters, and allowed long card/service text to wrap within its grid column. Logo, footer, content and business operations were preserved. `tests/safe-layouts.mjs` now checks actual visible streamed content, 11 public routes at 9 widths (320–2560px), readable card widths, centered sections, form labels, five footer sections, horizontal overflow and uncaught browser exceptions.
+
+Final production browser run: **99/99 passed**, no captured exceptions. Service cards now remain 384px wide at 1440, 1920 and 2560px. Screenshots/results: `evidence/after/`. The mobile Websites overflow found during validation was fixed before checkpointing. Baseline mobile inherited 18px side padding as well as its width gutters; that duplication is removed too.
+
+Checks: `npm test`, `npm run typecheck`, `npm run lint`, `npm run test:rebuild:unit`, `npm run test:bilingual`, `npm run test:rebuild:db` (10 executed isolated database cases), production public build, and `git diff --check` passed. One direct contact-test invocation omitted `TSX_TSCONFIG_PATH` and failed alias resolution; the repository's complete `npm test` command supplied the correct config and passed. No unexecuted integration check is claimed.
+
+Source checkpoint: `/tmp/tiladys-safe-checkpoints/phase-1-source.tar.gz`. Business logic and database schema are unchanged by Phase 1. Production lab measurements remain separate from field data; optimization and comparison follow in Phase 3.
