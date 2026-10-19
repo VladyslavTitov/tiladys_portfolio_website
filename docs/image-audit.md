@@ -5,7 +5,7 @@ Sources are unchanged. Dimensions/weights below come from Sharp/filesystem inspe
 | Source under `apps/web/public` | Use | Intrinsic / source bytes | Composition | Final frame / fit / sizes |
 |---|---|---|---|---|
 | `illustrations/g01-three-services-1600.webp` | Home hero | 1600×900 / 149,896 | Transparent; subject bounds 75,107–1553,793 | Content stage up to ~557×313, max-height 370; contain; `calc(100vw - 36px)` mobile, 46vw medium, 557px wide; priority |
-| `services/tiladys-service-website-creation.png` | Website hero / service cards / related | 1672×941 / 1,663,863 | Opaque full-bleed photo; no baked pale bands. Laptop and phone lie inside safe central crop | Hero 16:10 cover, small symmetric edge crop; card 220px stage; related 80–140px wide, cover. Next optimizer resizes/encodes; source PNG retained |
+| `services/tiladys-service-website-creation.png` | Website hero / service cards / related | 1672×941 / 1,663,863 | Opaque full-bleed photo; no baked pale bands. Laptop and phone lie inside safe central crop | Hero 16:9 cover, native photo framing; card 220px stage; related 80–140px wide, cover. Next optimizer resizes/encodes; source PNG retained |
 | `services/tiladys-service-pc-laptop.webp` | PC hero / cards / related | 1440×810 / 53,070 | Opaque full photo, laptop/tools; no baked bands | Same photo family. Center cover; no stretching |
 | `services/tiladys-service-business-it-digital.webp` | Related / overview | 1440×960 / 65,850 | Opaque 3:2 photo | Cover by photo family; source retained |
 | `illustrations/g03-practical-prints-1600.webp` | 3D hero / card / related | 1600×900 / 206,034 | Transparent; alpha bounds 106,62–1560,849 | Hero 16:11 navy radial stage, contain; card 220px coordinated pale stage, 12px breathing space; no crop |

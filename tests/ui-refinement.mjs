@@ -42,7 +42,7 @@ try {
   await b.navigate('http://127.0.0.1:3100/fr/contact');check(await b.evaluate(`document.documentElement.scrollWidth<=innerWidth+1`),'French contact reflow');
  }
 } finally {await writeFile(`${directory}/results.json`,JSON.stringify({browser:firefox?'Firefox':'Chrome',before,rows,failures,interactions,consoleErrors:b.errors,networkErrors:b.network},null,2));await b.close();}
-// Firefox emits this pre-existing, caught framework capability probe under the
+// Firefox emits this pre-existing, caught validation-library JIT probe under the
 // unchanged production CSP. Retain it as evidence; do not weaken CSP to silence it.
 const knownSecurityDiagnostics=b.errors.filter(e=>typeof e==='object'&&e.text?.startsWith('Content-Security-Policy:')&&e.text.includes('Missing \'unsafe-eval\''));
 const unexpectedErrors=b.errors.filter(e=>!knownSecurityDiagnostics.includes(e));

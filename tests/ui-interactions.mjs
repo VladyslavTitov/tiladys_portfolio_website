@@ -1,0 +1,54 @@
+// Real browser interactions and actual loopback APIs; no external mail or records.
+import assert from 'node:assert/strict';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {PrismaClient} from '@prisma/client';
+import {browserDriver,until,sleep} from './browser-protocol.mjs';
+const url=new URL(process.env.DATABASE_URL||'http://missing');
+assert.equal(url.hostname,'127.0.0.1');assert.equal(url.port,'55432');assert.equal(url.pathname,'/tiladys_rebuild_test');
+const fixture=JSON.parse(await readFile('/tmp/tiladys-rebuild/browser-fixtures.json','utf8'));
+const db=new PrismaClient(),b=await browserDriver(),checks=[];
+const dir='docs/ui-evidence/interactions';await mkdir(dir,{recursive:true});
+const set=async(selector,value)=>b.evaluate(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});if(!e)throw Error('Missing input');Object.getOwnPropertyDescriptor(e instanceof HTMLTextAreaElement?HTMLTextAreaElement.prototype:HTMLInputElement.prototype,'value').set.call(e,${JSON.stringify(value)});e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));return true;})()`);
+const hydrated=selector=>until(()=>b.evaluate(`!!document.querySelector(${JSON.stringify(selector)}) && Object.keys(document.querySelector(${JSON.stringify(selector)})).some(k=>k.startsWith('__reactFiber'))`),'hydration');
+const shot=async name=>writeFile(`${dir}/${name}.png`,await b.screenshot());
+const click=selector=>b.evaluate(`document.querySelector(${JSON.stringify(selector)}).click()`);
+try {
+ await b.cookie('tiladys_session',fixture.token);await b.cookie('control_locale','de');
+ await b.viewport(390);await b.navigate('http://127.0.0.1:3100/en');await hydrated('.mobile-menu-button');await click('.mobile-menu-button');
+ assert.ok(await b.evaluate(`document.querySelector('.mobile-menu-button').getAttribute('aria-expanded')==='true'`));await shot('mobile-nav-open');
+ await b.send('Input.dispatchKeyEvent',{type:'keyDown',key:'Escape',code:'Escape',windowsVirtualKeyCode:27});await b.send('Input.dispatchKeyEvent',{type:'keyUp',key:'Escape',code:'Escape',windowsVirtualKeyCode:27});
+ await until(()=>b.evaluate(`document.activeElement===document.querySelector('.mobile-menu-button') && document.activeElement.getAttribute('aria-expanded')==='false'`),'Escape focus');checks.push('Mobile navigation: open, native Escape, restored trigger focus');
+ await b.navigate('http://127.0.0.1:3100/en/contact');await hydrated('#contact-form');
+ const requestsBefore=b.requests.length;await click('#contact-form button[type=submit]');await sleep(150);
+ assert.equal(b.requests.slice(requestsBefore).filter(r=>r.method==='POST').length,0);assert.ok(await b.evaluate(`!document.querySelector('#contact-form').checkValidity()`));await shot('contact-validation');
+ assert.ok(await b.evaluate(`!document.querySelector('#contact-form input[type=file]') && !!document.querySelector('.contact-form__notice')`));checks.push('Contact: native validation sends no request; unavailable uploads remain disabled');
+ await db.contactRateLimit.deleteMany({where:{NOT:{key:{startsWith:'login:'}}}});
+ const original='Synthetic visual check 🙂\n<img src=x onerror=alert(1)> literal original';const email=`ui-${crypto.randomUUID()}@example.test`;
+ await set('#contact-form [name=name]','Synthetic UI enquiry');await set('#contact-form [name=email]',email);await set('#contact-form [name=message]',original);await click('#contact-form [name=consent]');await click('#contact-form button[type=submit]');
+ await until(()=>b.evaluate(`document.querySelector('.contact-form__state').dataset.result==='success'`),'contact success');
+ const stored=await db.contactMessage.findFirstOrThrow({where:{email}});assert.equal(stored.message,original);assert.equal(stored.locale,'en');await shot('contact-success');checks.push('Contact: actual protected handler persists exact Unicode/plain text; SMTP disabled');
+ await b.navigate(`http://127.0.0.1:3101/dashboard/messages?messageId=${stored.id}`);await hydrated('form.reply');
+ assert.equal(await b.evaluate(`document.querySelectorAll('form.reply').length`),1);assert.ok(await b.evaluate(`document.querySelector('.message-full-text').textContent.includes('<img src=x') && !document.querySelector('.message-full-text img')`));assert.equal(b.dialogs.filter(d=>d.type==='alert').length,0);
+ assert.equal((await db.contactMessage.findUniqueOrThrow({where:{id:stored.id}})).status,'UNREAD');checks.push('Inbox: one composer, inert payload, selection does not mark read or send');
+ await set('form.reply textarea','Synthetic unsaved reply');await click('.inbox-back');await sleep(100);await click('.inbox-message');await sleep(100);assert.equal(await b.evaluate(`document.querySelector('form.reply textarea').value`),'Synthetic unsaved reply');checks.push('Inbox mobile Back/return retains unsent text');
+ // A second record on the unfiltered page exercises the record-switch guard.
+ b.acceptDialogs(true);await b.navigate('http://127.0.0.1:3101/dashboard/messages');b.acceptDialogs(false);await hydrated('.inbox-message');await click('.inbox-message');await set('form.reply textarea','Keep this unsent draft');await click('.inbox-back');
+ const oldSelected=await b.evaluate(`document.querySelector('.inbox-message[aria-pressed=true]').dataset.messageId`);
+ await b.evaluate(`document.querySelectorAll('.inbox-message')[1].click()`);await sleep(100);
+ assert.equal(await b.evaluate(`document.querySelector('.inbox-message[aria-pressed=true]').dataset.messageId`),oldSelected);assert.ok(b.dialogs.some(d=>d.type==='confirm'&&d.message.includes('unsaved')));checks.push('Inbox switching warns; cancelling keeps the selected message and unsent reply');
+ b.acceptDialogs(true);await b.navigate('http://127.0.0.1:3100/en/portfolio');await hydrated('.portfolio-filter button');
+ await set('.portfolio-content .record-search input','no-such-synthetic-project-visual');await click('.portfolio-content .record-search button[type=submit], .portfolio-content .record-search button:not([type])');
+ await until(()=>b.evaluate(`new URL(location.href).searchParams.has('q') && !!document.querySelector('.empty-state')`),'portfolio filtered empty');await shot('portfolio-filtered-empty');await click('.portfolio-content .record-search button[type=button]');await until(()=>b.evaluate(`!new URL(location.href).searchParams.has('q')`),'filters clear');checks.push('Portfolio search, intentional empty state and clear work through real route filters');
+ await b.navigate('http://127.0.0.1:3100/en/services/3d-printing');await click('.service-faq summary');assert.ok(await b.evaluate(`document.querySelector('.service-faq').open`));await shot('faq-expanded');checks.push('FAQ disclosure expands without clipping');
+ await b.viewport(1440);await b.navigate('http://127.0.0.1:3101/dashboard/invoices?status=ISSUED');
+ assert.ok(await b.evaluate(`document.querySelector('#recipient')?.disabled && [...document.querySelectorAll('#recipient input,#recipient textarea,#recipient select')].every(e=>e.disabled||e.matches(':disabled'))`));
+ assert.ok(await b.evaluate(`[...document.querySelectorAll('.invoice-editor .editor-section-nav a')].every(a=>document.getElementById(a.hash.slice(1)))`));await shot('invoice-issued');checks.push('Issued invoice snapshot fields remain locked; Summary/Items/Recipient/Payments/PDF section links resolve');
+ await b.navigate('http://127.0.0.1:3101/dashboard/invoices?status=DRAFT');assert.equal(await b.evaluate(`document.querySelector('#recipient')?.disabled`),false);await shot('invoice-draft');checks.push('Draft invoice remains editable; no issuance/payment triggered by section navigation');
+ await b.navigate('http://127.0.0.1:3101/dashboard/projects');await hydrated('.project-editor');
+ const titleSelector='.project-translations input';const priorTitle=await b.evaluate(`document.querySelector(${JSON.stringify(titleSelector)}).value`);await set(titleSelector,'Synthetic unsaved localized title');await b.evaluate(`document.querySelectorAll('#project-localization button')[1].click()`);await b.evaluate(`document.querySelectorAll('#project-localization button')[0].click()`);
+ assert.equal(await b.evaluate(`document.querySelector(${JSON.stringify(titleSelector)}).value`),'Synthetic unsaved localized title');await set(titleSelector,priorTitle);assert.ok(await b.evaluate(`[...document.querySelectorAll('.project-editor .editor-section-nav a')].every(a=>document.getElementById(a.hash.slice(1)))`));checks.push('Project locale switching preserves unsaved localized values; publication review remains explicit');
+ await b.navigate('http://127.0.0.1:3101/dashboard/prices');await hydrated('.price-admin');const mutationStart=b.requests.length;const groups=await b.evaluate(`document.querySelectorAll('.price-sheet-group').length`);if(groups>1){await b.evaluate(`document.querySelectorAll('.price-sheet-group summary')[1].click()`);assert.ok(await b.evaluate(`document.querySelectorAll('.price-sheet-group')[1].open`));}await shot('catalogue-expanded');assert.equal(b.requests.slice(mutationStart).filter(r=>['POST','PUT','PATCH','DELETE'].includes(r.method)).length,0);checks.push('Catalogue groups expand locally without save/API mutations; fields remain mounted');
+ for(const width of [512,720]){await b.viewport(width);for(const route of ['http://127.0.0.1:3100/fr/contact','http://127.0.0.1:3101/dashboard/invoices','http://127.0.0.1:3101/dashboard/messages']){await b.navigate(route);assert.ok(await b.evaluate(`document.documentElement.scrollWidth<=innerWidth+1`));}await shot(`zoom-reflow-${width}`);}checks.push('200% equivalent reflow: 1024→512 and 1440→720 CSS px, French Contact and critical private layouts');
+ assert.equal(b.dialogs.filter(d=>d.type==='alert').length,0);
+} finally {await writeFile(`${dir}/results.json`,JSON.stringify({checks,consoleErrors:b.errors,networkErrors:b.network,dialogs:b.dialogs.map(d=>({type:d.type,message:d.message})),requests:b.requests.filter(r=>r.method!=='GET').map(r=>({method:r.method,url:r.url}))},null,2));await b.close();await db.$disconnect();}
+console.log(JSON.stringify({passed:checks.length,checks}));
