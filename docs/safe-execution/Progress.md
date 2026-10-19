@@ -18,7 +18,7 @@ The owner's attached Safe Execution Instructions override the earlier redesign s
 - [x] Phase 0: baseline browser review and checkpoint `94a8caa`.
 - [x] Phase 1: public shared layout repaired; 99 production browser cases pass.
 - [x] Phase 2: dashboard presentation repaired; 108 production browser cases pass.
-- [ ] Phase 3: compare production performance/accessibility, optimize measured bottlenecks; checkpoint.
+- [x] Phase 3: measured image optimization and automated accessibility checks complete.
 - [ ] Phase 4: structured security review, focused remediation and regression checks; checkpoint.
 - [ ] Phase 5: isolated business-flow/browser/build verification and final handoff.
 
@@ -45,3 +45,11 @@ Source checkpoint: `/tmp/tiladys-safe-checkpoints/phase-1-source.tar.gz`. Busine
 Changed only `apps/control/app/globals.css`: desktop filters now share rows and wrap, mobile filters stack, the language picker no longer consumes a full toolbar row, selected List/Board buttons are distinct, and job-section links have separated 44px targets. Removed the existing phone `overflow-x:hidden` workaround. Corrected the underlying long-text, grid-item minimum sizing and inbox reply-form overflow it had concealed. No invoice, quote, payment, job, message, catalogue or customer mutation rules changed.
 
 Final production matrix: **108/108 passed** (12 dashboard routes × 9 widths), German labels, synthetic persisted records, no captured uncaught exceptions. The 320px inbox failed during development and passed after the final grid/reply-form correction; it is not left clipped. Evidence: `evidence/after-control/`, with comparative job screenshots in `evidence/baseline-control/`. Typecheck, lint, isolated domain/database regressions, Control production build and diff whitespace review passed. Source checkpoint: `/tmp/tiladys-safe-checkpoints/phase-2-source.tar.gz`.
+
+## Phase 3 — measured performance and accessibility
+
+Changed the homepage hero's `sizes` declaration in the already-modified `apps/web/app/[locale]/page.tsx`, plus contrast rules in both global stylesheets. Hero transfers fell 51% on mobile and 76% on wide desktop. Mobile local production LCP median: 1084 → 724ms, CLS 0 in both. See `Performance-and-accessibility.md` for all three samples per device, first-request caveats, total transfer and desktop timing noise.
+
+Axe 4.12.1 WCAG-tagged checks: final **22 public + 24 private page/viewport combinations passed with zero reported violations**. Native menu opening, Escape/trigger-focus restoration and reduced-motion scrolling also passed in both apps. These are automated checks; complete manual WCAG/device assessment remains outstanding. Baseline and final evidence are under `evidence/phase3-*`. Production builds, npm tests, type checking, lint and whitespace review passed.
+
+Source checkpoint: `/tmp/tiladys-safe-checkpoints/phase-3-source.tar.gz`; exact one-line homepage delta against its owner-supplied initial version: `/tmp/tiladys-safe-checkpoints/phase-3-home.patch`. That page already contained substantial uncommitted owner implementation, so the checkpoint commit intentionally stages the isolated CSS/docs/tests only, retaining the page in the existing working changes. No owner implementation is silently included in an unrelated CSS commit.

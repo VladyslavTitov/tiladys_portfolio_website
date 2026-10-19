@@ -458,6 +458,24 @@ main {
   overflow-wrap: anywhere;
 }
 
+/* Small labels and actions need body-text contrast, including on navy heroes. */
+.services-overview-hero .eyebrow,
+.about-introduction .eyebrow {
+  color: #7be0df;
+}
+.section .section-title small,
+.service-breadcrumb > a {
+  color: #0763a9;
+}
+.service-price-disclaimer,
+.contact-form .contact-form__secure {
+  color: #5c6b82;
+}
+.portfolio-card .portfolio-card__body > a,
+.contact-channel .contact-channel__action {
+  color: #075c67;
+}
+
 .alt {
   background: var(--surface);
 }

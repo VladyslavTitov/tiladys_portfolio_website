@@ -69,7 +69,7 @@ class CDP {
 const profile = await mkdtemp(join(tmpdir(), 'tiladys-safe-chrome-'));
 const debugPort = control ? 9339 : 9338;
 const chrome = spawn('google-chrome', ['--headless=new', '--no-sandbox', '--disable-dev-shm-usage', '--disable-background-networking', '--no-first-run', '--remote-debugging-address=127.0.0.1', `--remote-debugging-port=${debugPort}`, `--user-data-dir=${profile}`, 'about:blank'], { stdio: 'ignore' });
-const rows = [], performance = [], failures = [], accessibility = [];
+const rows = [], performance = [], failures = [], accessibility = [], interactions = [];
 const axeSource = process.env.ACCESSIBILITY === '1' ? await readFile(new URL('../node_modules/axe-core/axe.min.js', import.meta.url), 'utf8') : null;
 let c;
 try {
@@ -115,6 +115,26 @@ try {
     }
     console.log(`Checked ${control ? 'Control' : 'public'} width ${width}`);
   }
+  if (process.env.PERFORMANCE_ONLY !== '1' && !process.env.LAYOUT_ROUTES) {
+    await c.send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
+    await c.navigate(`${base}/${control ? 'dashboard' : 'de'}`);
+    const selector = control ? '.control-menu' : '.mobile-menu-button';
+    await until(() => c.evaluate(`Object.keys(document.querySelector(${JSON.stringify(selector)})).some(k=>k.startsWith('__reactFiber'))`), 'Menu hydration');
+    await c.evaluate(`document.querySelector(${JSON.stringify(selector)}).click()`);
+    await until(() => c.evaluate(`document.querySelector(${JSON.stringify(selector)}).getAttribute('aria-expanded')==='true'`), 'Menu opens');
+    if (!control) {
+      const aligned = await c.evaluate(`Math.abs(document.querySelector('.site-header').getBoundingClientRect().bottom-document.querySelector('.site-nav').getBoundingClientRect().top)<3`);
+      if (!aligned) failures.push('Mobile menu does not start under the header');
+    }
+    await c.send('Input.dispatchKeyEvent', { type: 'keyDown', key: 'Escape', code: 'Escape', windowsVirtualKeyCode: 27 });
+    await c.send('Input.dispatchKeyEvent', { type: 'keyUp', key: 'Escape', code: 'Escape', windowsVirtualKeyCode: 27 });
+    await until(() => c.evaluate(`document.activeElement===document.querySelector(${JSON.stringify(selector)}) && document.activeElement.getAttribute('aria-expanded')==='false'`), 'Menu Escape/focus restoration');
+    interactions.push('Mobile menu opens; native Escape closes it and restores trigger focus');
+    await c.send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
+    const reduced = await c.evaluate(`matchMedia('(prefers-reduced-motion: reduce)').matches && getComputedStyle(document.documentElement).scrollBehavior!=='smooth'`);
+    if (!reduced) failures.push('Reduced-motion scrolling');
+    interactions.push('Reduced-motion scrolling verified');
+  }
   // Three cold-cache production samples using identical transport/CPU conditions.
   for (const variant of control || process.env.LAYOUT_WIDTHS || axeSource ? [] : [{ name: 'mobile-4g', width: 390, mobile: true, cpu: 4 }, { name: 'desktop', width: 1440, mobile: false, cpu: 1 }, { name: 'wide-desktop', width: 2560, mobile: false, cpu: 1 }]) {
     await c.send('Emulation.setDeviceMetricsOverride', { width: variant.width, height: 844, deviceScaleFactor: 1, mobile: variant.mobile });
@@ -125,7 +145,7 @@ try {
       performance.push(await c.evaluate(`({variant:${JSON.stringify(variant.name)},sample:${sample},lcpMs:window.__lab.lcp,cls:window.__lab.cls,transferBytes:performance.getEntriesByType('resource').reduce((s,e)=>s+e.transferSize,0),hero:[...document.querySelectorAll('.rebuild-hero img')].map(e=>({url:e.currentSrc,width:e.getBoundingClientRect().width,bytes:performance.getEntriesByName(e.currentSrc).at(-1)?.transferSize}))})`));
     }
   }
-  await writeFile(`${directory}/results.json`, JSON.stringify({ timestamp: new Date().toISOString(), phase, method: 'Native Chrome CDP; production build; synthetic loopback database; cold browser cache; three samples per performance variant; local lab, not field CWV', rows, performance, accessibility, failures, consoleErrors: c.errors }, null, 2));
+  await writeFile(`${directory}/results.json`, JSON.stringify({ timestamp: new Date().toISOString(), phase, method: 'Native Chrome CDP; production build; synthetic loopback database; cold browser cache; three samples per performance variant; local lab, not field CWV', rows, performance, accessibility, interactions, failures, consoleErrors: c.errors }, null, 2));
   if (phase === 'after') { assert.deepEqual(failures, []); assert.deepEqual(c.errors, []); }
   console.log(JSON.stringify({ phase, cases: rows.length, failures, performance }));
 } finally {

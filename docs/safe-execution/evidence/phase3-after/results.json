@@ -1,0 +1,138 @@
+{
+  "timestamp": "2026-10-19T09:36:00.037Z",
+  "phase": "after",
+  "method": "Native Chrome CDP; production build; synthetic loopback database; cold browser cache; three samples per performance variant; local lab, not field CWV",
+  "rows": [],
+  "performance": [
+    {
+      "variant": "mobile-4g",
+      "sample": 0,
+      "lcpMs": 1876,
+      "cls": 0,
+      "transferBytes": 326707,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=384&q=75",
+          "width": 354,
+          "bytes": 14946
+        }
+      ]
+    },
+    {
+      "variant": "mobile-4g",
+      "sample": 1,
+      "lcpMs": 724,
+      "cls": 0,
+      "transferBytes": 293275,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=384&q=75",
+          "width": 354,
+          "bytes": 14946
+        }
+      ]
+    },
+    {
+      "variant": "mobile-4g",
+      "sample": 2,
+      "lcpMs": 704,
+      "cls": 0,
+      "transferBytes": 293281,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=384&q=75",
+          "width": 354,
+          "bytes": 14946
+        }
+      ]
+    },
+    {
+      "variant": "desktop",
+      "sample": 0,
+      "lcpMs": 132,
+      "cls": 0,
+      "transferBytes": 322743,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 549.0625,
+          "bytes": 30744
+        }
+      ]
+    },
+    {
+      "variant": "desktop",
+      "sample": 1,
+      "lcpMs": 76,
+      "cls": 0,
+      "transferBytes": 322741,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 549.0625,
+          "bytes": 30744
+        }
+      ]
+    },
+    {
+      "variant": "desktop",
+      "sample": 2,
+      "lcpMs": 56,
+      "cls": 0,
+      "transferBytes": 322745,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 549.0625,
+          "bytes": 30744
+        }
+      ]
+    },
+    {
+      "variant": "wide-desktop",
+      "sample": 0,
+      "lcpMs": 80,
+      "cls": 0,
+      "transferBytes": 398368,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 549.0625,
+          "bytes": 30744
+        }
+      ]
+    },
+    {
+      "variant": "wide-desktop",
+      "sample": 1,
+      "lcpMs": 68,
+      "cls": 0,
+      "transferBytes": 398362,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 549.0625,
+          "bytes": 30744
+        }
+      ]
+    },
+    {
+      "variant": "wide-desktop",
+      "sample": 2,
+      "lcpMs": 64,
+      "cls": 0,
+      "transferBytes": 398368,
+      "hero": [
+        {
+          "url": "http://127.0.0.1:3100/_next/image?url=%2Fillustrations%2Fg01-three-services-1600.webp&w=640&q=75",
+          "width": 549.0625,
+          "bytes": 30744
+        }
+      ]
+    }
+  ],
+  "accessibility": [],
+  "interactions": [],
+  "failures": [],
+  "consoleErrors": []
+}

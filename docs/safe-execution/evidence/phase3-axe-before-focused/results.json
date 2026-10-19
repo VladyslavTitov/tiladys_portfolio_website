@@ -1,0 +1,1319 @@
+{
+  "timestamp": "2026-10-19T09:32:20.042Z",
+  "phase": "baseline",
+  "method": "Native Chrome CDP; production build; synthetic loopback database; cold browser cache; three samples per performance variant; local lab, not field CWV",
+  "rows": [
+    {
+      "route": "",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-process",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-founder",
+          "x": 18,
+          "width": 354,
+          "content": 306
+        }
+      ],
+      "cards": [
+        354,
+        354,
+        354
+      ],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/services",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section services-overview",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [
+        354,
+        354,
+        354
+      ],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/services/websites",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/services/pc-laptop",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/services/3d-printing",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section service-process",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section related-services",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/portfolio",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Portfolio",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section portfolio-content",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/about",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Über TiLADYS",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "about-introduction section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section founder-profile",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section founder-details",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section about-contact",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/contact",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Kontakt",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section contact-page-grid",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        },
+        {
+          "class": "section contact-benefits-section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/products/framer",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/products/3d-models",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 18,
+          "width": 354,
+          "content": 354
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/privacy",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section legal-content",
+          "x": 18,
+          "width": 354,
+          "content": 314
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-process",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-founder",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1152
+        }
+      ],
+      "cards": [
+        384,
+        384,
+        384
+      ],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/services",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section rebuild-services",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section services-overview",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [
+        384,
+        384,
+        384
+      ],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/services/websites",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 332.5,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/services/pc-laptop",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 332.5,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/services/3d-printing",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section service-detail-content",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section service-process",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section related-services",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-narrow",
+          "x": 332.5,
+          "width": 760,
+          "content": 760
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/portfolio",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Portfolio",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section portfolio-content",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section rebuild-pathways",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/about",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Über TiLADYS",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "about-introduction section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section founder-profile",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section founder-details",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section about-contact",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/contact",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Kontakt",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section contact-page-grid",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        },
+        {
+          "class": "section contact-benefits-section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/products/framer",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/products/3d-models",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1200
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/privacy",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "sections": [
+        {
+          "class": "section legal-content",
+          "x": 112.5,
+          "width": 1200,
+          "content": 1104
+        }
+      ],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    }
+  ],
+  "performance": [],
+  "accessibility": [
+    {
+      "route": "",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/services",
+      "width": 390,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.14 (foreground color: #11737a, background color: #071837, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "small"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #087ddc, background color: #ffffff, font size: 10.0pt (13.3333px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".service-price-disclaimer"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #758297, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/websites",
+      "width": 390,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".service-breadcrumb > a[href$=\"services\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".section-title > small"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #087ddc, background color: #ffffff, font size: 10.0pt (13.3333px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/pc-laptop",
+      "width": 390,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".service-breadcrumb > a[href$=\"services\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".section-title > small"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #087ddc, background color: #ffffff, font size: 10.0pt (13.3333px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/3d-printing",
+      "width": 390,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".service-breadcrumb > a[href$=\"services\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".section-title > small"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #087ddc, background color: #ffffff, font size: 10.0pt (13.3333px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/portfolio",
+      "width": 390,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".portfolio-card:nth-child(1) > .portfolio-card__body > a"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".portfolio-card:nth-child(2) > .portfolio-card__body > a"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".portfolio-card:nth-child(3) > .portfolio-card__body > a"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/about",
+      "width": 390,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".about-introduction > div > .eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.14 (foreground color: #11737a, background color: #071837, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".contact-channel:nth-child(1) > .contact-channel__action--blue.contact-channel__action[target=\"_blank\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel__action--green"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.11 (foreground color: #19a848, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel__action--sky"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.82 (foreground color: #13a3e8, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel__action--pink"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #e62685, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel__action--blue.contact-channel__action[href=\"mailto:contact@tiladys.com\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel__action--blue.contact-channel__action[href=\"tel:+491637235608\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel:nth-child(7) > .contact-channel__action--blue.contact-channel__action[target=\"_blank\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-form__secure"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.62 (foreground color: #78889b, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/products/framer",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/products/3d-models",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/privacy",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/services",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.14 (foreground color: #11737a, background color: #071837, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "small"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #087ddc, background color: #ffffff, font size: 10.0pt (13.3333px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".service-price-disclaimer"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.89 (foreground color: #758297, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/websites",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".service-breadcrumb > a[href$=\"services\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".section-title > small"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #087ddc, background color: #ffffff, font size: 10.0pt (13.3333px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/pc-laptop",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".service-breadcrumb > a[href$=\"services\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".section-title > small"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #087ddc, background color: #ffffff, font size: 10.0pt (13.3333px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/services/3d-printing",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".service-breadcrumb > a[href$=\"services\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".section-title > small"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #087ddc, background color: #ffffff, font size: 10.0pt (13.3333px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/portfolio",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".portfolio-card:nth-child(1) > .portfolio-card__body > a"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".portfolio-card:nth-child(2) > .portfolio-card__body > a"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".portfolio-card:nth-child(3) > .portfolio-card__body > a"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".about-introduction > div > .eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.14 (foreground color: #11737a, background color: #071837, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".contact-channel:nth-child(1) > .contact-channel__action--blue.contact-channel__action[target=\"_blank\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel__action--green"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.11 (foreground color: #19a848, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel__action--sky"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.82 (foreground color: #13a3e8, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel__action--pink"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.21 (foreground color: #e62685, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel__action--blue.contact-channel__action[href=\"mailto:contact@tiladys.com\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel__action--blue.contact-channel__action[href=\"tel:+491637235608\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-channel:nth-child(7) > .contact-channel__action--blue.contact-channel__action[target=\"_blank\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #087fff, background color: #ffffff, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-form__secure"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.62 (foreground color: #78889b, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/products/framer",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/products/3d-models",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/privacy",
+      "width": 1440,
+      "violations": []
+    }
+  ],
+  "failures": [
+    "Accessibility: /services 390: color-contrast",
+    "Accessibility: /services/websites 390: color-contrast",
+    "Accessibility: /services/pc-laptop 390: color-contrast",
+    "Accessibility: /services/3d-printing 390: color-contrast",
+    "Accessibility: /portfolio 390: color-contrast",
+    "Accessibility: /about 390: color-contrast",
+    "Accessibility: /contact 390: color-contrast",
+    "Accessibility: /services 1440: color-contrast",
+    "Accessibility: /services/websites 1440: color-contrast",
+    "Accessibility: /services/pc-laptop 1440: color-contrast",
+    "Accessibility: /services/3d-printing 1440: color-contrast",
+    "Accessibility: /portfolio 1440: color-contrast",
+    "Accessibility: /about 1440: color-contrast",
+    "Accessibility: /contact 1440: color-contrast"
+  ],
+  "consoleErrors": []
+}

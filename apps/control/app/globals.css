@@ -51,6 +51,20 @@
 @media (max-width: 768px) { .invoice-editor button, .job-editor button, .invoice-editor a.admin-secondary { min-height: 44px; } .service-picker { padding: 14px; } }
 
 /* Filters use the available desktop row and wrap naturally on narrow screens. */
+.dash main .eyebrow {
+  color: #075c67;
+}
+.dash .profile-hero .eyebrow {
+  color: #9be8fa;
+}
+.dash .record-card__meta .status-pill {
+  color: #13243f;
+}
+.dash .workbench-list span,
+.dash .project-admin-list span,
+.dash .project-images-admin p {
+  color: #5c6b82;
+}
 .dash > main {
   overflow-wrap: anywhere;
 }
