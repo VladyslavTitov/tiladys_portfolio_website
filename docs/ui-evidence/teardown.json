@@ -1,0 +1,21 @@
+{
+  "taskPorts": [
+    3100,
+    3101,
+    3110,
+    3111
+  ],
+  "browserPorts": [
+    9338,
+    9339,
+    9340,
+    9341,
+    9342
+  ],
+  "serversStopped": true,
+  "syntheticFixtureSessionsRevoked": true,
+  "temporaryCredentialFileRemoved": true,
+  "publicationCheckpointRestored": true,
+  "preExistingDatabaseContainer": "retained running",
+  "deploymentPerformed": false
+}

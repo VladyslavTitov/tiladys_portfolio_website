@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "Draft validation opens/focuses hidden field; issued navigation keeps snapshot locked and payments separate: 390px",
+    "Draft validation opens/focuses hidden field; issued navigation keeps snapshot locked and payments separate: 1440px"
+  ],
+  "consoleErrors": [],
+  "networkErrors": []
+}

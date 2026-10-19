@@ -1,0 +1,47 @@
+{
+  "checks": [
+    "Mobile navigation: open, native Escape, restored trigger focus",
+    "Contact: native validation sends no request; unavailable uploads remain disabled",
+    "Contact: actual protected handler persists exact Unicode/plain text; SMTP disabled",
+    "Inbox: one composer, inert payload, selection does not mark read or send",
+    "Disabled SMTP fails safely: reviewed reply input retained, pending lock released, message not marked replied",
+    "Inbox mobile Back/return retains unsent text",
+    "Inbox switching warns; cancelling keeps the selected message and unsent reply",
+    "Portfolio search, intentional empty state and clear work through real route filters",
+    "FAQ disclosure expands without clipping",
+    "Issued invoice snapshot fields remain locked; section navigation opens the read-only disclosure and payment fields stay separate",
+    "Draft invoice remains editable; no issuance/payment triggered by section navigation",
+    "Project locale switching preserves unsaved localized values; publication review remains explicit",
+    "Quote record switching warns; cancelling preserves unsaved draft fields",
+    "Task mobile Back/resume preserves the unsaved new-task form",
+    "Catalogue disclosure/locale switching preserves input without save/API mutations",
+    "200% equivalent reflow: 1024→512 and 1440→720 CSS px, French Contact and critical private layouts"
+  ],
+  "consoleErrors": [],
+  "networkErrors": [
+    {
+      "url": "http://127.0.0.1:3101/api/admin/messages/cmvf6lrns0001koh5l06wo5tq/reply",
+      "status": 503
+    }
+  ],
+  "dialogs": [
+    {
+      "type": "confirm",
+      "message": "Discard unsaved message changes?"
+    },
+    {
+      "type": "confirm",
+      "message": "Discard unsaved quote changes?"
+    }
+  ],
+  "requests": [
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:3100/api/contact"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:3101/api/admin/messages/cmvf6lrns0001koh5l06wo5tq/reply"
+    }
+  ]
+}

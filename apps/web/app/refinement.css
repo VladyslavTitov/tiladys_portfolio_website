@@ -42,7 +42,7 @@
 .rebuild-card > div > .primary { margin-top: auto; }
 .rebuild-card > div > p { margin-bottom: 24px; }
 .rebuild-card h3 { font-size: 22px; line-height: 1.3; }
-.rebuild-card > .service-visual { flex: none; height: 220px; min-height: 0; aspect-ratio: auto; }
+.rebuild-card > .service-visual { flex: none; height: auto; min-height: 0; aspect-ratio: 16 / 9; }
 .rebuild-card > .service-visual--render img { padding: 12px; }
 .rebuild-icon { padding: 10px; }
 .service-price-block .service-prices--multiple { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -121,10 +121,10 @@
 .featured-project__image { aspect-ratio: 16 / 10; min-width: 0; padding: 0; border: 0; border-radius: 12px; overflow: hidden; background: #f4f7fa; }
 .featured-project__image img { width: 100%; height: 100%; object-fit: cover; border: 0; border-radius: 0; box-shadow: none; }
 .portfolio-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.portfolio-card { border-radius: var(--card-radius); box-shadow: none; }
+.portfolio-card { display: flex; flex-direction: column; border-radius: var(--card-radius); box-shadow: none; }
 .portfolio-card__image, .project-missing-media { aspect-ratio: 16 / 10; }
 .portfolio-card__image img { width: 100%; height: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
-.portfolio-card__body { display: flex; flex-direction: column; min-height: 0; padding: 24px; }
+.portfolio-card__body { display: flex; flex: 1; flex-direction: column; min-height: 0; padding: 24px; }
 .portfolio-card__body h2 { font-size: 22px; line-height: 1.35; }
 .portfolio-card__body p { font-size: 16px; line-height: 1.6; margin-bottom: 24px; }
 .portfolio-card__body > a { margin-top: auto; min-height: 44px; }
@@ -149,9 +149,8 @@
   .about-introduction > img { max-width: 520px; }
   .related-services > div:last-child { grid-template-columns: minmax(0, 1fr); }
 }
-@media (min-width: 769px) and (max-width: 1000px) {
+@media (min-width: 600px) and (max-width: 1000px) {
   .rebuild-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .rebuild-services .rebuild-card:last-child { grid-column: 1 / -1; }
 }
 @media (max-width: 768px) {
   :root { --page-gutter: 18px; --hero-inset: 24px; --section-space: 24px; }

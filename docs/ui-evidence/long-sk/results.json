@@ -1,0 +1,1360 @@
+{
+  "browser": "Chrome",
+  "before": false,
+  "rows": [
+    {
+      "control": false,
+      "route": "",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Webové stránky. 3D tlač. Praktická podpora PC.",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 849.296875,
+            "right": 287,
+            "bottom": 1403.0625,
+            "width": 269,
+            "height": 553.765625
+          },
+          "media": {
+            "x": 19,
+            "y": 850.296875,
+            "right": 286,
+            "bottom": 1070.296875,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1310.0625,
+            "right": 262,
+            "bottom": 1378.0625,
+            "width": 219,
+            "height": 68
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1427.0625,
+            "right": 287,
+            "bottom": 2040,
+            "width": 269,
+            "height": 612.9375
+          },
+          "media": {
+            "x": 19,
+            "y": 1428.0625,
+            "right": 286,
+            "bottom": 1648.0625,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1967,
+            "right": 171.21875,
+            "bottom": 2015,
+            "width": 128.21875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2064,
+            "right": 287,
+            "bottom": 2644.15625,
+            "width": 269,
+            "height": 580.15625
+          },
+          "media": {
+            "x": 19,
+            "y": 2065,
+            "right": 286,
+            "bottom": 2285,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2551.15625,
+            "right": 262,
+            "bottom": 2619.15625,
+            "width": 219,
+            "height": 68
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/about",
+      "width": 320,
+      "scroll": 305,
+      "h1": "O TiLADYS",
+      "aboutInset": 24,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/contact",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Kontakt",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [
+        {
+          "x": 41,
+          "y": 766.078125,
+          "right": 264,
+          "bottom": 820.078125,
+          "width": 223,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 869.578125,
+          "right": 264,
+          "bottom": 923.578125,
+          "width": 223,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 973.078125,
+          "right": 264,
+          "bottom": 1025.078125,
+          "width": 223,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1074.578125,
+          "right": 264,
+          "bottom": 1128.578125,
+          "width": 223,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1200.578125,
+          "right": 264,
+          "bottom": 1252.578125,
+          "width": 223,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1302.078125,
+          "right": 264,
+          "bottom": 1476.078125,
+          "width": 223,
+          "height": 174
+        },
+        {
+          "x": 45,
+          "y": 1612.25,
+          "right": 65,
+          "bottom": 1630.25,
+          "width": 20,
+          "height": 18
+        }
+      ],
+      "form": {
+        "x": 18,
+        "y": 659.390625,
+        "right": 287,
+        "bottom": 1790.25,
+        "width": 269,
+        "height": 1130.859375
+      },
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/portfolio",
+      "width": 320,
+      "scroll": 313,
+      "h1": "Portfólio",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services/websites",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Tvorba webov a webové služby",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 39,
+          "y": 1379.453125,
+          "right": 266,
+          "bottom": 2488.203125,
+          "width": 227,
+          "height": 1108.75
+        },
+        "last": {
+          "x": 39,
+          "y": 2301.453125,
+          "right": 266,
+          "bottom": 2488.203125,
+          "width": 227,
+          "height": 186.75
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1273.078125,
+          "right": 287,
+          "bottom": 3179.296875,
+          "width": 269,
+          "height": 1906.21875
+        },
+        "box": {
+          "x": 18,
+          "y": 2542.203125,
+          "right": 287,
+          "bottom": 3179.296875,
+          "width": 269,
+          "height": 637.09375
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/pc-laptop",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Služby pre PC a notebooky",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 39,
+          "y": 1578.03125,
+          "right": 266,
+          "bottom": 3558.21875,
+          "width": 227,
+          "height": 1980.1875
+        },
+        "last": {
+          "x": 39,
+          "y": 3111.15625,
+          "right": 266,
+          "bottom": 3558.21875,
+          "width": 227,
+          "height": 447.0625
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1471.65625,
+          "right": 287,
+          "bottom": 4249.3125,
+          "width": 269,
+          "height": 2777.65625
+        },
+        "box": {
+          "x": 18,
+          "y": 3612.21875,
+          "right": 287,
+          "bottom": 4249.3125,
+          "width": 269,
+          "height": 637.09375
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/3d-printing",
+      "width": 320,
+      "scroll": 305,
+      "h1": "3D tlač",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services",
+      "width": 320,
+      "scroll": 305,
+      "h1": "IT, webové stránky a digitálne služby",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 1036.734375,
+            "right": 287,
+            "bottom": 1590.5,
+            "width": 269,
+            "height": 553.765625
+          },
+          "media": {
+            "x": 19,
+            "y": 1037.734375,
+            "right": 286,
+            "bottom": 1257.734375,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1497.5,
+            "right": 262,
+            "bottom": 1565.5,
+            "width": 219,
+            "height": 68
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1614.5,
+            "right": 287,
+            "bottom": 2227.4375,
+            "width": 269,
+            "height": 612.9375
+          },
+          "media": {
+            "x": 19,
+            "y": 1615.5,
+            "right": 286,
+            "bottom": 1835.5,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2154.4375,
+            "right": 171.21875,
+            "bottom": 2202.4375,
+            "width": 128.21875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2251.4375,
+            "right": 287,
+            "bottom": 2831.59375,
+            "width": 269,
+            "height": 580.15625
+          },
+          "media": {
+            "x": 19,
+            "y": 2252.4375,
+            "right": 286,
+            "bottom": 2472.4375,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2738.59375,
+            "right": 262,
+            "bottom": 2806.59375,
+            "width": 219,
+            "height": 68
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/framer",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Šablóny Framer",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/3d-models",
+      "width": 320,
+      "scroll": 305,
+      "h1": "3D modely na stiahnutie",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Webové stránky. 3D tlač. Praktická podpora PC.",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 943.578125,
+            "right": 735,
+            "bottom": 1424.5625,
+            "width": 717,
+            "height": 480.984375
+          },
+          "media": {
+            "x": 19,
+            "y": 944.578125,
+            "right": 734,
+            "bottom": 1164.578125,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1351.5625,
+            "right": 363.59375,
+            "bottom": 1399.5625,
+            "width": 320.59375,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1448.5625,
+            "right": 735,
+            "bottom": 1955.9375,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 1449.5625,
+            "right": 734,
+            "bottom": 1669.5625,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1882.9375,
+            "right": 171.21875,
+            "bottom": 1930.9375,
+            "width": 128.21875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1979.9375,
+            "right": 735,
+            "bottom": 2460.921875,
+            "width": 717,
+            "height": 480.984375
+          },
+          "media": {
+            "x": 19,
+            "y": 1980.9375,
+            "right": 734,
+            "bottom": 2200.9375,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2387.921875,
+            "right": 327.40625,
+            "bottom": 2435.921875,
+            "width": 284.40625,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/about",
+      "width": 768,
+      "scroll": 753,
+      "h1": "O TiLADYS",
+      "aboutInset": 24,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/contact",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Kontakt",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [
+        {
+          "x": 41,
+          "y": 815.46875,
+          "right": 712,
+          "bottom": 869.46875,
+          "width": 671,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 918.96875,
+          "right": 712,
+          "bottom": 972.96875,
+          "width": 671,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1022.46875,
+          "right": 712,
+          "bottom": 1074.46875,
+          "width": 671,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1123.96875,
+          "right": 712,
+          "bottom": 1177.96875,
+          "width": 671,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1227.46875,
+          "right": 712,
+          "bottom": 1279.46875,
+          "width": 671,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1328.96875,
+          "right": 712,
+          "bottom": 1502.96875,
+          "width": 671,
+          "height": 174
+        },
+        {
+          "x": 45,
+          "y": 1594.359375,
+          "right": 65,
+          "bottom": 1612.359375,
+          "width": 20,
+          "height": 18
+        }
+      ],
+      "form": {
+        "x": 18,
+        "y": 708.78125,
+        "right": 735,
+        "bottom": 1742.359375,
+        "width": 717,
+        "height": 1033.578125
+      },
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/portfolio",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Portfólio",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services/websites",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Tvorba webov a webové služby",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 53,
+          "y": 1224.28125,
+          "right": 700,
+          "bottom": 2040.28125,
+          "width": 647,
+          "height": 816
+        },
+        "last": {
+          "x": 53,
+          "y": 1898.28125,
+          "right": 700,
+          "bottom": 2040.28125,
+          "width": 647,
+          "height": 142
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1140.09375,
+          "right": 735,
+          "bottom": 2524.4375,
+          "width": 717,
+          "height": 1384.34375
+        },
+        "box": {
+          "x": 18,
+          "y": 2103.28125,
+          "right": 735,
+          "bottom": 2524.4375,
+          "width": 717,
+          "height": 421.15625
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/pc-laptop",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Služby pre PC a notebooky",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 53,
+          "y": 1326.515625,
+          "right": 700,
+          "bottom": 2652.515625,
+          "width": 647,
+          "height": 1326
+        },
+        "last": {
+          "x": 53,
+          "y": 2340.515625,
+          "right": 700,
+          "bottom": 2652.515625,
+          "width": 647,
+          "height": 312
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1242.328125,
+          "right": 735,
+          "bottom": 3136.671875,
+          "width": 717,
+          "height": 1894.34375
+        },
+        "box": {
+          "x": 18,
+          "y": 2715.515625,
+          "right": 735,
+          "bottom": 3136.671875,
+          "width": 717,
+          "height": 421.15625
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/3d-printing",
+      "width": 768,
+      "scroll": 753,
+      "h1": "3D tlač",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services",
+      "width": 768,
+      "scroll": 753,
+      "h1": "IT, webové stránky a digitálne služby",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 957.171875,
+            "right": 735,
+            "bottom": 1438.15625,
+            "width": 717,
+            "height": 480.984375
+          },
+          "media": {
+            "x": 19,
+            "y": 958.171875,
+            "right": 734,
+            "bottom": 1178.171875,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1365.15625,
+            "right": 363.59375,
+            "bottom": 1413.15625,
+            "width": 320.59375,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1462.15625,
+            "right": 735,
+            "bottom": 1969.53125,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 1463.15625,
+            "right": 734,
+            "bottom": 1683.15625,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1896.53125,
+            "right": 171.21875,
+            "bottom": 1944.53125,
+            "width": 128.21875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1993.53125,
+            "right": 735,
+            "bottom": 2474.515625,
+            "width": 717,
+            "height": 480.984375
+          },
+          "media": {
+            "x": 19,
+            "y": 1994.53125,
+            "right": 734,
+            "bottom": 2214.53125,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2401.515625,
+            "right": 327.40625,
+            "bottom": 2449.515625,
+            "width": 284.40625,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/framer",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Šablóny Framer",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/3d-models",
+      "width": 768,
+      "scroll": 753,
+      "h1": "3D modely na stiahnutie",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Webové stránky. 3D tlač. Praktická podpora PC.",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 112.5,
+            "y": 727.375,
+            "right": 496.5,
+            "bottom": 1261.140625,
+            "width": 384,
+            "height": 533.765625
+          },
+          "media": {
+            "x": 113.5,
+            "y": 728.375,
+            "right": 495.5,
+            "bottom": 948.375,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 137.5,
+            "y": 1188.140625,
+            "right": 458.09375,
+            "bottom": 1236.140625,
+            "width": 320.59375,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 520.5,
+            "y": 727.375,
+            "right": 904.5,
+            "bottom": 1261.140625,
+            "width": 384,
+            "height": 533.765625
+          },
+          "media": {
+            "x": 521.5,
+            "y": 728.375,
+            "right": 903.5,
+            "bottom": 948.375,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 545.5,
+            "y": 1188.140625,
+            "right": 673.71875,
+            "bottom": 1236.140625,
+            "width": 128.21875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 928.5,
+            "y": 727.375,
+            "right": 1312.5,
+            "bottom": 1261.140625,
+            "width": 384,
+            "height": 533.765625
+          },
+          "media": {
+            "x": 929.5,
+            "y": 728.375,
+            "right": 1311.5,
+            "bottom": 948.375,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 953.5,
+            "y": 1188.140625,
+            "right": 1237.90625,
+            "bottom": 1236.140625,
+            "width": 284.40625,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/about",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "O TiLADYS",
+      "aboutInset": 48,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/contact",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Kontakt",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [
+        {
+          "x": 145.5,
+          "y": 696.6875,
+          "right": 763.15625,
+          "bottom": 750.6875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 800.1875,
+          "right": 763.15625,
+          "bottom": 854.1875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 903.6875,
+          "right": 763.15625,
+          "bottom": 955.6875,
+          "width": 617.65625,
+          "height": 52
+        },
+        {
+          "x": 145.5,
+          "y": 1005.1875,
+          "right": 763.15625,
+          "bottom": 1059.1875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 1108.6875,
+          "right": 763.15625,
+          "bottom": 1160.6875,
+          "width": 617.65625,
+          "height": 52
+        },
+        {
+          "x": 145.5,
+          "y": 1210.1875,
+          "right": 763.15625,
+          "bottom": 1384.1875,
+          "width": 617.65625,
+          "height": 174
+        },
+        {
+          "x": 149.5,
+          "y": 1475.578125,
+          "right": 169.5,
+          "bottom": 1493.578125,
+          "width": 20,
+          "height": 18
+        }
+      ],
+      "form": {
+        "x": 112.5,
+        "y": 568,
+        "right": 796.15625,
+        "bottom": 1633.578125,
+        "width": 683.65625,
+        "height": 1065.578125
+      },
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/portfolio",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Portfólio",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services/websites",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Tvorba webov a webové služby",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 147.5,
+          "y": 983.046875,
+          "right": 1277.5,
+          "bottom": 1513.046875,
+          "width": 1130,
+          "height": 530
+        },
+        "last": {
+          "x": 147.5,
+          "y": 1371.046875,
+          "right": 1277.5,
+          "bottom": 1513.046875,
+          "width": 1130,
+          "height": 142
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 112.5,
+          "y": 886.859375,
+          "right": 1312.5,
+          "bottom": 1760.015625,
+          "width": 1200,
+          "height": 873.15625
+        },
+        "box": {
+          "x": 112.5,
+          "y": 1576.046875,
+          "right": 1312.5,
+          "bottom": 1760.015625,
+          "width": 1200,
+          "height": 183.96875
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/pc-laptop",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Služby pre PC a notebooky",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 147.5,
+          "y": 1101.8125,
+          "right": 1277.5,
+          "bottom": 1937.8125,
+          "width": 1130,
+          "height": 836
+        },
+        "last": {
+          "x": 147.5,
+          "y": 1625.8125,
+          "right": 1277.5,
+          "bottom": 1937.8125,
+          "width": 1130,
+          "height": 312
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 112.5,
+          "y": 1005.625,
+          "right": 1312.5,
+          "bottom": 2184.78125,
+          "width": 1200,
+          "height": 1179.15625
+        },
+        "box": {
+          "x": 112.5,
+          "y": 2000.8125,
+          "right": 1312.5,
+          "bottom": 2184.78125,
+          "width": 1200,
+          "height": 183.96875
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/3d-printing",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "3D tlač",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "IT, webové stránky a digitálne služby",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 112.5,
+            "y": 684.03125,
+            "right": 496.5,
+            "bottom": 1217.796875,
+            "width": 384,
+            "height": 533.765625
+          },
+          "media": {
+            "x": 113.5,
+            "y": 685.03125,
+            "right": 495.5,
+            "bottom": 905.03125,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 137.5,
+            "y": 1144.796875,
+            "right": 458.09375,
+            "bottom": 1192.796875,
+            "width": 320.59375,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 520.5,
+            "y": 684.03125,
+            "right": 904.5,
+            "bottom": 1217.796875,
+            "width": 384,
+            "height": 533.765625
+          },
+          "media": {
+            "x": 521.5,
+            "y": 685.03125,
+            "right": 903.5,
+            "bottom": 905.03125,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 545.5,
+            "y": 1144.796875,
+            "right": 673.71875,
+            "bottom": 1192.796875,
+            "width": 128.21875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 928.5,
+            "y": 684.03125,
+            "right": 1312.5,
+            "bottom": 1217.796875,
+            "width": 384,
+            "height": 533.765625
+          },
+          "media": {
+            "x": 929.5,
+            "y": 685.03125,
+            "right": 1311.5,
+            "bottom": 905.03125,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 953.5,
+            "y": 1144.796875,
+            "right": 1237.90625,
+            "bottom": 1192.796875,
+            "width": 284.40625,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/framer",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Šablóny Framer",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/3d-models",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "3D modely na stiahnutie",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    }
+  ],
+  "failures": [],
+  "interactions": [],
+  "consoleErrors": [],
+  "networkErrors": []
+}

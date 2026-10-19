@@ -1,0 +1,2096 @@
+{
+  "browser": "Firefox",
+  "before": false,
+  "rows": [
+    {
+      "control": true,
+      "route": "",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Hallo, Synthetic owner",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [
+        {
+          "label": {
+            "x": 37,
+            "y": 597.7000122070312,
+            "right": 213.6666717529297,
+            "bottom": 618.7000122070312,
+            "width": 176.6666717529297,
+            "height": 21
+          },
+          "value": {
+            "x": 37,
+            "y": 630.7000122070312,
+            "right": 341,
+            "bottom": 660.7000122070312,
+            "width": 304,
+            "height": 30
+          }
+        },
+        {
+          "label": {
+            "x": 37,
+            "y": 714.7000122070312,
+            "right": 213.6666717529297,
+            "bottom": 735.7000122070312,
+            "width": 176.6666717529297,
+            "height": 21
+          },
+          "value": {
+            "x": 37,
+            "y": 747.7000122070312,
+            "right": 341,
+            "bottom": 777.7000122070312,
+            "width": 304,
+            "height": 30
+          }
+        },
+        {
+          "label": {
+            "x": 37,
+            "y": 831.7000122070312,
+            "right": 213.6666717529297,
+            "bottom": 873.7000122070312,
+            "width": 176.6666717529297,
+            "height": 42
+          },
+          "value": {
+            "x": 37,
+            "y": 885.7000122070312,
+            "right": 341,
+            "bottom": 915.7000122070312,
+            "width": 304,
+            "height": 30
+          }
+        },
+        {
+          "label": {
+            "x": 37,
+            "y": 969.7000122070312,
+            "right": 213.6666717529297,
+            "bottom": 990.7000122070312,
+            "width": 176.6666717529297,
+            "height": 21
+          },
+          "value": {
+            "x": 37,
+            "y": 1002.7000122070312,
+            "right": 341,
+            "bottom": 1032.7000122070312,
+            "width": 304,
+            "height": 30
+          }
+        }
+      ],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/messages",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Kundennachrichten",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 1,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.13336181640625
+          },
+          {
+            "text": "Status",
+            "gap": 10.13330078125
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/customers",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Kunden",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Statusfilter",
+            "gap": 8.13336181640625
+          },
+          {
+            "text": "Typ",
+            "gap": 8.13336181640625
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/companies",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Unternehmen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Unternehmen suchen",
+            "gap": 8.13336181640625
+          },
+          {
+            "text": "Anzeigen",
+            "gap": 8.13330078125
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/service-jobs",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Aufträge",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.13336181640625
+          },
+          {
+            "text": "Kunde",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Status",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Leistungsdatum ab (UTC)",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Bis einschließlich (UTC)",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Leistungsfilter",
+            "gap": 8.13330078125
+          },
+          {
+            "text": "Aufträge suchen",
+            "gap": 8.13330078125
+          },
+          {
+            "text": "Arbeitsstatus",
+            "gap": 8.1334228515625
+          },
+          {
+            "text": "Rechnungsempfänger",
+            "gap": 8.133544921875
+          },
+          {
+            "text": "Kunden suchen",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Kunde",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Auftragsunternehmen",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Status",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Titel",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Leistungstyp",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Leistungsdatum",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Startzeit",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Endzeit",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Arbeitsdauer (Minuten)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Historischer Schätzpreis (€)",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Erledigte Arbeiten / Beschreibung",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Arbeitszusammenfassung für den Kunden",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Interne Notizen",
+            "gap": 10.349609375
+          },
+          {
+            "text": "Leistungsbereich",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Fälligkeitsdatum",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Zweck",
+            "gap": 10.349609375
+          },
+          {
+            "text": "Seiten / Umfang",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Sprachen",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Plattform",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Verantwortung für Inhalte",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Hosting",
+            "gap": 10.349609375
+          },
+          {
+            "text": "Meilensteine",
+            "gap": 10.35009765625
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/quotes",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Angebote",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.13336181640625
+          },
+          {
+            "text": "Status",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Kunden suchen",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Kundenfilter",
+            "gap": 10.1334228515625
+          },
+          {
+            "text": "Angelegt",
+            "gap": 10.1334228515625
+          },
+          {
+            "text": "Bis einschließlich (UTC)",
+            "gap": 10.13330078125
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/invoices",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Rechnungen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.13336181640625
+          },
+          {
+            "text": "Dokumentstatus",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Zahlungsstatus",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Ausgestellt ab (UTC)",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Bis einschließlich (UTC)",
+            "gap": 10.13336181640625
+          },
+          {
+            "text": "Kunden suchen",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Kunde für einen leeren Rechnungsentwurf",
+            "gap": 10.1334228515625
+          },
+          {
+            "text": "Rechtlicher Name",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Straße",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Postleitzahl",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Ort",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Land",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "E-Mail",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Telefon",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Steuerbehandlung",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Steuernummer",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "USt-IdNr. (optional)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Zahlungsziel (Tage)",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Erforderlicher Steuerhinweis / Rechtstext",
+            "gap": 10.350051879882812
+          },
+          {
+            "text": "Kontoinhaber",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Bankname",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "IBAN",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "BIC",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Zahlungshinweise",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Steuerhinweis (Deutsch)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Zahlungshinweise (Deutsch)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Rechnungen suchen",
+            "gap": 8.13330078125
+          },
+          {
+            "text": "Dokumentstatus",
+            "gap": 8.1334228515625
+          },
+          {
+            "text": "Rechnungsempfänger",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Ausstellungsdatum",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Fälligkeitsdatum",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Leistungsbeginn",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Leistungsende",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Empfänger",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Name des Rechnungsempfängers",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "E-Mail",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Straße",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Postleitzahl",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Ort",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Land",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Referenz",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Rechnungshinweis für den Kunden",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Notizen (Deutsch)",
+            "gap": 10.35009765625
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/projects",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Portfolioprojekte",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Projekte suchen",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Status",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Kategorie",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Slug",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Kategorie",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Status",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Anzeigereihenfolge",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Abschlussdatum",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Website-Adresse",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "GitHub-Adresse",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Externe Titelbild-Adresse (optional)",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Technologien und Werkzeuge (kommagetrennt)",
+            "gap": 10.350051879882812
+          },
+          {
+            "text": "Titel (",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Projekttyp (",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Kurze Zusammenfassung",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Vollständige Projektbeschreibung",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Ihre Rolle",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Erledigte Arbeiten – ein Punkt je Zeile",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "SEO-Titel",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Social-Media-Titel",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Meta-Beschreibung",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Social-Media-Beschreibung",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Social-Media-Vorschaubild",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Alternativtext (",
+            "gap": 10.349609375
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/products",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Produkte",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.13336181640625
+          },
+          {
+            "text": "Status",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Typ",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Reihenfolge",
+            "gap": 10.13330078125
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/tasks",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Aufgaben",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.13336181640625
+          },
+          {
+            "text": "Status",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Fälligkeitsansicht",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Priorität",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Kunden suchen",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Kundenfilter",
+            "gap": 10.1334228515625
+          },
+          {
+            "text": "Fällig",
+            "gap": 10.1334228515625
+          },
+          {
+            "text": "Bis einschließlich (UTC)",
+            "gap": 10.13330078125
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/prices",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Preistabelleneditor",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Abschnitt",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Code oder übersetzter Name",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Leistung",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Material for batch (g)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Material cost (EUR/kg)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Machine time for batch (hours)",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Machine cost (EUR/hour)",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Labour for batch (hours)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Labour cost (EUR/hour)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Fixed batch cost (EUR)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Cost allowance (%)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Markup or margin (%)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Stückzahl der Serie",
+            "gap": 10.349609375
+          },
+          {
+            "text": "Preiskalkulation",
+            "gap": 10.35009765625
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/settings",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Einstellungen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Hallo, Synthetic owner",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [
+        {
+          "label": {
+            "x": 273,
+            "y": 301.5,
+            "right": 506,
+            "bottom": 345.5,
+            "width": 233,
+            "height": 44
+          },
+          "value": {
+            "x": 273,
+            "y": 357.5,
+            "right": 506,
+            "bottom": 393.51666259765625,
+            "width": 233,
+            "height": 36.01666259765625
+          }
+        },
+        {
+          "label": {
+            "x": 564,
+            "y": 301.5,
+            "right": 797,
+            "bottom": 345.5,
+            "width": 233,
+            "height": 44
+          },
+          "value": {
+            "x": 564,
+            "y": 357.5,
+            "right": 797,
+            "bottom": 393.51666259765625,
+            "width": 233,
+            "height": 36.01666259765625
+          }
+        },
+        {
+          "label": {
+            "x": 855,
+            "y": 301.5,
+            "right": 1088,
+            "bottom": 345.5,
+            "width": 233,
+            "height": 44
+          },
+          "value": {
+            "x": 855,
+            "y": 357.5,
+            "right": 1088,
+            "bottom": 393.51666259765625,
+            "width": 233,
+            "height": 36.01666259765625
+          }
+        },
+        {
+          "label": {
+            "x": 1146,
+            "y": 301.5,
+            "right": 1379,
+            "bottom": 345.5,
+            "width": 233,
+            "height": 44
+          },
+          "value": {
+            "x": 1146,
+            "y": 357.5,
+            "right": 1379,
+            "bottom": 393.51666259765625,
+            "width": 233,
+            "height": 36.01666259765625
+          }
+        }
+      ],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/messages",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Kundennachrichten",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 1,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.133331298828125
+          },
+          {
+            "text": "Status",
+            "gap": 10.133316040039062
+          },
+          {
+            "text": "Antwort an",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Antwortsprache",
+            "gap": 10.35009765625
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/customers",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Kunden",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Statusfilter",
+            "gap": 8.133331298828125
+          },
+          {
+            "text": "Typ",
+            "gap": 8.133331298828125
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/companies",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Unternehmen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Unternehmen suchen",
+            "gap": 8.133331298828125
+          },
+          {
+            "text": "Anzeigen",
+            "gap": 8.13330078125
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/service-jobs",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Aufträge",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.133331298828125
+          },
+          {
+            "text": "Kunde",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Status",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Leistungsdatum ab (UTC)",
+            "gap": 10.133331298828125
+          },
+          {
+            "text": "Bis einschließlich (UTC)",
+            "gap": 10.133331298828125
+          },
+          {
+            "text": "Leistungsfilter",
+            "gap": 8.13330078125
+          },
+          {
+            "text": "Aufträge suchen",
+            "gap": 8.13330078125
+          },
+          {
+            "text": "Arbeitsstatus",
+            "gap": 8.13330078125
+          },
+          {
+            "text": "Rechnungsempfänger",
+            "gap": 8.13330078125
+          },
+          {
+            "text": "Kunden suchen",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Kunde",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Auftragsunternehmen",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Status",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Titel",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Leistungstyp",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Leistungsdatum",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Startzeit",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Endzeit",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Arbeitsdauer (Minuten)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Historischer Schätzpreis (€)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Erledigte Arbeiten / Beschreibung",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Arbeitszusammenfassung für den Kunden",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Interne Notizen",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Leistungsbereich",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Fälligkeitsdatum",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Zweck",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Seiten / Umfang",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Sprachen",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Plattform",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Verantwortung für Inhalte",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Hosting",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Meilensteine",
+            "gap": 10.35009765625
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/quotes",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Angebote",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.133331298828125
+          },
+          {
+            "text": "Status",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Kunden suchen",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Kundenfilter",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Angelegt",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Bis einschließlich (UTC)",
+            "gap": 10.13336181640625
+          },
+          {
+            "text": "Kunden suchen",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Kunde",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Titel",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Gültig bis",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Umfang / Ausschlüsse (Englisch)",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Umfang / Ausschlüsse (Deutsch)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Service (German)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Service (English)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Description (German)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Description (English)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Quantity",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Unit (German)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Unit (English)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Agreed unit price (EUR)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Steuerbehandlung",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Preismodell",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Zeitraum von",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Zeitraum bis",
+            "gap": 10.3499755859375
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/invoices",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Rechnungen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.133331298828125
+          },
+          {
+            "text": "Dokumentstatus",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Zahlungsstatus",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Ausgestellt ab (UTC)",
+            "gap": 10.133331298828125
+          },
+          {
+            "text": "Bis einschließlich (UTC)",
+            "gap": 10.133331298828125
+          },
+          {
+            "text": "Kunden suchen",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Kunde für einen leeren Rechnungsentwurf",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Rechtlicher Name",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Straße",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Postleitzahl",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Ort",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Land",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "E-Mail",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Telefon",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Steuerbehandlung",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Steuernummer",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "USt-IdNr. (optional)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Zahlungsziel (Tage)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Erforderlicher Steuerhinweis / Rechtstext",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Kontoinhaber",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Bankname",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "IBAN",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "BIC",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Zahlungshinweise",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Steuerhinweis (Deutsch)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Zahlungshinweise (Deutsch)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Rechnungen suchen",
+            "gap": 8.13336181640625
+          },
+          {
+            "text": "Dokumentstatus",
+            "gap": 8.13330078125
+          },
+          {
+            "text": "Rechnungsempfänger",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Ausstellungsdatum",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Fälligkeitsdatum",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Leistungsbeginn",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Leistungsende",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Empfänger",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Name des Rechnungsempfängers",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "E-Mail",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Straße",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Postleitzahl",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Ort",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Land",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Referenz",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Rechnungshinweis für den Kunden",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Notizen (Deutsch)",
+            "gap": 10.349853515625
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/projects",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Portfolioprojekte",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Projekte suchen",
+            "gap": 10.350006103515625
+          },
+          {
+            "text": "Status",
+            "gap": 10.350006103515625
+          },
+          {
+            "text": "Kategorie",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Slug",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Kategorie",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Status",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Anzeigereihenfolge",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Abschlussdatum",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Website-Adresse",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "GitHub-Adresse",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Externe Titelbild-Adresse (optional)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Technologien und Werkzeuge (kommagetrennt)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Titel (",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Projekttyp (",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Kurze Zusammenfassung",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Vollständige Projektbeschreibung",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Ihre Rolle",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Erledigte Arbeiten – ein Punkt je Zeile",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "SEO-Titel",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Social-Media-Titel",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Meta-Beschreibung",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Social-Media-Beschreibung",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Social-Media-Vorschaubild",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Alternativtext (",
+            "gap": 10.35009765625
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/products",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Produkte",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.133331298828125
+          },
+          {
+            "text": "Status",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Typ",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Reihenfolge",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Slug",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Typ",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Status",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Anzeigereihenfolge",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "title",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "description",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "included",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "license",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Bestätigter Preis (EUR)",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Demo-HTTPS-Adresse",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Externe HTTPS-Kaufadresse",
+            "gap": 10.3499755859375
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/tasks",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Aufgaben",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Suchen",
+            "gap": 10.133331298828125
+          },
+          {
+            "text": "Status",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Fälligkeitsansicht",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Priorität",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Kunden suchen",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Kundenfilter",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Fällig",
+            "gap": 10.13330078125
+          },
+          {
+            "text": "Bis einschließlich (UTC)",
+            "gap": 10.1334228515625
+          },
+          {
+            "text": "Titel",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Interne Beschreibung",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Status",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Priorität",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Fälligkeitsdatum",
+            "gap": 10.35003662109375
+          },
+          {
+            "text": "Kunden suchen",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Kunde",
+            "gap": 10.34991455078125
+          },
+          {
+            "text": "Auftrag",
+            "gap": 10.3499755859375
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/prices",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Preistabelleneditor",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          },
+          {
+            "text": "Abschnitt",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Code oder übersetzter Name",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Leistung",
+            "gap": 10.3499755859375
+          },
+          {
+            "text": "Material for batch (g)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Material cost (EUR/kg)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Machine time for batch (hours)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Machine cost (EUR/hour)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Labour for batch (hours)",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Labour cost (EUR/hour)",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Fixed batch cost (EUR)",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Cost allowance (%)",
+            "gap": 10.349853515625
+          },
+          {
+            "text": "Markup or margin (%)",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Stückzahl der Serie",
+            "gap": 10.35009765625
+          },
+          {
+            "text": "Preiskalkulation",
+            "gap": 10.35009765625
+          }
+        ]
+      }
+    },
+    {
+      "control": true,
+      "route": "/settings",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Einstellungen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Oberflächensprache",
+            "gap": 9.800003051757812
+          }
+        ]
+      }
+    }
+  ],
+  "failures": [],
+  "interactions": [
+    "Inbox selection: one editor; no selection mutation",
+    "Native FAQ disclosure opens"
+  ],
+  "consoleErrors": [
+    {
+      "text": "Content-Security-Policy: The page’s settings blocked a JavaScript eval (script-src) from being executed because it violates the following directive: “script-src 'self' 'unsafe-inline'” (Missing 'unsafe-eval')"
+    },
+    {
+      "text": "Content-Security-Policy: The page’s settings blocked a JavaScript eval (script-src) from being executed because it violates the following directive: “script-src 'self' 'unsafe-inline'” (Missing 'unsafe-eval')"
+    },
+    {
+      "text": "Content-Security-Policy: The page’s settings blocked a JavaScript eval (script-src) from being executed because it violates the following directive: “script-src 'self' 'unsafe-inline'” (Missing 'unsafe-eval')"
+    },
+    {
+      "text": "Content-Security-Policy: The page’s settings blocked a JavaScript eval (script-src) from being executed because it violates the following directive: “script-src 'self' 'unsafe-inline'” (Missing 'unsafe-eval')"
+    }
+  ],
+  "networkErrors": []
+}

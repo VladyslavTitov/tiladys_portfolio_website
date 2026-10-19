@@ -9,9 +9,10 @@ export async function until(check, label, timeout=45000) {
   while(Date.now()<end){try{if(await check())return;}catch{} await sleep(100);}
   throw Error(`Timeout: ${label}`);
 }
-export async function browserDriver(firefox=false) {
+export async function browserDriver(firefox=false, portOverride) {
   const profile=await mkdtemp(join(tmpdir(),'tiladys-ui-'));
-  const port=firefox?9340:9341;
+  const port=portOverride || (firefox?9340:9341);
+  if(![9340,9341,9342].includes(port))throw Error('Unexpected local browser port');
   const child=spawn(firefox?'firefox':'google-chrome',firefox?
     ['--headless','--no-remote','--profile',profile,'--remote-debugging-port',String(port),'about:blank']:
     ['--headless=new','--no-sandbox','--disable-dev-shm-usage','--disable-background-networking','--no-first-run',`--remote-debugging-port=${port}`,`--user-data-dir=${profile}`,'about:blank'],{stdio:'ignore'});
@@ -23,13 +24,13 @@ export async function browserDriver(firefox=false) {
     else {await until(async()=>{const r=await fetch(`http://127.0.0.1:${port}/json`);const targets=await r.json();url=targets.find(t=>t.type==='page')?.webSocketDebuggerUrl;return !!url;},'Chrome CDP');}
     socket=new WebSocket(url);await new Promise((resolve,reject)=>{socket.onopen=resolve;socket.onerror=reject});
     let id=0,dialogAccept=false;const pending=new Map();const errors=[],network=[],requests=[],dialogs=[];
-    socket.onmessage=({data})=>{const m=JSON.parse(data);if(m.method==='Runtime.exceptionThrown')errors.push(m.params.exceptionDetails.text);if(m.method==='log.entryAdded'&&m.params.type==='javascript'&&m.params.level==='error')errors.push({text:m.params.text,stack:m.params.stackTrace});if(m.method==='Network.responseReceived'&&m.params.response.status>=400)network.push({url:m.params.response.url,status:m.params.response.status});if(m.method==='Network.requestWillBeSent')requests.push({method:m.params.request.method,url:m.params.request.url});if(m.method==='Page.javascriptDialogOpening'){dialogs.push({type:m.params.type,message:m.params.message});void send('Page.handleJavaScriptDialog',{accept:dialogAccept});}if(m.id){const p=pending.get(m.id);pending.delete(m.id);if(p)m.error?p.reject(Error(JSON.stringify(m))):p.resolve(m.result);}};
+    socket.onmessage=({data})=>{const m=JSON.parse(data);if(m.method==='Runtime.exceptionThrown')errors.push(m.params.exceptionDetails.text);if(m.method==='Runtime.consoleAPICalled'&&m.params.type==='error')errors.push({text:m.params.args.map(a=>a.value??a.description??'').join(' ')});if(m.method==='log.entryAdded'&&m.params.level==='error')errors.push({text:m.params.text,stack:m.params.stackTrace});if(m.method==='Network.responseReceived'&&m.params.response.status>=400)network.push({url:m.params.response.url,status:m.params.response.status});if(m.method==='network.responseCompleted'&&m.params.response.status>=400)network.push({url:m.params.response.url||m.params.request.url,status:m.params.response.status});if(m.method==='Network.requestWillBeSent')requests.push({method:m.params.request.method,url:m.params.request.url});if(m.method==='network.beforeRequestSent')requests.push({method:m.params.request.method,url:m.params.request.url});if(m.method==='Fetch.requestPaused')void send('Fetch.failRequest',{requestId:m.params.requestId,errorReason:'Failed'});if(m.method==='Page.javascriptDialogOpening'){dialogs.push({type:m.params.type,message:m.params.message});void send('Page.handleJavaScriptDialog',{accept:dialogAccept});}if(m.id){const p=pending.get(m.id);pending.delete(m.id);if(p)m.error?p.reject(Error(JSON.stringify(m))):p.resolve(m.result);}};
     const send=(method,params={})=>new Promise((resolve,reject)=>{const n=++id;pending.set(n,{resolve,reject});socket.send(JSON.stringify({id:n,method,params}));});
     let context;
-    if(firefox){await send('session.new',{capabilities:{alwaysMatch:{}}});context=(await send('browsingContext.getTree')).contexts[0].context;await send('session.subscribe',{events:['log.entryAdded']});}
+    if(firefox){await send('session.new',{capabilities:{alwaysMatch:{}}});context=(await send('browsingContext.getTree')).contexts[0].context;await send('session.subscribe',{events:['log.entryAdded','network.responseCompleted','network.beforeRequestSent']});}
     else {await send('Page.enable');await send('Runtime.enable');await send('Network.enable');}
     const evaluate=async expression=>{
-      if(firefox){const r=await send('script.evaluate',{expression:`(async()=>JSON.stringify(await (${expression})))()`,target:{context},awaitPromise:true});if(r.type==='exception')throw Error(JSON.stringify(r.exceptionDetails));return JSON.parse(r.result.value);}
+      if(firefox){const r=await send('script.evaluate',{expression:`(async()=>JSON.stringify({value:await (${expression})}))()`,target:{context},awaitPromise:true});if(r.type==='exception')throw Error(JSON.stringify(r.exceptionDetails));return JSON.parse(r.result.value).value;}
       const r=await send('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));return r.result.value;
     };
     return {send,evaluate,errors,network,requests,dialogs,acceptDialogs:value=>{dialogAccept=value;},close,

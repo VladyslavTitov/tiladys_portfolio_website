@@ -1,0 +1,111 @@
+{
+  "phase": "after",
+  "timestamp": "2026-10-19T11:10:50.086Z",
+  "checks": [
+    {
+      "name": "Anonymous dashboard redirects to login",
+      "passed": true
+    },
+    {
+      "name": "Anonymous private API denied: /customers",
+      "passed": true,
+      "details": {
+        "status": 401
+      }
+    },
+    {
+      "name": "Anonymous private API denied: /invoices",
+      "passed": true,
+      "details": {
+        "status": 401
+      }
+    },
+    {
+      "name": "Anonymous private API denied: /tasks",
+      "passed": true,
+      "details": {
+        "status": 401
+      }
+    },
+    {
+      "name": "Anonymous private API denied: /products",
+      "passed": true,
+      "details": {
+        "status": 401
+      }
+    },
+    {
+      "name": "Anonymous private API denied: /catalogue",
+      "passed": true,
+      "details": {
+        "status": 401
+      }
+    },
+    {
+      "name": "Anonymous private API denied: /account",
+      "passed": true,
+      "details": {
+        "status": 401
+      }
+    },
+    {
+      "name": "Forged logout returns 403 and no-store",
+      "passed": true,
+      "details": {
+        "status": 403
+      }
+    },
+    {
+      "name": "Production session cookie is HttpOnly, Secure and SameSite=Strict",
+      "passed": true
+    },
+    {
+      "name": "Authenticated private read succeeds without caching",
+      "passed": true
+    },
+    {
+      "name": "Logout redirects and revokes stored session",
+      "passed": true
+    },
+    {
+      "name": "Revoked session cannot access private records",
+      "passed": true
+    },
+    {
+      "name": "Forged login origin denied",
+      "passed": true
+    },
+    {
+      "name": "Malformed login body rejected",
+      "passed": true
+    },
+    {
+      "name": "Oversized login body rejected",
+      "passed": true
+    },
+    {
+      "name": "Rotating an untrusted forwarded header cannot bypass IP throttle",
+      "passed": true,
+      "details": {
+        "statuses": [
+          401,
+          401,
+          401,
+          401,
+          401,
+          401,
+          401,
+          401,
+          401,
+          401,
+          401,
+          429,
+          429
+        ]
+      }
+    }
+  ],
+  "failures": [],
+  "syntheticOnly": true,
+  "smtpDisabled": true
+}

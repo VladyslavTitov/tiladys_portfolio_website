@@ -1,0 +1,556 @@
+{
+  "browser": "Firefox",
+  "before": false,
+  "rows": [
+    {
+      "control": true,
+      "route": "",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Hallo, Synthetic owner",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [
+        {
+          "label": {
+            "x": 37,
+            "y": 597.7000122070312,
+            "right": 213.6666717529297,
+            "bottom": 618.7000122070312,
+            "width": 176.6666717529297,
+            "height": 21
+          },
+          "value": {
+            "x": 37,
+            "y": 630.7000122070312,
+            "right": 341,
+            "bottom": 660.7000122070312,
+            "width": 304,
+            "height": 30
+          }
+        },
+        {
+          "label": {
+            "x": 37,
+            "y": 714.7000122070312,
+            "right": 213.6666717529297,
+            "bottom": 735.7000122070312,
+            "width": 176.6666717529297,
+            "height": 21
+          },
+          "value": {
+            "x": 37,
+            "y": 747.7000122070312,
+            "right": 341,
+            "bottom": 777.7000122070312,
+            "width": 304,
+            "height": 30
+          }
+        },
+        {
+          "label": {
+            "x": 37,
+            "y": 831.7000122070312,
+            "right": 213.6666717529297,
+            "bottom": 873.7000122070312,
+            "width": 176.6666717529297,
+            "height": 42
+          },
+          "value": {
+            "x": 37,
+            "y": 885.7000122070312,
+            "right": 341,
+            "bottom": 915.7000122070312,
+            "width": 304,
+            "height": 30
+          }
+        },
+        {
+          "label": {
+            "x": 37,
+            "y": 969.7000122070312,
+            "right": 213.6666717529297,
+            "bottom": 990.7000122070312,
+            "width": 176.6666717529297,
+            "height": 21
+          },
+          "value": {
+            "x": 37,
+            "y": 1002.7000122070312,
+            "right": 341,
+            "bottom": 1032.7000122070312,
+            "width": 304,
+            "height": 30
+          }
+        }
+      ],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/messages",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Kundennachrichten",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 1,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/customers",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Kunden",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/companies",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Unternehmen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/service-jobs",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Aufträge",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/quotes",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Angebote",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/invoices",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Rechnungen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/projects",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Portfolioprojekte",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/products",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Produkte",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/tasks",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Aufgaben",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/prices",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Preistabelleneditor",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/settings",
+      "width": 390,
+      "scroll": 378,
+      "h1": "Einstellungen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Hallo, Synthetic owner",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [
+        {
+          "label": {
+            "x": 273,
+            "y": 301.5,
+            "right": 506,
+            "bottom": 345.5,
+            "width": 233,
+            "height": 44
+          },
+          "value": {
+            "x": 273,
+            "y": 357.5,
+            "right": 506,
+            "bottom": 393.51666259765625,
+            "width": 233,
+            "height": 36.01666259765625
+          }
+        },
+        {
+          "label": {
+            "x": 564,
+            "y": 301.5,
+            "right": 797,
+            "bottom": 345.5,
+            "width": 233,
+            "height": 44
+          },
+          "value": {
+            "x": 564,
+            "y": 357.5,
+            "right": 797,
+            "bottom": 393.51666259765625,
+            "width": 233,
+            "height": 36.01666259765625
+          }
+        },
+        {
+          "label": {
+            "x": 855,
+            "y": 301.5,
+            "right": 1088,
+            "bottom": 345.5,
+            "width": 233,
+            "height": 44
+          },
+          "value": {
+            "x": 855,
+            "y": 357.5,
+            "right": 1088,
+            "bottom": 393.51666259765625,
+            "width": 233,
+            "height": 36.01666259765625
+          }
+        },
+        {
+          "label": {
+            "x": 1146,
+            "y": 301.5,
+            "right": 1379,
+            "bottom": 345.5,
+            "width": 233,
+            "height": 44
+          },
+          "value": {
+            "x": 1146,
+            "y": 357.5,
+            "right": 1379,
+            "bottom": 393.51666259765625,
+            "width": 233,
+            "height": 36.01666259765625
+          }
+        }
+      ],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/messages",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Kundennachrichten",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 1,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/customers",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Kunden",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/companies",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Unternehmen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/service-jobs",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Aufträge",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/quotes",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Angebote",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/invoices",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Rechnungen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/projects",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Portfolioprojekte",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/products",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Produkte",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/tasks",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Aufgaben",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/prices",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Preistabelleneditor",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": true,
+      "route": "/settings",
+      "width": 1440,
+      "scroll": 1428,
+      "h1": "Einstellungen",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    }
+  ],
+  "failures": [],
+  "interactions": [
+    "Inbox selection: one editor; no selection mutation",
+    "Native FAQ disclosure opens"
+  ],
+  "consoleErrors": [
+    {
+      "text": "Content-Security-Policy: The page’s settings blocked a JavaScript eval (script-src) from being executed because it violates the following directive: “script-src 'self' 'unsafe-inline'” (Missing 'unsafe-eval')"
+    },
+    {
+      "text": "Content-Security-Policy: The page’s settings blocked a JavaScript eval (script-src) from being executed because it violates the following directive: “script-src 'self' 'unsafe-inline'” (Missing 'unsafe-eval')"
+    },
+    {
+      "text": "Content-Security-Policy: The page’s settings blocked a JavaScript eval (script-src) from being executed because it violates the following directive: “script-src 'self' 'unsafe-inline'” (Missing 'unsafe-eval')"
+    },
+    {
+      "text": "Content-Security-Policy: The page’s settings blocked a JavaScript eval (script-src) from being executed because it violates the following directive: “script-src 'self' 'unsafe-inline'” (Missing 'unsafe-eval')"
+    }
+  ],
+  "networkErrors": []
+}

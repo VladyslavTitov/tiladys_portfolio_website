@@ -1,0 +1,626 @@
+{
+  "browser": "Chrome",
+  "before": false,
+  "rows": [
+    {
+      "control": false,
+      "route": "/services/business-it",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Business IT & Digital Services",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 39,
+          "y": 1425.6875,
+          "right": 266,
+          "bottom": 4095.3125,
+          "width": 227,
+          "height": 2669.625
+        },
+        "last": {
+          "x": 39,
+          "y": 3682.4375,
+          "right": 266,
+          "bottom": 4095.3125,
+          "width": 227,
+          "height": 412.875
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1319.3125,
+          "right": 287,
+          "bottom": 4865.578125,
+          "width": 269,
+          "height": 3546.265625
+        },
+        "box": {
+          "x": 18,
+          "y": 4149.3125,
+          "right": 287,
+          "bottom": 4865.578125,
+          "width": 269,
+          "height": 716.265625
+        }
+      },
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/privacy",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Privacy Policy",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/terms",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Terms of Use",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/imprint",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Page not found",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/portfolio/synthetic-web-development",
+      "width": 320,
+      "scroll": 305,
+      "h1": "EN · Synthetic web-development project",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/products/synthetic-template",
+      "width": 320,
+      "scroll": 305,
+      "h1": "EN · Synthetic template",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/business-it",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Business IT & Digital Services",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 53,
+          "y": 1244.125,
+          "right": 700,
+          "bottom": 3104.125,
+          "width": 647,
+          "height": 1860
+        },
+        "last": {
+          "x": 53,
+          "y": 2826.125,
+          "right": 700,
+          "bottom": 3104.125,
+          "width": 647,
+          "height": 278
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1159.9375,
+          "right": 735,
+          "bottom": 3614.671875,
+          "width": 717,
+          "height": 2454.734375
+        },
+        "box": {
+          "x": 18,
+          "y": 3167.125,
+          "right": 735,
+          "bottom": 3614.671875,
+          "width": 717,
+          "height": 447.546875
+        }
+      },
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/privacy",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Privacy Policy",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/terms",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Terms of Use",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/imprint",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Page not found",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/portfolio/synthetic-web-development",
+      "width": 768,
+      "scroll": 753,
+      "h1": "EN · Synthetic web-development project",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/products/synthetic-template",
+      "width": 768,
+      "scroll": 753,
+      "h1": "EN · Synthetic template",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/business-it",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Business IT & Digital Services",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 147.5,
+          "y": 1001.234375,
+          "right": 1277.5,
+          "bottom": 1939.234375,
+          "width": 1130,
+          "height": 938
+        },
+        "last": {
+          "x": 721.5,
+          "y": 1661.234375,
+          "right": 1277.5,
+          "bottom": 1939.234375,
+          "width": 556,
+          "height": 278
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 112.5,
+          "y": 905.046875,
+          "right": 1312.5,
+          "bottom": 2212.59375,
+          "width": 1200,
+          "height": 1307.546875
+        },
+        "box": {
+          "x": 112.5,
+          "y": 2002.234375,
+          "right": 1312.5,
+          "bottom": 2212.59375,
+          "width": 1200,
+          "height": 210.359375
+        }
+      },
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 772.265625,
+            "right": 1312.5,
+            "bottom": 2244.59375,
+            "width": 1200,
+            "height": 1472.328125
+          },
+          {
+            "x": 112.5,
+            "y": 2245.59375,
+            "right": 1312.5,
+            "bottom": 2538.78125,
+            "width": 1200,
+            "height": 293.1875
+          },
+          {
+            "x": 112.5,
+            "y": 2539.78125,
+            "right": 1312.5,
+            "bottom": 2884.96875,
+            "width": 1200,
+            "height": 345.1875
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/privacy",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Privacy Policy",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 346,
+            "right": 1312.5,
+            "bottom": 2270.09375,
+            "width": 1200,
+            "height": 1924.09375
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/terms",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Terms of Use",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 346,
+            "right": 1312.5,
+            "bottom": 1157.25,
+            "width": 1200,
+            "height": 811.25
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/imprint",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Page not found",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/portfolio/synthetic-web-development",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "EN · Synthetic web-development project",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 593.796875,
+            "right": 1312.5,
+            "bottom": 1112.4375,
+            "width": 1200,
+            "height": 518.640625
+          },
+          {
+            "x": 112.5,
+            "y": 1112.4375,
+            "right": 1312.5,
+            "bottom": 1420.4375,
+            "width": 1200,
+            "height": 308
+          },
+          {
+            "x": 112.5,
+            "y": 1420.4375,
+            "right": 1312.5,
+            "bottom": 1532.4375,
+            "width": 1200,
+            "height": 112
+          },
+          {
+            "x": 112.5,
+            "y": 1532.4375,
+            "right": 1312.5,
+            "bottom": 1785.890625,
+            "width": 1200,
+            "height": 253.453125
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/products/synthetic-template",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "EN · Synthetic template",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 86,
+            "right": 1312.5,
+            "bottom": 804.1875,
+            "width": 1200,
+            "height": 718.1875
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    }
+  ],
+  "failures": [
+    "Public /services/business-it 1440: orphan fifth group"
+  ],
+  "interactions": [],
+  "consoleErrors": [],
+  "networkErrors": [
+    {
+      "url": "http://127.0.0.1:3100/en/imprint",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:3100/en/imprint",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:3100/en/imprint",
+      "status": 404
+    }
+  ]
+}

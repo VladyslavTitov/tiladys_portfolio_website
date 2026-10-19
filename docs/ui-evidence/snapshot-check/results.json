@@ -1,0 +1,53 @@
+{
+  "method": "Repeated captures against reviewed final public PNG baselines, same installed Chrome/OS/fixture state, 20/255 channel threshold and <=1% changed pixels; no cross-platform equality claim",
+  "rows": [
+    {
+      "name": "public-home-375",
+      "sameSize": true,
+      "differentPixelFraction": 0,
+      "tolerance": 0.01
+    },
+    {
+      "name": "public--about-375",
+      "sameSize": true,
+      "differentPixelFraction": 0,
+      "tolerance": 0.01
+    },
+    {
+      "name": "public--contact-375",
+      "sameSize": true,
+      "differentPixelFraction": 0,
+      "tolerance": 0.01
+    },
+    {
+      "name": "public--services-websites-375",
+      "sameSize": true,
+      "differentPixelFraction": 0.0005602268935602269,
+      "tolerance": 0.01
+    },
+    {
+      "name": "public-home-1440",
+      "sameSize": true,
+      "differentPixelFraction": 0.0008704847017089061,
+      "tolerance": 0.01
+    },
+    {
+      "name": "public--about-1440",
+      "sameSize": true,
+      "differentPixelFraction": 0,
+      "tolerance": 0.01
+    },
+    {
+      "name": "public--contact-1440",
+      "sameSize": true,
+      "differentPixelFraction": 0,
+      "tolerance": 0.01
+    },
+    {
+      "name": "public--services-websites-1440",
+      "sameSize": true,
+      "differentPixelFraction": 0.00008086404208287865,
+      "tolerance": 0.01
+    }
+  ]
+}

@@ -1,0 +1,1360 @@
+{
+  "browser": "Chrome",
+  "before": false,
+  "rows": [
+    {
+      "control": false,
+      "route": "",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 937.203125,
+            "right": 287,
+            "bottom": 1537.359375,
+            "width": 269,
+            "height": 600.15625
+          },
+          "media": {
+            "x": 19,
+            "y": 938.203125,
+            "right": 286,
+            "bottom": 1158.203125,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1424.359375,
+            "right": 262,
+            "bottom": 1512.359375,
+            "width": 219,
+            "height": 88
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1561.359375,
+            "right": 287,
+            "bottom": 2174.296875,
+            "width": 269,
+            "height": 612.9375
+          },
+          "media": {
+            "x": 19,
+            "y": 1562.359375,
+            "right": 286,
+            "bottom": 1782.359375,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2101.296875,
+            "right": 193.0625,
+            "bottom": 2149.296875,
+            "width": 150.0625,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2198.296875,
+            "right": 287,
+            "bottom": 2804.84375,
+            "width": 269,
+            "height": 606.546875
+          },
+          "media": {
+            "x": 19,
+            "y": 2199.296875,
+            "right": 286,
+            "bottom": 2419.296875,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2711.84375,
+            "right": 262,
+            "bottom": 2779.84375,
+            "width": 219,
+            "height": 68
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/about",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Über TiLADYS",
+      "aboutInset": 24,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/contact",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Kontakt",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [
+        {
+          "x": 41,
+          "y": 828.796875,
+          "right": 264,
+          "bottom": 882.796875,
+          "width": 223,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 932.296875,
+          "right": 264,
+          "bottom": 986.296875,
+          "width": 223,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1035.796875,
+          "right": 264,
+          "bottom": 1087.796875,
+          "width": 223,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1137.296875,
+          "right": 264,
+          "bottom": 1191.296875,
+          "width": 223,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1263.296875,
+          "right": 264,
+          "bottom": 1315.296875,
+          "width": 223,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1364.796875,
+          "right": 264,
+          "bottom": 1538.796875,
+          "width": 223,
+          "height": 174
+        },
+        {
+          "x": 45,
+          "y": 1697.359375,
+          "right": 65,
+          "bottom": 1715.359375,
+          "width": 20,
+          "height": 18
+        }
+      ],
+      "form": {
+        "x": 18,
+        "y": 690.921875,
+        "right": 287,
+        "bottom": 1893.359375,
+        "width": 269,
+        "height": 1202.4375
+      },
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/portfolio",
+      "width": 320,
+      "scroll": 313,
+      "h1": "Portfolio",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services/websites",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Website-Erstellung & Webservices",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 39,
+          "y": 1460.6875,
+          "right": 266,
+          "bottom": 2730.75,
+          "width": 227,
+          "height": 1270.0625
+        },
+        "last": {
+          "x": 39,
+          "y": 2520.8125,
+          "right": 266,
+          "bottom": 2730.75,
+          "width": 227,
+          "height": 209.9375
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1354.3125,
+          "right": 287,
+          "bottom": 3472.21875,
+          "width": 269,
+          "height": 2117.90625
+        },
+        "box": {
+          "x": 18,
+          "y": 2784.75,
+          "right": 287,
+          "bottom": 3472.21875,
+          "width": 269,
+          "height": 687.46875
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/pc-laptop",
+      "width": 320,
+      "scroll": 305,
+      "h1": "PC- & Laptop-Service",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 39,
+          "y": 1588.296875,
+          "right": 266,
+          "bottom": 3752.171875,
+          "width": 227,
+          "height": 2163.875
+        },
+        "last": {
+          "x": 39,
+          "y": 3237.171875,
+          "right": 266,
+          "bottom": 3752.171875,
+          "width": 227,
+          "height": 515
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1481.921875,
+          "right": 287,
+          "bottom": 4599.203125,
+          "width": 269,
+          "height": 3117.28125
+        },
+        "box": {
+          "x": 18,
+          "y": 3806.171875,
+          "right": 287,
+          "bottom": 4599.203125,
+          "width": 269,
+          "height": 793.03125
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/3d-printing",
+      "width": 320,
+      "scroll": 305,
+      "h1": "3D-Druck",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services",
+      "width": 320,
+      "scroll": 305,
+      "h1": "IT, Websites & digitale Services",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 1056.375,
+            "right": 287,
+            "bottom": 1656.53125,
+            "width": 269,
+            "height": 600.15625
+          },
+          "media": {
+            "x": 19,
+            "y": 1057.375,
+            "right": 286,
+            "bottom": 1277.375,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1543.53125,
+            "right": 262,
+            "bottom": 1631.53125,
+            "width": 219,
+            "height": 88
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1680.53125,
+            "right": 287,
+            "bottom": 2293.46875,
+            "width": 269,
+            "height": 612.9375
+          },
+          "media": {
+            "x": 19,
+            "y": 1681.53125,
+            "right": 286,
+            "bottom": 1901.53125,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2220.46875,
+            "right": 193.0625,
+            "bottom": 2268.46875,
+            "width": 150.0625,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2317.46875,
+            "right": 287,
+            "bottom": 2924.015625,
+            "width": 269,
+            "height": 606.546875
+          },
+          "media": {
+            "x": 19,
+            "y": 2318.46875,
+            "right": 286,
+            "bottom": 2538.46875,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2831.015625,
+            "right": 262,
+            "bottom": 2899.015625,
+            "width": 219,
+            "height": 68
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/framer",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Framer-Templates",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/3d-models",
+      "width": 320,
+      "scroll": 305,
+      "h1": "3D-Modelle zum Download",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 943.578125,
+            "right": 735,
+            "bottom": 1450.953125,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 944.578125,
+            "right": 734,
+            "bottom": 1164.578125,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1377.953125,
+            "right": 391.921875,
+            "bottom": 1425.953125,
+            "width": 348.921875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1474.953125,
+            "right": 735,
+            "bottom": 1982.328125,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 1475.953125,
+            "right": 734,
+            "bottom": 1695.953125,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1909.328125,
+            "right": 193.0625,
+            "bottom": 1957.328125,
+            "width": 150.0625,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2006.328125,
+            "right": 735,
+            "bottom": 2513.703125,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 2007.328125,
+            "right": 734,
+            "bottom": 2227.328125,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2440.703125,
+            "right": 286.71875,
+            "bottom": 2488.703125,
+            "width": 243.71875,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/about",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Über TiLADYS",
+      "aboutInset": 24,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/contact",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Kontakt",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [
+        {
+          "x": 41,
+          "y": 815.46875,
+          "right": 712,
+          "bottom": 869.46875,
+          "width": 671,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 918.96875,
+          "right": 712,
+          "bottom": 972.96875,
+          "width": 671,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1022.46875,
+          "right": 712,
+          "bottom": 1074.46875,
+          "width": 671,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1123.96875,
+          "right": 712,
+          "bottom": 1177.96875,
+          "width": 671,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1227.46875,
+          "right": 712,
+          "bottom": 1279.46875,
+          "width": 671,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1328.96875,
+          "right": 712,
+          "bottom": 1502.96875,
+          "width": 671,
+          "height": 174
+        },
+        {
+          "x": 45,
+          "y": 1594.359375,
+          "right": 65,
+          "bottom": 1612.359375,
+          "width": 20,
+          "height": 18
+        }
+      ],
+      "form": {
+        "x": 18,
+        "y": 708.78125,
+        "right": 735,
+        "bottom": 1742.359375,
+        "width": 717,
+        "height": 1033.578125
+      },
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/portfolio",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Portfolio",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services/websites",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Website-Erstellung & Webservices",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 53,
+          "y": 1252.328125,
+          "right": 700,
+          "bottom": 2068.328125,
+          "width": 647,
+          "height": 816
+        },
+        "last": {
+          "x": 53,
+          "y": 1926.328125,
+          "right": 700,
+          "bottom": 2068.328125,
+          "width": 647,
+          "height": 142
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1168.140625,
+          "right": 735,
+          "bottom": 2552.484375,
+          "width": 717,
+          "height": 1384.34375
+        },
+        "box": {
+          "x": 18,
+          "y": 2131.328125,
+          "right": 735,
+          "bottom": 2552.484375,
+          "width": 717,
+          "height": 421.15625
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/pc-laptop",
+      "width": 768,
+      "scroll": 753,
+      "h1": "PC- & Laptop-Service",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 53,
+          "y": 1352.90625,
+          "right": 700,
+          "bottom": 2678.90625,
+          "width": 647,
+          "height": 1326
+        },
+        "last": {
+          "x": 53,
+          "y": 2366.90625,
+          "right": 700,
+          "bottom": 2678.90625,
+          "width": 647,
+          "height": 312
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1268.71875,
+          "right": 735,
+          "bottom": 3189.453125,
+          "width": 717,
+          "height": 1920.734375
+        },
+        "box": {
+          "x": 18,
+          "y": 2741.90625,
+          "right": 735,
+          "bottom": 3189.453125,
+          "width": 717,
+          "height": 447.546875
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/3d-printing",
+      "width": 768,
+      "scroll": 753,
+      "h1": "3D-Druck",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services",
+      "width": 768,
+      "scroll": 753,
+      "h1": "IT, Websites & digitale Services",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 957.171875,
+            "right": 735,
+            "bottom": 1464.546875,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 958.171875,
+            "right": 734,
+            "bottom": 1178.171875,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1391.546875,
+            "right": 391.921875,
+            "bottom": 1439.546875,
+            "width": 348.921875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1488.546875,
+            "right": 735,
+            "bottom": 1995.921875,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 1489.546875,
+            "right": 734,
+            "bottom": 1709.546875,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1922.921875,
+            "right": 193.0625,
+            "bottom": 1970.921875,
+            "width": 150.0625,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2019.921875,
+            "right": 735,
+            "bottom": 2527.296875,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 2020.921875,
+            "right": 734,
+            "bottom": 2240.921875,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2454.296875,
+            "right": 286.71875,
+            "bottom": 2502.296875,
+            "width": 243.71875,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/framer",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Framer-Templates",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/3d-models",
+      "width": 768,
+      "scroll": 753,
+      "h1": "3D-Modelle zum Download",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 112.5,
+            "y": 669.0625,
+            "right": 496.5,
+            "bottom": 1229.21875,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 113.5,
+            "y": 670.0625,
+            "right": 495.5,
+            "bottom": 890.0625,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 137.5,
+            "y": 1136.21875,
+            "right": 471.5,
+            "bottom": 1204.21875,
+            "width": 334,
+            "height": 68
+          }
+        },
+        {
+          "box": {
+            "x": 520.5,
+            "y": 669.0625,
+            "right": 904.5,
+            "bottom": 1229.21875,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 521.5,
+            "y": 670.0625,
+            "right": 903.5,
+            "bottom": 890.0625,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 545.5,
+            "y": 1156.21875,
+            "right": 695.5625,
+            "bottom": 1204.21875,
+            "width": 150.0625,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 928.5,
+            "y": 669.0625,
+            "right": 1312.5,
+            "bottom": 1229.21875,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 929.5,
+            "y": 670.0625,
+            "right": 1311.5,
+            "bottom": 890.0625,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 953.5,
+            "y": 1156.21875,
+            "right": 1197.21875,
+            "bottom": 1204.21875,
+            "width": 243.71875,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/about",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Über TiLADYS",
+      "aboutInset": 48,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/contact",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Kontakt",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [
+        {
+          "x": 145.5,
+          "y": 696.6875,
+          "right": 763.15625,
+          "bottom": 750.6875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 800.1875,
+          "right": 763.15625,
+          "bottom": 854.1875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 903.6875,
+          "right": 763.15625,
+          "bottom": 955.6875,
+          "width": 617.65625,
+          "height": 52
+        },
+        {
+          "x": 145.5,
+          "y": 1005.1875,
+          "right": 763.15625,
+          "bottom": 1059.1875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 1108.6875,
+          "right": 763.15625,
+          "bottom": 1160.6875,
+          "width": 617.65625,
+          "height": 52
+        },
+        {
+          "x": 145.5,
+          "y": 1210.1875,
+          "right": 763.15625,
+          "bottom": 1384.1875,
+          "width": 617.65625,
+          "height": 174
+        },
+        {
+          "x": 149.5,
+          "y": 1475.578125,
+          "right": 169.5,
+          "bottom": 1493.578125,
+          "width": 20,
+          "height": 18
+        }
+      ],
+      "form": {
+        "x": 112.5,
+        "y": 568,
+        "right": 796.15625,
+        "bottom": 1633.578125,
+        "width": 683.65625,
+        "height": 1065.578125
+      },
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/portfolio",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Portfolio",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services/websites",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Website-Erstellung & Webservices",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 147.5,
+          "y": 1009.4375,
+          "right": 1277.5,
+          "bottom": 1539.4375,
+          "width": 1130,
+          "height": 530
+        },
+        "last": {
+          "x": 147.5,
+          "y": 1397.4375,
+          "right": 1277.5,
+          "bottom": 1539.4375,
+          "width": 1130,
+          "height": 142
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 112.5,
+          "y": 913.25,
+          "right": 1312.5,
+          "bottom": 1786.40625,
+          "width": 1200,
+          "height": 873.15625
+        },
+        "box": {
+          "x": 112.5,
+          "y": 1602.4375,
+          "right": 1312.5,
+          "bottom": 1786.40625,
+          "width": 1200,
+          "height": 183.96875
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/pc-laptop",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "PC- & Laptop-Service",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 147.5,
+          "y": 1061.25,
+          "right": 1277.5,
+          "bottom": 1897.25,
+          "width": 1130,
+          "height": 836
+        },
+        "last": {
+          "x": 147.5,
+          "y": 1585.25,
+          "right": 1277.5,
+          "bottom": 1897.25,
+          "width": 1130,
+          "height": 312
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 112.5,
+          "y": 965.0625,
+          "right": 1312.5,
+          "bottom": 2170.609375,
+          "width": 1200,
+          "height": 1205.546875
+        },
+        "box": {
+          "x": 112.5,
+          "y": 1960.25,
+          "right": 1312.5,
+          "bottom": 2170.609375,
+          "width": 1200,
+          "height": 210.359375
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/3d-printing",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "3D-Druck",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "IT, Websites & digitale Services",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 112.5,
+            "y": 718.671875,
+            "right": 496.5,
+            "bottom": 1278.828125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 113.5,
+            "y": 719.671875,
+            "right": 495.5,
+            "bottom": 939.671875,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 137.5,
+            "y": 1185.828125,
+            "right": 471.5,
+            "bottom": 1253.828125,
+            "width": 334,
+            "height": 68
+          }
+        },
+        {
+          "box": {
+            "x": 520.5,
+            "y": 718.671875,
+            "right": 904.5,
+            "bottom": 1278.828125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 521.5,
+            "y": 719.671875,
+            "right": 903.5,
+            "bottom": 939.671875,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 545.5,
+            "y": 1205.828125,
+            "right": 695.5625,
+            "bottom": 1253.828125,
+            "width": 150.0625,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 928.5,
+            "y": 718.671875,
+            "right": 1312.5,
+            "bottom": 1278.828125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 929.5,
+            "y": 719.671875,
+            "right": 1311.5,
+            "bottom": 939.671875,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 953.5,
+            "y": 1205.828125,
+            "right": 1197.21875,
+            "bottom": 1253.828125,
+            "width": 243.71875,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/framer",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Framer-Templates",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/3d-models",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "3D-Modelle zum Download",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    }
+  ],
+  "failures": [],
+  "interactions": [],
+  "consoleErrors": [],
+  "networkErrors": []
+}

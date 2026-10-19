@@ -8,14 +8,14 @@ const db=new PrismaClient();
 try {
  if(process.argv[2]==='empty'){
   try{await readFile(path);throw Error('Restore the previous visibility checkpoint first.');}catch(e){if((e as NodeJS.ErrnoException).code!=='ENOENT')throw e;}
-  const projects=await db.project.findMany({where:{status:'PUBLISHED'},select:{id:true,status:true}});
-  const products=await db.product.findMany({where:{status:'PUBLISHED'},select:{id:true,status:true}});
+  const projects=await db.project.findMany({where:{status:'PUBLISHED'},select:{id:true,status:true,homepageFeatured:true,updatedAt:true}});
+  const products=await db.product.findMany({where:{status:'PUBLISHED'},select:{id:true,status:true,updatedAt:true}});
   await writeFile(path,JSON.stringify({projects,products}),{mode:0o600});
   await db.$transaction([...projects.map(p=>db.project.update({where:{id:p.id},data:{status:'DRAFT'}})),...products.map(p=>db.product.update({where:{id:p.id},data:{status:'DRAFT'}}))]);
   console.log(`Synthetic empty catalogue state: ${projects.length} projects, ${products.length} products retained privately.`);
  }else if(process.argv[2]==='restore'){
-  const {projects,products}=JSON.parse(await readFile(path,'utf8')) as {projects:Array<{id:string}>;products:Array<{id:string}>};
-  await db.$transaction([...projects.map(p=>db.project.update({where:{id:p.id},data:{status:'PUBLISHED'}})),...products.map(p=>db.product.update({where:{id:p.id},data:{status:'PUBLISHED'}}))]);
+  const {projects,products}=JSON.parse(await readFile(path,'utf8')) as {projects:Array<{id:string;homepageFeatured:boolean;updatedAt:string}>;products:Array<{id:string;updatedAt:string}>};
+  await db.$transaction([...projects.map(p=>db.project.update({where:{id:p.id},data:{status:'PUBLISHED',homepageFeatured:p.homepageFeatured,updatedAt:new Date(p.updatedAt)}})),...products.map(p=>db.product.update({where:{id:p.id},data:{status:'PUBLISHED',updatedAt:new Date(p.updatedAt)}}))]);
   await unlink(path);console.log('Original synthetic publication state restored.');
  }else throw Error('Use empty or restore.');
 }finally{await db.$disconnect();}

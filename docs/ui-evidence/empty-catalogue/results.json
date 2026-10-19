@@ -1,0 +1,1436 @@
+{
+  "browser": "Chrome",
+  "before": false,
+  "rows": [
+    {
+      "control": false,
+      "route": "",
+      "width": 375,
+      "scroll": 360,
+      "h1": "Websites. 3D prints. Practical PC support.",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 880.234375,
+            "right": 342,
+            "bottom": 1434,
+            "width": 324,
+            "height": 553.765625
+          },
+          "media": {
+            "x": 19,
+            "y": 881.234375,
+            "right": 341,
+            "bottom": 1101.234375,
+            "width": 322,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1341,
+            "right": 317,
+            "bottom": 1409,
+            "width": 274,
+            "height": 68
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1458,
+            "right": 342,
+            "bottom": 2018.15625,
+            "width": 324,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 19,
+            "y": 1459,
+            "right": 341,
+            "bottom": 1679,
+            "width": 322,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1945.15625,
+            "right": 204.484375,
+            "bottom": 1993.15625,
+            "width": 161.484375,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2042.15625,
+            "right": 342,
+            "bottom": 2575.921875,
+            "width": 324,
+            "height": 533.765625
+          },
+          "media": {
+            "x": 19,
+            "y": 2043.15625,
+            "right": 341,
+            "bottom": 2263.15625,
+            "width": 322,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2502.921875,
+            "right": 284.3125,
+            "bottom": 2550.921875,
+            "width": 241.3125,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/about",
+      "width": 375,
+      "scroll": 360,
+      "h1": "About TiLADYS",
+      "aboutInset": 24,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/contact",
+      "width": 375,
+      "scroll": 360,
+      "h1": "Contact",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [
+        {
+          "x": 41,
+          "y": 754.828125,
+          "right": 319,
+          "bottom": 808.828125,
+          "width": 278,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 858.328125,
+          "right": 319,
+          "bottom": 912.328125,
+          "width": 278,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 961.828125,
+          "right": 319,
+          "bottom": 1013.828125,
+          "width": 278,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1063.328125,
+          "right": 319,
+          "bottom": 1117.328125,
+          "width": 278,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1166.828125,
+          "right": 319,
+          "bottom": 1218.828125,
+          "width": 278,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1268.328125,
+          "right": 319,
+          "bottom": 1442.328125,
+          "width": 278,
+          "height": 174
+        },
+        {
+          "x": 45,
+          "y": 1578.5,
+          "right": 65,
+          "bottom": 1596.5,
+          "width": 20,
+          "height": 18
+        }
+      ],
+      "form": {
+        "x": 18,
+        "y": 648.140625,
+        "right": 342,
+        "bottom": 1738.5,
+        "width": 324,
+        "height": 1090.359375
+      },
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Your Name",
+            "gap": 10.5
+          },
+          {
+            "text": "Email Address",
+            "gap": 10.5
+          },
+          {
+            "text": "Service Needed",
+            "gap": 10.5
+          },
+          {
+            "text": "Phone (optional)",
+            "gap": 10.5
+          },
+          {
+            "text": "Preferred reply language (optional)",
+            "gap": 10.5
+          },
+          {
+            "text": "Message",
+            "gap": 10.5
+          }
+        ]
+      }
+    },
+    {
+      "control": false,
+      "route": "/portfolio",
+      "width": 375,
+      "scroll": 360,
+      "h1": "Portfolio",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Search",
+            "gap": 8
+          },
+          {
+            "text": "Category",
+            "gap": 8
+          }
+        ]
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/websites",
+      "width": 375,
+      "scroll": 360,
+      "h1": "Website Creation & Web Services",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 39,
+          "y": 1374.65625,
+          "right": 321,
+          "bottom": 2437.40625,
+          "width": 282,
+          "height": 1062.75
+        },
+        "last": {
+          "x": 39,
+          "y": 2250.65625,
+          "right": 321,
+          "bottom": 2437.40625,
+          "width": 282,
+          "height": 186.75
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1268.28125,
+          "right": 342,
+          "bottom": 3018.125,
+          "width": 324,
+          "height": 1749.84375
+        },
+        "box": {
+          "x": 18,
+          "y": 2491.40625,
+          "right": 342,
+          "bottom": 3018.125,
+          "width": 324,
+          "height": 526.71875
+        }
+      },
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/pc-laptop",
+      "width": 375,
+      "scroll": 360,
+      "h1": "PC & Laptop Services",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 39,
+          "y": 1447.1875,
+          "right": 321,
+          "bottom": 3153.5625,
+          "width": 282,
+          "height": 1706.375
+        },
+        "last": {
+          "x": 39,
+          "y": 2774.4375,
+          "right": 321,
+          "bottom": 3153.5625,
+          "width": 282,
+          "height": 379.125
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1340.8125,
+          "right": 342,
+          "bottom": 3813.453125,
+          "width": 324,
+          "height": 2472.640625
+        },
+        "box": {
+          "x": 18,
+          "y": 3207.5625,
+          "right": 342,
+          "bottom": 3813.453125,
+          "width": 324,
+          "height": 605.890625
+        }
+      },
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/3d-printing",
+      "width": 375,
+      "scroll": 360,
+      "h1": "3D Printing",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/services",
+      "width": 375,
+      "scroll": 360,
+      "h1": "IT, Websites & Digital Services",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 1052.140625,
+            "right": 342,
+            "bottom": 1605.90625,
+            "width": 324,
+            "height": 553.765625
+          },
+          "media": {
+            "x": 19,
+            "y": 1053.140625,
+            "right": 341,
+            "bottom": 1273.140625,
+            "width": 322,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1512.90625,
+            "right": 317,
+            "bottom": 1580.90625,
+            "width": 274,
+            "height": 68
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1629.90625,
+            "right": 342,
+            "bottom": 2190.0625,
+            "width": 324,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 19,
+            "y": 1630.90625,
+            "right": 341,
+            "bottom": 1850.90625,
+            "width": 322,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2117.0625,
+            "right": 204.484375,
+            "bottom": 2165.0625,
+            "width": 161.484375,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2214.0625,
+            "right": 342,
+            "bottom": 2747.828125,
+            "width": 324,
+            "height": 533.765625
+          },
+          "media": {
+            "x": 19,
+            "y": 2215.0625,
+            "right": 341,
+            "bottom": 2435.0625,
+            "width": 322,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2674.828125,
+            "right": 284.3125,
+            "bottom": 2722.828125,
+            "width": 241.3125,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/products/framer",
+      "width": 375,
+      "scroll": 360,
+      "h1": "Framer templates",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Search",
+            "gap": 8
+          }
+        ]
+      }
+    },
+    {
+      "control": false,
+      "route": "/products/3d-models",
+      "width": 375,
+      "scroll": 360,
+      "h1": "Downloadable 3D models",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Search",
+            "gap": 8
+          }
+        ]
+      }
+    },
+    {
+      "control": false,
+      "route": "",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Websites. 3D prints. Practical PC support.",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 112.5,
+            "y": 669.0625,
+            "right": 496.5,
+            "bottom": 1229.21875,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 113.5,
+            "y": 670.0625,
+            "right": 495.5,
+            "bottom": 890.0625,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 137.5,
+            "y": 1136.21875,
+            "right": 471.5,
+            "bottom": 1204.21875,
+            "width": 334,
+            "height": 68
+          }
+        },
+        {
+          "box": {
+            "x": 520.5,
+            "y": 669.0625,
+            "right": 904.5,
+            "bottom": 1229.21875,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 521.5,
+            "y": 670.0625,
+            "right": 903.5,
+            "bottom": 890.0625,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 545.5,
+            "y": 1156.21875,
+            "right": 706.984375,
+            "bottom": 1204.21875,
+            "width": 161.484375,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 928.5,
+            "y": 669.0625,
+            "right": 1312.5,
+            "bottom": 1229.21875,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 929.5,
+            "y": 670.0625,
+            "right": 1311.5,
+            "bottom": 890.0625,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 953.5,
+            "y": 1156.21875,
+            "right": 1194.8125,
+            "bottom": 1204.21875,
+            "width": 241.3125,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 564,
+            "right": 1312.5,
+            "bottom": 1261.21875,
+            "width": 1200,
+            "height": 697.21875
+          },
+          {
+            "x": 112.5,
+            "y": 1261.21875,
+            "right": 1312.5,
+            "bottom": 1514.671875,
+            "width": 1200,
+            "height": 253.453125
+          },
+          {
+            "x": 112.5,
+            "y": 1514.671875,
+            "right": 1312.5,
+            "bottom": 1701.46875,
+            "width": 1200,
+            "height": 186.796875
+          },
+          {
+            "x": 112.5,
+            "y": 1701.46875,
+            "right": 1312.5,
+            "bottom": 1886.53125,
+            "width": 1200,
+            "height": 185.0625
+          },
+          {
+            "x": 112.5,
+            "y": 1918.53125,
+            "right": 1312.5,
+            "bottom": 2240.25,
+            "width": 1200,
+            "height": 321.71875
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/about",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "About TiLADYS",
+      "aboutInset": 48,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 110,
+            "right": 1312.5,
+            "bottom": 536.8125,
+            "width": 1200,
+            "height": 426.8125
+          },
+          {
+            "x": 112.5,
+            "y": 536.8125,
+            "right": 1312.5,
+            "bottom": 916.8125,
+            "width": 1200,
+            "height": 380
+          },
+          {
+            "x": 112.5,
+            "y": 916.8125,
+            "right": 1312.5,
+            "bottom": 1516.046875,
+            "width": 1200,
+            "height": 599.234375
+          },
+          {
+            "x": 112.5,
+            "y": 1532.046875,
+            "right": 1312.5,
+            "bottom": 1964.5,
+            "width": 1200,
+            "height": 432.453125
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/contact",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Contact",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [
+        {
+          "x": 145.5,
+          "y": 696.6875,
+          "right": 763.15625,
+          "bottom": 750.6875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 800.1875,
+          "right": 763.15625,
+          "bottom": 854.1875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 903.6875,
+          "right": 763.15625,
+          "bottom": 955.6875,
+          "width": 617.65625,
+          "height": 52
+        },
+        {
+          "x": 145.5,
+          "y": 1005.1875,
+          "right": 763.15625,
+          "bottom": 1059.1875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 1108.6875,
+          "right": 763.15625,
+          "bottom": 1160.6875,
+          "width": 617.65625,
+          "height": 52
+        },
+        {
+          "x": 145.5,
+          "y": 1210.1875,
+          "right": 763.15625,
+          "bottom": 1384.1875,
+          "width": 617.65625,
+          "height": 174
+        },
+        {
+          "x": 149.5,
+          "y": 1475.578125,
+          "right": 169.5,
+          "bottom": 1493.578125,
+          "width": 20,
+          "height": 18
+        }
+      ],
+      "form": {
+        "x": 112.5,
+        "y": 568,
+        "right": 796.15625,
+        "bottom": 1633.578125,
+        "width": 683.65625,
+        "height": 1065.578125
+      },
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 536,
+            "right": 1312.5,
+            "bottom": 1665.578125,
+            "width": 1200,
+            "height": 1129.578125
+          },
+          {
+            "x": 112.5,
+            "y": 1665.578125,
+            "right": 1312.5,
+            "bottom": 1938.671875,
+            "width": 1200,
+            "height": 273.09375
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Your Name",
+            "gap": 10.5
+          },
+          {
+            "text": "Email Address",
+            "gap": 10.5
+          },
+          {
+            "text": "Service Needed",
+            "gap": 10.5
+          },
+          {
+            "text": "Phone (optional)",
+            "gap": 10.5
+          },
+          {
+            "text": "Preferred reply language (optional)",
+            "gap": 10.5
+          },
+          {
+            "text": "Message",
+            "gap": 10.5
+          }
+        ]
+      }
+    },
+    {
+      "control": false,
+      "route": "/portfolio",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Portfolio",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 512,
+            "right": 1312.5,
+            "bottom": 1128,
+            "width": 1200,
+            "height": 616
+          },
+          {
+            "x": 112.5,
+            "y": 1128,
+            "right": 1312.5,
+            "bottom": 1314.796875,
+            "width": 1200,
+            "height": 186.796875
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Search",
+            "gap": 8
+          },
+          {
+            "text": "Category",
+            "gap": 8
+          }
+        ]
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/websites",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Website Creation & Web Services",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 147.5,
+          "y": 1009.4375,
+          "right": 1277.5,
+          "bottom": 1539.4375,
+          "width": 1130,
+          "height": 530
+        },
+        "last": {
+          "x": 147.5,
+          "y": 1397.4375,
+          "right": 1277.5,
+          "bottom": 1539.4375,
+          "width": 1130,
+          "height": 142
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 112.5,
+          "y": 913.25,
+          "right": 1312.5,
+          "bottom": 1786.40625,
+          "width": 1200,
+          "height": 873.15625
+        },
+        "box": {
+          "x": 112.5,
+          "y": 1602.4375,
+          "right": 1312.5,
+          "bottom": 1786.40625,
+          "width": 1200,
+          "height": 183.96875
+        }
+      },
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 754.078125,
+            "right": 1312.5,
+            "bottom": 1818.40625,
+            "width": 1200,
+            "height": 1064.328125
+          },
+          {
+            "x": 112.5,
+            "y": 1819.40625,
+            "right": 1312.5,
+            "bottom": 2112.59375,
+            "width": 1200,
+            "height": 293.1875
+          },
+          {
+            "x": 112.5,
+            "y": 2113.59375,
+            "right": 1312.5,
+            "bottom": 2458.78125,
+            "width": 1200,
+            "height": 345.1875
+          },
+          {
+            "x": 112.5,
+            "y": 2676.78125,
+            "right": 1312.5,
+            "bottom": 3077.6875,
+            "width": 1200,
+            "height": 400.90625
+          },
+          {
+            "x": 112.5,
+            "y": 3384.75,
+            "right": 1312.5,
+            "bottom": 3638.203125,
+            "width": 1200,
+            "height": 253.453125
+          },
+          {
+            "x": 112.5,
+            "y": 3638.203125,
+            "right": 1312.5,
+            "bottom": 3888.046875,
+            "width": 1200,
+            "height": 249.84375
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/pc-laptop",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "PC & Laptop Services",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 147.5,
+          "y": 1026.609375,
+          "right": 1277.5,
+          "bottom": 1862.609375,
+          "width": 1130,
+          "height": 836
+        },
+        "last": {
+          "x": 147.5,
+          "y": 1550.609375,
+          "right": 1277.5,
+          "bottom": 1862.609375,
+          "width": 1130,
+          "height": 312
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 112.5,
+          "y": 930.421875,
+          "right": 1312.5,
+          "bottom": 2135.96875,
+          "width": 1200,
+          "height": 1205.546875
+        },
+        "box": {
+          "x": 112.5,
+          "y": 1925.609375,
+          "right": 1312.5,
+          "bottom": 2135.96875,
+          "width": 1200,
+          "height": 210.359375
+        }
+      },
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 771.25,
+            "right": 1312.5,
+            "bottom": 2167.96875,
+            "width": 1200,
+            "height": 1396.71875
+          },
+          {
+            "x": 112.5,
+            "y": 2168.96875,
+            "right": 1312.5,
+            "bottom": 2462.15625,
+            "width": 1200,
+            "height": 293.1875
+          },
+          {
+            "x": 112.5,
+            "y": 2463.15625,
+            "right": 1312.5,
+            "bottom": 2808.34375,
+            "width": 1200,
+            "height": 345.1875
+          },
+          {
+            "x": 112.5,
+            "y": 3026.34375,
+            "right": 1312.5,
+            "bottom": 3559.40625,
+            "width": 1200,
+            "height": 533.0625
+          },
+          {
+            "x": 112.5,
+            "y": 3866.46875,
+            "right": 1312.5,
+            "bottom": 4119.921875,
+            "width": 1200,
+            "height": 253.453125
+          },
+          {
+            "x": 112.5,
+            "y": 4119.921875,
+            "right": 1312.5,
+            "bottom": 4295.921875,
+            "width": 1200,
+            "height": 176
+          },
+          {
+            "x": 112.5,
+            "y": 4295.921875,
+            "right": 1312.5,
+            "bottom": 4528.15625,
+            "width": 1200,
+            "height": 232.234375
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/3d-printing",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "3D Printing",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 661.125,
+            "right": 1312.5,
+            "bottom": 1213.84375,
+            "width": 1200,
+            "height": 552.71875
+          },
+          {
+            "x": 112.5,
+            "y": 1214.84375,
+            "right": 1312.5,
+            "bottom": 1508.03125,
+            "width": 1200,
+            "height": 293.1875
+          },
+          {
+            "x": 112.5,
+            "y": 1509.03125,
+            "right": 1312.5,
+            "bottom": 1854.21875,
+            "width": 1200,
+            "height": 345.1875
+          },
+          {
+            "x": 112.5,
+            "y": 2464.28125,
+            "right": 1312.5,
+            "bottom": 2887.0625,
+            "width": 1200,
+            "height": 422.78125
+          },
+          {
+            "x": 112.5,
+            "y": 2887.0625,
+            "right": 1312.5,
+            "bottom": 3140.515625,
+            "width": 1200,
+            "height": 253.453125
+          },
+          {
+            "x": 112.5,
+            "y": 3140.515625,
+            "right": 1312.5,
+            "bottom": 3390.359375,
+            "width": 1200,
+            "height": 249.84375
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/services",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "IT, Websites & Digital Services",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 112.5,
+            "y": 718.671875,
+            "right": 496.5,
+            "bottom": 1278.828125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 113.5,
+            "y": 719.671875,
+            "right": 495.5,
+            "bottom": 939.671875,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 137.5,
+            "y": 1185.828125,
+            "right": 471.5,
+            "bottom": 1253.828125,
+            "width": 334,
+            "height": 68
+          }
+        },
+        {
+          "box": {
+            "x": 520.5,
+            "y": 718.671875,
+            "right": 904.5,
+            "bottom": 1278.828125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 521.5,
+            "y": 719.671875,
+            "right": 903.5,
+            "bottom": 939.671875,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 545.5,
+            "y": 1205.828125,
+            "right": 706.984375,
+            "bottom": 1253.828125,
+            "width": 161.484375,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 928.5,
+            "y": 718.671875,
+            "right": 1312.5,
+            "bottom": 1278.828125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 929.5,
+            "y": 719.671875,
+            "right": 1311.5,
+            "bottom": 939.671875,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 953.5,
+            "y": 1205.828125,
+            "right": 1194.8125,
+            "bottom": 1253.828125,
+            "width": 241.3125,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 613.609375,
+            "right": 1312.5,
+            "bottom": 1310.828125,
+            "width": 1200,
+            "height": 697.21875
+          },
+          {
+            "x": 112.5,
+            "y": 1310.828125,
+            "right": 1312.5,
+            "bottom": 2314.546875,
+            "width": 1200,
+            "height": 1003.71875
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": []
+      }
+    },
+    {
+      "control": false,
+      "route": "/products/framer",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Framer templates",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 86,
+            "right": 1312.5,
+            "bottom": 388.265625,
+            "width": 1200,
+            "height": 302.265625
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Search",
+            "gap": 8
+          }
+        ]
+      }
+    },
+    {
+      "control": false,
+      "route": "/products/3d-models",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Downloadable 3D models",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null,
+      "invariants": {
+        "sections": [
+          {
+            "x": 112.5,
+            "y": 86,
+            "right": 1312.5,
+            "bottom": 388.265625,
+            "width": 1200,
+            "height": 302.265625
+          }
+        ],
+        "heroOverlaps": [],
+        "cardEscapes": [],
+        "channelOverlaps": 0,
+        "labelGaps": [
+          {
+            "text": "Search",
+            "gap": 8
+          }
+        ]
+      }
+    }
+  ],
+  "failures": [],
+  "interactions": [],
+  "consoleErrors": [],
+  "networkErrors": []
+}
