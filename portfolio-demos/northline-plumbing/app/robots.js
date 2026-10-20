@@ -1,0 +1,1 @@
+import {siteUrl,demoMode} from '@/lib/config';export default function robots(){return {rules:{userAgent:'*',allow:demoMode?undefined:'/',disallow:demoMode?'/':['/admin','/api/']},sitemap:siteUrl+'/sitemap.xml'};}

@@ -1,0 +1,1 @@
+'use client';export default function Error({reset}){return <main id="main" className="section inner"><h1>We hit a small snag.</h1><p>Please try again. Your request is only saved when a confirmation appears.</p><button className="button" onClick={reset}>Try again ↻</button></main>}

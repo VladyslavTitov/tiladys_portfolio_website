@@ -1,0 +1,1 @@
+import Dashboard from '@/components/Dashboard';export const metadata={title:'Team access',robots:{index:false,follow:false}};export default function Admin(){return <main id="main" className="section inner"><p className="eyebrow">TEAM WORKSPACE / PRIVATE ACCESS</p><h1 className="page-title">A clearer overview.</h1><Dashboard/></main>}

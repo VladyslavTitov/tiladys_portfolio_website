@@ -1,0 +1,3 @@
+import Link from 'next/link';import {site} from '@/lib/config';
+export const metadata={title:'Field notes',alternates:{canonical:'/journal'}};
+export default function Journal(){return <main id="main" className="section inner journal"><p className="eyebrow">A LITTLE KNOWLEDGE. A CLEARER NEXT STEP.</p><h1 className="page-title">Field notes.</h1><Link className="journal-feature" href={`/journal/${site.article}`}><div><span className="eyebrow">{site.city.toUpperCase()} / A PRACTICAL STARTING POINT</span><h2>{site.articleTitle}</h2><p>Simple preparation, useful questions and a clearer route to the next conversation.</p><span className="text-link">Read the guide ↗</span></div><span className="journal-glyph" aria-hidden="true">↗</span></Link></main>}

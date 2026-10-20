@@ -1,0 +1,1 @@
+import {site,siteUrl} from '@/lib/config';export default function sitemap(){return ['','/book','/journal','/privacy',`/journal/${site.article}`,...site.services.map(s=>`/services/${s[0]}`)].map(path=>({url:siteUrl+path,changeFrequency:'monthly',priority:path?0.7:1}));}
