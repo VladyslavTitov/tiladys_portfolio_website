@@ -1,0 +1,115 @@
+{
+  "scope": "restored isolated pre-migration copy plus synthetic historical rows",
+  "allOriginalColumnFingerprintsUnchanged": true,
+  "tables": {
+    "AdminUser": {
+      "count": 1,
+      "sha256": "26823bf2a8d17d2874db4525db559c9a5a59b284df74c8a2d2d54800e4272233"
+    },
+    "AuditLog": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "BusinessBillingSettings": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "Company": {
+      "count": 1,
+      "sha256": "0af39920c13d84dc88882aa10af38d0633c08f3d2bbd05cb6207d881747f5397"
+    },
+    "ContactAttachment": {
+      "count": 1,
+      "sha256": "71fcec780c7d7fe727d131b99d7b4958878d99e61d8e0a0ced1fc7a22a0d1610"
+    },
+    "ContactMessage": {
+      "count": 1,
+      "sha256": "c897c363f46e307c7a437a3df666ff530509c9ef8d66cf98257d57163ca563a8"
+    },
+    "ContactRateLimit": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "Customer": {
+      "count": 1,
+      "sha256": "8ccb61db137557dcd41af7e8565aca64d4563212e2807688aeb5bbdad986bfde"
+    },
+    "CustomerActivity": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "CustomerNote": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "FileAsset": {
+      "count": 1,
+      "sha256": "af88ce4e531ba64ee3fb7a7baba6fdc401177316649d18be1125a7d70f2fefdb"
+    },
+    "Invoice": {
+      "count": 1,
+      "sha256": "bea53c9a7a73459961411f13f37b0071d888aa96be9f72ce5e574ed1642843ec"
+    },
+    "InvoiceLine": {
+      "count": 1,
+      "sha256": "637ee3a646e6368541477824d77ecaa9978890df6341d98e345407c8a362c406"
+    },
+    "InvoicePayment": {
+      "count": 2,
+      "sha256": "f6865cef423cb9b682ae655c466e54707b830bcd6994471e38ac0fb453d4da0f"
+    },
+    "NumberSequence": {
+      "count": 3,
+      "sha256": "e4af510a25ca504d5b86c373577594e1c9722e1f769669b84a9099d0bcdbbc03"
+    },
+    "PriceItem": {
+      "count": 1,
+      "sha256": "542e6258f3685ca53c4ea6d3204aa25e1263f5265cab8a914b1dd84e3bf6265c"
+    },
+    "PriceSection": {
+      "count": 1,
+      "sha256": "aa39d79018c7a7dbae2bedb23974c27d62d87e6afaf295941fa9698f86901a4f"
+    },
+    "Project": {
+      "count": 1,
+      "sha256": "216e2260ceefe851425270553ecbe85c363d9adf93cf8440d20358c24242924d"
+    },
+    "ProjectImage": {
+      "count": 1,
+      "sha256": "f7e3dd543604b66c5c0c9d431b4d2931854faa32f8da50737bd8ba9e7dc1b5bb"
+    },
+    "ProjectSlugAlias": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "ServiceJob": {
+      "count": 1,
+      "sha256": "9552bb3a65286078f0917a3484fcbc47887b346841813077b0027039740c9831"
+    },
+    "ServiceJobLineItem": {
+      "count": 1,
+      "sha256": "22b56d668769c85d5ec38ddacf1ef5816e1c1bab369b4ab676765bc8aeb3a736"
+    },
+    "Session": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "VisitorDay": {
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "invoice": {
+    "number": "RECOVERY-LEGACY-INV",
+    "total": "119",
+    "documentVersion": 2,
+    "pdfSha256": "379f64e1f9cd9cbd18916026a5b8f976510bf6181ba0fb19cad66a6f1d73b3ac",
+    "pdfBytes": 50169,
+    "paymentCount": 2,
+    "paymentTotal": "40.00",
+    "oldNullIdempotencyKeysPreserved": true
+  },
+  "media": "ProjectImage and ContactAttachment exact bytes preserved; FileAsset metadata/checksum unchanged; no real object-store request",
+  "releaseSchemaAdversarialTest": "pass; all simulated changes rolled back",
+  "realDataModified": false
+}

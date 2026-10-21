@@ -1,0 +1,20 @@
+{
+  "source": {
+    "projectId": "plain-sound-02437622",
+    "branchId": "br-winter-haze-b19z750x",
+    "parentId": "br-delicate-block-b19w0iqs",
+    "endpointId": "ep-morning-queen-b11zgtsf",
+    "host": "ep-morning-queen-b11zgtsf.c-5.eu-central-1.aws.neon.tech",
+    "parentLsn": "0/1DDE4C8",
+    "parentTimestamp": "2026-10-21T11:17:06Z"
+  },
+  "privateDump": "/tmp/tiladys-schema-recovery-20261021/preview-before.dump",
+  "format": "PostgreSQL 18 custom archive; public schema; no owners/privileges",
+  "bytes": 68012,
+  "sha256": "7aec2e2dc2d95897296fd80d269d38e6a455e213c3271717d3572ef12a055aa6",
+  "restoredInto": "owned disposable PostgreSQL 18 at 127.0.0.1:55435/recovery",
+  "schemaCountsAndDefinitionsEqual": true,
+  "numberSequenceRows": 3,
+  "numberSequenceSha256": "a849ff0581f6273feb101b68ef9928d15742b1a749c3690f9dc81871ecbf60ec",
+  "realTargetRestorePerformed": false
+}

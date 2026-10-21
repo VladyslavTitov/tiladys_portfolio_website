@@ -1,0 +1,49 @@
+
+> db:deploy
+> npm --workspace @tiladys/db run deploy
+
+
+> deploy
+> prisma migrate deploy
+
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "recovery", schema "public" at "127.0.0.1:55435"
+
+23 migrations found in prisma/migrations
+
+Applying migration `20261013210000_rebuild_core`
+Applying migration `20261013220000_mail_outbox`
+Applying migration `20261013223000_quote_invoice_source`
+Applying migration `20261013230000_enquiry_detail`
+Applying migration `20261013233000_structured_catalogue`
+Applying migration `20261014003000_private_exports`
+Applying migration `20261014010000_editor_retention`
+Applying migration `20261014013000_quote_expiry_reason`
+Applying migration `20261014020000_task_timezone`
+Applying migration `20261014023000_curation_unit_text`
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20261013210000_rebuild_core/
+    └─ migration.sql
+  └─ 20261013220000_mail_outbox/
+    └─ migration.sql
+  └─ 20261013223000_quote_invoice_source/
+    └─ migration.sql
+  └─ 20261013230000_enquiry_detail/
+    └─ migration.sql
+  └─ 20261013233000_structured_catalogue/
+    └─ migration.sql
+  └─ 20261014003000_private_exports/
+    └─ migration.sql
+  └─ 20261014010000_editor_retention/
+    └─ migration.sql
+  └─ 20261014013000_quote_expiry_reason/
+    └─ migration.sql
+  └─ 20261014020000_task_timezone/
+    └─ migration.sql
+  └─ 20261014023000_curation_unit_text/
+    └─ migration.sql
+
+All migrations have been successfully applied.

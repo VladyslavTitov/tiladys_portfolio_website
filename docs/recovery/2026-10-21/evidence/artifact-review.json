@@ -1,0 +1,7 @@
+{
+  "newFilesScanned": 76,
+  "privateValueLeakFound": false,
+  "recoveryScriptsSyntax": "pass",
+  "allInitialTrackedFilesUnchanged": true,
+  "prismaMigrationsModified": false
+}

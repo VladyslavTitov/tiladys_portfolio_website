@@ -1,0 +1,9 @@
+{
+  "scope": "isolated child connection only",
+  "urlOption": "options=-c lock_timeout=5000 -c statement_timeout=120000",
+  "verified": {
+    "lock_timeout": "5s",
+    "statement_timeout": "2min"
+  },
+  "roleOrDatabaseDefaultsChanged": false
+}

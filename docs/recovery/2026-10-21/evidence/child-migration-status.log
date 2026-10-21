@@ -1,0 +1,6 @@
+Prisma schema loaded from packages/db/prisma/schema.prisma
+Datasource "db": PostgreSQL database "neondb", schema "public" at "ep-morning-queen-b11zgtsf.c-5.eu-central-1.aws.neon.tech"
+
+23 migrations found in prisma/migrations
+
+Database schema is up to date!

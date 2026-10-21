@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-21T11:33:43.313Z",
+  "branchId": "br-delicate-block-b19w0iqs",
+  "host": "ep-purple-unit-b1brl6mf.c-5.eu-central-1.aws.neon.tech",
+  "database": "neondb",
+  "schema": "public",
+  "migrationCount": 13,
+  "first13ChecksumsStillMatch": true,
+  "schemaAndCountsStillEqualPreRehearsal": true,
+  "numberSequenceRowsUnchanged": true,
+  "pending": 10,
+  "realTargetMigrationApplied": false,
+  "productionDatabaseSqlExecuted": false
+}

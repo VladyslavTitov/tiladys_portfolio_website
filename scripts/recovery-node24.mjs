@@ -1,0 +1,4 @@
+import {readFile} from 'node:fs/promises';import {spawn} from 'node:child_process';import {dirname,resolve} from 'node:path';import assert from 'node:assert/strict';
+const runtime=JSON.parse(await readFile('/tmp/tiladys-schema-recovery-20261021/node24.json','utf8'));assert.ok(runtime.binary.startsWith('/tmp/tiladys-schema-recovery-20261021/node24/'));assert.match(runtime.version,/^v24\./);
+const script=process.argv[2];assert.ok(['scripts/recovery-build.mjs','scripts/recovery-server.mjs','scripts/recovery-browser.mjs'].includes(script));
+const bin=dirname(runtime.binary);const child=spawn(runtime.binary,[script,...process.argv.slice(3)],{stdio:'inherit',env:{...process.env,PATH:bin+':'+process.env.PATH,RECOVERY_NPM_CLI:resolve(bin,'../lib/node_modules/npm/bin/npm-cli.js')}});for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>child.kill(signal));child.on('exit',code=>{process.exitCode=code??1;});

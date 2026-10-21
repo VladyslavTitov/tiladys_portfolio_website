@@ -1,0 +1,1553 @@
+{
+  "scope": "local Node 24 production builds against migrated restored isolated copy",
+  "rows": [
+    {
+      "route": "/en/contact",
+      "scroll": 375,
+      "width": 375,
+      "buttons": [
+        {
+          "x": 186,
+          "y": 1837.90625,
+          "right": 336,
+          "bottom": 1881.90625,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.threads.com/@tiladys.de",
+          "icon": {
+            "x": 200.65625,
+            "y": 1851.90625,
+            "right": 216.65625,
+            "bottom": 1867.90625,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 224.65625,
+            "y": 1849.90625,
+            "right": 321.34375,
+            "bottom": 1869.90625,
+            "width": 96.6875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 186,
+          "y": 2006.953125,
+          "right": 336,
+          "bottom": 2050.953125,
+          "width": 150,
+          "height": 44,
+          "href": "https://wa.me/491637235608",
+          "icon": {
+            "x": 192.828125,
+            "y": 2020.953125,
+            "right": 208.828125,
+            "bottom": 2036.953125,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 216.828125,
+            "y": 2018.953125,
+            "right": 329.15625,
+            "bottom": 2038.953125,
+            "width": 112.328125,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 186,
+          "y": 2176,
+          "right": 336,
+          "bottom": 2220,
+          "width": 150,
+          "height": 44,
+          "href": "https://t.me/tiladys_support",
+          "icon": {
+            "x": 197.015625,
+            "y": 2190,
+            "right": 213.015625,
+            "bottom": 2206,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 221.015625,
+            "y": 2188,
+            "right": 324.984375,
+            "bottom": 2208,
+            "width": 103.96875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 186,
+          "y": 2345.046875,
+          "right": 336,
+          "bottom": 2389.046875,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.instagram.com/tiladys.de",
+          "icon": {
+            "x": 194.46875,
+            "y": 2359.046875,
+            "right": 210.46875,
+            "bottom": 2375.046875,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 218.46875,
+            "y": 2357.046875,
+            "right": 327.53125,
+            "bottom": 2377.046875,
+            "width": 109.0625,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 186,
+          "y": 2514.09375,
+          "right": 336,
+          "bottom": 2558.09375,
+          "width": 150,
+          "height": 44,
+          "href": "mailto:contact@tiladys.com",
+          "icon": {
+            "x": 211.3125,
+            "y": 2528.09375,
+            "right": 227.3125,
+            "bottom": 2544.09375,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 235.3125,
+            "y": 2526.09375,
+            "right": 310.671875,
+            "bottom": 2546.09375,
+            "width": 75.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 186,
+          "y": 2683.140625,
+          "right": 336,
+          "bottom": 2727.140625,
+          "width": 150,
+          "height": 44,
+          "href": "tel:+491637235608",
+          "icon": {
+            "x": 218.8125,
+            "y": 2697.140625,
+            "right": 234.8125,
+            "bottom": 2713.140625,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 242.8125,
+            "y": 2695.140625,
+            "right": 303.171875,
+            "bottom": 2715.140625,
+            "width": 60.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 186,
+          "y": 2876.9375,
+          "right": 336,
+          "bottom": 2920.9375,
+          "width": 150,
+          "height": 44,
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "icon": {
+            "x": 204.875,
+            "y": 2890.9375,
+            "right": 220.875,
+            "bottom": 2906.9375,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 228.875,
+            "y": 2888.9375,
+            "right": 317.109375,
+            "bottom": 2908.9375,
+            "width": 88.234375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "route": "/en/contact",
+      "scroll": 430,
+      "width": 430,
+      "buttons": [
+        {
+          "x": 241,
+          "y": 1835.78125,
+          "right": 391,
+          "bottom": 1879.78125,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.threads.com/@tiladys.de",
+          "icon": {
+            "x": 255.65625,
+            "y": 1849.78125,
+            "right": 271.65625,
+            "bottom": 1865.78125,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 279.65625,
+            "y": 1847.78125,
+            "right": 376.34375,
+            "bottom": 1867.78125,
+            "width": 96.6875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 241,
+          "y": 2004.828125,
+          "right": 391,
+          "bottom": 2048.828125,
+          "width": 150,
+          "height": 44,
+          "href": "https://wa.me/491637235608",
+          "icon": {
+            "x": 247.828125,
+            "y": 2018.828125,
+            "right": 263.828125,
+            "bottom": 2034.828125,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 271.828125,
+            "y": 2016.828125,
+            "right": 384.15625,
+            "bottom": 2036.828125,
+            "width": 112.328125,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 241,
+          "y": 2173.875,
+          "right": 391,
+          "bottom": 2217.875,
+          "width": 150,
+          "height": 44,
+          "href": "https://t.me/tiladys_support",
+          "icon": {
+            "x": 252.015625,
+            "y": 2187.875,
+            "right": 268.015625,
+            "bottom": 2203.875,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 276.015625,
+            "y": 2185.875,
+            "right": 379.984375,
+            "bottom": 2205.875,
+            "width": 103.96875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 241,
+          "y": 2342.921875,
+          "right": 391,
+          "bottom": 2386.921875,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.instagram.com/tiladys.de",
+          "icon": {
+            "x": 249.46875,
+            "y": 2356.921875,
+            "right": 265.46875,
+            "bottom": 2372.921875,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 273.46875,
+            "y": 2354.921875,
+            "right": 382.53125,
+            "bottom": 2374.921875,
+            "width": 109.0625,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 241,
+          "y": 2511.96875,
+          "right": 391,
+          "bottom": 2555.96875,
+          "width": 150,
+          "height": 44,
+          "href": "mailto:contact@tiladys.com",
+          "icon": {
+            "x": 266.3125,
+            "y": 2525.96875,
+            "right": 282.3125,
+            "bottom": 2541.96875,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 290.3125,
+            "y": 2523.96875,
+            "right": 365.671875,
+            "bottom": 2543.96875,
+            "width": 75.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 241,
+          "y": 2681.015625,
+          "right": 391,
+          "bottom": 2725.015625,
+          "width": 150,
+          "height": 44,
+          "href": "tel:+491637235608",
+          "icon": {
+            "x": 273.8125,
+            "y": 2695.015625,
+            "right": 289.8125,
+            "bottom": 2711.015625,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 297.8125,
+            "y": 2693.015625,
+            "right": 358.171875,
+            "bottom": 2713.015625,
+            "width": 60.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 241,
+          "y": 2874.8125,
+          "right": 391,
+          "bottom": 2918.8125,
+          "width": 150,
+          "height": 44,
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "icon": {
+            "x": 259.875,
+            "y": 2888.8125,
+            "right": 275.875,
+            "bottom": 2904.8125,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 283.875,
+            "y": 2886.8125,
+            "right": 372.109375,
+            "bottom": 2906.8125,
+            "width": 88.234375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "route": "/en/contact",
+      "scroll": 768,
+      "width": 768,
+      "buttons": [
+        {
+          "x": 579,
+          "y": 1807.359375,
+          "right": 729,
+          "bottom": 1851.359375,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.threads.com/@tiladys.de",
+          "icon": {
+            "x": 593.65625,
+            "y": 1821.359375,
+            "right": 609.65625,
+            "bottom": 1837.359375,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 617.65625,
+            "y": 1819.359375,
+            "right": 714.34375,
+            "bottom": 1839.359375,
+            "width": 96.6875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 579,
+          "y": 1940.359375,
+          "right": 729,
+          "bottom": 1984.359375,
+          "width": 150,
+          "height": 44,
+          "href": "https://wa.me/491637235608",
+          "icon": {
+            "x": 585.828125,
+            "y": 1954.359375,
+            "right": 601.828125,
+            "bottom": 1970.359375,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 609.828125,
+            "y": 1952.359375,
+            "right": 722.15625,
+            "bottom": 1972.359375,
+            "width": 112.328125,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 579,
+          "y": 2073.359375,
+          "right": 729,
+          "bottom": 2117.359375,
+          "width": 150,
+          "height": 44,
+          "href": "https://t.me/tiladys_support",
+          "icon": {
+            "x": 590.015625,
+            "y": 2087.359375,
+            "right": 606.015625,
+            "bottom": 2103.359375,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 614.015625,
+            "y": 2085.359375,
+            "right": 717.984375,
+            "bottom": 2105.359375,
+            "width": 103.96875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 579,
+          "y": 2206.359375,
+          "right": 729,
+          "bottom": 2250.359375,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.instagram.com/tiladys.de",
+          "icon": {
+            "x": 587.46875,
+            "y": 2220.359375,
+            "right": 603.46875,
+            "bottom": 2236.359375,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 611.46875,
+            "y": 2218.359375,
+            "right": 720.53125,
+            "bottom": 2238.359375,
+            "width": 109.0625,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 579,
+          "y": 2339.359375,
+          "right": 729,
+          "bottom": 2383.359375,
+          "width": 150,
+          "height": 44,
+          "href": "mailto:contact@tiladys.com",
+          "icon": {
+            "x": 604.3125,
+            "y": 2353.359375,
+            "right": 620.3125,
+            "bottom": 2369.359375,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 628.3125,
+            "y": 2351.359375,
+            "right": 703.671875,
+            "bottom": 2371.359375,
+            "width": 75.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 579,
+          "y": 2472.359375,
+          "right": 729,
+          "bottom": 2516.359375,
+          "width": 150,
+          "height": 44,
+          "href": "tel:+491637235608",
+          "icon": {
+            "x": 611.8125,
+            "y": 2486.359375,
+            "right": 627.8125,
+            "bottom": 2502.359375,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 635.8125,
+            "y": 2484.359375,
+            "right": 696.171875,
+            "bottom": 2504.359375,
+            "width": 60.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 579,
+          "y": 2605.359375,
+          "right": 729,
+          "bottom": 2649.359375,
+          "width": 150,
+          "height": 44,
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "icon": {
+            "x": 597.875,
+            "y": 2619.359375,
+            "right": 613.875,
+            "bottom": 2635.359375,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 621.875,
+            "y": 2617.359375,
+            "right": 710.109375,
+            "bottom": 2637.359375,
+            "width": 88.234375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "route": "/en/contact",
+      "scroll": 1280,
+      "width": 1280,
+      "buttons": [
+        {
+          "x": 1068.984375,
+          "y": 605,
+          "right": 1218.984375,
+          "bottom": 649,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.threads.com/@tiladys.de",
+          "icon": {
+            "x": 1083.640625,
+            "y": 619,
+            "right": 1099.640625,
+            "bottom": 635,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1107.640625,
+            "y": 617,
+            "right": 1204.328125,
+            "bottom": 637,
+            "width": 96.6875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1068.984375,
+          "y": 738,
+          "right": 1218.984375,
+          "bottom": 782,
+          "width": 150,
+          "height": 44,
+          "href": "https://wa.me/491637235608",
+          "icon": {
+            "x": 1075.8125,
+            "y": 752,
+            "right": 1091.8125,
+            "bottom": 768,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1099.8125,
+            "y": 750,
+            "right": 1212.140625,
+            "bottom": 770,
+            "width": 112.328125,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1068.984375,
+          "y": 871,
+          "right": 1218.984375,
+          "bottom": 915,
+          "width": 150,
+          "height": 44,
+          "href": "https://t.me/tiladys_support",
+          "icon": {
+            "x": 1080,
+            "y": 885,
+            "right": 1096,
+            "bottom": 901,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1104,
+            "y": 883,
+            "right": 1207.96875,
+            "bottom": 903,
+            "width": 103.96875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1068.984375,
+          "y": 1004,
+          "right": 1218.984375,
+          "bottom": 1048,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.instagram.com/tiladys.de",
+          "icon": {
+            "x": 1077.453125,
+            "y": 1018,
+            "right": 1093.453125,
+            "bottom": 1034,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1101.453125,
+            "y": 1016,
+            "right": 1210.515625,
+            "bottom": 1036,
+            "width": 109.0625,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1068.984375,
+          "y": 1137,
+          "right": 1218.984375,
+          "bottom": 1181,
+          "width": 150,
+          "height": 44,
+          "href": "mailto:contact@tiladys.com",
+          "icon": {
+            "x": 1094.296875,
+            "y": 1151,
+            "right": 1110.296875,
+            "bottom": 1167,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1118.296875,
+            "y": 1149,
+            "right": 1193.65625,
+            "bottom": 1169,
+            "width": 75.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1068.984375,
+          "y": 1270,
+          "right": 1218.984375,
+          "bottom": 1314,
+          "width": 150,
+          "height": 44,
+          "href": "tel:+491637235608",
+          "icon": {
+            "x": 1101.796875,
+            "y": 1284,
+            "right": 1117.796875,
+            "bottom": 1300,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1125.796875,
+            "y": 1282,
+            "right": 1186.15625,
+            "bottom": 1302,
+            "width": 60.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1068.984375,
+          "y": 1405.390625,
+          "right": 1218.984375,
+          "bottom": 1449.390625,
+          "width": 150,
+          "height": 44,
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "icon": {
+            "x": 1087.859375,
+            "y": 1419.390625,
+            "right": 1103.859375,
+            "bottom": 1435.390625,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1111.859375,
+            "y": 1417.390625,
+            "right": 1200.09375,
+            "bottom": 1437.390625,
+            "width": 88.234375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "route": "/en/contact",
+      "scroll": 1440,
+      "width": 1440,
+      "buttons": [
+        {
+          "x": 1148.984375,
+          "y": 605,
+          "right": 1298.984375,
+          "bottom": 649,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.threads.com/@tiladys.de",
+          "icon": {
+            "x": 1163.640625,
+            "y": 619,
+            "right": 1179.640625,
+            "bottom": 635,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1187.640625,
+            "y": 617,
+            "right": 1284.328125,
+            "bottom": 637,
+            "width": 96.6875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1148.984375,
+          "y": 738,
+          "right": 1298.984375,
+          "bottom": 782,
+          "width": 150,
+          "height": 44,
+          "href": "https://wa.me/491637235608",
+          "icon": {
+            "x": 1155.8125,
+            "y": 752,
+            "right": 1171.8125,
+            "bottom": 768,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1179.8125,
+            "y": 750,
+            "right": 1292.140625,
+            "bottom": 770,
+            "width": 112.328125,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1148.984375,
+          "y": 871,
+          "right": 1298.984375,
+          "bottom": 915,
+          "width": 150,
+          "height": 44,
+          "href": "https://t.me/tiladys_support",
+          "icon": {
+            "x": 1160,
+            "y": 885,
+            "right": 1176,
+            "bottom": 901,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1184,
+            "y": 883,
+            "right": 1287.96875,
+            "bottom": 903,
+            "width": 103.96875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1148.984375,
+          "y": 1004,
+          "right": 1298.984375,
+          "bottom": 1048,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.instagram.com/tiladys.de",
+          "icon": {
+            "x": 1157.453125,
+            "y": 1018,
+            "right": 1173.453125,
+            "bottom": 1034,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1181.453125,
+            "y": 1016,
+            "right": 1290.515625,
+            "bottom": 1036,
+            "width": 109.0625,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1148.984375,
+          "y": 1137,
+          "right": 1298.984375,
+          "bottom": 1181,
+          "width": 150,
+          "height": 44,
+          "href": "mailto:contact@tiladys.com",
+          "icon": {
+            "x": 1174.296875,
+            "y": 1151,
+            "right": 1190.296875,
+            "bottom": 1167,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1198.296875,
+            "y": 1149,
+            "right": 1273.65625,
+            "bottom": 1169,
+            "width": 75.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1148.984375,
+          "y": 1270,
+          "right": 1298.984375,
+          "bottom": 1314,
+          "width": 150,
+          "height": 44,
+          "href": "tel:+491637235608",
+          "icon": {
+            "x": 1181.796875,
+            "y": 1284,
+            "right": 1197.796875,
+            "bottom": 1300,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1205.796875,
+            "y": 1282,
+            "right": 1266.15625,
+            "bottom": 1302,
+            "width": 60.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1148.984375,
+          "y": 1405.390625,
+          "right": 1298.984375,
+          "bottom": 1449.390625,
+          "width": 150,
+          "height": 44,
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "icon": {
+            "x": 1167.859375,
+            "y": 1419.390625,
+            "right": 1183.859375,
+            "bottom": 1435.390625,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1191.859375,
+            "y": 1417.390625,
+            "right": 1280.09375,
+            "bottom": 1437.390625,
+            "width": 88.234375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "route": "/en/contact",
+      "scroll": 1920,
+      "width": 1920,
+      "buttons": [
+        {
+          "x": 1388.984375,
+          "y": 605,
+          "right": 1538.984375,
+          "bottom": 649,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.threads.com/@tiladys.de",
+          "icon": {
+            "x": 1403.640625,
+            "y": 619,
+            "right": 1419.640625,
+            "bottom": 635,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1427.640625,
+            "y": 617,
+            "right": 1524.328125,
+            "bottom": 637,
+            "width": 96.6875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1388.984375,
+          "y": 738,
+          "right": 1538.984375,
+          "bottom": 782,
+          "width": 150,
+          "height": 44,
+          "href": "https://wa.me/491637235608",
+          "icon": {
+            "x": 1395.8125,
+            "y": 752,
+            "right": 1411.8125,
+            "bottom": 768,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1419.8125,
+            "y": 750,
+            "right": 1532.140625,
+            "bottom": 770,
+            "width": 112.328125,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1388.984375,
+          "y": 871,
+          "right": 1538.984375,
+          "bottom": 915,
+          "width": 150,
+          "height": 44,
+          "href": "https://t.me/tiladys_support",
+          "icon": {
+            "x": 1400,
+            "y": 885,
+            "right": 1416,
+            "bottom": 901,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1424,
+            "y": 883,
+            "right": 1527.96875,
+            "bottom": 903,
+            "width": 103.96875,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1388.984375,
+          "y": 1004,
+          "right": 1538.984375,
+          "bottom": 1048,
+          "width": 150,
+          "height": 44,
+          "href": "https://www.instagram.com/tiladys.de",
+          "icon": {
+            "x": 1397.453125,
+            "y": 1018,
+            "right": 1413.453125,
+            "bottom": 1034,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1421.453125,
+            "y": 1016,
+            "right": 1530.515625,
+            "bottom": 1036,
+            "width": 109.0625,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1388.984375,
+          "y": 1137,
+          "right": 1538.984375,
+          "bottom": 1181,
+          "width": 150,
+          "height": 44,
+          "href": "mailto:contact@tiladys.com",
+          "icon": {
+            "x": 1414.296875,
+            "y": 1151,
+            "right": 1430.296875,
+            "bottom": 1167,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1438.296875,
+            "y": 1149,
+            "right": 1513.65625,
+            "bottom": 1169,
+            "width": 75.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1388.984375,
+          "y": 1270,
+          "right": 1538.984375,
+          "bottom": 1314,
+          "width": 150,
+          "height": 44,
+          "href": "tel:+491637235608",
+          "icon": {
+            "x": 1421.796875,
+            "y": 1284,
+            "right": 1437.796875,
+            "bottom": 1300,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1445.796875,
+            "y": 1282,
+            "right": 1506.15625,
+            "bottom": 1302,
+            "width": 60.359375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        },
+        {
+          "x": 1388.984375,
+          "y": 1405.390625,
+          "right": 1538.984375,
+          "bottom": 1449.390625,
+          "width": 150,
+          "height": 44,
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "icon": {
+            "x": 1407.859375,
+            "y": 1419.390625,
+            "right": 1423.859375,
+            "bottom": 1435.390625,
+            "width": 16,
+            "height": 16
+          },
+          "text": {
+            "x": 1431.859375,
+            "y": 1417.390625,
+            "right": 1520.09375,
+            "bottom": 1437.390625,
+            "width": 88.234375,
+            "height": 20
+          },
+          "lines": 1,
+          "padding": "20px",
+          "style": [
+            "nowrap",
+            "8px",
+            "1px",
+            "14px",
+            "700"
+          ],
+          "overlap": false
+        }
+      ]
+    },
+    {
+      "route": "/en/portfolio",
+      "categoryFilter": "Websites",
+      "search": "recovery staging",
+      "syntheticResultVisible": true
+    },
+    {
+      "login": "actual browser form",
+      "dashboard": "rendered",
+      "session": "HttpOnly Secure SameSite=Strict; token not recorded in evidence"
+    },
+    {
+      "authenticatedPage": "/dashboard/customers",
+      "status": 200
+    },
+    {
+      "authenticatedPage": "/dashboard/service-jobs",
+      "status": 200
+    },
+    {
+      "authenticatedPage": "/dashboard/quotes",
+      "status": 200
+    },
+    {
+      "authenticatedPage": "/dashboard/invoices",
+      "status": 200
+    },
+    {
+      "anonymousPrivateApiRequests": 62,
+      "allDenied": 401
+    },
+    {
+      "logout": "session revoked; dashboard redirects to login"
+    }
+  ],
+  "pageErrors": [],
+  "remoteReleaseVerified": false
+}

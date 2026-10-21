@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: quote acceptance locks exact revision; conversion replays to one job
+ok 1 - quote acceptance locks exact revision; conversion replays to one job
+  ---
+  duration_ms: 239.509557
+  type: 'test'
+  ...
+# Subtest: task cannot claim a job of a different client
+ok 2 - task cannot claim a job of a different client
+  ---
+  duration_ms: 12.071469
+  type: 'test'
+  ...
+# Subtest: stored legacy artifact is unchanged; concurrent payments cannot overpay; retries do not duplicate
+ok 3 - stored legacy artifact is unchanged; concurrent payments cannot overpay; retries do not duplicate
+  ---
+  duration_ms: 69.634513
+  type: 'test'
+  ...
+# Subtest: private upload exact metadata limits, capability, decode, finalization and replay
+ok 4 - private upload exact metadata limits, capability, decode, finalization and replay
+  ---
+  duration_ms: 67.310254
+  type: 'test'
+  ...
+# Subtest: accepted quote invoice uses frozen terms after job edits and replays to one draft
+ok 5 - accepted quote invoice uses frozen terms after job edits and replays to one draft
+  ---
+  duration_ms: 65.041179
+  type: 'test'
+  ...
+# Subtest: mail reservation deduplicates accepted sends and never blindly retries uncertain SMTP outcomes
+ok 6 - mail reservation deduplicates accepted sends and never blindly retries uncertain SMTP outcomes
+  ---
+  duration_ms: 31.958816
+  type: 'test'
+  ...
+# Subtest: concurrent invoice issuance allocates once and rejects unknown tax or absent German copy
+ok 7 - concurrent invoice issuance allocates once and rejects unknown tax or absent German copy
+  ---
+  duration_ms: 318.554368
+  type: 'test'
+  ...
+# Subtest: atomic client/job/invoice numbering respects Berlin New Year under concurrency
+ok 8 - atomic client/job/invoice numbering respects Berlin New Year under concurrency
+  ---
+  duration_ms: 75.950689
+  type: 'test'
+  ...
+# Subtest: three real valid 5MiB photos finalize at the 15MiB boundary; excess, expiry, wrong purpose and races reject
+ok 9 - three real valid 5MiB photos finalize at the 15MiB boundary; excess, expiry, wrong purpose and races reject
+  ---
+  duration_ms: 1325.196451
+  type: 'test'
+  ...
+# Subtest: SMTP acceptance followed by record failure remains reserved without sending again
+ok 10 - SMTP acceptance followed by record failure remains reserved without sending again
+  ---
+  duration_ms: 13.850505
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3265.484828

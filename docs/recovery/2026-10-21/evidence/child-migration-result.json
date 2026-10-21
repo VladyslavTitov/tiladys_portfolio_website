@@ -1,0 +1,30 @@
+{
+  "target": {
+    "projectId": "plain-sound-02437622",
+    "branchId": "br-winter-haze-b19z750x",
+    "parentId": "br-delicate-block-b19w0iqs",
+    "endpointId": "ep-morning-queen-b11zgtsf",
+    "host": "ep-morning-queen-b11zgtsf.c-5.eu-central-1.aws.neon.tech",
+    "parentLsn": "0/1DDE4C8",
+    "parentTimestamp": "2026-10-21T11:17:06Z"
+  },
+  "milliseconds": 3347,
+  "applied": [
+    "20261013210000_rebuild_core",
+    "20261013220000_mail_outbox",
+    "20261013223000_quote_invoice_source",
+    "20261013230000_enquiry_detail",
+    "20261013233000_structured_catalogue",
+    "20261014003000_private_exports",
+    "20261014010000_editor_retention",
+    "20261014013000_quote_expiry_reason",
+    "20261014020000_task_timezone",
+    "20261014023000_curation_unit_text"
+  ],
+  "verifiedChecksums": 23,
+  "oldTableCountsUnchanged": true,
+  "numberSequenceRowsUnchanged": true,
+  "releaseGuard": "pass",
+  "repeatDeploy": "no pending migrations",
+  "realTargetModified": false
+}
