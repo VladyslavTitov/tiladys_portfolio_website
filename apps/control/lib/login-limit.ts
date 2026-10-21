@@ -1,0 +1,3 @@
+import {db} from '@tiladys/db';
+import {hash} from './security';
+export async function loginAllowed(ip:string,email:string){const window=Math.floor(Date.now()/(15*60000));for(const kind of ['ip','account'] as const){const key=`login:${kind}:${hash(kind==='ip'?ip:email.toLowerCase())}:${window}`;const limit=kind==='ip'?12:6;const expiresAt=new Date((window+2)*15*60000);const rows=await db.$queryRaw<Array<{count:number}>>`INSERT INTO "ContactRateLimit" ("key","count","expiresAt") VALUES (${key},1,${expiresAt}) ON CONFLICT ("key") DO UPDATE SET "count"=LEAST("ContactRateLimit"."count"+1,13) RETURNING "count"`;if(rows[0].count>limit)return false;}return true;}

@@ -1,4 +1,10 @@
 'use client';
+import { EditorSections } from '@/components/editor-sections';
+import {ControlText} from '@/components/control-language';
+
+import Link from 'next/link';
+import {useUnsavedChanges} from '@/lib/use-unsaved-changes';
+
 
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -7,8 +13,10 @@ import { ImagePlus, Plus, Save, Trash2, X } from 'lucide-react';
 const locales = ['en', 'de', 'uk', 'ru', 'sk', 'fr'] as const;
 type Locale = (typeof locales)[number];
 type Localized = Record<Locale, string>;
-type ImageInfo = { id: string; filename: string; size: number; sortOrder: number; url: string };
+type ImageInfo = { id: string; filename: string; size: number; alt: Localized; sortOrder: number; url: string };
 type Project = {
+  homepageFeatured:boolean;
+  updatedAt?: string;
   id?: string;
   slug: string;
   category: string;
@@ -86,7 +94,7 @@ function projectApiError(payload: Record<string, unknown>, status: number) {
 
 function emptyProject(): Project {
   return {
-    slug: '', category: 'web-development', status: 'DRAFT', sortOrder: 0,
+    homepageFeatured:false,slug: '', category: 'web-development', status: 'DRAFT', sortOrder: 0,
     title: emptyLocalized(), summary: emptyLocalized(), description: emptyLocalized(), type: emptyLocalized(), role: emptyLocalized(), workItems: emptyWork(),
     seoTitle: emptyLocalized(), seoDescription: emptyLocalized(), socialTitle: emptyLocalized(), socialDescription: emptyLocalized(), socialImageId: '',
     websiteUrl: '', githubUrl: '', coverImage: '', technologies: [], projectDate: null, images: [],
@@ -118,7 +126,7 @@ function normalize(project: Record<string, unknown>): Project {
     githubUrl: typeof project.githubUrl === 'string' ? project.githubUrl : '',
     coverImage: typeof project.coverImage === 'string' ? project.coverImage : '',
     projectDate: typeof project.projectDate === 'string' ? project.projectDate : null,
-    images: Array.isArray(project.images) ? project.images as ImageInfo[] : [],
+    images: Array.isArray(project.images) ? project.images.map(value=>{const im=value as ImageInfo;return {...im,alt:localized(im.alt)};}) : [],
   } as Project;
 }
 
@@ -139,13 +147,17 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
   const [draft, setDraft] = useState<Project>(() => normalizedInitial[0] ?? emptyProject());
   const [language, setLanguage] = useState<Locale>('en');
   const [newImages, setNewImages] = useState<File[]>([]);
+  const [search,setSearch]=useState('');const [statusFilter,setStatusFilter]=useState('');const [categoryFilter,setCategoryFilter]=useState('');
   const [removeImageIds, setRemoveImageIds] = useState<string[]>([]);
   const [message, setMessage] = useState('');
   const [busy, setBusy] = useState(false);
+  const [rightsReviewed,setRightsReviewed]=useState(false);
+  const original=projects.find(p=>p.id===draft.id);const dirty=JSON.stringify(draft)!==JSON.stringify(original||emptyProject())||newImages.length>0||removeImageIds.length>0;useUnsavedChanges(dirty);
 
   const visibleImages = useMemo(() => draft.images.filter((image) => !removeImageIds.includes(image.id)), [draft.images, removeImageIds]);
 
   function select(project?: Project) {
+    if(dirty&&!confirm('Discard unsaved project changes?'))return;setRightsReviewed(false);
     setSelectedId(project?.id ?? 'new');
     setDraft(project ? normalize(project as unknown as Record<string, unknown>) : emptyProject());
     setNewImages([]);
@@ -179,7 +191,10 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
     if (accepted.length > remaining) setMessage(`Only ${MAX_IMAGES} images can be stored for one project.`);
   }
 
-  async function save() {
+  async function save(publication=false) {
+    if(publication&&(!rightsReviewed||!draft.id||!visibleImages.length||newImages.length)){setMessage('Save a private draft and approved images, then confirm publication rights.');return;}
+    if(publication&&!confirm('Publish the reviewed project and images publicly?'))return;
+    if(!publication&&original?.status==='PUBLISHED'&&!confirm('Save as a private draft and withdraw the current public project?'))return;
     if (!draft.slug.trim() || !draft.title.en.trim() || !draft.summary.en.trim()) {
       setMessage('Slug, English title and English summary are required.');
       return;
@@ -193,12 +208,14 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
       return;
     }
 
+    if(publication&&newImages.length){setMessage('Save the draft to upload and review the new images before publication.');return;}
     let payload: Record<string, unknown>;
     try {
       payload = {
+        homepageFeatured:draft.homepageFeatured,
         slug: draft.slug.trim(),
         category: draft.category,
-        status: draft.status,
+        status: publication?'PUBLISHED':draft.status==='ARCHIVED'?'ARCHIVED':'DRAFT',
         sortOrder: Number(draft.sortOrder) || 0,
         title: draft.title,
         summary: draft.summary,
@@ -227,7 +244,7 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
       const metadataResponse = await fetch(draft.id ? `/api/admin/projects/${draft.id}` : '/api/admin/projects', {
         method: draft.id ? 'PATCH' : 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(draft.id ? { payload, removeImageIds } : payload),
+        body: JSON.stringify(draft.id ? { payload, removeImageIds,imageMetadata:visibleImages.map(im=>({id:im.id,alt:im.alt})),expectedUpdatedAt:original?.updatedAt,publicationConfirmed:publication } : payload),
       });
       const metadataResult: unknown = await metadataResponse.json().catch(() => ({}));
       const metadata = asRecord(metadataResult);
@@ -244,6 +261,7 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
             return {
               id,
               filename: typeof image.filename === 'string' ? image.filename : 'project-image',
+              alt: localized(image.alt),
               size: typeof image.size === 'number' ? image.size : 0,
               sortOrder: typeof image.sortOrder === 'number' ? image.sortOrder : 0,
               url: `/api/admin/projects/${projectId}/images/${id}`,
@@ -269,12 +287,13 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
         setMessage(`Uploading image ${index + 1} of ${newImages.length}…`);
         const form = new FormData();
         form.set('image', newImages[index]);
+        form.set('expectedUpdatedAt',updated.updatedAt||'');
         const uploadResponse = await fetch(`/api/admin/projects/${projectId}/images`, { method: 'POST', body: form });
         const imageResult: unknown = await uploadResponse.json().catch(() => ({}));
         const image = asRecord(imageResult);
         if (!uploadResponse.ok) throw new Error(`${newImages[index].name}: ${typeof image.error === 'string' ? image.error : uploadResponse.status}`);
         if (typeof image.id !== 'string' || typeof image.url !== 'string') throw new Error(`${newImages[index].name}: unexpected upload response`);
-        uploaded.push({
+        uploaded.push({ alt: emptyLocalized(),
           id: image.id,
           url: `/api/admin/projects/${projectId}/images/${image.id}`,
           filename: typeof image.filename === 'string' ? image.filename : newImages[index].name,
@@ -282,7 +301,7 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
           sortOrder: typeof image.sortOrder === 'number' ? image.sortOrder : existing.length + uploaded.length,
         });
         uploadedCount = index + 1;
-        updated = normalize({ ...updated, images: [...existing, ...uploaded] });
+        updated = normalize({ ...updated,updatedAt:typeof image.projectUpdatedAt==='string'?image.projectUpdatedAt:updated.updatedAt, images: [...existing, ...uploaded] });
         storeProject(updated);
       }
 
@@ -297,7 +316,7 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
   }
 
   async function removeProject() {
-    if (!draft.id || !window.confirm(`Delete “${draft.title.en || draft.slug}”? This also deletes all project images.`)) return;
+    if (!draft.id || !window.confirm(`Archive “${draft.title.en || draft.slug}”? Public access will be withdrawn; records and images are retained.`)) return;
     setBusy(true);
     try {
       const response = await fetch(`/api/admin/projects/${draft.id}`, { method: 'DELETE' });
@@ -309,9 +328,9 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
       setDraft(next ? normalize(next as unknown as Record<string, unknown>) : emptyProject());
       setNewImages([]);
       setRemoveImageIds([]);
-      setMessage('Project deleted.');
+      setMessage('Project archived.');
     } catch {
-      setMessage('Could not delete project.');
+      setMessage('Could not archive project.');
     } finally {
       setBusy(false);
     }
@@ -320,52 +339,53 @@ export function ProjectManager({ initialProjects }: { initialProjects: Array<Rec
   return (
     <div className="project-admin-layout">
       <aside className="project-admin-list panel">
-        <button className="admin-primary" type="button" onClick={() => select()}><Plus size={18} />New project</button>
-        {projects.map((project) => <button key={project.id} className={selectedId === project.id ? 'is-active' : ''} type="button" onClick={() => select(project)}><strong>{project.title.en || project.slug}</strong><span>{project.category} · {project.status}</span></button>)}
+        <button className="admin-primary" type="button" onClick={() => select()}><Plus size={18} /><ControlText value={"New project"}/></button>
+        <label><ControlText value={"Search projects"}/><input maxLength={120} value={search} onChange={e=>setSearch(e.target.value)}/></label><label><ControlText value={"Status"}/><select value={statusFilter} onChange={e=>setStatusFilter(e.target.value)}><option value=""><ControlText value={"All statuses"}/></option>{['DRAFT','PUBLISHED','ARCHIVED'].map(s=><option key={s}>{s}</option>)}</select></label><label><ControlText value={"Category"}/><select value={categoryFilter} onChange={e=>setCategoryFilter(e.target.value)}><option value=""><ControlText value={"All categories"}/></option>{[...new Set(projects.map(p=>p.category))].map(c=><option key={c}>{c}</option>)}</select></label>{projects.filter(p=>(!statusFilter||p.status===statusFilter)&&(!categoryFilter||p.category===categoryFilter)&&`${p.slug} ${Object.values(p.title).join(' ')}`.toLocaleLowerCase().includes(search.toLocaleLowerCase())).map((project) => <button key={project.id} className={selectedId === project.id ? 'is-active' : ''} type="button" onClick={() => select(project)}><strong>{project.title.en || project.slug}</strong><span>{project.category} · {project.status}</span></button>)}
       </aside>
 
-      <section className="panel project-editor">
-        <div className="project-editor__toolbar"><h2>{draft.id ? 'Edit project' : 'New project'}</h2><div><button type="button" className="admin-secondary" onClick={removeProject} disabled={!draft.id || busy}><Trash2 size={17} />Delete</button><button type="button" className="admin-primary" onClick={save} disabled={busy}><Save size={17} />Save project</button></div></div>
+      <section className="panel project-editor"><EditorSections items={[{id:"project-basics",label:"Basics"},{id:"project-localization",label:"Localization"},{id:"project-media",label:"Images"},{id:"project-seo-title",label:"Search & sharing"},{id:"project-publishing",label:"Publishing"}]}/><p className="editor-unsaved" role="status">{dirty?<ControlText value="Unsaved changes"/>:null}</p>
+        <div className="project-editor__toolbar"><h2><ControlText value={draft.id ? 'Edit project' : 'New project'}/></h2><div><button type="button" className="admin-secondary" onClick={removeProject} disabled={!draft.id || busy}><Trash2 size={17} /><ControlText value={"Archive"}/></button><button type="button" className="admin-primary" onClick={()=>save()} disabled={busy}><Save size={17} /><ControlText value={"Save private draft"}/></button></div></div>
         {message ? <p className="admin-message project-save-message" aria-live="polite">{message}</p> : null}
-        <div className="admin-form-grid">
-          <label>Slug<input value={draft.slug} onChange={(event) => setDraft({ ...draft, slug: event.target.value.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') })} placeholder="business-website-redesign" /></label>
-          <label>Category<select value={draft.category} onChange={(event) => setDraft({ ...draft, category: event.target.value })}><option value="web-development">Web development</option><option value="pc-support">PC support</option><option value="design">Design</option><option value="linux-servers">Linux & servers</option><option value="google-business">Google Business</option><option value="digital-support">Digital support</option><option value="data-protection">Backup & data protection</option><option value="other">Other</option></select></label>
-          <label>Status<select value={draft.status} onChange={(event) => setDraft({ ...draft, status: event.target.value as Project['status'] })}><option value="DRAFT">Draft</option><option value="PUBLISHED">Published</option><option value="ARCHIVED">Archived</option></select></label>
-          <label>Display order<input type="number" min="0" value={draft.sortOrder} onChange={(event) => setDraft({ ...draft, sortOrder: Number(event.target.value) })} /></label>
-          <label>Completed date<input type="date" value={draft.projectDate?.slice(0, 10) ?? ''} onChange={(event) => setDraft({ ...draft, projectDate: event.target.value || null })} /></label>
-          <label>Website URL<input type="url" value={draft.websiteUrl} onChange={(event) => setDraft({ ...draft, websiteUrl: event.target.value })} placeholder="https://..." /></label>
-          <label>GitHub URL<input type="url" value={draft.githubUrl} onChange={(event) => setDraft({ ...draft, githubUrl: event.target.value })} placeholder="https://github.com/..." /></label>
-          <label className="admin-span-2">External cover image URL (optional)<input type="url" value={draft.coverImage} onChange={(event) => setDraft({ ...draft, coverImage: event.target.value })} placeholder="Used only when no uploaded image exists" /></label>
-          <label className="admin-span-2">Technologies & tools (comma separated)<input value={draft.technologies.join(', ')} onChange={(event) => setDraft({ ...draft, technologies: event.target.value.split(',').map((item) => item.trim()).filter(Boolean).slice(0, 30) })} placeholder="Next.js, React, TypeScript, PostgreSQL" /></label>
+        {draft.id?<Link className="admin-secondary" href={`/dashboard/projects/${draft.id}/preview?locale=${language}`}><ControlText value={"Private preview"}/></Link>:null}<div id="project-publishing" className="publication-review"><label className="admin-checkbox"><input type="checkbox" checked={rightsReviewed} onChange={e=>setRightsReviewed(e.target.checked)}/><ControlText value={"I reviewed the public text, media rights and confidentiality."}/></label><button className="admin-primary" type="button" disabled={busy||!rightsReviewed||!draft.id||newImages.length>0} onClick={()=>save(true)}><ControlText value={"Publish reviewed project"}/></button></div>
+        <div id="project-basics" className="admin-form-grid">
+          <label><ControlText value={"Slug"}/><input value={draft.slug} onChange={(event) => setDraft({ ...draft, slug: event.target.value.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '') })} placeholder="business-website-redesign" /></label>
+          <label><ControlText value={"Category"}/><select value={draft.category} onChange={(event) => setDraft({ ...draft, category: event.target.value })}><option value="web-development"><ControlText value={"Web development"}/></option><option value="pc-support"><ControlText value={"PC support"}/></option><option value="3d-printing"><ControlText value={"3D printing"}/></option><option value="design"><ControlText value={"Design"}/></option><option value="linux-servers"><ControlText value={"Linux & servers"}/></option><option value="google-business">Google Business</option><option value="digital-support"><ControlText value={"Digital support"}/></option><option value="data-protection"><ControlText value={"Backup & data protection"}/></option><option value="other"><ControlText value={"Other"}/></option></select></label>
+          <label><ControlText value={"Status"}/><select value={draft.status} onChange={(event) => setDraft({ ...draft, status: event.target.value as Project['status'] })}><option value="DRAFT"><ControlText value={"Draft"}/></option><option value="PUBLISHED" disabled><ControlText value={"Published (use reviewed publication)"}/></option><option value="ARCHIVED"><ControlText value={"Archived"}/></option></select></label>
+          <label className="admin-checkbox"><input type="checkbox" checked={draft.homepageFeatured} onChange={e=>setDraft({...draft,homepageFeatured:e.target.checked})}/><ControlText value="Feature on home page"/></label><label><ControlText value={"Display order"}/><input type="number" min="0" value={draft.sortOrder} onChange={(event) => setDraft({ ...draft, sortOrder: Number(event.target.value) })} /></label>
+          <label><ControlText value={"Completed date"}/><input type="date" value={draft.projectDate?.slice(0, 10) ?? ''} onChange={(event) => setDraft({ ...draft, projectDate: event.target.value || null })} /></label>
+          <label><ControlText value={"Website URL"}/><input type="url" value={draft.websiteUrl} onChange={(event) => setDraft({ ...draft, websiteUrl: event.target.value })} placeholder="https://..." /></label>
+          <label><ControlText value={"GitHub URL"}/><input type="url" value={draft.githubUrl} onChange={(event) => setDraft({ ...draft, githubUrl: event.target.value })} placeholder="https://github.com/..." /></label>
+          <label className="admin-span-2"><ControlText value={"External cover image URL (optional)"}/><input type="url" value={draft.coverImage} onChange={(event) => setDraft({ ...draft, coverImage: event.target.value })} placeholder="Used only when no uploaded image exists" /></label>
+          <label className="admin-span-2"><ControlText value={"Technologies & tools (comma separated)"}/><input value={draft.technologies.join(', ')} onChange={(event) => setDraft({ ...draft, technologies: event.target.value.split(',').map((item) => item.trim()).filter(Boolean).slice(0, 30) })} placeholder="Next.js, React, TypeScript, PostgreSQL" /></label>
         </div>
 
-        <div className="translation-tabs" role="tablist" aria-label="Project translation language">{locales.map((locale) => <button type="button" role="tab" aria-selected={language === locale} key={locale} className={language === locale ? 'is-active' : ''} onClick={() => setLanguage(locale)}>{locale.toUpperCase()}</button>)}</div>
+        <div id="project-localization" className="translation-tabs" role="group" aria-label="Project translation language">{locales.map((locale) => <button type="button" aria-pressed={language === locale} key={locale} className={language === locale ? 'is-active' : ''} onClick={() => setLanguage(locale)}>{locale.toUpperCase()}</button>)}</div>
         <div className="admin-form-grid project-translations">
-          <label>Title ({language.toUpperCase()})<input value={draft.title[language]} onChange={(event) => setLocalized('title', event.target.value)} /></label>
-          <label>Project type ({language.toUpperCase()})<input value={draft.type[language]} onChange={(event) => setLocalized('type', event.target.value)} placeholder="Business website, PC upgrade…" /></label>
-          <label className="admin-span-2">Short summary<textarea rows={3} value={draft.summary[language]} onChange={(event) => setLocalized('summary', event.target.value)} /></label>
-          <label className="admin-span-2">Full project description<textarea rows={6} value={draft.description[language]} onChange={(event) => setLocalized('description', event.target.value)} /></label>
-          <label className="admin-span-2">Your role<textarea rows={2} value={draft.role[language]} onChange={(event) => setLocalized('role', event.target.value)} /></label>
-          <label className="admin-span-2">What you did — one item per line<textarea rows={7} value={draft.workItems[language].join('\n')} onChange={(event) => updateWork(event.target.value)} /></label>
+          <label><ControlText value={"Title ("}/>{language.toUpperCase()})<input value={draft.title[language]} onChange={(event) => setLocalized('title', event.target.value)} /></label>
+          <label><ControlText value={"Project type ("}/>{language.toUpperCase()})<input value={draft.type[language]} onChange={(event) => setLocalized('type', event.target.value)} placeholder="Business website, PC upgrade…" /></label>
+          <label className="admin-span-2"><ControlText value={"Short summary"}/><textarea rows={3} value={draft.summary[language]} onChange={(event) => setLocalized('summary', event.target.value)} /></label>
+          <label className="admin-span-2"><ControlText value={"Full project description"}/><textarea rows={6} value={draft.description[language]} onChange={(event) => setLocalized('description', event.target.value)} /></label>
+          <label className="admin-span-2"><ControlText value={"Your role"}/><textarea rows={2} value={draft.role[language]} onChange={(event) => setLocalized('role', event.target.value)} /></label>
+          <label className="admin-span-2"><ControlText value={"What you did — one item per line"}/><textarea rows={7} value={draft.workItems[language].join('\n')} onChange={(event) => updateWork(event.target.value)} /></label>
         </div>
 
         <section aria-labelledby="project-seo-title">
-          <h3 id="project-seo-title">Search & sharing ({language.toUpperCase()})</h3>
-          <p>Optional. Empty fields use this language’s project title and summary. Published projects appear in both the carousel and grid. Old slugs redirect automatically after saving.</p>
+          <h3 id="project-seo-title"><ControlText value={"Search & sharing ("}/>{language.toUpperCase()})</h3>
+          <p><ControlText value={"Optional. Empty fields use this language’s project title and summary. Published projects appear in both the carousel and grid. Old slugs redirect automatically after saving."}/></p>
           <div className="admin-form-grid">
-            <label>SEO title<input maxLength={200} value={draft.seoTitle[language]} onChange={(event) => setLocalized('seoTitle', event.target.value)} /></label>
-            <label>Social title<input maxLength={200} value={draft.socialTitle[language]} onChange={(event) => setLocalized('socialTitle', event.target.value)} /></label>
-            <label>Meta description<textarea maxLength={500} value={draft.seoDescription[language]} onChange={(event) => setLocalized('seoDescription', event.target.value)} /></label>
-            <label>Social description<textarea maxLength={500} value={draft.socialDescription[language]} onChange={(event) => setLocalized('socialDescription', event.target.value)} /></label>
-            <label>Social preview image<select value={visibleImages.some((image) => image.id === draft.socialImageId) ? draft.socialImageId : ''} onChange={(event) => setDraft({ ...draft, socialImageId: event.target.value })}><option value="">Project cover (default)</option>{visibleImages.map((image) => <option key={image.id} value={image.id}>{image.filename}</option>)}</select></label>
+            <label><ControlText value={"SEO title"}/><input maxLength={200} value={draft.seoTitle[language]} onChange={(event) => setLocalized('seoTitle', event.target.value)} /></label>
+            <label><ControlText value={"Social title"}/><input maxLength={200} value={draft.socialTitle[language]} onChange={(event) => setLocalized('socialTitle', event.target.value)} /></label>
+            <label><ControlText value={"Meta description"}/><textarea maxLength={500} value={draft.seoDescription[language]} onChange={(event) => setLocalized('seoDescription', event.target.value)} /></label>
+            <label><ControlText value={"Social description"}/><textarea maxLength={500} value={draft.socialDescription[language]} onChange={(event) => setLocalized('socialDescription', event.target.value)} /></label>
+            <label><ControlText value={"Social preview image"}/><select value={visibleImages.some((image) => image.id === draft.socialImageId) ? draft.socialImageId : ''} onChange={(event) => setDraft({ ...draft, socialImageId: event.target.value })}><option value=""><ControlText value={"Project cover (default)"}/></option>{visibleImages.map((image) => <option key={image.id} value={image.id}>{image.filename}</option>)}</select></label>
           </div>
-          <p>Choose from this project’s saved images. Images become public only when the project is published.</p>
+          <p><ControlText value={"Choose from this project’s saved images. Images become public only when the project is published."}/></p>
         </section>
 
-        <section className="project-images-admin">
-          <div className="project-images-admin__heading"><div><h3>Project images</h3><p>Upload JPG, PNG, WebP or AVIF. Maximum 10 images, 4 MB each. Files are uploaded separately to avoid serverless request-size errors. The first image is used as the cover.</p></div><label className="admin-upload"><ImagePlus size={18} />Add images<input type="file" accept="image/jpeg,image/png,image/webp,image/avif" multiple onChange={(event) => { addImages(Array.from(event.target.files ?? [])); event.currentTarget.value = ''; }} /></label></div>
+        <section id="project-media" className="project-images-admin">
+          <div className="project-images-admin__heading"><div><h3><ControlText value={"Project images"}/></h3><p><ControlText value={"Upload JPG, PNG, WebP or AVIF. Maximum 10 images, 4 MB each. Files are uploaded separately to avoid serverless request-size errors. The first image is used as the cover."}/></p></div><label className="admin-upload"><ImagePlus size={18} /><ControlText value={"Add images"}/><input type="file" accept="image/jpeg,image/png,image/webp,image/avif" multiple onChange={(event) => { addImages(Array.from(event.target.files ?? [])); event.currentTarget.value = ''; }} /></label></div>
           <div className="project-images-admin__grid">
-            {visibleImages.map((image) => <figure key={image.id}><img src={image.url} alt={image.filename} /><figcaption>{image.filename}<button type="button" title="Remove image" onClick={() => setRemoveImageIds((ids) => ids.includes(image.id) ? ids : [...ids, image.id])}><X size={16} /></button></figcaption></figure>)}
+            {visibleImages.map((image) => <figure key={image.id}><img src={image.url} alt={image.filename} /><figcaption>{image.filename}<label><ControlText value={"Alternative text ("}/>{language.toUpperCase()})<input value={image.alt?.[language]||''} maxLength={500} onChange={e=>setDraft(d=>({...d,images:d.images.map(im=>im.id===image.id?{...im,alt:{...im.alt,[language]:e.target.value}}:im)}))}/></label><button type="button" className="admin-secondary" onClick={()=>setDraft(d=>({...d,coverImage:'',images:[image,...d.images.filter(im=>im.id!==image.id)]}))}><ControlText value={"Make cover / first"}/></button><button type="button" title="Remove image from gallery" aria-label="Remove image from gallery" onClick={() => {if(confirm('Remove this image from the gallery? Its original remains private for recovery.'))setRemoveImageIds((ids) => ids.includes(image.id) ? ids : [...ids, image.id]);}}><X size={16} /></button></figcaption></figure>)}
             {newImages.map((file, index) => <PendingImage key={`${file.name}-${file.lastModified}-${index}`} file={file} onRemove={() => setNewImages((files) => files.filter((_, itemIndex) => itemIndex !== index))} />)}
           </div>
         </section>

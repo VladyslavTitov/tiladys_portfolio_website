@@ -1,0 +1,789 @@
+{
+  "provenance": "Browser run 14: all public layout assertions and menu Escape passed; private German layout later failed and was fixed separately. Public source unchanged apart from whitespace after this run.",
+  "results": [
+    {
+      "page": "/de/",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services",
+      "width": 320,
+      "scroll": 320,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/websites",
+      "width": 379,
+      "scroll": 379,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/3d-printing",
+      "width": 320,
+      "scroll": 320,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/pc-laptop",
+      "width": 320,
+      "scroll": 320,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Portfolio",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio/synthetic-web-development",
+      "width": 320,
+      "scroll": 320,
+      "h1": "DE \u00b7 Synthetic web-development project",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/framer",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/3d-models",
+      "width": 320,
+      "scroll": 320,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/synthetic-template",
+      "width": 320,
+      "scroll": 320,
+      "h1": "DE \u00b7 Synthetic template",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/about",
+      "width": 320,
+      "scroll": 320,
+      "h1": "\u00dcber TiLADYS",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/contact",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Kontakt",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/privacy",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/not-a-real-page",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Seite nicht gefunden",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services",
+      "width": 360,
+      "scroll": 360,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/websites",
+      "width": 379,
+      "scroll": 379,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/3d-printing",
+      "width": 360,
+      "scroll": 360,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/pc-laptop",
+      "width": 360,
+      "scroll": 360,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Portfolio",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio/synthetic-web-development",
+      "width": 360,
+      "scroll": 360,
+      "h1": "DE \u00b7 Synthetic web-development project",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/framer",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/3d-models",
+      "width": 360,
+      "scroll": 360,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/synthetic-template",
+      "width": 360,
+      "scroll": 360,
+      "h1": "DE \u00b7 Synthetic template",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/about",
+      "width": 360,
+      "scroll": 360,
+      "h1": "\u00dcber TiLADYS",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/contact",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Kontakt",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/privacy",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/not-a-real-page",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Seite nicht gefunden",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services",
+      "width": 390,
+      "scroll": 390,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/websites",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/3d-printing",
+      "width": 390,
+      "scroll": 390,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/pc-laptop",
+      "width": 390,
+      "scroll": 390,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Portfolio",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio/synthetic-web-development",
+      "width": 390,
+      "scroll": 390,
+      "h1": "DE \u00b7 Synthetic web-development project",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/framer",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/3d-models",
+      "width": 390,
+      "scroll": 390,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/synthetic-template",
+      "width": 390,
+      "scroll": 390,
+      "h1": "DE \u00b7 Synthetic template",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/about",
+      "width": 390,
+      "scroll": 390,
+      "h1": "\u00dcber TiLADYS",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/contact",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Kontakt",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/privacy",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/not-a-real-page",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Seite nicht gefunden",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services",
+      "width": 768,
+      "scroll": 753,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/websites",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/3d-printing",
+      "width": 768,
+      "scroll": 753,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/pc-laptop",
+      "width": 768,
+      "scroll": 753,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Portfolio",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio/synthetic-web-development",
+      "width": 768,
+      "scroll": 753,
+      "h1": "DE \u00b7 Synthetic web-development project",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/framer",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/3d-models",
+      "width": 768,
+      "scroll": 753,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/synthetic-template",
+      "width": 768,
+      "scroll": 753,
+      "h1": "DE \u00b7 Synthetic template",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/about",
+      "width": 768,
+      "scroll": 753,
+      "h1": "\u00dcber TiLADYS",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/contact",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Kontakt",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/privacy",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/not-a-real-page",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Seite nicht gefunden",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/websites",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/3d-printing",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/pc-laptop",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "Portfolio",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio/synthetic-web-development",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "DE \u00b7 Synthetic web-development project",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/framer",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/3d-models",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/synthetic-template",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "DE \u00b7 Synthetic template",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/about",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "\u00dcber TiLADYS",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/contact",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "Kontakt",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/privacy",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/not-a-real-page",
+      "width": 1024,
+      "scroll": 1009,
+      "h1": "Seite nicht gefunden",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/websites",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/3d-printing",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/pc-laptop",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "Portfolio",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio/synthetic-web-development",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "DE \u00b7 Synthetic web-development project",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/framer",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/3d-models",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/synthetic-template",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "DE \u00b7 Synthetic template",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/about",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "\u00dcber TiLADYS",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/contact",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "Kontakt",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/privacy",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/not-a-real-page",
+      "width": 1280,
+      "scroll": 1265,
+      "h1": "Seite nicht gefunden",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Websites. 3D-Druck. Praktischer PC-Support.",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "IT, Websites & digitale Services",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/websites",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Website-Erstellung & Webservices",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/3d-printing",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "3D-Druck",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/services/pc-laptop",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "PC- & Laptop-Service",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Portfolio",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/portfolio/synthetic-web-development",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "DE \u00b7 Synthetic web-development project",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/framer",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Framer-Templates",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/3d-models",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "3D-Modelle zum Download",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/products/synthetic-template",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "DE \u00b7 Synthetic template",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/about",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "\u00dcber TiLADYS",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/contact",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Kontakt",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/privacy",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Datenschutz",
+      "footer": 5,
+      "fields": []
+    },
+    {
+      "page": "/de/not-a-real-page",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Seite nicht gefunden",
+      "footer": 5,
+      "fields": []
+    }
+  ]
+}

@@ -37,12 +37,13 @@ export async function POST(req: NextRequest) {
     await assertOrigin();
     const user = await requireUser();
     const payload = parseProjectPayload(await req.json());
+    if(payload.status==='PUBLISHED')return NextResponse.json({error:'SAVE_DRAFT_BEFORE_PUBLICATION'},{status:422});
     const row = await db.$transaction(async (tx) => {
       await reserveProjectSlug(tx, payload.slug);
       await validateSocialImage(tx, payload.socialImageId);
       const row = await tx.project.create({
         data: projectData(payload),
-        include: { images: { select: { id: true, filename: true, size: true, sortOrder: true }, orderBy: { sortOrder: 'asc' } } },
+        include: { images: { where: { archivedAt: null }, select: { id: true, filename: true, size: true, alt: true, sortOrder: true }, orderBy: { sortOrder: 'asc' } } },
       });
       await tx.auditLog.create({ data: { userId: user.id, action: 'PROJECT_CREATE', entity: 'Project', entityId: row.id } });
       return row;

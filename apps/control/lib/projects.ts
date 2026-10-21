@@ -1,3 +1,4 @@
+import sharp from 'sharp';
 import { projectPayloadSchema } from '@tiladys/shared';
 
 export const MAX_PROJECT_IMAGES = 10;
@@ -56,17 +57,20 @@ export async function parseProjectImage(input: FormDataEntryValue | null, sortOr
   const arrayBuffer = await input.arrayBuffer();
   const bytes = new Uint8Array(arrayBuffer);
   if (!validImageSignature(bytes, input.type)) throw new Error('INVALID_IMAGE_CONTENT');
+  let prepared:Buffer;
+  try{const decoder=sharp(bytes,{limitInputPixels:24000000,failOn:'warning',animated:false});const meta=await decoder.metadata();if(!meta.width||!meta.height||meta.width>8192||meta.height>8192||(meta.pages??1)>1)throw Error();prepared=await decoder.rotate().resize({width:1920,height:1920,fit:'inside',withoutEnlargement:true}).webp({quality:82}).toBuffer();}catch{throw Error('INVALID_IMAGE_CONTENT');}
   return {
-    filename: safeFilename(input.name, sortOrder),
-    mimeType: input.type,
-    size: input.size,
-    data: Buffer.from(arrayBuffer),
+    filename: safeFilename(input.name, sortOrder)+'.webp',
+    mimeType: 'image/webp',
+    size: prepared.length,
+    data: new Uint8Array(prepared),
     sortOrder,
   };
 }
 
 export function projectData(payload: ReturnType<typeof projectPayloadSchema.parse>) {
   return {
+    homepageFeatured:payload.homepageFeatured,
     slug: payload.slug,
     category: payload.category,
     status: payload.status,

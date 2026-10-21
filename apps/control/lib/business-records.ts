@@ -12,8 +12,8 @@ export function businessYear(date = new Date()) {
   return Number(year);
 }
 
-export async function allocateNumber(tx: Tx, scope: 'CUSTOMER' | 'SERVICE_JOB' | 'INVOICE', prefix: 'C' | 'JOB' | 'INV') {
-  const year = businessYear();
+export async function allocateNumber(tx: Tx, scope: 'CUSTOMER' | 'SERVICE_JOB' | 'INVOICE' | 'QUOTE', prefix: 'C' | 'JOB' | 'INV' | 'Q',now = new Date()) {
+  const year = businessYear(now);
   const rows = await tx.$queryRaw<Array<{ value: number }>>(Prisma.sql`
     INSERT INTO "NumberSequence" ("scope", "year", "nextValue") VALUES (${scope}, ${year}, 2)
     ON CONFLICT ("scope", "year") DO UPDATE SET "nextValue" = "NumberSequence"."nextValue" + 1
@@ -81,13 +81,13 @@ export function cataloguePriceDetails(price: string): { mode: CataloguePriceMode
 export async function prepareJobLineItems(tx: Tx, items: ReturnType<typeof parseServiceJob>['lineItems'], serviceJobId?: string) {
   const saved = serviceJobId ? await tx.serviceJobLineItem.findMany({ where: { serviceJobId } }) : [];
   const ids = [...new Set(items.map((item) => item.cataloguePriceItemId).filter((id): id is string => Boolean(id)))];
-  const catalogue = await tx.priceItem.findMany({ where: { id: { in: ids } }, select: { id: true, code: true, name: true, note: true, price: true } });
+  const catalogue = await tx.priceItem.findMany({ where: { id: { in: ids } }, select: { id: true, code: true, name: true, note: true, price: true,priceMode:true,unitPrice:true,unit:true } });
   const byId = new Map(catalogue.map((item) => [item.id, item]));
   return items.map((item, index) => {
     const previous = saved.find(line => line.id === item.id && line.cataloguePriceItemId === (item.cataloguePriceItemId || null));
     const source = item.cataloguePriceItemId ? byId.get(item.cataloguePriceItemId) : undefined;
     if (item.cataloguePriceItemId && !source) throw new Error('INVALID_CATALOGUE_ITEM');
-    const details = previous ? { mode: previous.cataloguePriceMode, unit: previous.unit, amount: previous.catalogueUnitPrice } : source ? cataloguePriceDetails(source.price) : { mode: 'MANUAL' as CataloguePriceMode, unit: item.unit, amount: null };
+    const details = previous ? { mode: previous.cataloguePriceMode, unit: previous.unit, amount: previous.catalogueUnitPrice } : source ? source.priceMode ? {mode:source.priceMode,unit:source.unit||item.unit,amount:source.unitPrice}:cataloguePriceDetails(source.price) : { mode: 'MANUAL' as CataloguePriceMode, unit: item.unit, amount: null };
     if (['FROM', 'MONTHLY', 'PERCENTAGE'].includes(details.mode) && !item.priceConfirmed) throw new Error('PRICE_CONFIRMATION_REQUIRED');
     if (details.mode === 'MONTHLY' && (!item.billingPeriodFrom || !item.billingPeriodTo || item.billingPeriodTo < item.billingPeriodFrom)) throw Object.assign(new Error('INVALID_BILLING_PERIOD'), { details: { fieldErrors: { [`lineItems.${index}.billingPeriodFrom`]: ['Enter an ordered billing period for this monthly line.'] } } });
     const quantity = new Prisma.Decimal(item.quantity.replace(',', '.'));
@@ -118,6 +118,7 @@ export function adminError(error: unknown, fallback: string) {
   const details = error instanceof Error && 'details' in error ? (error as Error & { details?: unknown }).details : undefined;
   const code = error && typeof error === 'object' && 'code' in error ? String((error as { code?: unknown }).code ?? '') : '';
   if (message === 'UNAUTHORIZED') return { status: 401, body: { error: message } };
+  if (message === 'STALE_WRITE' || message === 'IDEMPOTENCY_CONFLICT') return { status: 409, body: { error: message } };
   if (message === 'INVALID_ORIGIN') return { status: 403, body: { error: message } };
   if (message.startsWith('INVALID_')) return { status: 400, body: { error: message, details } };
   if (message === 'PRICE_CONFIRMATION_REQUIRED') return { status: 400, body: { error: message, details } };
@@ -125,6 +126,6 @@ export function adminError(error: unknown, fallback: string) {
   if (['ISSUED_PDF_MISSING','ISSUED_INVOICE_IMMUTABLE','INVOICE_NOT_ISSUABLE','PAYMENT_REQUIRES_ISSUED_INVOICE','PAYMENT_EXCEEDS_BALANCE'].includes(message)) return { status: 409, body: { error: message } };
   if (code === 'P2025') return { status: 404, body: { error: 'NOT_FOUND' } };
   if (code === 'P2002') return { status: 409, body: { error: 'CONFLICT' } };
-  console.error(`[${fallback}]`, error instanceof Error ? { name: error.name, message: error.message, stack: error.stack } : { type: typeof error });
+  console.error(`[${fallback}]`, error instanceof Error ? { name: error.name, code } : { type: typeof error });
   return { status: 500, body: { error: fallback } };
 }

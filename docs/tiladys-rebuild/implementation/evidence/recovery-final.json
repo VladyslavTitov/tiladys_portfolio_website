@@ -1,0 +1,221 @@
+{
+  "timestamp": "2026-10-14T12:19:26.737Z",
+  "environment": "isolated synthetic localhost PostgreSQL 17",
+  "sourceDatabase": "tiladys_rebuild_test",
+  "restoredDatabase": "tiladys_rebuild_restore_20261014121920325",
+  "backupDirectory": "/tmp/tiladys-recovery-20261014121920325",
+  "sourceOverwritten": false,
+  "tableCount": 38,
+  "tables": [
+    {
+      "table": "AdminUser",
+      "rows": 17,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "AuditLog",
+      "rows": 186,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "BusinessBillingSettings",
+      "rows": 1,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "Company",
+      "rows": 0,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "ContactAttachment",
+      "rows": 2,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "ContactMessage",
+      "rows": 22,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "ContactRateLimit",
+      "rows": 3,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "Customer",
+      "rows": 36,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "CustomerActivity",
+      "rows": 18,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "CustomerNote",
+      "rows": 0,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "DeliveryAttempt",
+      "rows": 13,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "EmailOutbox",
+      "rows": 13,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "EnquiryNote",
+      "rows": 0,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "ExportArtifact",
+      "rows": 5,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "FileAsset",
+      "rows": 0,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "IdempotencyRecord",
+      "rows": 30,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "Invoice",
+      "rows": 35,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "InvoiceLine",
+      "rows": 23,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "InvoicePayment",
+      "rows": 18,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "MediaObject",
+      "rows": 56,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "NumberSequence",
+      "rows": 7,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "PriceItem",
+      "rows": 5,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "PriceSection",
+      "rows": 5,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "Product",
+      "rows": 5,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "ProductAlias",
+      "rows": 6,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "ProductImage",
+      "rows": 5,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "Project",
+      "rows": 9,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "ProjectImage",
+      "rows": 7,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "ProjectSlugAlias",
+      "rows": 4,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "Quote",
+      "rows": 19,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "QuoteRevision",
+      "rows": 16,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "ServiceJob",
+      "rows": 28,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "ServiceJobLineItem",
+      "rows": 16,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "Session",
+      "rows": 11,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "Task",
+      "rows": 11,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "UploadReservation",
+      "rows": 32,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "VisitorDay",
+      "rows": 0,
+      "exactRowFingerprintsEqual": true
+    },
+    {
+      "table": "_prisma_migrations",
+      "rows": 23,
+      "exactRowFingerprintsEqual": true
+    }
+  ],
+  "indexesEqual": true,
+  "objects": [
+    {
+      "root": "tiladys-upload-test",
+      "fileCount": 21,
+      "bytes": 10536660,
+      "byteHashesEqual": true
+    },
+    {
+      "root": "tiladys-browser-photos",
+      "fileCount": 2,
+      "bytes": 136,
+      "byteHashesEqual": true
+    }
+  ],
+  "acceptedMediaReferences": 23,
+  "acceptedMediaReferencesRestored": true,
+  "objectHashMethod": "SHA-256 of actual source/restored bytes, independent of historical metadata checksum format",
+  "databaseBackupSha256": "2778e730fb3b13d92c679cbfefc65f3f59159e20b1756b17c88ca58a8ee23da7",
+  "productionBackupVerified": false
+}

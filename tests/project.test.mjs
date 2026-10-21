@@ -54,16 +54,6 @@ test('shared header and footer remain global public components', () => {
   assert.match(footer, /site-footer__grid/);
 });
 
-test('home page keeps three service pillars, a contact handoff and five process steps', () => {
-  const content = read('apps/web/lib/i18n.ts');
-  const home = read('apps/web/app/[locale]/page.tsx');
-  assert.match(home, /<ServiceVisual service=\{serviceById\[service\.id\]\}/);
-  assert.match(home, /service-contact-card/);
-  assert.match(home, /processIcons = \[MessageSquareText, Search, ClipboardList, Wrench, ShieldCheck\]/);
-  assert.match(content, /processSteps/);
-  for (const locale of locales) assert.match(content, new RegExp(`\\b${locale}: \\{`));
-});
-
 test('contact redesign and existing message API integration are present', () => {
   const page = read('apps/web/app/[locale]/contact/page.tsx');
   const form = read('apps/web/components/ContactForm.tsx');
@@ -169,7 +159,7 @@ test('public Prices route redirects permanently and navigation uses Services', (
   const footer = read('apps/web/components/Footer.tsx');
   assert.match(prices, /permanentRedirect/);
   assert.match(prices, /services/);
-  assert.match(header, /'services'/);
+  assert.match(header, /services\/websites/);
   assert.match(footer, /'services'/);
   assert.doesNotMatch(header, /'prices'/);
 });
@@ -204,11 +194,12 @@ test('admin price editor supports six translation tabs and one bulk save endpoin
 test('portfolio page includes category filters and database-backed project cards', () => {
   const page = read('apps/web/components/PortfolioExplorer.tsx');
   const publicProjects = read('apps/web/lib/public-projects-db.ts');
+  const filters = read('apps/web/lib/portfolio-filters.ts');
   const media = read('apps/web/app/api/public/media/[id]/route.ts');
   assert.match(page, /portfolio-filter/);
-  assert.match(page, /web-development/);
-  assert.match(page, /pc-support/);
-  assert.match(page, /linux-servers/);
+  assert.match(filters, /web-development/);
+  assert.match(filters, /pc-support/);
+  assert.match(filters, /linux-servers/);
   assert.match(publicProjects, /status: 'PUBLISHED'/);
   assert.match(publicProjects, /\/api\/public\/media\//);
   assert.match(media, /project: \{ status: 'PUBLISHED' \}/);

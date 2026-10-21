@@ -1,0 +1,4913 @@
+{
+  "phase": "before",
+  "tool": "Playwright 1.64.1",
+  "rows": [
+    {
+      "locale": "en",
+      "width": 320,
+      "htmlBytes": 94009,
+      "overflow": false,
+      "carousel": 3,
+      "hero": true,
+      "filters": [
+        {
+          "text": "All Projects",
+          "pressed": "true",
+          "x": 39,
+          "y": 1081.8125,
+          "right": 140.921875,
+          "bottom": 1135.8125,
+          "width": 101.921875,
+          "height": 54
+        },
+        {
+          "text": "Web Development",
+          "pressed": "false",
+          "x": 150.921875,
+          "y": 1081.8125,
+          "right": 281,
+          "bottom": 1135.8125,
+          "width": 130.078125,
+          "height": 54
+        },
+        {
+          "text": "3D Printing",
+          "pressed": "false",
+          "x": 39,
+          "y": 1145.8125,
+          "right": 140.921875,
+          "bottom": 1214.8125,
+          "width": 101.921875,
+          "height": 69
+        },
+        {
+          "text": "PC Build / Clean / Upgrade",
+          "pressed": "false",
+          "x": 150.921875,
+          "y": 1145.8125,
+          "right": 281,
+          "bottom": 1214.8125,
+          "width": 130.078125,
+          "height": 69
+        },
+        {
+          "text": "Design",
+          "pressed": "false",
+          "x": 39,
+          "y": 1224.8125,
+          "right": 140.921875,
+          "bottom": 1293.8125,
+          "width": 101.921875,
+          "height": 69
+        },
+        {
+          "text": "Linux & Server Experience",
+          "pressed": "false",
+          "x": 150.921875,
+          "y": 1224.8125,
+          "right": 281,
+          "bottom": 1293.8125,
+          "width": 130.078125,
+          "height": 69
+        },
+        {
+          "text": "Digital Support",
+          "pressed": "false",
+          "x": 39,
+          "y": 1303.8125,
+          "right": 140.921875,
+          "bottom": 1357.8125,
+          "width": 101.921875,
+          "height": 54
+        }
+      ],
+      "selects": 1,
+      "columns": 1,
+      "broken": [],
+      "cards": [
+        {
+          "card": {
+            "x": 18,
+            "y": 2045.609375,
+            "right": 302,
+            "bottom": 2485.015625,
+            "width": 284,
+            "height": 439.40625
+          },
+          "image": {
+            "x": 19,
+            "y": 2046.609375,
+            "right": 301,
+            "bottom": 2222.859375,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 2222.859375,
+            "right": 301,
+            "bottom": 2484.015625,
+            "width": 282,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 2416.015625,
+            "right": 277,
+            "bottom": 2460.015625,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 2246.859375,
+            "right": 277,
+            "bottom": 2306.234375,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-0",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 2509.015625,
+            "right": 302,
+            "bottom": 2922.828125,
+            "width": 284,
+            "height": 413.8125
+          },
+          "image": {
+            "x": 19,
+            "y": 2510.015625,
+            "right": 301,
+            "bottom": 2686.265625,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 2686.265625,
+            "right": 301,
+            "bottom": 2921.828125,
+            "width": 282,
+            "height": 235.5625
+          },
+          "action": {
+            "x": 43,
+            "y": 2853.828125,
+            "right": 277,
+            "bottom": 2897.828125,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 2710.265625,
+            "right": 277,
+            "bottom": 2769.640625,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-web-development",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 2946.828125,
+            "right": 302,
+            "bottom": 3360.640625,
+            "width": 284,
+            "height": 413.8125
+          },
+          "image": {
+            "x": 19,
+            "y": 2947.828125,
+            "right": 301,
+            "bottom": 3124.078125,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 3124.078125,
+            "right": 301,
+            "bottom": 3359.640625,
+            "width": 282,
+            "height": 235.5625
+          },
+          "action": {
+            "x": 43,
+            "y": 3291.640625,
+            "right": 277,
+            "bottom": 3335.640625,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 3148.078125,
+            "right": 277,
+            "bottom": 3207.453125,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-3d-printing",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 3384.640625,
+            "right": 302,
+            "bottom": 3798.453125,
+            "width": 284,
+            "height": 413.8125
+          },
+          "image": {
+            "x": 19,
+            "y": 3385.640625,
+            "right": 301,
+            "bottom": 3561.890625,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 3561.890625,
+            "right": 301,
+            "bottom": 3797.453125,
+            "width": 282,
+            "height": 235.5625
+          },
+          "action": {
+            "x": 43,
+            "y": 3729.453125,
+            "right": 277,
+            "bottom": 3773.453125,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 3585.890625,
+            "right": 277,
+            "bottom": 3645.265625,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-pc-support",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 3822.453125,
+            "right": 302,
+            "bottom": 4261.859375,
+            "width": 284,
+            "height": 439.40625
+          },
+          "image": {
+            "x": 19,
+            "y": 3823.453125,
+            "right": 301,
+            "bottom": 3999.703125,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 3999.703125,
+            "right": 301,
+            "bottom": 4260.859375,
+            "width": 282,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 4192.859375,
+            "right": 277,
+            "bottom": 4236.859375,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 4023.703125,
+            "right": 277,
+            "bottom": 4083.078125,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-1",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 4285.859375,
+            "right": 302,
+            "bottom": 4725.265625,
+            "width": 284,
+            "height": 439.40625
+          },
+          "image": {
+            "x": 19,
+            "y": 4286.859375,
+            "right": 301,
+            "bottom": 4463.109375,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 4463.109375,
+            "right": 301,
+            "bottom": 4724.265625,
+            "width": 282,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 4656.265625,
+            "right": 277,
+            "bottom": 4700.265625,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 4487.109375,
+            "right": 277,
+            "bottom": 4546.484375,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-2",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 4749.265625,
+            "right": 302,
+            "bottom": 5188.671875,
+            "width": 284,
+            "height": 439.40625
+          },
+          "image": {
+            "x": 19,
+            "y": 4750.265625,
+            "right": 301,
+            "bottom": 4926.515625,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 4926.515625,
+            "right": 301,
+            "bottom": 5187.671875,
+            "width": 282,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 5119.671875,
+            "right": 277,
+            "bottom": 5163.671875,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 4950.515625,
+            "right": 277,
+            "bottom": 5009.890625,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-3",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 5212.671875,
+            "right": 302,
+            "bottom": 5652.078125,
+            "width": 284,
+            "height": 439.40625
+          },
+          "image": {
+            "x": 19,
+            "y": 5213.671875,
+            "right": 301,
+            "bottom": 5389.921875,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 5389.921875,
+            "right": 301,
+            "bottom": 5651.078125,
+            "width": 282,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 5583.078125,
+            "right": 277,
+            "bottom": 5627.078125,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 5413.921875,
+            "right": 277,
+            "bottom": 5473.296875,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-4",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 5676.078125,
+            "right": 302,
+            "bottom": 6115.484375,
+            "width": 284,
+            "height": 439.40625
+          },
+          "image": {
+            "x": 19,
+            "y": 5677.078125,
+            "right": 301,
+            "bottom": 5853.328125,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 5853.328125,
+            "right": 301,
+            "bottom": 6114.484375,
+            "width": 282,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 6046.484375,
+            "right": 277,
+            "bottom": 6090.484375,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 5877.328125,
+            "right": 277,
+            "bottom": 5936.703125,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-5",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 6139.484375,
+            "right": 302,
+            "bottom": 6578.890625,
+            "width": 284,
+            "height": 439.40625
+          },
+          "image": {
+            "x": 19,
+            "y": 6140.484375,
+            "right": 301,
+            "bottom": 6316.734375,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 6316.734375,
+            "right": 301,
+            "bottom": 6577.890625,
+            "width": 282,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 6509.890625,
+            "right": 277,
+            "bottom": 6553.890625,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 6340.734375,
+            "right": 277,
+            "bottom": 6400.109375,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-6",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 6602.890625,
+            "right": 302,
+            "bottom": 7042.296875,
+            "width": 284,
+            "height": 439.40625
+          },
+          "image": {
+            "x": 19,
+            "y": 6603.890625,
+            "right": 301,
+            "bottom": 6780.140625,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 6780.140625,
+            "right": 301,
+            "bottom": 7041.296875,
+            "width": 282,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 6973.296875,
+            "right": 277,
+            "bottom": 7017.296875,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 6804.140625,
+            "right": 277,
+            "bottom": 6863.515625,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-7",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 7066.296875,
+            "right": 302,
+            "bottom": 7505.703125,
+            "width": 284,
+            "height": 439.40625
+          },
+          "image": {
+            "x": 19,
+            "y": 7067.296875,
+            "right": 301,
+            "bottom": 7243.546875,
+            "width": 282,
+            "height": 176.25
+          },
+          "body": {
+            "x": 19,
+            "y": 7243.546875,
+            "right": 301,
+            "bottom": 7504.703125,
+            "width": 282,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 7436.703125,
+            "right": 277,
+            "bottom": 7480.703125,
+            "width": 234,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 7267.546875,
+            "right": 277,
+            "bottom": 7326.921875,
+            "width": 234,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-8",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 375,
+      "htmlBytes": 94009,
+      "overflow": false,
+      "carousel": 3,
+      "hero": true,
+      "filters": [
+        {
+          "text": "All Projects",
+          "pressed": "true",
+          "x": 39,
+          "y": 1065.28125,
+          "right": 182.5,
+          "bottom": 1119.28125,
+          "width": 143.5,
+          "height": 54
+        },
+        {
+          "text": "Web Development",
+          "pressed": "false",
+          "x": 192.5,
+          "y": 1065.28125,
+          "right": 336,
+          "bottom": 1119.28125,
+          "width": 143.5,
+          "height": 54
+        },
+        {
+          "text": "3D Printing",
+          "pressed": "false",
+          "x": 39,
+          "y": 1129.28125,
+          "right": 182.5,
+          "bottom": 1198.28125,
+          "width": 143.5,
+          "height": 69
+        },
+        {
+          "text": "PC Build / Clean / Upgrade",
+          "pressed": "false",
+          "x": 192.5,
+          "y": 1129.28125,
+          "right": 336,
+          "bottom": 1198.28125,
+          "width": 143.5,
+          "height": 69
+        },
+        {
+          "text": "Design",
+          "pressed": "false",
+          "x": 39,
+          "y": 1208.28125,
+          "right": 182.5,
+          "bottom": 1262.28125,
+          "width": 143.5,
+          "height": 54
+        },
+        {
+          "text": "Linux & Server Experience",
+          "pressed": "false",
+          "x": 192.5,
+          "y": 1208.28125,
+          "right": 336,
+          "bottom": 1262.28125,
+          "width": 143.5,
+          "height": 54
+        },
+        {
+          "text": "Digital Support",
+          "pressed": "false",
+          "x": 39,
+          "y": 1272.28125,
+          "right": 182.5,
+          "bottom": 1320.28125,
+          "width": 143.5,
+          "height": 48
+        }
+      ],
+      "selects": 1,
+      "columns": 1,
+      "broken": [],
+      "cards": [
+        {
+          "card": {
+            "x": 18,
+            "y": 1986.453125,
+            "right": 357,
+            "bottom": 2460.234375,
+            "width": 339,
+            "height": 473.78125
+          },
+          "image": {
+            "x": 19,
+            "y": 1987.453125,
+            "right": 356,
+            "bottom": 2198.078125,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 2198.078125,
+            "right": 356,
+            "bottom": 2459.234375,
+            "width": 337,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 2391.234375,
+            "right": 332,
+            "bottom": 2435.234375,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 2222.078125,
+            "right": 332,
+            "bottom": 2281.453125,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-0",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 2484.234375,
+            "right": 357,
+            "bottom": 2906.828125,
+            "width": 339,
+            "height": 422.59375
+          },
+          "image": {
+            "x": 19,
+            "y": 2485.234375,
+            "right": 356,
+            "bottom": 2695.859375,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 2695.859375,
+            "right": 356,
+            "bottom": 2905.828125,
+            "width": 337,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 43,
+            "y": 2837.828125,
+            "right": 332,
+            "bottom": 2881.828125,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 2719.859375,
+            "right": 332,
+            "bottom": 2779.234375,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-web-development",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 2930.828125,
+            "right": 357,
+            "bottom": 3353.421875,
+            "width": 339,
+            "height": 422.59375
+          },
+          "image": {
+            "x": 19,
+            "y": 2931.828125,
+            "right": 356,
+            "bottom": 3142.453125,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 3142.453125,
+            "right": 356,
+            "bottom": 3352.421875,
+            "width": 337,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 43,
+            "y": 3284.421875,
+            "right": 332,
+            "bottom": 3328.421875,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 3166.453125,
+            "right": 332,
+            "bottom": 3225.828125,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-3d-printing",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 3377.421875,
+            "right": 357,
+            "bottom": 3800.015625,
+            "width": 339,
+            "height": 422.59375
+          },
+          "image": {
+            "x": 19,
+            "y": 3378.421875,
+            "right": 356,
+            "bottom": 3589.046875,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 3589.046875,
+            "right": 356,
+            "bottom": 3799.015625,
+            "width": 337,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 43,
+            "y": 3731.015625,
+            "right": 332,
+            "bottom": 3775.015625,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 3613.046875,
+            "right": 332,
+            "bottom": 3672.421875,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-pc-support",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 3824.015625,
+            "right": 357,
+            "bottom": 4297.796875,
+            "width": 339,
+            "height": 473.78125
+          },
+          "image": {
+            "x": 19,
+            "y": 3825.015625,
+            "right": 356,
+            "bottom": 4035.640625,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 4035.640625,
+            "right": 356,
+            "bottom": 4296.796875,
+            "width": 337,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 4228.796875,
+            "right": 332,
+            "bottom": 4272.796875,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 4059.640625,
+            "right": 332,
+            "bottom": 4119.015625,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-1",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 4321.796875,
+            "right": 357,
+            "bottom": 4795.578125,
+            "width": 339,
+            "height": 473.78125
+          },
+          "image": {
+            "x": 19,
+            "y": 4322.796875,
+            "right": 356,
+            "bottom": 4533.421875,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 4533.421875,
+            "right": 356,
+            "bottom": 4794.578125,
+            "width": 337,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 4726.578125,
+            "right": 332,
+            "bottom": 4770.578125,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 4557.421875,
+            "right": 332,
+            "bottom": 4616.796875,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-2",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 4819.578125,
+            "right": 357,
+            "bottom": 5293.359375,
+            "width": 339,
+            "height": 473.78125
+          },
+          "image": {
+            "x": 19,
+            "y": 4820.578125,
+            "right": 356,
+            "bottom": 5031.203125,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 5031.203125,
+            "right": 356,
+            "bottom": 5292.359375,
+            "width": 337,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 5224.359375,
+            "right": 332,
+            "bottom": 5268.359375,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 5055.203125,
+            "right": 332,
+            "bottom": 5114.578125,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-3",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 5317.359375,
+            "right": 357,
+            "bottom": 5791.140625,
+            "width": 339,
+            "height": 473.78125
+          },
+          "image": {
+            "x": 19,
+            "y": 5318.359375,
+            "right": 356,
+            "bottom": 5528.984375,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 5528.984375,
+            "right": 356,
+            "bottom": 5790.140625,
+            "width": 337,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 5722.140625,
+            "right": 332,
+            "bottom": 5766.140625,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 5552.984375,
+            "right": 332,
+            "bottom": 5612.359375,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-4",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 5815.140625,
+            "right": 357,
+            "bottom": 6288.921875,
+            "width": 339,
+            "height": 473.78125
+          },
+          "image": {
+            "x": 19,
+            "y": 5816.140625,
+            "right": 356,
+            "bottom": 6026.765625,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 6026.765625,
+            "right": 356,
+            "bottom": 6287.921875,
+            "width": 337,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 6219.921875,
+            "right": 332,
+            "bottom": 6263.921875,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 6050.765625,
+            "right": 332,
+            "bottom": 6110.140625,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-5",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 6312.921875,
+            "right": 357,
+            "bottom": 6786.703125,
+            "width": 339,
+            "height": 473.78125
+          },
+          "image": {
+            "x": 19,
+            "y": 6313.921875,
+            "right": 356,
+            "bottom": 6524.546875,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 6524.546875,
+            "right": 356,
+            "bottom": 6785.703125,
+            "width": 337,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 6717.703125,
+            "right": 332,
+            "bottom": 6761.703125,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 6548.546875,
+            "right": 332,
+            "bottom": 6607.921875,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-6",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 6810.703125,
+            "right": 357,
+            "bottom": 7284.484375,
+            "width": 339,
+            "height": 473.78125
+          },
+          "image": {
+            "x": 19,
+            "y": 6811.703125,
+            "right": 356,
+            "bottom": 7022.328125,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 7022.328125,
+            "right": 356,
+            "bottom": 7283.484375,
+            "width": 337,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 7215.484375,
+            "right": 332,
+            "bottom": 7259.484375,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 7046.328125,
+            "right": 332,
+            "bottom": 7105.703125,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-7",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 7308.484375,
+            "right": 357,
+            "bottom": 7782.265625,
+            "width": 339,
+            "height": 473.78125
+          },
+          "image": {
+            "x": 19,
+            "y": 7309.484375,
+            "right": 356,
+            "bottom": 7520.109375,
+            "width": 337,
+            "height": 210.625
+          },
+          "body": {
+            "x": 19,
+            "y": 7520.109375,
+            "right": 356,
+            "bottom": 7781.265625,
+            "width": 337,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 43,
+            "y": 7713.265625,
+            "right": 332,
+            "bottom": 7757.265625,
+            "width": 289,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 7544.109375,
+            "right": 332,
+            "bottom": 7603.484375,
+            "width": 289,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-8",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 430,
+      "htmlBytes": 94009,
+      "overflow": false,
+      "carousel": 3,
+      "hero": true,
+      "filters": [
+        {
+          "text": "All Projects",
+          "pressed": "true",
+          "x": 39,
+          "y": 983.796875,
+          "right": 210,
+          "bottom": 1031.796875,
+          "width": 171,
+          "height": 48
+        },
+        {
+          "text": "Web Development",
+          "pressed": "false",
+          "x": 220,
+          "y": 983.796875,
+          "right": 391,
+          "bottom": 1031.796875,
+          "width": 171,
+          "height": 48
+        },
+        {
+          "text": "3D Printing",
+          "pressed": "false",
+          "x": 39,
+          "y": 1041.796875,
+          "right": 210,
+          "bottom": 1095.796875,
+          "width": 171,
+          "height": 54
+        },
+        {
+          "text": "PC Build / Clean / Upgrade",
+          "pressed": "false",
+          "x": 220,
+          "y": 1041.796875,
+          "right": 391,
+          "bottom": 1095.796875,
+          "width": 171,
+          "height": 54
+        },
+        {
+          "text": "Design",
+          "pressed": "false",
+          "x": 39,
+          "y": 1105.796875,
+          "right": 210,
+          "bottom": 1159.796875,
+          "width": 171,
+          "height": 54
+        },
+        {
+          "text": "Linux & Server Experience",
+          "pressed": "false",
+          "x": 220,
+          "y": 1105.796875,
+          "right": 391,
+          "bottom": 1159.796875,
+          "width": 171,
+          "height": 54
+        },
+        {
+          "text": "Digital Support",
+          "pressed": "false",
+          "x": 39,
+          "y": 1169.796875,
+          "right": 210,
+          "bottom": 1217.796875,
+          "width": 171,
+          "height": 48
+        }
+      ],
+      "selects": 1,
+      "columns": 1,
+      "broken": [],
+      "cards": [
+        {
+          "card": {
+            "x": 18,
+            "y": 1891.953125,
+            "right": 412,
+            "bottom": 2344.828125,
+            "width": 394,
+            "height": 452.875
+          },
+          "image": {
+            "x": 19,
+            "y": 1892.953125,
+            "right": 411,
+            "bottom": 2137.953125,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 2137.953125,
+            "right": 411,
+            "bottom": 2343.828125,
+            "width": 392,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 2275.828125,
+            "right": 387,
+            "bottom": 2319.828125,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 2161.953125,
+            "right": 387,
+            "bottom": 2191.640625,
+            "width": 344,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-0",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 2368.828125,
+            "right": 412,
+            "bottom": 2825.796875,
+            "width": 394,
+            "height": 456.96875
+          },
+          "image": {
+            "x": 19,
+            "y": 2369.828125,
+            "right": 411,
+            "bottom": 2614.828125,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 2614.828125,
+            "right": 411,
+            "bottom": 2824.796875,
+            "width": 392,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 43,
+            "y": 2756.796875,
+            "right": 387,
+            "bottom": 2800.796875,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 2638.828125,
+            "right": 387,
+            "bottom": 2698.203125,
+            "width": 344,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-web-development",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 2849.796875,
+            "right": 412,
+            "bottom": 3306.765625,
+            "width": 394,
+            "height": 456.96875
+          },
+          "image": {
+            "x": 19,
+            "y": 2850.796875,
+            "right": 411,
+            "bottom": 3095.796875,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 3095.796875,
+            "right": 411,
+            "bottom": 3305.765625,
+            "width": 392,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 43,
+            "y": 3237.765625,
+            "right": 387,
+            "bottom": 3281.765625,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 3119.796875,
+            "right": 387,
+            "bottom": 3179.171875,
+            "width": 344,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-3d-printing",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 3330.765625,
+            "right": 412,
+            "bottom": 3787.734375,
+            "width": 394,
+            "height": 456.96875
+          },
+          "image": {
+            "x": 19,
+            "y": 3331.765625,
+            "right": 411,
+            "bottom": 3576.765625,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 3576.765625,
+            "right": 411,
+            "bottom": 3786.734375,
+            "width": 392,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 43,
+            "y": 3718.734375,
+            "right": 387,
+            "bottom": 3762.734375,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 3600.765625,
+            "right": 387,
+            "bottom": 3660.140625,
+            "width": 344,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-pc-support",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 3811.734375,
+            "right": 412,
+            "bottom": 4264.609375,
+            "width": 394,
+            "height": 452.875
+          },
+          "image": {
+            "x": 19,
+            "y": 3812.734375,
+            "right": 411,
+            "bottom": 4057.734375,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 4057.734375,
+            "right": 411,
+            "bottom": 4263.609375,
+            "width": 392,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 4195.609375,
+            "right": 387,
+            "bottom": 4239.609375,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 4081.734375,
+            "right": 387,
+            "bottom": 4111.421875,
+            "width": 344,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-1",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 4288.609375,
+            "right": 412,
+            "bottom": 4741.484375,
+            "width": 394,
+            "height": 452.875
+          },
+          "image": {
+            "x": 19,
+            "y": 4289.609375,
+            "right": 411,
+            "bottom": 4534.609375,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 4534.609375,
+            "right": 411,
+            "bottom": 4740.484375,
+            "width": 392,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 4672.484375,
+            "right": 387,
+            "bottom": 4716.484375,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 4558.609375,
+            "right": 387,
+            "bottom": 4588.296875,
+            "width": 344,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-2",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 4765.484375,
+            "right": 412,
+            "bottom": 5218.359375,
+            "width": 394,
+            "height": 452.875
+          },
+          "image": {
+            "x": 19,
+            "y": 4766.484375,
+            "right": 411,
+            "bottom": 5011.484375,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 5011.484375,
+            "right": 411,
+            "bottom": 5217.359375,
+            "width": 392,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 5149.359375,
+            "right": 387,
+            "bottom": 5193.359375,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 5035.484375,
+            "right": 387,
+            "bottom": 5065.171875,
+            "width": 344,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-3",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 5242.359375,
+            "right": 412,
+            "bottom": 5695.234375,
+            "width": 394,
+            "height": 452.875
+          },
+          "image": {
+            "x": 19,
+            "y": 5243.359375,
+            "right": 411,
+            "bottom": 5488.359375,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 5488.359375,
+            "right": 411,
+            "bottom": 5694.234375,
+            "width": 392,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 5626.234375,
+            "right": 387,
+            "bottom": 5670.234375,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 5512.359375,
+            "right": 387,
+            "bottom": 5542.046875,
+            "width": 344,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-4",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 5719.234375,
+            "right": 412,
+            "bottom": 6172.109375,
+            "width": 394,
+            "height": 452.875
+          },
+          "image": {
+            "x": 19,
+            "y": 5720.234375,
+            "right": 411,
+            "bottom": 5965.234375,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 5965.234375,
+            "right": 411,
+            "bottom": 6171.109375,
+            "width": 392,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 6103.109375,
+            "right": 387,
+            "bottom": 6147.109375,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 5989.234375,
+            "right": 387,
+            "bottom": 6018.921875,
+            "width": 344,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-5",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 6196.109375,
+            "right": 412,
+            "bottom": 6648.984375,
+            "width": 394,
+            "height": 452.875
+          },
+          "image": {
+            "x": 19,
+            "y": 6197.109375,
+            "right": 411,
+            "bottom": 6442.109375,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 6442.109375,
+            "right": 411,
+            "bottom": 6647.984375,
+            "width": 392,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 6579.984375,
+            "right": 387,
+            "bottom": 6623.984375,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 6466.109375,
+            "right": 387,
+            "bottom": 6495.796875,
+            "width": 344,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-6",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 6672.984375,
+            "right": 412,
+            "bottom": 7125.859375,
+            "width": 394,
+            "height": 452.875
+          },
+          "image": {
+            "x": 19,
+            "y": 6673.984375,
+            "right": 411,
+            "bottom": 6918.984375,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 6918.984375,
+            "right": 411,
+            "bottom": 7124.859375,
+            "width": 392,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 7056.859375,
+            "right": 387,
+            "bottom": 7100.859375,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 6942.984375,
+            "right": 387,
+            "bottom": 6972.671875,
+            "width": 344,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-7",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 7149.859375,
+            "right": 412,
+            "bottom": 7602.734375,
+            "width": 394,
+            "height": 452.875
+          },
+          "image": {
+            "x": 19,
+            "y": 7150.859375,
+            "right": 411,
+            "bottom": 7395.859375,
+            "width": 392,
+            "height": 245
+          },
+          "body": {
+            "x": 19,
+            "y": 7395.859375,
+            "right": 411,
+            "bottom": 7601.734375,
+            "width": 392,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 7533.734375,
+            "right": 387,
+            "bottom": 7577.734375,
+            "width": 344,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 7419.859375,
+            "right": 387,
+            "bottom": 7449.546875,
+            "width": 344,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-8",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "htmlBytes": 94009,
+      "overflow": false,
+      "carousel": 3,
+      "hero": true,
+      "filters": [
+        {
+          "text": "All Projects",
+          "pressed": "true",
+          "x": 105.640625,
+          "y": 896.671875,
+          "right": 266.96875,
+          "bottom": 944.671875,
+          "width": 161.328125,
+          "height": 48
+        },
+        {
+          "text": "Web Development",
+          "pressed": "false",
+          "x": 276.96875,
+          "y": 896.671875,
+          "right": 492.875,
+          "bottom": 944.671875,
+          "width": 215.90625,
+          "height": 48
+        },
+        {
+          "text": "3D Printing",
+          "pressed": "false",
+          "x": 502.875,
+          "y": 896.671875,
+          "right": 662.359375,
+          "bottom": 944.671875,
+          "width": 159.484375,
+          "height": 48
+        },
+        {
+          "text": "PC Build / Clean / Upgrade",
+          "pressed": "false",
+          "x": 177.28125,
+          "y": 954.671875,
+          "right": 454.4375,
+          "bottom": 1002.671875,
+          "width": 277.15625,
+          "height": 48
+        },
+        {
+          "text": "Design",
+          "pressed": "false",
+          "x": 464.4375,
+          "y": 954.671875,
+          "right": 590.703125,
+          "bottom": 1002.671875,
+          "width": 126.265625,
+          "height": 48
+        },
+        {
+          "text": "Linux & Server Experience",
+          "pressed": "false",
+          "x": 145.078125,
+          "y": 1012.671875,
+          "right": 423.234375,
+          "bottom": 1060.671875,
+          "width": 278.15625,
+          "height": 48
+        },
+        {
+          "text": "Digital Support",
+          "pressed": "false",
+          "x": 433.234375,
+          "y": 1012.671875,
+          "right": 622.921875,
+          "bottom": 1060.671875,
+          "width": 189.6875,
+          "height": 48
+        }
+      ],
+      "selects": 1,
+      "columns": 2,
+      "broken": [],
+      "cards": [
+        {
+          "card": {
+            "x": 18,
+            "y": 1894.5,
+            "right": 372,
+            "bottom": 2326.46875,
+            "width": 354,
+            "height": 431.96875
+          },
+          "image": {
+            "x": 19,
+            "y": 1895.5,
+            "right": 371,
+            "bottom": 2115.5,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 19,
+            "y": 2115.5,
+            "right": 371,
+            "bottom": 2325.46875,
+            "width": 352,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 43,
+            "y": 2257.46875,
+            "right": 347,
+            "bottom": 2301.46875,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 2139.5,
+            "right": 347,
+            "bottom": 2169.1875,
+            "width": 304,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-0",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 396,
+            "y": 1894.5,
+            "right": 750,
+            "bottom": 2326.46875,
+            "width": 354,
+            "height": 431.96875
+          },
+          "image": {
+            "x": 397,
+            "y": 1895.5,
+            "right": 749,
+            "bottom": 2115.5,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 397,
+            "y": 2115.5,
+            "right": 749,
+            "bottom": 2325.46875,
+            "width": 352,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 421,
+            "y": 2257.46875,
+            "right": 725,
+            "bottom": 2301.46875,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 421,
+            "y": 2139.5,
+            "right": 725,
+            "bottom": 2198.875,
+            "width": 304,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-web-development",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 2350.46875,
+            "right": 372,
+            "bottom": 2782.4375,
+            "width": 354,
+            "height": 431.96875
+          },
+          "image": {
+            "x": 19,
+            "y": 2351.46875,
+            "right": 371,
+            "bottom": 2571.46875,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 19,
+            "y": 2571.46875,
+            "right": 371,
+            "bottom": 2781.4375,
+            "width": 352,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 43,
+            "y": 2713.4375,
+            "right": 347,
+            "bottom": 2757.4375,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 2595.46875,
+            "right": 347,
+            "bottom": 2654.84375,
+            "width": 304,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-3d-printing",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 396,
+            "y": 2350.46875,
+            "right": 750,
+            "bottom": 2782.4375,
+            "width": 354,
+            "height": 431.96875
+          },
+          "image": {
+            "x": 397,
+            "y": 2351.46875,
+            "right": 749,
+            "bottom": 2571.46875,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 397,
+            "y": 2571.46875,
+            "right": 749,
+            "bottom": 2781.4375,
+            "width": 352,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 421,
+            "y": 2713.4375,
+            "right": 725,
+            "bottom": 2757.4375,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 421,
+            "y": 2595.46875,
+            "right": 725,
+            "bottom": 2654.84375,
+            "width": 304,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-pc-support",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 2806.4375,
+            "right": 372,
+            "bottom": 3234.3125,
+            "width": 354,
+            "height": 427.875
+          },
+          "image": {
+            "x": 19,
+            "y": 2807.4375,
+            "right": 371,
+            "bottom": 3027.4375,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 19,
+            "y": 3027.4375,
+            "right": 371,
+            "bottom": 3233.3125,
+            "width": 352,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 3165.3125,
+            "right": 347,
+            "bottom": 3209.3125,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 3051.4375,
+            "right": 347,
+            "bottom": 3081.125,
+            "width": 304,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-1",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 396,
+            "y": 2806.4375,
+            "right": 750,
+            "bottom": 3234.3125,
+            "width": 354,
+            "height": 427.875
+          },
+          "image": {
+            "x": 397,
+            "y": 2807.4375,
+            "right": 749,
+            "bottom": 3027.4375,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 397,
+            "y": 3027.4375,
+            "right": 749,
+            "bottom": 3233.3125,
+            "width": 352,
+            "height": 205.875
+          },
+          "action": {
+            "x": 421,
+            "y": 3165.3125,
+            "right": 725,
+            "bottom": 3209.3125,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 421,
+            "y": 3051.4375,
+            "right": 725,
+            "bottom": 3081.125,
+            "width": 304,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-2",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 3258.3125,
+            "right": 372,
+            "bottom": 3686.1875,
+            "width": 354,
+            "height": 427.875
+          },
+          "image": {
+            "x": 19,
+            "y": 3259.3125,
+            "right": 371,
+            "bottom": 3479.3125,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 19,
+            "y": 3479.3125,
+            "right": 371,
+            "bottom": 3685.1875,
+            "width": 352,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 3617.1875,
+            "right": 347,
+            "bottom": 3661.1875,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 3503.3125,
+            "right": 347,
+            "bottom": 3533,
+            "width": 304,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-3",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 396,
+            "y": 3258.3125,
+            "right": 750,
+            "bottom": 3686.1875,
+            "width": 354,
+            "height": 427.875
+          },
+          "image": {
+            "x": 397,
+            "y": 3259.3125,
+            "right": 749,
+            "bottom": 3479.3125,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 397,
+            "y": 3479.3125,
+            "right": 749,
+            "bottom": 3685.1875,
+            "width": 352,
+            "height": 205.875
+          },
+          "action": {
+            "x": 421,
+            "y": 3617.1875,
+            "right": 725,
+            "bottom": 3661.1875,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 421,
+            "y": 3503.3125,
+            "right": 725,
+            "bottom": 3533,
+            "width": 304,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-4",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 3710.1875,
+            "right": 372,
+            "bottom": 4138.0625,
+            "width": 354,
+            "height": 427.875
+          },
+          "image": {
+            "x": 19,
+            "y": 3711.1875,
+            "right": 371,
+            "bottom": 3931.1875,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 19,
+            "y": 3931.1875,
+            "right": 371,
+            "bottom": 4137.0625,
+            "width": 352,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 4069.0625,
+            "right": 347,
+            "bottom": 4113.0625,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 3955.1875,
+            "right": 347,
+            "bottom": 3984.875,
+            "width": 304,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-5",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 396,
+            "y": 3710.1875,
+            "right": 750,
+            "bottom": 4138.0625,
+            "width": 354,
+            "height": 427.875
+          },
+          "image": {
+            "x": 397,
+            "y": 3711.1875,
+            "right": 749,
+            "bottom": 3931.1875,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 397,
+            "y": 3931.1875,
+            "right": 749,
+            "bottom": 4137.0625,
+            "width": 352,
+            "height": 205.875
+          },
+          "action": {
+            "x": 421,
+            "y": 4069.0625,
+            "right": 725,
+            "bottom": 4113.0625,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 421,
+            "y": 3955.1875,
+            "right": 725,
+            "bottom": 3984.875,
+            "width": 304,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-6",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 18,
+            "y": 4162.0625,
+            "right": 372,
+            "bottom": 4589.9375,
+            "width": 354,
+            "height": 427.875
+          },
+          "image": {
+            "x": 19,
+            "y": 4163.0625,
+            "right": 371,
+            "bottom": 4383.0625,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 19,
+            "y": 4383.0625,
+            "right": 371,
+            "bottom": 4588.9375,
+            "width": 352,
+            "height": 205.875
+          },
+          "action": {
+            "x": 43,
+            "y": 4520.9375,
+            "right": 347,
+            "bottom": 4564.9375,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 43,
+            "y": 4407.0625,
+            "right": 347,
+            "bottom": 4436.75,
+            "width": 304,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-7",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 396,
+            "y": 4162.0625,
+            "right": 750,
+            "bottom": 4589.9375,
+            "width": 354,
+            "height": 427.875
+          },
+          "image": {
+            "x": 397,
+            "y": 4163.0625,
+            "right": 749,
+            "bottom": 4383.0625,
+            "width": 352,
+            "height": 220
+          },
+          "body": {
+            "x": 397,
+            "y": 4383.0625,
+            "right": 749,
+            "bottom": 4588.9375,
+            "width": 352,
+            "height": 205.875
+          },
+          "action": {
+            "x": 421,
+            "y": 4520.9375,
+            "right": 725,
+            "bottom": 4564.9375,
+            "width": 304,
+            "height": 44
+          },
+          "title": {
+            "x": 421,
+            "y": 4407.0625,
+            "right": 725,
+            "bottom": 4436.75,
+            "width": 304,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-8",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "htmlBytes": 94009,
+      "overflow": false,
+      "carousel": 3,
+      "hero": true,
+      "filters": [
+        {
+          "text": "All Projects",
+          "pressed": "true",
+          "x": 90.0625,
+          "y": 610.296875,
+          "right": 251.390625,
+          "bottom": 658.296875,
+          "width": 161.328125,
+          "height": 48
+        },
+        {
+          "text": "Web Development",
+          "pressed": "false",
+          "x": 261.390625,
+          "y": 610.296875,
+          "right": 477.296875,
+          "bottom": 658.296875,
+          "width": 215.90625,
+          "height": 48
+        },
+        {
+          "text": "3D Printing",
+          "pressed": "false",
+          "x": 487.296875,
+          "y": 610.296875,
+          "right": 646.78125,
+          "bottom": 658.296875,
+          "width": 159.484375,
+          "height": 48
+        },
+        {
+          "text": "PC Build / Clean / Upgrade",
+          "pressed": "false",
+          "x": 656.78125,
+          "y": 610.296875,
+          "right": 933.9375,
+          "bottom": 658.296875,
+          "width": 277.15625,
+          "height": 48
+        },
+        {
+          "text": "Design",
+          "pressed": "false",
+          "x": 204.9375,
+          "y": 668.296875,
+          "right": 331.203125,
+          "bottom": 716.296875,
+          "width": 126.265625,
+          "height": 48
+        },
+        {
+          "text": "Linux & Server Experience",
+          "pressed": "false",
+          "x": 341.203125,
+          "y": 668.296875,
+          "right": 619.359375,
+          "bottom": 716.296875,
+          "width": 278.15625,
+          "height": 48
+        },
+        {
+          "text": "Digital Support",
+          "pressed": "false",
+          "x": 629.359375,
+          "y": 668.296875,
+          "right": 819.046875,
+          "bottom": 716.296875,
+          "width": 189.6875,
+          "height": 48
+        }
+      ],
+      "selects": 1,
+      "columns": 3,
+      "broken": [],
+      "cards": [
+        {
+          "card": {
+            "x": 24,
+            "y": 1307.296875,
+            "right": 333.328125,
+            "bottom": 1762.53125,
+            "width": 309.328125,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 25,
+            "y": 1308.296875,
+            "right": 332.328125,
+            "bottom": 1500.375,
+            "width": 307.328125,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 25,
+            "y": 1500.375,
+            "right": 332.328125,
+            "bottom": 1761.53125,
+            "width": 307.328125,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 49,
+            "y": 1693.53125,
+            "right": 308.328125,
+            "bottom": 1737.53125,
+            "width": 259.328125,
+            "height": 44
+          },
+          "title": {
+            "x": 49,
+            "y": 1524.375,
+            "right": 308.328125,
+            "bottom": 1583.75,
+            "width": 259.328125,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-0",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 357.328125,
+            "y": 1307.296875,
+            "right": 666.65625,
+            "bottom": 1762.53125,
+            "width": 309.328125,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 358.328125,
+            "y": 1308.296875,
+            "right": 665.65625,
+            "bottom": 1500.375,
+            "width": 307.328125,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 358.328125,
+            "y": 1500.375,
+            "right": 665.65625,
+            "bottom": 1761.53125,
+            "width": 307.328125,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 382.328125,
+            "y": 1693.53125,
+            "right": 641.65625,
+            "bottom": 1737.53125,
+            "width": 259.328125,
+            "height": 44
+          },
+          "title": {
+            "x": 382.328125,
+            "y": 1524.375,
+            "right": 641.65625,
+            "bottom": 1583.75,
+            "width": 259.328125,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-web-development",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 690.65625,
+            "y": 1307.296875,
+            "right": 1000,
+            "bottom": 1762.53125,
+            "width": 309.34375,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 691.65625,
+            "y": 1308.296875,
+            "right": 999,
+            "bottom": 1500.375,
+            "width": 307.34375,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 691.65625,
+            "y": 1500.375,
+            "right": 999,
+            "bottom": 1761.53125,
+            "width": 307.34375,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 715.65625,
+            "y": 1693.53125,
+            "right": 975,
+            "bottom": 1737.53125,
+            "width": 259.34375,
+            "height": 44
+          },
+          "title": {
+            "x": 715.65625,
+            "y": 1524.375,
+            "right": 975,
+            "bottom": 1583.75,
+            "width": 259.34375,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-3d-printing",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 24,
+            "y": 1786.53125,
+            "right": 333.328125,
+            "bottom": 2241.765625,
+            "width": 309.328125,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 25,
+            "y": 1787.53125,
+            "right": 332.328125,
+            "bottom": 1979.609375,
+            "width": 307.328125,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 25,
+            "y": 1979.609375,
+            "right": 332.328125,
+            "bottom": 2240.765625,
+            "width": 307.328125,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 49,
+            "y": 2172.765625,
+            "right": 308.328125,
+            "bottom": 2216.765625,
+            "width": 259.328125,
+            "height": 44
+          },
+          "title": {
+            "x": 49,
+            "y": 2003.609375,
+            "right": 308.328125,
+            "bottom": 2062.984375,
+            "width": 259.328125,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-pc-support",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 357.328125,
+            "y": 1786.53125,
+            "right": 666.65625,
+            "bottom": 2241.765625,
+            "width": 309.328125,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 358.328125,
+            "y": 1787.53125,
+            "right": 665.65625,
+            "bottom": 1979.609375,
+            "width": 307.328125,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 358.328125,
+            "y": 1979.609375,
+            "right": 665.65625,
+            "bottom": 2240.765625,
+            "width": 307.328125,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 382.328125,
+            "y": 2172.765625,
+            "right": 641.65625,
+            "bottom": 2216.765625,
+            "width": 259.328125,
+            "height": 44
+          },
+          "title": {
+            "x": 382.328125,
+            "y": 2003.609375,
+            "right": 641.65625,
+            "bottom": 2062.984375,
+            "width": 259.328125,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-1",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 690.65625,
+            "y": 1786.53125,
+            "right": 1000,
+            "bottom": 2241.765625,
+            "width": 309.34375,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 691.65625,
+            "y": 1787.53125,
+            "right": 999,
+            "bottom": 1979.609375,
+            "width": 307.34375,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 691.65625,
+            "y": 1979.609375,
+            "right": 999,
+            "bottom": 2240.765625,
+            "width": 307.34375,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 715.65625,
+            "y": 2172.765625,
+            "right": 975,
+            "bottom": 2216.765625,
+            "width": 259.34375,
+            "height": 44
+          },
+          "title": {
+            "x": 715.65625,
+            "y": 2003.609375,
+            "right": 975,
+            "bottom": 2062.984375,
+            "width": 259.34375,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-2",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 24,
+            "y": 2265.765625,
+            "right": 333.328125,
+            "bottom": 2721,
+            "width": 309.328125,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 25,
+            "y": 2266.765625,
+            "right": 332.328125,
+            "bottom": 2458.84375,
+            "width": 307.328125,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 25,
+            "y": 2458.84375,
+            "right": 332.328125,
+            "bottom": 2720,
+            "width": 307.328125,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 49,
+            "y": 2652,
+            "right": 308.328125,
+            "bottom": 2696,
+            "width": 259.328125,
+            "height": 44
+          },
+          "title": {
+            "x": 49,
+            "y": 2482.84375,
+            "right": 308.328125,
+            "bottom": 2542.21875,
+            "width": 259.328125,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-3",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 357.328125,
+            "y": 2265.765625,
+            "right": 666.65625,
+            "bottom": 2721,
+            "width": 309.328125,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 358.328125,
+            "y": 2266.765625,
+            "right": 665.65625,
+            "bottom": 2458.84375,
+            "width": 307.328125,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 358.328125,
+            "y": 2458.84375,
+            "right": 665.65625,
+            "bottom": 2720,
+            "width": 307.328125,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 382.328125,
+            "y": 2652,
+            "right": 641.65625,
+            "bottom": 2696,
+            "width": 259.328125,
+            "height": 44
+          },
+          "title": {
+            "x": 382.328125,
+            "y": 2482.84375,
+            "right": 641.65625,
+            "bottom": 2542.21875,
+            "width": 259.328125,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-4",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 690.65625,
+            "y": 2265.765625,
+            "right": 1000,
+            "bottom": 2721,
+            "width": 309.34375,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 691.65625,
+            "y": 2266.765625,
+            "right": 999,
+            "bottom": 2458.84375,
+            "width": 307.34375,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 691.65625,
+            "y": 2458.84375,
+            "right": 999,
+            "bottom": 2720,
+            "width": 307.34375,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 715.65625,
+            "y": 2652,
+            "right": 975,
+            "bottom": 2696,
+            "width": 259.34375,
+            "height": 44
+          },
+          "title": {
+            "x": 715.65625,
+            "y": 2482.84375,
+            "right": 975,
+            "bottom": 2542.21875,
+            "width": 259.34375,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-5",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 24,
+            "y": 2745,
+            "right": 333.328125,
+            "bottom": 3200.234375,
+            "width": 309.328125,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 25,
+            "y": 2746,
+            "right": 332.328125,
+            "bottom": 2938.078125,
+            "width": 307.328125,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 25,
+            "y": 2938.078125,
+            "right": 332.328125,
+            "bottom": 3199.234375,
+            "width": 307.328125,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 49,
+            "y": 3131.234375,
+            "right": 308.328125,
+            "bottom": 3175.234375,
+            "width": 259.328125,
+            "height": 44
+          },
+          "title": {
+            "x": 49,
+            "y": 2962.078125,
+            "right": 308.328125,
+            "bottom": 3021.453125,
+            "width": 259.328125,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-6",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 357.328125,
+            "y": 2745,
+            "right": 666.65625,
+            "bottom": 3200.234375,
+            "width": 309.328125,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 358.328125,
+            "y": 2746,
+            "right": 665.65625,
+            "bottom": 2938.078125,
+            "width": 307.328125,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 358.328125,
+            "y": 2938.078125,
+            "right": 665.65625,
+            "bottom": 3199.234375,
+            "width": 307.328125,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 382.328125,
+            "y": 3131.234375,
+            "right": 641.65625,
+            "bottom": 3175.234375,
+            "width": 259.328125,
+            "height": 44
+          },
+          "title": {
+            "x": 382.328125,
+            "y": 2962.078125,
+            "right": 641.65625,
+            "bottom": 3021.453125,
+            "width": 259.328125,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-7",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 690.65625,
+            "y": 2745,
+            "right": 1000,
+            "bottom": 3200.234375,
+            "width": 309.34375,
+            "height": 455.234375
+          },
+          "image": {
+            "x": 691.65625,
+            "y": 2746,
+            "right": 999,
+            "bottom": 2938.078125,
+            "width": 307.34375,
+            "height": 192.078125
+          },
+          "body": {
+            "x": 691.65625,
+            "y": 2938.078125,
+            "right": 999,
+            "bottom": 3199.234375,
+            "width": 307.34375,
+            "height": 261.15625
+          },
+          "action": {
+            "x": 715.65625,
+            "y": 3131.234375,
+            "right": 975,
+            "bottom": 3175.234375,
+            "width": 259.34375,
+            "height": 44
+          },
+          "title": {
+            "x": 715.65625,
+            "y": 2962.078125,
+            "right": 975,
+            "bottom": 3021.453125,
+            "width": 259.34375,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-8",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "htmlBytes": 94009,
+      "overflow": false,
+      "carousel": 3,
+      "hero": true,
+      "filters": [
+        {
+          "text": "All Projects",
+          "pressed": "true",
+          "x": 149.921875,
+          "y": 678,
+          "right": 311.25,
+          "bottom": 726,
+          "width": 161.328125,
+          "height": 48
+        },
+        {
+          "text": "Web Development",
+          "pressed": "false",
+          "x": 321.25,
+          "y": 678,
+          "right": 537.15625,
+          "bottom": 726,
+          "width": 215.90625,
+          "height": 48
+        },
+        {
+          "text": "3D Printing",
+          "pressed": "false",
+          "x": 547.15625,
+          "y": 678,
+          "right": 706.640625,
+          "bottom": 726,
+          "width": 159.484375,
+          "height": 48
+        },
+        {
+          "text": "PC Build / Clean / Upgrade",
+          "pressed": "false",
+          "x": 716.640625,
+          "y": 678,
+          "right": 993.796875,
+          "bottom": 726,
+          "width": 277.15625,
+          "height": 48
+        },
+        {
+          "text": "Design",
+          "pressed": "false",
+          "x": 1003.796875,
+          "y": 678,
+          "right": 1130.0625,
+          "bottom": 726,
+          "width": 126.265625,
+          "height": 48
+        },
+        {
+          "text": "Linux & Server Experience",
+          "pressed": "false",
+          "x": 401.078125,
+          "y": 736,
+          "right": 679.234375,
+          "bottom": 784,
+          "width": 278.15625,
+          "height": 48
+        },
+        {
+          "text": "Digital Support",
+          "pressed": "false",
+          "x": 689.234375,
+          "y": 736,
+          "right": 878.921875,
+          "bottom": 784,
+          "width": 189.6875,
+          "height": 48
+        }
+      ],
+      "selects": 1,
+      "columns": 3,
+      "broken": [],
+      "cards": [
+        {
+          "card": {
+            "x": 40,
+            "y": 1393.78125,
+            "right": 424,
+            "bottom": 1844.5,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 41,
+            "y": 1394.78125,
+            "right": 423,
+            "bottom": 1633.53125,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 41,
+            "y": 1633.53125,
+            "right": 423,
+            "bottom": 1843.5,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 65,
+            "y": 1775.5,
+            "right": 399,
+            "bottom": 1819.5,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 65,
+            "y": 1657.53125,
+            "right": 399,
+            "bottom": 1687.21875,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-0",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 448,
+            "y": 1393.78125,
+            "right": 832,
+            "bottom": 1844.5,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 449,
+            "y": 1394.78125,
+            "right": 831,
+            "bottom": 1633.53125,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 449,
+            "y": 1633.53125,
+            "right": 831,
+            "bottom": 1843.5,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 473,
+            "y": 1775.5,
+            "right": 807,
+            "bottom": 1819.5,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 473,
+            "y": 1657.53125,
+            "right": 807,
+            "bottom": 1716.90625,
+            "width": 334,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-web-development",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 856,
+            "y": 1393.78125,
+            "right": 1240,
+            "bottom": 1844.5,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 857,
+            "y": 1394.78125,
+            "right": 1239,
+            "bottom": 1633.53125,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 857,
+            "y": 1633.53125,
+            "right": 1239,
+            "bottom": 1843.5,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 881,
+            "y": 1775.5,
+            "right": 1215,
+            "bottom": 1819.5,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 881,
+            "y": 1657.53125,
+            "right": 1215,
+            "bottom": 1716.90625,
+            "width": 334,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-3d-printing",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 40,
+            "y": 1868.5,
+            "right": 424,
+            "bottom": 2319.21875,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 41,
+            "y": 1869.5,
+            "right": 423,
+            "bottom": 2108.25,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 41,
+            "y": 2108.25,
+            "right": 423,
+            "bottom": 2318.21875,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 65,
+            "y": 2250.21875,
+            "right": 399,
+            "bottom": 2294.21875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 65,
+            "y": 2132.25,
+            "right": 399,
+            "bottom": 2191.625,
+            "width": 334,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-pc-support",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 448,
+            "y": 1868.5,
+            "right": 832,
+            "bottom": 2319.21875,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 449,
+            "y": 1869.5,
+            "right": 831,
+            "bottom": 2108.25,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 449,
+            "y": 2108.25,
+            "right": 831,
+            "bottom": 2318.21875,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 473,
+            "y": 2250.21875,
+            "right": 807,
+            "bottom": 2294.21875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 473,
+            "y": 2132.25,
+            "right": 807,
+            "bottom": 2161.9375,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-1",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 856,
+            "y": 1868.5,
+            "right": 1240,
+            "bottom": 2319.21875,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 857,
+            "y": 1869.5,
+            "right": 1239,
+            "bottom": 2108.25,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 857,
+            "y": 2108.25,
+            "right": 1239,
+            "bottom": 2318.21875,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 881,
+            "y": 2250.21875,
+            "right": 1215,
+            "bottom": 2294.21875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 881,
+            "y": 2132.25,
+            "right": 1215,
+            "bottom": 2161.9375,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-2",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 40,
+            "y": 2343.21875,
+            "right": 424,
+            "bottom": 2789.84375,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 41,
+            "y": 2344.21875,
+            "right": 423,
+            "bottom": 2582.96875,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 41,
+            "y": 2582.96875,
+            "right": 423,
+            "bottom": 2788.84375,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 65,
+            "y": 2720.84375,
+            "right": 399,
+            "bottom": 2764.84375,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 65,
+            "y": 2606.96875,
+            "right": 399,
+            "bottom": 2636.65625,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-3",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 448,
+            "y": 2343.21875,
+            "right": 832,
+            "bottom": 2789.84375,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 449,
+            "y": 2344.21875,
+            "right": 831,
+            "bottom": 2582.96875,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 449,
+            "y": 2582.96875,
+            "right": 831,
+            "bottom": 2788.84375,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 473,
+            "y": 2720.84375,
+            "right": 807,
+            "bottom": 2764.84375,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 473,
+            "y": 2606.96875,
+            "right": 807,
+            "bottom": 2636.65625,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-4",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 856,
+            "y": 2343.21875,
+            "right": 1240,
+            "bottom": 2789.84375,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 857,
+            "y": 2344.21875,
+            "right": 1239,
+            "bottom": 2582.96875,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 857,
+            "y": 2582.96875,
+            "right": 1239,
+            "bottom": 2788.84375,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 881,
+            "y": 2720.84375,
+            "right": 1215,
+            "bottom": 2764.84375,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 881,
+            "y": 2606.96875,
+            "right": 1215,
+            "bottom": 2636.65625,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-5",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 40,
+            "y": 2813.84375,
+            "right": 424,
+            "bottom": 3260.46875,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 41,
+            "y": 2814.84375,
+            "right": 423,
+            "bottom": 3053.59375,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 41,
+            "y": 3053.59375,
+            "right": 423,
+            "bottom": 3259.46875,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 65,
+            "y": 3191.46875,
+            "right": 399,
+            "bottom": 3235.46875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 65,
+            "y": 3077.59375,
+            "right": 399,
+            "bottom": 3107.28125,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-6",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 448,
+            "y": 2813.84375,
+            "right": 832,
+            "bottom": 3260.46875,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 449,
+            "y": 2814.84375,
+            "right": 831,
+            "bottom": 3053.59375,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 449,
+            "y": 3053.59375,
+            "right": 831,
+            "bottom": 3259.46875,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 473,
+            "y": 3191.46875,
+            "right": 807,
+            "bottom": 3235.46875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 473,
+            "y": 3077.59375,
+            "right": 807,
+            "bottom": 3107.28125,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-7",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 856,
+            "y": 2813.84375,
+            "right": 1240,
+            "bottom": 3260.46875,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 857,
+            "y": 2814.84375,
+            "right": 1239,
+            "bottom": 3053.59375,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 857,
+            "y": 3053.59375,
+            "right": 1239,
+            "bottom": 3259.46875,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 881,
+            "y": 3191.46875,
+            "right": 1215,
+            "bottom": 3235.46875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 881,
+            "y": 3077.59375,
+            "right": 1215,
+            "bottom": 3107.28125,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-8",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "htmlBytes": 94009,
+      "overflow": false,
+      "carousel": 3,
+      "hero": true,
+      "filters": [
+        {
+          "text": "All Projects",
+          "pressed": "true",
+          "x": 229.921875,
+          "y": 678,
+          "right": 391.25,
+          "bottom": 726,
+          "width": 161.328125,
+          "height": 48
+        },
+        {
+          "text": "Web Development",
+          "pressed": "false",
+          "x": 401.25,
+          "y": 678,
+          "right": 617.15625,
+          "bottom": 726,
+          "width": 215.90625,
+          "height": 48
+        },
+        {
+          "text": "3D Printing",
+          "pressed": "false",
+          "x": 627.15625,
+          "y": 678,
+          "right": 786.640625,
+          "bottom": 726,
+          "width": 159.484375,
+          "height": 48
+        },
+        {
+          "text": "PC Build / Clean / Upgrade",
+          "pressed": "false",
+          "x": 796.640625,
+          "y": 678,
+          "right": 1073.796875,
+          "bottom": 726,
+          "width": 277.15625,
+          "height": 48
+        },
+        {
+          "text": "Design",
+          "pressed": "false",
+          "x": 1083.796875,
+          "y": 678,
+          "right": 1210.0625,
+          "bottom": 726,
+          "width": 126.265625,
+          "height": 48
+        },
+        {
+          "text": "Linux & Server Experience",
+          "pressed": "false",
+          "x": 481.078125,
+          "y": 736,
+          "right": 759.234375,
+          "bottom": 784,
+          "width": 278.15625,
+          "height": 48
+        },
+        {
+          "text": "Digital Support",
+          "pressed": "false",
+          "x": 769.234375,
+          "y": 736,
+          "right": 958.921875,
+          "bottom": 784,
+          "width": 189.6875,
+          "height": 48
+        }
+      ],
+      "selects": 1,
+      "columns": 3,
+      "broken": [],
+      "cards": [
+        {
+          "card": {
+            "x": 120,
+            "y": 1393.78125,
+            "right": 504,
+            "bottom": 1844.5,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 121,
+            "y": 1394.78125,
+            "right": 503,
+            "bottom": 1633.53125,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 121,
+            "y": 1633.53125,
+            "right": 503,
+            "bottom": 1843.5,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 145,
+            "y": 1775.5,
+            "right": 479,
+            "bottom": 1819.5,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 145,
+            "y": 1657.53125,
+            "right": 479,
+            "bottom": 1687.21875,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-0",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 528,
+            "y": 1393.78125,
+            "right": 912,
+            "bottom": 1844.5,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 529,
+            "y": 1394.78125,
+            "right": 911,
+            "bottom": 1633.53125,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 529,
+            "y": 1633.53125,
+            "right": 911,
+            "bottom": 1843.5,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 553,
+            "y": 1775.5,
+            "right": 887,
+            "bottom": 1819.5,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 553,
+            "y": 1657.53125,
+            "right": 887,
+            "bottom": 1716.90625,
+            "width": 334,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-web-development",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 936,
+            "y": 1393.78125,
+            "right": 1320,
+            "bottom": 1844.5,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 937,
+            "y": 1394.78125,
+            "right": 1319,
+            "bottom": 1633.53125,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 937,
+            "y": 1633.53125,
+            "right": 1319,
+            "bottom": 1843.5,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 961,
+            "y": 1775.5,
+            "right": 1295,
+            "bottom": 1819.5,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 961,
+            "y": 1657.53125,
+            "right": 1295,
+            "bottom": 1716.90625,
+            "width": 334,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-3d-printing",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 120,
+            "y": 1868.5,
+            "right": 504,
+            "bottom": 2319.21875,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 121,
+            "y": 1869.5,
+            "right": 503,
+            "bottom": 2108.25,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 121,
+            "y": 2108.25,
+            "right": 503,
+            "bottom": 2318.21875,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 145,
+            "y": 2250.21875,
+            "right": 479,
+            "bottom": 2294.21875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 145,
+            "y": 2132.25,
+            "right": 479,
+            "bottom": 2191.625,
+            "width": 334,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-pc-support",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 528,
+            "y": 1868.5,
+            "right": 912,
+            "bottom": 2319.21875,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 529,
+            "y": 1869.5,
+            "right": 911,
+            "bottom": 2108.25,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 529,
+            "y": 2108.25,
+            "right": 911,
+            "bottom": 2318.21875,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 553,
+            "y": 2250.21875,
+            "right": 887,
+            "bottom": 2294.21875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 553,
+            "y": 2132.25,
+            "right": 887,
+            "bottom": 2161.9375,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-1",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 936,
+            "y": 1868.5,
+            "right": 1320,
+            "bottom": 2319.21875,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 937,
+            "y": 1869.5,
+            "right": 1319,
+            "bottom": 2108.25,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 937,
+            "y": 2108.25,
+            "right": 1319,
+            "bottom": 2318.21875,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 961,
+            "y": 2250.21875,
+            "right": 1295,
+            "bottom": 2294.21875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 961,
+            "y": 2132.25,
+            "right": 1295,
+            "bottom": 2161.9375,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-2",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 120,
+            "y": 2343.21875,
+            "right": 504,
+            "bottom": 2789.84375,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 121,
+            "y": 2344.21875,
+            "right": 503,
+            "bottom": 2582.96875,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 121,
+            "y": 2582.96875,
+            "right": 503,
+            "bottom": 2788.84375,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 145,
+            "y": 2720.84375,
+            "right": 479,
+            "bottom": 2764.84375,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 145,
+            "y": 2606.96875,
+            "right": 479,
+            "bottom": 2636.65625,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-3",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 528,
+            "y": 2343.21875,
+            "right": 912,
+            "bottom": 2789.84375,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 529,
+            "y": 2344.21875,
+            "right": 911,
+            "bottom": 2582.96875,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 529,
+            "y": 2582.96875,
+            "right": 911,
+            "bottom": 2788.84375,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 553,
+            "y": 2720.84375,
+            "right": 887,
+            "bottom": 2764.84375,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 553,
+            "y": 2606.96875,
+            "right": 887,
+            "bottom": 2636.65625,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-4",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 936,
+            "y": 2343.21875,
+            "right": 1320,
+            "bottom": 2789.84375,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 937,
+            "y": 2344.21875,
+            "right": 1319,
+            "bottom": 2582.96875,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 937,
+            "y": 2582.96875,
+            "right": 1319,
+            "bottom": 2788.84375,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 961,
+            "y": 2720.84375,
+            "right": 1295,
+            "bottom": 2764.84375,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 961,
+            "y": 2606.96875,
+            "right": 1295,
+            "bottom": 2636.65625,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-5",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 120,
+            "y": 2813.84375,
+            "right": 504,
+            "bottom": 3260.46875,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 121,
+            "y": 2814.84375,
+            "right": 503,
+            "bottom": 3053.59375,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 121,
+            "y": 3053.59375,
+            "right": 503,
+            "bottom": 3259.46875,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 145,
+            "y": 3191.46875,
+            "right": 479,
+            "bottom": 3235.46875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 145,
+            "y": 3077.59375,
+            "right": 479,
+            "bottom": 3107.28125,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-6",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 528,
+            "y": 2813.84375,
+            "right": 912,
+            "bottom": 3260.46875,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 529,
+            "y": 2814.84375,
+            "right": 911,
+            "bottom": 3053.59375,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 529,
+            "y": 3053.59375,
+            "right": 911,
+            "bottom": 3259.46875,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 553,
+            "y": 3191.46875,
+            "right": 887,
+            "bottom": 3235.46875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 553,
+            "y": 3077.59375,
+            "right": 887,
+            "bottom": 3107.28125,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-7",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 936,
+            "y": 2813.84375,
+            "right": 1320,
+            "bottom": 3260.46875,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 937,
+            "y": 2814.84375,
+            "right": 1319,
+            "bottom": 3053.59375,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 937,
+            "y": 3053.59375,
+            "right": 1319,
+            "bottom": 3259.46875,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 961,
+            "y": 3191.46875,
+            "right": 1295,
+            "bottom": 3235.46875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 961,
+            "y": 3077.59375,
+            "right": 1295,
+            "bottom": 3107.28125,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-8",
+          "fit": "cover"
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "htmlBytes": 94009,
+      "overflow": false,
+      "carousel": 3,
+      "hero": true,
+      "filters": [
+        {
+          "text": "All Projects",
+          "pressed": "true",
+          "x": 469.921875,
+          "y": 678,
+          "right": 631.25,
+          "bottom": 726,
+          "width": 161.328125,
+          "height": 48
+        },
+        {
+          "text": "Web Development",
+          "pressed": "false",
+          "x": 641.25,
+          "y": 678,
+          "right": 857.15625,
+          "bottom": 726,
+          "width": 215.90625,
+          "height": 48
+        },
+        {
+          "text": "3D Printing",
+          "pressed": "false",
+          "x": 867.15625,
+          "y": 678,
+          "right": 1026.640625,
+          "bottom": 726,
+          "width": 159.484375,
+          "height": 48
+        },
+        {
+          "text": "PC Build / Clean / Upgrade",
+          "pressed": "false",
+          "x": 1036.640625,
+          "y": 678,
+          "right": 1313.796875,
+          "bottom": 726,
+          "width": 277.15625,
+          "height": 48
+        },
+        {
+          "text": "Design",
+          "pressed": "false",
+          "x": 1323.796875,
+          "y": 678,
+          "right": 1450.0625,
+          "bottom": 726,
+          "width": 126.265625,
+          "height": 48
+        },
+        {
+          "text": "Linux & Server Experience",
+          "pressed": "false",
+          "x": 721.078125,
+          "y": 736,
+          "right": 999.234375,
+          "bottom": 784,
+          "width": 278.15625,
+          "height": 48
+        },
+        {
+          "text": "Digital Support",
+          "pressed": "false",
+          "x": 1009.234375,
+          "y": 736,
+          "right": 1198.921875,
+          "bottom": 784,
+          "width": 189.6875,
+          "height": 48
+        }
+      ],
+      "selects": 1,
+      "columns": 3,
+      "broken": [],
+      "cards": [
+        {
+          "card": {
+            "x": 360,
+            "y": 1393.78125,
+            "right": 744,
+            "bottom": 1844.5,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 361,
+            "y": 1394.78125,
+            "right": 743,
+            "bottom": 1633.53125,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 361,
+            "y": 1633.53125,
+            "right": 743,
+            "bottom": 1843.5,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 385,
+            "y": 1775.5,
+            "right": 719,
+            "bottom": 1819.5,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 385,
+            "y": 1657.53125,
+            "right": 719,
+            "bottom": 1687.21875,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-0",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 768,
+            "y": 1393.78125,
+            "right": 1152,
+            "bottom": 1844.5,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 769,
+            "y": 1394.78125,
+            "right": 1151,
+            "bottom": 1633.53125,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 769,
+            "y": 1633.53125,
+            "right": 1151,
+            "bottom": 1843.5,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 793,
+            "y": 1775.5,
+            "right": 1127,
+            "bottom": 1819.5,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 793,
+            "y": 1657.53125,
+            "right": 1127,
+            "bottom": 1716.90625,
+            "width": 334,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-web-development",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 1176,
+            "y": 1393.78125,
+            "right": 1560,
+            "bottom": 1844.5,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 1177,
+            "y": 1394.78125,
+            "right": 1559,
+            "bottom": 1633.53125,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 1177,
+            "y": 1633.53125,
+            "right": 1559,
+            "bottom": 1843.5,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 1201,
+            "y": 1775.5,
+            "right": 1535,
+            "bottom": 1819.5,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 1201,
+            "y": 1657.53125,
+            "right": 1535,
+            "bottom": 1716.90625,
+            "width": 334,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-3d-printing",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 360,
+            "y": 1868.5,
+            "right": 744,
+            "bottom": 2319.21875,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 361,
+            "y": 1869.5,
+            "right": 743,
+            "bottom": 2108.25,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 361,
+            "y": 2108.25,
+            "right": 743,
+            "bottom": 2318.21875,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 385,
+            "y": 2250.21875,
+            "right": 719,
+            "bottom": 2294.21875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 385,
+            "y": 2132.25,
+            "right": 719,
+            "bottom": 2191.625,
+            "width": 334,
+            "height": 59.375
+          },
+          "href": "/en/portfolio/synthetic-pc-support",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 768,
+            "y": 1868.5,
+            "right": 1152,
+            "bottom": 2319.21875,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 769,
+            "y": 1869.5,
+            "right": 1151,
+            "bottom": 2108.25,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 769,
+            "y": 2108.25,
+            "right": 1151,
+            "bottom": 2318.21875,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 793,
+            "y": 2250.21875,
+            "right": 1127,
+            "bottom": 2294.21875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 793,
+            "y": 2132.25,
+            "right": 1127,
+            "bottom": 2161.9375,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-1",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 1176,
+            "y": 1868.5,
+            "right": 1560,
+            "bottom": 2319.21875,
+            "width": 384,
+            "height": 450.71875
+          },
+          "image": {
+            "x": 1177,
+            "y": 1869.5,
+            "right": 1559,
+            "bottom": 2108.25,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 1177,
+            "y": 2108.25,
+            "right": 1559,
+            "bottom": 2318.21875,
+            "width": 382,
+            "height": 209.96875
+          },
+          "action": {
+            "x": 1201,
+            "y": 2250.21875,
+            "right": 1535,
+            "bottom": 2294.21875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 1201,
+            "y": 2132.25,
+            "right": 1535,
+            "bottom": 2161.9375,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-2",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 360,
+            "y": 2343.21875,
+            "right": 744,
+            "bottom": 2789.84375,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 361,
+            "y": 2344.21875,
+            "right": 743,
+            "bottom": 2582.96875,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 361,
+            "y": 2582.96875,
+            "right": 743,
+            "bottom": 2788.84375,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 385,
+            "y": 2720.84375,
+            "right": 719,
+            "bottom": 2764.84375,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 385,
+            "y": 2606.96875,
+            "right": 719,
+            "bottom": 2636.65625,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-3",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 768,
+            "y": 2343.21875,
+            "right": 1152,
+            "bottom": 2789.84375,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 769,
+            "y": 2344.21875,
+            "right": 1151,
+            "bottom": 2582.96875,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 769,
+            "y": 2582.96875,
+            "right": 1151,
+            "bottom": 2788.84375,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 793,
+            "y": 2720.84375,
+            "right": 1127,
+            "bottom": 2764.84375,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 793,
+            "y": 2606.96875,
+            "right": 1127,
+            "bottom": 2636.65625,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-4",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 1176,
+            "y": 2343.21875,
+            "right": 1560,
+            "bottom": 2789.84375,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 1177,
+            "y": 2344.21875,
+            "right": 1559,
+            "bottom": 2582.96875,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 1177,
+            "y": 2582.96875,
+            "right": 1559,
+            "bottom": 2788.84375,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 1201,
+            "y": 2720.84375,
+            "right": 1535,
+            "bottom": 2764.84375,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 1201,
+            "y": 2606.96875,
+            "right": 1535,
+            "bottom": 2636.65625,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-5",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 360,
+            "y": 2813.84375,
+            "right": 744,
+            "bottom": 3260.46875,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 361,
+            "y": 2814.84375,
+            "right": 743,
+            "bottom": 3053.59375,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 361,
+            "y": 3053.59375,
+            "right": 743,
+            "bottom": 3259.46875,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 385,
+            "y": 3191.46875,
+            "right": 719,
+            "bottom": 3235.46875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 385,
+            "y": 3077.59375,
+            "right": 719,
+            "bottom": 3107.28125,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-6",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 768,
+            "y": 2813.84375,
+            "right": 1152,
+            "bottom": 3260.46875,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 769,
+            "y": 2814.84375,
+            "right": 1151,
+            "bottom": 3053.59375,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 769,
+            "y": 3053.59375,
+            "right": 1151,
+            "bottom": 3259.46875,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 793,
+            "y": 3191.46875,
+            "right": 1127,
+            "bottom": 3235.46875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 793,
+            "y": 3077.59375,
+            "right": 1127,
+            "bottom": 3107.28125,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-7",
+          "fit": "cover"
+        },
+        {
+          "card": {
+            "x": 1176,
+            "y": 2813.84375,
+            "right": 1560,
+            "bottom": 3260.46875,
+            "width": 384,
+            "height": 446.625
+          },
+          "image": {
+            "x": 1177,
+            "y": 2814.84375,
+            "right": 1559,
+            "bottom": 3053.59375,
+            "width": 382,
+            "height": 238.75
+          },
+          "body": {
+            "x": 1177,
+            "y": 3053.59375,
+            "right": 1559,
+            "bottom": 3259.46875,
+            "width": 382,
+            "height": 205.875
+          },
+          "action": {
+            "x": 1201,
+            "y": 3191.46875,
+            "right": 1535,
+            "bottom": 3235.46875,
+            "width": 334,
+            "height": 44
+          },
+          "title": {
+            "x": 1201,
+            "y": 3077.59375,
+            "right": 1535,
+            "bottom": 3107.28125,
+            "width": 334,
+            "height": 29.6875
+          },
+          "href": "/en/portfolio/portfolio-qa-0d73fbbf-8",
+          "fit": "cover"
+        }
+      ]
+    }
+  ],
+  "checks": [],
+  "errors": [],
+  "network": []
+}

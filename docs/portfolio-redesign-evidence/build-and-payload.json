@@ -1,0 +1,55 @@
+{
+  "method": "All production emitted static JS, per-file gzip, same installed toolchain; whole-app inventory, not per-route transfer. HTML is the actual decoded Portfolio document from the same fixtures, not field performance.",
+  "before": {
+    "files": 43,
+    "rawBytes": 1113632,
+    "gzipBytes": 350869
+  },
+  "after": {
+    "files": 43,
+    "rawBytes": 1115868,
+    "gzipBytes": 351859
+  },
+  "htmlBytes": [
+    {
+      "width": 320,
+      "before": 94009,
+      "after": 82924
+    },
+    {
+      "width": 375,
+      "before": 94009,
+      "after": 82924
+    },
+    {
+      "width": 430,
+      "before": 94009,
+      "after": 82924
+    },
+    {
+      "width": 768,
+      "before": 94009,
+      "after": 82924
+    },
+    {
+      "width": 1024,
+      "before": 94009,
+      "after": 82924
+    },
+    {
+      "width": 1280,
+      "before": 94009,
+      "after": 82924
+    },
+    {
+      "width": 1440,
+      "before": 94009,
+      "after": 82924
+    },
+    {
+      "width": 1920,
+      "before": 94009,
+      "after": 82924
+    }
+  ]
+}

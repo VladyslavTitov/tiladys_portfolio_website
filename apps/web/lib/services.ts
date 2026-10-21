@@ -1,8 +1,9 @@
+import { rebuildCopy } from './rebuild-copy';
 import type { Locale } from '@tiladys/shared';
 import { translatedServiceContent } from './service-translations';
 
 export const serviceIds = [
-  'pc-laptop', 'websites', 'business-it',
+  'pc-laptop', 'websites', 'business-it', '3d-printing',
 ] as const;
 
 export type ServiceId = (typeof serviceIds)[number];
@@ -29,6 +30,7 @@ export type ServiceDefinition = {
 const label = (en: string, de: string, uk: string, ru: string, sk: string, fr: string): Record<Locale, string> => ({ en, de, uk, ru, sk, fr });
 
 export const serviceDefinitions: ServiceDefinition[] = [
+  { id: '3d-printing', image: '', priceRefs: [], related: ['websites', 'pc-laptop'] },
   { id: 'pc-laptop', image: '/services/tiladys-service-pc-laptop.webp?v=20260920', priceRefs: [
     { code: 'B10', label: label('Software installation', 'Softwareinstallation', 'Встановлення програм', 'Установка программ', 'Inštalácia softvéru', 'Installation de logiciel') },
     { code: 'A02', label: label('Basic diagnostics', 'Basisdiagnose', 'Базова діагностика', 'Базовая диагностика', 'Základná diagnostika', 'Diagnostic de base') },
@@ -189,7 +191,7 @@ const groupTitles: Record<Locale, { pcData: string; web: string[]; business: str
   fr: { pcData: 'Données et sauvegarde', web: ['Création de sites web', 'Abonnement / location de site', 'Amélioration de site', 'SEO et configuration technique', 'Assistance du site'], business: ['Configuration IT professionnelle', 'Wi-Fi et réseau', 'Données et cloud professionnels', 'Google Business et visibilité locale', 'Photographie professionnelle', 'Design et supports numériques'] },
 };
 
-const consolidatedCopy: Record<Locale, Record<ServiceId, { title: string; short: string; intro: string; expected: string; limitations?: string }>> = {
+const consolidatedCopy: Record<Locale, Record<Exclude<ServiceId, '3d-printing'>, { title: string; short: string; intro: string; expected: string; limitations?: string }>> = {
   en: {
     'pc-laptop': { title: 'PC & Laptop Services', ...pcLaptopMergedCopy.en, short: 'Computer setup, troubleshooting, cleaning, upgrades, PC building and personal data services.' },
     websites: { title: 'Website Creation & Web Services', short: 'Professional websites for local businesses, self-employed professionals and growing projects.', intro: 'TiLADYS creates practical, responsive websites and supports them after launch. Website subscriptions and purchased websites are separate options, with scope, ownership, hosting and ongoing responsibilities explained clearly before work starts.', expected: 'You receive a tested website solution matched to the agreed goals, devices and support model.', limitations: localized.en.websites[5] ?? '' },
@@ -234,6 +236,7 @@ function consolidatedGroups(id: ServiceId, locale: Locale) {
 }
 
 export function serviceCopy(id: ServiceId, locale: string): ServiceCopy {
+  if (id === '3d-printing') { const c = rebuildCopy(locale); return { title: c.printing, short: c.printText, intro: [c.printText], examples: c.printOptions, expected: c.materialText, limitations: c.fileText, metaTitle: c.printing, metaDescription: c.printText }; }
   const selectedLocale = Object.prototype.hasOwnProperty.call(pcLaptopGroups, locale) ? locale as Locale : 'en';
   const copy = consolidatedCopy[selectedLocale][id];
   const groups = consolidatedGroups(id, selectedLocale);

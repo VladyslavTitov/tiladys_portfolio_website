@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-10-14T11:01:39.673Z",
+  "runtime": "v24.21.0",
+  "build": "Next 16.3.8 webpack production, isolated synthetic database",
+  "method": "Cold browser cache; mobile 1.6Mbps/150ms RTT/4x CPU, local loopback server. One lab sample per variant; 720px models reflow at 200% on 1440px. AX tree is not manual screen-reader verification.",
+  "results": [
+    {
+      "variant": "mobile-4g",
+      "width": 390,
+      "scroll": 390,
+      "lcpMs": 1512,
+      "cls": 0,
+      "transferBytes": 328716,
+      "footerColumns": 5,
+      "reducedMotion": true,
+      "heroImageLoaded": true
+    },
+    {
+      "variant": "desktop",
+      "width": 1440,
+      "scroll": 1425,
+      "lcpMs": 180,
+      "cls": 0,
+      "transferBytes": 329896,
+      "footerColumns": 5,
+      "reducedMotion": true,
+      "heroImageLoaded": true
+    },
+    {
+      "variant": "landscape",
+      "width": 844,
+      "scroll": 844,
+      "lcpMs": 64,
+      "cls": 0,
+      "transferBytes": 308996,
+      "footerColumns": 5,
+      "reducedMotion": true,
+      "heroImageLoaded": true
+    },
+    {
+      "variant": "200-percent-equivalent-reflow",
+      "width": 720,
+      "scroll": 705,
+      "lcpMs": 52,
+      "cls": 0,
+      "transferBytes": 315661,
+      "footerColumns": 5,
+      "reducedMotion": true,
+      "heroImageLoaded": true
+    }
+  ],
+  "consoleErrors": []
+}

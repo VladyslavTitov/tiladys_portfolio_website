@@ -1,0 +1,10 @@
+[
+  "tests/project.test.mjs",
+  "tests/ui-interactions.mjs",
+  "tests/ui-public-interactions.mjs",
+  "apps/web/app/refinement.css",
+  "apps/web/lib/public-projects-db.ts",
+  "apps/web/components/ProjectImage.tsx",
+  "apps/web/components/PortfolioExplorer.tsx",
+  "apps/web/app/[locale]/portfolio/page.tsx"
+]

@@ -15,7 +15,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
   const { id } = await params;
   // Publication is checked on every request so archived/draft media is never exposed by this route.
   const image = await db.projectImage.findFirst({
-    where: { id, project: { status: 'PUBLISHED' } },
+    where: { id, archivedAt: null, project: { status: 'PUBLISHED' } },
     select: { data: true, mimeType: true },
   });
   if (!image) return new NextResponse('Not found', { status: 404, headers: responseHeaders });

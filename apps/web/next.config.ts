@@ -11,7 +11,7 @@ const contentSecurityPolicy = [
     ? "script-src 'self' 'unsafe-inline' 'unsafe-eval'"
     : "script-src 'self' 'unsafe-inline'",
 
-  "connect-src 'self'",
+  `connect-src 'self'${isDevelopment && process.env.CONTACT_STORAGE_DRIVER === 'local-test' ? ' http://127.0.0.1:3002 http://localhost:3002' : ''}`,
   "font-src 'self'",
   "frame-ancestors 'none'",
   "base-uri 'self'",
@@ -20,6 +20,7 @@ const contentSecurityPolicy = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  allowedDevOrigins: ['127.0.0.1'],
   reactStrictMode: true,
   transpilePackages: ["@tiladys/db", "@tiladys/shared"],
 

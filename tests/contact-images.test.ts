@@ -18,8 +18,8 @@ test('rejects spoofed signatures, unsafe types, too many or oversized files', as
   for (const files of [
     [new File(['<svg></svg>'], 'x.png', { type: 'image/png' })],
     [new File(['<svg></svg>'], 'x.svg', { type: 'image/svg+xml' })],
-    [new File([new Uint8Array(1024 * 1024 + 1)], 'large.png', { type: 'image/png' })],
-    [valid, valid, valid],
+    [new File([new Uint8Array(5 * 1024 * 1024 + 1)], 'large.png', { type: 'image/png' })],
+    Array(11).fill(valid),
   ]) await assert.rejects(() => prepareContactImages(files));
 });
 test('rejects images outside dimension limits before re-encoding', async () => {

@@ -1,0 +1,173 @@
+{
+  "version": "1.0",
+  "created": "2026-10-12",
+  "prompt_words": 6771,
+  "validation": "16 sections; reference paths/counts and image integrity checked; no application tests run",
+  "files": [
+    {
+      "path": "START_HERE.md",
+      "bytes": 2397,
+      "sha256": "3bfc88b700c06f50deb61808b5fe2a984efc16d377113625a05ba641a76ed489"
+    },
+    {
+      "path": "TiLADYS_Master_Prompt.md",
+      "bytes": 52574,
+      "sha256": "671ff7a94b5dceaece0f1ff09e490a2c48411c45ee9124d4c9dce0ad93aac5c5"
+    },
+    {
+      "path": "TiLADYS_Master_Prompt.txt",
+      "bytes": 52574,
+      "sha256": "671ff7a94b5dceaece0f1ff09e490a2c48411c45ee9124d4c9dce0ad93aac5c5"
+    },
+    {
+      "path": "reference/Acceptance-register.json",
+      "bytes": 18520,
+      "sha256": "2877d4dd8e1c2929c59aae8f44380e9e8e9f401fa23907fa7f85de9c3daab425"
+    },
+    {
+      "path": "reference/Analysis.md",
+      "bytes": 164286,
+      "sha256": "4694663dac4893dbb466c6f188b022732b4e1cd1bb608ca1642efec3943dcb95"
+    },
+    {
+      "path": "reference/Asset-register.json",
+      "bytes": 102906,
+      "sha256": "a336113d679b98c8f46f56eb72b9d035f2344c4748148d9310525d99c498f4b2"
+    },
+    {
+      "path": "reference/Control-register.json",
+      "bytes": 619140,
+      "sha256": "72427c4b25ae2a1b0f0aa9e43d7628ced020a54d0a98862cb382fb0083185523"
+    },
+    {
+      "path": "reference/Design-tokens.json",
+      "bytes": 1430,
+      "sha256": "13eb66b0321b6260c6fcc014c39ca697469e3cd21a613e8026c1518280b2b122"
+    },
+    {
+      "path": "reference/Evidence-summary.json",
+      "bytes": 1477,
+      "sha256": "f0849d44d0494137793845ce9eee267a90a9ead2fb24f8e1077a5622442028af"
+    },
+    {
+      "path": "reference/Reference-index.json",
+      "bytes": 5993,
+      "sha256": "dae7dec7faa6ab9057b123542d99f91c0b0bc9b801bb43d9e6660fb7ebbf4240"
+    },
+    {
+      "path": "reference/TiLADYS_Analysis_Specification.pdf",
+      "bytes": 287769,
+      "sha256": "e64d9c28f8be1cc08ba8955f34cd2685c84632f333bef34173d2888bdca92654"
+    },
+    {
+      "path": "reference/dashboard/D01_Overview.png",
+      "bytes": 1460795,
+      "sha256": "c7b772ef26fc2e8d9e429b6acae65805466ded5fdcbbb14896f63ea1fde4c5c7"
+    },
+    {
+      "path": "reference/dashboard/D02_Inbox.png",
+      "bytes": 1426730,
+      "sha256": "f449fe01c7804228a8982ef68a5442c957e394f500d2babc6fc144cf6b9f2fb4"
+    },
+    {
+      "path": "reference/dashboard/D03_Clients.png",
+      "bytes": 1405743,
+      "sha256": "36409d140f12c3cd2ec5651f7ac5ed84f361c31b0946bceb3f9fb1a4a7a14d69"
+    },
+    {
+      "path": "reference/dashboard/D04_Invoices.png",
+      "bytes": 1479844,
+      "sha256": "f369de838ecda66dad16f04184f5e48ca25b88c23795dcb05b9e5ce6a2a4beb4"
+    },
+    {
+      "path": "reference/dashboard/D05_Portfolio.png",
+      "bytes": 1757488,
+      "sha256": "0b9321933f9c8f6ce17104ab5d0ae0bd4cfb3dc2504114fad328bd001a6efe5d"
+    },
+    {
+      "path": "reference/dashboard/D06_Jobs.png",
+      "bytes": 1500762,
+      "sha256": "459eb6dc4fa47a72d1a9c18e76b5a6d07acac238e684181ab09913caed68fc49"
+    },
+    {
+      "path": "reference/dashboard/D07_Products.png",
+      "bytes": 1496080,
+      "sha256": "674eae861ef73d0c17e4b0b14c36319eef6dc4650f1d21f21fca90157d712522"
+    },
+    {
+      "path": "reference/dashboard/D08_Quotes_Payments.png",
+      "bytes": 1521519,
+      "sha256": "d30c142111a6cc900c6e33eaf3b6dad6bd98b0b54394864ffc4f8f12d87dbb88"
+    },
+    {
+      "path": "reference/dashboard/D09_Client_Job_Forms.png",
+      "bytes": 1436689,
+      "sha256": "3cfb6591841a08cb8576a2f3f9a698c627bc67b71b422bafd142033252a0124e"
+    },
+    {
+      "path": "reference/dashboard/D10_Tasks_Catalogue.png",
+      "bytes": 1607926,
+      "sha256": "23fadd939c003001d7881c2cb8a328611d81499ab0356ab1bf12ee313f8944e3"
+    },
+    {
+      "path": "reference/dashboard/D11_Settings_Account.png",
+      "bytes": 1754042,
+      "sha256": "2909ef9815052887dd6c04a9a4dba51d49e2f9547d60e06c7af97b616a23f050"
+    },
+    {
+      "path": "reference/dashboard/D12_Responsive_Components.png",
+      "bytes": 1618266,
+      "sha256": "d16c21b5dcb4f7467586d08004026088b18b56a689fe982f9387d2a7c522ecf0"
+    },
+    {
+      "path": "reference/dashboard/D13_Reports_Reviews.png",
+      "bytes": 1673314,
+      "sha256": "a3e9e63cf65e4a22907da7a73c8c4bf5949b158c12bc31899fe09c862fb88495"
+    },
+    {
+      "path": "reference/public/P01_Home.png",
+      "bytes": 1904163,
+      "sha256": "5cd7214dffbd9dc58f1140e982feb1ef960b380ff19a779f857a4f52549ad450"
+    },
+    {
+      "path": "reference/public/P03_Websites.png",
+      "bytes": 1788990,
+      "sha256": "06e0cded893793a8d6b9af81ee64d56e54dfac7f39ba99037307c6a45ab3cc0f"
+    },
+    {
+      "path": "reference/public/P04_3D_Printing.png",
+      "bytes": 1730751,
+      "sha256": "501c9bbf6cca3c5772ffec5c4b8be93910fa6c10288cbe261976ac2684ced080"
+    },
+    {
+      "path": "reference/public/P05_PC_Support.png",
+      "bytes": 1901002,
+      "sha256": "950b94f5ef0a28652e494c382f0b2796b5cce7e427bcfab6ec54c1edc7969a13"
+    },
+    {
+      "path": "reference/public/P06_Portfolio.png",
+      "bytes": 1894634,
+      "sha256": "f513d963491df0c572355a9e4f3656fa512f7899fe0e57d16033bc9e986452ba"
+    },
+    {
+      "path": "reference/public/P07_P09_Project_Product_Details.png",
+      "bytes": 1822991,
+      "sha256": "b35e182159076c61c1002a5f6f7b01a70fb449d5b2e4318dee1879e06d041049"
+    },
+    {
+      "path": "reference/public/P10_About.png",
+      "bytes": 1728946,
+      "sha256": "29ce660fcdf3511fca049b69f548a060c8e8a85e6784f29164c7aa25299e5eb3"
+    },
+    {
+      "path": "reference/public/P11_Contact.png",
+      "bytes": 1632976,
+      "sha256": "00508b02bf8fd4cf55712466fb85fb3bb043a5ddcc6c0107ffb2e57b2b457fdd"
+    },
+    {
+      "path": "reference/public/P12_Legal_Responsive.png",
+      "bytes": 1649321,
+      "sha256": "dbf11718c5fee012a48eff46084ca66a36c1a762ecebf4d0104d0aa13d0205ab"
+    }
+  ]
+}

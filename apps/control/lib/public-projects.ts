@@ -7,7 +7,7 @@ export const publicProjectSelect = {
   title: true, summary: true, description: true, type: true, role: true,
   workItems: true, projectDate: true, websiteUrl: true, githubUrl: true,
   coverImage: true, technologies: true,
-  images: { select: { id: true, alt: true, sortOrder: true }, orderBy: { sortOrder: 'asc' } },
+  images: { where: { archivedAt: null }, select: { id: true, alt: true, sortOrder: true }, orderBy: { sortOrder: 'asc' } },
 } satisfies Prisma.ProjectSelect;
 
 type PublishedProject = Prisma.ProjectGetPayload<{ select: typeof publicProjectSelect }>;

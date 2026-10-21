@@ -1,4 +1,6 @@
 'use client';
+import {ControlText} from '@/components/control-language';
+
 import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUnsavedChanges } from '@/lib/use-unsaved-changes';
@@ -13,5 +15,5 @@ export function CompanyEditor({ initial }: { initial: Company }) {
     try { const { id, ...values } = draft; const response = await fetch(`/api/admin/companies/${id}`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(Object.entries(values).map(([k,v]) => [k,v ?? '']))) }); const data = await response.json(); if (!response.ok) { setErrors(data.details?.fieldErrors ?? {}); throw new Error(data.error); } setSaved(draft); setMessage('Company saved. Existing invoice snapshots are preserved.'); router.refresh(); }
     catch (error) { setMessage(`Could not save: ${error instanceof Error ? error.message : 'Unknown error'}`); } finally { lock.current = false; setBusy(false); }
   }
-  return <form className="panel admin-form-grid" onSubmit={save}><h2 className="admin-span-2">Business & billing information</h2>{Object.entries(fields).map(([key,label]) => <label key={key}>{label}<input value={draft[key as keyof Company] ?? ''} onChange={e => setDraft({ ...draft, [key]: e.target.value })} required={key === 'name' || key === 'country'} type={key === 'email' ? 'email' : 'text'} aria-invalid={Boolean(errors[key])} />{errors[key] ? <span role="alert">{errors[key].join(' ')}</span> : null}</label>)}<label className="admin-span-2">Internal company notes<textarea rows={4} value={draft.notes ?? ''} onChange={e => setDraft({ ...draft, notes: e.target.value })} /></label><button className="admin-primary" disabled={busy}>Save company</button><p role="status">{message}</p></form>;
+  return <form className="panel admin-form-grid" onSubmit={save}><h2 className="admin-span-2"><ControlText value={"Business & billing information"}/></h2>{Object.entries(fields).map(([key,label]) => <label key={key}>{label}<input value={draft[key as keyof Company] ?? ''} onChange={e => setDraft({ ...draft, [key]: e.target.value })} required={key === 'name' || key === 'country'} type={key === 'email' ? 'email' : 'text'} aria-invalid={Boolean(errors[key])} />{errors[key] ? <span role="alert">{errors[key].join(' ')}</span> : null}</label>)}<label className="admin-span-2"><ControlText value={"Internal company notes"}/><textarea rows={4} value={draft.notes ?? ''} onChange={e => setDraft({ ...draft, notes: e.target.value })} /></label><button className="admin-primary" disabled={busy}><ControlText value={"Save company"}/></button><p role="status">{message}</p></form>;
 }

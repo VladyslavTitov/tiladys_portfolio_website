@@ -1,12 +1,14 @@
 import './globals.css';
+import './rebuild.css';
+import './refinement.css';
 import type { Metadata, Viewport } from 'next';
 import { headers } from 'next/headers';
 import { locales } from '@tiladys/shared';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tiladys.com'),
-  title: { default: 'TiLADYS — IT Services & Webdesign', template: '%s | TiLADYS' },
-  description: 'Practical IT support, websites, PC services and digital solutions in Mülheim an der Ruhr, NRW, Germany.',
+  title: { default: 'TiLADYS — Websites, 3D Printing & PC Support', template: '%s | TiLADYS' },
+  description: 'Websites, 3D printing, PC support and digital solutions in Mülheim an der Ruhr, NRW, Germany.',
   openGraph: { type: 'website', siteName: 'TiLADYS' },
 };
 

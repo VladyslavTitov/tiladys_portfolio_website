@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "Featured carousel and duplicate dropdown are absent; five public choices remain",
+    "Mapped Websites and All Projects update real route-filtered results",
+    "Printing uses the mapped public group without a duplicate category control",
+    "Gallery opens/zooms within its own scroll region; native Escape closes and restores trigger focus",
+    "FAQ opens with the native Space key",
+    "Browser-boundary image failure produces an honest fallback with reserved 16:10 frames"
+  ],
+  "consoleErrors": [],
+  "networkErrors": [],
+  "testBoundaryFailure": "Only public project image requests intentionally fail in the final state test"
+}

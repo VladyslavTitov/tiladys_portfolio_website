@@ -30,7 +30,7 @@ export function invoiceIssuanceRequirements(invoice: IssueInvoice, settings: Iss
       [!blank(line.description) && blank(line.descriptionDe), 'descriptionDe', 'description'],
       [line.unit && !germanUnits[line.unit] && blank(line.unitDe), 'unitDe', 'unit'],
     ] as const) if (missing) add('MISSING_TRANSLATION', `invoice-lines.${index}.${field}`, `Add the German ${label} for line ${index + 1}.`);
-    if (['FROM', 'PERCENTAGE'].includes(line.priceMode ?? '') && !line.priceConfirmed) add('PRICE_CONFIRMATION_REQUIRED', `invoice-lines.${index}.priceConfirmed`, `Confirm the agreed price for line ${index + 1}.`);
+    if (['FROM', 'PERCENTAGE','MONTHLY'].includes(line.priceMode ?? '') && !line.priceConfirmed) add('PRICE_CONFIRMATION_REQUIRED', `invoice-lines.${index}.priceConfirmed`, `Confirm the agreed price for line ${index + 1}.`);
     if (line.priceMode === 'MONTHLY' && (!line.billingPeriodFrom || !line.billingPeriodTo || line.billingPeriodTo < line.billingPeriodFrom)) add('INVALID_BILLING_PERIOD', `invoice-lines.${index}.billingPeriodFrom`, `Enter the billing period for monthly line ${index + 1}.`);
 
     if (line.taxTreatment === 'UNCONFIRMED') add('INVOICE_TAX_INCOMPLETE', `invoice-lines.${index}.taxTreatment`, `Confirm the tax treatment for line ${index + 1}.`);

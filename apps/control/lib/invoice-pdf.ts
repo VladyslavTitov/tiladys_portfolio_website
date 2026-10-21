@@ -56,7 +56,7 @@ export async function generateInvoicePdf(snapshot: PdfInvoice) {
   const left = PAGE.margin, right = PAGE.width - PAGE.margin, width = right - left;
   const bottom = 66;
   const lineHeight = Math.ceil(Math.max(font.heightAtSize(9), bold.heightAtSize(9))) + 3;
-  let page!: PDFPage; let y = 0; let currentLanguage: 'en' | 'de' = 'en';
+  let page!: PDFPage; let y = 0; let currentLanguage: 'en' | 'de' = 'de';
   const pageLanguages: Array<'en' | 'de'> = [];
   const draw = (value: string, x: number, baseline: number, size = 9, face = font, color = navy) => {
     page.drawText(value, { x, y: baseline, size, font: face, color });
@@ -75,7 +75,7 @@ export async function generateInvoicePdf(snapshot: PdfInvoice) {
     for (const line of wrap(face, value, size, available)) { ensure(size + 5); draw(line, x, y, size, face, color); y -= size + 5; }
   };
   const label = (value: string) => { ensure(32); draw(value, left, y, 8, bold, slate); y -= 18; };
-  for (const language of ['en', 'de'] as const) {
+  for (const language of ['de', 'en'] as const) {
   currentLanguage = language;
   const bilingual = (english: string, german: string) => language === 'en' ? english : german;
   const invoice = language === 'en' ? snapshot : { ...snapshot,
@@ -92,7 +92,7 @@ export async function generateInvoicePdf(snapshot: PdfInvoice) {
   y -= 85;
   draw(bilingual('INVOICE', 'RECHNUNG'), left, y, 22, bold); y -= 23;
   block(invoice.invoiceNumber ?? bilingual('Number assigned on issue', 'Nummer wird bei Ausgabe vergeben'), left, width, 10, bold);
-  if (language === 'de') block('Deutsche Fassung derselben Rechnung. Keine zusätzliche Zahlungspflicht.', left, width, 8);
+  if (language === 'en') block('English translation of the same invoice. No additional payment is due.', left, width, 8);
   y -= 8;
   page.drawLine({ start: { x: left, y }, end: { x: right, y }, thickness: 1, color: cyan }); y -= 23;
   const addressTop = y;

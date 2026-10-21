@@ -1,3 +1,9 @@
+import {ServiceExtras} from '@/components/services/ServiceExtras';
+import { PublishedProducts } from '@/components/PublishedProducts';
+import { Suspense } from 'react';
+import Link from 'next/link';
+import { SelectedWork } from '@/components/SelectedWork';
+import {rebuildCopy} from '@/lib/rebuild-copy';
 import { pcServiceArea, serviceAreaCopy } from '@/lib/service-area';
 import { organizationStructuredData, jsonLd } from '@/lib/business';
 import { notFound, permanentRedirect } from 'next/navigation';
@@ -32,6 +38,7 @@ export default async function ServicePage({ params, searchParams }: { params: Pr
   const service = serviceById[slug];
   const copy = serviceCopy(slug, locale);
   const common = ui(locale);
+  const area = rebuildCopy(locale);
   const url = `${siteUrl}/${locale}/services/${slug}`;
   const structuredData = [
     { '@context': 'https://schema.org', '@type': 'Service', name: copy.title, description: copy.short, url, provider: organizationStructuredData, ...(slug === 'pc-laptop' ? { areaServed: pcServiceArea } : {}), hasOfferCatalog: { '@type': 'OfferCatalog', name: copy.title, itemListElement: copy.groups?.map((group) => ({ '@type': 'OfferCatalog', name: group.title, itemListElement: group.items.map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })) })) } },
@@ -40,5 +47,9 @@ export default async function ServicePage({ params, searchParams }: { params: Pr
       { '@type': 'ListItem', position: 2, name: copy.title, item: url },
     ] },
   ];
-  return <Shell locale={locale}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} /><ServiceDetail locale={locale} service={service} sections={sections} />{slug === 'pc-laptop' ? <section className="section" aria-labelledby="pc-service-area"><h2 id="pc-service-area">{serviceAreaCopy(locale).title}</h2><p>{serviceAreaCopy(locale).text}</p></section> : null}</Shell>;
+  return <Shell locale={locale}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} /><ServiceDetail locale={locale} service={service} sections={sections} />{['websites','pc-laptop','3d-printing'].includes(slug)?<ServiceExtras locale={locale} service={slug}/>:null}
+  {slug==='3d-printing'?<section className="section"><div className="rebuild-grid">{area.printOptions.map((label,index)=><article className="rebuild-card" key={label}><div><h2>{label}</h2><Link className="primary" href={`/${locale}/contact?service=3d-printing&mode=${['file','idea','batch'][index]}`}>{area.start}</Link></div></article>)}</div><h2>{area.materials}</h2><p>{area.materialText}</p><p>{area.fileText}</p></section>:null}
+  {['websites','3d-printing','pc-laptop'].includes(slug)?<Suspense fallback={<p role="status">{area.work}…</p>}><SelectedWork locale={locale} category={slug==='websites'?'web-development':slug==='3d-printing'?'3d-printing':'pc-support'} /></Suspense>:null}
+  {['websites','3d-printing'].includes(slug)?<><Suspense fallback={<p role="status">{area.browse}…</p>}><PublishedProducts locale={locale} type={slug==='websites'?'FRAMER_TEMPLATE':'MODEL_3D'}/></Suspense></>:null}
+  {slug==='pc-laptop'?<section className="section"><div className="actions"><Link className="primary" href={`/${locale}/contact?service=pc-laptop&mode=local`}>{locale==='de'?'Hilfe vor Ort':'Local support'}</Link><Link className="secondary" href={`/${locale}/contact?service=pc-laptop&mode=remote`}>{locale==='de'?'Online-Hilfe':'Remote support'}</Link></div></section>:null}{slug === 'pc-laptop' ? <section className="section" aria-labelledby="pc-service-area"><h2 id="pc-service-area">{serviceAreaCopy(locale).title}</h2><p>{serviceAreaCopy(locale).text}</p></section> : null}</Shell>;
 }

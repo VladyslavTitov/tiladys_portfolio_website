@@ -1,154 +1,28 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  ArrowRight,
-  Check,
-  ClipboardList,
-  ExternalLink,
-  Headphones,
-  MessageSquareText,
-  Search,
-  ShieldCheck,
-  Wrench,
-} from 'lucide-react';
+import { Suspense } from 'react';
+import { ArrowRight } from 'lucide-react';
 import { Shell } from '@/components/Shell';
-import { ServiceVisual } from '@/components/services/ServiceVisual';
-import { t } from '@/lib/i18n';
-import { homePageCopy } from '@/lib/home-page-copy';
-import { homeServices } from '@/lib/home-services';
+import { ThreeServices, ProductPathways } from '@/components/ThreeServices';
+import { SelectedWork } from '@/components/SelectedWork';
+import { ContactCta } from '@/components/ContactCta';
+import { FounderPortrait } from '@/components/FounderPortrait';
+import { rebuildCopy } from '@/lib/rebuild-copy';
 import { localizedMetadata } from '@/lib/seo';
-import { serviceById } from '@/lib/services';
-
-const processIcons = [MessageSquareText, Search, ClipboardList, Wrench, ShieldCheck];
-
+import about from '@/content/about.json';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  const c = t(locale);
-  return localizedMetadata({ locale, title: c.hero, description: c.sub });
+ const { locale } = await params; const c = rebuildCopy(locale);
+ return localizedMetadata({ locale, title: c.title, description: c.intro });
 }
-
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  const c = t(locale);
-  const extra = homePageCopy(locale);
-  const homeServiceCopy = homeServices(locale);
-
-  return (
-    <Shell locale={locale}>
-      <section className="hero">
-        <div>
-          <span className="eyebrow">{extra.eyebrow}</span>
-          <h1>{c.hero}</h1>
-          <p>{c.sub}</p>
-          <div className="actions">
-            <Link className="primary" href={`/${locale}/services`}>
-              {extra.viewServices} <ArrowRight aria-hidden="true" />
-            </Link>
-            <Link className="secondary secondary--light" href={`/${locale}/contact`}>
-              {c.header.getHelp}
-            </Link>
-          </div>
-          <div className="trust">
-            <span><ShieldCheck aria-hidden="true" />{extra.trust[0]}</span>
-            <span>{extra.trust[1]}</span>
-            <span>{extra.trust[2]}</span>
-          </div>
-        </div>
-        <Image className="hero-visual" src="/hero/tiladys-hero-objects-transparent.png" width={1254} height={1254} sizes="(max-width: 768px) 100vw, 50vw" alt="" aria-hidden="true" priority />
-      </section>
-
-      <section className="services-section section" aria-labelledby="services-heading">
-        <div className="section-title">
-          <small>{c.home.servicesKicker}</small>
-          <h2 id="services-heading">
-            {c.home.servicesTitle} <span>{c.home.servicesAccent}</span>
-          </h2>
-          <p>{c.home.servicesIntro}</p>
-        </div>
-
-        <div className="service-cards">
-          {homeServiceCopy.services.map((service) => {
-            return (
-              <article className="service-card" key={service.title}>
-                <ServiceVisual service={serviceById[service.id]} title={service.title} compact />
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
-                <ul>
-                  {service.items.map((item: string) => (
-                    <li key={item}><Check aria-hidden="true" size={16} />{item}</li>
-                  ))}
-                </ul>
-                <Link className="service-card__link" href={`/${locale}/services/${service.id}`}>{service.cta}<ArrowRight aria-hidden="true" size={17} /></Link>
-              </article>
-            );
-          })}
-        </div>
-
-        <aside className="service-contact-card">
-          <div><h3>{homeServiceCopy.contact.title}</h3><p>{homeServiceCopy.contact.text}</p></div>
-          <Link className="primary" href={`/${locale}/contact`}>{homeServiceCopy.contact.cta}<ArrowRight aria-hidden="true" size={18} /></Link>
-        </aside>
-
-        <Link className="primary services-section__button" href={`/${locale}/services`}>
-          {c.home.servicesButton} <ArrowRight aria-hidden="true" size={18} />
-        </Link>
-      </section>
-
-      {/* <section className="section alt">
-        <div className="section-title">
-          <small>{extra.projectsKicker}</small>
-          <h2>{c.projects}</h2>
-        </div>
-        <div className="project-grid">
-          {[2, 3, 4, 5].map((number, index) => (
-            <article key={number}>
-              <Image src={`/portfolio/placeholders/project-${number}.png`} width={550} height={330} alt={extra.projectCategories[index]} />
-              <h3>{extra.projectCategories[index]}</h3>
-              <p>{extra.projectPlaceholder}</p>
-            </article>
-          ))}
-        </div>
-        <Link className="secondary center" href={`/${locale}/portfolio`}>{extra.seeAllPortfolio}</Link>
-      </section> */}
-
-      <section className="process-section section" aria-labelledby="process-heading">
-        <div className="section-title process-section__title">
-          <small>{c.home.processKicker}</small>
-          <h2 id="process-heading">{c.home.processTitle}</h2>
-        </div>
-
-        <ol className="process-steps">
-          {c.home.processSteps.map((step, index) => {
-            const Icon = processIcons[index];
-            return (
-              <li key={step.title} className="process-step">
-                <div className="process-step__number">{index + 1}</div>
-                <div className="process-step__icon"><Icon aria-hidden="true" /></div>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </li>
-            );
-          })}
-        </ol>
-      </section>
-
-      <section className="home-cta-wrap">
-        <div className="home-cta">
-          <div className="home-cta__icon"><Headphones aria-hidden="true" /></div>
-          <div className="home-cta__copy">
-            <h2>{c.home.ctaTitle}</h2>
-            <p>{c.home.ctaText}</p>
-          </div>
-          <div className="home-cta__actions">
-            <Link className="primary" href={`/${locale}/contact`}>
-              {c.home.ctaPrimary} <ArrowRight aria-hidden="true" size={18} />
-            </Link>
-            <Link className="secondary secondary--light" href={`/${locale}/contact#contact-form`}>
-              {c.home.ctaSecondary} <ExternalLink aria-hidden="true" size={17} />
-            </Link>
-          </div>
-        </div>
-      </section>
-    </Shell>
-  );
+ const { locale } = await params; const c = rebuildCopy(locale); const founder = about[locale as keyof typeof about] ?? about.en;
+ return <Shell locale={locale}>
+  <section className="rebuild-hero"><div><span className="eyebrow">TiLADYS · Mülheim an der Ruhr</span><h1>{c.title}</h1><p>{c.intro}</p><div className="actions"><Link className="primary" href={`/${locale}/contact`}>{c.contact}<ArrowRight aria-hidden="true" /></Link><Link className="secondary secondary--light" href={`/${locale}/services`}>{c.services}</Link></div></div><Image src="/illustrations/g01-three-services-1600.webp" alt="" width={1600} height={900} sizes="(max-width: 768px) calc(100vw - 36px), (max-width: 1248px) 46vw, 557px" priority /></section>
+  <ThreeServices locale={locale} />
+  <Suspense fallback={<section className="section" aria-busy="true">{c.work}…</section>}><SelectedWork locale={locale} featuredOnly /></Suspense>
+  <ProductPathways locale={locale} />
+  <section className="section rebuild-process"><h2>{c.process}</h2><ol>{c.steps.map((step, i) => <li key={step}><span>{i + 1}</span><h3>{step}</h3></li>)}</ol></section>
+  <section className="section rebuild-founder"><FounderPortrait name={founder.founderName} label={founder.portraitLabel} /><div><span className="eyebrow">{c.founder}</span><h2>{founder.founderName}</h2><p>{founder.founderText}</p><Link className="primary" href={`/${locale}/about`}>{c.about}<ArrowRight aria-hidden="true" /></Link></div></section>
+  <ContactCta locale={locale} title={c.start} text={c.intro} />
+ </Shell>;
 }

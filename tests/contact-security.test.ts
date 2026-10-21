@@ -79,7 +79,7 @@ test('contact and admin endpoints enforce their security boundaries', () => {
   assert.match(adminRoute, /await assertOrigin\(\)/);
   assert.match(adminRoute, /await requireUser\(\)/);
   assert.match(adminRoute, /message === 'UNAUTHORIZED'/);
-  assert.match(adminRoute, /z\.enum\(\['UNREAD', 'READ'\]\)/);
+  assert.match(adminRoute, /z\.enum\(\['UNREAD', 'READ', 'ARCHIVED', 'SPAM'\]\)/);
 });
 
 test('admin message content is rendered with React text escaping', () => {

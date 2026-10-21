@@ -1,4 +1,4 @@
-import type { Prisma } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@tiladys/db';
 import { priceBulkSchema, priceItemSchema } from '@tiladys/shared';
@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(row, { status: 201 });
   } catch (error) {
     const message = error instanceof Error ? error.message : 'PRICE_CREATE_FAILED';
-    return NextResponse.json({ error: message }, { status: message === 'UNAUTHORIZED' ? 401 : 400 });
+    return NextResponse.json({ error: message }, { status: message === 'UNAUTHORIZED' ? 401 : message === 'INVALID_ORIGIN' ? 403 : message === 'STALE_WRITE' ? 409 : 400 });
   }
 }
 
@@ -29,24 +29,24 @@ export async function PUT(req: NextRequest) {
     
     const result = await db.$transaction(
   async (tx: Prisma.TransactionClient) => {
-    if (payload.deletedItemIds.length) {
-      await tx.priceItem.deleteMany({
-        where: {
-          id: {
-            in: payload.deletedItemIds,
-          },
-        },
-      });
+    // Lock catalogue rows in a stable order, including structured-rate edits.
+    await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "PriceSection" ORDER BY "id" FOR UPDATE`);
+    await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "PriceItem" ORDER BY "id" FOR UPDATE`);
+    const currentSections = await tx.priceSection.findMany({ include: { items: true } });
+    const versions = new Map(currentSections.flatMap(section => [[section.id, section.updatedAt.toISOString()], ...section.items.map(item => [item.id,item.updatedAt.toISOString()])] as [string,string][]));
+    const check = (id: string, expected: string | undefined) => { if (!expected || versions.get(id) !== expected) throw Error('STALE_WRITE'); };
+    for (const id of [...payload.deletedItemIds,...payload.deletedSectionIds]) check(id,payload.deletedVersions[id]);
+    for (const section of payload.sections) {
+      if(section.id) check(section.id,section.expectedUpdatedAt);
+      for(const item of section.items) if(item.id) {
+        check(item.id,item.expectedUpdatedAt);
+        if(!section.id || !currentSections.find(s=>s.id===section.id)?.items.some(i=>i.id===item.id)) throw Error('INVALID_ITEM_RELATIONSHIP');
+      }
     }
-
+    if (payload.deletedItemIds.length) await tx.priceItem.updateMany({where:{id:{in:payload.deletedItemIds}},data:{active:false}});
     if (payload.deletedSectionIds.length) {
-      await tx.priceSection.deleteMany({
-        where: {
-          id: {
-            in: payload.deletedSectionIds,
-          },
-        },
-      });
+      await tx.priceItem.updateMany({where:{sectionId:{in:payload.deletedSectionIds}},data:{active:false}});
+      await tx.priceSection.updateMany({where:{id:{in:payload.deletedSectionIds}},data:{active:false}});
     }
 
     for (const section of payload.sections) {
@@ -103,13 +103,13 @@ export async function PUT(req: NextRequest) {
         sortOrder: "asc",
       },
     });
-  }
+  }, { timeout: 20000 }
 );
 
     await db.auditLog.create({ data: { userId: user.id, action: 'PRICE_BULK_UPDATE', entity: 'PriceSection', metadata: { sections: payload.sections.length } } });
     return NextResponse.json(result);
   } catch (error) {
     const message = error instanceof Error ? error.message : 'PRICE_SAVE_FAILED';
-    return NextResponse.json({ error: message }, { status: message === 'UNAUTHORIZED' ? 401 : 400 });
+    return NextResponse.json({ error: message }, { status: message === 'UNAUTHORIZED' ? 401 : message === 'INVALID_ORIGIN' ? 403 : message === 'STALE_WRITE' ? 409 : 400 });
   }
 }

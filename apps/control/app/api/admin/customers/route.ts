@@ -10,9 +10,10 @@ export async function GET(req: NextRequest) {
     await requireUser();
     const q = (req.nextUrl.searchParams.get('q') ?? '').trim().slice(0, 100);
     const status = req.nextUrl.searchParams.get('status');
-    const page = Math.max(1, Number(req.nextUrl.searchParams.get('page')) || 1);
+    const page = Math.min(10000,Math.max(1, Math.floor(Number(req.nextUrl.searchParams.get('page'))) || 1));
     const take = 50;
-    const where = {
+    const type=req.nextUrl.searchParams.get('type');
+    const where = { ...(req.nextUrl.searchParams.get('activeOnly')==='1'&&!status?{status:{not:'ARCHIVED' as const}}:{}), ...(['PERSON','BUSINESS'].includes(type||'')?{type:type as 'PERSON'}:{}),
       ...(status && ['LEAD', 'ACTIVE', 'INACTIVE', 'ARCHIVED'].includes(status) ? { status: status as 'LEAD' | 'ACTIVE' | 'INACTIVE' | 'ARCHIVED' } : {}),
       ...(q ? { OR: [
         { customerNumber: { contains: q, mode: 'insensitive' as const } },
@@ -23,6 +24,7 @@ export async function GET(req: NextRequest) {
         { company: { name: { contains: q, mode: 'insensitive' as const } } },
       ] } : {}),
     };
+    if(req.nextUrl.searchParams.get('lookup')==='1'){const [items,total]=await Promise.all([db.customer.findMany({where,select:{id:true,customerNumber:true,firstName:true,lastName:true,email:true,companyId:true,status:true,company:{select:{name:true}}},orderBy:[{customerNumber:'asc'},{id:'asc'}],skip:(page-1)*take,take}),db.customer.count({where})]);return NextResponse.json({items,total,page,pageSize:take},{headers:{'Cache-Control':'private, no-store'}});}
     const [items, total] = await Promise.all([
       db.customer.findMany({ where, include: { company: { select: { id: true, name: true } }, _count: { select: { serviceJobs: true } } }, orderBy: { updatedAt: 'desc' }, skip: (page - 1) * take, take }),
       db.customer.count({ where }),

@@ -10,7 +10,8 @@ test('decimal totals, agreed starting prices and ordered monthly periods are enf
   assert.equal(calculateInvoiceLines([{ ...line, priceMode: 'FROM', priceConfirmed: true }])[0].priceMode, 'FROM');
   assert.throws(() => calculateInvoiceLines([{ ...line, priceMode: 'MONTHLY' }]), /INVALID_BILLING_PERIOD/);
   assert.throws(() => calculateInvoiceLines([{ ...line, priceMode: 'MONTHLY', billingPeriodFrom: '2026-09-30', billingPeriodTo: '2026-09-01' }]), /INVALID_BILLING_PERIOD/);
-  assert.equal(calculateInvoiceLines([{ ...line, priceMode: 'MONTHLY', billingPeriodFrom: '2026-09-01', billingPeriodTo: '2026-09-30' }])[0].billingPeriodTo, '2026-09-30');
+  assert.throws(() => calculateInvoiceLines([{ ...line, priceMode: 'MONTHLY', billingPeriodFrom: '2026-09-01', billingPeriodTo: '2026-09-30' }]), /PRICE_CONFIRMATION_REQUIRED/);
+  assert.equal(calculateInvoiceLines([{ ...line, priceMode: 'MONTHLY', priceConfirmed: true, billingPeriodFrom: '2026-09-01', billingPeriodTo: '2026-09-30' }])[0].billingPeriodTo, '2026-09-30');
 });
 test('VAT identifier never supplies missing explicit tax treatment', () => {
   const requirements = invoiceIssuanceRequirements({ recipientName: 'Synthetic', recipientStreet: 'Test 1', recipientPostalCode: '12345', recipientCity: 'Test', issueDate: new Date(), lines: [{ ...line, taxTreatment: 'UNCONFIRMED' }] }, { settingsConfirmedAt: new Date(), taxMode: 'VAT', taxNumber: null, vatId: 'SYNTHETIC', taxStatement: null });

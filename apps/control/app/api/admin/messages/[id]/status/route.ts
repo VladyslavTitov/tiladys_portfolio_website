@@ -5,7 +5,7 @@ import { assertOrigin, requireUser } from '@/lib/security';
 
 export const runtime = 'nodejs';
 
-const statusSchema = z.object({ status: z.enum(['UNREAD', 'READ']) }).strict();
+const statusSchema = z.object({ status: z.enum(['UNREAD', 'READ', 'ARCHIVED', 'SPAM']) }).strict();
 
 export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {

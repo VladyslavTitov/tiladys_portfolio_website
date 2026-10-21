@@ -11,12 +11,13 @@ import type { Prisma } from '@prisma/client';
 
 const project = { slug: 'windows-fedora', title: { en: 'Windows 11 and Fedora dual boot setup', de: 'Windows 11 und Fedora im Dual-Boot' }, summary: { en: 'Synthetic project summary', de: 'Deutsche Beschreibung' }, seoTitle: { en: 'Custom search title' }, socialTitle: { de: 'Teilen' }, socialImageId: 'second', images: [{ id: 'first', url: 'https://example.test/cover.webp' }, { id: 'second', url: 'https://example.test/second.webp', alt: { de: 'Vorschau' } }] };
 
-test('project metadata localizes fallbacks, canonical, all alternates and selected social image', () => {
+test('project metadata emits alternates only for available translations and selected social image', () => {
   const result = projectMetadata(project, 'de');
   assert.equal(result.title, project.title.de);
   assert.equal(result.description, project.summary.de);
   assert.equal(result.alternates?.canonical, `${siteUrl}/de/portfolio/windows-fedora`);
-  for (const locale of locales) assert.equal(result.alternates?.languages?.[locale], `${siteUrl}/${locale}/portfolio/windows-fedora`);
+  for (const locale of locales) assert.equal(result.alternates?.languages?.[locale], ['en','de'].includes(locale)?`${siteUrl}/${locale}/portfolio/windows-fedora`:undefined);
+  assert.equal((projectMetadata(project,'ru').robots as {index:boolean}).index,false);
   assert.equal(result.alternates?.languages?.['x-default'], `${siteUrl}/en/portfolio/windows-fedora`);
   assert.equal(result.openGraph?.title, 'Teilen');
   assert.equal(result.openGraph?.description, project.summary.de);

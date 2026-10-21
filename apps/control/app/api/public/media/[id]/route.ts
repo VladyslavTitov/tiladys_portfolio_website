@@ -8,7 +8,7 @@ const headers = { 'Cache-Control': 'private, no-store, max-age=0', 'CDN-Cache-Co
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   // Association and publication status are checked on EVERY request, including resized images.
-  const image = await db.projectImage.findFirst({ where: { id, project: { status: 'PUBLISHED' } }, select: { data: true, mimeType: true } });
+  const image = await db.projectImage.findFirst({ where: { id, archivedAt: null, project: { status: 'PUBLISHED' } }, select: { data: true, mimeType: true } });
   if (!image) return new NextResponse('Not found', { status: 404, headers });
   const width = req.nextUrl.searchParams.get('w');
   if (width !== null) {

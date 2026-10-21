@@ -1,4 +1,6 @@
 'use client';
+import {ControlText} from '@/components/control-language';
+
 import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -20,14 +22,14 @@ export function Attachments({ messageId, attachments }: { messageId: string; att
   }
   if (!attachments.length) return null;
   return <section className="message-attachments" aria-label="Private inquiry images">
-    <h3>Private inquiry images</h3>
+    <h3><ControlText value={"Private inquiry images"}/></h3>
     <p role="status">{status}</p>
     {attachments.map((attachment) => {
       const url = `/api/admin/messages/${messageId}/attachments/${attachment.id}`;
       return <figure key={attachment.id}>
-        <details><summary>Preview {attachment.filename}</summary><Image unoptimized src={url} width={attachment.width} height={attachment.height} alt={`Inquiry attachment: ${attachment.filename}`} style={{ maxWidth: '100%', width: 320, height: 'auto' }} /></details>
-        <figcaption>{Math.ceil(attachment.size / 1024)} KB · <a href={`${url}?download=1`}>Download {attachment.filename}</a></figcaption>
-        {confirmId === attachment.id ? <div><p>Delete this attachment permanently from the active database?</p><button disabled={pending} onClick={() => remove(attachment.id)}>Confirm deletion</button><button disabled={pending} onClick={() => setConfirmId(null)}>Cancel</button></div> : <button onClick={() => setConfirmId(attachment.id)}>Delete attachment</button>}
+        <details><summary><ControlText value={"Preview "}/>{attachment.filename}</summary><Image unoptimized src={url} width={attachment.width} height={attachment.height} alt={`Inquiry attachment: ${attachment.filename}`} style={{ maxWidth: '100%', width: 320, height: 'auto' }} /></details>
+        <figcaption>{Math.ceil(attachment.size / 1024)} KB · <a href={`${url}?download=1`}><ControlText value={"Download "}/>{attachment.filename}</a></figcaption>
+        {confirmId === attachment.id ? <div><p><ControlText value={"Delete this attachment permanently from the active database?"}/></p><button disabled={pending} onClick={() => remove(attachment.id)}><ControlText value={"Confirm deletion"}/></button><button disabled={pending} onClick={() => setConfirmId(null)}><ControlText value={"Cancel"}/></button></div> : <button onClick={() => setConfirmId(attachment.id)}><ControlText value={"Delete attachment"}/></button>}
       </figure>;
     })}
   </section>;

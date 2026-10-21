@@ -1,0 +1,69 @@
+--- a/apps/web/app/refinement.css
++++ b/apps/web/app/refinement.css
+@@ -88,7 +88,32 @@
+ .contact-channel__icon svg { width: 24px; height: 24px; }
+ .contact-channel .contact-channel__copy h2 { font-size: 21px; margin: 0 0 4px; line-height: 1.3; }
+ .contact-channel__copy p { margin: 0; font-size: 15px; overflow-wrap: anywhere; }
+-.contact-channel .contact-channel__action { grid-column: 2; width: fit-content; font-size: 14px; white-space: normal; line-height: 1.4; padding: 8px 12px; }
++.contact-channel .contact-channel__action {
++  grid-column: 2;
++  justify-self: end;
++  align-self: center;
++  box-sizing: border-box;
++  width: 150px;
++  min-width: 150px;
++  max-width: 150px;
++  height: 44px;
++  min-height: 44px;
++  max-height: 44px;
++  flex: 0 0 150px;
++  display: inline-flex;
++  align-items: center;
++  justify-content: center;
++  gap: 8px;
++  padding: 8px 5px;
++  border: 1px solid currentColor;
++  border-radius: 8px;
++  font-size: 14px;
++  font-weight: 700;
++  line-height: 20px;
++  white-space: nowrap;
++}
++.contact-channel__action > svg { width: 16px; height: 16px; flex: 0 0 16px; }
++.contact-channel__action > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+ .contact-benefits { padding: 28px; }
+ .contact-benefits h2 { margin: 0 0 24px; font-size: 28px; }
+ .contact-benefits__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+@@ -133,8 +158,8 @@
+ .empty-state { border: 1px dashed #a5bacb; border-radius: 12px; padding: 32px; background: #f4f7fa; }
+ .rebuild-state { font-size: 16px; }
+ @media (min-width: 1280px), (min-width: 540px) and (max-width: 768px) {
+-  .contact-channel { grid-template-columns: 40px minmax(0, 1fr) auto; gap: 12px; }
+-  .contact-channel .contact-channel__action { grid-column: 3; grid-row: 1; align-self: center; max-width: 160px; }
++  .contact-channel { grid-template-columns: 40px minmax(0, 1fr) 150px; gap: 12px; }
++  .contact-channel .contact-channel__action { grid-column: 3; grid-row: 1; align-self: center; }
+ }
+ 
+ @media (max-width: 1100px) {
+@@ -170,8 +195,6 @@
+   .related-services a strong { font-size: 18px; }
+   .related-services .service-visual { min-height: 160px; }
+   .contact-form--visual { padding: 22px; }
+-  .contact-channel { grid-template-columns: 40px minmax(0, 1fr) auto; }
+-  .contact-channel .contact-channel__action { grid-column: 3; align-self: center; }
+   .contact-benefits { padding: 24px; }
+   .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+   .founder-profile, .founder-details { gap: 24px; }
+--- a/apps/web/app/[locale]/contact/page.tsx
++++ b/apps/web/app/[locale]/contact/page.tsx
+@@ -54,8 +54,8 @@
+               <article className="contact-channel" key={key}>
+                 <span className={`contact-channel__icon contact-channel__icon--${tone}`}><Icon aria-hidden="true" /></span>
+                 <div className="contact-channel__copy"><h2>{labels}</h2><p>{value}</p></div>
+-                <Link className={`contact-channel__action contact-channel__action--${tone}`} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+-                  <Icon aria-hidden="true" size={17} />{c.cards[`${key}Action` as keyof typeof c.cards]}
++                <Link title={c.cards[`${key}Action` as keyof typeof c.cards]} className={`contact-channel__action contact-channel__action--${tone}`} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}>
++                  <Icon aria-hidden="true" size={16} /><span>{c.cards[`${key}Action` as keyof typeof c.cards]}</span>
+                 </Link>
+               </article>
+             );

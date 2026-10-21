@@ -1,0 +1,6 @@
+import { NextRequest } from 'next/server';
+import { db,Prisma } from '@tiladys/db';
+import { assertOrigin,requireUser } from '@/lib/security';
+import { parseProjectImage,MAX_PROJECT_IMAGES } from '@/lib/projects';
+import { privateJson,privateError } from '@/lib/admin-response';
+export async function POST(req:NextRequest,{params}:{params:Promise<{id:string}>}){try{await assertOrigin();const u=await requireUser();const {id}=await params;const form=await req.formData();const parsed=await parseProjectImage(form.get('image'),0);const row=await db.$transaction(async tx=>{await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Product" WHERE "id"=${id} FOR UPDATE`);const product=await tx.product.findUniqueOrThrow({where:{id}});if(product.status==='PUBLISHED')throw new Error('INVALID_PRODUCT_STATE');if(await tx.productImage.count({where:{productId:id}})>=MAX_PROJECT_IMAGES)throw new Error('INVALID_IMAGE_COUNT');const image=await tx.productImage.create({data:{...parsed,productId:id,alt:{en:String(form.get('alt')||'').slice(0,500)}} ,select:{id:true}});await tx.product.update({where:{id},data:{revision:{increment:1}}});await tx.auditLog.create({data:{userId:u.id,action:'PRODUCT_IMAGE_ADD',entity:'Product',entityId:id}});return image;});return privateJson(row,201);}catch(e){return privateError(e,'PRODUCT_IMAGE_FAILED');}}

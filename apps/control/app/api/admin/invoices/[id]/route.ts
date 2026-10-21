@@ -19,12 +19,14 @@ export async function GET(_req: NextRequest, { params }: Context) {
 export async function PATCH(req: NextRequest, { params }: Context) {
   try {
     await assertOrigin(); const user = await requireUser(); const { id } = await params;
-    const parsed = parseInvoiceDraft(await req.json());
+    const body = await req.json(); const expectedUpdatedAt = body.expectedUpdatedAt; delete body.expectedUpdatedAt;
+    const parsed = parseInvoiceDraft(body);
     const row = await db.$transaction(async (tx) => {
       // Serialize edits with issuance so a delayed save cannot rewrite a frozen document.
       await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Invoice" WHERE "id" = ${id} FOR UPDATE`);
       const current = await tx.invoice.findUniqueOrThrow({ where: { id } });
       if (current.status !== 'DRAFT') throw new Error('ISSUED_INVOICE_IMMUTABLE');
+      if (typeof expectedUpdatedAt !== 'string' || current.updatedAt.toISOString() !== expectedUpdatedAt) throw new Error('STALE_WRITE');
       if (parsed.invoice.customerId !== current.customerId || parsed.invoice.serviceJobId !== current.serviceJobId) {
         throw new Error('INVALID_INVOICE_RELATIONSHIP');
       }
@@ -34,7 +36,7 @@ export async function PATCH(req: NextRequest, { params }: Context) {
       if (parsed.invoice.billingRecipientType === 'LEGACY' && current.billingRecipientType !== 'LEGACY') {
         throw new Error('INVALID_BILLING_RECIPIENT');
       }
-      if (parsed.invoice.billingCompanyId) await tx.company.findUniqueOrThrow({ where: { id: parsed.invoice.billingCompanyId } });
+      if (parsed.invoice.billingCompanyId) { const customer = await tx.customer.findUniqueOrThrow({ where: { id: current.customerId }, select: { companyId: true } }); const job = current.serviceJobId ? await tx.serviceJob.findUniqueOrThrow({ where: { id: current.serviceJobId }, select: { companyId: true } }) : null; if (![customer.companyId, job?.companyId].includes(parsed.invoice.billingCompanyId)) throw new Error('INVALID_INVOICE_RELATIONSHIP'); }
       if (parsed.invoice.billingRecipientType === 'INDIVIDUAL') parsed.invoice.recipientCompany = null;
       await tx.invoiceLine.deleteMany({ where: { invoiceId: id } });
       const invoice = await tx.invoice.update({ where: { id }, data: { ...parsed.invoice, lines: { create: parsed.lines } }, include: invoiceInclude, omit: { issuedPdf: true } });

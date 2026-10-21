@@ -1,0 +1,3 @@
+/** Enumerate UTC instants corresponding to a browser-local wall time. Missing/ambiguous DST times stay explicit. */
+export function localDateTime(date:Date){const pad=(n:number)=>String(n).padStart(2,'0');return `${date.getFullYear()}-${pad(date.getMonth()+1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;}
+export function localTimeCandidates(value:string){if(!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(value))return [];const initial=new Date(value);if(!Number.isFinite(initial.getTime()))return [];const results=[];for(let offset=-180;offset<=180;offset+=15){const candidate=new Date(initial.getTime()+offset*60000);if(localDateTime(candidate)===value)results.push(candidate.toISOString());}return [...new Set(results)].sort();}

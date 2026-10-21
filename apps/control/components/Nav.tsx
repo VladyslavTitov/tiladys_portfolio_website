@@ -1,27 +1,10 @@
+'use client';
+import {useControlTranslation,ControlText} from '@/components/control-language';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { BriefcaseBusiness, Building2, FolderKanban, Gauge, LogOut, MessageSquare, ReceiptText, Tags, UsersRound } from 'lucide-react';
-
-export function Nav() {
-  return (
-    <aside>
-      <Image src="/brand/logo.svg" alt="TiLADYS" width={290} height={69} priority />
-      <nav aria-label="Control panel navigation" className="control-nav">
-        <Link href="/dashboard"><Gauge size={17} />Dashboard</Link>
-        <span className="nav-group">CRM</span>
-        <Link href="/dashboard/customers"><UsersRound size={17} />Customers</Link>
-        <Link href="/dashboard/companies"><Building2 size={17} />Companies</Link>
-        <Link href="/dashboard/messages"><MessageSquare size={17} />Messages</Link>
-        <span className="nav-group">Work</span>
-        <Link href="/dashboard/service-jobs"><BriefcaseBusiness size={17} />Service jobs</Link>
-        <Link href="/dashboard/invoices"><ReceiptText size={17} />Invoices</Link>
-        <span className="nav-group">Website</span>
-        <Link href="/dashboard/projects"><FolderKanban size={17} />Portfolio</Link>
-        <Link href="/dashboard/prices"><Tags size={17} />Prices</Link>
-      </nav>
-      <form action="/api/auth/logout" method="post">
-        <button type="submit"><LogOut aria-hidden="true" />Log out</button>
-      </form>
-    </aside>
-  );
-}
+import {usePathname} from 'next/navigation';
+import {useRef,useState,useEffect} from 'react';
+import { BriefcaseBusiness, Building2, FolderKanban, Gauge, LogOut, MessageSquare, ReceiptText, Tags, UsersRound, Box, CheckSquare, FileText, Settings, Menu, X, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
+const navigation=[['/dashboard','Overview',Gauge],['/dashboard/messages','Inbox',MessageSquare],['/dashboard/customers','Clients',UsersRound],['/dashboard/companies','Companies',Building2],['/dashboard/service-jobs','Jobs',BriefcaseBusiness],['/dashboard/quotes','Quotes',FileText],['/dashboard/invoices','Invoices',ReceiptText],['/dashboard/projects','Portfolio',FolderKanban],['/dashboard/products','Products',Box],['/dashboard/tasks','Tasks',CheckSquare],['/dashboard/prices','Catalogue',Tags],['/dashboard/settings','Settings',Settings]] as const;
+export function Nav(){const translate=useControlTranslation();const path=usePathname();const [open,setOpen]=useState(false);const [collapsed,setCollapsed]=useState(false);const trigger=useRef<HTMLButtonElement>(null);useEffect(()=>{function key(e:KeyboardEvent){if(e.key==='Escape'&&open){e.preventDefault();setOpen(false);trigger.current?.focus();}}document.addEventListener('keydown',key);return()=>document.removeEventListener('keydown',key);},[open]);useEffect(()=>{if(!open||!window.matchMedia('(max-width:1000px)').matches)return;const button=trigger.current;const previous=document.body.style.overflow;document.body.style.overflow='hidden';const sidebar=button?.closest('aside');const elements=()=>[...(sidebar?.querySelectorAll<HTMLElement>('a[href],button:not(.control-collapse)')||[])];const trap=(e:KeyboardEvent)=>{if(e.key!=='Tab')return;const list=elements(),index=list.indexOf(document.activeElement as HTMLElement);if(e.shiftKey&&index<=0){e.preventDefault();list.at(-1)?.focus();}else if(!e.shiftKey&&(index<0||index===list.length-1)){e.preventDefault();list[0]?.focus();}};document.addEventListener('keydown',trap);return()=>{document.body.style.overflow=previous;document.removeEventListener('keydown',trap);button?.focus();};},[open]);return <aside className={`control-sidebar${open?' is-open':''}${collapsed?' is-collapsed':''}`}><div className="control-brand"><Link href="/dashboard"><Image src="/brand/icon.svg" alt="TiLADYS" width={445} height={106} priority/><span>CONTROL</span></Link><button ref={trigger} className="control-menu" aria-controls="control-navigation" aria-expanded={open} aria-label={translate(open?'Close navigation':'Open navigation')} onClick={()=>setOpen(v=>!v)}>{open?<X/>:<Menu/>}</button></div><button className="control-collapse" type="button" aria-expanded={!collapsed} aria-label={translate(collapsed?'Expand sidebar':'Collapse sidebar')} onClick={()=>setCollapsed(v=>!v)}>{collapsed?<ChevronRight/>:<ChevronLeft/>}</button><nav id="control-navigation" aria-label="Control panel navigation" className="control-nav">{navigation.map(([href,label,Icon])=><Link key={href} href={href} aria-label={translate(label)} title={translate(label)} aria-current={path===href||(href!=='/dashboard'&&path.startsWith(href+'/'))?'page':undefined} onClick={()=>setOpen(false)}><Icon size={18} aria-hidden="true"/><span><ControlText value={label}/></span></Link>)}</nav><div className="control-utilities"><a href="https://tiladys.com" target="_blank" rel="noopener noreferrer"><ExternalLink size={18} aria-hidden="true"/><span><ControlText value={"Public website"}/></span></a><form action="/api/auth/logout" method="post"><button type="submit"><LogOut aria-hidden="true" size={18}/><span><ControlText value={"Log out"}/></span></button></form></div></aside>;}

@@ -1,0 +1,19 @@
+{
+  "taskPreviewPortsStopped": [
+    3100,
+    3101,
+    3110
+  ],
+  "ownerDevelopmentPortsPreserved": [
+    3000,
+    3001
+  ],
+  "qaProjectsRetainedAsPrivateDrafts": 26,
+  "taskSessionsRevoked": true,
+  "temporaryCredentialsRemoved": true,
+  "temporaryPublicationStateRestored": true,
+  "initialRecordStatusFeaturedTimestampUnchanged": true,
+  "preExistingDatabaseContainerRetained": true,
+  "productionDataAccessed": false,
+  "deploymentPerformed": false
+}

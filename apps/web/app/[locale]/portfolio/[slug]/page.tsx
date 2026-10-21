@@ -1,3 +1,7 @@
+import {SelectedWork} from '@/components/SelectedWork';
+import {locales} from '@tiladys/shared';
+import {ProjectGallery} from '@/components/ProjectGallery';
+import interfaceCopy from '@/content/interface.json';
 import { ProjectImage } from '@/components/ProjectImage';
 import Link from 'next/link';
 import { cache } from 'react';
@@ -31,13 +35,11 @@ type ProjectDetail = ProjectSeo & {
 };
 
 function translated(value: Localized | undefined | null, locale: string) {
-  return value?.[locale] || value?.en || value?.ru || '';
+  return value?.[locale] || value?.en || value?.ru || Object.values(value||{}).find(v=>v.trim()) || '';
 }
 
 const loadProject = cache(async (slug: string): Promise<ProjectDetail | null> => {
-  try {
-    return await getPublishedProjectBySlug(slug);
-  } catch { return null; }
+  return getPublishedProjectBySlug(slug);
 });
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
@@ -61,13 +63,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
   const type = translated(project.type, locale);
   const workItems: string[] = project.workItems?.[locale] || project.workItems?.en || project.workItems?.ru || [];
   const images: ProjectImage[] = project.images ?? [];
-  const cover = images[0]?.url || project.coverImage || '/services/tiladys-service-website-creation.png';
+  const cover = images[0]?.url || project.coverImage || '';
   const date = project.projectDate ? new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric' }).format(new Date(project.projectDate)) : '—';
   const category = projectCategoryLabel(project.category, locale);
   const linksLabel = projectLinksAvailable(locale);
 
   return (
-    <Shell locale={locale}>
+    <Shell locale={locale} availableLocales={locales.filter(l=>project.title[l]?.trim()&&project.summary[l]?.trim())} fallbackPath="portfolio">
       <section className="project-detail-hero">
         <div className="project-detail-hero__inner">
           <div className="project-detail-hero__copy">
@@ -98,8 +100,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
         <div className="project-detail-main-image"><ProjectImage src={cover} alt={title} sizes="(max-width: 900px) 100vw, 50vw" /></div>
       </section>
 
-      {images.length ? <section className="section project-gallery-section"><h2>{c.screenshots}</h2><div className={`project-gallery project-gallery--${Math.min(images.length, 4)}`}>{images.map((image) => <figure key={image.id}><ProjectImage src={image.url} alt={translated(image.alt, locale) || title} sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw" /></figure>)}</div></section> : null}
+      {images.length ? <section className="section project-gallery-section"><h2>{c.screenshots}</h2><ProjectGallery locale={locale} images={images.map(im=>({id:im.id,url:im.url,alt:translated(im.alt,locale)||title}))} labels={{previous:(interfaceCopy[locale as keyof typeof interfaceCopy]||interfaceCopy.en).previous,next:(interfaceCopy[locale as keyof typeof interfaceCopy]||interfaceCopy.en).next,close:locale==='de'?'Schließen':'Close',open:locale==='de'?'Bild öffnen':'Open image'}}/></section> : null}
       {project.technologies?.length ? <section className="section project-tools"><h2>{c.tools}</h2><div>{project.technologies.map((tool: string) => <span key={tool}>{tool}</span>)}</div></section> : null}
+      <section className="section"><Link className="primary" href={`/${locale}/contact?service=${project.category==='3d-printing'?'3d-printing':project.category==='pc-support'?'pc-laptop':'websites'}&project=${project.slug}`}>{c.similarTitle}</Link></section>
+      <SelectedWork locale={locale} category={project.category} excludeId={project.id}/>
       <ContactCta locale={locale} title={c.similarTitle} text={c.similarText} />
     </Shell>
   );

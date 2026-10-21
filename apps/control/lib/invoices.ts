@@ -37,6 +37,7 @@ export function calculateInvoiceLines(lines: Array<{ serviceNameDe?: string | nu
   return lines.map((line, sortOrder) => {
     if (['FROM', 'PERCENTAGE'].includes(line.priceMode ?? '') && !line.priceConfirmed) throw Object.assign(new Error('PRICE_CONFIRMATION_REQUIRED'), { details: { fieldErrors: { [`lines.${sortOrder}.priceConfirmed`]: ['Confirm the agreed amount.'] } } });
     if (line.priceMode === 'MONTHLY' && (!line.billingPeriodFrom || !line.billingPeriodTo || line.billingPeriodTo < line.billingPeriodFrom)) throw Object.assign(new Error('INVALID_BILLING_PERIOD'), { details: { fieldErrors: { [`lines.${sortOrder}.billingPeriodFrom`]: ['Enter an ordered monthly billing period.'] } } });
+    if(line.priceMode==='MONTHLY'&&!line.priceConfirmed)throw Object.assign(new Error('PRICE_CONFIRMATION_REQUIRED'),{details:{fieldErrors:{[`lines.${sortOrder}.priceConfirmed`]:['Confirm the agreed monthly amount.']}}});
     const quantity = new Prisma.Decimal(line.quantity.replace(',', '.'));
     const unitPrice = money(line.unitPrice);
     const subtotal = quantity.mul(unitPrice).toDecimalPlaces(2, Prisma.Decimal.ROUND_HALF_UP);
@@ -55,7 +56,7 @@ export function parseInvoiceDraft(value: unknown) {
   const hasUnknownTax = lines.some((line) => line.taxAmount === null);
   const taxTotal = hasUnknownTax ? null : lines.reduce((sum, line) => sum.add(line.taxAmount ?? 0), new Prisma.Decimal(0));
   return {
-    invoice: { documentVersion: 2, notesDe: nullable(data.notesDe), billingCompanyId: nullable(data.billingCompanyId), billingRecipientType: data.billingRecipientType, customerId: data.customerId, serviceJobId: nullable(data.serviceJobId), issueDate: date(data.issueDate), dueDate: date(data.dueDate), serviceDateFrom: date(data.serviceDateFrom), serviceDateTo: date(data.serviceDateTo), recipientName: data.recipientName, recipientCompany: nullable(data.recipientCompany), recipientEmail: nullable(data.recipientEmail), recipientStreet: data.recipientStreet, recipientPostalCode: data.recipientPostalCode, recipientCity: data.recipientCity, recipientCountry: data.recipientCountry, customerReference: nullable(data.customerReference), notes: nullable(data.notes), subtotal, taxTotal, total: subtotal.add(taxTotal ?? 0) }, lines,
+    invoice: { documentVersion: 3, notesDe: nullable(data.notesDe), billingCompanyId: nullable(data.billingCompanyId), billingRecipientType: data.billingRecipientType, customerId: data.customerId, serviceJobId: nullable(data.serviceJobId), issueDate: date(data.issueDate), dueDate: date(data.dueDate), serviceDateFrom: date(data.serviceDateFrom), serviceDateTo: date(data.serviceDateTo), recipientName: data.recipientName, recipientCompany: nullable(data.recipientCompany), recipientEmail: nullable(data.recipientEmail), recipientStreet: data.recipientStreet, recipientPostalCode: data.recipientPostalCode, recipientCity: data.recipientCity, recipientCountry: data.recipientCountry, customerReference: nullable(data.customerReference), notes: nullable(data.notes), subtotal, taxTotal, total: subtotal.add(taxTotal ?? 0) }, lines,
   };
 }
 
@@ -82,21 +83,23 @@ export function serializeInvoice<T extends Record<string, unknown>>(invoice: T &
   const paid = invoice.payments.reduce((sum, payment) => sum.add(payment.amount), new Prisma.Decimal(0));
   const balance = invoice.total.sub(paid);
   const dateValue = (key: string) => invoice[key] instanceof Date ? (invoice[key] as Date).toISOString() : invoice[key];
-  return { ...invoice, paymentStatus: balance.lte(0) ? 'PAID' : paid.isZero() ? 'UNPAID' : 'PARTIAL', issueDate: dateValue('issueDate'), dueDate: dateValue('dueDate'), serviceDateFrom: dateValue('serviceDateFrom'), serviceDateTo: dateValue('serviceDateTo'), issuedAt: dateValue('issuedAt'), createdAt: dateValue('createdAt'), updatedAt: dateValue('updatedAt'), issuedPdf: undefined, subtotal: invoice.subtotal.toString(), taxTotal: invoice.taxTotal?.toString() ?? null, total: invoice.total.toString(), paidTotal: paid.toString(), outstanding: (balance.isNegative() ? new Prisma.Decimal(0) : balance).toString(), lines: invoice.lines.map((line) => ({ ...line, quantity: line.quantity.toString(), unitPrice: line.unitPrice.toString(), taxRate: line.taxRate?.toString() ?? null, subtotal: line.subtotal.toString(), taxAmount: line.taxAmount?.toString() ?? null, total: line.total.toString() })), payments: invoice.payments.map((payment) => ({ ...payment, paidAt: payment.paidAt instanceof Date ? payment.paidAt.toISOString() : payment.paidAt, createdAt: payment.createdAt instanceof Date ? payment.createdAt.toISOString() : payment.createdAt, amount: payment.amount.toString() })) };
+  return { ...invoice, paymentStatus: invoice.status==='DRAFT'?'NOT_ISSUED':balance.lte(0) ? 'PAID' : paid.isZero() ? 'UNPAID' : 'PARTIAL', issueDate: dateValue('issueDate'), dueDate: dateValue('dueDate'), serviceDateFrom: dateValue('serviceDateFrom'), serviceDateTo: dateValue('serviceDateTo'), issuedAt: dateValue('issuedAt'), createdAt: dateValue('createdAt'), updatedAt: dateValue('updatedAt'), issuedPdf: undefined, subtotal: invoice.subtotal.toString(), taxTotal: invoice.taxTotal?.toString() ?? null, total: invoice.total.toString(), paidTotal: paid.toString(), outstanding: (balance.isNegative() ? new Prisma.Decimal(0) : balance).toString(), lines: invoice.lines.map((line) => ({ ...line, quantity: line.quantity.toString(), unitPrice: line.unitPrice.toString(), taxRate: line.taxRate?.toString() ?? null, subtotal: line.subtotal.toString(), taxAmount: line.taxAmount?.toString() ?? null, total: line.total.toString() })), payments: invoice.payments.map((payment) => ({ ...payment, paidAt: payment.paidAt instanceof Date ? payment.paidAt.toISOString() : payment.paidAt, createdAt: payment.createdAt instanceof Date ? payment.createdAt.toISOString() : payment.createdAt, amount: payment.amount.toString() })) };
 }
 
-export async function issueInvoice(database: PrismaClient, id: string, userId: string) {
+export async function issueInvoice(database: PrismaClient, id: string, userId: string, expected?:{invoiceUpdatedAt:string;settingsUpdatedAt:string|null}) {
   return database.$transaction(async (tx) => {
     await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Invoice" WHERE "id" = ${id} FOR UPDATE`);
     const invoice = await tx.invoice.findUniqueOrThrow({ where: { id }, include: invoiceInclude });
     if (invoice.status === 'ISSUED') return invoice;
     if (invoice.status !== 'DRAFT') throw new Error('INVOICE_NOT_ISSUABLE');
+    if(expected&&invoice.updatedAt.toISOString()!==expected.invoiceUpdatedAt)throw Error('STALE_WRITE');
     const settings = await tx.businessBillingSettings.findUnique({ where: { id: 'default' } }) ?? defaultBillingSettings;
+    if(expected&&(('updatedAt' in settings&&settings.updatedAt instanceof Date?settings.updatedAt.toISOString():null)!==expected.settingsUpdatedAt))throw Error('STALE_WRITE');
     if (invoice.billingRecipientType === 'LEGACY') throw new Error('INVALID_BILLING_RECIPIENT');
     assertInvoiceIssuable(invoice, settings);
     const invoiceNumber = await allocateNumber(tx, 'INVOICE', 'INV'); const issuedAt = new Date();
-    const pdf = await generateInvoicePdf({ ...invoice, ...sellerSnapshot(settings), documentVersion: 2, invoiceNumber, status: 'ISSUED' });
-    const updated = await tx.invoice.update({ where: { id }, data: { ...sellerSnapshot(settings), documentVersion: 2, invoiceNumber, status: 'ISSUED', issuedAt, issuedPdf: pdf, issuedPdfChecksum: crypto.createHash('sha256').update(pdf).digest('hex'), issuedPdfSize: pdf.byteLength }, include: invoiceInclude });
+    const pdf = await generateInvoicePdf({ ...invoice, ...sellerSnapshot(settings), documentVersion: 3, invoiceNumber, status: 'ISSUED' });
+    const updated = await tx.invoice.update({ where: { id }, data: { ...sellerSnapshot(settings), documentVersion: 3, invoiceNumber, status: 'ISSUED', issuedAt, issuedPdf: pdf, issuedPdfChecksum: crypto.createHash('sha256').update(pdf).digest('hex'), issuedPdfSize: pdf.byteLength }, include: invoiceInclude });
     await tx.customerActivity.create({ data: { customerId: invoice.customerId, type: 'INVOICE_ISSUED', summary: `Invoice ${invoiceNumber} issued`, metadata: { invoiceId: id, serviceJobId: invoice.serviceJobId }, createdById: userId } });
     await tx.auditLog.create({ data: { userId, action: 'INVOICE_ISSUE', entity: 'Invoice', entityId: id, metadata: { invoiceNumber, pdfChecksum: updated.issuedPdfChecksum } } });
     return updated;

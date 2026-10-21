@@ -15,7 +15,7 @@ export function Footer({ locale }: { locale: string }) {
           <Link href={`/${locale}`} className="footer-logo">
             <Image src="/brand/icon.svg" width={445} height={106} alt="TiLADYS" />
           </Link>
-          <strong>IT Services &amp; Webdesign</strong>
+          <strong>Websites / 3D Printing / PC Support</strong>
           <p>{c.footer.tagline}</p>
           <Image className="footer-mark" src="/brand/logo.svg" width={82} height={61} alt="" aria-hidden="true" />
         </section>

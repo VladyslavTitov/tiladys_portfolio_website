@@ -8,6 +8,8 @@ export function PageHero({
   accent,
   text,
   image = '/hero/tiladys-hero-objects-transparent.png',
+  imageWidth = 1254,
+  imageHeight = 1254,
 }: {
   className?: string;
   kicker?: string;
@@ -16,6 +18,8 @@ export function PageHero({
   accent: string;
   text: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 }) {
   return (
     <section className={`visual-page-hero ${className}`.trim()}>
@@ -30,7 +34,7 @@ export function PageHero({
           <p>{text}</p>
         </div>
         <div className="visual-page-hero__visual hero-visual" aria-hidden="true">
-          <Image src={image} width={1254} height={1254} sizes="(max-width: 768px) 100vw, 50vw" alt="" priority />
+          <Image src={image} width={imageWidth} height={imageHeight} sizes="(max-width: 640px) calc(100vw - 84px), (max-width: 900px) 560px, 440px" alt="" priority />
         </div>
       </div>
     </section>

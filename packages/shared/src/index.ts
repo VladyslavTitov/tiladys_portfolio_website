@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 export const locales = ['en', 'de', 'uk', 'ru', 'sk', 'fr'] as const;
 export type Locale = (typeof locales)[number];
-export const contactServiceIds = ['pc-laptop', 'websites', 'business-it'] as const;
+export const contactServiceIds = ['pc-laptop', 'websites', 'business-it', '3d-printing'] as const;
 
 export const localizedOptionalTextSchema = z.record(z.string(), z.string().max(10_000));
 
@@ -54,16 +54,23 @@ export const contactSchema = z.object({
   email: z.email().max(254),
   service: z.enum(contactServiceIds).optional().or(z.literal('')),
   locale: z.enum(locales).default('en'),
-  message: z.string().trim().min(10).max(5000),
+  phone: z.string().max(50).optional(),
+  requestDetail:z.enum(['web-business','web-landing','web-maintenance','pc-setup','pc-troubleshooting','pc-cleaning','pc-upgrade','pc-backup','pc-remote']).optional(),
+  requestMode: z.enum(['idea','file','batch','local','remote']).optional(),
+  replyLanguage: z.enum(locales).optional(),
+  publicReference: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).max(100).optional(),
+  message: z.string().min(10).max(5000).refine(value => value.trim().length >= 10),
   consent: z.literal(true),
   website: z.string().max(200).optional(),
 }).strict();
 
 export const projectPayloadSchema = z.object({
+  homepageFeatured:z.boolean().default(false),
   slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).max(100),
   category: z.enum([
     'web-development',
     'pc-support',
+    '3d-printing',
     'design',
     'linux-servers',
     'google-business',
@@ -108,6 +115,7 @@ export const priceBulkSchema = z.object({
   sections: z.array(
     z.object({
       id: z.string().optional(),
+      expectedUpdatedAt: z.string().datetime().optional(),
       number: z.string().trim().min(1).max(10),
       title: localizedTextSchema,
       subtitle: localizedOptionalTextSchema.optional(),
@@ -116,6 +124,7 @@ export const priceBulkSchema = z.object({
       items: z.array(
         z.object({
           id: z.string().optional(),
+      expectedUpdatedAt: z.string().datetime().optional(),
           code: z.string().trim().min(2).max(20),
           name: localizedTextSchema,
           price: z.string().trim().min(1).max(80),
@@ -126,6 +135,7 @@ export const priceBulkSchema = z.object({
       ),
     }),
   ),
+  deletedVersions: z.record(z.string(), z.string().datetime()).default({}),
   deletedSectionIds: z.array(z.string()).default([]),
   deletedItemIds: z.array(z.string()).default([]),
 });

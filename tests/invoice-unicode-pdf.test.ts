@@ -28,19 +28,19 @@ function fixture(lineCount = 1) {
 test('invoice PDF embeds full Unicode fonts, extracts exact text, and paginates using embedded metrics', async () => {
   const short = await generateInvoicePdf(fixture());
   const long = await generateInvoicePdf(fixture(70));
-  mkdirSync('docs/business-control/samples/bilingual-review', { recursive: true });
-  writeFileSync('docs/business-control/samples/bilingual-review/unicode.pdf', short);
+  mkdirSync('docs/tiladys-rebuild/implementation/evidence/pdfs', { recursive: true });
+  writeFileSync('docs/tiladys-rebuild/implementation/evidence/pdfs/unicode.pdf', short);
   writeFileSync('/tmp/tiladys-invoice-unicode-multipage.pdf', long);
   assert.equal((await PDFDocument.load(short)).getPageCount(), 2);
   assert.ok((await PDFDocument.load(long)).getPageCount() > 1);
 
-  const fonts = spawnSync('pdffonts', ['docs/business-control/samples/bilingual-review/unicode.pdf'], { encoding: 'utf8' });
+  const fonts = spawnSync('pdffonts', ['docs/tiladys-rebuild/implementation/evidence/pdfs/unicode.pdf'], { encoding: 'utf8' });
   assert.equal(fonts.status, 0, fonts.stderr);
   assert.match(fonts.stdout, /DejaVuSans/);
   assert.match(fonts.stdout, /DejaVuSans-Bold/);
   for (const row of fonts.stdout.split('\n').filter((line) => line.includes('DejaVuSans'))) assert.match(row, /yes\s+(?:yes|no)\s+yes/);
 
-  const extracted = spawnSync('pdftotext', ['-layout', 'docs/business-control/samples/bilingual-review/unicode.pdf', '-'], { encoding: 'utf8' });
+  const extracted = spawnSync('pdftotext', ['-layout', 'docs/tiladys-rebuild/implementation/evidence/pdfs/unicode.pdf', '-'], { encoding: 'utf8' });
   assert.equal(extracted.status, 0, extracted.stderr);
   const text = extracted.stdout.normalize('NFC');
   for (const expected of ['Draft', 'TiLADYS – Vladyslav Titov', 'Kronenstraße 19', '45479 Mülheim an der Ruhr', ...unicodeLines]) assert.ok(text.includes(expected.normalize('NFC')), `Missing extracted text: ${expected}`);
@@ -69,7 +69,7 @@ test('draft/final layout, repeated headers, oversized descriptions and footer bo
   stress.lines[0].descriptionDe = ('Lange Beschreibung: Deutsch, Українська, Français. ').repeat(50);
   stress.lines[0].unitDe = 'eine lange benutzerdefinierte Einheit';
   stress.lines[0].unit = 'a deliberately long unit of measurement';
-  const directory = 'docs/business-control/samples/bilingual-review'; mkdirSync(directory, { recursive: true });
+  const directory = 'docs/tiladys-rebuild/implementation/evidence/pdfs'; mkdirSync(directory, { recursive: true });
   for (const status of ['DRAFT', 'ISSUED']) {
     const path = `${directory}/multilingual-${status.toLowerCase()}.pdf`;
     const bytes = await generateInvoicePdf({ ...stress, status, invoiceNumber: status === 'ISSUED' ? 'INV-SAMPLE-2026' : null });
@@ -98,12 +98,14 @@ test('language sections are ordered, financially identical, and mark missing tra
   const result = spawnSync('pdftotext', ['-layout', path, '-'], { encoding: 'utf8' });
   assert.equal(result.status, 0);
   const pages = result.stdout.split('\f').filter(page => page.trim());
-  const germanStart = pages.findIndex(page => page.includes('RECHNUNG'));
-  assert.ok(germanStart > 1, 'Finish multiple English pages before starting German');
-  assert.ok(pages.slice(0, germanStart).every(page => !page.includes('Mehrsprachige Leistung')));
-  assert.ok(pages.slice(germanStart).every(page => !page.includes('multilingual service')));
-  const english = pages.slice(0, germanStart).join('\n'); const german = pages.slice(germanStart).join('\n');
-  assert.ok(german.includes('Keine zusätzliche Zahlungspflicht'));
+  const englishStart = pages.findIndex(page => page.includes('INVOICE'));
+  assert.ok(pages[0].includes('RECHNUNG'));
+  const germanStart = englishStart;
+  assert.ok(germanStart > 1, 'Finish multiple German pages before starting English');
+  assert.ok(pages.slice(0, germanStart).every(page => !page.includes('multilingual service')));
+  assert.ok(pages.slice(germanStart).every(page => !page.includes('Mehrsprachige Leistung')));
+  const german = pages.slice(0, germanStart).join('\n'); const english = pages.slice(germanStart).join('\n');
+  assert.ok(english.includes('No additional payment is due'));
   assert.match(english, /Total\s+1\.080,00 EUR/); assert.match(german, /Gesamt\s+1\.080,00 EUR/);
   assert.ok(!result.stdout.includes('Draft'));
   const incomplete = fixture(); incomplete.lines[0].serviceNameDe = ''; incomplete.lines[0].descriptionDe = '';

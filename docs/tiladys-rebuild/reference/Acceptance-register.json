@@ -1,0 +1,470 @@
+[
+  {
+    "id": "A01",
+    "priority": "P0",
+    "area": "Confidentiality",
+    "scenario": "Anonymous requests a client, job, invoice, PDF or private file endpoint",
+    "expected": "401/403 or login; no private data in response, cache or search index.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A02",
+    "priority": "P0",
+    "area": "Files",
+    "scenario": "Substitute an attachment ID from a different enquiry",
+    "expected": "Reject 404/403 after checking the parent relationship; no unrelated bytes.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A03",
+    "priority": "P0",
+    "area": "Publication",
+    "scenario": "Request draft or archived project media, including resize URLs",
+    "expected": "Public 404; neither original nor derivative is served.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A04",
+    "priority": "P0",
+    "area": "CSRF",
+    "scenario": "Submit a cookie-authenticated mutation from an untrusted or missing Origin",
+    "expected": "Reject under the exact origin policy; no mutation.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A05",
+    "priority": "P0",
+    "area": "Issuance",
+    "scenario": "Two concurrent issue requests followed by a retry after response loss",
+    "expected": "One invoice number, immutable PDF and issuance event.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A06",
+    "priority": "P0",
+    "area": "Draft lock",
+    "scenario": "Save a draft concurrently with issuance",
+    "expected": "Issued data and bytes remain unchanged; late save returns conflict.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A07",
+    "priority": "P0",
+    "area": "Payments",
+    "scenario": "Concurrent partial payments together exceed the remaining balance",
+    "expected": "Only permissible amount commits; conflicting request fails, no hidden negative balance.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A08",
+    "priority": "P0",
+    "area": "Payments",
+    "scenario": "Retry the same payment after response loss",
+    "expected": "Return the same payment using idempotency; no duplicate ledger entry.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A09",
+    "priority": "P0",
+    "area": "Snapshots",
+    "scenario": "Edit client, catalogue and bank settings after invoice issuance",
+    "expected": "Issued PDF, checksum, number and totals stay unchanged.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A10",
+    "priority": "P0",
+    "area": "Invoice DE-first",
+    "scenario": "Preview and issue a short bilingual invoice",
+    "expected": "Complete German page 1 and English page 2; same invoice identifier and amounts.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A11",
+    "priority": "P0",
+    "area": "Invoice pagination",
+    "scenario": "Use long German text and one exceptionally long invoice line",
+    "expected": "Readable continuation pages; English begins on a new page after the complete German section.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A12",
+    "priority": "P0",
+    "area": "Legacy invoices",
+    "scenario": "Deploy the German-first renderer with historical issued PDFs",
+    "expected": "Previously stored PDFs remain byte-identical; no automatic regeneration.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A13",
+    "priority": "P0",
+    "area": "Tax gate",
+    "scenario": "Issue with unconfirmed tax settings or missing required translations",
+    "expected": "422 with actionable fields; draft preserved and no tax assumptions.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A14",
+    "priority": "P0",
+    "area": "Uploads",
+    "scenario": "Upload a spoofed image signature or excessive pixel dimensions",
+    "expected": "Reject or quarantine before use; bounded CPU, memory and decoder work.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A15",
+    "priority": "P0",
+    "area": "Uploadfinalization",
+    "scenario": "Finalize another actor's reservation or an oversized stored object",
+    "expected": "Reject; no attachment or client association created.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A16",
+    "priority": "P0",
+    "area": "SQL/XSS",
+    "scenario": "Put SQL and HTML payloads in messages, names, filters and filenames",
+    "expected": "Render escaped text; no SQL execution or script; safe download filename.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A17",
+    "priority": "P0",
+    "area": "Restore",
+    "scenario": "Restore an isolated database and matching object backup",
+    "expected": "Recover expected synthetic records, files and hashes without production overwrite.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A18",
+    "priority": "P1",
+    "area": "Unicode",
+    "scenario": "Submit English, Ukrainian and Russian messages with newlines and emoji",
+    "expected": "Store and display the original exactly; reply language remains independent.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A19",
+    "priority": "P1",
+    "area": "Photos",
+    "scenario": "Upload three 5MiB photos, one 5MiB+1-byte file and a 15MiB+1-byte total",
+    "expected": "Accept exact boundaries; reject excess; metadata request stays within platform limits.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A20",
+    "priority": "P1",
+    "area": "Mobilephotos",
+    "scenario": "Select HEIC, a corrupt image and a large phone photo on weak network",
+    "expected": "Clear conversion/rejection path, bounded processing and preserved form.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A21",
+    "priority": "P1",
+    "area": "Contactidempotency",
+    "scenario": "Double-click Send and lose the acknowledgement response",
+    "expected": "One enquiry per idempotency key; retry returns the original receipt.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A22",
+    "priority": "P1",
+    "area": "Mail",
+    "scenario": "Persist an enquiry but fail to send the acknowledgement email",
+    "expected": "Retain enquiry and return saved status; no duplicate-producing browser failure.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A23",
+    "priority": "P1",
+    "area": "Reply",
+    "scenario": "SMTP accepts a reply but recording its result fails",
+    "expected": "Show accepted/uncertain state and reconcile; no blind resend.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A24",
+    "priority": "P1",
+    "area": "Duplicateclient",
+    "scenario": "Use the same email for a household or several company contacts",
+    "expected": "Offer duplicate review; no automatic merge or globally unique email failure.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A25",
+    "priority": "P1",
+    "area": "Expiry",
+    "scenario": "Expire a session while editing a private draft",
+    "expected": "No unauthorized mutation; recover safely, reauthenticate and recheck version.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A26",
+    "priority": "P1",
+    "area": "Staleedit",
+    "scenario": "Edit the same draft in two browser tabs",
+    "expected": "Reject stale save with revision conflict; no silent last-writer overwrite.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A27",
+    "priority": "P1",
+    "area": "Numbers",
+    "scenario": "Create clients, jobs and invoices concurrently at Berlin New Year",
+    "expected": "Unique numbers and correct business year using atomic sequences.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A28",
+    "priority": "P1",
+    "area": "Catalogue",
+    "scenario": "Select FROM, PERCENTAGE or MONTHLY catalogue pricing",
+    "expected": "Explicit agreed amount and valid period; never invoice a raw display string.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A29",
+    "priority": "P1",
+    "area": "Quote",
+    "scenario": "Accept an old or expired quote revision and retry conversion",
+    "expected": "Reject or renew after review; bind exact accepted revision and convert once.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A30",
+    "priority": "P1",
+    "area": "Relations",
+    "scenario": "Attach an invoice to a job belonging to another client",
+    "expected": "Reject the invalid relationship; no financial cross-link.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A31",
+    "priority": "P1",
+    "area": "SEO",
+    "scenario": "Rename a published project slug several times",
+    "expected": "All old aliases redirect directly to the canonical route; no draft leak.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A32",
+    "priority": "P1",
+    "area": "Languages",
+    "scenario": "Use a missing translation or a legacy ua language alias",
+    "expected": "Canonical Ukrainian remains uk; no false hreflang or indexable fallback duplication.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A33",
+    "priority": "P1",
+    "area": "Footer",
+    "scenario": "Inspect the footer on desktop, tablet, phone and at 200% zoom",
+    "expected": "Retain live footer identity, verified links and readable layout without overlap.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A34",
+    "priority": "P1",
+    "area": "Menu",
+    "scenario": "Open, scroll and close the phone menu using keyboard and navigation",
+    "expected": "Correct focus, visible content below header, no scroll bleed or hidden controls.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A35",
+    "priority": "P1",
+    "area": "Stateerrors",
+    "scenario": "Compare an empty list with a database outage",
+    "expected": "Distinct honest states; failure does not masquerade as lost client records.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A36",
+    "priority": "P1",
+    "area": "Models",
+    "scenario": "Upload invalid STL, enormous mesh, archive or G-code",
+    "expected": "Reject or privately quarantine per separate model policy; never execute on a printer.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A37",
+    "priority": "P1",
+    "area": "Backuppolicy",
+    "scenario": "Let provider restore history expire without an independent backup",
+    "expected": "Do not claim protection; require real backup and isolated restore evidence.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A38",
+    "priority": "P1",
+    "area": "Runtime",
+    "scenario": "Build both applications with deployed Node 24 and the actual lockfile",
+    "expected": "Required existing/new checks and builds pass with compatible settings.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A39",
+    "priority": "P1",
+    "area": "Publication",
+    "scenario": "Create a portfolio draft from a completed job containing private notes",
+    "expected": "Exclude confidential data; publish only explicitly approved media derivatives.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A40",
+    "priority": "P1",
+    "area": "Bounds",
+    "scenario": "Exercise rate limits across replicas and behind a shared public IP",
+    "expected": "Shared counters work with bounded limits and understandable retry guidance.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A41",
+    "priority": "P2",
+    "area": "Externalstore",
+    "scenario": "Open an unavailable template preview or purchase listing",
+    "expected": "Honest unavailable state; no invented stock, sales or synchronization.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A42",
+    "priority": "P2",
+    "area": "TasksDST",
+    "scenario": "Schedule an appointment in an ambiguous or nonexistent local DST time",
+    "expected": "Explicit timezone resolution; list and calendar agree.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A43",
+    "priority": "P2",
+    "area": "Review",
+    "scenario": "Moderate a review with private photos and malicious text",
+    "expected": "Check publication permission; safely render original; never publish private email.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A44",
+    "priority": "P2",
+    "area": "Reports",
+    "scenario": "Report invoices issued in a different period from their payments, with mixed currencies",
+    "expected": "Keep period bases and currency totals separate; no invented profit.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A45",
+    "priority": "P2",
+    "area": "Exports",
+    "scenario": "Export CSV containing formula payloads and a large file archive",
+    "expected": "Neutralize formulas; use bounded private expiring downloads and safe archive paths.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A46",
+    "priority": "P2",
+    "area": "Estimate",
+    "scenario": "Compare 20% markup with 20% margin and convert grams to kilograms",
+    "expected": "EUR15 cost gives EUR18 with markup or EUR18.75 with margin; clearly labelled.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A47",
+    "priority": "P2",
+    "area": "Accessibility",
+    "scenario": "Use keyboard, screen reader, zoom and reduced-motion preferences",
+    "expected": "Operable controls, visible focus, announced states and no reflow overlap.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A48",
+    "priority": "P2",
+    "area": "Performance",
+    "scenario": "Load realistic public media on a phone",
+    "expected": "Measure LCP, INP and CLS; use responsive derivatives with reserved aspect ratios.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A49",
+    "priority": "P1",
+    "area": "Identity",
+    "scenario": "Observe Neon managed-auth tables while custom login is active",
+    "expected": "Do not migrate identity or enable public admin registration without a separate decision.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A50",
+    "priority": "P0",
+    "area": "Secrets",
+    "scenario": "Inspect browser bundles, exports and diagnostic logs",
+    "expected": "No database URL, auth secret, SMTP password, bypass token or unintended private data.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A51",
+    "priority": "P0",
+    "area": "Cancel/correction",
+    "scenario": "Request invoice cancellation when payments already exist",
+    "expected": "Preserve original artifact and payment history; reviewed correction and balance treatment.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  },
+  {
+    "id": "A52",
+    "priority": "P1",
+    "area": "IssuedPDFmissing",
+    "scenario": "Download an issued invoice whose original PDF bytes are missing",
+    "expected": "Specific conflict/operator recovery state; never rebuild from mutable current data.",
+    "method": "Integration + browser on isolated data",
+    "result": "Planned; not executed during analysis"
+  }
+]

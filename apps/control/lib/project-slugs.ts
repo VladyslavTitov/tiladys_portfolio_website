@@ -26,7 +26,7 @@ export async function reserveProjectSlug(tx: Prisma.TransactionClient, slug: str
 
 export async function validateSocialImage(tx: Prisma.TransactionClient, imageId: string | undefined, projectId?: string) {
   if (!imageId) return;
-  if (!projectId || !await tx.projectImage.findFirst({ where: { id: imageId, projectId }, select: { id: true } })) {
+  if (!projectId || !await tx.projectImage.findFirst({ where: { id: imageId, projectId, archivedAt: null }, select: { id: true } })) {
     throw new Error('INVALID_SOCIAL_IMAGE');
   }
 }

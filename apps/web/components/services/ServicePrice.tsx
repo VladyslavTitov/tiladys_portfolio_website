@@ -8,10 +8,12 @@ function findPrice(sections: PriceSection[], code: string) {
 
 export function ServicePrice({ service, sections, locale, disclaimer = false, primaryOnly = false }: { service: ServiceDefinition; sections: PriceSection[]; locale: string; disclaimer?: boolean; primaryOnly?: boolean }) {
   const copy = ui(locale);
+  const refs = primaryOnly ? service.priceRefs.slice(0, 1) : service.priceRefs;
+  const unavailable = refs.length > 1 && refs.every(ref => !findPrice(sections, ref.code));
   return (
     <div className="service-price-block">
-      <div className={`service-prices${service.priceRefs.length > 1 ? ' service-prices--multiple' : ''}`}>
-        {(primaryOnly ? service.priceRefs.slice(0, 1) : service.priceRefs).map((ref) => {
+      <div className={`service-prices${refs.length > 1 && !unavailable ? ' service-prices--multiple' : ''}`}>
+        {unavailable ? <div className="service-price service-price--grouped"><span>{refs.map(ref => priceLabel(ref,locale)).join(' · ')}</span><strong>{copy.pricingUnavailable}</strong></div> : refs.map((ref) => {
           const price = findPrice(sections, ref.code);
           return (
             <div className="service-price" key={ref.code}>

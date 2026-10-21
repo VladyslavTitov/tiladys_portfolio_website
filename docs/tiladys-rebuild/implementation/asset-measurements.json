@@ -1,0 +1,162 @@
+[
+  {
+    "file": "docs/tiladys-rebuild/implementation/assets/masters/g01-three-services.png",
+    "width": 1672,
+    "height": 941,
+    "hasAlpha": true,
+    "bytes": 1189618,
+    "sha256": "54f753461acf843366badb72296043d072b3c446e24f4e114a5e98e34253b26d"
+  },
+  {
+    "file": "docs/tiladys-rebuild/implementation/assets/masters/g03-practical-prints.png",
+    "width": 1672,
+    "height": 941,
+    "hasAlpha": true,
+    "bytes": 1635631,
+    "sha256": "a81e87eb9688caff811d8e36707d67e29f806d53ff3ba12a06d37fd5576d8967"
+  },
+  {
+    "file": "docs/tiladys-rebuild/implementation/assets/masters/g06-about-workbench.png",
+    "width": 1672,
+    "height": 940,
+    "hasAlpha": true,
+    "bytes": 1711162,
+    "sha256": "355cd4b895afd9a657adfcd7b75a1e3fbc3063705e233fe9019028960b246486"
+  },
+  {
+    "file": "docs/tiladys-rebuild/implementation/assets/masters/g07-contact-workbench.png",
+    "width": 1672,
+    "height": 941,
+    "hasAlpha": true,
+    "bytes": 1233549,
+    "sha256": "dd4048811fbf3c9ff3a73757f057da4d871bfccd27cb201654961c16b603b106"
+  },
+  {
+    "file": "apps/web/public/illustrations/g01-three-services-1200.webp",
+    "width": 1200,
+    "height": 675,
+    "hasAlpha": true,
+    "bytes": 95784,
+    "sha256": "52d647ae955f09ff45a2a9da4fd6558087dee6cfc430a1ce3f1322515df2a3c4"
+  },
+  {
+    "file": "apps/web/public/illustrations/g01-three-services-1600.webp",
+    "width": 1600,
+    "height": 900,
+    "hasAlpha": true,
+    "bytes": 149896,
+    "sha256": "ec4e46723089452c59eac6dc98ef88c1895fbe8ae72409bfaf435d6cb54c2d95"
+  },
+  {
+    "file": "apps/web/public/illustrations/g01-three-services-480.webp",
+    "width": 480,
+    "height": 270,
+    "hasAlpha": true,
+    "bytes": 25624,
+    "sha256": "c63dda0adf5e5c8f613edc42d99df0930f4a3688a0c761c7c9032a74264780a4"
+  },
+  {
+    "file": "apps/web/public/illustrations/g01-three-services-800.webp",
+    "width": 800,
+    "height": 450,
+    "hasAlpha": true,
+    "bytes": 52502,
+    "sha256": "74c298c89dc31db20eb1f9a64cae2a223ac51b3e158e5bbe1c5621499fc343fa"
+  },
+  {
+    "file": "apps/web/public/illustrations/g03-practical-prints-1200.webp",
+    "width": 1200,
+    "height": 675,
+    "hasAlpha": true,
+    "bytes": 128502,
+    "sha256": "319c393071a1c160d291be95b92281b90d60672626d16badd4baf2988f2f2013"
+  },
+  {
+    "file": "apps/web/public/illustrations/g03-practical-prints-1600.webp",
+    "width": 1600,
+    "height": 900,
+    "hasAlpha": true,
+    "bytes": 206034,
+    "sha256": "fcb1d7c653c26e276cbe1aedbed324cf4290c3be5f2e9e21c6ae25fec6e4c2d7"
+  },
+  {
+    "file": "apps/web/public/illustrations/g03-practical-prints-480.webp",
+    "width": 480,
+    "height": 270,
+    "hasAlpha": true,
+    "bytes": 29804,
+    "sha256": "d1901c8759010668d203ee67dd8ff3fe61ba39c36b7a4032e1db445b853607d8"
+  },
+  {
+    "file": "apps/web/public/illustrations/g03-practical-prints-800.webp",
+    "width": 800,
+    "height": 450,
+    "hasAlpha": true,
+    "bytes": 62114,
+    "sha256": "6cdedfeafc842f4bf7f0dc161572d4d2e5fdda4b98c4d45c8035f9341357feb7"
+  },
+  {
+    "file": "apps/web/public/illustrations/g06-about-workbench-1200.webp",
+    "width": 1200,
+    "height": 675,
+    "hasAlpha": true,
+    "bytes": 111288,
+    "sha256": "636c5d709d5a4e053cd5a372952b73e408da874705d9454d10111d79351368d8"
+  },
+  {
+    "file": "apps/web/public/illustrations/g06-about-workbench-1600.webp",
+    "width": 1600,
+    "height": 900,
+    "hasAlpha": true,
+    "bytes": 169702,
+    "sha256": "3a0003b8cc6931077d8e51d7e83ca7c222f99702d55cb67364bc6556627bf8c1"
+  },
+  {
+    "file": "apps/web/public/illustrations/g06-about-workbench-480.webp",
+    "width": 480,
+    "height": 270,
+    "hasAlpha": true,
+    "bytes": 28716,
+    "sha256": "3a79f02c46a059c1e36efc130448dc1d7bcd048be189a221639355baaf1be5f4"
+  },
+  {
+    "file": "apps/web/public/illustrations/g06-about-workbench-800.webp",
+    "width": 800,
+    "height": 450,
+    "hasAlpha": true,
+    "bytes": 60250,
+    "sha256": "870711a2fcb90488e62fa6a86b420171ace6b02eb4b3df24deceff3b5811095f"
+  },
+  {
+    "file": "apps/web/public/illustrations/g07-contact-workbench-1200.webp",
+    "width": 1200,
+    "height": 675,
+    "hasAlpha": true,
+    "bytes": 118432,
+    "sha256": "f02a092d7c6707e0a958a7e04dfbf6a71e6daab17c26548ba2c44729df8411a7"
+  },
+  {
+    "file": "apps/web/public/illustrations/g07-contact-workbench-1600.webp",
+    "width": 1600,
+    "height": 900,
+    "hasAlpha": true,
+    "bytes": 183028,
+    "sha256": "e87cea3b9ff817e668baec0d2044b88a61bfa491d1ff8438b25edbdc07ce5da9"
+  },
+  {
+    "file": "apps/web/public/illustrations/g07-contact-workbench-480.webp",
+    "width": 480,
+    "height": 270,
+    "hasAlpha": true,
+    "bytes": 29912,
+    "sha256": "42e72533f3663d1dde68a0d93d476d81791054a054eca4bb38ea6bdd53593538"
+  },
+  {
+    "file": "apps/web/public/illustrations/g07-contact-workbench-800.webp",
+    "width": 800,
+    "height": 450,
+    "hasAlpha": true,
+    "bytes": 61800,
+    "sha256": "da5a172f05d16623dfa21f25204e9f979443b06643381a09f93a050970a96cb0"
+  }
+]

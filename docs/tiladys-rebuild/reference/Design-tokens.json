@@ -1,0 +1,71 @@
+{
+  "colors": {
+    "navy": "#071837",
+    "cyan": "#7BE0DF",
+    "white": "#FFFFFF",
+    "canvas": "#F4F7FA",
+    "text": "#13243F",
+    "muted": "#5C6B82",
+    "border": "#DBE4EE",
+    "success": "#11734C",
+    "warning": "#8B5100",
+    "error": "#B42318"
+  },
+  "font": {
+    "preferred": "Inter",
+    "fallback": "system-ui, sans-serif",
+    "h1": 32,
+    "h2": 24,
+    "body": 16,
+    "label": 14,
+    "caption": 12
+  },
+  "spacing_px": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48
+  ],
+  "radius_px": {
+    "inputs": 8,
+    "cards": 12
+  },
+  "layout": {
+    "desktop_sidebar_px": 224,
+    "desktop_content_padding_px": 24,
+    "mobile_content_padding_px": 16,
+    "minimum_touch_target_px": 44
+  },
+  "navigation": [
+    "Overview",
+    "Inbox",
+    "Clients",
+    "Jobs",
+    "Quotes & Invoices",
+    "Portfolio",
+    "Products",
+    "Tasks",
+    "Settings"
+  ],
+  "utilities": [
+    "Reviews",
+    "Reports"
+  ],
+  "languages": [
+    "EN",
+    "DE",
+    "UK",
+    "RU",
+    "SK",
+    "FR"
+  ],
+  "responsive": {
+    "mobile": "Single-column; list/detail navigation; tables become labelled cards",
+    "tablet": "Collapsible sidebar; stacked detail panels",
+    "desktop": "Sidebar; tables; adjacent detail panels"
+  },
+  "note": "Proposed implementation values. The reference PNGs are raster concepts and may contain small visual or copy differences. Use these canonical tokens and the written specification."
+}
