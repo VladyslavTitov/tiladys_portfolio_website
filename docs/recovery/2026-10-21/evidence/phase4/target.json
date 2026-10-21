@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-21T14:33:43.804Z",
+  "projectId": "prj_6YJMTiWWHE0lX8nzUYCUpA82tEvV",
+  "teamId": "team_xIA4aFDewxF4sHVLtMnss2me",
+  "name": "tiladys-control",
+  "root": "apps/control",
+  "nodeVersion": "24.x",
+  "directHost": "ep-purple-unit-b1brl6mf.c-5.eu-central-1.aws.neon.tech",
+  "runtimeHost": "ep-purple-unit-b1brl6mf-pooler.c-5.eu-central-1.aws.neon.tech",
+  "database": "neondb",
+  "schema": "public",
+  "directEntryId": "wCTgS9vkb0OPDVBP",
+  "pooledEntryId": "KlUTy7ESBL0U0blP",
+  "unchangedSinceAudit": true,
+  "previewOverrides": [],
+  "entries": [
+    {
+      "id": "wCTgS9vkb0OPDVBP",
+      "key": "DATABASE_URL_UNPOOLED",
+      "target": [
+        "preview"
+      ],
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "KlUTy7ESBL0U0blP",
+      "key": "DATABASE_URL",
+      "target": [
+        "preview"
+      ],
+      "updatedAt": 1790196005742
+    }
+  ]
+}

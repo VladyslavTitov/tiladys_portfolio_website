@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-21T14:33:51.371Z",
+  "directAndRuntimePooledConnectionsVerified": true,
+  "readOnlyTransactionsVerified": true,
+  "completedMigrations": 23,
+  "pending": 0,
+  "originalRowsStillUnchanged": true,
+  "newTablesStillEmpty": true,
+  "schemaStillMatchesRehearsal": true,
+  "crmGuardDirect": "pass",
+  "crmGuardRuntimePooled": "pass",
+  "retainedBackupChecksumStillMatches": true,
+  "pooledAuditNote": "Initial startup statement_timeout option rejected by pooler; removed that audit-only option and used read-only transactions. No remote configuration changed.",
+  "productionAccessed": false,
+  "deployed": false
+}

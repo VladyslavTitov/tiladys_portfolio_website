@@ -1,6 +1,10 @@
-# Control Preview schema recovery — approval checkpoint
+# Control Preview schema recovery — Phase 4 complete
 
-**Status: Phases 1–3 completed. STOPPED at Phase 4. No migration has been applied to the real Preview or Production database. The failed Vercel deployment remains failed until an approved migration and subsequent release verification. No deployment, alias, environment setting, application source, Prisma model or migration SQL was changed.**
+**Current status: Phase 4 was approved and completed on 21 October 2026 at 16:28 Europe/Amsterdam. Exactly the ten approved Preview migrations were applied; all 23 migrations are complete, the release guard passes, and original data is intact. Control Preview is ready for a new Vercel deployment from the schema/build standpoint. No deployment or Production change occurred.** See [final Phase 4 results and evidence](phase4-results.md).
+
+The approval checkpoint below is retained as historical evidence of the checks completed before authorization.
+
+**Historical checkpoint status: Phases 1–3 completed. STOPPED at Phase 4 pending approval. At this checkpoint no migration had been applied to the real Preview or Production database. No deployment, alias, environment setting, application source, Prisma model or migration SQL was changed. The failed Vercel deployment still requires a new deployment and release verification after the now-completed Preview migration.**
 
 ## Confirmed incident and target
 
@@ -97,7 +101,7 @@ These are **staging results**, not verification of a repaired Vercel release. Th
 
 Evidence: [child result](evidence/child-migration-result.json), [financial fingerprints](evidence/financial-preservation.json), [release guard](evidence/release-schema-tests.log), [CRM](evidence/crm-regression-tests.log), [quote/invoice/payment/media](evidence/invoice-payment-quote-media-regressions.log), [bilingual PDFs](evidence/bilingual-invoice-regressions.log), [Node 24 builds](evidence/build-result-node24.json), [browser results/screenshots](evidence/browser/results.json), [actual API workflow](evidence/business-workflow.json).
 
-## Approval proposal — real Control Preview only
+## Historical approval proposal — real Control Preview only
 
 Authorize applying **only the ten exact migrations above** to `plain-sound-02437622` → `br-delicate-block-b19w0iqs` → `neondb.public`, through the independently verified direct endpoint. Production is excluded. Revalidate the current Vercel mapping, file checksums, source ledger/schema and current data; obtain a fresh recoverable backup before execution. Stop if any precondition changed.
 
@@ -126,6 +130,6 @@ After approval and successful execution, run Phase 5 against the actual intended
 - The Neon child is retained; its **own endpoint is confirmed idle after suspension**. The account's suspend timeout is zero, so future connections can wake it and may keep it active. No branch was deleted and no source endpoint was changed.
 - Connection exports and synthetic credentials stayed in restricted private files and process environments; public evidence contains metadata/counts/hashes only. The ignored backup is private and intentionally excluded from the checkpoint.
 
-Recovery is ready for the user's Phase 4 approval. **No real database migration, deployment or alias change has been authorized or performed.**
+At this historical checkpoint recovery was ready for Phase 4 approval. **The user subsequently approved only the real Preview migration, which is now complete; no deployment or alias change was authorized or performed.** See [Phase 4 results](phase4-results.md) for current state.
 
 Reference behavior was checked against primary documentation: [Neon branching](https://github.com/neondatabase/website/blob/main/content/docs/manage/branches.md), [Neon restore semantics](https://github.com/neondatabase/website/blob/main/content/docs/postgres/backup-restore/branch-restore.md), [Prisma v6 PostgreSQL connector](https://docs.prisma.io/docs/orm/v6/overview/databases/postgresql), [official Node 24 distribution](https://nodejs.org/en/download/archive/v24).

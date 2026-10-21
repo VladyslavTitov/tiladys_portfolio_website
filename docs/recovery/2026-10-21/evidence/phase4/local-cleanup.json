@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-21T14:33:57.656Z",
+  "container": "tiladys-schema-recovery-20261021",
+  "stopped": true,
+  "deleted": false,
+  "serversStopped": [
+    "control",
+    "web"
+  ],
+  "ports": [
+    3100,
+    3101,
+    55435
+  ],
+  "freshRestoreDatabaseRetained": "recovery_phase4_restore_1792592821271",
+  "earlierRecoveryDatabasesRetained": true,
+  "otherOwnerProcessesChanged": false,
+  "remoteEndpointsChanged": false
+}
