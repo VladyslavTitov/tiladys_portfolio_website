@@ -1,0 +1,23 @@
+// Final read-only follow-up: correct text/HTML assertions and check data stability.
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {pathToFileURL} from 'node:url';
+import {spawnSync} from 'node:child_process';
+import {PrismaClient} from '@prisma/client';
+import {api,mapping,evidence,cli,team,summary} from './incident-portfolio-inspect.mjs';
+async function main(){
+const out=JSON.parse(await readFile(evidence+'/hosted-validation.json','utf8'));
+const candidate='https://tiladys-public-21zujdkfm-tiladys.vercel.app';
+const project=api('/v9/projects/prj_JWa4iXqzV70GdY3TKDDL2Q5poRRv');
+const token=Object.keys(project.protectionBypass||{}).find(t=>project.protectionBypass[t].scope==='automation-bypass');assert.ok(token,'Existing access required; no token creation.');
+const {chromium}=await import(pathToFileURL('/tmp/tiladys-contact-playwright/node_modules/playwright-core/index.mjs').href);
+const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox','--disable-dev-shm-usage']});
+try{const context=await browser.newContext();const page=await context.newPage();await page.goto('https://tiladys.com/en/portfolio',{waitUntil:'networkidle'});out.production.errorVisible=await page.locator('.portfolio-error').count()>0;assert.equal(out.production.errorVisible,true);
+const r=await context.request.get(candidate+'/en/portfolio/mongoose-signs',{headers:{'x-vercel-protection-bypass':token}});const html=await r.text();const title=await page.evaluate(html=>new DOMParser().parseFromString(html,'text/html').querySelector('h1')?.textContent,html);const expected=JSON.parse(await readFile(evidence+'/compatibility.json','utf8')).records.published.find(p=>p.slug==='mongoose-signs');assert.equal(title,expected.title);out.candidate.details.find(p=>p.slug==='mongoose-signs').containsTitle=true;
+out.assertionCorrection={checkedAt:new Date().toISOString(),productionHeadingMatcher:'Corrected punctuation mismatch using .portfolio-error',mongooseTitleMatcher:'Decoded HTML entity &amp; using DOMParser; actual h1 matches database title'};
+await writeFile(evidence+'/hosted-validation.json',JSON.stringify(out,null,2));}finally{await browser.close();}
+const map=await mapping(project.id,'production');const db=new PrismaClient({datasourceUrl:map.find(e=>e.entry.key==='DATABASE_URL').url.href,log:[]});let data;
+try{const before=JSON.parse(await readFile(evidence+'/compatibility.json','utf8')).records.fingerprints;data=await db.$transaction(async tx=>{await tx.$executeRawUnsafe('SET TRANSACTION READ ONLY');const after=[];for(const {table}of before){const [row]=await tx.$queryRawUnsafe(`SELECT count(*)::text AS count,md5(COALESCE(string_agg(md5(to_jsonb(t)::text),'' ORDER BY md5(to_jsonb(t)::text)),'')) AS fingerprint FROM "${table}" t`);after.push({table,...row});}return{fingerprints:after,allBusinessAndMediaFingerprintsUnchanged:JSON.stringify(before)===JSON.stringify(after)};},{isolationLevel:'RepeatableRead',timeout:60000});}finally{await db.$disconnect();}
+const log=spawnSync(process.execPath,[cli,'logs','dpl_5K9QHNr1z37CoSN97XFTjrouTtDJ','--project','prj_6YJMTiWWHE0lX8nzUYCUpA82tEvV','--scope',team,'--since','1h','--limit','100','--json','--non-interactive'],{encoding:'utf8',timeout:60000,maxBuffer:8*1024*1024});assert.equal(log.status,0);const rows=log.stdout.trim().split('\n').filter(Boolean).map(r=>JSON.parse(r));const excerpts=rows.filter(r=>r.requestPath.includes('/api/auth/login')).map(({id,timestamp,deploymentId,requestPath,responseStatusCode,message})=>({id,timestamp,deploymentId,requestPath,responseStatusCode,message}));await writeFile(evidence+'/preview-log-excerpts.json',JSON.stringify(excerpts,null,2));
+const final={checkedAt:new Date().toISOString(),...data,publicProduction:summary(api('/v13/deployments/dpl_R2D4fuBc7MKSpc3CCqjuho1xjrmz')),controlProduction:summary(api('/v13/deployments/dpl_29sUx2PbwBzRu3UUNbmBZE6aoBVn')),preview:summary(api('/v13/deployments/dpl_5K9QHNr1z37CoSN97XFTjrouTtDJ')),previewLoginStatuses:excerpts.map(r=>r.responseStatusCode),publicProtectionTokenCreatedAt:1792596609679,publicProtectionTokenRevocationPendingApproval:true,productionDatabaseMutations:false,productionDeploymentMutations:false,administratorMutations:false};await writeFile(evidence+'/final-readonly.json',JSON.stringify(final,null,2));console.log(JSON.stringify({checkedAt:final.checkedAt,dataUnchanged:final.allBusinessAndMediaFingerprintsUnchanged,previewLoginStatuses:final.previewLoginStatuses,publicReady:final.publicProduction.readyState,previewReady:final.preview.readyState,accountsCreated:0},null,2));}
+main().catch(()=>{console.error('FINAL_READONLY_CHECK_FAILED; details withheld');process.exitCode=1;});

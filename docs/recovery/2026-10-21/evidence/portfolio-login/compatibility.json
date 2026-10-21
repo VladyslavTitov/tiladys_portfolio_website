@@ -1,0 +1,334 @@
+{
+  "checkedAt": "2026-10-21T15:31:56.865Z",
+  "diffs": [
+    {
+      "release": "current",
+      "exitCode": 2,
+      "noDifference": false
+    },
+    {
+      "release": "e82bff0",
+      "exitCode": 0,
+      "noDifference": true
+    }
+  ],
+  "comparison": {
+    "columns": true,
+    "enums": true,
+    "indexes": true,
+    "constraintsExcludingPg18NotNull": true
+  },
+  "rollbackCandidate": {
+    "id": "dpl_5B38LjUBUFpAGnfS3whyHVG9qmJx",
+    "url": "tiladys-public-21zujdkfm-tiladys.vercel.app",
+    "target": "production",
+    "readyState": "READY",
+    "createdAt": 1791119886056,
+    "ready": 1791119955522,
+    "alias": [
+      "tiladys.com",
+      "tiladys-public.vercel.app",
+      "tiladys-public-tiladys.vercel.app"
+    ],
+    "sha": "e82bff04aac9915585b10cc853fe31c558a5964b",
+    "ref": "feature/services-redesign",
+    "buildCommand": null
+  },
+  "previewAuthConfig": [
+    {
+      "key": "AUTH_SECRET",
+      "configured": true,
+      "valueReadable": false,
+      "type": "sensitive",
+      "updatedAt": 1790196202985,
+      "atLeast32Characters": null
+    },
+    {
+      "key": "CONTROL_URL",
+      "configured": true,
+      "valueReadable": true,
+      "type": "plain",
+      "gitBranch": "feature/services-redesign",
+      "updatedAt": 1790196205997,
+      "value": "https://tiladys-control-git-feature-services-redesign-tiladys.vercel.app"
+    },
+    {
+      "key": "CONTROL_ALLOWED_ORIGINS",
+      "configured": false
+    },
+    {
+      "key": "AUTH_IP_HEADER",
+      "configured": false
+    }
+  ],
+  "records": {
+    "published": [
+      {
+        "slug": "mongoose-signs",
+        "category": "web-development",
+        "title": "Mongoose Signs & Advertising"
+      },
+      {
+        "slug": "donetsfit",
+        "category": "web-development",
+        "title": "DonetsFit"
+      },
+      {
+        "slug": "calc-donetsfit",
+        "category": "web-development",
+        "title": "DonetsFit Calculator"
+      },
+      {
+        "slug": "fedora-windows-dual-boot-workstation",
+        "category": "linux-servers",
+        "title": "Fedora KDE + Windows 11 Dual-Boot Workstation"
+      },
+      {
+        "slug": "etit-vpu7-virtual-tour",
+        "category": "web-development",
+        "title": "ETIT.info — Virtual Tour of VPU No. 7"
+      },
+      {
+        "slug": "tiladys-business-card",
+        "category": "design",
+        "title": "TiLADYS Business Card"
+      },
+      {
+        "slug": "jobadys",
+        "category": "web-development",
+        "title": "JobAdys"
+      }
+    ],
+    "images": [
+      {
+        "id": "cmssabqzi0003kz04ekuleu0y",
+        "slug": "calc-donetsfit",
+        "mimeType": "image/png",
+        "size": 54611
+      },
+      {
+        "id": "cmssabsuj0007kz04a52o9r4s",
+        "slug": "calc-donetsfit",
+        "mimeType": "image/png",
+        "size": 89294
+      },
+      {
+        "id": "cmssabtxg000bkz0472y2mp1m",
+        "slug": "calc-donetsfit",
+        "mimeType": "image/png",
+        "size": 83720
+      },
+      {
+        "id": "cmss9k7c70004k004pmwj01s9",
+        "slug": "donetsfit",
+        "mimeType": "image/jpeg",
+        "size": 68313
+      },
+      {
+        "id": "cmsvexiom0007lg0401916w5j",
+        "slug": "etit-vpu7-virtual-tour",
+        "mimeType": "image/png",
+        "size": 237881
+      },
+      {
+        "id": "cmsvexkq1000blg04co1y5rv8",
+        "slug": "etit-vpu7-virtual-tour",
+        "mimeType": "image/png",
+        "size": 231041
+      },
+      {
+        "id": "cmsvexmqt000flg048xel0bx4",
+        "slug": "etit-vpu7-virtual-tour",
+        "mimeType": "image/png",
+        "size": 1486400
+      },
+      {
+        "id": "cmsvexoyd000jlg04f3d1nwzj",
+        "slug": "etit-vpu7-virtual-tour",
+        "mimeType": "image/png",
+        "size": 1713701
+      },
+      {
+        "id": "cmsvexqdo000nlg04oe1xa8o1",
+        "slug": "etit-vpu7-virtual-tour",
+        "mimeType": "image/png",
+        "size": 381436
+      },
+      {
+        "id": "cmu4hz0t60003jp04ylfseb8j",
+        "slug": "fedora-windows-dual-boot-workstation",
+        "mimeType": "image/jpeg",
+        "size": 56856
+      },
+      {
+        "id": "cmu4hz2my0007jp04m2ycvis7",
+        "slug": "fedora-windows-dual-boot-workstation",
+        "mimeType": "image/jpeg",
+        "size": 69846
+      },
+      {
+        "id": "cmu4hz3ns000bjp048vt6i9cp",
+        "slug": "fedora-windows-dual-boot-workstation",
+        "mimeType": "image/jpeg",
+        "size": 84819
+      },
+      {
+        "id": "cmu4hz4m4000fjp04r00up6pi",
+        "slug": "fedora-windows-dual-boot-workstation",
+        "mimeType": "image/jpeg",
+        "size": 123859
+      },
+      {
+        "id": "cmu4hz5ls000jjp04h6hzgs82",
+        "slug": "fedora-windows-dual-boot-workstation",
+        "mimeType": "image/jpeg",
+        "size": 195284
+      },
+      {
+        "id": "cmu4hz6g5000njp04hzc22bew",
+        "slug": "fedora-windows-dual-boot-workstation",
+        "mimeType": "image/jpeg",
+        "size": 176796
+      },
+      {
+        "id": "cmsveydgy000tlg04u8s9rg32",
+        "slug": "jobadys",
+        "mimeType": "image/png",
+        "size": 200292
+      },
+      {
+        "id": "cmsveyeqm000xlg04j79n04pb",
+        "slug": "jobadys",
+        "mimeType": "image/png",
+        "size": 111673
+      },
+      {
+        "id": "cmsveyfq70011lg04reeq43mw",
+        "slug": "jobadys",
+        "mimeType": "image/png",
+        "size": 109416
+      },
+      {
+        "id": "cmsveygq40015lg04bk8lurw7",
+        "slug": "jobadys",
+        "mimeType": "image/png",
+        "size": 116789
+      },
+      {
+        "id": "cmsveyj3x0001l804h84odqvr",
+        "slug": "jobadys",
+        "mimeType": "image/png",
+        "size": 46571
+      },
+      {
+        "id": "cmsveykub0005l8044ps47m5w",
+        "slug": "jobadys",
+        "mimeType": "image/png",
+        "size": 37963
+      },
+      {
+        "id": "cmsuweiru0007jf04wd8ky15q",
+        "slug": "mongoose-signs",
+        "mimeType": "image/png",
+        "size": 1242898
+      },
+      {
+        "id": "cmsuwel9c000bjf0401s7vmwp",
+        "slug": "mongoose-signs",
+        "mimeType": "image/png",
+        "size": 364947
+      },
+      {
+        "id": "cmsuwen78000fjf043kvfsiti",
+        "slug": "mongoose-signs",
+        "mimeType": "image/png",
+        "size": 800526
+      },
+      {
+        "id": "cmu4k2w590004l4040cxe0bsj",
+        "slug": "tiladys-business-card",
+        "mimeType": "image/jpeg",
+        "size": 69954
+      },
+      {
+        "id": "cmu4k2xts0008l404qmsb5kqw",
+        "slug": "tiladys-business-card",
+        "mimeType": "image/png",
+        "size": 51174
+      },
+      {
+        "id": "cmu4k2yzx000cl404xubkj9cs",
+        "slug": "tiladys-business-card",
+        "mimeType": "image/png",
+        "size": 114488
+      }
+    ],
+    "privateProjects": [
+      {
+        "slugFingerprint": "8fbf1b558a850474e68f2b644d1dcfeb",
+        "status": "DRAFT"
+      },
+      {
+        "slugFingerprint": "a6a14ea86505c2fbb30204f6e3b67551",
+        "status": "DRAFT"
+      },
+      {
+        "slugFingerprint": "00c72885fec5daeb04de6c856a4d98da",
+        "status": "DRAFT"
+      }
+    ],
+    "fingerprints": [
+      {
+        "table": "Project",
+        "count": "10",
+        "fingerprint": "111adce883975a64873ed07adc057d8a"
+      },
+      {
+        "table": "ProjectImage",
+        "count": "27",
+        "fingerprint": "f26391d6abf7a21472b26c647cf1eeb6"
+      },
+      {
+        "table": "Customer",
+        "count": "2",
+        "fingerprint": "2b10a85addc3b7567b3aa32bdcf75fb3"
+      },
+      {
+        "table": "Company",
+        "count": "1",
+        "fingerprint": "d6886de53ffc004630a70c71c9c53bd0"
+      },
+      {
+        "table": "Invoice",
+        "count": "2",
+        "fingerprint": "741c89e78dddcae572f3bfc0066416a7"
+      },
+      {
+        "table": "InvoiceLine",
+        "count": "3",
+        "fingerprint": "a4e5de99a8b64b4a38671baa22cae70f"
+      },
+      {
+        "table": "InvoicePayment",
+        "count": "0",
+        "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+      },
+      {
+        "table": "ServiceJob",
+        "count": "2",
+        "fingerprint": "fc88dd4eb236dd31c5511751df25475b"
+      },
+      {
+        "table": "ServiceJobLineItem",
+        "count": "2",
+        "fingerprint": "e1fcdb50ab0f1efd8047352a4dbf8c81"
+      },
+      {
+        "table": "NumberSequence",
+        "count": "3",
+        "fingerprint": "46e537c9bd6dba544dc3dc342757a809"
+      }
+    ],
+    "quoteTablePresent": false
+  }
+}
