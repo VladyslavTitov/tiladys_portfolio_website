@@ -1,0 +1,5 @@
+import {NextRequest} from 'next/server';
+import {db,Prisma} from '@tiladys/db';
+import {assertOrigin,requireUser} from '@/lib/security';
+import {privateJson,privateError} from '@/lib/admin-response';
+export async function POST(req:NextRequest,{params}:{params:Promise<{id:string}>}){try{await assertOrigin();const user=await requireUser();const {id}=await params;const {revision}=await req.json();if(!Number.isSafeInteger(revision)||revision<1)throw Error('INVALID_TASK_REVISION');return privateJson(await db.$transaction(async tx=>{await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Task" WHERE "id"=${id} FOR UPDATE`);const row=await tx.task.findUniqueOrThrow({where:{id}});if(row.status==='DONE')return {id:row.id,status:row.status};if(row.status==='ARCHIVED'||row.revision!==revision)throw Error('STALE_WRITE');const updated=await tx.task.update({where:{id},data:{status:'DONE',revision:{increment:1}},select:{id:true,status:true}});await tx.auditLog.create({data:{userId:user.id,action:'TASK_COMPLETE',entity:'Task',entityId:id}});return updated;}));}catch(e){return privateError(e,'TASK_COMPLETE_FAILED');}}

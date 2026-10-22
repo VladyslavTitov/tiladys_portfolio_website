@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-21T16:49:34.757Z",
+  "pricing": {
+    "databaseReadSucceeded": true,
+    "activeSections": 12,
+    "activeItems": 145,
+    "url": "https://tiladys.com/en/prices",
+    "finalUrl": "https://tiladys.com/en/services",
+    "renderedPrices": [
+      "From 15 €",
+      "From 75 €/month",
+      "From 79 €"
+    ],
+    "expectedDatabasePrices": [
+      {
+        "code": "B10",
+        "expected": "From 15 €"
+      },
+      {
+        "code": "H02",
+        "expected": "From 75 €/month"
+      },
+      {
+        "code": "G01",
+        "expected": "From 79 €"
+      }
+    ],
+    "matchesDatabase": true
+  },
+  "services": [
+    {
+      "url": "https://tiladys.com/en/services/pc-laptop",
+      "status": 200,
+      "pricesRendered": true,
+      "contactUrl": "https://tiladys.com/en/contact?service=pc-laptop",
+      "contactServicePrefilled": true
+    },
+    {
+      "url": "https://tiladys.com/en/services/websites",
+      "status": 200,
+      "pricesRendered": true,
+      "contactUrl": "https://tiladys.com/en/contact?service=websites",
+      "contactServicePrefilled": true
+    },
+    {
+      "url": "https://tiladys.com/en/services/business-it",
+      "status": 200,
+      "pricesRendered": true,
+      "contactUrl": "https://tiladys.com/en/contact?service=business-it",
+      "contactServicePrefilled": true
+    }
+  ],
+  "draftPrivacy": [
+    {
+      "publicationStatus": "DRAFT",
+      "status": 404
+    },
+    {
+      "publicationStatus": "DRAFT",
+      "status": 404
+    },
+    {
+      "publicationStatus": "DRAFT",
+      "status": 404
+    }
+  ],
+  "rootNavigation": {
+    "url": "https://tiladys.com/",
+    "status": 200,
+    "finalUrl": "https://tiladys.com/en"
+  },
+  "allProductionTableFingerprintsStillUnchanged": true,
+  "liveDeploymentId": "dpl_5B38LjUBUFpAGnfS3whyHVG9qmJx"
+}

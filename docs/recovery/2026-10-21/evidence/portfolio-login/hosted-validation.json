@@ -1,0 +1,347 @@
+{
+  "checkedAt": "2026-10-21T15:33:54.049Z",
+  "production": {
+    "url": "https://tiladys.com/en/portfolio",
+    "status": 200,
+    "errorVisible": true,
+    "cards": 0
+  },
+  "candidate": {
+    "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/portfolio",
+    "status": 200,
+    "cards": 7,
+    "errorVisible": false,
+    "searchInputs": 0,
+    "filters": [
+      {
+        "name": "All Projects",
+        "cards": 7,
+        "selected": "true"
+      },
+      {
+        "name": "Web Development",
+        "cards": 5,
+        "selected": "true"
+      },
+      {
+        "name": "PC Build / Clean / Upgrade",
+        "cards": 0,
+        "selected": "true"
+      },
+      {
+        "name": "Design",
+        "cards": 1,
+        "selected": "true"
+      },
+      {
+        "name": "Linux & Server Experience",
+        "cards": 1,
+        "selected": "true"
+      },
+      {
+        "name": "Digital Support",
+        "cards": 0,
+        "selected": "true"
+      }
+    ],
+    "loadedImages": [
+      {
+        "loaded": true
+      },
+      {
+        "loaded": true
+      },
+      {
+        "loaded": true
+      },
+      {
+        "loaded": true
+      },
+      {
+        "loaded": true
+      },
+      {
+        "loaded": true
+      },
+      {
+        "loaded": true
+      }
+    ],
+    "details": [
+      {
+        "slug": "mongoose-signs",
+        "status": 200,
+        "containsTitle": true,
+        "errorPage": false
+      },
+      {
+        "slug": "donetsfit",
+        "status": 200,
+        "containsTitle": true,
+        "errorPage": false
+      },
+      {
+        "slug": "calc-donetsfit",
+        "status": 200,
+        "containsTitle": true,
+        "errorPage": false
+      },
+      {
+        "slug": "fedora-windows-dual-boot-workstation",
+        "status": 200,
+        "containsTitle": true,
+        "errorPage": false
+      },
+      {
+        "slug": "etit-vpu7-virtual-tour",
+        "status": 200,
+        "containsTitle": true,
+        "errorPage": false
+      },
+      {
+        "slug": "tiladys-business-card",
+        "status": 200,
+        "containsTitle": true,
+        "errorPage": false
+      },
+      {
+        "slug": "jobadys",
+        "status": 200,
+        "containsTitle": true,
+        "errorPage": false
+      }
+    ],
+    "media": [
+      {
+        "id": "cmssabqzi0003kz04ekuleu0y",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 282
+      },
+      {
+        "id": "cmssabsuj0007kz04a52o9r4s",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 436
+      },
+      {
+        "id": "cmssabtxg000bkz0472y2mp1m",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 406
+      },
+      {
+        "id": "cmss9k7c70004k004pmwj01s9",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1040
+      },
+      {
+        "id": "cmsvexiom0007lg0401916w5j",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1102
+      },
+      {
+        "id": "cmsvexkq1000blg04co1y5rv8",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1204
+      },
+      {
+        "id": "cmsvexmqt000flg048xel0bx4",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1576
+      },
+      {
+        "id": "cmsvexoyd000jlg04f3d1nwzj",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1438
+      },
+      {
+        "id": "cmsvexqdo000nlg04oe1xa8o1",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1172
+      },
+      {
+        "id": "cmu4hz0t60003jp04ylfseb8j",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 648
+      },
+      {
+        "id": "cmu4hz2my0007jp04m2ycvis7",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 904
+      },
+      {
+        "id": "cmu4hz3ns000bjp048vt6i9cp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 766
+      },
+      {
+        "id": "cmu4hz4m4000fjp04r00up6pi",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1834
+      },
+      {
+        "id": "cmu4hz5ls000jjp04h6hzgs82",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 2166
+      },
+      {
+        "id": "cmu4hz6g5000njp04hzc22bew",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 2018
+      },
+      {
+        "id": "cmsveydgy000tlg04u8s9rg32",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1070
+      },
+      {
+        "id": "cmsveyeqm000xlg04j79n04pb",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 554
+      },
+      {
+        "id": "cmsveyfq70011lg04reeq43mw",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 690
+      },
+      {
+        "id": "cmsveygq40015lg04bk8lurw7",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 686
+      },
+      {
+        "id": "cmsveyj3x0001l804h84odqvr",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 466
+      },
+      {
+        "id": "cmsveykub0005l8044ps47m5w",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 588
+      },
+      {
+        "id": "cmsuweiru0007jf04wd8ky15q",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1754
+      },
+      {
+        "id": "cmsuwel9c000bjf0401s7vmwp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1164
+      },
+      {
+        "id": "cmsuwen78000fjf043kvfsiti",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1666
+      },
+      {
+        "id": "cmu4k2w590004l4040cxe0bsj",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 820
+      },
+      {
+        "id": "cmu4k2xts0008l404qmsb5kqw",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1842
+      },
+      {
+        "id": "cmu4k2yzx000cl404xubkj9cs",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 1972
+      }
+    ],
+    "privateProjects": [
+      {
+        "status": "DRAFT",
+        "response": 404
+      },
+      {
+        "status": "DRAFT",
+        "response": 404
+      },
+      {
+        "status": "DRAFT",
+        "response": 404
+      }
+    ]
+  },
+  "controlApis": [
+    {
+      "origin": "https://tiladys-control-8pbtklpa3-tiladys.vercel.app",
+      "path": "/api/admin/projects",
+      "status": 405
+    },
+    {
+      "origin": "https://tiladys-control-8pbtklpa3-tiladys.vercel.app",
+      "path": "/api/admin/customers",
+      "status": 401
+    },
+    {
+      "origin": "https://tiladys-control-8pbtklpa3-tiladys.vercel.app",
+      "path": "/api/admin/invoices",
+      "status": 401
+    },
+    {
+      "origin": "https://tiladys-control-8pbtklpa3-tiladys.vercel.app",
+      "path": "/api/admin/quotes",
+      "status": 401
+    },
+    {
+      "origin": "https://tiladys-control-i0v1ethdv-tiladys.vercel.app",
+      "path": "/api/admin/projects",
+      "status": 405
+    },
+    {
+      "origin": "https://tiladys-control-i0v1ethdv-tiladys.vercel.app",
+      "path": "/api/admin/customers",
+      "status": 401
+    },
+    {
+      "origin": "https://tiladys-control-i0v1ethdv-tiladys.vercel.app",
+      "path": "/api/admin/invoices",
+      "status": 401
+    },
+    {
+      "origin": "https://tiladys-control-i0v1ethdv-tiladys.vercel.app",
+      "path": "/api/admin/quotes",
+      "status": 404
+    }
+  ],
+  "previewLogin": {
+    "url": "https://tiladys-control-8pbtklpa3-tiladys.vercel.app/login",
+    "form": 1,
+    "email": 1,
+    "password": 1,
+    "secretPhrase": 1
+  },
+  "assertionCorrection": {
+    "checkedAt": "2026-10-21T15:38:11.871Z",
+    "productionHeadingMatcher": "Corrected punctuation mismatch using .portfolio-error",
+    "mongooseTitleMatcher": "Decoded HTML entity &amp; using DOMParser; actual h1 matches database title"
+  }
+}

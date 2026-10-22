@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: SEC-UPLOAD-01 rejects executable SVG and MIME/signature mismatch
+ok 1 - SEC-UPLOAD-01 rejects executable SVG and MIME/signature mismatch
+  ---
+  duration_ms: 19.298132
+  type: 'test'
+  ...
+# Subtest: SEC-UPLOAD-02 traversal filename is replaced, originals/metadata discarded
+ok 2 - SEC-UPLOAD-02 traversal filename is replaced, originals/metadata discarded
+  ---
+  duration_ms: 14.102528
+  type: 'test'
+  ...
+# Subtest: SEC-INPUT-01 executable URLs and bounded financial/task inputs reject
+ok 3 - SEC-INPUT-01 executable URLs and bounded financial/task inputs reject
+  ---
+  duration_ms: 12.916053
+  type: 'test'
+  ...
+# Subtest: SEC-SSRF-01 optimizer rejects unallowlisted remote/private URL before fetch
+ok 4 - SEC-SSRF-01 optimizer rejects unallowlisted remote/private URL before fetch
+  ---
+  duration_ms: 136.863154
+  type: 'test'
+  ...
+# Subtest: SEC-CONTACT-01 same concurrent idempotency key yields one stored enquiry
+ok 5 - SEC-CONTACT-01 same concurrent idempotency key yields one stored enquiry
+  ---
+  duration_ms: 216.083815
+  type: 'test'
+  ...
+# Subtest: SEC-AUTH-01 bounded invalid attempts cannot evade shared IP throttle using forged forwarding
+ok 6 - SEC-AUTH-01 bounded invalid attempts cannot evade shared IP throttle using forged forwarding
+  ---
+  duration_ms: 188.780359
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2626.871079

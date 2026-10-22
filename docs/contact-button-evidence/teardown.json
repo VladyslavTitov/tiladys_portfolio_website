@@ -1,0 +1,14 @@
+{
+  "stoppedTaskPreviewPorts": [
+    3100,
+    3110
+  ],
+  "ownerDevelopmentPortsPreserved": [
+    3000,
+    3001
+  ],
+  "preExistingSyntheticDatabaseRetained": true,
+  "applicationDependenciesAdded": false,
+  "backendOrSchemaChanged": false,
+  "deploymentPerformed": false
+}

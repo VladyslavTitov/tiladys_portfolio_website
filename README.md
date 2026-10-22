@@ -25,23 +25,26 @@ Credentials are not hard-coded. The setup command hashes the password and secret
 
 ## Applying this update to an existing deployment
 
-After deploying the updated code, run:
+For the current contact/Control incident, use the [production recovery runbook and environment inventory](docs/production-recovery.md). Begin with read-only diagnosis; stop at its production mutation checkpoint before migrations, settings changes or deployment.
+
+Read the [portfolio/SEO/login implementation and migration report](docs/business-control/phase-1-implementation.md) before rollout. Back up the database, rehearse on staging and coordinate the control/schema transition: the new migrations remove only the obsolete featured flag, then add SEO fields and slug history. Old control instances cannot run against the removed field.
+
+For an authorized, coordinated rollout after those preparations:
 
 ```bash
-npm install
-npm run db:generate
+npm ci
 npm run db:deploy
-npm run db:seed
+npm run db:generate
 npm run build
 ```
 
-`db:deploy` applies the portfolio image migration. `db:seed` updates the existing price sections and services with the complete six-language catalog; it does not create duplicate service codes.
+Start the matching application versions only after migrations and the build succeed. Do not run `db:seed` on existing business data as part of this update: it can overwrite owner-edited prices and translations. No production deployment or migration was performed during implementation.
 
 ## Public website changes
 
 ### Contact
 
-The Contact page contains the visual hero, direct contact cards, validated message form, benefits section and final contact call-to-action. The form still posts to the protected control/API application; the update changes the presentation without replacing the existing message-storage workflow.
+The Contact page contains the visual hero, direct contact cards, validated message form, benefits section and final contact call-to-action. The form posts to the same-origin web `/api/contact` Node.js handler, which writes to PostgreSQL server-side. Database credentials are never sent to the browser. The public app also reads the explicitly public price/project projection from the same canonical database; Control remains deployment-protected and is not exposed as a browser data dependency.
 
 ### Prices
 
@@ -51,18 +54,20 @@ The Prices page now provides:
 - responsive desktop tables and mobile cards;
 - all service names, notes, section titles and subtitles in all six languages;
 - a **Get Help** action for every service that opens the localized Contact page and preselects that service;
-- a static catalog fallback if the control API is temporarily unavailable.
+- a static catalog fallback if the database is temporarily unavailable.
 
 All prices are edited from one spreadsheet-style screen at `apps/control/app/dashboard/prices`. Use the six language tabs, edit rows, add or remove services/sections, and choose **Save all changes**. The public page reads the saved database values immediately.
 
 ### Portfolio
 
-The Portfolio page now provides category filters for web development, PC support, design, Linux/server work and digital projects. Published projects are loaded from the control API.
+The Portfolio page now provides category filters for web development, PC support, design, Linux/server work and digital projects. Only `PUBLISHED` projects are read server-side from PostgreSQL; public images are served from a same-origin route that re-checks publication on every request.
 
 The project editor at `apps/control/app/dashboard/projects` supports:
 
 - localized title, summary, full description, project type, role and work list;
-- category, status, featured flag and display order;
+- category, status and display order;
+- localized search/social metadata and a project-owned preview image;
+- automatic redirects when project slugs change;
 - completion date;
 - website and GitHub links;
 - technologies/tools;
@@ -85,7 +90,7 @@ Keep all existing JSON keys and all six locale entries when editing localized co
 ## Security model
 
 - Separate public and control deployments
-- Argon2id credential hashes; signed, HTTP-only, SameSite=Strict session cookies
+- Argon2id credential hashes; opaque random session tokens stored as hashes; HTTP-only, SameSite=Strict session cookies
 - Login throttling, account lockout, audit log, CSRF/origin checks and schema validation
 - Security headers including CSP, frame denial, nosniff, referrer and permissions policies
 - Upload MIME allow-list, per-file size limits and ten-image project limit

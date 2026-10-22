@@ -2,31 +2,35 @@ import type { NextConfig } from "next";
 
 const isDevelopment = process.env.NODE_ENV === "development";
 
-const control =
-  process.env.NEXT_PUBLIC_CONTROL_API_URL ?? "http://localhost:3001";
-
 const contentSecurityPolicy = [
   "default-src 'self'",
-  `img-src 'self' data: blob: https: ${control}`,
+  "img-src 'self' data: blob: https:",
   "style-src 'self' 'unsafe-inline'",
 
   isDevelopment
     ? "script-src 'self' 'unsafe-inline' 'unsafe-eval'"
     : "script-src 'self' 'unsafe-inline'",
 
-  `connect-src 'self' ${control}`,
+  `connect-src 'self'${isDevelopment && process.env.CONTACT_STORAGE_DRIVER === 'local-test' ? ' http://127.0.0.1:3002 http://localhost:3002' : ''}`,
   "font-src 'self'",
   "frame-ancestors 'none'",
   "base-uri 'self'",
-  `form-action 'self' ${control}`,
+  "form-action 'self'",
 ].join("; ");
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  experimental: { globalNotFound: true },
+  allowedDevOrigins: ['127.0.0.1'],
   reactStrictMode: true,
+  transpilePackages: ["@tiladys/db", "@tiladys/shared"],
 
   images: {
     remotePatterns: [],
+    localPatterns: [
+      { pathname: '/**', search: '' },
+      { pathname: '/services/tiladys-service-*.webp', search: '?v=20260920' },
+    ],
   },
 
   async headers() {

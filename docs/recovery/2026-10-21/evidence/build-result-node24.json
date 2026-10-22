@@ -1,0 +1,9 @@
+{
+  "node": "v24.22.1",
+  "vercelNode": "24.x",
+  "localNodeMajorMatchesVercel": true,
+  "control": "pass with RELEASE_SCHEMA_CHECK=1",
+  "web": "pass",
+  "database": "isolated restored and migrated PostgreSQL 18; no remote build/deploy",
+  "releaseGuardDisabled": false
+}

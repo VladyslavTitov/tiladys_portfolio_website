@@ -1,0 +1,31 @@
+{
+  "revokedAt": "2026-10-21T16:44:06.642Z",
+  "projectId": "prj_JWa4iXqzV70GdY3TKDDL2Q5poRRv",
+  "revokedTokenIdentity": {
+    "sha256": "af9814811b9b54d859a8d6e32e2dae6cf6372f4530ef3876b296147f8ce90e90",
+    "scope": "automation-bypass",
+    "isEnvVar": true,
+    "createdAt": 1792596609679,
+    "createdBy": "f6pdOqPjSnenl2MfjOJPhYf3"
+  },
+  "regenerated": false,
+  "remainingPublicTokens": 0,
+  "otherTokensUnchanged": true,
+  "controlTokensUnchanged": true,
+  "protectionSettingsUnchanged": true,
+  "configuredEnvironmentVariablesUnchanged": true,
+  "protectedUrl": "https://tiladys-public-bb3d7e016-tiladys.vercel.app/en/contact",
+  "protectedDeploymentId": "dpl_4tCNWpYmKntCA5ycLtLVcQm4F8ui",
+  "revokedTokenResponse": {
+    "status": 302,
+    "vercelAuthentication": true,
+    "contactForm": false
+  },
+  "anonymousResponse": {
+    "status": 302,
+    "vercelAuthentication": true,
+    "contactForm": false
+  },
+  "publicPortfolioStatus": 200,
+  "publicPortfolioAvailable": true
+}

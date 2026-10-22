@@ -1,0 +1,9 @@
+file:///home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/tests/qa-dev-check.mjs:3
+for(const locale of ['en','de','uk','ru','sk','fr']){const r=await fetch(`http://127.0.0.1:3104/${locale}/portfolio`),text=await r.text();rows.push({id:`DEV-PORTFOLIO ${locale}`,status:r.status(),passed:r.status===200&&text.includes('portfolio-filter')&&!text.includes('Projects are temporarily unavailable')});}
+                                                                                                                                                                                           ^
+
+TypeError: r.status is not a function
+    at file:///home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/tests/qa-dev-check.mjs:3:188
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Node.js v22.23.1

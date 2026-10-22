@@ -1,0 +1,8 @@
+{
+  "controlBuild": "pass",
+  "webBuild": "pass",
+  "initialCleanupGuard": "stopped on additional expected root-params type import",
+  "reviewedChanges": "Only .next/dev/types to .next/types for routes and root-params",
+  "bothNextEnvFilesRestoredToOriginal": true,
+  "applicationSourceChanged": false
+}

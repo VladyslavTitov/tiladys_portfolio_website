@@ -1,0 +1,5503 @@
+{
+  "checkedAt": "2026-10-21T16:45:49.120Z",
+  "liveUrl": "https://tiladys.com",
+  "alias": {
+    "alias": "tiladys.com",
+    "deploymentId": "dpl_5B38LjUBUFpAGnfS3whyHVG9qmJx",
+    "projectId": "prj_JWa4iXqzV70GdY3TKDDL2Q5poRRv"
+  },
+  "deployment": {
+    "id": "dpl_5B38LjUBUFpAGnfS3whyHVG9qmJx",
+    "url": "tiladys-public-21zujdkfm-tiladys.vercel.app",
+    "target": "production",
+    "readyState": "READY",
+    "createdAt": 1791119886056,
+    "ready": 1791119955522,
+    "alias": [
+      "tiladys.com",
+      "tiladys-public.vercel.app",
+      "tiladys-public-tiladys.vercel.app"
+    ],
+    "sha": "e82bff04aac9915585b10cc853fe31c558a5964b",
+    "ref": "feature/services-redesign",
+    "buildCommand": null
+  },
+  "currentPublicTarget": {
+    "id": "dpl_5B38LjUBUFpAGnfS3whyHVG9qmJx",
+    "url": "tiladys-public-21zujdkfm-tiladys.vercel.app",
+    "target": "production",
+    "readyState": "READY",
+    "createdAt": 1791119886056,
+    "alias": [
+      "tiladys.com",
+      "tiladys-public.vercel.app",
+      "tiladys-public-tiladys.vercel.app"
+    ],
+    "sha": "e82bff04aac9915585b10cc853fe31c558a5964b",
+    "ref": "feature/services-redesign"
+  },
+  "controlProduction": {
+    "id": "dpl_29sUx2PbwBzRu3UUNbmBZE6aoBVn",
+    "url": "tiladys-control-i0v1ethdv-tiladys.vercel.app",
+    "target": "production",
+    "readyState": "READY",
+    "createdAt": 1791119757914,
+    "alias": [
+      "tiladys-control-tiladys.vercel.app"
+    ],
+    "sha": "e82bff04aac9915585b10cc853fe31c558a5964b",
+    "ref": "feature/services-redesign"
+  },
+  "preserved": {
+    "schema": true,
+    "migrationHistory": true,
+    "allTableFingerprints": true
+  },
+  "after": {
+    "schema": {
+      "tables": [
+        {
+          "tablename": "AdminUser"
+        },
+        {
+          "tablename": "AuditLog"
+        },
+        {
+          "tablename": "BusinessBillingSettings"
+        },
+        {
+          "tablename": "Company"
+        },
+        {
+          "tablename": "ContactAttachment"
+        },
+        {
+          "tablename": "ContactMessage"
+        },
+        {
+          "tablename": "ContactRateLimit"
+        },
+        {
+          "tablename": "Customer"
+        },
+        {
+          "tablename": "CustomerActivity"
+        },
+        {
+          "tablename": "CustomerNote"
+        },
+        {
+          "tablename": "FileAsset"
+        },
+        {
+          "tablename": "Invoice"
+        },
+        {
+          "tablename": "InvoiceLine"
+        },
+        {
+          "tablename": "InvoicePayment"
+        },
+        {
+          "tablename": "NumberSequence"
+        },
+        {
+          "tablename": "PriceItem"
+        },
+        {
+          "tablename": "PriceSection"
+        },
+        {
+          "tablename": "Project"
+        },
+        {
+          "tablename": "ProjectImage"
+        },
+        {
+          "tablename": "ProjectSlugAlias"
+        },
+        {
+          "tablename": "ServiceJob"
+        },
+        {
+          "tablename": "ServiceJobLineItem"
+        },
+        {
+          "tablename": "Session"
+        },
+        {
+          "tablename": "VisitorDay"
+        },
+        {
+          "tablename": "_prisma_migrations"
+        }
+      ],
+      "columns": [
+        {
+          "table_name": "AdminUser",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AdminUser",
+          "column_name": "email",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AdminUser",
+          "column_name": "passwordHash",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AdminUser",
+          "column_name": "secretWordHash",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AdminUser",
+          "column_name": "displayName",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'Administrator'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AdminUser",
+          "column_name": "failedLogins",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AdminUser",
+          "column_name": "lockedUntil",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "AdminUser",
+          "column_name": "lastLoginAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "AdminUser",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "AdminUser",
+          "column_name": "updatedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "AuditLog",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AuditLog",
+          "column_name": "userId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AuditLog",
+          "column_name": "action",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AuditLog",
+          "column_name": "entity",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AuditLog",
+          "column_name": "entityId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AuditLog",
+          "column_name": "ipHash",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AuditLog",
+          "column_name": "metadata",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "AuditLog",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'default'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "legalName",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'TiLADYS – Vladyslav Titov'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "street",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'Kronenstraße 19'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "postalCode",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'45479'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "city",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'Mülheim an der Ruhr'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "country",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'Germany'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "email",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'contact@tiladys.com'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "phone",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'+49 163 7235608'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "taxMode",
+          "data_type": "USER-DEFINED",
+          "udt_name": "BusinessTaxMode",
+          "is_nullable": "NO",
+          "column_default": "'UNCONFIRMED'::\"BusinessTaxMode\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "taxNumber",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "vatId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "taxStatement",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "bankAccountHolder",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "iban",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "bic",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "bankName",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "paymentTermsDays",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "paymentInstructions",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "settingsConfirmedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "updatedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "paymentInstructionsDe",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "column_name": "taxStatementDe",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Company",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Company",
+          "column_name": "name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Company",
+          "column_name": "email",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Company",
+          "column_name": "phone",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Company",
+          "column_name": "street",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Company",
+          "column_name": "postalCode",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Company",
+          "column_name": "city",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Company",
+          "column_name": "country",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'DE'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Company",
+          "column_name": "website",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Company",
+          "column_name": "notes",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Company",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Company",
+          "column_name": "updatedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ContactAttachment",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactAttachment",
+          "column_name": "messageId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactAttachment",
+          "column_name": "filename",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactAttachment",
+          "column_name": "mimeType",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactAttachment",
+          "column_name": "size",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactAttachment",
+          "column_name": "width",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactAttachment",
+          "column_name": "height",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactAttachment",
+          "column_name": "data",
+          "data_type": "bytea",
+          "udt_name": "bytea",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactAttachment",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "email",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "phone",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "service",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "locale",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'en'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "message",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "status",
+          "data_type": "USER-DEFINED",
+          "udt_name": "MessageStatus",
+          "is_nullable": "NO",
+          "column_default": "'UNREAD'::\"MessageStatus\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "replyText",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "repliedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "consent",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "false",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "ipHash",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "userAgent",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ContactMessage",
+          "column_name": "updatedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ContactRateLimit",
+          "column_name": "key",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactRateLimit",
+          "column_name": "count",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "1",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ContactRateLimit",
+          "column_name": "expiresAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "customerNumber",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "type",
+          "data_type": "USER-DEFINED",
+          "udt_name": "CustomerType",
+          "is_nullable": "NO",
+          "column_default": "'PERSON'::\"CustomerType\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "status",
+          "data_type": "USER-DEFINED",
+          "udt_name": "CustomerStatus",
+          "is_nullable": "NO",
+          "column_default": "'LEAD'::\"CustomerStatus\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "firstName",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "lastName",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "companyId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "email",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "phone",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "secondaryPhone",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "street",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "postalCode",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "city",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "country",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'DE'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "preferredLanguage",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'de'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "source",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "notes",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "archivedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Customer",
+          "column_name": "updatedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "CustomerActivity",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "CustomerActivity",
+          "column_name": "customerId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "CustomerActivity",
+          "column_name": "type",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "CustomerActivity",
+          "column_name": "summary",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "CustomerActivity",
+          "column_name": "metadata",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "CustomerActivity",
+          "column_name": "createdById",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "CustomerActivity",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "CustomerNote",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "CustomerNote",
+          "column_name": "customerId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "CustomerNote",
+          "column_name": "body",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "CustomerNote",
+          "column_name": "createdById",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "CustomerNote",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "customerId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "serviceJobId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "kind",
+          "data_type": "USER-DEFINED",
+          "udt_name": "FileAssetKind",
+          "is_nullable": "NO",
+          "column_default": "'DOCUMENT'::\"FileAssetKind\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "visibility",
+          "data_type": "USER-DEFINED",
+          "udt_name": "FileAssetVisibility",
+          "is_nullable": "NO",
+          "column_default": "'PRIVATE'::\"FileAssetVisibility\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "filename",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "originalFilename",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "mimeType",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "size",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "storageProvider",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "storageKey",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "checksum",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "caption",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "sortOrder",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "uploadedById",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "FileAsset",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "invoiceNumber",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "status",
+          "data_type": "USER-DEFINED",
+          "udt_name": "InvoiceStatus",
+          "is_nullable": "NO",
+          "column_default": "'DRAFT'::\"InvoiceStatus\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "customerId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "serviceJobId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "currency",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'EUR'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "issueDate",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "dueDate",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "serviceDateFrom",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "serviceDateTo",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerLegalName",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerStreet",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerPostalCode",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerCity",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerCountry",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerEmail",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerPhone",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerTaxMode",
+          "data_type": "USER-DEFINED",
+          "udt_name": "BusinessTaxMode",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerTaxNumber",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerVatId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerTaxStatement",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerBankAccountHolder",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerIban",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerBic",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerBankName",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "paymentTermsDays",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "paymentInstructions",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "recipientName",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "recipientCompany",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "recipientEmail",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "recipientStreet",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "recipientPostalCode",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "recipientCity",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "recipientCountry",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "customerReference",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "notes",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "subtotal",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 14,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "taxTotal",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 14,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "total",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 14,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "issuedPdf",
+          "data_type": "bytea",
+          "udt_name": "bytea",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "issuedPdfChecksum",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "issuedPdfSize",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "issuedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "updatedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "billingCompanyId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "billingRecipientType",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'INDIVIDUAL'::text",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "documentVersion",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "1",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "notesDe",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "paymentInstructionsDe",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Invoice",
+          "column_name": "sellerTaxStatementDe",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "invoiceId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "serviceName",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "description",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "quantity",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 12,
+          "numeric_scale": 3,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "unit",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "unitPrice",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 12,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "taxTreatment",
+          "data_type": "USER-DEFINED",
+          "udt_name": "JobLineTaxTreatment",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "taxRate",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 5,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "subtotal",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 14,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "taxAmount",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 14,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "total",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 14,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "sortOrder",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "billingPeriodFrom",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "billingPeriodTo",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "descriptionDe",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "priceConfirmed",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "false",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "priceMode",
+          "data_type": "USER-DEFINED",
+          "udt_name": "CataloguePriceMode",
+          "is_nullable": "NO",
+          "column_default": "'MANUAL'::\"CataloguePriceMode\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "serviceNameDe",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoiceLine",
+          "column_name": "unitDe",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoicePayment",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoicePayment",
+          "column_name": "invoiceId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoicePayment",
+          "column_name": "amount",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 14,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoicePayment",
+          "column_name": "paidAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "InvoicePayment",
+          "column_name": "method",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoicePayment",
+          "column_name": "reference",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoicePayment",
+          "column_name": "note",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoicePayment",
+          "column_name": "createdById",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "InvoicePayment",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "NumberSequence",
+          "column_name": "scope",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "NumberSequence",
+          "column_name": "year",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "NumberSequence",
+          "column_name": "nextValue",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "1",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceItem",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceItem",
+          "column_name": "sectionId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceItem",
+          "column_name": "code",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceItem",
+          "column_name": "name",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceItem",
+          "column_name": "price",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceItem",
+          "column_name": "note",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceItem",
+          "column_name": "sortOrder",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceItem",
+          "column_name": "active",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "true",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceItem",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "PriceItem",
+          "column_name": "updatedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "PriceSection",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceSection",
+          "column_name": "number",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceSection",
+          "column_name": "title",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceSection",
+          "column_name": "subtitle",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceSection",
+          "column_name": "sortOrder",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "PriceSection",
+          "column_name": "active",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "true",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "slug",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "category",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "status",
+          "data_type": "USER-DEFINED",
+          "udt_name": "ProjectStatus",
+          "is_nullable": "NO",
+          "column_default": "'DRAFT'::\"ProjectStatus\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "sortOrder",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "title",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "summary",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "description",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "clientName",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "projectDate",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Project",
+          "column_name": "websiteUrl",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "githubUrl",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "coverImage",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "gallery",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "technologies",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "results",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Project",
+          "column_name": "updatedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Project",
+          "column_name": "type",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "role",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "workItems",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "seoTitle",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "seoDescription",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "socialTitle",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "socialDescription",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Project",
+          "column_name": "socialImageId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ProjectImage",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ProjectImage",
+          "column_name": "projectId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ProjectImage",
+          "column_name": "filename",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ProjectImage",
+          "column_name": "mimeType",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ProjectImage",
+          "column_name": "size",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ProjectImage",
+          "column_name": "data",
+          "data_type": "bytea",
+          "udt_name": "bytea",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ProjectImage",
+          "column_name": "alt",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ProjectImage",
+          "column_name": "sortOrder",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ProjectImage",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ProjectSlugAlias",
+          "column_name": "slug",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ProjectSlugAlias",
+          "column_name": "projectId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ProjectSlugAlias",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "jobNumber",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "customerId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "companyId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "servicePriceItemId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "serviceType",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "title",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "description",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "privateNotes",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "customerVisibleNotes",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "serviceDate",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "status",
+          "data_type": "USER-DEFINED",
+          "udt_name": "ServiceJobStatus",
+          "is_nullable": "NO",
+          "column_default": "'PLANNED'::\"ServiceJobStatus\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "estimatedPrice",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 12,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "finalPrice",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 12,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "materialCost",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 12,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "otherCost",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 12,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "startTime",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "endTime",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "workDurationMinutes",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ServiceJob",
+          "column_name": "updatedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "serviceJobId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "cataloguePriceItemId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "serviceName",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "description",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "quantity",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 12,
+          "numeric_scale": 3,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "unit",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "cataloguePriceText",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "catalogueUnitPrice",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 12,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "cataloguePriceMode",
+          "data_type": "USER-DEFINED",
+          "udt_name": "CataloguePriceMode",
+          "is_nullable": "NO",
+          "column_default": "'MANUAL'::\"CataloguePriceMode\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "priceConfirmed",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "false",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "agreedUnitPrice",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 12,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "taxTreatment",
+          "data_type": "USER-DEFINED",
+          "udt_name": "JobLineTaxTreatment",
+          "is_nullable": "NO",
+          "column_default": "'UNCONFIRMED'::\"JobLineTaxTreatment\"",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "taxRate",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 5,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "subtotal",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 14,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "taxAmount",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 14,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "total",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 14,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "internalUnitCost",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": 12,
+          "numeric_scale": 2,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "sortOrder",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "updatedAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "billingPeriodFrom",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "billingPeriodTo",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "descriptionDe",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "serviceNameDe",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "column_name": "unitDe",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Session",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Session",
+          "column_name": "tokenHash",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Session",
+          "column_name": "userId",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Session",
+          "column_name": "ipHash",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Session",
+          "column_name": "userAgent",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "Session",
+          "column_name": "expiresAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "Session",
+          "column_name": "createdAt",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": "CURRENT_TIMESTAMP",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "VisitorDay",
+          "column_name": "id",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "VisitorDay",
+          "column_name": "day",
+          "data_type": "timestamp without time zone",
+          "udt_name": "timestamp",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 3
+        },
+        {
+          "table_name": "VisitorDay",
+          "column_name": "sessions",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "VisitorDay",
+          "column_name": "pageViews",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "_prisma_migrations",
+          "column_name": "id",
+          "data_type": "character varying",
+          "udt_name": "varchar",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 36,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "_prisma_migrations",
+          "column_name": "checksum",
+          "data_type": "character varying",
+          "udt_name": "varchar",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 64,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "_prisma_migrations",
+          "column_name": "finished_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 6
+        },
+        {
+          "table_name": "_prisma_migrations",
+          "column_name": "migration_name",
+          "data_type": "character varying",
+          "udt_name": "varchar",
+          "is_nullable": "NO",
+          "column_default": null,
+          "character_maximum_length": 255,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "_prisma_migrations",
+          "column_name": "logs",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": null
+        },
+        {
+          "table_name": "_prisma_migrations",
+          "column_name": "rolled_back_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "YES",
+          "column_default": null,
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 6
+        },
+        {
+          "table_name": "_prisma_migrations",
+          "column_name": "started_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "character_maximum_length": null,
+          "numeric_precision": null,
+          "numeric_scale": null,
+          "datetime_precision": 6
+        },
+        {
+          "table_name": "_prisma_migrations",
+          "column_name": "applied_steps_count",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "character_maximum_length": null,
+          "numeric_precision": 32,
+          "numeric_scale": 0,
+          "datetime_precision": null
+        }
+      ],
+      "enums": [
+        {
+          "typname": "BusinessTaxMode",
+          "enumlabel": "UNCONFIRMED",
+          "enumsortorder": 1
+        },
+        {
+          "typname": "BusinessTaxMode",
+          "enumlabel": "VAT",
+          "enumsortorder": 2
+        },
+        {
+          "typname": "BusinessTaxMode",
+          "enumlabel": "KLEINUNTERNEHMER",
+          "enumsortorder": 3
+        },
+        {
+          "typname": "BusinessTaxMode",
+          "enumlabel": "EXEMPT",
+          "enumsortorder": 4
+        },
+        {
+          "typname": "CataloguePriceMode",
+          "enumlabel": "FIXED",
+          "enumsortorder": 1
+        },
+        {
+          "typname": "CataloguePriceMode",
+          "enumlabel": "FROM",
+          "enumsortorder": 2
+        },
+        {
+          "typname": "CataloguePriceMode",
+          "enumlabel": "HOURLY",
+          "enumsortorder": 3
+        },
+        {
+          "typname": "CataloguePriceMode",
+          "enumlabel": "MONTHLY",
+          "enumsortorder": 4
+        },
+        {
+          "typname": "CataloguePriceMode",
+          "enumlabel": "PERCENTAGE",
+          "enumsortorder": 5
+        },
+        {
+          "typname": "CataloguePriceMode",
+          "enumlabel": "MANUAL",
+          "enumsortorder": 6
+        },
+        {
+          "typname": "CustomerStatus",
+          "enumlabel": "LEAD",
+          "enumsortorder": 1
+        },
+        {
+          "typname": "CustomerStatus",
+          "enumlabel": "ACTIVE",
+          "enumsortorder": 2
+        },
+        {
+          "typname": "CustomerStatus",
+          "enumlabel": "INACTIVE",
+          "enumsortorder": 3
+        },
+        {
+          "typname": "CustomerStatus",
+          "enumlabel": "ARCHIVED",
+          "enumsortorder": 4
+        },
+        {
+          "typname": "CustomerType",
+          "enumlabel": "PERSON",
+          "enumsortorder": 1
+        },
+        {
+          "typname": "CustomerType",
+          "enumlabel": "BUSINESS",
+          "enumsortorder": 2
+        },
+        {
+          "typname": "FileAssetKind",
+          "enumlabel": "BEFORE",
+          "enumsortorder": 1
+        },
+        {
+          "typname": "FileAssetKind",
+          "enumlabel": "DURING",
+          "enumsortorder": 2
+        },
+        {
+          "typname": "FileAssetKind",
+          "enumlabel": "AFTER",
+          "enumsortorder": 3
+        },
+        {
+          "typname": "FileAssetKind",
+          "enumlabel": "DOCUMENT",
+          "enumsortorder": 4
+        },
+        {
+          "typname": "FileAssetKind",
+          "enumlabel": "OTHER",
+          "enumsortorder": 5
+        },
+        {
+          "typname": "FileAssetVisibility",
+          "enumlabel": "PRIVATE",
+          "enumsortorder": 1
+        },
+        {
+          "typname": "InvoiceStatus",
+          "enumlabel": "DRAFT",
+          "enumsortorder": 1
+        },
+        {
+          "typname": "InvoiceStatus",
+          "enumlabel": "ISSUED",
+          "enumsortorder": 2
+        },
+        {
+          "typname": "InvoiceStatus",
+          "enumlabel": "CANCELLED",
+          "enumsortorder": 3
+        },
+        {
+          "typname": "JobLineTaxTreatment",
+          "enumlabel": "UNCONFIRMED",
+          "enumsortorder": 1
+        },
+        {
+          "typname": "JobLineTaxTreatment",
+          "enumlabel": "VAT_STANDARD",
+          "enumsortorder": 2
+        },
+        {
+          "typname": "JobLineTaxTreatment",
+          "enumlabel": "VAT_REDUCED",
+          "enumsortorder": 3
+        },
+        {
+          "typname": "JobLineTaxTreatment",
+          "enumlabel": "ZERO_RATED",
+          "enumsortorder": 4
+        },
+        {
+          "typname": "JobLineTaxTreatment",
+          "enumlabel": "EXEMPT",
+          "enumsortorder": 5
+        },
+        {
+          "typname": "JobLineTaxTreatment",
+          "enumlabel": "KLEINUNTERNEHMER",
+          "enumsortorder": 6
+        },
+        {
+          "typname": "MessageStatus",
+          "enumlabel": "UNREAD",
+          "enumsortorder": 1
+        },
+        {
+          "typname": "MessageStatus",
+          "enumlabel": "READ",
+          "enumsortorder": 2
+        },
+        {
+          "typname": "MessageStatus",
+          "enumlabel": "REPLIED",
+          "enumsortorder": 3
+        },
+        {
+          "typname": "MessageStatus",
+          "enumlabel": "ARCHIVED",
+          "enumsortorder": 4
+        },
+        {
+          "typname": "MessageStatus",
+          "enumlabel": "SPAM",
+          "enumsortorder": 5
+        },
+        {
+          "typname": "ProjectStatus",
+          "enumlabel": "DRAFT",
+          "enumsortorder": 1
+        },
+        {
+          "typname": "ProjectStatus",
+          "enumlabel": "PUBLISHED",
+          "enumsortorder": 2
+        },
+        {
+          "typname": "ProjectStatus",
+          "enumlabel": "ARCHIVED",
+          "enumsortorder": 3
+        },
+        {
+          "typname": "ServiceJobStatus",
+          "enumlabel": "PLANNED",
+          "enumsortorder": 1
+        },
+        {
+          "typname": "ServiceJobStatus",
+          "enumlabel": "IN_PROGRESS",
+          "enumsortorder": 2
+        },
+        {
+          "typname": "ServiceJobStatus",
+          "enumlabel": "WAITING_CUSTOMER",
+          "enumsortorder": 3
+        },
+        {
+          "typname": "ServiceJobStatus",
+          "enumlabel": "COMPLETED",
+          "enumsortorder": 4
+        },
+        {
+          "typname": "ServiceJobStatus",
+          "enumlabel": "CANCELLED",
+          "enumsortorder": 5
+        }
+      ],
+      "constraints": [
+        {
+          "table_name": "AdminUser",
+          "conname": "AdminUser_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "AuditLog",
+          "conname": "AuditLog_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "AuditLog",
+          "conname": "AuditLog_userId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"userId\") REFERENCES \"AdminUser\"(id) ON UPDATE CASCADE ON DELETE SET NULL"
+        },
+        {
+          "table_name": "BusinessBillingSettings",
+          "conname": "BusinessBillingSettings_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "Company",
+          "conname": "Company_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "ContactAttachment",
+          "conname": "ContactAttachment_messageId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"messageId\") REFERENCES \"ContactMessage\"(id) ON UPDATE CASCADE ON DELETE CASCADE"
+        },
+        {
+          "table_name": "ContactAttachment",
+          "conname": "ContactAttachment_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "ContactMessage",
+          "conname": "ContactMessage_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "ContactRateLimit",
+          "conname": "ContactRateLimit_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (key)"
+        },
+        {
+          "table_name": "Customer",
+          "conname": "Customer_companyId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"companyId\") REFERENCES \"Company\"(id) ON UPDATE CASCADE ON DELETE SET NULL"
+        },
+        {
+          "table_name": "Customer",
+          "conname": "Customer_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "CustomerActivity",
+          "conname": "CustomerActivity_createdById_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"createdById\") REFERENCES \"AdminUser\"(id) ON UPDATE CASCADE ON DELETE SET NULL"
+        },
+        {
+          "table_name": "CustomerActivity",
+          "conname": "CustomerActivity_customerId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"customerId\") REFERENCES \"Customer\"(id) ON UPDATE CASCADE ON DELETE CASCADE"
+        },
+        {
+          "table_name": "CustomerActivity",
+          "conname": "CustomerActivity_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "CustomerNote",
+          "conname": "CustomerNote_createdById_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"createdById\") REFERENCES \"AdminUser\"(id) ON UPDATE CASCADE ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "CustomerNote",
+          "conname": "CustomerNote_customerId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"customerId\") REFERENCES \"Customer\"(id) ON UPDATE CASCADE ON DELETE CASCADE"
+        },
+        {
+          "table_name": "CustomerNote",
+          "conname": "CustomerNote_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "FileAsset",
+          "conname": "FileAsset_customerId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"customerId\") REFERENCES \"Customer\"(id) ON UPDATE CASCADE ON DELETE CASCADE"
+        },
+        {
+          "table_name": "FileAsset",
+          "conname": "FileAsset_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "FileAsset",
+          "conname": "FileAsset_serviceJobId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"serviceJobId\") REFERENCES \"ServiceJob\"(id) ON UPDATE CASCADE ON DELETE CASCADE"
+        },
+        {
+          "table_name": "FileAsset",
+          "conname": "FileAsset_uploadedById_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"uploadedById\") REFERENCES \"AdminUser\"(id) ON UPDATE CASCADE ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "Invoice",
+          "conname": "Invoice_billingCompanyId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"billingCompanyId\") REFERENCES \"Company\"(id) ON UPDATE CASCADE ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "Invoice",
+          "conname": "Invoice_billing_recipient_check",
+          "contype": "c",
+          "convalidated": true,
+          "definition": "CHECK (\"billingRecipientType\" = 'COMPANY'::text AND \"billingCompanyId\" IS NOT NULL OR (\"billingRecipientType\" = ANY (ARRAY['INDIVIDUAL'::text, 'LEGACY'::text])) AND \"billingCompanyId\" IS NULL)"
+        },
+        {
+          "table_name": "Invoice",
+          "conname": "Invoice_customerId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"customerId\") REFERENCES \"Customer\"(id) ON UPDATE CASCADE ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "Invoice",
+          "conname": "Invoice_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "Invoice",
+          "conname": "Invoice_serviceJobId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"serviceJobId\") REFERENCES \"ServiceJob\"(id) ON UPDATE CASCADE ON DELETE SET NULL"
+        },
+        {
+          "table_name": "InvoiceLine",
+          "conname": "InvoiceLine_invoiceId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"invoiceId\") REFERENCES \"Invoice\"(id) ON UPDATE CASCADE ON DELETE CASCADE"
+        },
+        {
+          "table_name": "InvoiceLine",
+          "conname": "InvoiceLine_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "InvoicePayment",
+          "conname": "InvoicePayment_createdById_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"createdById\") REFERENCES \"AdminUser\"(id) ON UPDATE CASCADE ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "InvoicePayment",
+          "conname": "InvoicePayment_invoiceId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"invoiceId\") REFERENCES \"Invoice\"(id) ON UPDATE CASCADE ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "InvoicePayment",
+          "conname": "InvoicePayment_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "NumberSequence",
+          "conname": "NumberSequence_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (scope, year)"
+        },
+        {
+          "table_name": "PriceItem",
+          "conname": "PriceItem_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "PriceItem",
+          "conname": "PriceItem_sectionId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"sectionId\") REFERENCES \"PriceSection\"(id) ON UPDATE CASCADE ON DELETE CASCADE"
+        },
+        {
+          "table_name": "PriceSection",
+          "conname": "PriceSection_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "Project",
+          "conname": "Project_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "Project",
+          "conname": "Project_socialImageId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"socialImageId\") REFERENCES \"ProjectImage\"(id) ON UPDATE CASCADE ON DELETE SET NULL"
+        },
+        {
+          "table_name": "ProjectImage",
+          "conname": "ProjectImage_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "ProjectImage",
+          "conname": "ProjectImage_projectId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"projectId\") REFERENCES \"Project\"(id) ON UPDATE CASCADE ON DELETE CASCADE"
+        },
+        {
+          "table_name": "ProjectSlugAlias",
+          "conname": "ProjectSlugAlias_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (slug)"
+        },
+        {
+          "table_name": "ProjectSlugAlias",
+          "conname": "ProjectSlugAlias_projectId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"projectId\") REFERENCES \"Project\"(id) ON UPDATE CASCADE ON DELETE CASCADE"
+        },
+        {
+          "table_name": "ServiceJob",
+          "conname": "ServiceJob_companyId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"companyId\") REFERENCES \"Company\"(id) ON UPDATE CASCADE ON DELETE SET NULL"
+        },
+        {
+          "table_name": "ServiceJob",
+          "conname": "ServiceJob_customerId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"customerId\") REFERENCES \"Customer\"(id) ON UPDATE CASCADE ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "ServiceJob",
+          "conname": "ServiceJob_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "ServiceJob",
+          "conname": "ServiceJob_servicePriceItemId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"servicePriceItemId\") REFERENCES \"PriceItem\"(id) ON UPDATE CASCADE ON DELETE SET NULL"
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "conname": "ServiceJobLineItem_cataloguePriceItemId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"cataloguePriceItemId\") REFERENCES \"PriceItem\"(id) ON UPDATE CASCADE ON DELETE SET NULL"
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "conname": "ServiceJobLineItem_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "ServiceJobLineItem",
+          "conname": "ServiceJobLineItem_serviceJobId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"serviceJobId\") REFERENCES \"ServiceJob\"(id) ON UPDATE CASCADE ON DELETE CASCADE"
+        },
+        {
+          "table_name": "Session",
+          "conname": "Session_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "Session",
+          "conname": "Session_userId_fkey",
+          "contype": "f",
+          "convalidated": true,
+          "definition": "FOREIGN KEY (\"userId\") REFERENCES \"AdminUser\"(id) ON UPDATE CASCADE ON DELETE CASCADE"
+        },
+        {
+          "table_name": "VisitorDay",
+          "conname": "VisitorDay_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "_prisma_migrations",
+          "conname": "_prisma_migrations_pkey",
+          "contype": "p",
+          "convalidated": true,
+          "definition": "PRIMARY KEY (id)"
+        }
+      ],
+      "indexes": [
+        {
+          "tablename": "AdminUser",
+          "indexname": "AdminUser_email_key",
+          "indexdef": "CREATE UNIQUE INDEX \"AdminUser_email_key\" ON public.\"AdminUser\" USING btree (email)"
+        },
+        {
+          "tablename": "AdminUser",
+          "indexname": "AdminUser_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"AdminUser_pkey\" ON public.\"AdminUser\" USING btree (id)"
+        },
+        {
+          "tablename": "AuditLog",
+          "indexname": "AuditLog_createdAt_action_idx",
+          "indexdef": "CREATE INDEX \"AuditLog_createdAt_action_idx\" ON public.\"AuditLog\" USING btree (\"createdAt\", action)"
+        },
+        {
+          "tablename": "AuditLog",
+          "indexname": "AuditLog_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"AuditLog_pkey\" ON public.\"AuditLog\" USING btree (id)"
+        },
+        {
+          "tablename": "BusinessBillingSettings",
+          "indexname": "BusinessBillingSettings_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"BusinessBillingSettings_pkey\" ON public.\"BusinessBillingSettings\" USING btree (id)"
+        },
+        {
+          "tablename": "Company",
+          "indexname": "Company_name_idx",
+          "indexdef": "CREATE INDEX \"Company_name_idx\" ON public.\"Company\" USING btree (name)"
+        },
+        {
+          "tablename": "Company",
+          "indexname": "Company_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"Company_pkey\" ON public.\"Company\" USING btree (id)"
+        },
+        {
+          "tablename": "ContactAttachment",
+          "indexname": "ContactAttachment_messageId_idx",
+          "indexdef": "CREATE INDEX \"ContactAttachment_messageId_idx\" ON public.\"ContactAttachment\" USING btree (\"messageId\")"
+        },
+        {
+          "tablename": "ContactAttachment",
+          "indexname": "ContactAttachment_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"ContactAttachment_pkey\" ON public.\"ContactAttachment\" USING btree (id)"
+        },
+        {
+          "tablename": "ContactMessage",
+          "indexname": "ContactMessage_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"ContactMessage_pkey\" ON public.\"ContactMessage\" USING btree (id)"
+        },
+        {
+          "tablename": "ContactMessage",
+          "indexname": "ContactMessage_status_createdAt_idx",
+          "indexdef": "CREATE INDEX \"ContactMessage_status_createdAt_idx\" ON public.\"ContactMessage\" USING btree (status, \"createdAt\")"
+        },
+        {
+          "tablename": "ContactRateLimit",
+          "indexname": "ContactRateLimit_expiresAt_idx",
+          "indexdef": "CREATE INDEX \"ContactRateLimit_expiresAt_idx\" ON public.\"ContactRateLimit\" USING btree (\"expiresAt\")"
+        },
+        {
+          "tablename": "ContactRateLimit",
+          "indexname": "ContactRateLimit_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"ContactRateLimit_pkey\" ON public.\"ContactRateLimit\" USING btree (key)"
+        },
+        {
+          "tablename": "Customer",
+          "indexname": "Customer_companyId_idx",
+          "indexdef": "CREATE INDEX \"Customer_companyId_idx\" ON public.\"Customer\" USING btree (\"companyId\")"
+        },
+        {
+          "tablename": "Customer",
+          "indexname": "Customer_customerNumber_key",
+          "indexdef": "CREATE UNIQUE INDEX \"Customer_customerNumber_key\" ON public.\"Customer\" USING btree (\"customerNumber\")"
+        },
+        {
+          "tablename": "Customer",
+          "indexname": "Customer_email_idx",
+          "indexdef": "CREATE INDEX \"Customer_email_idx\" ON public.\"Customer\" USING btree (email)"
+        },
+        {
+          "tablename": "Customer",
+          "indexname": "Customer_lastName_firstName_idx",
+          "indexdef": "CREATE INDEX \"Customer_lastName_firstName_idx\" ON public.\"Customer\" USING btree (\"lastName\", \"firstName\")"
+        },
+        {
+          "tablename": "Customer",
+          "indexname": "Customer_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"Customer_pkey\" ON public.\"Customer\" USING btree (id)"
+        },
+        {
+          "tablename": "Customer",
+          "indexname": "Customer_status_updatedAt_idx",
+          "indexdef": "CREATE INDEX \"Customer_status_updatedAt_idx\" ON public.\"Customer\" USING btree (status, \"updatedAt\")"
+        },
+        {
+          "tablename": "CustomerActivity",
+          "indexname": "CustomerActivity_customerId_createdAt_idx",
+          "indexdef": "CREATE INDEX \"CustomerActivity_customerId_createdAt_idx\" ON public.\"CustomerActivity\" USING btree (\"customerId\", \"createdAt\")"
+        },
+        {
+          "tablename": "CustomerActivity",
+          "indexname": "CustomerActivity_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"CustomerActivity_pkey\" ON public.\"CustomerActivity\" USING btree (id)"
+        },
+        {
+          "tablename": "CustomerNote",
+          "indexname": "CustomerNote_customerId_createdAt_idx",
+          "indexdef": "CREATE INDEX \"CustomerNote_customerId_createdAt_idx\" ON public.\"CustomerNote\" USING btree (\"customerId\", \"createdAt\")"
+        },
+        {
+          "tablename": "CustomerNote",
+          "indexname": "CustomerNote_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"CustomerNote_pkey\" ON public.\"CustomerNote\" USING btree (id)"
+        },
+        {
+          "tablename": "FileAsset",
+          "indexname": "FileAsset_customerId_createdAt_idx",
+          "indexdef": "CREATE INDEX \"FileAsset_customerId_createdAt_idx\" ON public.\"FileAsset\" USING btree (\"customerId\", \"createdAt\")"
+        },
+        {
+          "tablename": "FileAsset",
+          "indexname": "FileAsset_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"FileAsset_pkey\" ON public.\"FileAsset\" USING btree (id)"
+        },
+        {
+          "tablename": "FileAsset",
+          "indexname": "FileAsset_serviceJobId_sortOrder_idx",
+          "indexdef": "CREATE INDEX \"FileAsset_serviceJobId_sortOrder_idx\" ON public.\"FileAsset\" USING btree (\"serviceJobId\", \"sortOrder\")"
+        },
+        {
+          "tablename": "FileAsset",
+          "indexname": "FileAsset_storageKey_key",
+          "indexdef": "CREATE UNIQUE INDEX \"FileAsset_storageKey_key\" ON public.\"FileAsset\" USING btree (\"storageKey\")"
+        },
+        {
+          "tablename": "Invoice",
+          "indexname": "Invoice_billingCompanyId_createdAt_idx",
+          "indexdef": "CREATE INDEX \"Invoice_billingCompanyId_createdAt_idx\" ON public.\"Invoice\" USING btree (\"billingCompanyId\", \"createdAt\")"
+        },
+        {
+          "tablename": "Invoice",
+          "indexname": "Invoice_customerId_createdAt_idx",
+          "indexdef": "CREATE INDEX \"Invoice_customerId_createdAt_idx\" ON public.\"Invoice\" USING btree (\"customerId\", \"createdAt\")"
+        },
+        {
+          "tablename": "Invoice",
+          "indexname": "Invoice_invoiceNumber_key",
+          "indexdef": "CREATE UNIQUE INDEX \"Invoice_invoiceNumber_key\" ON public.\"Invoice\" USING btree (\"invoiceNumber\")"
+        },
+        {
+          "tablename": "Invoice",
+          "indexname": "Invoice_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"Invoice_pkey\" ON public.\"Invoice\" USING btree (id)"
+        },
+        {
+          "tablename": "Invoice",
+          "indexname": "Invoice_serviceJobId_draft_key",
+          "indexdef": "CREATE UNIQUE INDEX \"Invoice_serviceJobId_draft_key\" ON public.\"Invoice\" USING btree (\"serviceJobId\") WHERE ((status = 'DRAFT'::\"InvoiceStatus\") AND (\"serviceJobId\" IS NOT NULL))"
+        },
+        {
+          "tablename": "Invoice",
+          "indexname": "Invoice_serviceJobId_idx",
+          "indexdef": "CREATE INDEX \"Invoice_serviceJobId_idx\" ON public.\"Invoice\" USING btree (\"serviceJobId\")"
+        },
+        {
+          "tablename": "Invoice",
+          "indexname": "Invoice_status_issueDate_idx",
+          "indexdef": "CREATE INDEX \"Invoice_status_issueDate_idx\" ON public.\"Invoice\" USING btree (status, \"issueDate\")"
+        },
+        {
+          "tablename": "InvoiceLine",
+          "indexname": "InvoiceLine_invoiceId_sortOrder_idx",
+          "indexdef": "CREATE INDEX \"InvoiceLine_invoiceId_sortOrder_idx\" ON public.\"InvoiceLine\" USING btree (\"invoiceId\", \"sortOrder\")"
+        },
+        {
+          "tablename": "InvoiceLine",
+          "indexname": "InvoiceLine_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"InvoiceLine_pkey\" ON public.\"InvoiceLine\" USING btree (id)"
+        },
+        {
+          "tablename": "InvoicePayment",
+          "indexname": "InvoicePayment_invoiceId_paidAt_idx",
+          "indexdef": "CREATE INDEX \"InvoicePayment_invoiceId_paidAt_idx\" ON public.\"InvoicePayment\" USING btree (\"invoiceId\", \"paidAt\")"
+        },
+        {
+          "tablename": "InvoicePayment",
+          "indexname": "InvoicePayment_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"InvoicePayment_pkey\" ON public.\"InvoicePayment\" USING btree (id)"
+        },
+        {
+          "tablename": "NumberSequence",
+          "indexname": "NumberSequence_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"NumberSequence_pkey\" ON public.\"NumberSequence\" USING btree (scope, year)"
+        },
+        {
+          "tablename": "PriceItem",
+          "indexname": "PriceItem_code_key",
+          "indexdef": "CREATE UNIQUE INDEX \"PriceItem_code_key\" ON public.\"PriceItem\" USING btree (code)"
+        },
+        {
+          "tablename": "PriceItem",
+          "indexname": "PriceItem_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"PriceItem_pkey\" ON public.\"PriceItem\" USING btree (id)"
+        },
+        {
+          "tablename": "PriceItem",
+          "indexname": "PriceItem_sectionId_active_sortOrder_idx",
+          "indexdef": "CREATE INDEX \"PriceItem_sectionId_active_sortOrder_idx\" ON public.\"PriceItem\" USING btree (\"sectionId\", active, \"sortOrder\")"
+        },
+        {
+          "tablename": "PriceSection",
+          "indexname": "PriceSection_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"PriceSection_pkey\" ON public.\"PriceSection\" USING btree (id)"
+        },
+        {
+          "tablename": "Project",
+          "indexname": "Project_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"Project_pkey\" ON public.\"Project\" USING btree (id)"
+        },
+        {
+          "tablename": "Project",
+          "indexname": "Project_slug_key",
+          "indexdef": "CREATE UNIQUE INDEX \"Project_slug_key\" ON public.\"Project\" USING btree (slug)"
+        },
+        {
+          "tablename": "Project",
+          "indexname": "Project_status_category_sortOrder_idx",
+          "indexdef": "CREATE INDEX \"Project_status_category_sortOrder_idx\" ON public.\"Project\" USING btree (status, category, \"sortOrder\")"
+        },
+        {
+          "tablename": "ProjectImage",
+          "indexname": "ProjectImage_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"ProjectImage_pkey\" ON public.\"ProjectImage\" USING btree (id)"
+        },
+        {
+          "tablename": "ProjectImage",
+          "indexname": "ProjectImage_projectId_sortOrder_idx",
+          "indexdef": "CREATE INDEX \"ProjectImage_projectId_sortOrder_idx\" ON public.\"ProjectImage\" USING btree (\"projectId\", \"sortOrder\")"
+        },
+        {
+          "tablename": "ProjectSlugAlias",
+          "indexname": "ProjectSlugAlias_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"ProjectSlugAlias_pkey\" ON public.\"ProjectSlugAlias\" USING btree (slug)"
+        },
+        {
+          "tablename": "ProjectSlugAlias",
+          "indexname": "ProjectSlugAlias_projectId_idx",
+          "indexdef": "CREATE INDEX \"ProjectSlugAlias_projectId_idx\" ON public.\"ProjectSlugAlias\" USING btree (\"projectId\")"
+        },
+        {
+          "tablename": "ServiceJob",
+          "indexname": "ServiceJob_companyId_idx",
+          "indexdef": "CREATE INDEX \"ServiceJob_companyId_idx\" ON public.\"ServiceJob\" USING btree (\"companyId\")"
+        },
+        {
+          "tablename": "ServiceJob",
+          "indexname": "ServiceJob_customerId_status_serviceDate_idx",
+          "indexdef": "CREATE INDEX \"ServiceJob_customerId_status_serviceDate_idx\" ON public.\"ServiceJob\" USING btree (\"customerId\", status, \"serviceDate\")"
+        },
+        {
+          "tablename": "ServiceJob",
+          "indexname": "ServiceJob_jobNumber_key",
+          "indexdef": "CREATE UNIQUE INDEX \"ServiceJob_jobNumber_key\" ON public.\"ServiceJob\" USING btree (\"jobNumber\")"
+        },
+        {
+          "tablename": "ServiceJob",
+          "indexname": "ServiceJob_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"ServiceJob_pkey\" ON public.\"ServiceJob\" USING btree (id)"
+        },
+        {
+          "tablename": "ServiceJob",
+          "indexname": "ServiceJob_status_serviceDate_idx",
+          "indexdef": "CREATE INDEX \"ServiceJob_status_serviceDate_idx\" ON public.\"ServiceJob\" USING btree (status, \"serviceDate\")"
+        },
+        {
+          "tablename": "ServiceJobLineItem",
+          "indexname": "ServiceJobLineItem_cataloguePriceItemId_idx",
+          "indexdef": "CREATE INDEX \"ServiceJobLineItem_cataloguePriceItemId_idx\" ON public.\"ServiceJobLineItem\" USING btree (\"cataloguePriceItemId\")"
+        },
+        {
+          "tablename": "ServiceJobLineItem",
+          "indexname": "ServiceJobLineItem_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"ServiceJobLineItem_pkey\" ON public.\"ServiceJobLineItem\" USING btree (id)"
+        },
+        {
+          "tablename": "ServiceJobLineItem",
+          "indexname": "ServiceJobLineItem_serviceJobId_sortOrder_idx",
+          "indexdef": "CREATE INDEX \"ServiceJobLineItem_serviceJobId_sortOrder_idx\" ON public.\"ServiceJobLineItem\" USING btree (\"serviceJobId\", \"sortOrder\")"
+        },
+        {
+          "tablename": "Session",
+          "indexname": "Session_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"Session_pkey\" ON public.\"Session\" USING btree (id)"
+        },
+        {
+          "tablename": "Session",
+          "indexname": "Session_tokenHash_key",
+          "indexdef": "CREATE UNIQUE INDEX \"Session_tokenHash_key\" ON public.\"Session\" USING btree (\"tokenHash\")"
+        },
+        {
+          "tablename": "Session",
+          "indexname": "Session_userId_expiresAt_idx",
+          "indexdef": "CREATE INDEX \"Session_userId_expiresAt_idx\" ON public.\"Session\" USING btree (\"userId\", \"expiresAt\")"
+        },
+        {
+          "tablename": "VisitorDay",
+          "indexname": "VisitorDay_day_key",
+          "indexdef": "CREATE UNIQUE INDEX \"VisitorDay_day_key\" ON public.\"VisitorDay\" USING btree (day)"
+        },
+        {
+          "tablename": "VisitorDay",
+          "indexname": "VisitorDay_pkey",
+          "indexdef": "CREATE UNIQUE INDEX \"VisitorDay_pkey\" ON public.\"VisitorDay\" USING btree (id)"
+        },
+        {
+          "tablename": "_prisma_migrations",
+          "indexname": "_prisma_migrations_pkey",
+          "indexdef": "CREATE UNIQUE INDEX _prisma_migrations_pkey ON public._prisma_migrations USING btree (id)"
+        }
+      ],
+      "counts": [
+        {
+          "table": "AdminUser",
+          "count": "1"
+        },
+        {
+          "table": "AuditLog",
+          "count": "122"
+        },
+        {
+          "table": "BusinessBillingSettings",
+          "count": "1"
+        },
+        {
+          "table": "Company",
+          "count": "1"
+        },
+        {
+          "table": "ContactAttachment",
+          "count": "0"
+        },
+        {
+          "table": "ContactMessage",
+          "count": "4"
+        },
+        {
+          "table": "ContactRateLimit",
+          "count": "1"
+        },
+        {
+          "table": "Customer",
+          "count": "2"
+        },
+        {
+          "table": "CustomerActivity",
+          "count": "12"
+        },
+        {
+          "table": "CustomerNote",
+          "count": "0"
+        },
+        {
+          "table": "FileAsset",
+          "count": "0"
+        },
+        {
+          "table": "Invoice",
+          "count": "2"
+        },
+        {
+          "table": "InvoiceLine",
+          "count": "3"
+        },
+        {
+          "table": "InvoicePayment",
+          "count": "0"
+        },
+        {
+          "table": "NumberSequence",
+          "count": "3"
+        },
+        {
+          "table": "PriceItem",
+          "count": "145"
+        },
+        {
+          "table": "PriceSection",
+          "count": "12"
+        },
+        {
+          "table": "Project",
+          "count": "10"
+        },
+        {
+          "table": "ProjectImage",
+          "count": "27"
+        },
+        {
+          "table": "ProjectSlugAlias",
+          "count": "0"
+        },
+        {
+          "table": "ServiceJob",
+          "count": "2"
+        },
+        {
+          "table": "ServiceJobLineItem",
+          "count": "2"
+        },
+        {
+          "table": "Session",
+          "count": "36"
+        },
+        {
+          "table": "VisitorDay",
+          "count": "0"
+        },
+        {
+          "table": "_prisma_migrations",
+          "count": "13"
+        }
+      ]
+    },
+    "identity": [
+      {
+        "database": "neondb",
+        "schema": "public",
+        "role": "neondb_owner",
+        "version": "17.11 (11592b3)"
+      }
+    ],
+    "ledger": [
+      {
+        "migration_name": "20260725212133_init",
+        "checksum": "33da1e9791959eb850f8a42e3e7cba0d0d0165ab2e3931804919ea3ac03df4ca",
+        "finished_at": "2026-08-05T14:19:31.507Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260727160000_portfolio_images_and_fields",
+        "checksum": "6a76a87b989f12478b66648ad643f15b1b4f9caa5e0cf43d2e1778f7017dbeaa",
+        "finished_at": "2026-08-05T14:19:32.357Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260904120000_rename_new_message_status_to_unread",
+        "checksum": "050a37795c833e83d3f1e76e95040c03a819f4e87fd9788dae93e58b6a4c8e5f",
+        "finished_at": "2026-09-22T07:31:38.515Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260920120000_private_contact_attachments",
+        "checksum": "2b684ec52411288018fcc2d0c052a18795ab6a8480b09d4d5a7f70e7f92f1f36",
+        "finished_at": "2026-09-22T07:31:38.697Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260921100000_remove_project_featured",
+        "checksum": "f77423202bb1b9f7cc6df80fbd891c39398b54ac76a95d04ef494a2ba0557300",
+        "finished_at": "2026-09-22T07:31:38.809Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260921101000_project_seo_and_slug_history",
+        "checksum": "1eba1ee5bff7ffe872d75bb616fb5e52942bbf680b4f7ea632d20a86d38d9db9",
+        "finished_at": "2026-09-22T07:31:38.914Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260922110000_crm_service_jobs",
+        "checksum": "ee4355fb797d5c0c2443c61f9a58f994931c10c1ffe07aaba5e644e26a5334c3",
+        "finished_at": "2026-09-22T15:46:30.209Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260922150000_service_job_line_items",
+        "checksum": "594a57b4427cbc48bb8f517d91686a6796ac664a6ec1b805d08577fd5ed8d651",
+        "finished_at": "2026-09-22T20:56:36.283Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260922170000_invoices",
+        "checksum": "3d23570f599a7d7f8037e74c942c909299353092f0ffa22b492fbae4742b0043",
+        "finished_at": "2026-09-22T20:56:36.409Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260922230000_unique_draft_per_service_job",
+        "checksum": "36d071b46036398c40f4c2bc7518f3e98179b7e41003002b605250c3109f63ee",
+        "finished_at": "2026-09-22T21:33:07.610Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260923140000_invoice_billing_recipient",
+        "checksum": "f477f094d66727de497430407af18ff1ac7aa48089cf8b1bf4aa880f8bc5bb51",
+        "finished_at": "2026-09-23T20:07:56.252Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260927150000_bilingual_invoice_snapshots",
+        "checksum": "81187ead34e3143207eb2b54bb99fd44d2ea35a557681971a03f5368e12c35a8",
+        "finished_at": "2026-10-04T11:36:13.544Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      },
+      {
+        "migration_name": "20260927151000_project_image_schema_guard",
+        "checksum": "e42962a8222df19c143ac8f388a414dfad7656231c24ebed1a8ed51a79dee899",
+        "finished_at": "2026-10-04T11:36:13.653Z",
+        "rolled_back_at": null,
+        "applied_steps_count": 1
+      }
+    ],
+    "fingerprints": [
+      {
+        "table": "AdminUser",
+        "count": "1",
+        "fingerprint": "2f1f3ff03d1b1971a69ec37c5b926833"
+      },
+      {
+        "table": "AuditLog",
+        "count": "122",
+        "fingerprint": "8826288b81b58123fdda8676bb91a483"
+      },
+      {
+        "table": "BusinessBillingSettings",
+        "count": "1",
+        "fingerprint": "1f02c4929d1e2400a689d6d31b6d7292"
+      },
+      {
+        "table": "Company",
+        "count": "1",
+        "fingerprint": "d6886de53ffc004630a70c71c9c53bd0"
+      },
+      {
+        "table": "ContactAttachment",
+        "count": "0",
+        "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+      },
+      {
+        "table": "ContactMessage",
+        "count": "4",
+        "fingerprint": "b31f0d514d170ea9c3a02efe289ce953"
+      },
+      {
+        "table": "ContactRateLimit",
+        "count": "1",
+        "fingerprint": "fee51126dc71cbf1775973b92985d6e9"
+      },
+      {
+        "table": "Customer",
+        "count": "2",
+        "fingerprint": "2b10a85addc3b7567b3aa32bdcf75fb3"
+      },
+      {
+        "table": "CustomerActivity",
+        "count": "12",
+        "fingerprint": "99902ca2b47326ead232cce20404547d"
+      },
+      {
+        "table": "CustomerNote",
+        "count": "0",
+        "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+      },
+      {
+        "table": "FileAsset",
+        "count": "0",
+        "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+      },
+      {
+        "table": "Invoice",
+        "count": "2",
+        "fingerprint": "741c89e78dddcae572f3bfc0066416a7"
+      },
+      {
+        "table": "InvoiceLine",
+        "count": "3",
+        "fingerprint": "a4e5de99a8b64b4a38671baa22cae70f"
+      },
+      {
+        "table": "InvoicePayment",
+        "count": "0",
+        "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+      },
+      {
+        "table": "NumberSequence",
+        "count": "3",
+        "fingerprint": "46e537c9bd6dba544dc3dc342757a809"
+      },
+      {
+        "table": "PriceItem",
+        "count": "145",
+        "fingerprint": "a9b48c107c209f003d7fbc2a00860429"
+      },
+      {
+        "table": "PriceSection",
+        "count": "12",
+        "fingerprint": "343333c28c6321529ff8a3fd3bfe3a92"
+      },
+      {
+        "table": "Project",
+        "count": "10",
+        "fingerprint": "111adce883975a64873ed07adc057d8a"
+      },
+      {
+        "table": "ProjectImage",
+        "count": "27",
+        "fingerprint": "f26391d6abf7a21472b26c647cf1eeb6"
+      },
+      {
+        "table": "ProjectSlugAlias",
+        "count": "0",
+        "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+      },
+      {
+        "table": "ServiceJob",
+        "count": "2",
+        "fingerprint": "fc88dd4eb236dd31c5511751df25475b"
+      },
+      {
+        "table": "ServiceJobLineItem",
+        "count": "2",
+        "fingerprint": "e1fcdb50ab0f1efd8047352a4dbf8c81"
+      },
+      {
+        "table": "Session",
+        "count": "36",
+        "fingerprint": "1bc98552ebc2e53497f8fc3ced41ec69"
+      },
+      {
+        "table": "VisitorDay",
+        "count": "0",
+        "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+      },
+      {
+        "table": "_prisma_migrations",
+        "count": "13",
+        "fingerprint": "dedbf8172cc6c47b3871683bced02b43"
+      }
+    ],
+    "published": [
+      {
+        "slug": "mongoose-signs",
+        "category": "web-development",
+        "title": "Mongoose Signs & Advertising"
+      },
+      {
+        "slug": "donetsfit",
+        "category": "web-development",
+        "title": "DonetsFit"
+      },
+      {
+        "slug": "calc-donetsfit",
+        "category": "web-development",
+        "title": "DonetsFit Calculator"
+      },
+      {
+        "slug": "fedora-windows-dual-boot-workstation",
+        "category": "linux-servers",
+        "title": "Fedora KDE + Windows 11 Dual-Boot Workstation"
+      },
+      {
+        "slug": "etit-vpu7-virtual-tour",
+        "category": "web-development",
+        "title": "ETIT.info — Virtual Tour of VPU No. 7"
+      },
+      {
+        "slug": "tiladys-business-card",
+        "category": "design",
+        "title": "TiLADYS Business Card"
+      },
+      {
+        "slug": "jobadys",
+        "category": "web-development",
+        "title": "JobAdys"
+      }
+    ],
+    "images": [
+      {
+        "id": "cmssabqzi0003kz04ekuleu0y",
+        "slug": "calc-donetsfit"
+      },
+      {
+        "id": "cmssabsuj0007kz04a52o9r4s",
+        "slug": "calc-donetsfit"
+      },
+      {
+        "id": "cmssabtxg000bkz0472y2mp1m",
+        "slug": "calc-donetsfit"
+      },
+      {
+        "id": "cmss9k7c70004k004pmwj01s9",
+        "slug": "donetsfit"
+      },
+      {
+        "id": "cmsvexiom0007lg0401916w5j",
+        "slug": "etit-vpu7-virtual-tour"
+      },
+      {
+        "id": "cmsvexkq1000blg04co1y5rv8",
+        "slug": "etit-vpu7-virtual-tour"
+      },
+      {
+        "id": "cmsvexmqt000flg048xel0bx4",
+        "slug": "etit-vpu7-virtual-tour"
+      },
+      {
+        "id": "cmsvexoyd000jlg04f3d1nwzj",
+        "slug": "etit-vpu7-virtual-tour"
+      },
+      {
+        "id": "cmsvexqdo000nlg04oe1xa8o1",
+        "slug": "etit-vpu7-virtual-tour"
+      },
+      {
+        "id": "cmu4hz0t60003jp04ylfseb8j",
+        "slug": "fedora-windows-dual-boot-workstation"
+      },
+      {
+        "id": "cmu4hz2my0007jp04m2ycvis7",
+        "slug": "fedora-windows-dual-boot-workstation"
+      },
+      {
+        "id": "cmu4hz3ns000bjp048vt6i9cp",
+        "slug": "fedora-windows-dual-boot-workstation"
+      },
+      {
+        "id": "cmu4hz4m4000fjp04r00up6pi",
+        "slug": "fedora-windows-dual-boot-workstation"
+      },
+      {
+        "id": "cmu4hz5ls000jjp04h6hzgs82",
+        "slug": "fedora-windows-dual-boot-workstation"
+      },
+      {
+        "id": "cmu4hz6g5000njp04hzc22bew",
+        "slug": "fedora-windows-dual-boot-workstation"
+      },
+      {
+        "id": "cmsveydgy000tlg04u8s9rg32",
+        "slug": "jobadys"
+      },
+      {
+        "id": "cmsveyeqm000xlg04j79n04pb",
+        "slug": "jobadys"
+      },
+      {
+        "id": "cmsveyfq70011lg04reeq43mw",
+        "slug": "jobadys"
+      },
+      {
+        "id": "cmsveygq40015lg04bk8lurw7",
+        "slug": "jobadys"
+      },
+      {
+        "id": "cmsveyj3x0001l804h84odqvr",
+        "slug": "jobadys"
+      },
+      {
+        "id": "cmsveykub0005l8044ps47m5w",
+        "slug": "jobadys"
+      },
+      {
+        "id": "cmsuweiru0007jf04wd8ky15q",
+        "slug": "mongoose-signs"
+      },
+      {
+        "id": "cmsuwel9c000bjf0401s7vmwp",
+        "slug": "mongoose-signs"
+      },
+      {
+        "id": "cmsuwen78000fjf043kvfsiti",
+        "slug": "mongoose-signs"
+      },
+      {
+        "id": "cmu4k2w590004l4040cxe0bsj",
+        "slug": "tiladys-business-card"
+      },
+      {
+        "id": "cmu4k2xts0008l404qmsb5kqw",
+        "slug": "tiladys-business-card"
+      },
+      {
+        "id": "cmu4k2yzx000cl404xubkj9cs",
+        "slug": "tiladys-business-card"
+      }
+    ]
+  },
+  "publicEnvironmentUnchanged": true,
+  "controlEnvironmentUnchanged": true,
+  "deploymentProtectionUnchanged": true,
+  "contactRealSubmission": false,
+  "publicProtectionTokenStillPendingRevocation": true
+}

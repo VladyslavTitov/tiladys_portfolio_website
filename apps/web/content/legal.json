@@ -1,0 +1,188 @@
+{
+  "en": {
+    "contact": "Contact details",
+    "operator": "TiLADYS — Vladyslav Titov",
+    "privacySections": [
+      [
+        "Inquiries and replies",
+        "The form collects your name, email address, message, selected service (optional), language and consent. Inquiries are stored in PostgreSQL and viewed in the authenticated TiLADYS dashboard. Staff can reply to the supplied email address through SMTP. The reply and its time are stored with the inquiry. Submitting the form does not trigger an automatic email."
+      ],
+      [
+        "Security and administration",
+        "The contact endpoint limits requests using an IP-derived, keyed hash and a counter shared in PostgreSQL. It reads an IP only from a configured trusted proxy header; otherwise requests share an unidentified-source counter. Counters use ten-minute windows and expired entries are removed during subsequent requests. The admin area uses an eight-hour HttpOnly session cookie, secure in production, with SameSite Strict. Session records include a hashed token, a hashed IP and a user agent; login and administrative actions create audit records."
+      ],
+      [
+        "Hosting, database and email",
+        "The website and admin application process requests on their hosting infrastructure. PostgreSQL stores inquiries and replies, and the configured SMTP service handles reply delivery and admin login alerts. The specific hosting, database and email providers, locations, recipients and backup arrangements still require owner confirmation."
+      ],
+      [
+        "Links, images and fonts",
+        "This code does not add visitor analytics, advertising scripts, embedded maps or third-party fonts. System fonts are used. Social and Google Maps links open external services when followed. Portfolio images may load from the TiLADYS control application or an external cover-image host, which receives the browser request. Hosting-level logging or integrations require verification."
+      ],
+      [
+        "Retention and requests",
+        "A retention period for inquiries, replies and security records has not been confirmed. The code does not automatically delete inquiries on a schedule. Contact TiLADYS using the details below for questions about your data."
+      ]
+    ],
+    "attachments": "Optional images, when enabled, are limited to two JPEG, PNG or WebP files of up to 1 MiB each. The server checks file signatures, dimensions and total size, converts images to WebP, resizes them and removes metadata. Converted files are stored with the inquiry in PostgreSQL. Authenticated administrators can preview, download and delete attachments; there is no public attachment URL or email attachment forwarding. No automatic customer-file deletion period is configured. Backup deletion behavior requires confirmation.",
+    "attachmentsTitle": "Optional inquiry images",
+    "processTitle": "How this website handles a request",
+    "process": "TiLADYS presents PC/laptop, website and business IT services. The contact form sends an inquiry to the dashboard. It contains no checkout, payment or automatic appointment-booking function. The service pages describe discussing the requested work, scope and price before starting. Any further agreement requires the actual service details to be clarified.",
+    "socialText": "You can also contact TiLADYS through its social media accounts, explore our services or browse the portfolio."
+  },
+  "de": {
+    "contact": "Kontaktdaten",
+    "operator": "TiLADYS — Vladyslav Titov",
+    "privacySections": [
+      [
+        "Anfragen und Antworten",
+        "Das Formular erfasst Name, E-Mail-Adresse, Nachricht, ausgewählten Service (optional), Sprache und Einwilligung. Anfragen werden in PostgreSQL gespeichert und im authentifizierten TiLADYS-Dashboard angezeigt. Mitarbeitende können über SMTP an die angegebene E-Mail-Adresse antworten. Antwort und Zeitpunkt werden bei der Anfrage gespeichert. Das Absenden löst keine automatische E-Mail aus."
+      ],
+      [
+        "Sicherheit und Administration",
+        "Der Kontakt-Endpunkt begrenzt Anfragen mit einem schlüsselbasierten Hash der IP-Adresse und einem gemeinsamen Zähler in PostgreSQL. Eine IP-Adresse wird nur aus einem konfigurierten, vertrauenswürdigen Proxy-Header gelesen; sonst gilt ein gemeinsamer Zähler für unbekannte Quellen. Zähler verwenden Zehn-Minuten-Fenster; abgelaufene Einträge werden bei späteren Anfragen entfernt. Der Adminbereich verwendet ein achtstündiges HttpOnly-Sitzungscookie mit SameSite Strict, in Produktion zusätzlich Secure. Sitzungsdaten enthalten einen gehashten Token, eine gehashte IP-Adresse und einen User-Agent. Anmeldungen und administrative Aktionen werden protokolliert."
+      ],
+      [
+        "Hosting, Datenbank und E-Mail",
+        "Website und Adminanwendung verarbeiten Anfragen auf ihrer Hosting-Infrastruktur. PostgreSQL speichert Anfragen und Antworten. Der konfigurierte SMTP-Dienst versendet Antworten und Hinweise auf Adminanmeldungen. Konkrete Hosting-, Datenbank- und E-Mail-Anbieter, Standorte, Empfänger und Sicherungsverfahren müssen noch bestätigt werden."
+      ],
+      [
+        "Links, Bilder und Schriftarten",
+        "Dieser Code fügt keine Besucheranalyse, Werbeskripte, eingebetteten Karten oder externen Schriftarten hinzu. Es werden Systemschriftarten verwendet. Social-Media- und Google-Maps-Links öffnen externe Dienste beim Anklicken. Portfoliobilder können aus der TiLADYS-Control-Anwendung oder von einem externen Bildanbieter geladen werden, der die Browseranfrage erhält. Hosting-Protokolle und zusätzliche Integrationen müssen geprüft werden."
+      ],
+      [
+        "Speicherung und Auskunft",
+        "Eine Speicherdauer für Anfragen, Antworten und Sicherheitsdaten ist nicht bestätigt. Der Code löscht Anfragen nicht automatisch nach einem Zeitplan. Bei Fragen zu Ihren Daten kontaktieren Sie TiLADYS über die unten genannten Kontaktdaten."
+      ]
+    ],
+    "attachments": "Optionale Bilder sind bei aktivierter Funktion auf zwei JPEG-, PNG- oder WebP-Dateien mit jeweils höchstens 1 MiB begrenzt. Der Server prüft Dateisignaturen, Abmessungen und Gesamtgröße, wandelt Bilder in WebP um, verkleinert sie und entfernt Metadaten. Die umgewandelten Dateien werden mit der Anfrage in PostgreSQL gespeichert. Authentifizierte Administratoren können Anhänge ansehen, herunterladen und löschen. Es gibt keine öffentliche Anhang-URL und keine Weiterleitung als E-Mail-Anhang. Eine automatische Löschfrist für Kundendateien ist nicht konfiguriert. Die Löschung aus Sicherungen muss geklärt werden.",
+    "attachmentsTitle": "Optionale Bilder zur Anfrage",
+    "processTitle": "So verarbeitet diese Website eine Anfrage",
+    "process": "TiLADYS stellt PC-/Laptop-, Website- und Unternehmens-IT-Services vor. Das Kontaktformular sendet eine Anfrage an das Dashboard. Es enthält weder Checkout noch Zahlung oder automatische Terminbuchung. Die Serviceseiten beschreiben die Abstimmung von Arbeit, Umfang und Preis vor Beginn. Weitere Vereinbarungen erfordern die Klärung der konkreten Leistung.",
+    "socialText": "Sie können TiLADYS auch über die Social-Media-Konten kontaktieren, unsere Services ansehen oder das Portfolio durchstöbern."
+  },
+  "uk": {
+    "contact": "Контактні дані",
+    "operator": "TiLADYS — Vladyslav Titov",
+    "privacySections": [
+      [
+        "Звернення та відповіді",
+        "Форма збирає ім’я, електронну адресу, повідомлення, обрану послугу (необов’язково), мову та згоду. Звернення зберігаються в PostgreSQL і доступні в захищеній входом панелі TiLADYS. Працівники можуть відповісти через SMTP на вказану адресу. Відповідь і її час зберігаються зі зверненням. Надсилання форми не створює автоматичного листа."
+      ],
+      [
+        "Безпека й адміністрування",
+        "Контактний обробник обмежує звернення за допомогою хешу IP-адреси з ключем і спільного лічильника в PostgreSQL. IP читається лише з налаштованого довіреного заголовка проксі; інакше використовується спільний лічильник невідомих джерел. Вікна лічильників тривають десять хвилин; прострочені записи видаляються під час наступних звернень. Адмінпанель використовує восьмигодинний HttpOnly cookie сесії з SameSite Strict і Secure у робочому середовищі. Записи сесій містять хеш токена, хеш IP та user agent. Входи й адміністративні дії фіксуються в журналі."
+      ],
+      [
+        "Хостинг, база даних і пошта",
+        "Сайт та адмінпанель обробляють запити на інфраструктурі хостингу. PostgreSQL зберігає звернення й відповіді. Налаштований SMTP-сервіс надсилає відповіді та сповіщення про вхід адміністратора. Конкретні постачальники, місця обробки, одержувачі й резервне копіювання потребують підтвердження власника."
+      ],
+      [
+        "Посилання, зображення та шрифти",
+        "Цей код не додає аналітику відвідувачів, рекламні скрипти, вбудовані мапи чи сторонні шрифти. Використовуються системні шрифти. Посилання соцмереж і Google Maps відкривають зовнішні сервіси після переходу. Зображення портфоліо можуть завантажуватися з панелі TiLADYS або стороннього хостингу зображень, який отримує запит браузера. Журнали хостингу й додаткові інтеграції потрібно перевірити."
+      ],
+      [
+        "Зберігання та звернення щодо даних",
+        "Строк зберігання звернень, відповідей і записів безпеки не підтверджено. Код не видаляє звернення автоматично за розкладом. Із запитаннями про дані звертайтеся до TiLADYS за контактами нижче."
+      ]
+    ],
+    "attachments": "Якщо функцію ввімкнено, можна додати два зображення JPEG, PNG або WebP до 1 МіБ кожне. Сервер перевіряє сигнатури, розміри й загальний обсяг, перетворює зображення на WebP, зменшує їх і видаляє метадані. Перетворені файли зберігаються зі зверненням у PostgreSQL. Авторизовані адміністратори можуть переглядати, завантажувати й видаляти вкладення. Публічної адреси вкладень та пересилання їх поштою немає. Автоматичний строк видалення клієнтських файлів не налаштовано. Видалення з резервних копій потребує уточнення.",
+    "attachmentsTitle": "Необов’язкові зображення до звернення",
+    "processTitle": "Як сайт обробляє звернення",
+    "process": "TiLADYS представляє послуги для ПК і ноутбуків, вебсайтів та IT для бізнесу. Контактна форма надсилає звернення до панелі. Вона не містить оформлення покупки, оплати чи автоматичного бронювання. Сторінки послуг описують обговорення робіт, обсягу й ціни до початку. Подальші домовленості потребують уточнення конкретної послуги.",
+    "socialText": "Ви також можете зв’язатися з TiLADYS через соціальні мережі, переглянути послуги або портфоліо."
+  },
+  "ru": {
+    "contact": "Контактные данные",
+    "operator": "TiLADYS — Vladyslav Titov",
+    "privacySections": [
+      [
+        "Обращения и ответы",
+        "Форма собирает имя, электронный адрес, сообщение, выбранную услугу (необязательно), язык и согласие. Обращения хранятся в PostgreSQL и доступны в защищённой входом панели TiLADYS. Сотрудники могут ответить через SMTP на указанный адрес. Ответ и время сохраняются с обращением. Отправка формы не создаёт автоматического письма."
+      ],
+      [
+        "Безопасность и администрирование",
+        "Обработчик ограничивает обращения с помощью хеша IP-адреса с ключом и общего счётчика в PostgreSQL. IP читается только из настроенного доверенного заголовка прокси; иначе используется общий счётчик неизвестных источников. Окна счётчиков длятся десять минут; устаревшие записи удаляются при последующих обращениях. Админпанель использует восьмичасовой HttpOnly cookie сессии с SameSite Strict и Secure в рабочем окружении. Записи сессий содержат хеш токена, хеш IP и user agent. Входы и административные действия фиксируются в журнале."
+      ],
+      [
+        "Хостинг, база данных и почта",
+        "Сайт и админпанель обрабатывают запросы на инфраструктуре хостинга. PostgreSQL хранит обращения и ответы. Настроенный SMTP-сервис отправляет ответы и уведомления о входе администратора. Конкретные поставщики, места обработки, получатели и резервное копирование требуют подтверждения владельца."
+      ],
+      [
+        "Ссылки, изображения и шрифты",
+        "Этот код не добавляет аналитику посетителей, рекламные скрипты, встроенные карты или сторонние шрифты. Используются системные шрифты. Ссылки соцсетей и Google Maps открывают внешние сервисы после перехода. Изображения портфолио могут загружаться из панели TiLADYS или со стороннего хостинга изображений, который получает запрос браузера. Журналы хостинга и дополнительные интеграции нужно проверить."
+      ],
+      [
+        "Хранение и вопросы о данных",
+        "Срок хранения обращений, ответов и записей безопасности не подтверждён. Код не удаляет обращения автоматически по расписанию. С вопросами о данных обращайтесь в TiLADYS по контактам ниже."
+      ]
+    ],
+    "attachments": "Если функция включена, можно добавить два изображения JPEG, PNG или WebP до 1 МиБ каждое. Сервер проверяет сигнатуры, размеры и общий объём, преобразует изображения в WebP, уменьшает их и удаляет метаданные. Преобразованные файлы хранятся с обращением в PostgreSQL. Авторизованные администраторы могут просматривать, скачивать и удалять вложения. Публичных адресов вложений и пересылки их по почте нет. Автоматический срок удаления клиентских файлов не настроен. Удаление из резервных копий требует уточнения.",
+    "attachmentsTitle": "Необязательные изображения к обращению",
+    "processTitle": "Как сайт обрабатывает обращение",
+    "process": "TiLADYS представляет услуги для ПК и ноутбуков, сайтов и IT для бизнеса. Контактная форма отправляет обращение в панель. В ней нет оформления покупки, оплаты или автоматического бронирования. Страницы услуг описывают обсуждение работ, объёма и цены до начала. Дальнейшие договорённости требуют уточнения конкретной услуги.",
+    "socialText": "Вы также можете связаться с TiLADYS через социальные сети, посмотреть услуги или портфолио."
+  },
+  "sk": {
+    "contact": "Kontaktné údaje",
+    "operator": "TiLADYS — Vladyslav Titov",
+    "privacySections": [
+      [
+        "Požiadavky a odpovede",
+        "Formulár zbiera meno, e-mail, správu, zvolenú službu (voliteľnú), jazyk a súhlas. Požiadavky sa ukladajú v PostgreSQL a zobrazujú v zabezpečenej administrácii TiLADYS. Pracovníci môžu odpovedať cez SMTP na uvedenú adresu. Odpoveď a čas sa ukladajú pri požiadavke. Odoslanie formulára nespúšťa automatický e-mail."
+      ],
+      [
+        "Bezpečnosť a administrácia",
+        "Kontaktný endpoint obmedzuje požiadavky pomocou kľúčovaného hashu IP adresy a spoločného počítadla v PostgreSQL. IP číta iba z nakonfigurovanej dôveryhodnej proxy hlavičky; inak požiadavky zdieľajú počítadlo neznámeho zdroja. Počítadlá používajú desaťminútové okná; expirované záznamy sa odstránia pri ďalších požiadavkách. Administrácia používa osemhodinový HttpOnly cookie relácie so SameSite Strict a v produkcii Secure. Záznamy relácie obsahujú hash tokenu, hash IP a user agent. Prihlásenia a administratívne úkony sa zaznamenávajú."
+      ],
+      [
+        "Hosting, databáza a e-mail",
+        "Web a administrácia spracúvajú požiadavky na hostingovej infraštruktúre. PostgreSQL ukladá požiadavky a odpovede. Nakonfigurovaná služba SMTP doručuje odpovede a upozornenia na prihlásenie správcu. Konkrétni poskytovatelia, lokality, príjemcovia a zálohovanie vyžadujú potvrdenie prevádzkovateľa."
+      ],
+      [
+        "Odkazy, obrázky a písma",
+        "Tento kód nepridáva analytiku návštevníkov, reklamné skripty, vložené mapy ani externé písma. Používajú sa systémové písma. Odkazy na sociálne siete a Google Maps otvárajú externé služby po kliknutí. Obrázky portfólia sa môžu načítať z aplikácie TiLADYS Control alebo externého hostingu obrázkov, ktorý dostane požiadavku prehliadača. Hostingové záznamy a ďalšie integrácie treba overiť."
+      ],
+      [
+        "Uchovávanie a otázky o údajoch",
+        "Doba uchovávania požiadaviek, odpovedí a bezpečnostných záznamov nie je potvrdená. Kód neodstraňuje požiadavky automaticky podľa plánu. S otázkami o údajoch kontaktujte TiLADYS pomocou údajov nižšie."
+      ]
+    ],
+    "attachments": "Ak je funkcia zapnutá, možno pridať dva obrázky JPEG, PNG alebo WebP do 1 MiB každý. Server kontroluje signatúry, rozmery a celkovú veľkosť, prevádza obrázky na WebP, zmenšuje ich a odstraňuje metadáta. Súbory sa ukladajú s požiadavkou v PostgreSQL. Prihlásení správcovia môžu prílohy zobraziť, stiahnuť a odstrániť. Prílohy nemajú verejnú URL a neposielajú sa ako e-mailové prílohy. Automatická lehota odstránenia zákazníckych súborov nie je nastavená. Odstránenie zo záloh treba potvrdiť.",
+    "attachmentsTitle": "Voliteľné obrázky k požiadavke",
+    "processTitle": "Ako tento web spracúva požiadavku",
+    "process": "TiLADYS predstavuje služby pre PC a notebooky, webové stránky a firemné IT. Kontaktný formulár odošle požiadavku do administrácie. Neobsahuje pokladňu, platbu ani automatickú rezerváciu termínu. Stránky služieb opisujú prerokovanie práce, rozsahu a ceny pred začatím. Ďalšia dohoda vyžaduje objasnenie konkrétnej služby.",
+    "socialText": "TiLADYS môžete kontaktovať aj cez sociálne siete, pozrieť si služby alebo portfólio."
+  },
+  "fr": {
+    "contact": "Coordonnées",
+    "operator": "TiLADYS — Vladyslav Titov",
+    "privacySections": [
+      [
+        "Demandes et réponses",
+        "Le formulaire recueille votre nom, votre e-mail, votre message, le service choisi (facultatif), la langue et le consentement. Les demandes sont conservées dans PostgreSQL et consultées dans le tableau de bord authentifié TiLADYS. Le personnel peut répondre à l’adresse fournie par SMTP. La réponse et son horodatage sont conservés avec la demande. L’envoi du formulaire ne déclenche aucun e-mail automatique."
+      ],
+      [
+        "Sécurité et administration",
+        "Le point de contact limite les demandes avec un hachage à clé dérivé de l’adresse IP et un compteur partagé dans PostgreSQL. L’IP n’est lue que depuis un en-tête de proxy de confiance configuré ; sinon les demandes partagent un compteur de source inconnue. Les compteurs utilisent des fenêtres de dix minutes ; les entrées expirées sont supprimées lors de demandes ultérieures. L’administration utilise un cookie de session HttpOnly de huit heures, SameSite Strict et Secure en production. Les sessions comprennent un jeton haché, une IP hachée et un user agent. Les connexions et actions administratives sont journalisées."
+      ],
+      [
+        "Hébergement, base de données et e-mail",
+        "Le site et l’administration traitent les demandes sur leur infrastructure d’hébergement. PostgreSQL conserve les demandes et réponses. Le service SMTP configuré envoie les réponses et alertes de connexion administrateur. Les prestataires précis, lieux, destinataires et modalités de sauvegarde doivent être confirmés par le propriétaire."
+      ],
+      [
+        "Liens, images et polices",
+        "Ce code n’ajoute ni analyse des visiteurs, ni scripts publicitaires, ni cartes intégrées, ni polices tierces. Il utilise les polices système. Les liens sociaux et Google Maps ouvrent des services externes lorsqu’ils sont suivis. Les images du portfolio peuvent provenir de l’application TiLADYS Control ou d’un hébergeur d’images externe qui reçoit la requête du navigateur. Les journaux d’hébergement et intégrations supplémentaires restent à vérifier."
+      ],
+      [
+        "Conservation et demandes relatives aux données",
+        "La durée de conservation des demandes, réponses et données de sécurité n’est pas confirmée. Le code ne supprime pas automatiquement les demandes selon un calendrier. Pour toute question sur vos données, contactez TiLADYS aux coordonnées ci-dessous."
+      ]
+    ],
+    "attachments": "Lorsque la fonction est activée, deux images JPEG, PNG ou WebP de 1 Mio chacune au maximum peuvent être jointes. Le serveur vérifie les signatures, dimensions et taille totale, convertit les images en WebP, les redimensionne et supprime les métadonnées. Les fichiers convertis sont conservés avec la demande dans PostgreSQL. Les administrateurs authentifiés peuvent les consulter, télécharger et supprimer. Il n’existe aucune URL publique de pièce jointe ni transmission en pièce jointe par e-mail. Aucun délai automatique de suppression des fichiers clients n’est configuré. La suppression des sauvegardes reste à confirmer.",
+    "attachmentsTitle": "Images facultatives des demandes",
+    "processTitle": "Comment ce site traite une demande",
+    "process": "TiLADYS présente des services pour PC et ordinateurs portables, sites web et informatique professionnelle. Le formulaire envoie une demande au tableau de bord. Il ne comprend ni commande avec paiement, ni paiement, ni prise de rendez-vous automatique. Les pages de services décrivent une discussion sur les travaux, leur périmètre et le prix avant de commencer. Tout accord ultérieur nécessite de préciser le service concerné.",
+    "socialText": "Vous pouvez aussi contacter TiLADYS sur ses réseaux sociaux, découvrir les services ou parcourir le portfolio."
+  }
+}

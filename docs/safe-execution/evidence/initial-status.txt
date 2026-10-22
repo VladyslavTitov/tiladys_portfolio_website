@@ -1,0 +1,185 @@
+ M apps/control/app/api/admin/billing-settings/route.ts
+ M apps/control/app/api/admin/catalogue/route.ts
+ M apps/control/app/api/admin/customers/[id]/route.ts
+ M apps/control/app/api/admin/customers/route.ts
+ M apps/control/app/api/admin/invoices/[id]/issue/route.ts
+ M apps/control/app/api/admin/invoices/[id]/payments/route.ts
+ M apps/control/app/api/admin/invoices/[id]/route.ts
+ M apps/control/app/api/admin/invoices/route.ts
+ M apps/control/app/api/admin/messages/[id]/reply/route.ts
+ M apps/control/app/api/admin/messages/[id]/status/route.ts
+ M apps/control/app/api/admin/prices/route.ts
+ M apps/control/app/api/admin/projects/[id]/images/route.ts
+ M apps/control/app/api/admin/projects/[id]/route.ts
+ M apps/control/app/api/admin/projects/route.ts
+ M apps/control/app/api/admin/service-jobs/[id]/route.ts
+ M apps/control/app/api/admin/service-jobs/route.ts
+ M apps/control/app/api/auth/login/route.ts
+ M apps/control/app/api/public/media/[id]/route.ts
+ M apps/control/app/dashboard/companies/[id]/company-editor.tsx
+ M apps/control/app/dashboard/companies/[id]/page.tsx
+ M apps/control/app/dashboard/companies/company-manager.tsx
+ M apps/control/app/dashboard/companies/page.tsx
+ M apps/control/app/dashboard/customers/[id]/customer-profile.tsx
+ M apps/control/app/dashboard/customers/[id]/page.tsx
+ M apps/control/app/dashboard/customers/customer-manager.tsx
+ M apps/control/app/dashboard/customers/page.tsx
+ M apps/control/app/dashboard/invoices/invoice-manager.tsx
+ M apps/control/app/dashboard/invoices/page.tsx
+ M apps/control/app/dashboard/invoices/profile-invoices.tsx
+ M apps/control/app/dashboard/layout.tsx
+ M apps/control/app/dashboard/messages/attachments.tsx
+ M apps/control/app/dashboard/messages/message-list.tsx
+ M apps/control/app/dashboard/messages/page.tsx
+ M apps/control/app/dashboard/messages/reply-form.tsx
+ M apps/control/app/dashboard/page.tsx
+ M apps/control/app/dashboard/prices/page.tsx
+ M apps/control/app/dashboard/prices/price-form.tsx
+ M apps/control/app/dashboard/prices/price-spreadsheet.tsx
+ M apps/control/app/dashboard/projects/page.tsx
+ M apps/control/app/dashboard/projects/project-form.tsx
+ M apps/control/app/dashboard/projects/project-manager.tsx
+ M apps/control/app/dashboard/service-jobs/page.tsx
+ M apps/control/app/dashboard/service-jobs/service-job-manager.tsx
+ M apps/control/app/layout.tsx
+ M apps/control/app/login/page.tsx
+ M apps/control/components/Nav.tsx
+ M apps/control/components/service-picker.tsx
+ M apps/control/lib/business-records.ts
+ M apps/control/lib/invoice-issuance-requirements.ts
+ M apps/control/lib/invoice-pdf.ts
+ M apps/control/lib/invoices.ts
+ M apps/control/lib/project-slugs.ts
+ M apps/control/lib/projects.ts
+ M apps/control/lib/public-projects.ts
+ M apps/control/next-env.d.ts
+ M apps/control/package.json
+ M apps/web/app/[locale]/about/page.tsx
+ M apps/web/app/[locale]/contact/page.tsx
+ M apps/web/app/[locale]/page.tsx
+ M apps/web/app/[locale]/portfolio/[slug]/page.tsx
+ M apps/web/app/[locale]/portfolio/page.tsx
+ M apps/web/app/[locale]/services/[slug]/page.tsx
+ M apps/web/app/api/contact/route.ts
+ M apps/web/app/api/public/media/[id]/route.ts
+ M apps/web/app/layout.tsx
+ M apps/web/app/sitemap.ts
+ M apps/web/components/ContactForm.tsx
+ M apps/web/components/Footer.tsx
+ M apps/web/components/FounderPortrait.tsx
+ M apps/web/components/Header.tsx
+ M apps/web/components/LegalPage.tsx
+ M apps/web/components/PortfolioExplorer.tsx
+ M apps/web/components/ProjectImage.tsx
+ M apps/web/components/Shell.tsx
+ M apps/web/components/services/ServiceDetail.tsx
+ M apps/web/components/services/ServiceVisual.tsx
+ M apps/web/components/services/ServicesOverview.tsx
+ M apps/web/content/interface.json
+ M apps/web/lib/contact-upload-limits.ts
+ M apps/web/lib/project-categories.ts
+ M apps/web/lib/project-seo.ts
+ M apps/web/lib/public-projects-db.ts
+ M apps/web/lib/services.ts
+ M apps/web/next-env.d.ts
+ M apps/web/next.config.ts
+ M apps/web/package.json
+ M package-lock.json
+ M package.json
+ M packages/db/package.json
+ M packages/db/prisma/schema.prisma
+ M packages/shared/src/index.ts
+ M tests/bilingual-validation.test.ts
+ M tests/contact-images.test.ts
+ M tests/contact-security.test.ts
+ M tests/invoice-unicode-pdf.test.ts
+ M tests/portfolio-seo.test.ts
+ M tests/project.test.mjs
+?? TiLADYS_Codex_Handoff_Full.zip
+?? apps/control/AGENTS.md
+?? apps/control/CLAUDE.md
+?? apps/control/app/api/admin/account/
+?? apps/control/app/api/admin/catalogue/[id]/
+?? apps/control/app/api/admin/estimate/
+?? apps/control/app/api/admin/export/
+?? apps/control/app/api/admin/messages/[id]/draft/
+?? apps/control/app/api/admin/messages/[id]/link/
+?? apps/control/app/api/admin/products/
+?? apps/control/app/api/admin/quotes/
+?? apps/control/app/api/admin/service-jobs/[id]/brief/
+?? apps/control/app/api/admin/service-jobs/[id]/portfolio/
+?? apps/control/app/api/admin/tasks/
+?? apps/control/app/dashboard/messages/enquiry-link.tsx
+?? apps/control/app/dashboard/products/
+?? apps/control/app/dashboard/projects/[id]/
+?? apps/control/app/dashboard/quotes/
+?? apps/control/app/dashboard/search/
+?? apps/control/app/dashboard/settings/
+?? apps/control/app/dashboard/tasks/
+?? apps/control/app/rebuild.css
+?? apps/control/components/account-form.tsx
+?? apps/control/components/catalogue-rates.tsx
+?? apps/control/components/control-language.tsx
+?? apps/control/components/control-toolbar.tsx
+?? apps/control/components/customer-select.tsx
+?? apps/control/components/export-form.tsx
+?? apps/control/components/job-board.tsx
+?? apps/control/components/job-brief-editor.tsx
+?? apps/control/components/job-portfolio-draft.tsx
+?? apps/control/components/new-invoice.tsx
+?? apps/control/components/print-estimator.tsx
+?? apps/control/components/quick-task-complete.tsx
+?? apps/control/components/record-workbench.tsx
+?? apps/control/components/task-calendar.tsx
+?? apps/control/content/
+?? apps/control/lib/admin-response.ts
+?? apps/control/lib/csv.ts
+?? apps/control/lib/invoice-list.ts
+?? apps/control/lib/job-brief.ts
+?? apps/control/lib/local-datetime.ts
+?? apps/control/lib/login-limit.ts
+?? apps/control/lib/payments.ts
+?? apps/control/lib/print-estimate.ts
+?? apps/control/lib/read-json.ts
+?? apps/control/lib/rebuild-domain.ts
+?? apps/control/lib/standalone-invoice.ts
+?? apps/web/AGENTS.md
+?? apps/web/CLAUDE.md
+?? apps/web/app/[locale]/error.tsx
+?? apps/web/app/[locale]/not-found.tsx
+?? apps/web/app/[locale]/products/
+?? apps/web/app/api/contact/uploads/
+?? apps/web/app/api/public/product-media/
+?? apps/web/app/not-found.tsx
+?? apps/web/app/rebuild.css
+?? apps/web/components/ProjectGallery.tsx
+?? apps/web/components/PublishedProducts.tsx
+?? apps/web/components/SelectedWork.tsx
+?? apps/web/components/ThreeServices.tsx
+?? apps/web/components/services/ServiceExtras.tsx
+?? apps/web/lib/contact-field-copy.ts
+?? apps/web/lib/public-products.ts
+?? apps/web/lib/rebuild-copy.ts
+?? apps/web/lib/upload-reservations.ts
+?? apps/web/public/illustrations/
+?? docs/safe-execution/
+?? docs/tiladys-rebuild/
+?? packages/db/prisma/migrations/20261013210000_rebuild_core/
+?? packages/db/prisma/migrations/20261013220000_mail_outbox/
+?? packages/db/prisma/migrations/20261013223000_quote_invoice_source/
+?? packages/db/prisma/migrations/20261013230000_enquiry_detail/
+?? packages/db/prisma/migrations/20261013233000_structured_catalogue/
+?? packages/db/prisma/migrations/20261014003000_private_exports/
+?? packages/db/prisma/migrations/20261014010000_editor_retention/
+?? packages/db/prisma/migrations/20261014013000_quote_expiry_reason/
+?? packages/db/prisma/migrations/20261014020000_task_timezone/
+?? packages/db/prisma/migrations/20261014023000_curation_unit_text/
+?? packages/db/src/outbox.ts
+?? scripts/local-photo-worker.ts
+?? scripts/rebuild-browser-fixtures.mts
+?? scripts/rebuild-recovery-check.mjs
+?? tests/rebuild-api.mjs
+?? tests/rebuild-browser.mjs
+?? tests/rebuild-domain.test.ts
+?? tests/rebuild-integration.test.ts
+?? tests/rebuild-lab.mjs

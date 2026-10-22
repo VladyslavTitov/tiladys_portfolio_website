@@ -1,0 +1,24 @@
+[
+  {
+    "projectId": "prj_JWa4iXqzV70GdY3TKDDL2Q5poRRv",
+    "protectionTokens": [
+      {
+        "scope": "automation-bypass",
+        "createdAt": 1792596609679,
+        "createdBy": "f6pdOqPjSnenl2MfjOJPhYf3"
+      }
+    ],
+    "tokenCreatedByThisScript": false
+  },
+  {
+    "projectId": "prj_6YJMTiWWHE0lX8nzUYCUpA82tEvV",
+    "protectionTokens": [
+      {
+        "scope": "automation-bypass",
+        "createdAt": 1790060005123,
+        "createdBy": "f6pdOqPjSnenl2MfjOJPhYf3"
+      }
+    ],
+    "tokenCreatedByThisScript": false
+  }
+]

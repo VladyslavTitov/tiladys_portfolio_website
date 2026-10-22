@@ -1,0 +1,24 @@
+{
+  "source": {
+    "clients": 12,
+    "quotes": 6,
+    "quoteRevisions": 6,
+    "invoices": 6,
+    "payments": 8,
+    "media": 16,
+    "originalPdfChecksumRows": 4,
+    "partialDraftConstraint": true
+  },
+  "restored": {
+    "clients": 12,
+    "quotes": 6,
+    "quoteRevisions": 6,
+    "invoices": 6,
+    "payments": 8,
+    "media": 16,
+    "originalPdfChecksumRows": 4,
+    "partialDraftConstraint": true
+  },
+  "equal": true,
+  "productionBackupVerified": false
+}

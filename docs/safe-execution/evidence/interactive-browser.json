@@ -1,0 +1,838 @@
+{
+  "source": "tests/rebuild-browser.mjs",
+  "phase": "control",
+  "freshPrivateRows": [
+    {
+      "page": "/dashboard/",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Hello, Synthetic owner",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/messages",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Customer messages",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/customers",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Customers",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/service-jobs",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Service jobs",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/quotes",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Quotes",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/products",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Products",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/tasks",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Tasks",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/invoices",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Invoices",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/prices",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Price table editor",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Settings",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/account",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Account",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/data",
+      "width": 320,
+      "scroll": 320,
+      "h1": "Activity and data",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Hello, Synthetic owner",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/messages",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Customer messages",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/customers",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Customers",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/service-jobs",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Service jobs",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/quotes",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Quotes",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/products",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Products",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/tasks",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Tasks",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/invoices",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Invoices",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/prices",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Price table editor",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Settings",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/account",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Account",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/data",
+      "width": 360,
+      "scroll": 360,
+      "h1": "Activity and data",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Hello, Synthetic owner",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/messages",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Customer messages",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/customers",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Customers",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/service-jobs",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Service jobs",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/quotes",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Quotes",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/products",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Products",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/tasks",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Tasks",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/invoices",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Invoices",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/prices",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Price table editor",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Settings",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/account",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Account",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/data",
+      "width": 390,
+      "scroll": 390,
+      "h1": "Activity and data",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Hello, Synthetic owner",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/messages",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Customer messages",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/customers",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Customers",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/service-jobs",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Service jobs",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/quotes",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Quotes",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/products",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Products",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/tasks",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Tasks",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/invoices",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Invoices",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/prices",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Price table editor",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Settings",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/account",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Account",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/data",
+      "width": 768,
+      "scroll": 768,
+      "h1": "Activity and data",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Hello, Synthetic owner",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/messages",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Customer messages",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/customers",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Customers",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/service-jobs",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Service jobs",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/quotes",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Quotes",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/products",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Products",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/tasks",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Tasks",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/invoices",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Invoices",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/prices",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Price table editor",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Settings",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/account",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Account",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/data",
+      "width": 1024,
+      "scroll": 1024,
+      "h1": "Activity and data",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Hello, Synthetic owner",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/messages",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Customer messages",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/customers",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Customers",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/service-jobs",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Service jobs",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/quotes",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Quotes",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/products",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Products",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/tasks",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Tasks",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/invoices",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Invoices",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/prices",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Price table editor",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Settings",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/account",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Account",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/data",
+      "width": 1280,
+      "scroll": 1280,
+      "h1": "Activity and data",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Hello, Synthetic owner",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/messages",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Customer messages",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/customers",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Customers",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/service-jobs",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Service jobs",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/quotes",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Quotes",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/products",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Products",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/tasks",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Tasks",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/invoices",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Invoices",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/prices",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Price table editor",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Settings",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/account",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Account",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/settings/data",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Activity and data",
+      "authenticated": true
+    },
+    {
+      "page": "/dashboard/tasks",
+      "locale": "de",
+      "scroll": 320,
+      "width": 320,
+      "lang": "de",
+      "h1": "Aufgaben"
+    },
+    {
+      "page": "/dashboard/quotes",
+      "locale": "de",
+      "scroll": 320,
+      "width": 320,
+      "lang": "de",
+      "h1": "Angebote"
+    },
+    {
+      "page": "/dashboard/products",
+      "locale": "de",
+      "scroll": 320,
+      "width": 320,
+      "lang": "de",
+      "h1": "Produkte"
+    },
+    {
+      "page": "/dashboard/invoices",
+      "locale": "de",
+      "scroll": 320,
+      "width": 320,
+      "lang": "de",
+      "h1": "Rechnungen"
+    },
+    {
+      "page": "/dashboard/customers",
+      "locale": "de",
+      "scroll": 320,
+      "width": 320,
+      "lang": "de",
+      "h1": "Kunden"
+    },
+    {
+      "page": "/dashboard/settings",
+      "locale": "de",
+      "scroll": 320,
+      "width": 320,
+      "lang": "de",
+      "h1": "Einstellungen"
+    },
+    {
+      "page": "/dashboard/tasks",
+      "locale": "de",
+      "scroll": 390,
+      "width": 390,
+      "lang": "de",
+      "h1": "Aufgaben"
+    },
+    {
+      "page": "/dashboard/quotes",
+      "locale": "de",
+      "scroll": 390,
+      "width": 390,
+      "lang": "de",
+      "h1": "Angebote"
+    },
+    {
+      "page": "/dashboard/products",
+      "locale": "de",
+      "scroll": 390,
+      "width": 390,
+      "lang": "de",
+      "h1": "Produkte"
+    },
+    {
+      "page": "/dashboard/invoices",
+      "locale": "de",
+      "scroll": 390,
+      "width": 390,
+      "lang": "de",
+      "h1": "Rechnungen"
+    },
+    {
+      "page": "/dashboard/customers",
+      "locale": "de",
+      "scroll": 390,
+      "width": 390,
+      "lang": "de",
+      "h1": "Kunden"
+    },
+    {
+      "page": "/dashboard/settings",
+      "locale": "de",
+      "scroll": 390,
+      "width": 390,
+      "lang": "de",
+      "h1": "Einstellungen"
+    },
+    {
+      "page": "/dashboard/tasks",
+      "locale": "de",
+      "scroll": 768,
+      "width": 768,
+      "lang": "de",
+      "h1": "Aufgaben"
+    },
+    {
+      "page": "/dashboard/quotes",
+      "locale": "de",
+      "scroll": 768,
+      "width": 768,
+      "lang": "de",
+      "h1": "Angebote"
+    },
+    {
+      "page": "/dashboard/products",
+      "locale": "de",
+      "scroll": 768,
+      "width": 768,
+      "lang": "de",
+      "h1": "Produkte"
+    },
+    {
+      "page": "/dashboard/invoices",
+      "locale": "de",
+      "scroll": 768,
+      "width": 768,
+      "lang": "de",
+      "h1": "Rechnungen"
+    },
+    {
+      "page": "/dashboard/customers",
+      "locale": "de",
+      "scroll": 768,
+      "width": 768,
+      "lang": "de",
+      "h1": "Kunden"
+    },
+    {
+      "page": "/dashboard/settings",
+      "locale": "de",
+      "scroll": 768,
+      "width": 768,
+      "lang": "de",
+      "h1": "Einstellungen"
+    },
+    {
+      "page": "/dashboard/tasks",
+      "locale": "de",
+      "scroll": 1024,
+      "width": 1024,
+      "lang": "de",
+      "h1": "Aufgaben"
+    },
+    {
+      "page": "/dashboard/quotes",
+      "locale": "de",
+      "scroll": 1024,
+      "width": 1024,
+      "lang": "de",
+      "h1": "Angebote"
+    },
+    {
+      "page": "/dashboard/products",
+      "locale": "de",
+      "scroll": 1024,
+      "width": 1024,
+      "lang": "de",
+      "h1": "Produkte"
+    },
+    {
+      "page": "/dashboard/invoices",
+      "locale": "de",
+      "scroll": 1024,
+      "width": 1024,
+      "lang": "de",
+      "h1": "Rechnungen"
+    },
+    {
+      "page": "/dashboard/customers",
+      "locale": "de",
+      "scroll": 1024,
+      "width": 1024,
+      "lang": "de",
+      "h1": "Kunden"
+    },
+    {
+      "page": "/dashboard/settings",
+      "locale": "de",
+      "scroll": 1024,
+      "width": 1024,
+      "lang": "de",
+      "h1": "Einstellungen"
+    },
+    {
+      "page": "/dashboard/tasks",
+      "locale": "de",
+      "scroll": 1440,
+      "width": 1440,
+      "lang": "de",
+      "h1": "Aufgaben"
+    },
+    {
+      "page": "/dashboard/quotes",
+      "locale": "de",
+      "scroll": 1440,
+      "width": 1440,
+      "lang": "de",
+      "h1": "Angebote"
+    },
+    {
+      "page": "/dashboard/products",
+      "locale": "de",
+      "scroll": 1440,
+      "width": 1440,
+      "lang": "de",
+      "h1": "Produkte"
+    },
+    {
+      "page": "/dashboard/invoices",
+      "locale": "de",
+      "scroll": 1440,
+      "width": 1440,
+      "lang": "de",
+      "h1": "Rechnungen"
+    },
+    {
+      "page": "/dashboard/customers",
+      "locale": "de",
+      "scroll": 1440,
+      "width": 1440,
+      "lang": "de",
+      "h1": "Kunden"
+    },
+    {
+      "page": "/dashboard/settings",
+      "locale": "de",
+      "scroll": 1440,
+      "width": 1440,
+      "lang": "de",
+      "h1": "Einstellungen"
+    }
+  ],
+  "excludedHistoricalPublicRows": 98,
+  "currentPublicEvidence": "final/results.json",
+  "consoleErrors": [],
+  "interactiveLog": "interactive-browser.log"
+}

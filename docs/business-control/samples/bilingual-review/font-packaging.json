@@ -1,0 +1,12 @@
+{
+  "pdf": [
+    "brand/logo.svg",
+    "ttf/DejaVuSans.ttf",
+    "ttf/DejaVuSans-Bold.ttf"
+  ],
+  "issue": [
+    "brand/logo.svg",
+    "ttf/DejaVuSans.ttf",
+    "ttf/DejaVuSans-Bold.ttf"
+  ]
+}

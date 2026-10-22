@@ -1,0 +1,4 @@
+{
+  "harnessFailures": 38,
+  "reason": "Initial readiness included hidden streamed DOM / image source swaps; retained detailed results. Trace discarded because context carried a QA cookie. Corrected harness traces anonymous context only."
+}

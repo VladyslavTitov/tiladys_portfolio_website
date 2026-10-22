@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-21T15:42:00.274Z",
+  "evidenceFilesChecked": 15,
+  "knownConnectionAndExistingBypassSecretsAbsent": true,
+  "credentialUrlPatternsAbsent": true,
+  "applicationSchemaMigrationAndOriginalSetupWorkflowUnchanged": true,
+  "productionBusinessAndMediaFingerprintsUnchanged": true,
+  "gitDiffCheck": "pass",
+  "localSecurityTestFiles": {
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0
+  },
+  "newAdministratorAccounts": 0,
+  "provisioningExecuted": false,
+  "productionDatabaseMutation": false,
+  "productionDeploymentOrAliasMutation": false,
+  "unintendedPublicAutomationTokenCreation": true,
+  "tokenRevocationAwaitingApproval": true
+}

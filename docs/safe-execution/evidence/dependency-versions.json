@@ -1,0 +1,93 @@
+{
+  "name": "tiladys-platform",
+  "dependencies": {
+    "@tiladys/control": {
+      "resolved": "file:../../apps/control",
+      "overridden": false,
+      "dependencies": {
+        "lucide-react": {
+          "version": "0.536.0",
+          "resolved": "https://registry.npmjs.org/lucide-react/-/lucide-react-0.536.0.tgz",
+          "overridden": false,
+          "dependencies": {
+            "react": {
+              "version": "19.1.1"
+            }
+          }
+        },
+        "next": {
+          "version": "16.3.8",
+          "resolved": "https://registry.npmjs.org/next/-/next-16.3.8.tgz",
+          "overridden": false,
+          "dependencies": {
+            "react": {
+              "version": "19.1.1"
+            },
+            "sharp": {
+              "version": "0.35.5"
+            },
+            "styled-jsx": {
+              "version": "5.1.6",
+              "resolved": "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.6.tgz",
+              "overridden": false,
+              "dependencies": {
+                "react": {
+                  "version": "19.1.1"
+                }
+              }
+            }
+          }
+        },
+        "react-dom": {
+          "version": "19.1.1",
+          "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.1.1.tgz",
+          "overridden": false,
+          "dependencies": {
+            "react": {
+              "version": "19.1.1"
+            }
+          }
+        },
+        "react": {
+          "version": "19.1.1",
+          "resolved": "https://registry.npmjs.org/react/-/react-19.1.1.tgz",
+          "overridden": false
+        },
+        "sharp": {
+          "version": "0.35.5"
+        }
+      }
+    },
+    "@tiladys/db": {
+      "resolved": "file:../../packages/db",
+      "overridden": false,
+      "dependencies": {
+        "@prisma/client": {
+          "version": "6.19.3",
+          "resolved": "https://registry.npmjs.org/@prisma/client/-/client-6.19.3.tgz",
+          "overridden": false
+        }
+      }
+    },
+    "@tiladys/web": {
+      "resolved": "file:../../apps/web",
+      "overridden": false,
+      "dependencies": {
+        "next": {
+          "version": "16.3.8"
+        },
+        "react": {
+          "version": "19.1.1"
+        },
+        "sharp": {
+          "version": "0.35.5"
+        }
+      }
+    },
+    "sharp": {
+      "version": "0.35.5",
+      "resolved": "https://registry.npmjs.org/sharp/-/sharp-0.35.5.tgz",
+      "overridden": true
+    }
+  }
+}

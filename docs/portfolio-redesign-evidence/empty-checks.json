@@ -1,0 +1,7 @@
+{
+  "syntheticOnly": true,
+  "checks": [
+    "Zero published records: truthful empty state, five choices, hero/footer retained, no overflow at 375px",
+    "Zero published records: truthful empty state, five choices, hero/footer retained, no overflow at 1440px"
+  ]
+}

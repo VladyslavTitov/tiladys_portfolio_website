@@ -1,0 +1,18 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(await p.getByText('Projects are temporarily unavailable.').isVisible())
+
+    at file:///home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/tests/qa-failures.playwright.mjs:5:97 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v22.23.1

@@ -1,0 +1,318 @@
+{
+  "origin": "https://tiladys-public-21zujdkfm-tiladys.vercel.app",
+  "checkedAt": "2026-10-21T16:40:09.373Z",
+  "navigation": [
+    {
+      "pathname": "/en/portfolio",
+      "status": 200,
+      "finalUrl": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/portfolio",
+      "heading": "Portfolio"
+    },
+    {
+      "pathname": "/en",
+      "status": 200,
+      "finalUrl": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en",
+      "heading": "Simple IT help and websites for home users and small businesses."
+    },
+    {
+      "pathname": "/en/services",
+      "status": 200,
+      "finalUrl": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/services",
+      "heading": "IT, Websites & Digital Services"
+    },
+    {
+      "pathname": "/en/about",
+      "status": 200,
+      "finalUrl": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/about",
+      "heading": "About TiLADYS"
+    },
+    {
+      "pathname": "/en/contact",
+      "status": 200,
+      "finalUrl": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/contact",
+      "heading": "Contact"
+    },
+    {
+      "pathname": "/en/prices",
+      "status": 200,
+      "finalUrl": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/services",
+      "heading": "IT, Websites & Digital Services"
+    },
+    {
+      "pathname": "/en/privacy",
+      "status": 200,
+      "finalUrl": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/privacy",
+      "heading": "Privacy Policy"
+    },
+    {
+      "pathname": "/en/terms",
+      "status": 200,
+      "finalUrl": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/terms",
+      "heading": "Terms of Use"
+    },
+    {
+      "pathname": "/en/impressum",
+      "status": 200,
+      "finalUrl": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/impressum",
+      "heading": "Impressum"
+    }
+  ],
+  "details": [
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/portfolio/mongoose-signs",
+      "status": 200,
+      "title": "Mongoose Signs & Advertising"
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/portfolio/donetsfit",
+      "status": 200,
+      "title": "DonetsFit"
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/portfolio/calc-donetsfit",
+      "status": 200,
+      "title": "DonetsFit Calculator"
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/portfolio/fedora-windows-dual-boot-workstation",
+      "status": 200,
+      "title": "Fedora KDE + Windows 11 Dual-Boot Workstation"
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/portfolio/etit-vpu7-virtual-tour",
+      "status": 200,
+      "title": "ETIT.info — Virtual Tour of VPU No. 7"
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/portfolio/tiladys-business-card",
+      "status": 200,
+      "title": "TiLADYS Business Card"
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/en/portfolio/jobadys",
+      "status": 200,
+      "title": "JobAdys"
+    }
+  ],
+  "media": [
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmssabqzi0003kz04ekuleu0y?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 282
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmssabsuj0007kz04a52o9r4s?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 436
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmssabtxg000bkz0472y2mp1m?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 406
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmss9k7c70004k004pmwj01s9?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1040
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsvexiom0007lg0401916w5j?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1102
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsvexkq1000blg04co1y5rv8?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1204
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsvexmqt000flg048xel0bx4?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1576
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsvexoyd000jlg04f3d1nwzj?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1438
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsvexqdo000nlg04oe1xa8o1?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1172
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmu4hz0t60003jp04ylfseb8j?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 648
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmu4hz2my0007jp04m2ycvis7?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 904
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmu4hz3ns000bjp048vt6i9cp?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 766
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmu4hz4m4000fjp04r00up6pi?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1834
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmu4hz5ls000jjp04h6hzgs82?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 2166
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmu4hz6g5000njp04hzc22bew?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 2018
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsveydgy000tlg04u8s9rg32?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1070
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsveyeqm000xlg04j79n04pb?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 554
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsveyfq70011lg04reeq43mw?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 690
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsveygq40015lg04bk8lurw7?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 686
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsveyj3x0001l804h84odqvr?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 466
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsveykub0005l8044ps47m5w?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 588
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsuweiru0007jf04wd8ky15q?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1754
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsuwel9c000bjf0401s7vmwp?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1164
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmsuwen78000fjf043kvfsiti?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1666
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmu4k2w590004l4040cxe0bsj?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 820
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmu4k2xts0008l404qmsb5kqw?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1842
+    },
+    {
+      "url": "https://tiladys-public-21zujdkfm-tiladys.vercel.app/api/public/media/cmu4k2yzx000cl404xubkj9cs?w=120",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 1972
+    }
+  ],
+  "portfolioCards": 7,
+  "cardImages": [
+    {
+      "loaded": true
+    },
+    {
+      "loaded": true
+    },
+    {
+      "loaded": true
+    },
+    {
+      "loaded": true
+    },
+    {
+      "loaded": true
+    },
+    {
+      "loaded": true
+    },
+    {
+      "loaded": true
+    }
+  ],
+  "filterTabs": [
+    "All Projects",
+    "Web Development",
+    "PC Build / Clean / Upgrade",
+    "Design",
+    "Linux & Server Experience",
+    "Digital Support"
+  ],
+  "contact": {
+    "rendered": true,
+    "required": [
+      "name",
+      "email",
+      "message",
+      "consent"
+    ],
+    "emptySubmissionBlocked": true,
+    "realEnquirySubmitted": false,
+    "unsupportedContentType": 415,
+    "untrustedOrigin": 403,
+    "persistenceAndEmailDeliveryTested": false
+  },
+  "publicNavigationLinks": [
+    "/en/services",
+    "/en/portfolio",
+    "/en/about",
+    "/en/contact",
+    "/en/privacy",
+    "/en/contact#contact-form",
+    "/en/terms",
+    "/en/impressum"
+  ],
+  "browserErrors": []
+}

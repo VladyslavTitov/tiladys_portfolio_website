@@ -1,6 +1,9 @@
 'use client';
+import {useControlTranslation,ControlText} from '@/components/control-language';
+
 
 import { useState } from 'react';
+import { useUnsavedChanges } from '@/lib/use-unsaved-changes';
 import { Plus, Save, Trash2 } from 'lucide-react';
 
 const locales = ['en', 'de', 'uk', 'ru', 'sk', 'fr'] as const;
@@ -8,6 +11,7 @@ type Locale = (typeof locales)[number];
 type Localized = Record<Locale, string>;
 type Item = {
   id?: string;
+  expectedUpdatedAt?: string;
   code: string;
   name: Localized;
   price: string;
@@ -17,6 +21,7 @@ type Item = {
 };
 type Section = {
   id?: string;
+  expectedUpdatedAt?: string;
   number: string;
   title: Localized;
   subtitle: Localized;
@@ -57,6 +62,7 @@ function normalizeItem(value: unknown): Item {
   const item = asRecord(value);
   return {
     id: asString(item.id) || undefined,
+    expectedUpdatedAt: asString(item.updatedAt) || undefined,
     code: asString(item.code),
     name: normalizeLocalized(item.name),
     price: asString(item.price),
@@ -70,6 +76,7 @@ function normalizeSection(value: unknown): Section {
   const section = asRecord(value);
   return {
     id: asString(section.id) || undefined,
+    expectedUpdatedAt: asString(section.updatedAt) || undefined,
     number: asString(section.number),
     title: normalizeLocalized(section.title),
     subtitle: normalizeLocalized(section.subtitle),
@@ -80,10 +87,15 @@ function normalizeSection(value: unknown): Section {
 }
 
 export function PriceSpreadsheet({ initialSections }: { initialSections: unknown[] }) {
+  const translate=useControlTranslation();
   const [sections, setSections] = useState<Section[]>(initialSections.map(normalizeSection));
   const [language, setLanguage] = useState<Locale>('en');
   const [deletedSectionIds, setDeletedSectionIds] = useState<string[]>([]);
   const [deletedItemIds, setDeletedItemIds] = useState<string[]>([]);
+  const [deletedVersions, setDeletedVersions] = useState<Record<string,string>>({});
+  const [saved, setSaved] = useState(JSON.stringify(initialSections.map(normalizeSection)));
+  const dirty = JSON.stringify(sections) !== saved || deletedSectionIds.length > 0 || deletedItemIds.length > 0;
+  useUnsavedChanges(dirty);
   const [message, setMessage] = useState('');
   const [busy, setBusy] = useState(false);
 
@@ -126,6 +138,8 @@ export function PriceSpreadsheet({ initialSections }: { initialSections: unknown
 
   function deleteSection(index: number) {
     const section = sections[index];
+    if (section.id && !confirm('Archive this section and its services? Existing job and invoice records will be retained.')) return;
+    setDeletedVersions(v => ({...v,...Object.fromEntries([section,...section.items].filter(x=>x.id&&x.expectedUpdatedAt).map(x=>[x.id!,x.expectedUpdatedAt!]))}));
     if (section.id) setDeletedSectionIds((ids) => [...new Set([...ids, section.id as string])]);
     const itemIds = section.items.flatMap((item) => item.id ? [item.id] : []);
     if (itemIds.length) setDeletedItemIds((ids) => [...new Set([...ids, ...itemIds])]);
@@ -148,6 +162,8 @@ export function PriceSpreadsheet({ initialSections }: { initialSections: unknown
 
   function deleteItem(sectionIndex: number, itemIndex: number) {
     const item = sections[sectionIndex].items[itemIndex];
+    if (item.id && !confirm('Archive this catalogue service? Existing records will be retained.')) return;
+    if (item.id && item.expectedUpdatedAt) setDeletedVersions(v=>({...v,[item.id!]:item.expectedUpdatedAt!}));
     if (item.id) setDeletedItemIds((ids) => [...new Set([...ids, item.id as string])]);
     setSections((current) => current.map((section, index) => index === sectionIndex
       ? { ...section, items: section.items.filter((_, indexInSection) => indexInSection !== itemIndex) }
@@ -163,6 +179,7 @@ export function PriceSpreadsheet({ initialSections }: { initialSections: unknown
         sortOrder: sectionIndex,
         items: section.items.map((item, itemIndex) => ({ ...item, sortOrder: itemIndex })),
       })),
+      deletedVersions,
       deletedSectionIds,
       deletedItemIds,
     };
@@ -183,6 +200,8 @@ export function PriceSpreadsheet({ initialSections }: { initialSections: unknown
       }
       if (!Array.isArray(result)) throw new Error('The server returned an unexpected response.');
       setSections(result.map(normalizeSection));
+      setSaved(JSON.stringify(result.map(normalizeSection)));
+      setDeletedVersions({});
       setDeletedSectionIds([]);
       setDeletedItemIds([]);
       setMessage('All price changes were saved. The public website now uses the updated table.');
@@ -195,51 +214,54 @@ export function PriceSpreadsheet({ initialSections }: { initialSections: unknown
 
   return (
     <div className="price-admin">
-      <div className="price-admin__sticky panel">
-        <div className="translation-tabs" role="tablist" aria-label="Price translation language">
+      <div className="price-admin__sticky panel"><span className="editor-unsaved" role="status">{dirty?<ControlText value="Unsaved changes"/>:null}</span>
+        <div className="translation-tabs" role="group" aria-label="Price translation language">
           {locales.map((locale) => (
-            <button type="button" role="tab" aria-selected={language === locale} key={locale} className={language === locale ? 'is-active' : ''} onClick={() => setLanguage(locale)}>
+            <button type="button" aria-pressed={language === locale} key={locale} className={language === locale ? 'is-active' : ''} onClick={() => setLanguage(locale)}>
               {locale.toUpperCase()}
             </button>
           ))}
         </div>
         <div>
-          <button type="button" className="admin-secondary" onClick={addSection}><Plus aria-hidden="true" size={17} />Add section</button>
-          <button type="button" className="admin-primary" onClick={save} disabled={busy}><Save aria-hidden="true" size={17} />Save all changes</button>
+          <button type="button" className="admin-secondary" onClick={addSection}><Plus aria-hidden="true" size={17} /><ControlText value={"Add section"}/></button>
+          <button type="button" className="admin-primary" onClick={save} disabled={busy}><Save aria-hidden="true" size={17} /><ControlText value={"Save all changes"}/></button>
         </div>
       </div>
 
       {sections.map((section, sectionIndex) => (
-        <section className="panel price-sheet-section" key={section.id ?? `new-${sectionIndex}`}>
+        <details className="panel price-sheet-group" key={section.id ?? `new-${sectionIndex}`} open={sectionIndex===0||!section.id}>
+          <summary><span>{section.number}</span><span>{section.title[language] || section.title.en || '—'}</span><span className="status-pill"><ControlText value={section.active?'Active':'Inactive'}/> · {section.items.length}</span></summary>
+        <section className="panel price-sheet-section">
           <header>
             <input className="price-section-number" value={section.number} onChange={(event) => updateSection(sectionIndex, { number: event.target.value })} aria-label="Section number" />
             <div>
-              <input className="price-section-title" value={section.title[language]} onChange={(event) => updateSectionText(sectionIndex, 'title', event.target.value)} placeholder={`Section title (${language.toUpperCase()})`} />
-              <input value={section.subtitle[language]} onChange={(event) => updateSectionText(sectionIndex, 'subtitle', event.target.value)} placeholder={`Section subtitle (${language.toUpperCase()})`} />
+              <input className="price-section-title" aria-label={translate('Section title')} value={section.title[language]} onChange={(event) => updateSectionText(sectionIndex, 'title', event.target.value)} placeholder={`Section title (${language.toUpperCase()})`} />
+              <input aria-label={translate('Section subtitle')} value={section.subtitle[language]} onChange={(event) => updateSectionText(sectionIndex, 'subtitle', event.target.value)} placeholder={`Section subtitle (${language.toUpperCase()})`} />
             </div>
-            <label className="admin-checkbox"><input type="checkbox" checked={section.active} onChange={(event) => updateSection(sectionIndex, { active: event.target.checked })} />Active</label>
-            <button type="button" className="icon-danger" title="Delete section" onClick={() => deleteSection(sectionIndex)}><Trash2 aria-hidden="true" size={18} /></button>
+            <label className="admin-checkbox"><input type="checkbox" checked={section.active} onChange={(event) => updateSection(sectionIndex, { active: event.target.checked })} /><ControlText value={"Active"}/></label>
+            <button type="button" className="icon-danger" title="Archive section" aria-label="Archive section" onClick={() => deleteSection(sectionIndex)}><Trash2 aria-hidden="true" size={18} /></button>
           </header>
 
           <div className="price-sheet-table-wrap">
             <table className="price-sheet-table">
-              <thead><tr><th>Code</th><th>Service name ({language.toUpperCase()})</th><th>Price</th><th>Note ({language.toUpperCase()})</th><th>Active</th><th><span className="sr-only">Actions</span></th></tr></thead>
+              <thead><tr><th><ControlText value={"Code"}/></th><th><ControlText value={"Service name ("}/>{language.toUpperCase()})</th><th><ControlText value={"Price"}/></th><th><ControlText value={"Note ("}/>{language.toUpperCase()})</th><th><ControlText value={"Active"}/></th><th><span className="sr-only"><ControlText value={"Actions"}/></span></th></tr></thead>
               <tbody>
                 {section.items.map((item, itemIndex) => (
                   <tr key={item.id ?? `new-item-${itemIndex}`}>
-                    <td><input value={item.code} onChange={(event) => updateItem(sectionIndex, itemIndex, { code: event.target.value.toUpperCase() })} /></td>
-                    <td><textarea rows={2} value={item.name[language]} onChange={(event) => updateItemText(sectionIndex, itemIndex, 'name', event.target.value)} /></td>
-                    <td><input value={item.price} onChange={(event) => updateItem(sectionIndex, itemIndex, { price: event.target.value })} /></td>
-                    <td><textarea rows={2} value={item.note[language]} onChange={(event) => updateItemText(sectionIndex, itemIndex, 'note', event.target.value)} /></td>
+                    <td><input aria-label={translate('Service code')} value={item.code} onChange={(event) => updateItem(sectionIndex, itemIndex, { code: event.target.value.toUpperCase() })} /></td>
+                    <td><textarea aria-label={translate('Service name')} rows={2} value={item.name[language]} onChange={(event) => updateItemText(sectionIndex, itemIndex, 'name', event.target.value)} /></td>
+                    <td><input aria-label={translate('Display price')} value={item.price} onChange={(event) => updateItem(sectionIndex, itemIndex, { price: event.target.value })} /></td>
+                    <td><textarea aria-label={translate('Note')} rows={2} value={item.note[language]} onChange={(event) => updateItemText(sectionIndex, itemIndex, 'note', event.target.value)} /></td>
                     <td><input aria-label={`Active ${item.code || 'service'}`} type="checkbox" checked={item.active} onChange={(event) => updateItem(sectionIndex, itemIndex, { active: event.target.checked })} /></td>
-                    <td><button type="button" className="icon-danger" title="Delete service" onClick={() => deleteItem(sectionIndex, itemIndex)}><Trash2 aria-hidden="true" size={17} /></button></td>
+                    <td><button type="button" className="admin-secondary" onClick={()=>{const copy={...item,id:undefined,expectedUpdatedAt:undefined,code:'',name:{...item.name},note:{...item.note}};updateSection(sectionIndex,{items:[...section.items,copy]});}}><ControlText value={"Duplicate draft"}/></button><button type="button" className="icon-danger" title="Archive service" aria-label="Archive service" onClick={() => deleteItem(sectionIndex, itemIndex)}><Trash2 aria-hidden="true" size={17} /></button></td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <button type="button" className="admin-add-row" onClick={() => addItem(sectionIndex)}><Plus aria-hidden="true" size={17} />Add service row</button>
+          <button type="button" className="admin-add-row" onClick={() => addItem(sectionIndex)}><Plus aria-hidden="true" size={17} /><ControlText value={"Add service row"}/></button>
         </section>
+        </details>
       ))}
       <p className="admin-message" aria-live="polite">{message}</p>
     </div>

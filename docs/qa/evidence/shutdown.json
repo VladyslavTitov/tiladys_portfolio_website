@@ -1,0 +1,20 @@
+{
+  "qaPortsChecked": [
+    3100,
+    3101,
+    3102,
+    3104,
+    3105,
+    2525,
+    9342
+  ],
+  "qaListenersRemaining": [],
+  "ownerPortsStillListening": [
+    3000,
+    3001
+  ],
+  "originalSyntheticPostgresRunning": true,
+  "crmLabStoppedRetained": true,
+  "productionAccessed": false,
+  "deployed": false
+}

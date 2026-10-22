@@ -1,0 +1,8 @@
+2026-10-21T10:55:44.563Z  Running build in Washington, D.C., USA (East) – iad1
+2026-10-21T10:55:53.077Z  Cloning completed: 8.361s
+2026-10-21T10:55:56.965Z  Running "npm --prefix ../.. run db:generate && npm --prefix ../.. run db:check:crm && npm run build"
+2026-10-21T10:55:59.586Z  ✔ Generated Prisma Client (v6.19.3) to ./../../node_modules/@prisma/client in 451ms
+2026-10-21T10:55:59.586Z  Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+2026-10-21T10:55:59.772Z  > db:check:crm
+2026-10-21T10:56:01.683Z  Release blocked: migration history or database schema is incompatible. Review and apply required migrations through the recovery process before releasing.
+2026-10-21T10:56:01.716Z  Error: [BUILD_UTILS_SPAWN_1] Command "npm --prefix ../.. run db:generate && npm --prefix ../.. run db:check:crm && npm run build" exited with 1

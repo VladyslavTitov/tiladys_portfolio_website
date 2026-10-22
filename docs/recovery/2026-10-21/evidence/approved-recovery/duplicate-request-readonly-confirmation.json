@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-21T16:54:58.750Z",
+  "deployment": {
+    "id": "dpl_5B38LjUBUFpAGnfS3whyHVG9qmJx",
+    "url": "tiladys-public-21zujdkfm-tiladys.vercel.app",
+    "target": "production",
+    "readyState": "READY",
+    "createdAt": 1791119886056,
+    "ready": 1791119955522,
+    "alias": [
+      "tiladys.com",
+      "tiladys-public.vercel.app",
+      "tiladys-public-tiladys.vercel.app"
+    ],
+    "sha": "e82bff04aac9915585b10cc853fe31c558a5964b",
+    "ref": "feature/services-redesign",
+    "buildCommand": null
+  },
+  "livePortfolio": {
+    "url": "https://tiladys.com/en/portfolio",
+    "status": 200,
+    "available": true
+  },
+  "unintendedTokenStillAbsent": true,
+  "otherControlTokensUnchanged": true,
+  "protectionSettingsUnchanged": true,
+  "configuredEnvironmentsUnchanged": true,
+  "controlProductionUnchanged": true,
+  "protectedPreviewAnonymousStatus": 302,
+  "rollbackRepeated": false,
+  "tokenMutationRepeated": false,
+  "administratorCreated": false,
+  "otherMutations": false
+}

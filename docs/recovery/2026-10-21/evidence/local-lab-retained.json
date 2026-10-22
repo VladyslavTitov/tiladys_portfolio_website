@@ -1,0 +1,18 @@
+{
+  "container": "tiladys-schema-recovery-20261021",
+  "image": "postgres:18-alpine",
+  "host": "127.0.0.1",
+  "port": 55435,
+  "stopped": true,
+  "deleted": false,
+  "retainedDatabases": [
+    "recovery (migrated synthetic regression lab)",
+    "recovery_expected13 (clean 13-migration reference)",
+    "recovery_restore_verify (exact pre-migration backup restore)"
+  ],
+  "stoppedServers": [
+    "control",
+    "web"
+  ],
+  "ownerServersAndContainersChanged": false
+}

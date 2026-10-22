@@ -1,0 +1,71 @@
+{
+  "checks": 30,
+  "failures": [
+    {
+      "id": "DEV-DASHBOARD / missing session",
+      "status": 307,
+      "passed": false,
+      "rawUnauthorized": true
+    },
+    {
+      "id": "DEV-DASHBOARD /messages missing session",
+      "status": 307,
+      "passed": false,
+      "rawUnauthorized": true
+    },
+    {
+      "id": "DEV-DASHBOARD /customers missing session",
+      "status": 307,
+      "passed": false,
+      "rawUnauthorized": true
+    },
+    {
+      "id": "DEV-DASHBOARD /companies missing session",
+      "status": 307,
+      "passed": false,
+      "rawUnauthorized": true
+    },
+    {
+      "id": "DEV-DASHBOARD /service-jobs missing session",
+      "status": 307,
+      "passed": false,
+      "rawUnauthorized": true
+    },
+    {
+      "id": "DEV-DASHBOARD /invoices missing session",
+      "status": 307,
+      "passed": false,
+      "rawUnauthorized": true
+    },
+    {
+      "id": "DEV-DASHBOARD /projects missing session",
+      "status": 307,
+      "passed": false,
+      "rawUnauthorized": true
+    },
+    {
+      "id": "DEV-DASHBOARD /prices missing session",
+      "status": 307,
+      "passed": false,
+      "rawUnauthorized": true
+    }
+  ]
+}
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(rows.every(r=>r.passed))
+
+    at file:///home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/tests/qa-dev-check.mjs:7:358 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v22.23.1

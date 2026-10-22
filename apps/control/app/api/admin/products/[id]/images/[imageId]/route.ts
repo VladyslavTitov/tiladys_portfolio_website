@@ -1,0 +1,7 @@
+import { NextRequest,NextResponse } from 'next/server';
+import {db,Prisma} from '@tiladys/db';
+import {assertOrigin,requireUser} from '@/lib/security';
+import {privateJson,privateError} from '@/lib/admin-response';
+type Context={params:Promise<{id:string;imageId:string}>};
+export async function GET(_req:NextRequest,{params}:Context){try{await requireUser();const {id,imageId}=await params;const row=await db.productImage.findFirstOrThrow({where:{id:imageId,productId:id},select:{data:true,mimeType:true}});return new NextResponse(new Uint8Array(row.data),{headers:{'Content-Type':row.mimeType,'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff'}});}catch(e){return privateError(e,'PRODUCT_IMAGE_READ_FAILED');}}
+export async function DELETE(_req:NextRequest,{params}:Context){try{await assertOrigin();const u=await requireUser();const {id,imageId}=await params;await db.$transaction(async tx=>{await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Product" WHERE "id"=${id} FOR UPDATE`);const p=await tx.product.findUniqueOrThrow({where:{id}});if(p.status==='PUBLISHED')throw new Error('INVALID_PRODUCT_STATE');const found=await tx.productImage.findFirstOrThrow({where:{id:imageId,productId:id}});await tx.productImage.delete({where:{id:found.id}});await tx.product.update({where:{id},data:{revision:{increment:1}}});await tx.auditLog.create({data:{userId:u.id,action:'PRODUCT_IMAGE_REMOVE',entity:'Product',entityId:id}});});return privateJson({ok:true});}catch(e){return privateError(e,'PRODUCT_IMAGE_REMOVE_FAILED');}}

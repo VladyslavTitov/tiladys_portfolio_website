@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: invoice PDF embeds full Unicode fonts, extracts exact text, and paginates using embedded metrics
+ok 1 - invoice PDF embeds full Unicode fonts, extracts exact text, and paginates using embedded metrics
+  ---
+  duration_ms: 3131.892718
+  type: 'test'
+  ...
+# Subtest: invoice PDF is bilingual and the service picker supports catalogue search
+ok 2 - invoice PDF is bilingual and the service picker supports catalogue search
+  ---
+  duration_ms: 316.735237
+  type: 'test'
+  ...
+# Subtest: draft/final layout, repeated headers, oversized descriptions and footer bounds
+ok 3 - draft/final layout, repeated headers, oversized descriptions and footer bounds
+  ---
+  duration_ms: 2430.108178
+  type: 'test'
+  ...
+# Subtest: language sections are ordered, financially identical, and mark missing translations
+ok 4 - language sections are ordered, financially identical, and mark missing translations
+  ---
+  duration_ms: 583.306507
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6481.066466

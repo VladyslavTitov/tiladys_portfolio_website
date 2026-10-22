@@ -1,16 +1,22 @@
-/* eslint-disable @next/next/no-img-element */
+import {SelectedWork} from '@/components/SelectedWork';
+import {locales} from '@tiladys/shared';
+import {ProjectGallery} from '@/components/ProjectGallery';
+import interfaceCopy from '@/content/interface.json';
+import { ProjectImage } from '@/components/ProjectImage';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { cache } from 'react';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { ArrowLeft, CalendarDays, Code2, ExternalLink, Github, Layers3, Link2 } from 'lucide-react';
 import { ContactCta } from '@/components/ContactCta';
 import { Shell } from '@/components/Shell';
-import { api } from '@/lib/api';
+import { getPublishedProjectBySlug } from '@/lib/public-projects-db';
 import { p } from '@/lib/page-copy';
 import { projectCategoryLabel, projectLinksAvailable } from '@/lib/project-categories';
+import { projectMetadata, type ProjectSeo } from '@/lib/project-seo';
 
 type Localized = Record<string, string>;
 type ProjectImage = { id: string; url: string; alt?: Localized | null; sortOrder: number };
-type ProjectDetail = {
+type ProjectDetail = ProjectSeo & {
   id: string;
   slug: string;
   category: string;
@@ -29,29 +35,26 @@ type ProjectDetail = {
 };
 
 function translated(value: Localized | undefined | null, locale: string) {
-  return value?.[locale] || value?.en || value?.ru || '';
+  return value?.[locale] || value?.en || value?.ru || Object.values(value||{}).find(v=>v.trim()) || '';
 }
+
+const loadProject = cache(async (slug: string): Promise<ProjectDetail | null> => {
+  return getPublishedProjectBySlug(slug);
+});
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
-  try {
-    const project = await api<ProjectDetail>(`/api/public/projects/${encodeURIComponent(slug)}`, { cache: 'no-store' });
-    const title = translated(project.title, locale);
-    const description = translated(project.summary, locale);
-    return { title: title || p(locale).project.notFound, description };
-  } catch {
-    return { title: p(locale).project.notFound };
-  }
+  const project = await loadProject(slug);
+  if (!project) return { title: p(locale).project.notFound, robots: { index: false, follow: false } };
+  return projectMetadata(project, locale);
 }
 
 export default async function ProjectPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   const c = p(locale).project;
-  let project: ProjectDetail | null = null;
-  try {
-    project = await api<ProjectDetail>(`/api/public/projects/${encodeURIComponent(slug)}`, { cache: 'no-store' });
-  } catch {}
+  const project = await loadProject(slug);
   if (!project) notFound();
+  if (project.slug !== slug) permanentRedirect(`/${locale}/portfolio/${project.slug}`);
 
   const title = translated(project.title, locale);
   const summary = translated(project.summary, locale);
@@ -60,13 +63,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
   const type = translated(project.type, locale);
   const workItems: string[] = project.workItems?.[locale] || project.workItems?.en || project.workItems?.ru || [];
   const images: ProjectImage[] = project.images ?? [];
-  const cover = images[0]?.url || project.coverImage || '/portfolio/placeholders/project-2.png';
+  const cover = images[0]?.url || project.coverImage || '';
   const date = project.projectDate ? new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric' }).format(new Date(project.projectDate)) : '—';
   const category = projectCategoryLabel(project.category, locale);
   const linksLabel = projectLinksAvailable(locale);
 
   return (
-    <Shell locale={locale}>
+    <Shell locale={locale} availableLocales={locales.filter(l=>project.title[l]?.trim()&&project.summary[l]?.trim())} fallbackPath="portfolio">
       <section className="project-detail-hero">
         <div className="project-detail-hero__inner">
           <div className="project-detail-hero__copy">
@@ -78,7 +81,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
               <Link className="secondary secondary--dark" href={`/${locale}/portfolio`}><ArrowLeft aria-hidden="true" size={18} />{c.back}</Link>
             </div>
           </div>
-          <div className="project-detail-hero__image"><img src={cover} alt={title} /></div>
+          <div className="project-detail-hero__image"><ProjectImage src={cover} alt={title} sizes="(max-width: 900px) 100vw, 50vw" priority /></div>
         </div>
         <div className="project-meta">
           <div><CalendarDays aria-hidden="true" /><span><strong>{c.completed}</strong>{date}</span></div>
@@ -94,11 +97,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
           {role ? <><h2>{c.role}</h2><p>{role}</p></> : null}
           {workItems.length ? <><h2>{c.work}</h2><ul>{workItems.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul></> : null}
         </div>
-        <div className="project-detail-main-image"><img src={cover} alt={title} /></div>
+        <div className="project-detail-main-image"><ProjectImage src={cover} alt={title} sizes="(max-width: 900px) 100vw, 50vw" /></div>
       </section>
 
-      {images.length ? <section className="section project-gallery-section"><h2>{c.screenshots}</h2><div className={`project-gallery project-gallery--${Math.min(images.length, 4)}`}>{images.map((image) => <figure key={image.id}><img src={image.url} alt={translated(image.alt, locale) || title} /></figure>)}</div></section> : null}
+      {images.length ? <section className="section project-gallery-section"><h2>{c.screenshots}</h2><ProjectGallery locale={locale} images={images.map(im=>({id:im.id,url:im.url,alt:translated(im.alt,locale)||title}))} labels={{previous:(interfaceCopy[locale as keyof typeof interfaceCopy]||interfaceCopy.en).previous,next:(interfaceCopy[locale as keyof typeof interfaceCopy]||interfaceCopy.en).next,close:locale==='de'?'Schließen':'Close',open:locale==='de'?'Bild öffnen':'Open image'}}/></section> : null}
       {project.technologies?.length ? <section className="section project-tools"><h2>{c.tools}</h2><div>{project.technologies.map((tool: string) => <span key={tool}>{tool}</span>)}</div></section> : null}
+      <section className="section"><Link className="primary" href={`/${locale}/contact?service=${project.category==='3d-printing'?'3d-printing':project.category==='pc-support'?'pc-laptop':'websites'}&project=${project.slug}`}>{c.similarTitle}</Link></section>
+      <SelectedWork locale={locale} category={project.category} excludeId={project.id}/>
       <ContactCta locale={locale} title={c.similarTitle} text={c.similarText} />
     </Shell>
   );

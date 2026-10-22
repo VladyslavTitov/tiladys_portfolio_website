@@ -1,0 +1,1360 @@
+{
+  "browser": "Chrome",
+  "before": false,
+  "rows": [
+    {
+      "control": false,
+      "route": "",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Вебсайти. 3D-друк. Практична підтримка ПК.",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 917.203125,
+            "right": 287,
+            "bottom": 1497.359375,
+            "width": 269,
+            "height": 580.15625
+          },
+          "media": {
+            "x": 19,
+            "y": 918.203125,
+            "right": 286,
+            "bottom": 1138.203125,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1404.359375,
+            "right": 262,
+            "bottom": 1472.359375,
+            "width": 219,
+            "height": 68
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1521.359375,
+            "right": 287,
+            "bottom": 2107.90625,
+            "width": 269,
+            "height": 586.546875
+          },
+          "media": {
+            "x": 19,
+            "y": 1522.359375,
+            "right": 286,
+            "bottom": 1742.359375,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2034.90625,
+            "right": 185.921875,
+            "bottom": 2082.90625,
+            "width": 142.921875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2131.90625,
+            "right": 287,
+            "bottom": 2738.453125,
+            "width": 269,
+            "height": 606.546875
+          },
+          "media": {
+            "x": 19,
+            "y": 2132.90625,
+            "right": 286,
+            "bottom": 2352.90625,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2645.453125,
+            "right": 262,
+            "bottom": 2713.453125,
+            "width": 219,
+            "height": 68
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/about",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Про TiLADYS",
+      "aboutInset": 24,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/contact",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Контакти",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [
+        {
+          "x": 41,
+          "y": 799.90625,
+          "right": 264,
+          "bottom": 853.90625,
+          "width": 223,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 903.40625,
+          "right": 264,
+          "bottom": 957.40625,
+          "width": 223,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1006.90625,
+          "right": 264,
+          "bottom": 1058.90625,
+          "width": 223,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1108.40625,
+          "right": 264,
+          "bottom": 1162.40625,
+          "width": 223,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1234.40625,
+          "right": 264,
+          "bottom": 1286.40625,
+          "width": 223,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1335.90625,
+          "right": 264,
+          "bottom": 1509.90625,
+          "width": 223,
+          "height": 174
+        },
+        {
+          "x": 45,
+          "y": 1646.078125,
+          "right": 65,
+          "bottom": 1664.078125,
+          "width": 20,
+          "height": 18
+        }
+      ],
+      "form": {
+        "x": 18,
+        "y": 662.03125,
+        "right": 287,
+        "bottom": 1862.078125,
+        "width": 269,
+        "height": 1200.046875
+      },
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/portfolio",
+      "width": 320,
+      "scroll": 313,
+      "h1": "Портфоліо",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services/websites",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Створення сайтів і вебпослуги",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 39,
+          "y": 1481.484375,
+          "right": 266,
+          "bottom": 2658.984375,
+          "width": 227,
+          "height": 1177.5
+        },
+        "last": {
+          "x": 39,
+          "y": 2449.046875,
+          "right": 266,
+          "bottom": 2658.984375,
+          "width": 227,
+          "height": 209.9375
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1343.921875,
+          "right": 287,
+          "bottom": 3376.46875,
+          "width": 269,
+          "height": 2032.546875
+        },
+        "box": {
+          "x": 18,
+          "y": 2712.984375,
+          "right": 287,
+          "bottom": 3376.46875,
+          "width": 269,
+          "height": 663.484375
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/pc-laptop",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Послуги для ПК і ноутбуків",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 39,
+          "y": 1709.25,
+          "right": 266,
+          "bottom": 3964.875,
+          "width": 227,
+          "height": 2255.625
+        },
+        "last": {
+          "x": 39,
+          "y": 3403.6875,
+          "right": 266,
+          "bottom": 3964.875,
+          "width": 227,
+          "height": 561.1875
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1571.6875,
+          "right": 287,
+          "bottom": 4735.140625,
+          "width": 269,
+          "height": 3163.453125
+        },
+        "box": {
+          "x": 18,
+          "y": 4018.875,
+          "right": 287,
+          "bottom": 4735.140625,
+          "width": 269,
+          "height": 716.265625
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/3d-printing",
+      "width": 320,
+      "scroll": 305,
+      "h1": "3D-друк",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services",
+      "width": 320,
+      "scroll": 305,
+      "h1": "IT, вебсайти та цифрові послуги",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 1095.96875,
+            "right": 287,
+            "bottom": 1676.125,
+            "width": 269,
+            "height": 580.15625
+          },
+          "media": {
+            "x": 19,
+            "y": 1096.96875,
+            "right": 286,
+            "bottom": 1316.96875,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1583.125,
+            "right": 262,
+            "bottom": 1651.125,
+            "width": 219,
+            "height": 68
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1700.125,
+            "right": 287,
+            "bottom": 2286.671875,
+            "width": 269,
+            "height": 586.546875
+          },
+          "media": {
+            "x": 19,
+            "y": 1701.125,
+            "right": 286,
+            "bottom": 1921.125,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2213.671875,
+            "right": 185.921875,
+            "bottom": 2261.671875,
+            "width": 142.921875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2310.671875,
+            "right": 287,
+            "bottom": 2917.21875,
+            "width": 269,
+            "height": 606.546875
+          },
+          "media": {
+            "x": 19,
+            "y": 2311.671875,
+            "right": 286,
+            "bottom": 2531.671875,
+            "width": 267,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2824.21875,
+            "right": 262,
+            "bottom": 2892.21875,
+            "width": 219,
+            "height": 68
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/framer",
+      "width": 320,
+      "scroll": 305,
+      "h1": "Шаблони Framer",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/3d-models",
+      "width": 320,
+      "scroll": 305,
+      "h1": "3D-моделі для завантаження",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Вебсайти. 3D-друк. Практична підтримка ПК.",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 943.578125,
+            "right": 735,
+            "bottom": 1450.953125,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 944.578125,
+            "right": 734,
+            "bottom": 1164.578125,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1377.953125,
+            "right": 366.96875,
+            "bottom": 1425.953125,
+            "width": 323.96875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1474.953125,
+            "right": 735,
+            "bottom": 1982.328125,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 1475.953125,
+            "right": 734,
+            "bottom": 1695.953125,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1909.328125,
+            "right": 185.921875,
+            "bottom": 1957.328125,
+            "width": 142.921875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2006.328125,
+            "right": 735,
+            "bottom": 2513.703125,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 2007.328125,
+            "right": 734,
+            "bottom": 2227.328125,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2440.703125,
+            "right": 338.5,
+            "bottom": 2488.703125,
+            "width": 295.5,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/about",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Про TiLADYS",
+      "aboutInset": 24,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/contact",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Контакти",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [
+        {
+          "x": 41,
+          "y": 815.46875,
+          "right": 712,
+          "bottom": 869.46875,
+          "width": 671,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 918.96875,
+          "right": 712,
+          "bottom": 972.96875,
+          "width": 671,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1022.46875,
+          "right": 712,
+          "bottom": 1074.46875,
+          "width": 671,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1123.96875,
+          "right": 712,
+          "bottom": 1177.96875,
+          "width": 671,
+          "height": 54
+        },
+        {
+          "x": 41,
+          "y": 1227.46875,
+          "right": 712,
+          "bottom": 1279.46875,
+          "width": 671,
+          "height": 52
+        },
+        {
+          "x": 41,
+          "y": 1328.96875,
+          "right": 712,
+          "bottom": 1502.96875,
+          "width": 671,
+          "height": 174
+        },
+        {
+          "x": 45,
+          "y": 1594.359375,
+          "right": 65,
+          "bottom": 1612.359375,
+          "width": 20,
+          "height": 18
+        }
+      ],
+      "form": {
+        "x": 18,
+        "y": 708.78125,
+        "right": 735,
+        "bottom": 1742.359375,
+        "width": 717,
+        "height": 1033.578125
+      },
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/portfolio",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Портфоліо",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services/websites",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Створення сайтів і вебпослуги",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 53,
+          "y": 1252.328125,
+          "right": 700,
+          "bottom": 2068.328125,
+          "width": 647,
+          "height": 816
+        },
+        "last": {
+          "x": 53,
+          "y": 1926.328125,
+          "right": 700,
+          "bottom": 2068.328125,
+          "width": 647,
+          "height": 142
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1168.140625,
+          "right": 735,
+          "bottom": 2552.484375,
+          "width": 717,
+          "height": 1384.34375
+        },
+        "box": {
+          "x": 18,
+          "y": 2131.328125,
+          "right": 735,
+          "bottom": 2552.484375,
+          "width": 717,
+          "height": 421.15625
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/pc-laptop",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Послуги для ПК і ноутбуків",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 53,
+          "y": 1344.703125,
+          "right": 700,
+          "bottom": 2670.703125,
+          "width": 647,
+          "height": 1326
+        },
+        "last": {
+          "x": 53,
+          "y": 2358.703125,
+          "right": 700,
+          "bottom": 2670.703125,
+          "width": 647,
+          "height": 312
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 18,
+          "y": 1260.515625,
+          "right": 735,
+          "bottom": 3154.859375,
+          "width": 717,
+          "height": 1894.34375
+        },
+        "box": {
+          "x": 18,
+          "y": 2733.703125,
+          "right": 735,
+          "bottom": 3154.859375,
+          "width": 717,
+          "height": 421.15625
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/3d-printing",
+      "width": 768,
+      "scroll": 753,
+      "h1": "3D-друк",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services",
+      "width": 768,
+      "scroll": 753,
+      "h1": "IT, вебсайти та цифрові послуги",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 18,
+            "y": 957.171875,
+            "right": 735,
+            "bottom": 1464.546875,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 958.171875,
+            "right": 734,
+            "bottom": 1178.171875,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1391.546875,
+            "right": 366.96875,
+            "bottom": 1439.546875,
+            "width": 323.96875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 1488.546875,
+            "right": 735,
+            "bottom": 1995.921875,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 1489.546875,
+            "right": 734,
+            "bottom": 1709.546875,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 1922.921875,
+            "right": 185.921875,
+            "bottom": 1970.921875,
+            "width": 142.921875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 18,
+            "y": 2019.921875,
+            "right": 735,
+            "bottom": 2527.296875,
+            "width": 717,
+            "height": 507.375
+          },
+          "media": {
+            "x": 19,
+            "y": 2020.921875,
+            "right": 734,
+            "bottom": 2240.921875,
+            "width": 715,
+            "height": 220
+          },
+          "action": {
+            "x": 43,
+            "y": 2454.296875,
+            "right": 338.5,
+            "bottom": 2502.296875,
+            "width": 295.5,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/framer",
+      "width": 768,
+      "scroll": 753,
+      "h1": "Шаблони Framer",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/3d-models",
+      "width": 768,
+      "scroll": 753,
+      "h1": "3D-моделі для завантаження",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Вебсайти. 3D-друк. Практична підтримка ПК.",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 112.5,
+            "y": 727.375,
+            "right": 496.5,
+            "bottom": 1287.53125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 113.5,
+            "y": 728.375,
+            "right": 495.5,
+            "bottom": 948.375,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 137.5,
+            "y": 1214.53125,
+            "right": 461.46875,
+            "bottom": 1262.53125,
+            "width": 323.96875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 520.5,
+            "y": 727.375,
+            "right": 904.5,
+            "bottom": 1287.53125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 521.5,
+            "y": 728.375,
+            "right": 903.5,
+            "bottom": 948.375,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 545.5,
+            "y": 1214.53125,
+            "right": 688.421875,
+            "bottom": 1262.53125,
+            "width": 142.921875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 928.5,
+            "y": 727.375,
+            "right": 1312.5,
+            "bottom": 1287.53125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 929.5,
+            "y": 728.375,
+            "right": 1311.5,
+            "bottom": 948.375,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 953.5,
+            "y": 1214.53125,
+            "right": 1249,
+            "bottom": 1262.53125,
+            "width": 295.5,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/about",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Про TiLADYS",
+      "aboutInset": 48,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/contact",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Контакти",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [
+        {
+          "x": 145.5,
+          "y": 696.6875,
+          "right": 763.15625,
+          "bottom": 750.6875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 800.1875,
+          "right": 763.15625,
+          "bottom": 854.1875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 903.6875,
+          "right": 763.15625,
+          "bottom": 955.6875,
+          "width": 617.65625,
+          "height": 52
+        },
+        {
+          "x": 145.5,
+          "y": 1005.1875,
+          "right": 763.15625,
+          "bottom": 1059.1875,
+          "width": 617.65625,
+          "height": 54
+        },
+        {
+          "x": 145.5,
+          "y": 1108.6875,
+          "right": 763.15625,
+          "bottom": 1160.6875,
+          "width": 617.65625,
+          "height": 52
+        },
+        {
+          "x": 145.5,
+          "y": 1210.1875,
+          "right": 763.15625,
+          "bottom": 1384.1875,
+          "width": 617.65625,
+          "height": 174
+        },
+        {
+          "x": 149.5,
+          "y": 1475.578125,
+          "right": 169.5,
+          "bottom": 1493.578125,
+          "width": 20,
+          "height": 18
+        }
+      ],
+      "form": {
+        "x": 112.5,
+        "y": 568,
+        "right": 796.15625,
+        "bottom": 1633.578125,
+        "width": 683.65625,
+        "height": 1065.578125
+      },
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/portfolio",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Портфоліо",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services/websites",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Створення сайтів і вебпослуги",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 147.5,
+          "y": 983.046875,
+          "right": 1277.5,
+          "bottom": 1513.046875,
+          "width": 1130,
+          "height": 530
+        },
+        "last": {
+          "x": 147.5,
+          "y": 1371.046875,
+          "right": 1277.5,
+          "bottom": 1513.046875,
+          "width": 1130,
+          "height": 142
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 112.5,
+          "y": 886.859375,
+          "right": 1312.5,
+          "bottom": 1760.015625,
+          "width": 1200,
+          "height": 873.15625
+        },
+        "box": {
+          "x": 112.5,
+          "y": 1576.046875,
+          "right": 1312.5,
+          "bottom": 1760.015625,
+          "width": 1200,
+          "height": 183.96875
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/pc-laptop",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Послуги для ПК і ноутбуків",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": {
+        "parent": {
+          "x": 147.5,
+          "y": 1101.8125,
+          "right": 1277.5,
+          "bottom": 1937.8125,
+          "width": 1130,
+          "height": 836
+        },
+        "last": {
+          "x": 147.5,
+          "y": 1625.8125,
+          "right": 1277.5,
+          "bottom": 1937.8125,
+          "width": 1130,
+          "height": 312
+        }
+      },
+      "aside": {
+        "parent": {
+          "x": 112.5,
+          "y": 1005.625,
+          "right": 1312.5,
+          "bottom": 2184.78125,
+          "width": 1200,
+          "height": 1179.15625
+        },
+        "box": {
+          "x": 112.5,
+          "y": 2000.8125,
+          "right": 1312.5,
+          "bottom": 2184.78125,
+          "width": 1200,
+          "height": 183.96875
+        }
+      }
+    },
+    {
+      "control": false,
+      "route": "/services/3d-printing",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "3D-друк",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/services",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "IT, вебсайти та цифрові послуги",
+      "aboutInset": null,
+      "cards": [
+        {
+          "box": {
+            "x": 112.5,
+            "y": 718.671875,
+            "right": 496.5,
+            "bottom": 1278.828125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 113.5,
+            "y": 719.671875,
+            "right": 495.5,
+            "bottom": 939.671875,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 137.5,
+            "y": 1205.828125,
+            "right": 461.46875,
+            "bottom": 1253.828125,
+            "width": 323.96875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 520.5,
+            "y": 718.671875,
+            "right": 904.5,
+            "bottom": 1278.828125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 521.5,
+            "y": 719.671875,
+            "right": 903.5,
+            "bottom": 939.671875,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 545.5,
+            "y": 1205.828125,
+            "right": 688.421875,
+            "bottom": 1253.828125,
+            "width": 142.921875,
+            "height": 48
+          }
+        },
+        {
+          "box": {
+            "x": 928.5,
+            "y": 718.671875,
+            "right": 1312.5,
+            "bottom": 1278.828125,
+            "width": 384,
+            "height": 560.15625
+          },
+          "media": {
+            "x": 929.5,
+            "y": 719.671875,
+            "right": 1311.5,
+            "bottom": 939.671875,
+            "width": 382,
+            "height": 220
+          },
+          "action": {
+            "x": 953.5,
+            "y": 1205.828125,
+            "right": 1249,
+            "bottom": 1253.828125,
+            "width": 295.5,
+            "height": 48
+          }
+        }
+      ],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/framer",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Шаблони Framer",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    },
+    {
+      "control": false,
+      "route": "/products/3d-models",
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "3D-моделі для завантаження",
+      "aboutInset": null,
+      "cards": [],
+      "broken": [],
+      "replyEditors": 0,
+      "kpis": [],
+      "fields": [],
+      "form": null,
+      "groupLast": null,
+      "aside": null
+    }
+  ],
+  "failures": [],
+  "interactions": [],
+  "consoleErrors": [],
+  "networkErrors": []
+}

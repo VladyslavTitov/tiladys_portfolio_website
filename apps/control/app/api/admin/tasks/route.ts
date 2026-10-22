@@ -1,0 +1,14 @@
+import { NextRequest } from 'next/server';
+import { db } from '@tiladys/db';
+import { assertOrigin, requireUser } from '@/lib/security';
+import { parse, taskSchema, taskRelations, transaction } from '@/lib/rebuild-domain';
+import { dateRange, paging, privateJson, privateError } from '@/lib/admin-response';
+export async function GET(req: NextRequest) {
+ try { await requireUser(); const { page, q } = paging(req.nextUrl); const status = req.nextUrl.searchParams.get('status'); const job = req.nextUrl.searchParams.get('serviceJobId');const customer=req.nextUrl.searchParams.get('customerId');
+ const view=req.nextUrl.searchParams.get('view'),priority=req.nextUrl.searchParams.get('priority');const today=new Date();today.setUTCHours(0,0,0,0);const tomorrow=new Date(today.getTime()+86400000);
+ const calendar=view==='calendar';const rawMonth=req.nextUrl.searchParams.get('month')||new Date().toISOString().slice(0,7);if(calendar&&!/^\d{4}-(?:0[1-9]|1[0-2])$/.test(rawMonth))throw Error('INVALID_CALENDAR_MONTH');const start=new Date(`${rawMonth}-01T00:00:00Z`);const end=new Date(start);end.setUTCMonth(end.getUTCMonth()+1);
+ const where = {...dateRange(req.nextUrl,'dueAt'),...(['0','1','2'].includes(priority||'')?{priority:Number(priority)}:{}),...(calendar?{dueAt:{gte:start,lt:end}}:view==='today'?{dueAt:{gte:today,lt:tomorrow}}:view==='upcoming'?{dueAt:{gte:tomorrow}}:view==='overdue'?{dueAt:{lt:new Date()}}:{}), ...(customer?{customerId:customer}:{}), ...(q ? { title: { contains: q, mode: 'insensitive' as const } } : {}), ...(job ? { serviceJobId: job } : {}), ...(view==='completed'?{status:'DONE' as const}:status && ['TODO','IN_PROGRESS','DONE','ARCHIVED'].includes(status) ? { status: status as 'TODO'|'IN_PROGRESS'|'DONE'|'ARCHIVED' } : { status: { notIn: view&&view!=='calendar'?['DONE' as const,'ARCHIVED' as const]:['ARCHIVED' as const] } }) };
+ const [items,total] = await Promise.all([db.task.findMany({ where, take:calendar?1001:25,skip:calendar?0:(page-1)*25,orderBy:[{dueAt:'asc'},{createdAt:'desc'}]}),db.task.count({where})]); if(calendar&&total>1000)return privateJson({error:'CALENDAR_REQUIRES_FILTER',reason:'More than 1000 tasks match this month. Narrow by client or job.'},422);return privateJson({items,total,page:calendar?1:page});
+ } catch(e) { return privateError(e,'TASK_LIST_FAILED'); }
+}
+export async function POST(req: NextRequest) { try { await assertOrigin(); const u = await requireUser(); const data = parse(taskSchema,await req.json()); return privateJson(await transaction(db,async tx => {await taskRelations(tx,data); const row=await tx.task.create({data:{...data,dueAt:data.dueAt?new Date(data.dueAt):null,createdById:u.id}}); await tx.auditLog.create({data:{userId:u.id,action:'TASK_CREATE',entity:'Task',entityId:row.id}});return row;}),201); } catch(e) { return privateError(e,'TASK_CREATE_FAILED'); } }

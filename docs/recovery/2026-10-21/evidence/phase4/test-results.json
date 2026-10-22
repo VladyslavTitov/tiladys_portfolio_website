@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-21T14:31:13.760Z",
+  "scope": "isolated retained PostgreSQL18 loopback lab; no tests write to real Preview or Production",
+  "results": [
+    {
+      "name": "release-schema-tests",
+      "tests": 1,
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "name": "crm-regression-tests",
+      "tests": 4,
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "name": "invoice-payment-quote-media-tests",
+      "tests": 10,
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "name": "bilingual-invoice-tests",
+      "tests": 10,
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "name": "database-recovery-tests",
+      "tests": 1,
+      "passed": true,
+      "skipped": 0
+    },
+    {
+      "name": "domain-auth-portfolio-tests",
+      "tests": 26,
+      "passed": true,
+      "skipped": 0
+    }
+  ],
+  "tests": 52,
+  "skipped": 0,
+  "originalSuitesUnchanged": true,
+  "recoveryAdapter": "Compare original column values, and separately assert homepageFeatured=false and all new nullable image/message fields=NULL. Initial obsolete whole-row expectation retained separately."
+}

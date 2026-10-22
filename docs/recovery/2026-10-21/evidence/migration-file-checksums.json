@@ -1,0 +1,94 @@
+[
+  {
+    "name": "20260725212133_init",
+    "sha256": "33da1e9791959eb850f8a42e3e7cba0d0d0165ab2e3931804919ea3ac03df4ca"
+  },
+  {
+    "name": "20260727160000_portfolio_images_and_fields",
+    "sha256": "6a76a87b989f12478b66648ad643f15b1b4f9caa5e0cf43d2e1778f7017dbeaa"
+  },
+  {
+    "name": "20260904120000_rename_new_message_status_to_unread",
+    "sha256": "050a37795c833e83d3f1e76e95040c03a819f4e87fd9788dae93e58b6a4c8e5f"
+  },
+  {
+    "name": "20260920120000_private_contact_attachments",
+    "sha256": "2b684ec52411288018fcc2d0c052a18795ab6a8480b09d4d5a7f70e7f92f1f36"
+  },
+  {
+    "name": "20260921100000_remove_project_featured",
+    "sha256": "f77423202bb1b9f7cc6df80fbd891c39398b54ac76a95d04ef494a2ba0557300"
+  },
+  {
+    "name": "20260921101000_project_seo_and_slug_history",
+    "sha256": "1eba1ee5bff7ffe872d75bb616fb5e52942bbf680b4f7ea632d20a86d38d9db9"
+  },
+  {
+    "name": "20260922110000_crm_service_jobs",
+    "sha256": "ee4355fb797d5c0c2443c61f9a58f994931c10c1ffe07aaba5e644e26a5334c3"
+  },
+  {
+    "name": "20260922150000_service_job_line_items",
+    "sha256": "594a57b4427cbc48bb8f517d91686a6796ac664a6ec1b805d08577fd5ed8d651"
+  },
+  {
+    "name": "20260922170000_invoices",
+    "sha256": "3d23570f599a7d7f8037e74c942c909299353092f0ffa22b492fbae4742b0043"
+  },
+  {
+    "name": "20260922230000_unique_draft_per_service_job",
+    "sha256": "36d071b46036398c40f4c2bc7518f3e98179b7e41003002b605250c3109f63ee"
+  },
+  {
+    "name": "20260923140000_invoice_billing_recipient",
+    "sha256": "f477f094d66727de497430407af18ff1ac7aa48089cf8b1bf4aa880f8bc5bb51"
+  },
+  {
+    "name": "20260927150000_bilingual_invoice_snapshots",
+    "sha256": "81187ead34e3143207eb2b54bb99fd44d2ea35a557681971a03f5368e12c35a8"
+  },
+  {
+    "name": "20260927151000_project_image_schema_guard",
+    "sha256": "e42962a8222df19c143ac8f388a414dfad7656231c24ebed1a8ed51a79dee899"
+  },
+  {
+    "name": "20261013210000_rebuild_core",
+    "sha256": "6ea69f92b8d4295d78b893602d5d8a13794dd64474c4c341e10a78117f75a830"
+  },
+  {
+    "name": "20261013220000_mail_outbox",
+    "sha256": "99842557bb99f3a5f2ded5bf3287eee17f3195a56d16742bb532f2e6bf199726"
+  },
+  {
+    "name": "20261013223000_quote_invoice_source",
+    "sha256": "37d6d0bec35e8a637b27353a6c03bb3d503bef5644dcfac45c411c8e63e7cdaf"
+  },
+  {
+    "name": "20261013230000_enquiry_detail",
+    "sha256": "d2766e13b3983d7b32aedc77747964001442033920421a3232235284e72607fb"
+  },
+  {
+    "name": "20261013233000_structured_catalogue",
+    "sha256": "3c92cb8192811855e6ddb0bff8af46ca89b1ab264e9f5e70cfc6826561f375b0"
+  },
+  {
+    "name": "20261014003000_private_exports",
+    "sha256": "193f79b541a4b527c31e53691f437400e6d99205b78f9b47280c644e80d78660"
+  },
+  {
+    "name": "20261014010000_editor_retention",
+    "sha256": "17b4d4e034db7f45b8e109ca290292419c869f2f98dc6163098ee59935a70273"
+  },
+  {
+    "name": "20261014013000_quote_expiry_reason",
+    "sha256": "592014582ff8e5f47abcd45dd9470c1bd8b3c75fae5e720c96e042df9f0a61cd"
+  },
+  {
+    "name": "20261014020000_task_timezone",
+    "sha256": "c223c852572b7960d5803903d2f16f8b15de0ca11379f556a70547c9d85a8e4f"
+  },
+  {
+    "name": "20261014023000_curation_unit_text",
+    "sha256": "04a3960df9acce31c40e9a2d0fd6a935583f682958af86c8e9d11b619d21812f"
+  }
+]

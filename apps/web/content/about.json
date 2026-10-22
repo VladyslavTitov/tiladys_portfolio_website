@@ -1,596 +1,332 @@
 {
   "en": {
     "hero": {
-      "title": "About & Qualifications",
-      "subtitle": "Practical IT help for home users and small businesses in NRW."
+      "title": "About TiLADYS",
+      "subtitle": "TiLADYS is a local IT and web services business in Mülheim an der Ruhr, helping households and small businesses with computer support, websites and everyday digital tasks. Support is practical, with direct and clear communication."
     },
-    "whoIAm": {
-      "title": "Who I Am",
-      "items": [
-        "Founder of TiLADYS",
-        "Practical IT support and websites",
-        "Clear communication, reliable help"
-      ]
-    },
-    "helpWith": {
-      "title": "What I Help With",
-      "items": [
-        {"label": "Websites", "icon": "globe"},
-        {"label": "PC & Laptop Help", "icon": "laptop"},
-        {"label": "Digital Support", "icon": "message"},
-        {"label": "Linux & Server Basics", "icon": "server"},
-        {"label": "Troubleshooting", "icon": "tools"},
-        {"label": "Google Business", "icon": "store"}
-      ]
-    },
-    "whyChoose": {
-      "title": "Why Clients Choose Me",
-      "items": [
-        "Clear explanations",
-        "Friendly support",
-        "Fair prices",
-        "Reliable help"
-      ]
-    },
-    "technical": {
-      "title": "Technical Background",
-      "items": [
-        {"label": "HTML / CSS / JavaScript Basics", "icon": "code"},
-        {"label": "WordPress (Themes & Plugins)", "icon": "wordpress"},
-        {"label": "Linux Basics (Ubuntu / Debian)", "icon": "linux"},
-        {"label": "Docker & Container Basics", "icon": "docker"},
-        {"label": "Networking Basics (IP, DNS, DHCP, Router)", "icon": "network"},
-        {"label": "Google Workspace / Office", "icon": "document"}
-      ]
-    },
-    "education": {
-      "title": "Education & Learning",
-      "items": [
-        {
-          "school": "Rhine-Waal University of Applied Sciences, Kamp-Lintfort Campus, Germany",
-          "fieldLabel": "Degree Program",
-          "field": "Infotronic Systems Engineering, B.Sc.",
-          "period": "2026 – Present"
-        },
-        {
-          "school": "Secondary Industrial School of Electrical Engineering, Slovakia",
-          "fieldLabel": "Field of Study",
-          "field": "Intelligent Technologies",
-          "period": "2022 – 2025"
-        },
-        {
-          "school": "Higher Vocational School No. 7, Ukraine",
-          "fieldLabel": "Field of Study",
-          "field": "Information and Software Processing Operator",
-          "period": "2020 – 2022"
-        },
-        {
-          "school": "General Secondary School",
-          "fieldLabel": "",
-          "field": "Kremenchuk, Ukraine",
-          "period": "2011 – 2020"
-        }
-      ]
-    },
-    "languages": {
-      "title": "Languages",
-      "items": [
-        {"name": "Ukrainian", "level": "Native", "flag": "🇺🇦"},
-        {"name": "Russian", "level": "Native", "flag": "🇷🇺"},
-        {"name": "English", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
-        {"name": "Slovak", "level": "B2", "flag": "🇸🇰"},
-        {"name": "German", "level": "Basic / Learning", "flag": "🇩🇪"}
-      ]
-    },
-    "work": {
-      "title": "How I Work",
-      "items": [
-        "Plain language",
-        "Step-by-step help",
-        "Transparent about what I can do",
-        "Focused on practical solutions"
-      ]
-    },
-    "benefits": [
-      {"label": "Clear communication", "icon": "chat"},
-      {"label": "Personal support", "icon": "user"},
-      {"label": "Practical solutions", "icon": "idea"},
-      {"label": "Multi-language communication", "icon": "globe"}
-    ]
+    "ctaTitle": "Let’s discuss your request",
+    "ctaText": "TiLADYS can help with your IT or web problem. Explore the services or get in touch to discuss what you need.",
+    "contact": "Contact TiLADYS",
+    "services": "Explore services",
+    "founderTitle": "About the founder",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Vladyslav Titov founded TiLADYS and personally carries out its IT and website work. Clients communicate directly with the IT professional handling their request, from explaining the problem to clarifying the next steps.",
+    "languagesTitle": "Languages",
+    "educationTitle": "Education",
+    "languages": [
+      {
+        "name": "Ukrainian",
+        "level": "Native"
+      },
+      {
+        "name": "Russian",
+        "level": "Native"
+      },
+      {
+        "name": "English",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Slovak",
+        "level": "B2"
+      },
+      {
+        "name": "German",
+        "level": "A1 completed; currently learning A2"
+      }
+    ],
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–present · Student; degree in progress"
+      },
+      {
+        "school": "Secondary Industrial School of Electrical Engineering, Slovakia",
+        "course": "Intelligent Technologies",
+        "period": "2022–2025"
+      },
+      {
+        "school": "Higher Vocational School No. 7, Ukraine",
+        "course": "Information and Software Processing Operator",
+        "period": "2020–2022"
+      }
+    ],
+    "portraitLabel": "Portrait"
   },
   "de": {
     "hero": {
-      "title": "Über mich & Qualifikationen",
-      "subtitle": "Praktische IT-Hilfe für Privatkunden und kleine Unternehmen in NRW."
+      "title": "Über TiLADYS",
+      "subtitle": "TiLADYS ist ein lokaler IT- und Webdienstleister in Mülheim an der Ruhr. Das Unternehmen hilft Privathaushalten und kleinen Unternehmen bei Computerproblemen, Websites und digitalen Alltagsaufgaben. Die Unterstützung ist praxisnah, die Kommunikation direkt und klar."
     },
-    "whoIAm": {
-      "title": "Wer ich bin",
-      "items": [
-        "Gründer von TiLADYS",
-        "Praktischer IT-Support und Websites",
-        "Klare Kommunikation und zuverlässige Hilfe"
-      ]
-    },
-    "helpWith": {
-      "title": "Wobei ich helfe",
-      "items": [
-        {"label": "Websites", "icon": "globe"},
-        {"label": "PC- & Laptop-Hilfe", "icon": "laptop"},
-        {"label": "Digitale Unterstützung", "icon": "message"},
-        {"label": "Linux- & Server-Grundlagen", "icon": "server"},
-        {"label": "Fehlersuche", "icon": "tools"},
-        {"label": "Google Business", "icon": "store"}
-      ]
-    },
-    "whyChoose": {
-      "title": "Warum Kunden mich wählen",
-      "items": [
-        "Klare Erklärungen",
-        "Freundliche Unterstützung",
-        "Faire Preise",
-        "Zuverlässige Hilfe"
-      ]
-    },
-    "technical": {
-      "title": "Technischer Hintergrund",
-      "items": [
-        {"label": "HTML / CSS / JavaScript Grundlagen", "icon": "code"},
-        {"label": "WordPress (Themes & Plugins)", "icon": "wordpress"},
-        {"label": "Linux-Grundlagen (Ubuntu / Debian)", "icon": "linux"},
-        {"label": "Docker- & Container-Grundlagen", "icon": "docker"},
-        {"label": "Netzwerk-Grundlagen (IP, DNS, DHCP, Router)", "icon": "network"},
-        {"label": "Google Workspace / Office", "icon": "document"}
-      ]
-    },
-    "education": {
-      "title": "Ausbildung & Weiterbildung",
-      "items": [
-        {
-          "school": "Hochschule Rhein-Waal, Campus Kamp-Lintfort, Deutschland",
-          "fieldLabel": "Studiengang",
-          "field": "Infotronic Systems Engineering, B.Sc.",
-          "period": "2026 – heute"
-        },
-        {
-          "school": "Sekundäre Industrieschule für Elektrotechnik, Slowakei",
-          "fieldLabel": "Fachrichtung",
-          "field": "Intelligente Technologien",
-          "period": "2022 – 2025"
-        },
-        {
-          "school": "Höhere Berufsschule Nr. 7, Ukraine",
-          "fieldLabel": "Fachrichtung",
-          "field": "Operator für Informations- und Softwareverarbeitung",
-          "period": "2020 – 2022"
-        },
-        {
-          "school": "Allgemeinbildende Schule",
-          "fieldLabel": "",
-          "field": "Krementschuk, Ukraine",
-          "period": "2011 – 2020"
-        }
-      ]
-    },
-    "languages": {
-      "title": "Sprachen",
-      "items": [
-        {"name": "Ukrainisch", "level": "Muttersprache", "flag": "🇺🇦"},
-        {"name": "Russisch", "level": "Muttersprache", "flag": "🇷🇺"},
-        {"name": "Englisch", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
-        {"name": "Slowakisch", "level": "B2", "flag": "🇸🇰"},
-        {"name": "Deutsch", "level": "Grundkenntnisse / Lernen", "flag": "🇩🇪"}
-      ]
-    },
-    "work": {
-      "title": "So arbeite ich",
-      "items": [
-        "Verständliche Sprache",
-        "Schritt-für-Schritt-Hilfe",
-        "Transparenz über meine Möglichkeiten",
-        "Fokus auf praktische Lösungen"
-      ]
-    },
-    "benefits": [
-      {"label": "Klare Kommunikation", "icon": "chat"},
-      {"label": "Persönliche Unterstützung", "icon": "user"},
-      {"label": "Praktische Lösungen", "icon": "idea"},
-      {"label": "Mehrsprachige Kommunikation", "icon": "globe"}
-    ]
+    "ctaTitle": "Besprechen wir Ihr Anliegen",
+    "ctaText": "TiLADYS hilft Ihnen bei Ihrem IT- oder Website-Problem. Entdecken Sie die Services oder kontaktieren Sie uns, um Ihr Anliegen zu besprechen.",
+    "contact": "TiLADYS kontaktieren",
+    "services": "Services ansehen",
+    "founderTitle": "Über den Gründer",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Vladyslav Titov hat TiLADYS gegründet und führt die IT- und Website-Arbeiten persönlich aus. Kunden sprechen direkt mit dem IT-Fachmann, der ihr Anliegen bearbeitet – von der Beschreibung des Problems bis zur Klärung der nächsten Schritte.",
+    "languagesTitle": "Sprachen",
+    "educationTitle": "Ausbildung",
+    "languages": [
+      {
+        "name": "Ukrainisch",
+        "level": "Muttersprache"
+      },
+      {
+        "name": "Russisch",
+        "level": "Muttersprache"
+      },
+      {
+        "name": "Englisch",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Slowakisch",
+        "level": "B2"
+      },
+      {
+        "name": "Deutsch",
+        "level": "A1 abgeschlossen; lernt derzeit A2"
+      }
+    ],
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–heute · Student; Studium läuft"
+      },
+      {
+        "school": "Sekundäre Industriefachschule für Elektrotechnik, Slowakei",
+        "course": "Intelligente Technologien",
+        "period": "2022–2025"
+      },
+      {
+        "school": "Höhere Berufsschule Nr. 7, Ukraine",
+        "course": "Bediener für Informations- und Softwareverarbeitung",
+        "period": "2020–2022"
+      }
+    ],
+    "portraitLabel": "Porträt"
   },
   "uk": {
     "hero": {
-      "title": "Про мене та кваліфікації",
-      "subtitle": "Практична IT-допомога для домашніх користувачів і малого бізнесу в NRW."
+      "title": "Про TiLADYS",
+      "subtitle": "TiLADYS — місцевий бізнес у сфері IT та вебпослуг у Мюльгаймі-на-Рурі. Він допомагає домогосподарствам і малому бізнесу з комп’ютерами, вебсайтами та повсякденними цифровими завданнями. Допомога практична, а спілкування пряме й зрозуміле."
     },
-    "whoIAm": {
-      "title": "Хто я",
-      "items": [
-        "Засновник TiLADYS",
-        "Практична IT-підтримка та вебсайти",
-        "Зрозуміле спілкування і надійна допомога"
-      ]
-    },
-    "helpWith": {
-      "title": "З чим я допомагаю",
-      "items": [
-        {"label": "Вебсайти", "icon": "globe"},
-        {"label": "Допомога з ПК і ноутбуками", "icon": "laptop"},
-        {"label": "Цифрова підтримка", "icon": "message"},
-        {"label": "Основи Linux і серверів", "icon": "server"},
-        {"label": "Пошук і усунення проблем", "icon": "tools"},
-        {"label": "Google Business", "icon": "store"}
-      ]
-    },
-    "whyChoose": {
-      "title": "Чому клієнти обирають мене",
-      "items": [
-        "Зрозумілі пояснення",
-        "Доброзичлива підтримка",
-        "Справедливі ціни",
-        "Надійна допомога"
-      ]
-    },
-    "technical": {
-      "title": "Технічна підготовка",
-      "items": [
-        {"label": "Основи HTML / CSS / JavaScript", "icon": "code"},
-        {"label": "WordPress (теми та плагіни)", "icon": "wordpress"},
-        {"label": "Основи Linux (Ubuntu / Debian)", "icon": "linux"},
-        {"label": "Основи Docker і контейнерів", "icon": "docker"},
-        {"label": "Основи мереж (IP, DNS, DHCP, Router)", "icon": "network"},
-        {"label": "Google Workspace / Office", "icon": "document"}
-      ]
-    },
-    "education": {
-      "title": "Освіта та навчання",
-      "items": [
-        {
-          "school": "Університет прикладних наук Рейн-Вааль, кампус Камп-Лінтфорт, Німеччина",
-          "fieldLabel": "Освітня програма",
-          "field": "Інфотронні системи та інженерія, бакалавр наук (B.Sc.)",
-          "period": "2026 – дотепер"
-        },
-        {
-          "school": "Середня промислова школа електротехніки, Словаччина",
-          "fieldLabel": "Напрям навчання",
-          "field": "Інтелектуальні технології",
-          "period": "2022 – 2025"
-        },
-        {
-          "school": "Вище професійне училище № 7, Україна",
-          "fieldLabel": "Напрям навчання",
-          "field": "Оператор з обробки інформації та програмного забезпечення",
-          "period": "2020 – 2022"
-        },
-        {
-          "school": "Загальноосвітня школа",
-          "fieldLabel": "",
-          "field": "Кременчук, Україна",
-          "period": "2011 – 2020"
-        }
-      ]
-    },
-    "languages": {
-      "title": "Мови",
-      "items": [
-        {"name": "Українська", "level": "Рідна", "flag": "🇺🇦"},
-        {"name": "Російська", "level": "Рідна", "flag": "🇷🇺"},
-        {"name": "Англійська", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
-        {"name": "Словацька", "level": "B2", "flag": "🇸🇰"},
-        {"name": "Німецька", "level": "Базова / вивчаю", "flag": "🇩🇪"}
-      ]
-    },
-    "work": {
-      "title": "Як я працюю",
-      "items": [
-        "Проста мова",
-        "Покрокова допомога",
-        "Відверто пояснюю межі своїх можливостей",
-        "Зосереджуюся на практичних рішеннях"
-      ]
-    },
-    "benefits": [
-      {"label": "Зрозуміле спілкування", "icon": "chat"},
-      {"label": "Особиста підтримка", "icon": "user"},
-      {"label": "Практичні рішення", "icon": "idea"},
-      {"label": "Багатомовне спілкування", "icon": "globe"}
-    ]
+    "ctaTitle": "Обговорімо ваше звернення",
+    "ctaText": "TiLADYS допоможе з вашою IT-проблемою або проблемою з вебсайтом. Перегляньте послуги або зв’яжіться з нами, щоб обговорити вашу потребу.",
+    "contact": "Зв’язатися з TiLADYS",
+    "services": "Переглянути послуги",
+    "founderTitle": "Про засновника",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Владислав Тітов заснував TiLADYS і особисто виконує IT-роботи та роботи з вебсайтами. Клієнти спілкуються безпосередньо з IT-фахівцем, який займається їхнім зверненням — від опису проблеми до уточнення наступних кроків.",
+    "languagesTitle": "Мови",
+    "educationTitle": "Освіта",
+    "languages": [
+      {
+        "name": "Українська",
+        "level": "Рідна"
+      },
+      {
+        "name": "Російська",
+        "level": "Рідна"
+      },
+      {
+        "name": "Англійська",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Словацька",
+        "level": "B2"
+      },
+      {
+        "name": "Німецька",
+        "level": "A1 завершено; зараз вивчає A2"
+      }
+    ],
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–дотепер · Студент; навчання триває"
+      },
+      {
+        "school": "Середня промислова електротехнічна школа, Словаччина",
+        "course": "Інтелектуальні технології",
+        "period": "2022–2025"
+      },
+      {
+        "school": "Вище професійне училище № 7, Україна",
+        "course": "Оператор з обробки інформації та програмного забезпечення",
+        "period": "2020–2022"
+      }
+    ],
+    "portraitLabel": "Портрет"
   },
   "ru": {
     "hero": {
-      "title": "Обо мне и квалификации",
-      "subtitle": "Практическая IT-помощь для домашних пользователей и малого бизнеса в NRW."
+      "title": "О TiLADYS",
+      "subtitle": "TiLADYS — местный бизнес в сфере IT и веб-услуг в Мюльхайме-на-Руре. Он помогает домохозяйствам и малому бизнесу с компьютерами, сайтами и повседневными цифровыми задачами. Помощь практическая, а общение прямое и понятное."
     },
-    "whoIAm": {
-      "title": "Кто я",
-      "items": [
-        "Основатель TiLADYS",
-        "Практическая IT-поддержка и сайты",
-        "Понятное общение и надёжная помощь"
-      ]
-    },
-    "helpWith": {
-      "title": "С чем я помогаю",
-      "items": [
-        {"label": "Сайты", "icon": "globe"},
-        {"label": "Помощь с ПК и ноутбуками", "icon": "laptop"},
-        {"label": "Цифровая поддержка", "icon": "message"},
-        {"label": "Основы Linux и серверов", "icon": "server"},
-        {"label": "Поиск и устранение проблем", "icon": "tools"},
-        {"label": "Google Business", "icon": "store"}
-      ]
-    },
-    "whyChoose": {
-      "title": "Почему клиенты выбирают меня",
-      "items": [
-        "Понятные объяснения",
-        "Дружелюбная поддержка",
-        "Честные цены",
-        "Надёжная помощь"
-      ]
-    },
-    "technical": {
-      "title": "Техническая подготовка",
-      "items": [
-        {"label": "Основы HTML / CSS / JavaScript", "icon": "code"},
-        {"label": "WordPress (темы и плагины)", "icon": "wordpress"},
-        {"label": "Основы Linux (Ubuntu / Debian)", "icon": "linux"},
-        {"label": "Основы Docker и контейнеров", "icon": "docker"},
-        {"label": "Основы сетей (IP, DNS, DHCP, Router)", "icon": "network"},
-        {"label": "Google Workspace / Office", "icon": "document"}
-      ]
-    },
-    "education": {
-      "title": "Образование и обучение",
-      "items": [
-        {
-          "school": "Университет прикладных наук Рейн-Вааль, кампус Камп-Линтфорт, Германия",
-          "fieldLabel": "Образовательная программа",
-          "field": "Инфотронные системы и инженерия, бакалавр наук (B.Sc.)",
-          "period": "2026 – настоящее время"
-        },
-        {
-          "school": "Средняя промышленная школа электротехники, Словакия",
-          "fieldLabel": "Направление обучения",
-          "field": "Интеллектуальные технологии",
-          "period": "2022 – 2025"
-        },
-        {
-          "school": "Высшее профессиональное училище № 7, Украина",
-          "fieldLabel": "Направление обучения",
-          "field": "Оператор по обработке информации и программного обеспечения",
-          "period": "2020 – 2022"
-        },
-        {
-          "school": "Общеобразовательная школа",
-          "fieldLabel": "",
-          "field": "Кременчуг, Украина",
-          "period": "2011 – 2020"
-        }
-      ]
-    },
-    "languages": {
-      "title": "Языки",
-      "items": [
-        {"name": "Украинский", "level": "Родной", "flag": "🇺🇦"},
-        {"name": "Русский", "level": "Родной", "flag": "🇷🇺"},
-        {"name": "Английский", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
-        {"name": "Словацкий", "level": "B2", "flag": "🇸🇰"},
-        {"name": "Немецкий", "level": "Базовый / изучаю", "flag": "🇩🇪"}
-      ]
-    },
-    "work": {
-      "title": "Как я работаю",
-      "items": [
-        "Простой язык",
-        "Пошаговая помощь",
-        "Честно объясняю границы своих возможностей",
-        "Сосредоточен на практических решениях"
-      ]
-    },
-    "benefits": [
-      {"label": "Понятное общение", "icon": "chat"},
-      {"label": "Личная поддержка", "icon": "user"},
-      {"label": "Практические решения", "icon": "idea"},
-      {"label": "Многоязычное общение", "icon": "globe"}
-    ]
+    "ctaTitle": "Обсудим ваше обращение",
+    "ctaText": "TiLADYS поможет с вашей IT-проблемой или проблемой с сайтом. Посмотрите услуги или свяжитесь с нами, чтобы обсудить вашу задачу.",
+    "contact": "Связаться с TiLADYS",
+    "services": "Посмотреть услуги",
+    "founderTitle": "Об основателе",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Владислав Титов основал TiLADYS и лично выполняет IT-работы и работы с сайтами. Клиенты общаются напрямую с IT-специалистом, который занимается их обращением — от описания проблемы до уточнения следующих шагов.",
+    "languagesTitle": "Языки",
+    "educationTitle": "Образование",
+    "languages": [
+      {
+        "name": "Украинский",
+        "level": "Родной"
+      },
+      {
+        "name": "Русский",
+        "level": "Родной"
+      },
+      {
+        "name": "Английский",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Словацкий",
+        "level": "B2"
+      },
+      {
+        "name": "Немецкий",
+        "level": "A1 завершён; сейчас изучает A2"
+      }
+    ],
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–настоящее время · Студент; обучение продолжается"
+      },
+      {
+        "school": "Средняя промышленная электротехническая школа, Словакия",
+        "course": "Интеллектуальные технологии",
+        "period": "2022–2025"
+      },
+      {
+        "school": "Высшее профессиональное училище № 7, Украина",
+        "course": "Оператор по обработке информации и программного обеспечения",
+        "period": "2020–2022"
+      }
+    ],
+    "portraitLabel": "Портрет"
   },
   "sk": {
     "hero": {
-      "title": "O mne a kvalifikácie",
-      "subtitle": "Praktická IT pomoc pre domácich používateľov a malé firmy v NRW."
+      "title": "O TiLADYS",
+      "subtitle": "TiLADYS je miestny poskytovateľ IT a webových služieb v Mülheime an der Ruhr. Pomáha domácnostiam a malým firmám s počítačmi, webovými stránkami a každodennými digitálnymi úlohami. Podpora je praktická a komunikácia priama a jasná."
     },
-    "whoIAm": {
-      "title": "Kto som",
-      "items": [
-        "Zakladateľ TiLADYS",
-        "Praktická IT podpora a webstránky",
-        "Jasná komunikácia a spoľahlivá pomoc"
-      ]
-    },
-    "helpWith": {
-      "title": "S čím pomáham",
-      "items": [
-        {"label": "Webstránky", "icon": "globe"},
-        {"label": "Pomoc s PC a notebookmi", "icon": "laptop"},
-        {"label": "Digitálna podpora", "icon": "message"},
-        {"label": "Základy Linuxu a serverov", "icon": "server"},
-        {"label": "Riešenie problémov", "icon": "tools"},
-        {"label": "Google Business", "icon": "store"}
-      ]
-    },
-    "whyChoose": {
-      "title": "Prečo si ma klienti vyberajú",
-      "items": [
-        "Jasné vysvetlenia",
-        "Priateľská podpora",
-        "Férové ceny",
-        "Spoľahlivá pomoc"
-      ]
-    },
-    "technical": {
-      "title": "Technické skúsenosti",
-      "items": [
-        {"label": "Základy HTML / CSS / JavaScript", "icon": "code"},
-        {"label": "WordPress (témy a pluginy)", "icon": "wordpress"},
-        {"label": "Základy Linuxu (Ubuntu / Debian)", "icon": "linux"},
-        {"label": "Základy Dockeru a kontajnerov", "icon": "docker"},
-        {"label": "Základy sietí (IP, DNS, DHCP, Router)", "icon": "network"},
-        {"label": "Google Workspace / Office", "icon": "document"}
-      ]
-    },
-    "education": {
-      "title": "Vzdelanie a učenie",
-      "items": [
-        {
-          "school": "Univerzita aplikovaných vied Rhine-Waal, kampus Kamp-Lintfort, Nemecko",
-          "fieldLabel": "Študijný program",
-          "field": "Infotronic Systems Engineering, B.Sc.",
-          "period": "2026 – súčasnosť"
-        },
-        {
-          "school": "Stredná priemyselná škola elektrotechnická, Slovensko",
-          "fieldLabel": "Študijný odbor",
-          "field": "Inteligentné technológie",
-          "period": "2022 – 2025"
-        },
-        {
-          "school": "Vyššia odborná škola č. 7, Ukrajina",
-          "fieldLabel": "Študijný odbor",
-          "field": "Operátor spracovania informácií a softvéru",
-          "period": "2020 – 2022"
-        },
-        {
-          "school": "Všeobecná stredná škola",
-          "fieldLabel": "",
-          "field": "Kremenčuk, Ukrajina",
-          "period": "2011 – 2020"
-        }
-      ]
-    },
-    "languages": {
-      "title": "Jazyky",
-      "items": [
-        {"name": "Ukrajinčina", "level": "Rodný jazyk", "flag": "🇺🇦"},
-        {"name": "Ruština", "level": "Rodný jazyk", "flag": "🇷🇺"},
-        {"name": "Angličtina", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
-        {"name": "Slovenčina", "level": "B2", "flag": "🇸🇰"},
-        {"name": "Nemčina", "level": "Základy / učím sa", "flag": "🇩🇪"}
-      ]
-    },
-    "work": {
-      "title": "Ako pracujem",
-      "items": [
-        "Jednoduchý jazyk",
-        "Pomoc krok za krokom",
-        "Transparentne vysvetľujem, čo môžem urobiť",
-        "Zameranie na praktické riešenia"
-      ]
-    },
-    "benefits": [
-      {"label": "Jasná komunikácia", "icon": "chat"},
-      {"label": "Osobná podpora", "icon": "user"},
-      {"label": "Praktické riešenia", "icon": "idea"},
-      {"label": "Viacjazyčná komunikácia", "icon": "globe"}
-    ]
+    "ctaTitle": "Porozprávajme sa o vašej požiadavke",
+    "ctaText": "TiLADYS vám pomôže s IT problémom alebo problémom s webovou stránkou. Pozrite si služby alebo nás kontaktujte a opíšte, čo potrebujete.",
+    "contact": "Kontaktovať TiLADYS",
+    "services": "Pozrieť služby",
+    "founderTitle": "O zakladateľovi",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Vladyslav Titov založil TiLADYS a osobne vykonáva IT práce a práce na webových stránkach. Klienti komunikujú priamo s IT odborníkom, ktorý rieši ich požiadavku – od opisu problému až po objasnenie ďalších krokov.",
+    "languagesTitle": "Jazyky",
+    "educationTitle": "Vzdelanie",
+    "languages": [
+      {
+        "name": "Ukrajinčina",
+        "level": "Materinský jazyk"
+      },
+      {
+        "name": "Ruština",
+        "level": "Materinský jazyk"
+      },
+      {
+        "name": "Angličtina",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Slovenčina",
+        "level": "B2"
+      },
+      {
+        "name": "Nemčina",
+        "level": "A1 ukončená; aktuálne sa učí A2"
+      }
+    ],
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–súčasnosť · Študent; štúdium prebieha"
+      },
+      {
+        "school": "Stredná priemyselná škola elektrotechnická, Slovensko",
+        "course": "Inteligentné technológie",
+        "period": "2022–2025"
+      },
+      {
+        "school": "Vyššia odborná škola č. 7, Ukrajina",
+        "course": "Operátor spracovania informácií a softvéru",
+        "period": "2020–2022"
+      }
+    ],
+    "portraitLabel": "Portrét"
   },
   "fr": {
     "hero": {
-      "title": "À propos et qualifications",
-      "subtitle": "Aide informatique pratique pour les particuliers et les petites entreprises en NRW."
+      "title": "À propos de TiLADYS",
+      "subtitle": "TiLADYS est une entreprise locale de services informatiques et web à Mülheim an der Ruhr. Elle aide les particuliers et les petites entreprises avec leurs ordinateurs, leurs sites web et leurs tâches numériques quotidiennes. Son accompagnement est pratique et sa communication directe et claire."
     },
-    "whoIAm": {
-      "title": "Qui je suis",
-      "items": [
-        "Fondateur de TiLADYS",
-        "Assistance informatique pratique et sites web",
-        "Communication claire et aide fiable"
-      ]
-    },
-    "helpWith": {
-      "title": "Mes domaines d'aide",
-      "items": [
-        {"label": "Sites web", "icon": "globe"},
-        {"label": "Aide PC et ordinateur portable", "icon": "laptop"},
-        {"label": "Assistance numérique", "icon": "message"},
-        {"label": "Bases Linux et serveur", "icon": "server"},
-        {"label": "Dépannage", "icon": "tools"},
-        {"label": "Google Business", "icon": "store"}
-      ]
-    },
-    "whyChoose": {
-      "title": "Pourquoi les clients me choisissent",
-      "items": [
-        "Explications claires",
-        "Assistance conviviale",
-        "Prix équitables",
-        "Aide fiable"
-      ]
-    },
-    "technical": {
-      "title": "Compétences techniques",
-      "items": [
-        {"label": "Bases HTML / CSS / JavaScript", "icon": "code"},
-        {"label": "WordPress (thèmes et extensions)", "icon": "wordpress"},
-        {"label": "Bases Linux (Ubuntu / Debian)", "icon": "linux"},
-        {"label": "Bases Docker et conteneurs", "icon": "docker"},
-        {"label": "Bases réseau (IP, DNS, DHCP, Router)", "icon": "network"},
-        {"label": "Google Workspace / Office", "icon": "document"}
-      ]
-    },
-    "education": {
-      "title": "Formation et apprentissage",
-      "items": [
-        {
-          "school": "Université des sciences appliquées Rhine-Waal, campus de Kamp-Lintfort, Allemagne",
-          "fieldLabel": "Programme d’études",
-          "field": "Ingénierie des systèmes infotronic, B.Sc.",
-          "period": "2026 – aujourd’hui"
-        },
-        {
-          "school": "École secondaire industrielle d’électrotechnique, Slovaquie",
-          "fieldLabel": "Domaine d’études",
-          "field": "Technologies intelligentes",
-          "period": "2022 – 2025"
-        },
-        {
-          "school": "École professionnelle supérieure n° 7, Ukraine",
-          "fieldLabel": "Domaine d’études",
-          "field": "Opérateur de traitement de l’information et des logiciels",
-          "period": "2020 – 2022"
-        },
-        {
-          "school": "École secondaire générale",
-          "fieldLabel": "",
-          "field": "Krementchouk, Ukraine",
-          "period": "2011 – 2020"
-        }
-      ]
-    },
-    "languages": {
-      "title": "Langues",
-      "items": [
-        {"name": "Ukrainien", "level": "Langue maternelle", "flag": "🇺🇦"},
-        {"name": "Russe", "level": "Langue maternelle", "flag": "🇷🇺"},
-        {"name": "Anglais", "level": "B2 / IELTS 6.0", "flag": "🇬🇧"},
-        {"name": "Slovaque", "level": "B2", "flag": "🇸🇰"},
-        {"name": "Allemand", "level": "Bases / apprentissage", "flag": "🇩🇪"}
-      ]
-    },
-    "work": {
-      "title": "Ma façon de travailler",
-      "items": [
-        "Langage simple",
-        "Aide étape par étape",
-        "Transparence sur ce que je peux faire",
-        "Priorité aux solutions pratiques"
-      ]
-    },
-    "benefits": [
-      {"label": "Communication claire", "icon": "chat"},
-      {"label": "Assistance personnelle", "icon": "user"},
-      {"label": "Solutions pratiques", "icon": "idea"},
-      {"label": "Communication multilingue", "icon": "globe"}
-    ]
+    "ctaTitle": "Parlons de votre demande",
+    "ctaText": "TiLADYS peut vous aider à résoudre votre problème informatique ou web. Découvrez les services ou contactez-nous pour expliquer votre besoin.",
+    "contact": "Contacter TiLADYS",
+    "services": "Découvrir les services",
+    "founderTitle": "À propos du fondateur",
+    "founderName": "Vladyslav Titov",
+    "founderText": "Vladyslav Titov a fondé TiLADYS et réalise personnellement les travaux informatiques et web. Les clients échangent directement avec le professionnel informatique qui traite leur demande, de la description du problème à la clarification des prochaines étapes.",
+    "languagesTitle": "Langues",
+    "educationTitle": "Formation",
+    "languages": [
+      {
+        "name": "Ukrainien",
+        "level": "Langue maternelle"
+      },
+      {
+        "name": "Russe",
+        "level": "Langue maternelle"
+      },
+      {
+        "name": "Anglais",
+        "level": "B2 / IELTS 6.0"
+      },
+      {
+        "name": "Slovaque",
+        "level": "B2"
+      },
+      {
+        "name": "Allemand",
+        "level": "A1 terminé ; apprentissage du niveau A2 en cours"
+      }
+    ],
+    "education": [
+      {
+        "school": "Hochschule Rhein-Waal",
+        "course": "B.Sc. Infotronic Systems Engineering",
+        "period": "2026–aujourd’hui · Étudiant ; diplôme en cours"
+      },
+      {
+        "school": "École secondaire industrielle de génie électrique, Slovaquie",
+        "course": "Technologies intelligentes",
+        "period": "2022–2025"
+      },
+      {
+        "school": "École professionnelle supérieure n° 7, Ukraine",
+        "course": "Opérateur de traitement de l’information et des logiciels",
+        "period": "2020–2022"
+      }
+    ],
+    "portraitLabel": "Portrait"
   }
 }

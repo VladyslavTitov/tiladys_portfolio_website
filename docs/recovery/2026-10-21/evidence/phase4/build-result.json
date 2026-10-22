@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-21T14:30:09.619Z",
+  "node": "v24.22.1",
+  "vercelNode": "24.x",
+  "control": "pass",
+  "web": "pass",
+  "releaseSchemaCheckEnabled": true,
+  "target": "isolated local migrated PostgreSQL18 lab",
+  "deploymentCreated": false
+}

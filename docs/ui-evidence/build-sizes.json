@@ -1,0 +1,57 @@
+{
+  "method": "All emitted static JS/CSS assets, same installed production toolchain; per-file gzip; not route transfer or incremental bundle attribution",
+  "builds": {
+    "before": {
+      "web": {
+        "js": {
+          "files": 43,
+          "rawBytes": 1114292,
+          "gzipBytes": 351131
+        },
+        "css": {
+          "files": 1,
+          "rawBytes": 67681,
+          "gzipBytes": 14047
+        }
+      },
+      "control": {
+        "js": {
+          "files": 90,
+          "rawBytes": 1274445,
+          "gzipBytes": 400446
+        },
+        "css": {
+          "files": 1,
+          "rawBytes": 30519,
+          "gzipBytes": 6793
+        }
+      }
+    },
+    "after": {
+      "web": {
+        "js": {
+          "files": 43,
+          "rawBytes": 1113632,
+          "gzipBytes": 350869
+        },
+        "css": {
+          "files": 1,
+          "rawBytes": 78234,
+          "gzipBytes": 15739
+        }
+      },
+      "control": {
+        "js": {
+          "files": 90,
+          "rawBytes": 1280537,
+          "gzipBytes": 402353
+        },
+        "css": {
+          "files": 1,
+          "rawBytes": 40665,
+          "gzipBytes": 8478
+        }
+      }
+    }
+  }
+}

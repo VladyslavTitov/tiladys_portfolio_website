@@ -1,0 +1,28 @@
+TAP version 13
+# Subtest: stored, historical and unknown categories retain an explicit public destination
+ok 1 - stored, historical and unknown categories retain an explicit public destination
+  ---
+  duration_ms: 4.47358
+  type: 'test'
+  ...
+# Subtest: legacy shared URLs resolve without changing stored identifiers
+ok 2 - legacy shared URLs resolve without changing stored identifiers
+  ---
+  duration_ms: 0.868268
+  type: 'test'
+  ...
+# Subtest: exactly five translated public groups and accessible state copy in all six locales
+ok 3 - exactly five translated public groups and accessible state copy in all six locales
+  ---
+  duration_ms: 4.662895
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 56.16374

@@ -1,0 +1,2 @@
+import {NextRequest} from 'next/server';import {assertOrigin,requireUser} from '@/lib/security';import {privateJson,privateError} from '@/lib/admin-response';import {calculatePrintEstimate} from '@/lib/print-estimate';
+export async function POST(req:NextRequest){try{await assertOrigin();await requireUser();return privateJson(calculatePrintEstimate(await req.json()));}catch(e){return privateError(e,'ESTIMATE_FAILED');}}

@@ -1,1 +1,15 @@
-import {NextResponse} from 'next/server';import {destroySession,assertOrigin} from '@/lib/security';export async function POST(){await assertOrigin();await destroySession();return NextResponse.redirect(new URL('/login',process.env.CONTROL_URL??'http://localhost:3001'),303)}
+import { NextResponse } from 'next/server';
+import { destroySession, assertOrigin } from '@/lib/security';
+
+export async function POST() {
+  try {
+    await assertOrigin();
+  } catch {
+    return NextResponse.json({ error: 'Invalid origin' }, {
+      status: 403,
+      headers: { 'Cache-Control': 'private, no-store' },
+    });
+  }
+  await destroySession();
+  return NextResponse.redirect(new URL('/login', process.env.CONTROL_URL ?? 'http://localhost:3001'), 303);
+}

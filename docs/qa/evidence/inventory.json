@@ -1,0 +1,896 @@
+{
+  "routes": [
+    {
+      "app": "web",
+      "path": "/[locale]/about",
+      "source": "apps/web/app/[locale]/about/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/[locale]/contact",
+      "source": "apps/web/app/[locale]/contact/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/[locale]/impressum",
+      "source": "apps/web/app/[locale]/impressum/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/[locale]",
+      "source": "apps/web/app/[locale]/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/[locale]/portfolio/[slug]",
+      "source": "apps/web/app/[locale]/portfolio/[slug]/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/[locale]/portfolio",
+      "source": "apps/web/app/[locale]/portfolio/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/[locale]/prices",
+      "source": "apps/web/app/[locale]/prices/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/[locale]/privacy",
+      "source": "apps/web/app/[locale]/privacy/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/[locale]/products/[slug]",
+      "source": "apps/web/app/[locale]/products/[slug]/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/[locale]/services/[slug]",
+      "source": "apps/web/app/[locale]/services/[slug]/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/[locale]/services",
+      "source": "apps/web/app/[locale]/services/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/[locale]/terms",
+      "source": "apps/web/app/[locale]/terms/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/api/contact",
+      "source": "apps/web/app/api/contact/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": false,
+      "mutates": true
+    },
+    {
+      "app": "web",
+      "path": "/api/contact/uploads",
+      "source": "apps/web/app/api/contact/uploads/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": false,
+      "mutates": true
+    },
+    {
+      "app": "web",
+      "path": "/api/public/media/[id]",
+      "source": "apps/web/app/api/public/media/[id]/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "web",
+      "path": "/api/public/product-media/[id]",
+      "source": "apps/web/app/api/public/product-media/[id]/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/account",
+      "source": "apps/control/app/api/admin/account/route.ts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/billing-settings",
+      "source": "apps/control/app/api/admin/billing-settings/route.ts",
+      "methods": [
+        "GET",
+        "PUT"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/catalogue/[id]",
+      "source": "apps/control/app/api/admin/catalogue/[id]/route.ts",
+      "methods": [
+        "PATCH"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/catalogue",
+      "source": "apps/control/app/api/admin/catalogue/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "guard": true,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/companies/[id]",
+      "source": "apps/control/app/api/admin/companies/[id]/route.ts",
+      "methods": [
+        "PATCH"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/companies",
+      "source": "apps/control/app/api/admin/companies/route.ts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/customers/[id]/notes",
+      "source": "apps/control/app/api/admin/customers/[id]/notes/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/customers/[id]",
+      "source": "apps/control/app/api/admin/customers/[id]/route.ts",
+      "methods": [
+        "GET",
+        "PATCH",
+        "DELETE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/customers",
+      "source": "apps/control/app/api/admin/customers/route.ts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/estimate",
+      "source": "apps/control/app/api/admin/estimate/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/export/[token]",
+      "source": "apps/control/app/api/admin/export/[token]/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/export",
+      "source": "apps/control/app/api/admin/export/route.ts",
+      "methods": [
+        "POST",
+        "GET"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/invoices/[id]/issue",
+      "source": "apps/control/app/api/admin/invoices/[id]/issue/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/invoices/[id]/payments",
+      "source": "apps/control/app/api/admin/invoices/[id]/payments/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/invoices/[id]/pdf",
+      "source": "apps/control/app/api/admin/invoices/[id]/pdf/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "guard": true,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/invoices/[id]",
+      "source": "apps/control/app/api/admin/invoices/[id]/route.ts",
+      "methods": [
+        "GET",
+        "PATCH"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/invoices",
+      "source": "apps/control/app/api/admin/invoices/route.ts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/messages/[id]/attachments/[attachmentId]",
+      "source": "apps/control/app/api/admin/messages/[id]/attachments/[attachmentId]/route.ts",
+      "methods": [
+        "GET",
+        "DELETE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/messages/[id]/draft",
+      "source": "apps/control/app/api/admin/messages/[id]/draft/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/messages/[id]/link",
+      "source": "apps/control/app/api/admin/messages/[id]/link/route.ts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/messages/[id]/reply",
+      "source": "apps/control/app/api/admin/messages/[id]/reply/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/messages/[id]/status",
+      "source": "apps/control/app/api/admin/messages/[id]/status/route.ts",
+      "methods": [
+        "PATCH"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/prices",
+      "source": "apps/control/app/api/admin/prices/route.ts",
+      "methods": [
+        "POST",
+        "PUT"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/products/[id]/images/[imageId]",
+      "source": "apps/control/app/api/admin/products/[id]/images/[imageId]/route.ts",
+      "methods": [
+        "GET",
+        "DELETE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/products/[id]/images",
+      "source": "apps/control/app/api/admin/products/[id]/images/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/products/[id]",
+      "source": "apps/control/app/api/admin/products/[id]/route.ts",
+      "methods": [
+        "PATCH"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/products",
+      "source": "apps/control/app/api/admin/products/route.ts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/projects/[id]/images/[imageId]",
+      "source": "apps/control/app/api/admin/projects/[id]/images/[imageId]/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "guard": true,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/projects/[id]/images",
+      "source": "apps/control/app/api/admin/projects/[id]/images/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/projects/[id]",
+      "source": "apps/control/app/api/admin/projects/[id]/route.ts",
+      "methods": [
+        "PATCH",
+        "DELETE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/projects",
+      "source": "apps/control/app/api/admin/projects/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/quotes/[id]",
+      "source": "apps/control/app/api/admin/quotes/[id]/route.ts",
+      "methods": [
+        "GET",
+        "PATCH"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/quotes",
+      "source": "apps/control/app/api/admin/quotes/route.ts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/service-jobs/[id]/brief",
+      "source": "apps/control/app/api/admin/service-jobs/[id]/brief/route.ts",
+      "methods": [
+        "GET",
+        "PATCH"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/service-jobs/[id]/portfolio",
+      "source": "apps/control/app/api/admin/service-jobs/[id]/portfolio/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/service-jobs/[id]",
+      "source": "apps/control/app/api/admin/service-jobs/[id]/route.ts",
+      "methods": [
+        "GET",
+        "PATCH"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/service-jobs",
+      "source": "apps/control/app/api/admin/service-jobs/route.ts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/tasks/[id]/complete",
+      "source": "apps/control/app/api/admin/tasks/[id]/complete/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/tasks/[id]",
+      "source": "apps/control/app/api/admin/tasks/[id]/route.ts",
+      "methods": [
+        "PATCH",
+        "GET"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/admin/tasks",
+      "source": "apps/control/app/api/admin/tasks/route.ts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/auth/login",
+      "source": "apps/control/app/api/auth/login/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": false,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/auth/logout",
+      "source": "apps/control/app/api/auth/logout/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "guard": false,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/api/public/media/[id]",
+      "source": "apps/control/app/api/public/media/[id]/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/api/public/prices",
+      "source": "apps/control/app/api/public/prices/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/api/public/projects/[slug]",
+      "source": "apps/control/app/api/public/projects/[slug]/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/api/public/projects",
+      "source": "apps/control/app/api/public/projects/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/companies/[id]",
+      "source": "apps/control/app/dashboard/companies/[id]/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/companies",
+      "source": "apps/control/app/dashboard/companies/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/customers/[id]",
+      "source": "apps/control/app/dashboard/customers/[id]/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/customers",
+      "source": "apps/control/app/dashboard/customers/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/invoices",
+      "source": "apps/control/app/dashboard/invoices/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/messages",
+      "source": "apps/control/app/dashboard/messages/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/dashboard",
+      "source": "apps/control/app/dashboard/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/prices",
+      "source": "apps/control/app/dashboard/prices/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/products/[id]/preview",
+      "source": "apps/control/app/dashboard/products/[id]/preview/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/products",
+      "source": "apps/control/app/dashboard/products/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/projects/[id]/preview",
+      "source": "apps/control/app/dashboard/projects/[id]/preview/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/projects",
+      "source": "apps/control/app/dashboard/projects/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/quotes/[id]",
+      "source": "apps/control/app/dashboard/quotes/[id]/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/quotes",
+      "source": "apps/control/app/dashboard/quotes/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/search",
+      "source": "apps/control/app/dashboard/search/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/service-jobs",
+      "source": "apps/control/app/dashboard/service-jobs/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/settings/[section]",
+      "source": "apps/control/app/dashboard/settings/[section]/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/settings",
+      "source": "apps/control/app/dashboard/settings/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/dashboard/tasks",
+      "source": "apps/control/app/dashboard/tasks/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": false
+    },
+    {
+      "app": "control",
+      "path": "/login",
+      "source": "apps/control/app/login/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": false,
+      "mutates": true
+    },
+    {
+      "app": "control",
+      "path": "/",
+      "source": "apps/control/app/page.tsx",
+      "methods": [
+        "PAGE"
+      ],
+      "guard": true,
+      "mutates": false
+    }
+  ],
+  "entities": [
+    "AdminUser",
+    "Session",
+    "Project",
+    "ProjectImage",
+    "PriceSection",
+    "PriceItem",
+    "NumberSequence",
+    "Company",
+    "Customer",
+    "CustomerNote",
+    "CustomerActivity",
+    "ServiceJob",
+    "BusinessBillingSettings",
+    "Invoice",
+    "InvoiceLine",
+    "InvoicePayment",
+    "ServiceJobLineItem",
+    "FileAsset",
+    "ContactMessage",
+    "VisitorDay",
+    "AuditLog",
+    "ContactAttachment",
+    "ContactRateLimit",
+    "ProjectSlugAlias",
+    "Quote",
+    "QuoteRevision",
+    "Product",
+    "ProductImage",
+    "ProductAlias",
+    "Task",
+    "EnquiryNote",
+    "IdempotencyRecord",
+    "UploadReservation",
+    "MediaObject",
+    "EmailOutbox",
+    "DeliveryAttempt",
+    "ExportArtifact"
+  ],
+  "ciPresent": false
+}

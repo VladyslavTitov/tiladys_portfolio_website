@@ -1,9 +1,13 @@
+
+import {ControlText} from '@/components/control-language';
+import {requirePageUser} from '@/lib/page-user';
 import { db } from '@tiladys/db';
 import { ProjectManager } from './project-manager';
 
 export default async function ProjectsPage() {
+  await requirePageUser();
   const rows = await db.project.findMany({
-    include: { images: { select: { id: true, filename: true, size: true, sortOrder: true }, orderBy: { sortOrder: 'asc' } } },
+    include: { images: { where: { archivedAt: null }, select: { id: true, filename: true, size: true, alt: true, sortOrder: true }, orderBy: { sortOrder: 'asc' } } },
     orderBy: [{ sortOrder: 'asc' }, { updatedAt: 'desc' }],
   });
   const projects = rows.map((project) => ({
@@ -11,13 +15,13 @@ export default async function ProjectsPage() {
     projectDate: project.projectDate?.toISOString() ?? null,
     createdAt: project.createdAt.toISOString(),
     updatedAt: project.updatedAt.toISOString(),
-    images: project.images.map((image) => ({ ...image, url: `/api/public/media/${image.id}` })),
+    images: project.images.map((image) => ({ ...image, url: `/api/admin/projects/${project.id}/images/${image.id}` })),
   }));
 
   return (
     <>
-      <h1>Portfolio projects</h1>
-      <p className="admin-intro">Create, translate, publish and edit portfolio projects. Each project can contain 1–10 images.</p>
+      <h1><ControlText value={"Portfolio projects"}/></h1>
+      <p className="admin-intro"><ControlText value={"Create, translate, publish and edit portfolio projects. Each project can contain 1–10 images."}/></p>
       <ProjectManager initialProjects={projects as unknown as Array<Record<string, unknown>>} />
     </>
   );

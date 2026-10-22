@@ -1,0 +1,35 @@
+TAP version 13
+# Subtest: catalogue price modes do not turn starting or monthly prices into fixed charges
+ok 1 - catalogue price modes do not turn starting or monthly prices into fixed charges
+  ---
+  duration_ms: 4.756851
+  type: 'test'
+  ...
+# Subtest: job repair keeps persisted associations, explicit payloads, save-before-invoice flow, and scoped navigation CSS
+ok 2 - job repair keeps persisted associations, explicit payloads, save-before-invoice flow, and scoped navigation CSS
+  ---
+  duration_ms: 0.679635
+  type: 'test'
+  ...
+# Subtest: long invoice PDFs paginate and omit private job fields by construction
+ok 3 - long invoice PDFs paginate and omit private job fields by construction
+  ---
+  duration_ms: 757.998695
+  type: 'test'
+  ...
+# Subtest: CRM migration preserves legacy data and customer/job workflows persist atomically
+ok 4 - CRM migration preserves legacy data and customer/job workflows persist atomically
+  ---
+  duration_ms: 9929.770034
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11598.901362
+Exact CRM test container stopped and retained; no production target or pre-existing container changed.

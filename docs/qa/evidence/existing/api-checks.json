@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-19T17:35:27.758Z",
+  "environment": "isolated synthetic localhost",
+  "checks": [
+    "Catalogue save succeeds with timestamps; stale save conflicts; archive retains section and item IDs.",
+    "Draft-first publication and explicit review enforced; translated gallery metadata persists; withdrawal retains private bytes and denies both public origins.",
+    "Authenticated attachment request with a forged parent enquiry is denied.",
+    "Concurrent issue/save freezes one stored PDF; subsequent stale save denied; missing historical artifact returns recovery error without regeneration.",
+    "Post-issue customer, catalogue and bank edits leave the downloaded original PDF, checksum, number and totals unchanged.",
+    "Existing password/secret-phrase login succeeds; session DTO omits token hashes; selected-session revocation preserves this session and rejects another account’s session.",
+    "Reviewed enquiry creates one replay-safe quote draft and a linked job; source text remains exact; client lookup excludes notes, files and histories.",
+    "Product rights/publication guards, real private upload, exact image-parent denial, one-hop aliases and original/derivative withdrawal pass.",
+    "Completed job handoff replays one reviewed private portfolio draft with no copied private notes, files or automatic publication.",
+    "Actual CSV export neutralizes a formula cell and an authenticated different account cannot download the artifact.",
+    "Concurrent standalone creation replays one unnumbered empty draft; changed billing settings reject a stale issuance review.",
+    "Two clients sharing a household email persist distinct IDs and appear together for deliberate duplicate review.",
+    "An invoice cannot be reassigned to a job/customer pair belonging to another client; original relationship is retained.",
+    "HTML/SQL-like enquiry text persists exactly and is escaped in the actual private inbox response.",
+    "Anonymous CRM/job/quote/invoice/PDF/session requests and a missing-origin mutation are denied with private cache policy."
+  ]
+}

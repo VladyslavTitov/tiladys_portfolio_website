@@ -1,0 +1,127 @@
+{
+  "ledgerAvailable": true,
+  "migrations": [
+    {
+      "name": "20260725212133_init",
+      "state": "verified"
+    },
+    {
+      "name": "20260727160000_portfolio_images_and_fields",
+      "state": "verified"
+    },
+    {
+      "name": "20260904120000_rename_new_message_status_to_unread",
+      "state": "verified"
+    },
+    {
+      "name": "20260920120000_private_contact_attachments",
+      "state": "verified"
+    },
+    {
+      "name": "20260921100000_remove_project_featured",
+      "state": "verified"
+    },
+    {
+      "name": "20260921101000_project_seo_and_slug_history",
+      "state": "verified"
+    },
+    {
+      "name": "20260922110000_crm_service_jobs",
+      "state": "verified"
+    },
+    {
+      "name": "20260922150000_service_job_line_items",
+      "state": "verified"
+    },
+    {
+      "name": "20260922170000_invoices",
+      "state": "verified"
+    },
+    {
+      "name": "20260922230000_unique_draft_per_service_job",
+      "state": "verified"
+    },
+    {
+      "name": "20260923140000_invoice_billing_recipient",
+      "state": "verified"
+    },
+    {
+      "name": "20260927150000_bilingual_invoice_snapshots",
+      "state": "verified"
+    },
+    {
+      "name": "20260927151000_project_image_schema_guard",
+      "state": "verified"
+    },
+    {
+      "name": "20261013210000_rebuild_core",
+      "state": "verified"
+    },
+    {
+      "name": "20261013220000_mail_outbox",
+      "state": "verified"
+    },
+    {
+      "name": "20261013223000_quote_invoice_source",
+      "state": "verified"
+    },
+    {
+      "name": "20261013230000_enquiry_detail",
+      "state": "verified"
+    },
+    {
+      "name": "20261013233000_structured_catalogue",
+      "state": "verified"
+    },
+    {
+      "name": "20261014003000_private_exports",
+      "state": "verified"
+    },
+    {
+      "name": "20261014010000_editor_retention",
+      "state": "verified"
+    },
+    {
+      "name": "20261014013000_quote_expiry_reason",
+      "state": "verified"
+    },
+    {
+      "name": "20261014020000_task_timezone",
+      "state": "verified"
+    },
+    {
+      "name": "20261014023000_curation_unit_text",
+      "state": "verified"
+    }
+  ],
+  "unexpectedLedgerRecords": 0,
+  "missingColumns": [],
+  "missingEnumValues": [],
+  "counts": {
+    "Project": {
+      "total": "0",
+      "byStatus": {}
+    },
+    "ContactMessage": {
+      "total": "0",
+      "byStatus": {}
+    },
+    "Customer": {
+      "total": "0"
+    },
+    "ServiceJob": {
+      "total": "0"
+    },
+    "Invoice": {
+      "total": "0"
+    },
+    "ProjectImage": {
+      "total": "0"
+    },
+    "ContactAttachment": {
+      "total": "0"
+    }
+  },
+  "assessment": "release-guard-compatible",
+  "productionTargetVerified": false
+}

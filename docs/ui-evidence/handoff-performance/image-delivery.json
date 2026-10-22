@@ -1,0 +1,74 @@
+[
+  {
+    "route": "home",
+    "mode": "mobile",
+    "source": "/illustrations/g01-three-services-1600.webp",
+    "candidateWidth": [
+      "750"
+    ],
+    "transferBytes": 38279
+  },
+  {
+    "route": "home",
+    "mode": "mobile",
+    "source": "/services/tiladys-service-website-creation.png",
+    "candidateWidth": [
+      "750"
+    ],
+    "transferBytes": 22958
+  },
+  {
+    "route": "home",
+    "mode": "desktop",
+    "source": "/illustrations/g01-three-services-1600.webp",
+    "candidateWidth": [
+      "640"
+    ],
+    "transferBytes": 31051
+  },
+  {
+    "route": "home",
+    "mode": "desktop",
+    "source": "/services/tiladys-service-website-creation.png",
+    "candidateWidth": [
+      "384"
+    ],
+    "transferBytes": 9959
+  },
+  {
+    "route": "services",
+    "mode": "mobile",
+    "source": "/services/tiladys-service-website-creation.png",
+    "candidateWidth": [
+      "640"
+    ],
+    "transferBytes": 18688
+  },
+  {
+    "route": "services",
+    "mode": "desktop",
+    "source": "/services/tiladys-service-website-creation.png",
+    "candidateWidth": [
+      "640"
+    ],
+    "transferBytes": 18688
+  },
+  {
+    "route": "contact",
+    "mode": "mobile",
+    "source": "/illustrations/g07-contact-workbench-800.webp",
+    "candidateWidth": [
+      "640"
+    ],
+    "transferBytes": 36819
+  },
+  {
+    "route": "contact",
+    "mode": "desktop",
+    "source": "/illustrations/g07-contact-workbench-800.webp",
+    "candidateWidth": [
+      "640"
+    ],
+    "transferBytes": 36819
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-21T14:28:10.548Z",
+  "backupSha256": "14f9252b27e4a0e64d3c5be143f10f9320ad6904dc418276932a8742bc959a90",
+  "schemaLedgerAndRowsStillMatch": true,
+  "otherOwnerClientSessions": 0,
+  "sessionTimeouts": {
+    "lock_timeout": "5s",
+    "statement_timeout": "2min"
+  },
+  "pending": [
+    "20261013210000_rebuild_core",
+    "20261013220000_mail_outbox",
+    "20261013223000_quote_invoice_source",
+    "20261013230000_enquiry_detail",
+    "20261013233000_structured_catalogue",
+    "20261014003000_private_exports",
+    "20261014010000_editor_retention",
+    "20261014013000_quote_expiry_reason",
+    "20261014020000_task_timezone",
+    "20261014023000_curation_unit_text"
+  ],
+  "remoteSettingsChanged": false
+}

@@ -1,0 +1,112 @@
+{
+  "checkedAt": "2026-10-21T15:38:27.943Z",
+  "fingerprints": [
+    {
+      "table": "Project",
+      "count": "10",
+      "fingerprint": "111adce883975a64873ed07adc057d8a"
+    },
+    {
+      "table": "ProjectImage",
+      "count": "27",
+      "fingerprint": "f26391d6abf7a21472b26c647cf1eeb6"
+    },
+    {
+      "table": "Customer",
+      "count": "2",
+      "fingerprint": "2b10a85addc3b7567b3aa32bdcf75fb3"
+    },
+    {
+      "table": "Company",
+      "count": "1",
+      "fingerprint": "d6886de53ffc004630a70c71c9c53bd0"
+    },
+    {
+      "table": "Invoice",
+      "count": "2",
+      "fingerprint": "741c89e78dddcae572f3bfc0066416a7"
+    },
+    {
+      "table": "InvoiceLine",
+      "count": "3",
+      "fingerprint": "a4e5de99a8b64b4a38671baa22cae70f"
+    },
+    {
+      "table": "InvoicePayment",
+      "count": "0",
+      "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    {
+      "table": "ServiceJob",
+      "count": "2",
+      "fingerprint": "fc88dd4eb236dd31c5511751df25475b"
+    },
+    {
+      "table": "ServiceJobLineItem",
+      "count": "2",
+      "fingerprint": "e1fcdb50ab0f1efd8047352a4dbf8c81"
+    },
+    {
+      "table": "NumberSequence",
+      "count": "3",
+      "fingerprint": "46e537c9bd6dba544dc3dc342757a809"
+    }
+  ],
+  "allBusinessAndMediaFingerprintsUnchanged": true,
+  "publicProduction": {
+    "id": "dpl_R2D4fuBc7MKSpc3CCqjuho1xjrmz",
+    "url": "tiladys-public-jyauclmih-tiladys.vercel.app",
+    "target": "production",
+    "readyState": "READY",
+    "createdAt": 1792580153410,
+    "ready": 1792580235479,
+    "alias": [
+      "tiladys.com",
+      "tiladys-public.vercel.app",
+      "tiladys-public-tiladys.vercel.app",
+      "tiladys-public-git-qa-complete-security-20261019-tiladys.vercel.app"
+    ],
+    "sha": "141b2edd8f51597a90d9727241fad29a0cf45e83",
+    "ref": "qa/complete-security-20261019",
+    "action": "promote",
+    "originalDeploymentId": "dpl_YCYUJRdcNGV7z6dbw2DA5BgKKbFn",
+    "buildCommand": null
+  },
+  "controlProduction": {
+    "id": "dpl_29sUx2PbwBzRu3UUNbmBZE6aoBVn",
+    "url": "tiladys-control-i0v1ethdv-tiladys.vercel.app",
+    "target": "production",
+    "readyState": "READY",
+    "createdAt": 1791119757914,
+    "ready": 1791119857203,
+    "alias": [
+      "tiladys-control-tiladys.vercel.app"
+    ],
+    "sha": "e82bff04aac9915585b10cc853fe31c558a5964b",
+    "ref": "feature/services-redesign",
+    "buildCommand": "npm --prefix ../.. run db:generate && npm --prefix ../.. run db:check:crm && npm run build"
+  },
+  "preview": {
+    "id": "dpl_5K9QHNr1z37CoSN97XFTjrouTtDJ",
+    "url": "tiladys-control-8pbtklpa3-tiladys.vercel.app",
+    "target": null,
+    "readyState": "READY",
+    "createdAt": 1792595780661,
+    "ready": 1792595846547,
+    "alias": [
+      "tiladys-control-git-recovery-vercel-neon-schema-fb31b4-tiladys.vercel.app"
+    ],
+    "sha": "8a10de590f5094136d8cc2a85a7d14ec7d046f2d",
+    "ref": "recovery/vercel-neon-schema-20261021",
+    "buildCommand": "npm --prefix ../.. run db:generate && npm --prefix ../.. run db:check:crm && npm run build"
+  },
+  "previewLoginStatuses": [
+    403,
+    401
+  ],
+  "publicProtectionTokenCreatedAt": 1792596609679,
+  "publicProtectionTokenRevocationPendingApproval": true,
+  "productionDatabaseMutations": false,
+  "productionDeploymentMutations": false,
+  "administratorMutations": false
+}

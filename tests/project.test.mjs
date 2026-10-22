@@ -8,9 +8,9 @@ const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 const exists = (file) => fs.existsSync(path.join(root, file));
 const locales = ['en', 'de', 'uk', 'ru', 'sk', 'fr'];
 
-test('exact Next.js 16.2.11 version is pinned in both applications', () => {
+test('exact Next.js 16.3.8 version is pinned in both applications', () => {
   for (const app of ['apps/web/package.json', 'apps/control/package.json']) {
-    assert.equal(JSON.parse(read(app)).dependencies.next, '16.2.11');
+    assert.equal(JSON.parse(read(app)).dependencies.next, '16.3.8');
   }
 });
 
@@ -37,8 +37,9 @@ test('about page JSON is complete for every public locale', () => {
   for (const locale of locales) {
     assert.ok(content[locale]);
     assert.ok(content[locale].hero.title.length > 3);
-    assert.equal(content[locale].helpWith.items.length, 6);
-    assert.equal(content[locale].benefits.length, 4);
+    assert.equal(content[locale].languages.length, 5);
+    assert.equal(content[locale].education.length, 3);
+    assert.ok(content[locale].founderText.length > 40);
   }
 });
 
@@ -53,26 +54,17 @@ test('shared header and footer remain global public components', () => {
   assert.match(footer, /site-footer__grid/);
 });
 
-test('home page keeps the requested five services and five process steps', () => {
-  const content = read('apps/web/lib/i18n.ts');
-  const home = read('apps/web/app/[locale]/page.tsx');
-  assert.match(home, /serviceIcons = \[Globe2, Laptop, Store, Headphones, UsersRound\]/);
-  assert.match(home, /processIcons = \[MessageSquareText, Search, ClipboardList, Wrench, ShieldCheck\]/);
-  assert.match(content, /processSteps/);
-  for (const locale of locales) assert.match(content, new RegExp(`\\b${locale}: \\{`));
-});
-
 test('contact redesign and existing message API integration are present', () => {
   const page = read('apps/web/app/[locale]/contact/page.tsx');
   const form = read('apps/web/components/ContactForm.tsx');
-  const route = read('apps/control/app/api/public/contact/route.ts');
+  const route = read('apps/web/app/api/contact/route.ts');
   assert.match(page, /contact-page-grid/);
   assert.match(page, /contact-channel-list/);
   assert.match(page, /contact-benefits/);
-  assert.match(form, /NEXT_PUBLIC_CONTROL_API_URL/);
+  assert.match(form, /fetch\('\/api\/contact'/);
   assert.match(form, /contact-form--visual/);
   assert.match(route, /contactSchema/);
-  assert.match(route, /Access-Control-Allow-Origin/);
+  assert.match(route, /https:\/\/tiladys\.com/);
 });
 
 test('price catalog has exactly 12 sections and 145 services', () => {
@@ -119,6 +111,75 @@ test('price page includes filters, responsive table and per-service Get Help lin
   assert.match(page, /price-help-button/);
 });
 
+test('public services architecture keeps stable ids and explicit price references', () => {
+  const services = read('apps/web/lib/services.ts');
+  const overview = read('apps/web/app/[locale]/services/page.tsx');
+  const detail = read('apps/web/app/[locale]/services/[slug]/page.tsx');
+  assert.match(services, /serviceIds = \[\s*'pc-laptop', 'websites', 'business-it'/);
+  for (const code of ['A02', 'B10', 'E01', 'E05', 'E11', 'D04', 'F01', 'G01', 'H02', 'H06', 'H10', 'I01', 'J01', 'K02']) {
+    assert.match(services, new RegExp(`code: '${code}'`));
+  }
+  assert.match(overview, /getPublicPrices/);
+  const publicPrices = read('apps/web/lib/public-prices.ts');
+  assert.match(publicPrices, /db\.priceSection\.findMany/);
+  assert.match(publicPrices, /where: \{ active: true \}/);
+  assert.match(detail, /ServiceDetail/);
+  assert.doesNotMatch(services, /Math\.min/);
+});
+
+test('removed public service routes redirect and three consolidated service visuals exist', () => {
+  const detail = read('apps/web/app/[locale]/services/[slug]/page.tsx');
+  const services = read('apps/web/lib/services.ts');
+  assert.match(detail, /permanentRedirect/);
+  assert.match(services, /pc-cleaning-upgrades': 'pc-laptop'/);
+  assert.match(services, /security: 'pc-laptop'/);
+  assert.match(services, /training-consulting': 'business-it'/);
+  for (const asset of ['tiladys-service-pc-laptop.webp', 'tiladys-service-website-creation.png', 'tiladys-service-business-it-digital.webp']) {
+    assert.ok(exists(`apps/web/public/services/${asset}`));
+  }
+});
+
+test('homepage exposes three service pillars and footer only real social channels', () => {
+  const home = read('apps/web/lib/home-services.ts');
+  const footer = read('apps/web/components/Footer.tsx');
+  assert.match(home, /PC & Laptop Services/);
+  assert.match(home, /Website Creation/);
+  assert.match(home, /Business IT & Digital Services/);
+  assert.match(home, /Can't find what you need/);
+  assert.match(footer, /SocialLinks/);
+  const accounts = read('apps/web/lib/business.ts');
+  assert.match(accounts, /Telegram/);
+  assert.match(accounts, /Instagram/);
+  assert.doesNotMatch(accounts, /YouTube|TikTok/);
+});
+
+test('public Prices route redirects permanently and navigation uses Services', () => {
+  const prices = read('apps/web/app/[locale]/prices/page.tsx');
+  const header = read('apps/web/components/Header.tsx');
+  const footer = read('apps/web/components/Footer.tsx');
+  assert.match(prices, /permanentRedirect/);
+  assert.match(prices, /services/);
+  assert.match(header, /services\/websites/);
+  assert.match(footer, /'services'/);
+  assert.doesNotMatch(header, /'prices'/);
+});
+
+test('service contact handoff, localized SEO and sitemap are wired', () => {
+  const contact = read('apps/web/components/ContactForm.tsx');
+  const contactPage = read('apps/web/app/[locale]/contact/page.tsx');
+  const detail = read('apps/web/components/services/ServiceDetail.tsx');
+  const seo = read('apps/web/lib/seo.ts');
+  const sitemap = read('apps/web/app/sitemap.ts');
+  const layout = read('apps/web/app/layout.tsx');
+  assert.match(detail, /contact\?service=\$\{service\.id\}/);
+  assert.match(contactPage, /contactServiceId/);
+  assert.match(contactPage, /serviceCopy/);
+  assert.match(seo, /x-default/);
+  assert.match(seo, /canonical/);
+  assert.match(sitemap, /serviceIds/);
+  assert.match(layout, /html lang=\{lang\}/);
+});
+
 test('admin price editor supports six translation tabs and one bulk save endpoint', () => {
   const editor = read('apps/control/app/dashboard/prices/price-spreadsheet.tsx');
   const route = read('apps/control/app/api/admin/prices/route.ts');
@@ -132,13 +193,17 @@ test('admin price editor supports six translation tabs and one bulk save endpoin
 
 test('portfolio page includes category filters and database-backed project cards', () => {
   const page = read('apps/web/components/PortfolioExplorer.tsx');
-  const route = read('apps/control/app/api/public/projects/route.ts');
+  const publicProjects = read('apps/web/lib/public-projects-db.ts');
+  const filters = read('apps/web/lib/portfolio-filters.ts');
+  const media = read('apps/web/app/api/public/media/[id]/route.ts');
   assert.match(page, /portfolio-filter/);
-  assert.match(page, /web-development/);
-  assert.match(page, /pc-support/);
-  assert.match(page, /linux-servers/);
-  assert.match(route, /status: 'PUBLISHED'/);
-  assert.match(route, /Cache-Control': 'no-store'/);
+  assert.match(filters, /web-development/);
+  assert.match(filters, /pc-support/);
+  assert.match(filters, /linux-servers/);
+  assert.match(publicProjects, /status: 'PUBLISHED'/);
+  assert.match(publicProjects, /\/api\/public\/media\//);
+  assert.match(media, /project: \{ status: 'PUBLISHED' \}/);
+  assert.match(media, /Vercel-CDN-Cache-Control': 'no-store'/);
 });
 
 test('project detail page supports role, work list, tools, links and variable image gallery', () => {
@@ -180,7 +245,8 @@ test('portfolio image storage model, migration and media endpoint are present', 
   assert.match(schema, /images\s+ProjectImage\[\]/);
   assert.match(migration, /CREATE TABLE IF NOT EXISTS "ProjectImage"/);
   assert.match(media, /Content-Type/);
-  assert.match(media, /immutable/);
+  assert.match(media, /no-store/);
+  assert.match(media, /project: \{ status: 'PUBLISHED' \}/);
   assert.match(media, /nosniff/);
 });
 
@@ -221,9 +287,7 @@ test('production database migration and seed scripts are documented and availabl
 
 test('reference assets and all redesigned public routes are included', () => {
   for (const file of [
-    'apps/web/public/contact/hero-visual.webp',
-    'apps/web/public/prices/hero-visual.webp',
-    'apps/web/public/portfolio/hero-visual.webp',
+    'apps/web/public/hero/tiladys-hero-objects-transparent.png',
     'apps/web/app/[locale]/contact/page.tsx',
     'apps/web/app/[locale]/prices/page.tsx',
     'apps/web/app/[locale]/portfolio/page.tsx',

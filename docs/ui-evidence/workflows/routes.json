@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-10-19T11:17:44.454Z",
+  "checks": [
+    "200, correct HTML language, canonical and Ukrainian hreflang: en",
+    "200, correct HTML language, canonical and Ukrainian hreflang: de",
+    "200, correct HTML language, canonical and Ukrainian hreflang: uk",
+    "200, correct HTML language, canonical and Ukrainian hreflang: ru",
+    "200, correct HTML language, canonical and Ukrainian hreflang: sk",
+    "200, correct HTML language, canonical and Ukrainian hreflang: fr",
+    "Legacy redirect: /de/prices",
+    "Legacy redirect: /de/services/it-support-diagnostics",
+    "Language-aware root redirect and real missing-page 404.",
+    "Public sitemap excludes dashboard and API paths."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "syntheticOnly": true,
+  "productionTestFixture": "zero published records; real publication projection unchanged",
+  "rows": [
+    {
+      "route": "",
+      "placeholder": false,
+      "projectCards": 0,
+      "empty": true,
+      "unavailable": false
+    },
+    {
+      "route": "/portfolio",
+      "placeholder": false,
+      "projectCards": 0,
+      "empty": true,
+      "unavailable": false
+    },
+    {
+      "route": "/services/websites",
+      "placeholder": false,
+      "projectCards": 0,
+      "empty": true,
+      "unavailable": false
+    },
+    {
+      "route": "/services/3d-printing",
+      "placeholder": false,
+      "projectCards": 0,
+      "empty": true,
+      "unavailable": false
+    },
+    {
+      "route": "/products/framer",
+      "placeholder": false,
+      "projectCards": 0,
+      "empty": true,
+      "unavailable": false
+    },
+    {
+      "route": "/products/3d-models",
+      "placeholder": false,
+      "projectCards": 0,
+      "empty": true,
+      "unavailable": false
+    }
+  ]
+}

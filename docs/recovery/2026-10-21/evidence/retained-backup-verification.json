@@ -1,0 +1,14 @@
+{
+  "path": "/home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/.env.recovery-backups/2026-10-21/preview-before.dump",
+  "bytes": 68012,
+  "sha256": "7aec2e2dc2d95897296fd80d269d38e6a455e213c3271717d3572ef12a055aa6",
+  "fileMode": "0600",
+  "directoryMode": "0700",
+  "gitIgnored": true,
+  "independentRestore": "recovery_restore_verify in owned PostgreSQL 18 lab",
+  "schemaAndAllCountsEqual": true,
+  "numberSequenceRowsEqual": true,
+  "migrationChecksumsVerified": 13,
+  "scope": "public schema/data only, excludes role grants; pre-migration child of verified Preview",
+  "realTargetRestored": false
+}

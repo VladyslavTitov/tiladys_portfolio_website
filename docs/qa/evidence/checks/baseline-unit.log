@@ -1,0 +1,316 @@
+
+> test
+> node tests/project.test.mjs && node --experimental-strip-types --test tests/contact-security.test.ts tests/contact-images.test.ts tests/contact-mail.test.ts tests/public-safety.test.ts && node --import tsx --test tests/portfolio-seo.test.ts && TSX_TSCONFIG_PATH=apps/control/tsconfig.json node --import tsx --test tests/portfolio-public-routes.test.ts && node --import tsx --test tests/crm-service-jobs.test.ts && node --import tsx --test tests/admin-dates.test.ts && node --import tsx --test tests/trusted-origins.test.ts tests/auth-request-source.test.ts tests/invoice-issuance-requirements.test.ts && npm run test:contact:route
+
+TAP version 13
+# Subtest: exact Next.js 16.3.8 version is pinned in both applications
+ok 1 - exact Next.js 16.3.8 version is pinned in both applications
+  ---
+  duration_ms: 7.509023
+  type: 'test'
+  ...
+# Subtest: Next.js 16 proxy convention and explicit ESLint flat config are used
+ok 2 - Next.js 16 proxy convention and explicit ESLint flat config are used
+  ---
+  duration_ms: 2.536748
+  type: 'test'
+  ...
+# Subtest: all six public locales are configured
+ok 3 - all six public locales are configured
+  ---
+  duration_ms: 1.13017
+  type: 'test'
+  ...
+# Subtest: about page JSON is complete for every public locale
+ok 4 - about page JSON is complete for every public locale
+  ---
+  duration_ms: 1.078703
+  type: 'test'
+  ...
+# Subtest: shared header and footer remain global public components
+ok 5 - shared header and footer remain global public components
+  ---
+  duration_ms: 1.295129
+  type: 'test'
+  ...
+# Subtest: contact redesign and existing message API integration are present
+ok 6 - contact redesign and existing message API integration are present
+  ---
+  duration_ms: 0.916939
+  type: 'test'
+  ...
+# Subtest: price catalog has exactly 12 sections and 145 services
+ok 7 - price catalog has exactly 12 sections and 145 services
+  ---
+  duration_ms: 4.486524
+  type: 'test'
+  ...
+# Subtest: every price section and service has all six non-empty translations
+ok 8 - every price section and service has all six non-empty translations
+  ---
+  duration_ms: 7.774731
+  type: 'test'
+  ...
+# Subtest: non-Cyrillic price locales do not contain accidental Cyrillic source text
+ok 9 - non-Cyrillic price locales do not contain accidental Cyrillic source text
+  ---
+  duration_ms: 7.56135
+  type: 'test'
+  ...
+# Subtest: price page includes filters, responsive table and per-service Get Help link
+ok 10 - price page includes filters, responsive table and per-service Get Help link
+  ---
+  duration_ms: 1.904542
+  type: 'test'
+  ...
+# Subtest: public services architecture keeps stable ids and explicit price references
+ok 11 - public services architecture keeps stable ids and explicit price references
+  ---
+  duration_ms: 2.424557
+  type: 'test'
+  ...
+# Subtest: removed public service routes redirect and three consolidated service visuals exist
+ok 12 - removed public service routes redirect and three consolidated service visuals exist
+  ---
+  duration_ms: 1.435843
+  type: 'test'
+  ...
+# Subtest: homepage exposes three service pillars and footer only real social channels
+ok 13 - homepage exposes three service pillars and footer only real social channels
+  ---
+  duration_ms: 0.932489
+  type: 'test'
+  ...
+# Subtest: public Prices route redirects permanently and navigation uses Services
+ok 14 - public Prices route redirects permanently and navigation uses Services
+  ---
+  duration_ms: 0.839093
+  type: 'test'
+  ...
+# Subtest: service contact handoff, localized SEO and sitemap are wired
+ok 15 - service contact handoff, localized SEO and sitemap are wired
+  ---
+  duration_ms: 1.292754
+  type: 'test'
+  ...
+# Subtest: admin price editor supports six translation tabs and one bulk save endpoint
+ok 16 - admin price editor supports six translation tabs and one bulk save endpoint
+  ---
+  duration_ms: 1.112437
+  type: 'test'
+  ...
+# Subtest: portfolio page includes category filters and database-backed project cards
+ok 17 - portfolio page includes category filters and database-backed project cards
+  ---
+  duration_ms: 0.787337
+  type: 'test'
+  ...
+# Subtest: project detail page supports role, work list, tools, links and variable image gallery
+ok 18 - project detail page supports role, work list, tools, links and variable image gallery
+  ---
+  duration_ms: 0.548929
+  type: 'test'
+  ...
+# Subtest: admin portfolio editor supports full localized CRUD and 1–10 images
+ok 19 - admin portfolio editor supports full localized CRUD and 1–10 images
+  ---
+  duration_ms: 0.89082
+  type: 'test'
+  ...
+# Subtest: portfolio image storage model, migration and media endpoint are present
+ok 20 - portfolio image storage model, migration and media endpoint are present
+  ---
+  duration_ms: 2.426571
+  type: 'test'
+  ...
+# Subtest: optional localized admin fields can be blank while required fields stay validated
+ok 21 - optional localized admin fields can be blank while required fields stay validated
+  ---
+  duration_ms: 0.557325
+  type: 'test'
+  ...
+# Subtest: project save normalizes URLs and reports field-level validation errors
+ok 22 - project save normalizes URLs and reports field-level validation errors
+  ---
+  duration_ms: 0.742332
+  type: 'test'
+  ...
+# Subtest: production database migration and seed scripts are documented and available
+ok 23 - production database migration and seed scripts are documented and available
+  ---
+  duration_ms: 1.048868
+  type: 'test'
+  ...
+# Subtest: reference assets and all redesigned public routes are included
+ok 24 - reference assets and all redesigned public routes are included
+  ---
+  duration_ms: 0.548629
+  type: 'test'
+  ...
+# Subtest: CSS files have balanced braces and responsive rules
+ok 25 - CSS files have balanced braces and responsive rules
+  ---
+  duration_ms: 1.237251
+  type: 'test'
+  ...
+# Subtest: secrets are absent and local environment files are excluded from distributable archives
+ok 26 - secrets are absent and local environment files are excluded from distributable archives
+  ---
+  duration_ms: 519.393232
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 638.247112
+TAP version 13
+# Subtest: tests/contact-images.test.ts
+ok 1 - tests/contact-images.test.ts
+  ---
+  duration_ms: 926.714055
+  type: 'test'
+  ...
+# Subtest: tests/contact-mail.test.ts
+ok 2 - tests/contact-mail.test.ts
+  ---
+  duration_ms: 541.831143
+  type: 'test'
+  ...
+# Subtest: tests/contact-security.test.ts
+ok 3 - tests/contact-security.test.ts
+  ---
+  duration_ms: 960.993893
+  type: 'test'
+  ...
+# Subtest: tests/public-safety.test.ts
+ok 4 - tests/public-safety.test.ts
+  ---
+  duration_ms: 545.35947
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1025.791024
+TAP version 13
+# Subtest: tests/portfolio-seo.test.ts
+ok 1 - tests/portfolio-seo.test.ts
+  ---
+  duration_ms: 929.311165
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 967.506707
+TAP version 13
+# Subtest: tests/portfolio-public-routes.test.ts
+ok 1 - tests/portfolio-public-routes.test.ts
+  ---
+  duration_ms: 1039.671636
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1077.108044
+TAP version 13
+# Subtest: tests/crm-service-jobs.test.ts
+ok 1 - tests/crm-service-jobs.test.ts
+  ---
+  duration_ms: 2582.337329
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2623.028181
+TAP version 13
+# Subtest: tests/admin-dates.test.ts
+ok 1 - tests/admin-dates.test.ts
+  ---
+  duration_ms: 333.801283
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 352.501533
+TAP version 13
+# Subtest: tests/auth-request-source.test.ts
+ok 1 - tests/auth-request-source.test.ts
+  ---
+  duration_ms: 406.132643
+  type: 'test'
+  ...
+# Subtest: tests/invoice-issuance-requirements.test.ts
+ok 2 - tests/invoice-issuance-requirements.test.ts
+  ---
+  duration_ms: 330.957179
+  type: 'test'
+  ...
+# Subtest: tests/trusted-origins.test.ts
+ok 3 - tests/trusted-origins.test.ts
+  ---
+  duration_ms: 328.918896
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 424.398649
+
+> test:contact:route
+> TSX_TSCONFIG_PATH=apps/web/tsconfig.json node --import tsx --test tests/contact-route.test.ts
+
+TAP version 13
+# Subtest: tests/contact-route.test.ts
+ok 1 - tests/contact-route.test.ts
+  ---
+  duration_ms: 782.668371
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 799.282169

@@ -1,0 +1,134 @@
+[
+  {
+    "name": "20261013210000_rebuild_core",
+    "sha256": "6ea69f92b8d4295d78b893602d5d8a13794dd64474c4c341e10a78117f75a830",
+    "tables": [
+      "Quote",
+      "QuoteRevision",
+      "Product",
+      "ProductImage",
+      "ProductAlias",
+      "Task",
+      "EnquiryNote",
+      "IdempotencyRecord",
+      "UploadReservation",
+      "MediaObject"
+    ],
+    "foreignKeys": [
+      "ContactMessage_customerId_fkey",
+      "Quote_customerId_fkey",
+      "Quote_acceptedRevisionId_fkey",
+      "Quote_serviceJobId_fkey",
+      "QuoteRevision_quoteId_fkey",
+      "QuoteRevision_recordedById_fkey",
+      "ProductImage_productId_fkey",
+      "ProductAlias_productId_fkey",
+      "Task_customerId_fkey",
+      "Task_serviceJobId_fkey",
+      "Task_createdById_fkey",
+      "EnquiryNote_messageId_fkey",
+      "EnquiryNote_createdById_fkey",
+      "MediaObject_reservationId_fkey"
+    ],
+    "uniqueIndexes": [
+      "Quote_quoteNumber_key",
+      "Quote_acceptedRevisionId_key",
+      "Quote_serviceJobId_key",
+      "QuoteRevision_quoteId_number_key",
+      "Product_slug_key",
+      "ProductAlias_slug_key",
+      "MediaObject_storageKey_key",
+      "InvoicePayment_invoiceId_idempotencyKey_key"
+    ],
+    "sql": "-- CreateEnum\nCREATE TYPE \"QuoteStatus\" AS ENUM ('DRAFT', 'SENT', 'ACCEPTED', 'DECLINED', 'ARCHIVED');\n\n-- CreateEnum\nCREATE TYPE \"ProductType\" AS ENUM ('FRAMER_TEMPLATE', 'MODEL_3D');\n\n-- CreateEnum\nCREATE TYPE \"TaskStatus\" AS ENUM ('TODO', 'IN_PROGRESS', 'DONE', 'ARCHIVED');\n\n-- AlterTable\nALTER TABLE \"ServiceJob\" ADD COLUMN     \"brief\" JSONB,\nADD COLUMN     \"dueAt\" TIMESTAMP(3),\nADD COLUMN     \"revision\" INTEGER NOT NULL DEFAULT 1;\n\n-- AlterTable\nALTER TABLE \"InvoicePayment\" ADD COLUMN     \"idempotencyKey\" TEXT,\nADD COLUMN     \"payloadHash\" TEXT;\n\n-- AlterTable\nALTER TABLE \"ContactMessage\" ADD COLUMN     \"customerId\" TEXT,\nADD COLUMN     \"publicReference\" TEXT,\nADD COLUMN     \"replyLanguage\" TEXT,\nADD COLUMN     \"requestMode\" TEXT;\n\n-- CreateTable\nCREATE TABLE \"Quote\" (\n    \"id\" TEXT NOT NULL,\n    \"quoteNumber\" TEXT NOT NULL,\n    \"customerId\" TEXT NOT NULL,\n    \"title\" TEXT NOT NULL,\n    \"status\" \"QuoteStatus\" NOT NULL DEFAULT 'DRAFT',\n    \"revision\" INTEGER NOT NULL DEFAULT 1,\n    \"draft\" JSONB NOT NULL,\n    \"acceptedRevisionId\" TEXT,\n    \"serviceJobId\" TEXT,\n    \"acceptedAt\" TIMESTAMP(3),\n    \"acceptanceSource\" TEXT,\n    \"acceptanceReference\" TEXT,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    \"updatedAt\" TIMESTAMP(3) NOT NULL,\n\n    CONSTRAINT \"Quote_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"QuoteRevision\" (\n    \"id\" TEXT NOT NULL,\n    \"quoteId\" TEXT NOT NULL,\n    \"number\" INTEGER NOT NULL,\n    \"snapshot\" JSONB NOT NULL,\n    \"validUntil\" TIMESTAMP(3) NOT NULL,\n    \"recordedById\" TEXT NOT NULL,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n\n    CONSTRAINT \"QuoteRevision_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"Product\" (\n    \"id\" TEXT NOT NULL,\n    \"slug\" TEXT NOT NULL,\n    \"type\" \"ProductType\" NOT NULL,\n    \"status\" \"ProjectStatus\" NOT NULL DEFAULT 'DRAFT',\n    \"title\" JSONB NOT NULL,\n    \"description\" JSONB NOT NULL,\n    \"included\" JSONB NOT NULL,\n    \"license\" JSONB NOT NULL,\n    \"price\" DECIMAL(12,2),\n    \"currency\" TEXT NOT NULL DEFAULT 'EUR',\n    \"priceConfirmed\" BOOLEAN NOT NULL DEFAULT false,\n    \"demoUrl\" TEXT,\n    \"purchaseUrl\" TEXT,\n    \"available\" BOOLEAN NOT NULL DEFAULT false,\n    \"rightsConfirmed\" BOOLEAN NOT NULL DEFAULT false,\n    \"revision\" INTEGER NOT NULL DEFAULT 1,\n    \"sortOrder\" INTEGER NOT NULL DEFAULT 0,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    \"updatedAt\" TIMESTAMP(3) NOT NULL,\n\n    CONSTRAINT \"Product_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"ProductImage\" (\n    \"id\" TEXT NOT NULL,\n    \"productId\" TEXT NOT NULL,\n    \"filename\" TEXT NOT NULL,\n    \"mimeType\" TEXT NOT NULL,\n    \"size\" INTEGER NOT NULL,\n    \"data\" BYTEA NOT NULL,\n    \"alt\" JSONB NOT NULL,\n    \"sortOrder\" INTEGER NOT NULL DEFAULT 0,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n\n    CONSTRAINT \"ProductImage_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"ProductAlias\" (\n    \"id\" TEXT NOT NULL,\n    \"slug\" TEXT NOT NULL,\n    \"productId\" TEXT NOT NULL,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n\n    CONSTRAINT \"ProductAlias_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"Task\" (\n    \"id\" TEXT NOT NULL,\n    \"title\" TEXT NOT NULL,\n    \"description\" TEXT,\n    \"status\" \"TaskStatus\" NOT NULL DEFAULT 'TODO',\n    \"priority\" INTEGER NOT NULL DEFAULT 1,\n    \"dueAt\" TIMESTAMP(3),\n    \"customerId\" TEXT,\n    \"serviceJobId\" TEXT,\n    \"revision\" INTEGER NOT NULL DEFAULT 1,\n    \"createdById\" TEXT NOT NULL,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    \"updatedAt\" TIMESTAMP(3) NOT NULL,\n\n    CONSTRAINT \"Task_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"EnquiryNote\" (\n    \"id\" TEXT NOT NULL,\n    \"messageId\" TEXT NOT NULL,\n    \"body\" TEXT NOT NULL,\n    \"createdById\" TEXT NOT NULL,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n\n    CONSTRAINT \"EnquiryNote_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"IdempotencyRecord\" (\n    \"scope\" TEXT NOT NULL,\n    \"key\" TEXT NOT NULL,\n    \"payloadHash\" TEXT NOT NULL,\n    \"resultId\" TEXT NOT NULL,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n\n    CONSTRAINT \"IdempotencyRecord_pkey\" PRIMARY KEY (\"scope\",\"key\")\n);\n\n-- CreateTable\nCREATE TABLE \"UploadReservation\" (\n    \"id\" TEXT NOT NULL,\n    \"capabilityHash\" TEXT NOT NULL,\n    \"purpose\" TEXT NOT NULL,\n    \"expiresAt\" TIMESTAMP(3) NOT NULL,\n    \"claimedAt\" TIMESTAMP(3),\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n\n    CONSTRAINT \"UploadReservation_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"MediaObject\" (\n    \"id\" TEXT NOT NULL,\n    \"reservationId\" TEXT NOT NULL,\n    \"storageKey\" TEXT NOT NULL,\n    \"filename\" TEXT NOT NULL,\n    \"mimeType\" TEXT NOT NULL,\n    \"sourceBytes\" INTEGER NOT NULL,\n    \"checksum\" TEXT,\n    \"accepted\" BOOLEAN NOT NULL DEFAULT false,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n\n    CONSTRAINT \"MediaObject_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"Quote_quoteNumber_key\" ON \"Quote\"(\"quoteNumber\");\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"Quote_acceptedRevisionId_key\" ON \"Quote\"(\"acceptedRevisionId\");\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"Quote_serviceJobId_key\" ON \"Quote\"(\"serviceJobId\");\n\n-- CreateIndex\nCREATE INDEX \"Quote_customerId_status_updatedAt_idx\" ON \"Quote\"(\"customerId\", \"status\", \"updatedAt\");\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"QuoteRevision_quoteId_number_key\" ON \"QuoteRevision\"(\"quoteId\", \"number\");\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"Product_slug_key\" ON \"Product\"(\"slug\");\n\n-- CreateIndex\nCREATE INDEX \"Product_status_type_sortOrder_idx\" ON \"Product\"(\"status\", \"type\", \"sortOrder\");\n\n-- CreateIndex\nCREATE INDEX \"ProductImage_productId_sortOrder_idx\" ON \"ProductImage\"(\"productId\", \"sortOrder\");\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"ProductAlias_slug_key\" ON \"ProductAlias\"(\"slug\");\n\n-- CreateIndex\nCREATE INDEX \"Task_status_dueAt_idx\" ON \"Task\"(\"status\", \"dueAt\");\n\n-- CreateIndex\nCREATE INDEX \"Task_serviceJobId_idx\" ON \"Task\"(\"serviceJobId\");\n\n-- CreateIndex\nCREATE INDEX \"EnquiryNote_messageId_createdAt_idx\" ON \"EnquiryNote\"(\"messageId\", \"createdAt\");\n\n-- CreateIndex\nCREATE INDEX \"UploadReservation_expiresAt_claimedAt_idx\" ON \"UploadReservation\"(\"expiresAt\", \"claimedAt\");\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"MediaObject_storageKey_key\" ON \"MediaObject\"(\"storageKey\");\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"InvoicePayment_invoiceId_idempotencyKey_key\" ON \"InvoicePayment\"(\"invoiceId\", \"idempotencyKey\");\n\n-- AddForeignKey\nALTER TABLE \"ContactMessage\" ADD CONSTRAINT \"ContactMessage_customerId_fkey\" FOREIGN KEY (\"customerId\") REFERENCES \"Customer\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"Quote\" ADD CONSTRAINT \"Quote_customerId_fkey\" FOREIGN KEY (\"customerId\") REFERENCES \"Customer\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"Quote\" ADD CONSTRAINT \"Quote_acceptedRevisionId_fkey\" FOREIGN KEY (\"acceptedRevisionId\") REFERENCES \"QuoteRevision\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"Quote\" ADD CONSTRAINT \"Quote_serviceJobId_fkey\" FOREIGN KEY (\"serviceJobId\") REFERENCES \"ServiceJob\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"QuoteRevision\" ADD CONSTRAINT \"QuoteRevision_quoteId_fkey\" FOREIGN KEY (\"quoteId\") REFERENCES \"Quote\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"QuoteRevision\" ADD CONSTRAINT \"QuoteRevision_recordedById_fkey\" FOREIGN KEY (\"recordedById\") REFERENCES \"AdminUser\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"ProductImage\" ADD CONSTRAINT \"ProductImage_productId_fkey\" FOREIGN KEY (\"productId\") REFERENCES \"Product\"(\"id\") ON DELETE CASCADE ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"ProductAlias\" ADD CONSTRAINT \"ProductAlias_productId_fkey\" FOREIGN KEY (\"productId\") REFERENCES \"Product\"(\"id\") ON DELETE CASCADE ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"Task\" ADD CONSTRAINT \"Task_customerId_fkey\" FOREIGN KEY (\"customerId\") REFERENCES \"Customer\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"Task\" ADD CONSTRAINT \"Task_serviceJobId_fkey\" FOREIGN KEY (\"serviceJobId\") REFERENCES \"ServiceJob\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"Task\" ADD CONSTRAINT \"Task_createdById_fkey\" FOREIGN KEY (\"createdById\") REFERENCES \"AdminUser\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"EnquiryNote\" ADD CONSTRAINT \"EnquiryNote_messageId_fkey\" FOREIGN KEY (\"messageId\") REFERENCES \"ContactMessage\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"EnquiryNote\" ADD CONSTRAINT \"EnquiryNote_createdById_fkey\" FOREIGN KEY (\"createdById\") REFERENCES \"AdminUser\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n-- AddForeignKey\nALTER TABLE \"MediaObject\" ADD CONSTRAINT \"MediaObject_reservationId_fkey\" FOREIGN KEY (\"reservationId\") REFERENCES \"UploadReservation\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n"
+  },
+  {
+    "name": "20261013220000_mail_outbox",
+    "sha256": "99842557bb99f3a5f2ded5bf3287eee17f3195a56d16742bb532f2e6bf199726",
+    "tables": [
+      "EmailOutbox",
+      "DeliveryAttempt"
+    ],
+    "foreignKeys": [
+      "DeliveryAttempt_outboxId_fkey"
+    ],
+    "uniqueIndexes": [
+      "EmailOutbox_scope_key_key"
+    ],
+    "sql": "-- CreateTable\nCREATE TABLE \"EmailOutbox\" (\n    \"id\" TEXT NOT NULL,\n    \"scope\" TEXT NOT NULL,\n    \"key\" TEXT NOT NULL,\n    \"payloadHash\" TEXT NOT NULL,\n    \"state\" TEXT NOT NULL DEFAULT 'SENDING',\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    \"updatedAt\" TIMESTAMP(3) NOT NULL,\n\n    CONSTRAINT \"EmailOutbox_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateTable\nCREATE TABLE \"DeliveryAttempt\" (\n    \"id\" TEXT NOT NULL,\n    \"outboxId\" TEXT NOT NULL,\n    \"outcome\" TEXT NOT NULL,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n\n    CONSTRAINT \"DeliveryAttempt_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"EmailOutbox_scope_key_key\" ON \"EmailOutbox\"(\"scope\", \"key\");\n\n-- CreateIndex\nCREATE INDEX \"DeliveryAttempt_outboxId_createdAt_idx\" ON \"DeliveryAttempt\"(\"outboxId\", \"createdAt\");\n\n-- AddForeignKey\nALTER TABLE \"DeliveryAttempt\" ADD CONSTRAINT \"DeliveryAttempt_outboxId_fkey\" FOREIGN KEY (\"outboxId\") REFERENCES \"EmailOutbox\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n"
+  },
+  {
+    "name": "20261013223000_quote_invoice_source",
+    "sha256": "37d6d0bec35e8a637b27353a6c03bb3d503bef5644dcfac45c411c8e63e7cdaf",
+    "tables": [],
+    "foreignKeys": [
+      "Invoice_quoteRevisionId_fkey"
+    ],
+    "uniqueIndexes": [
+      "Invoice_quoteRevisionId_key"
+    ],
+    "sql": "-- AlterTable\nALTER TABLE \"Invoice\" ADD COLUMN     \"quoteRevisionId\" TEXT;\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"Invoice_quoteRevisionId_key\" ON \"Invoice\"(\"quoteRevisionId\");\n\n-- AddForeignKey\nALTER TABLE \"Invoice\" ADD CONSTRAINT \"Invoice_quoteRevisionId_fkey\" FOREIGN KEY (\"quoteRevisionId\") REFERENCES \"QuoteRevision\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n"
+  },
+  {
+    "name": "20261013230000_enquiry_detail",
+    "sha256": "d2766e13b3983d7b32aedc77747964001442033920421a3232235284e72607fb",
+    "tables": [],
+    "foreignKeys": [],
+    "uniqueIndexes": [],
+    "sql": "-- Nullable service-detail preselection; original messages are never rewritten.\nALTER TABLE \"ContactMessage\" ADD COLUMN \"requestDetail\" TEXT;\n"
+  },
+  {
+    "name": "20261013233000_structured_catalogue",
+    "sha256": "3c92cb8192811855e6ddb0bff8af46ca89b1ab264e9f5e70cfc6826561f375b0",
+    "tables": [],
+    "foreignKeys": [],
+    "uniqueIndexes": [],
+    "sql": "-- AlterTable\nALTER TABLE \"PriceItem\" ADD COLUMN     \"currency\" TEXT,\nADD COLUMN     \"priceMode\" \"CataloguePriceMode\",\nADD COLUMN     \"unit\" TEXT,\nADD COLUMN     \"unitPrice\" DECIMAL(12,2);\n\n"
+  },
+  {
+    "name": "20261014003000_private_exports",
+    "sha256": "193f79b541a4b527c31e53691f437400e6d99205b78f9b47280c644e80d78660",
+    "tables": [
+      "ExportArtifact"
+    ],
+    "foreignKeys": [
+      "ExportArtifact_createdById_fkey"
+    ],
+    "uniqueIndexes": [
+      "ExportArtifact_tokenHash_key"
+    ],
+    "sql": "-- CreateTable\nCREATE TABLE \"ExportArtifact\" (\n    \"id\" TEXT NOT NULL,\n    \"tokenHash\" TEXT NOT NULL,\n    \"scope\" TEXT NOT NULL,\n    \"filename\" TEXT NOT NULL,\n    \"data\" BYTEA NOT NULL,\n    \"createdById\" TEXT NOT NULL,\n    \"expiresAt\" TIMESTAMP(3) NOT NULL,\n    \"createdAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,\n\n    CONSTRAINT \"ExportArtifact_pkey\" PRIMARY KEY (\"id\")\n);\n\n-- CreateIndex\nCREATE UNIQUE INDEX \"ExportArtifact_tokenHash_key\" ON \"ExportArtifact\"(\"tokenHash\");\n\n-- CreateIndex\nCREATE INDEX \"ExportArtifact_expiresAt_idx\" ON \"ExportArtifact\"(\"expiresAt\");\n\n-- AddForeignKey\nALTER TABLE \"ExportArtifact\" ADD CONSTRAINT \"ExportArtifact_createdById_fkey\" FOREIGN KEY (\"createdById\") REFERENCES \"AdminUser\"(\"id\") ON DELETE RESTRICT ON UPDATE CASCADE;\n\n"
+  },
+  {
+    "name": "20261014010000_editor_retention",
+    "sha256": "17b4d4e034db7f45b8e109ca290292419c869f2f98dc6163098ee59935a70273",
+    "tables": [],
+    "foreignKeys": [],
+    "uniqueIndexes": [],
+    "sql": "ALTER TABLE \"PriceSection\" ADD COLUMN \"updatedAt\" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP;\nALTER TABLE \"ProjectImage\" ADD COLUMN \"archivedAt\" TIMESTAMP(3);\n"
+  },
+  {
+    "name": "20261014013000_quote_expiry_reason",
+    "sha256": "592014582ff8e5f47abcd45dd9470c1bd8b3c75fae5e720c96e042df9f0a61cd",
+    "tables": [],
+    "foreignKeys": [],
+    "uniqueIndexes": [],
+    "sql": "ALTER TYPE \"QuoteStatus\" ADD VALUE IF NOT EXISTS 'EXPIRED';\nALTER TABLE \"Quote\" ADD COLUMN \"stateReason\" TEXT;\n"
+  },
+  {
+    "name": "20261014020000_task_timezone",
+    "sha256": "c223c852572b7960d5803903d2f16f8b15de0ca11379f556a70547c9d85a8e4f",
+    "tables": [],
+    "foreignKeys": [],
+    "uniqueIndexes": [],
+    "sql": "ALTER TABLE \"Task\" ADD COLUMN \"timeZone\" TEXT NOT NULL DEFAULT 'UTC';\n"
+  },
+  {
+    "name": "20261014023000_curation_unit_text",
+    "sha256": "04a3960df9acce31c40e9a2d0fd6a935583f682958af86c8e9d11b619d21812f",
+    "tables": [],
+    "foreignKeys": [],
+    "uniqueIndexes": [],
+    "sql": "ALTER TABLE \"Project\" ADD COLUMN \"homepageFeatured\" BOOLEAN NOT NULL DEFAULT false;\nALTER TABLE \"PriceItem\" ADD COLUMN \"unitTranslations\" JSONB;\n"
+  }
+]

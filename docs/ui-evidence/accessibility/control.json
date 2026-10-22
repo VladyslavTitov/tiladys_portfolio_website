@@ -1,0 +1,424 @@
+{
+  "timestamp": "2026-10-19T11:37:00.354Z",
+  "phase": "after",
+  "method": "Native Chrome CDP; production build; synthetic loopback database; cold browser cache; three samples per performance variant; local lab, not field CWV",
+  "rows": [
+    {
+      "route": "",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Hallo, Synthetic owner",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/messages",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Kundennachrichten",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/customers",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Kunden",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/companies",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Unternehmen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/service-jobs",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Aufträge",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/quotes",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Angebote",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/invoices",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Rechnungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/projects",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Portfolioprojekte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/products",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Produkte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/tasks",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Aufgaben",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/prices",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Preistabelleneditor",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "/settings",
+      "requestedWidth": 390,
+      "width": 390,
+      "scroll": 390,
+      "h1": "Einstellungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 390
+    },
+    {
+      "route": "",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Hallo, Synthetic owner",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/messages",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Kundennachrichten",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/customers",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Kunden",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/companies",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1440,
+      "h1": "Unternehmen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1440
+    },
+    {
+      "route": "/service-jobs",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Aufträge",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/quotes",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Angebote",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/invoices",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Rechnungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/projects",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Portfolioprojekte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/products",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Produkte",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/tasks",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Aufgaben",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/prices",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Preistabelleneditor",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    },
+    {
+      "route": "/settings",
+      "requestedWidth": 1440,
+      "width": 1440,
+      "scroll": 1425,
+      "h1": "Einstellungen",
+      "footer": 0,
+      "sections": [],
+      "cards": [],
+      "unlabelled": [],
+      "viewport": 1425
+    }
+  ],
+  "performance": [],
+  "accessibility": [
+    {
+      "route": "",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/messages",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/customers",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/companies",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/service-jobs",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/quotes",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/invoices",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/projects",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/products",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/tasks",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/prices",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/settings",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/messages",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/customers",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/companies",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/service-jobs",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/quotes",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/invoices",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/projects",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/products",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/tasks",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/prices",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/settings",
+      "width": 1440,
+      "violations": []
+    }
+  ],
+  "interactions": [
+    "Mobile menu opens; native Escape closes it and restores trigger focus",
+    "Reduced-motion scrolling verified"
+  ],
+  "failures": [],
+  "consoleErrors": []
+}

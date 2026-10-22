@@ -1,0 +1,78 @@
+{
+  "installed": {
+    "next": {
+      "version": "16.3.8",
+      "license": "MIT"
+    },
+    "react": {
+      "version": "19.1.1",
+      "license": "MIT"
+    },
+    "react-dom": {
+      "version": "19.1.1",
+      "license": "MIT"
+    },
+    "@prisma/client": {
+      "version": "6.19.3",
+      "license": "Apache-2.0"
+    },
+    "prisma": {
+      "version": "6.19.3",
+      "license": "Apache-2.0"
+    },
+    "sharp": {
+      "version": "0.35.5",
+      "license": "Apache-2.0"
+    },
+    "nodemailer": {
+      "version": "10.0.14",
+      "license": "MIT-0"
+    },
+    "argon2": {
+      "version": "0.43.1",
+      "license": "MIT"
+    },
+    "pdf-lib": {
+      "version": "1.17.1",
+      "license": "MIT"
+    },
+    "axe-core": {
+      "version": "4.12.1",
+      "license": "MPL-2.0"
+    },
+    "tsx": {
+      "version": "4.23.1",
+      "license": "MIT"
+    },
+    "typescript": {
+      "version": "5.9.3",
+      "license": "Apache-2.0"
+    },
+    "eslint": {
+      "version": "9.39.5",
+      "license": "MIT"
+    }
+  },
+  "lockfilePackageCount": 507,
+  "declaredLicenseCounts": {
+    "not declared in lockfile": 8,
+    "MIT": 399,
+    "Apache-2.0": 43,
+    "Apache-2.0 AND LGPL-3.0-or-later AND MIT": 2,
+    "LGPL-3.0-or-later": 10,
+    "Apache-2.0 AND LGPL-3.0-or-later": 3,
+    "BlueOak-1.0.0": 1,
+    "ISC": 21,
+    "Python-2.0": 1,
+    "MPL-2.0": 1,
+    "CC-BY-4.0": 1,
+    "BSD-2-Clause": 8,
+    "BSD-3-Clause": 3,
+    "SEE LICENSE IN README.md AND LICENSE": 1,
+    "CC0-1.0": 1,
+    "MIT-0": 1,
+    "(MIT AND Zlib)": 1,
+    "0BSD": 2
+  },
+  "limitations": "Local lockfile/package manifests only; no online transitive advisory audit, license legal review or package provenance attestation."
+}

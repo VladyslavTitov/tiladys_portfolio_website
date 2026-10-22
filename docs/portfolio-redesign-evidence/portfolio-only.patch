@@ -1,0 +1,390 @@
+--- a/tests/project.test.mjs
++++ b/tests/project.test.mjs
+@@ -194,11 +194,12 @@
+ test('portfolio page includes category filters and database-backed project cards', () => {
+   const page = read('apps/web/components/PortfolioExplorer.tsx');
+   const publicProjects = read('apps/web/lib/public-projects-db.ts');
++  const filters = read('apps/web/lib/portfolio-filters.ts');
+   const media = read('apps/web/app/api/public/media/[id]/route.ts');
+   assert.match(page, /portfolio-filter/);
+-  assert.match(publicProjects, /web-development/);
+-  assert.match(publicProjects, /pc-support/);
+-  assert.match(publicProjects, /linux-servers/);
++  assert.match(filters, /web-development/);
++  assert.match(filters, /pc-support/);
++  assert.match(filters, /linux-servers/);
+   assert.match(publicProjects, /status: 'PUBLISHED'/);
+   assert.match(publicProjects, /\/api\/public\/media\//);
+   assert.match(media, /project: \{ status: 'PUBLISHED' \}/);
+--- a/tests/ui-interactions.mjs
++++ b/tests/ui-interactions.mjs
+@@ -40,8 +40,8 @@
+  await b.evaluate(`document.querySelectorAll('.inbox-message')[1].click()`);await sleep(100);
+  assert.equal(await b.evaluate(`document.querySelector('.inbox-message[aria-pressed=true]').dataset.messageId`),oldSelected);assert.ok(b.dialogs.some(d=>d.type==='confirm'&&d.message.includes('unsaved')));checks.push('Inbox switching warns; cancelling keeps the selected message and unsent reply');
+  b.acceptDialogs(true);await b.navigate('http://127.0.0.1:3100/en/portfolio');await hydrated('.portfolio-filter button');
+- await set('.portfolio-content .record-search input','no-such-synthetic-project-visual');await click('.portfolio-content .record-search button[type=submit], .portfolio-content .record-search button:not([type])');
+- await until(()=>b.evaluate(`new URL(location.href).searchParams.has('q') && !!document.querySelector('.empty-state')`),'portfolio filtered empty');await shot('portfolio-filtered-empty');await click('.portfolio-content .record-search button[type=button]');await until(()=>b.evaluate(`!new URL(location.href).searchParams.has('q')`),'filters clear');checks.push('Portfolio search, intentional empty state and clear work through real route filters');
++ await set('#portfolio-search','no-such-synthetic-project-visual');
++ await until(()=>b.evaluate(`new URL(location.href).searchParams.has('q') && !!document.querySelector('.portfolio-empty')`),'portfolio filtered empty');await shot('portfolio-filtered-empty');await click('.portfolio-search button[type=button]');await until(()=>b.evaluate(`!new URL(location.href).searchParams.has('q')`),'filters clear');checks.push('Portfolio search, intentional empty state and clear work through real route filters');
+  await b.navigate('http://127.0.0.1:3100/en/services/3d-printing');await click('.service-faq summary');assert.ok(await b.evaluate(`document.querySelector('.service-faq').open`));await shot('faq-expanded');checks.push('FAQ disclosure expands without clipping');
+  await b.viewport(1440);await b.navigate('http://127.0.0.1:3101/dashboard/invoices?status=ISSUED');
+  assert.ok(await b.evaluate(`document.querySelector('#recipient')?.disabled && [...document.querySelectorAll('#recipient input,#recipient textarea,#recipient select')].every(e=>e.disabled||e.matches(':disabled'))`));
+--- a/tests/ui-public-interactions.mjs
++++ b/tests/ui-public-interactions.mjs
+@@ -1,18 +1,17 @@
+ import assert from 'node:assert/strict';
+ import {mkdir,writeFile} from 'node:fs/promises';
+ import {browserDriver,until} from './browser-protocol.mjs';
+-const b=await browserDriver(false,9342),checks=[],dir='docs/ui-evidence/public-interactions';await mkdir(dir,{recursive:true});
++const dir=process.env.PUBLIC_INTERACTION_OUTPUT||'docs/ui-evidence/public-interactions';assert.match(dir,/^docs\/[a-z0-9/-]+$/);const b=await browserDriver(false,9342),checks=[];await mkdir(dir,{recursive:true});
+ const click=selector=>b.evaluate(`document.querySelector(${JSON.stringify(selector)}).click()`);
+ try {
+  await b.viewport(1440);await b.navigate('http://127.0.0.1:3100/en/portfolio');
+- await until(()=>b.evaluate(`document.querySelectorAll('.featured-controls button').length===2`),'manual featured controls');
+- const before=await b.evaluate(`document.querySelector('.featured-controls span').textContent`);await click('.featured-controls button:last-of-type');await until(()=>b.evaluate(`document.querySelector('.featured-controls span').textContent!==${JSON.stringify(before)}`),'featured next');await click('.featured-controls button:first-of-type');await until(()=>b.evaluate(`document.querySelector('.featured-controls span').textContent===${JSON.stringify(before)}`),'featured previous');checks.push('Featured previous/next change only the selected feature; no autoplay control/timer');
+- await b.evaluate(`document.querySelectorAll('.portfolio-filter button')[1].click()`);await until(()=>b.evaluate(`new URL(location.href).searchParams.get('filter')==='web' && document.querySelectorAll('.portfolio-card').length===1`),'category chip results');await click('.portfolio-content .record-search button[type=button]');await until(()=>b.evaluate(`!new URL(location.href).searchParams.has('filter') && document.querySelectorAll('.portfolio-card').length===3`),'chip reset');checks.push('Category chips and reset update real route-filtered results');
+- await b.evaluate(`const e=document.querySelector('.portfolio-content select');e.value='3d-printing';e.dispatchEvent(new Event('change',{bubbles:true}));`);await until(()=>b.evaluate(`new URL(location.href).searchParams.get('category')==='3d-printing' && document.querySelectorAll('.portfolio-card').length===1`),'category dropdown');await click('.portfolio-content .record-search button[type=button]');await until(()=>b.evaluate(`!new URL(location.href).searchParams.has('category')`),'dropdown clear');checks.push('Actual catalogue category dropdown and clear retain valid route semantics');
++ await until(()=>b.evaluate(`document.querySelectorAll('.portfolio-filter button').length===5`),'five public choices');assert.ok(await b.evaluate(`!document.querySelector('.featured-rotation,.featured-controls,.portfolio-content select')`));checks.push('Featured carousel and duplicate dropdown are absent; five public choices remain');
++ await b.evaluate(`document.querySelectorAll('.portfolio-filter button')[1].click()`);await until(()=>b.evaluate(`new URL(location.href).searchParams.get('filter')==='websites' && document.querySelectorAll('.portfolio-card').length===1`),'website results');await click('.portfolio-filter button:first-child');await until(()=>b.evaluate(`!new URL(location.href).searchParams.has('filter') && document.querySelectorAll('.portfolio-card').length===3`),'all projects');checks.push('Mapped Websites and All Projects update real route-filtered results');
++ await b.evaluate(`document.querySelectorAll('.portfolio-filter button')[3].click()`);await until(()=>b.evaluate(`new URL(location.href).searchParams.get('filter')==='3d-printing' && document.querySelectorAll('.portfolio-card').length===1`),'printing results');await click('.portfolio-filter button:first-child');await until(()=>b.evaluate(`!new URL(location.href).searchParams.has('filter')`),'category reset');checks.push('Printing uses the mapped public group without a duplicate category control');
+  await b.navigate('http://127.0.0.1:3100/en/portfolio/synthetic-web-development');await until(()=>b.evaluate(`!!document.querySelector('.project-gallery button')`),'gallery');await click('.project-gallery button');assert.ok(await b.evaluate(`document.querySelector('.image-viewer').open`));await click('.image-viewer button[aria-pressed]');assert.ok(await b.evaluate(`document.querySelector('.image-viewer__surface').classList.contains('is-zoomed') && document.documentElement.scrollWidth<=innerWidth+1`));await writeFile(`${dir}/gallery-zoom.png`,await b.screenshot(false));await b.send('Input.dispatchKeyEvent',{type:'keyDown',key:'Escape',code:'Escape',windowsVirtualKeyCode:27});await b.send('Input.dispatchKeyEvent',{type:'keyUp',key:'Escape',code:'Escape',windowsVirtualKeyCode:27});await until(()=>b.evaluate(`!document.querySelector('.image-viewer').open && document.activeElement.matches('.project-gallery button')`),'gallery Escape focus');checks.push('Gallery opens/zooms within its own scroll region; native Escape closes and restores trigger focus');
+  await b.navigate('http://127.0.0.1:3100/en/services/3d-printing');await b.evaluate(`document.querySelector('.service-faq summary').focus()`);await b.send('Input.dispatchKeyEvent',{type:'keyDown',key:' ',code:'Space',windowsVirtualKeyCode:32});await b.send('Input.dispatchKeyEvent',{type:'keyUp',key:' ',code:'Space',windowsVirtualKeyCode:32});assert.ok(await b.evaluate(`document.querySelector('.service-faq').open`));checks.push('FAQ opens with the native Space key');
+  // Explicit network failure only at the browser test boundary. No product query,
+  // record visibility, image source or real backend wiring is replaced.
+- await b.send('Fetch.enable',{patterns:[{urlPattern:'*://127.0.0.1:3100/api/public/media/*',requestStage:'Request'}]});await b.navigate('http://127.0.0.1:3100/en/portfolio');await until(()=>b.evaluate(`document.querySelectorAll('.project-missing-media').length>=3`),'honest missing media');assert.ok(await b.evaluate(`[...document.querySelectorAll('.portfolio-card__image')].every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.width/r.height-1.6)<.02})`));await writeFile(`${dir}/media-error.png`,await b.screenshot());await b.send('Fetch.disable');checks.push('Browser-boundary image failure produces an honest fallback with reserved 16:10 frames');
++ await b.send('Fetch.enable',{patterns:[{urlPattern:'*://127.0.0.1:3100/api/public/media/*',requestStage:'Request'}]});await b.navigate('http://127.0.0.1:3100/en/portfolio');await until(()=>b.evaluate(`document.querySelectorAll('.portfolio-card__placeholder').length>=3`),'honest missing media');assert.ok(await b.evaluate(`[...document.querySelectorAll('.portfolio-card__image')].every(e=>{const r=e.getBoundingClientRect();return Math.abs(r.width/r.height-1.6)<.02})`));await writeFile(`${dir}/media-error.png`,await b.screenshot());await b.send('Fetch.disable');checks.push('Browser-boundary image failure produces an honest fallback with reserved 16:10 frames');
+ } finally {await writeFile(`${dir}/results.json`,JSON.stringify({checks,consoleErrors:b.errors,networkErrors:b.network,testBoundaryFailure:'Only public project image requests intentionally fail in the final state test'},null,2));await b.close();}
+ console.log(JSON.stringify({passed:checks.length,checks}));
+--- a/apps/web/app/refinement.css
++++ b/apps/web/app/refinement.css
+@@ -139,12 +139,24 @@
+ .rebuild-process li { align-items: flex-start; }
+ .rebuild-process li h3 { font-size: 20px; line-height: 1.4; margin-block: 8px; }
+ .section.rebuild-founder { padding: 32px; margin-block: 32px; }
+-.portfolio-content > .record-search { padding: 20px; margin: 0; gap: 16px; background: #f4f7fa; border: 1px solid var(--line); border-radius: 12px 12px 0 0; }
+-.portfolio-content .record-search label { flex: 1 1 180px; min-width: 0; }
+-.portfolio-filter { padding: 16px 20px; margin: 0 0 28px; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 12px 12px; gap: 10px; }
+-.featured-project { border-radius: var(--card-radius); padding: 28px; gap: 28px; }
+-.featured-project__image { aspect-ratio: 16 / 10; min-width: 0; padding: 0; border: 0; border-radius: 12px; overflow: hidden; background: #f4f7fa; }
+-.featured-project__image img { width: 100%; height: 100%; object-fit: cover; border: 0; border-radius: 0; box-shadow: none; }
++/* Public portfolio: one search, five presentation groups, then the bounded grid. */
++.portfolio-toolbar { display: grid; gap: 18px; }
++.portfolio-search { position: relative; display: flex; align-items: center; width: 100%; max-width: 680px; }
++.portfolio-search > svg { position: absolute; left: 16px; color: #52647a; pointer-events: none; }
++.portfolio-search input { width: 100%; min-width: 0; height: 48px; border: 1px solid #a5bacb; border-radius: 10px; padding: 10px 48px 10px 46px; font: inherit; font-size: 16px; color: #13243f; background: #fff; }
++.portfolio-search input::-webkit-search-cancel-button { -webkit-appearance: none; }
++.portfolio-search > button { position: absolute; right: 2px; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 8px; display: grid; place-items: center; color: #075c67; background: transparent; }
++.portfolio-search > button:hover { background: #eef8f8; }
++.portfolio-filter { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; padding: 0; margin: 0; gap: 10px; border: 0; }
++.portfolio-filter button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; max-width: 100%; padding: 10px 18px; border: 1px solid #bccdda; border-radius: 10px; color: #13243f; background: #fff; font: inherit; font-size: 15px; font-weight: 700; line-height: 1.4; }
++.portfolio-filter button svg { flex: 0 0 18px; }
++.portfolio-filter button:hover { background: #eef8f8; border-color: #11737a; }
++.portfolio-filter button.is-active { color: #071837; background: #7be0df; border-color: #11737a; }
++.portfolio-result-count { margin: 24px 0; font-size: 15px; color: #52647a; }
++.portfolio-empty { display: grid; justify-items: center; gap: 16px; padding: 40px 24px; border: 1px dashed #a5bacb; border-radius: 16px; background: #f4f7fa; text-align: center; }
++.portfolio-empty > svg { color: #11737a; }
++.portfolio-empty h2 { margin: 0; font-size: 24px; }
++.portfolio-empty p { margin: 0; max-width: 60ch; }
+ .portfolio-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+ .portfolio-card { display: flex; flex-direction: column; border-radius: var(--card-radius); box-shadow: none; }
+ .portfolio-card__image, .project-missing-media { aspect-ratio: 16 / 10; }
+@@ -153,6 +165,20 @@
+ .portfolio-card__body h2 { font-size: 22px; line-height: 1.35; }
+ .portfolio-card__body p { font-size: 16px; line-height: 1.6; margin-bottom: 24px; }
+ .portfolio-card__body > a { margin-top: auto; min-height: 44px; }
++.portfolio-card__category { margin-bottom: 12px; color: #075c67; font-size: 13px; font-weight: 700; }
++.portfolio-card__body h2 a { display: inline; margin: 0; color: #071837; font: inherit; }
++.portfolio-card__body h2, .portfolio-card__body p { overflow-wrap: anywhere; }
++.portfolio-card__body p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; }
++.portfolio-card__body .portfolio-card__action { color: #075c67; }
++.portfolio-card__image--contain { background: #eef8f8; }
++.portfolio-card__image--contain img { object-fit: contain; object-position: center; padding: 16px; }
++.portfolio-card__placeholder { display: flex; width: 100%; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 20px; color: #dbeef2; background: radial-gradient(ellipse at top right, #194b58, #071837); text-align: center; }
++.portfolio-card__placeholder strong { font-size: 24px; color: #7be0df; }
++.portfolio-card__placeholder small { font-size: 14px; }
++.portfolio-card:hover { transform: none; }
++.portfolio-card:hover .portfolio-card__image img { transform: none; }
++.portfolio-content { padding-bottom: 48px; }
++
+ .featured-controls { justify-content: flex-start; }
+ .portfolio-content > .record-pagination { padding-top: 24px; border-top: 1px solid var(--line); }
+ .empty-state { border: 1px dashed #a5bacb; border-radius: 12px; padding: 32px; background: #f4f7fa; }
+--- a/apps/web/lib/public-projects-db.ts
++++ b/apps/web/lib/public-projects-db.ts
+@@ -1,5 +1,6 @@
+ import { Prisma } from '@prisma/client';
+ import { db } from '@tiladys/db';
++import { focusedCategoryIds, focusedPortfolioCategories, resolvePortfolioFilter } from './portfolio-filters';
+ 
+ export type LocalizedText = Record<string, string>;
+ export type PublicProjectRecord = {
+@@ -119,24 +120,33 @@
+   return project ? serialize(project) : null;
+ }
+ 
+-/** A bounded database page. Only published public text participates in search. */
++// The browsing grid needs one cover and public card text, not full case-study/SEO data.
++const portfolioCardSelect = {
++  id: true, slug: true, category: true, title: true, summary: true, coverImage: true,
++  images: {where: {archivedAt: null}, take: 1, select: {id: true, alt: true, sortOrder: true}, orderBy: [{sortOrder: 'asc'}, {id: 'asc'}]},
++} satisfies Prisma.ProjectSelect;
++
++/** A bounded database page. Only published, localized public text participates. */
+ export async function getPublishedPortfolio(locale:string, query:{category?:string;filter?:string;q?:string;page?:string}) {
+   const language = ['en','de','uk','ru','sk','fr'].includes(locale) ? locale : 'en';
+-  const groups:Record<string,string[]> = {web:['web-development'],pc:['pc-support'],design:['design'],linux:['linux-servers'],digital:['digital-help'],print:['3d-printing']};
++  const filter = resolvePortfolioFilter(query);
+   const search=(query.q||'').trim().slice(0,120);
+-  const category=(query.category||'').slice(0,80);
+   const pattern=`%${search.replace(/[\\%_]/g,'\\$&')}%`;
+   const constraints=[Prisma.sql`"status"='PUBLISHED'`,Prisma.sql`length(btrim(COALESCE("title"->>${language},'')))>0 AND length(btrim(COALESCE("summary"->>${language},'')))>0`];
+-  if(category)constraints.push(Prisma.sql`"category"=${category}`);
+-  else if(groups[query.filter||''])constraints.push(Prisma.sql`"category" IN (${Prisma.join(groups[query.filter!])})`);
++  if(filter==='services')constraints.push(Prisma.sql`"category" NOT IN (${Prisma.join(focusedCategoryIds)})`);
++  else if(filter!=='all')constraints.push(Prisma.sql`"category" IN (${Prisma.join(focusedPortfolioCategories[filter])})`);
+   if(search)constraints.push(Prisma.sql`(COALESCE("title"->>${language},"title"->>'en','') ILIKE ${pattern} OR COALESCE("summary"->>${language},"summary"->>'en','') ILIKE ${pattern})`);
+   const where=Prisma.join(constraints,' AND ');
+-  const [counts,categories]=await Promise.all([db.$queryRaw<Array<{total:bigint}>>(Prisma.sql`SELECT COUNT(*) AS total FROM "Project" WHERE ${where}`),db.project.groupBy({by:['category'],where:{status:'PUBLISHED'},orderBy:{category:'asc'}})]);
++  const counts=await db.$queryRaw<Array<{total:bigint}>>(Prisma.sql`SELECT COUNT(*) AS total FROM "Project" WHERE ${where}`);
+   const total=Number(counts[0].total);
+   const requested=Number(query.page);const page=Math.min(Math.max(1,Number.isSafeInteger(requested)?requested:1),Math.max(1,Math.ceil(total/12)));
+   const ids=await db.$queryRaw<Array<{id:string}>>(Prisma.sql`SELECT "id" FROM "Project" WHERE ${where} ORDER BY "sortOrder" ASC,"updatedAt" DESC,"id" ASC LIMIT 12 OFFSET ${(page-1)*12}`);
+-  const rows=await db.project.findMany({where:{status:'PUBLISHED',id:{in:ids.map(r=>r.id)}},select:publicProjectSelect});
+-  return {projects:ids.flatMap(id=>{const row=rows.find(r=>r.id===id.id);return row?[serialize(row)]:[];}),total,page,categories:categories.map(c=>c.category)};
++  const rows=ids.length?await db.project.findMany({where:{status:'PUBLISHED',id:{in:ids.map(r=>r.id)}},select:portfolioCardSelect}):[];
++  const byId=new Map(rows.map(row=>[row.id,row]));
++  const projects=ids.flatMap(({id})=>{
++    const row=byId.get(id);return row?[{id:row.id,slug:row.slug,category:row.category,title:localized(row.title)??{},summary:localized(row.summary)??{},coverImage:row.coverImage,images:row.images.map(image=>({id:image.id,alt:localized(image.alt),sortOrder:image.sortOrder,url:`/api/public/media/${image.id}?v=2`}))}]:[];
++  });
++  return {projects,total,page,filter};
+ }
+ 
+ export async function publishedProjectSitemap(){return db.project.findMany({where:{status:'PUBLISHED'},select:{slug:true,title:true,summary:true,updatedAt:true}});}
+--- a/apps/web/components/ProjectImage.tsx
++++ b/apps/web/components/ProjectImage.tsx
+@@ -1,15 +1,15 @@
+ 'use client';
+ import Image, { type ImageLoaderProps } from 'next/image';
+-import { useState } from 'react';
++import { useState, type ReactNode } from 'react';
+ 
+ function mediaLoader({ src, width }: ImageLoaderProps) {
+   const url = new URL(src, 'http://local.invalid');
+   url.searchParams.set('w', String(Math.min(width, 1920)));
+   return src.startsWith('/') ? `${url.pathname}${url.search}` : url.toString();
+ }
+-export function ProjectImage({ src, alt, sizes, priority = false }: { src?: string | null; alt: string; sizes: string; priority?: boolean }) {
++export function ProjectImage({ src, alt, sizes, priority = false, fallback }: { src?: string | null; alt: string; sizes: string; priority?: boolean; fallback?: ReactNode }) {
+   const [failedSource, setFailedSource] = useState<string | null>(null);
+-  if(!src || failedSource===src)return <span className="project-missing-media" role="img" aria-label={`Image unavailable: ${alt}`}>Image unavailable</span>;
++  if(!src || failedSource===src)return fallback ?? <span className="project-missing-media" role="img" aria-label={`Image unavailable: ${alt}`}>Image unavailable</span>;
+   const source = src;
+   const media = /\/api\/public\/(?:product-)?media\/[a-zA-Z0-9_-]+(?:\?|$)/.test(source);
+   const external = /^https?:\/\//.test(source);
+--- a/apps/web/components/PortfolioExplorer.tsx
++++ b/apps/web/components/PortfolioExplorer.tsx
+@@ -1,96 +1,109 @@
+ 'use client';
+ 
+-
+-
+-import { portfolioImageSizes } from '@/lib/image-sizes';
++import {useEffect, useRef, useState, useTransition} from 'react';
+ import Link from 'next/link';
+-import {useSearchParams,useRouter,usePathname} from 'next/navigation';
+-import {projectCategoryLabel} from '@/lib/project-categories';
+-import { useState } from 'react';
+-import { ProjectImage } from './ProjectImage';
++import {usePathname, useRouter, useSearchParams} from 'next/navigation';
++import {ArrowRight, Box, Code2, Layers3, Search, Server, Wrench, X} from 'lucide-react';
++import {portfolioImageSizes} from '@/lib/image-sizes';
++import {portfolioBrowseCopy, portfolioFilters, publicPortfolioCategory, resolvePortfolioFilter, type PortfolioFilter} from '@/lib/portfolio-filters';
++import {p} from '@/lib/page-copy';
+ import interfaceCopy from '@/content/interface.json';
+-import { ArrowRight, Code2, Headphones, Layers3, MonitorCog, Paintbrush, Server, Sparkles } from 'lucide-react';
+-import { p } from '@/lib/page-copy';
++import {ProjectImage} from './ProjectImage';
+ 
+ export type PublicProject = {
+-  id: string;
+-  slug: string;
+-  category: string;
+-  title: Record<string, string>;
+-  summary: Record<string, string>;
++  id: string; slug: string; category: string;
++  title: Record<string, string>; summary: Record<string, string>;
+   coverImage?: string | null;
+-  images?: Array<{ id: string; url: string; alt?: Record<string, string> | null; sortOrder: number }>;
++  images?: Array<{id: string; url: string; alt?: Record<string, string> | null; sortOrder: number}>;
+ };
++const filterIcons = {all: Layers3, websites: Code2, services: Wrench, '3d-printing': Box, 'linux-servers': Server};
++const translated = (value: Record<string, string> | null | undefined, locale: string) => value?.[locale] || value?.en || '';
+ 
+-type Filter = 'print' | 'all' | 'web' | 'pc' | 'design' | 'linux' | 'digital';
+-const filterIcons = { print: Layers3, all: Layers3, web: Code2, pc: MonitorCog, design: Paintbrush, linux: Server, digital: Headphones } as const;
++export function PortfolioExplorer({locale, projects, total, page, filter}: {
++  locale: string; projects: PublicProject[]; total: number; page: number; filter: PortfolioFilter;
++}) {
++  const copy=portfolioBrowseCopy(locale), c=p(locale).portfolio;
++  const ui=interfaceCopy[locale as keyof typeof interfaceCopy] ?? interfaceCopy.en;
++  const query=useSearchParams(), router=useRouter(), path=usePathname();
++  const signature=query.toString(), search=query.get('q') || '';
++  const [draft,setDraft]=useState(search), [pending,startTransition]=useTransition();
++  const timer=useRef<ReturnType<typeof setTimeout> | null>(null);
++  const desired=useRef(signature), ownNavigations=useRef(new Set<string>());
++  const cancelDebounce=()=>{if(timer.current!==null){clearTimeout(timer.current);timer.current=null;}};
+ 
++  // Keep back/forward and external links in sync without overwriting newer typing
++  // when a slower, earlier search response commits.
++  useEffect(()=>{
++    if(ownNavigations.current.delete(signature))return;
++    desired.current=signature;
++    setDraft(new URLSearchParams(signature).get('q') || '');
++  },[signature]);
++  useEffect(()=>{
++    const restore=()=>{
++      if(timer.current!==null)clearTimeout(timer.current);
++      timer.current=null;ownNavigations.current.clear();
++      desired.current=window.location.search.slice(1);
++      setDraft(new URLSearchParams(desired.current).get('q') || '');
++    };
++    window.addEventListener('popstate',restore);
++    return ()=>{window.removeEventListener('popstate',restore);if(timer.current!==null)clearTimeout(timer.current);};
++  },[]);
+ 
+-function translated(value: Record<string, string> | undefined, locale: string) {
+-  return value?.[locale] || value?.en || value?.ru || '';
++  function update(values: {q?: string; filter?: PortfolioFilter; page?: string}) {
++    const next=new URLSearchParams(desired.current);
++    // Existing category/filter links remain understood by the server. New actions
++    // write one canonical public group and never leave a hidden category constraint.
++    const current=resolvePortfolioFilter({filter:next.get('filter')||undefined,category:next.get('category')||undefined});
++    next.delete('category');
++    if(!('filter' in values)){if(current==='all')next.delete('filter');else next.set('filter',current);}
++    for(const [key,value] of Object.entries(values)){
++      const normalized=key==='q'?value.trim():value;
++      if(normalized&&normalized!=='all')next.set(key,normalized);else next.delete(key);
++    }
++    if(!('page' in values))next.delete('page');
++    desired.current=next.toString();ownNavigations.current.add(desired.current);
++    startTransition(()=>router.push(`${path}${desired.current?`?${desired.current}`:''}`,{scroll:false}));
++  }
++  function changeSearch(value: string) {
++    setDraft(value);cancelDebounce();
++    timer.current=setTimeout(()=>{timer.current=null;update({q:value});},300);
++  }
++  const filtered=Boolean(search.trim())||filter!=='all';
++  return <section className="section portfolio-content">
++    <div className="portfolio-toolbar">
++      <form className="portfolio-search" role="search" aria-label={copy.search} onSubmit={event=>{event.preventDefault();cancelDebounce();update({q:draft});}}>
++        <label className="sr-only" htmlFor="portfolio-search">{copy.search}</label>
++        <Search aria-hidden="true" size={20}/>
++        <input id="portfolio-search" type="search" name="q" maxLength={120} value={draft} onChange={event=>changeSearch(event.target.value)} placeholder={copy.placeholder}/>
++        {draft?<button type="button" aria-label={copy.clear} onClick={()=>{cancelDebounce();setDraft('');update({q:''});document.getElementById('portfolio-search')?.focus();}}><X aria-hidden="true" size={18}/></button>:null}
++      </form>
++      <div className="portfolio-filter" role="group" aria-label={copy.filters.all}>
++        {portfolioFilters.map(key=>{const Icon=filterIcons[key];return <button key={key} type="button" aria-pressed={filter===key} className={filter===key?'is-active':''} onClick={()=>{cancelDebounce();update({filter:key,q:draft});}}><Icon aria-hidden="true" size={18}/>{copy.filters[key]}</button>;})}
++      </div>
++    </div>
++    <p className="portfolio-result-count" role="status" aria-live="polite" aria-atomic="true">{pending?copy.updating:`${copy.results}: ${new Intl.NumberFormat(locale).format(total)}`}</p>
++    <div className="portfolio-results" aria-busy={pending}>
++      {projects.length?<div className="portfolio-grid">{projects.map(project=>{
++        const title=translated(project.title,locale), cover=project.images?.[0];
++        const contain=project.category==='3d-printing';
++        const fallback=<span className="portfolio-card__placeholder" role="img" aria-label={`${copy.preview}: ${title}`}><Layers3 aria-hidden="true" size={36}/><strong>TiLADYS</strong><small>{copy.preview}</small></span>;
++        return <article className="portfolio-card" key={project.id}>
++          <Link href={`/${locale}/portfolio/${project.slug}`} className={`portfolio-card__image${contain?' portfolio-card__image--contain':''}`} aria-label={title}>
++            <ProjectImage src={cover?.url||project.coverImage} alt={translated(cover?.alt,locale)||title} sizes={portfolioImageSizes} fallback={fallback}/>
++          </Link>
++          <div className="portfolio-card__body">
++            <span className="portfolio-card__category">{copy.filters[publicPortfolioCategory(project.category)]}</span>
++            <h2><Link href={`/${locale}/portfolio/${project.slug}`}>{title}</Link></h2>
++            <p>{translated(project.summary,locale)}</p>
++            <Link className="portfolio-card__action" href={`/${locale}/portfolio/${project.slug}`}>{c.viewProject}<ArrowRight aria-hidden="true" size={17}/></Link>
++          </div>
++        </article>;
++      })}</div>:<div className="portfolio-empty"><Layers3 aria-hidden="true" size={36}/><h2>{filtered?copy.noMatches:copy.empty}</h2>{filtered?<button className="secondary" type="button" onClick={()=>{cancelDebounce();setDraft('');update({q:'',filter:'all'});}}>{copy.reset}</button>:<p>{copy.emptyText}</p>}</div>}
++    </div>
++    {total>12?<nav className="record-pagination" aria-label={copy.page}>
++      <button className="secondary" aria-label={ui.previous} disabled={page<=1||pending} onClick={()=>{cancelDebounce();update({q:draft,page:String(page-1)});}}>←</button>
++      <span>{page} / {Math.ceil(total/12)}</span>
++      <button className="secondary" aria-label={ui.next} disabled={page*12>=total||pending} onClick={()=>{cancelDebounce();update({q:draft,page:String(page+1)});}}>→</button>
++    </nav>:null}
++  </section>;
+ }
+-
+-function imageFor(project: PublicProject) {
+-  return project.images?.[0]?.url || project.coverImage || '';
+-}
+-
+-export function PortfolioExplorer({ locale, projects, total, page, categories }: { locale: string; projects: PublicProject[];total:number;page:number;categories:string[] }) {
+-  const c = p(locale).portfolio;
+-  const query=useSearchParams();const router=useRouter();const path=usePathname();
+-  const category=query.get('category')||'';const search=query.get('q')||'';
+-  const filter=(query.get('filter')||'all') as Filter;
+-  function update(values:Record<string,string>){const next=new URLSearchParams(query.toString());for(const [key,value]of Object.entries(values)){if(value)next.set(key,value);else next.delete(key);}if(!('page'in values))next.delete('page');router.push(`${path}?${next}`);}
+-  const setFilter=(filter:Filter)=>update({filter,category:''});
+-  const visible = projects;
+-  const candidates = projects;
+-  const cards = projects;
+-
+-  return (
+-    <section className="section portfolio-content">
+-      <form key={search} className="record-search" onSubmit={e=>{e.preventDefault();update({q:String(new FormData(e.currentTarget).get('q')||'')});}}><label>{locale==='de'?'Suchen':'Search'}<input name="q" defaultValue={search} maxLength={120}/></label><button className="secondary">{locale==='de'?'Suchen':'Search'}</button><label>{locale==='de'?'Kategorie':'Category'}<select value={category} onChange={e=>update({category:e.target.value,filter:'all'})}><option value="">{c.filters.all}</option>{categories.map(cat=><option key={cat} value={cat}>{projectCategoryLabel(cat,locale)}</option>)}</select></label><button className="secondary" type="button" onClick={()=>update({category:'',q:'',filter:''})}>{locale==='de'?'Filter löschen':'Clear filters'}</button></form>
+-      <div className="filter-bar portfolio-filter" role="group" aria-label={c.filters.all}>
+-        {(['all','web','print','pc','design','linux','digital'] as Filter[]).map((key) => {
+-          const Icon = filterIcons[key];
+-          return <button key={key} type="button" aria-pressed={filter === key} className={filter === key ? 'is-active' : ''} onClick={() => setFilter(key)}><Icon aria-hidden="true" size={20} />{key==='print'?projectCategoryLabel('3d-printing',locale):c.filters[key]}</button>;
+-        })}
+-      </div>
+-
+-      {!visible.length ? <div className="empty-state"><Sparkles aria-hidden="true" /><p>{c.empty}</p></div> : null}
+-
+-      {candidates.length ? <FeaturedRotation key={`${filter}:${candidates.map((project) => project.id).join(',')}`} candidates={candidates} locale={locale} /> : null}
+-
+-      {cards.length ? (
+-        <div className="portfolio-grid">
+-          {cards.map((project) => (
+-            <article className="portfolio-card" key={project.id}>
+-              <Link href={`/${locale}/portfolio/${project.slug}`} className="portfolio-card__image"><ProjectImage src={imageFor(project)} alt={translated(project.title, locale)} sizes={portfolioImageSizes} /></Link>
+-              <div className="portfolio-card__body"><h2>{translated(project.title, locale)}</h2><p>{translated(project.summary, locale)}</p><Link href={`/${locale}/portfolio/${project.slug}`}>{c.viewProject}<ArrowRight aria-hidden="true" size={17} /></Link></div>
+-            </article>
+-          ))}
+-        </div>
+-      ) : null}
+-      <nav className="record-pagination" aria-label="Pages"><button className="secondary" aria-label={(interfaceCopy[locale as keyof typeof interfaceCopy] ?? interfaceCopy.en).previous} disabled={page<=1} onClick={()=>update({page:String(page-1)})}>←</button><span>{page} / {Math.max(1,Math.ceil(total/12))}</span><button className="secondary" aria-label={(interfaceCopy[locale as keyof typeof interfaceCopy] ?? interfaceCopy.en).next} disabled={page*12>=total} onClick={()=>update({page:String(page+1)})}>→</button></nav>
+-    </section>
+-  );
+-}
+-
+-function FeaturedRotation({ candidates, locale }: { candidates: PublicProject[]; locale: string }) {
+-  const c = p(locale).portfolio;
+-  const ui = interfaceCopy[locale as keyof typeof interfaceCopy] ?? interfaceCopy.en;
+-  const [index, setIndex] = useState(0);
+-  const featured = candidates[index];
+-  return <div className="featured-rotation" role="region" aria-label={ui.featured}>
+-    <article className="featured-project" aria-live="polite" aria-atomic="true">
+-      <div className="featured-project__copy">
+-        <span>{c.featured}</span><h2>{translated(featured.title, locale)}</h2><p>{translated(featured.summary, locale)}</p>
+-        <Link className="primary" href={`/${locale}/portfolio/${featured.slug}`}>{c.viewCase}<ArrowRight aria-hidden="true" size={18} /></Link>
+-      </div>
+-      <div className="featured-project__image"><ProjectImage src={imageFor(featured)} alt={translated(featured.title, locale)} sizes="(max-width: 900px) calc(100vw - 80px), (max-width: 1248px) 52vw, 655px" /></div>
+-    </article>
+-    {candidates.length > 1 ? <div className="featured-controls">
+-      <button type="button" onClick={() => setIndex((current) => (current + candidates.length - 1) % candidates.length)}>{ui.previous}</button>
+-      <span aria-live="polite">{index + 1} / {candidates.length}</span>
+-      <button type="button" onClick={() => setIndex((current) => (current + 1) % candidates.length)}>{ui.next}</button>
+-    </div> : null}
+-  </div>;
+-}
+--- a/apps/web/app/[locale]/portfolio/page.tsx
++++ b/apps/web/app/[locale]/portfolio/page.tsx
+@@ -36,7 +36,7 @@
+   let result:Awaited<ReturnType<typeof getPublishedPortfolio>>|undefined;
+   try { result=await getPublishedPortfolio(locale,query); }
+   catch { console.error('[PUBLIC_PORTFOLIO_UNAVAILABLE]'); }
+-  if(result)return <PortfolioExplorer locale={locale} {...result}/>;
++  if(result)return <PortfolioExplorer key={locale} locale={locale} {...result}/>;
+   const copy = portfolioStateCopy(locale);
+   return <section className="section portfolio-error" role="alert"><h2>{copy.title}</h2><p>{copy.text}</p><a className="primary" href={`/${locale}/portfolio`}>{copy.retry}</a></section>;
+ }

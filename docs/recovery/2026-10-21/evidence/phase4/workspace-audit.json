@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-21T14:53:36.299Z",
+  "originalTrackedFileHashesVerified": 1171,
+  "allOriginalTrackedFilesUnchanged": true,
+  "phase4EvidenceFilesScanned": 47,
+  "noPreviewConnectionSecretsInEvidence": true,
+  "executionHelpersSyntaxChecks": 8,
+  "noTemporaryTestCopiesRemain": true,
+  "gitDiffCheck": "pass",
+  "applicationSchemaAndMigrationFilesUnchanged": true
+}

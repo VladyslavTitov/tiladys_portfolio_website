@@ -1,0 +1,12 @@
+{
+  "method": "Seven UI saves; wall time from click to persisted success observed by 100ms polling; includes browser protocol and polling overhead.",
+  "milliseconds": [
+    110.68,
+    106.24,
+    104.56,
+    107.7,
+    103.59,
+    107.73,
+    107.34
+  ]
+}

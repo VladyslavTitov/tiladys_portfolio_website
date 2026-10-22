@@ -1,0 +1,366 @@
+[
+  {
+    "id": "A01",
+    "scenario": "Anonymous requests a client, job, invoice, PDF or private file endpoint",
+    "status": "passed (isolated)",
+    "observed": "API anonymous CRM/job/quote/invoice/PDF/session requests return 401 and no-store; browser anonymous task/attachment denied.",
+    "evidence": "tests/rebuild-api.mjs; evidence/api-checks.json"
+  },
+  {
+    "id": "A02",
+    "scenario": "Substitute an attachment ID from a different enquiry",
+    "status": "passed (isolated)",
+    "observed": "Actual authenticated forged enquiry-parent attachment request returns 404.",
+    "evidence": "evidence/api-checks.json"
+  },
+  {
+    "id": "A03",
+    "scenario": "Request draft or archived project media, including resize URLs",
+    "status": "passed (isolated)",
+    "observed": "Archived/withdrawn project original and resize requests deny at both origins; private and withdrawn product media deny.",
+    "evidence": "evidence/api-checks.json; browser results"
+  },
+  {
+    "id": "A04",
+    "scenario": "Submit a cookie-authenticated mutation from an untrusted or missing Origin",
+    "status": "passed (isolated)",
+    "observed": "Missing and foreign Origin mutations return 403 without an accepted task mutation.",
+    "evidence": "evidence/api-checks.json; browser results"
+  },
+  {
+    "id": "A05",
+    "scenario": "Two concurrent issue requests followed by a retry after response loss",
+    "status": "passed (isolated)",
+    "observed": "Concurrent issuance replays one number/checksum/artifact; atomic sequence and stored-byte identity are asserted.",
+    "evidence": "tests/rebuild-integration.test.ts; evidence/api-checks.json"
+  },
+  {
+    "id": "A06",
+    "scenario": "Save a draft concurrently with issuance",
+    "status": "passed (isolated)",
+    "observed": "Concurrent delayed draft save/issue resolves through locking or explicit re-review; post-issue stale save cannot change stored bytes.",
+    "evidence": "evidence/api-checks.json"
+  },
+  {
+    "id": "A07",
+    "scenario": "Concurrent partial payments together exceed the remaining balance",
+    "status": "passed (isolated)",
+    "observed": "Concurrent payments that exceed the remaining exact decimal balance cannot both commit.",
+    "evidence": "tests/rebuild-integration.test.ts"
+  },
+  {
+    "id": "A08",
+    "scenario": "Retry the same payment after response loss",
+    "status": "passed (isolated)",
+    "observed": "Same scoped payment key returns the original identity; changed payload conflicts.",
+    "evidence": "tests/rebuild-integration.test.ts"
+  },
+  {
+    "id": "A09",
+    "scenario": "Edit client, catalogue and bank settings after invoice issuance",
+    "status": "passed (isolated)",
+    "observed": "After client, catalogue and bank edits, actual authenticated PDF download matches original bytes; checksum/number/total unchanged.",
+    "evidence": "evidence/api-checks.json"
+  },
+  {
+    "id": "A10",
+    "scenario": "Preview and issue a short bilingual invoice",
+    "status": "passed (isolated)",
+    "observed": "Draft/final bilingual PDFs extract DE then EN with equal finances; missing translation policy is explicit.",
+    "evidence": "tests/invoice-unicode-pdf.test.ts; evidence/pdfs"
+  },
+  {
+    "id": "A11",
+    "scenario": "Use long German text and one exceptionally long invoice line",
+    "status": "passed (isolated)",
+    "observed": "Long German and exceptionally long descriptions paginate; repeated headers and footer bounds are asserted.",
+    "evidence": "tests/invoice-unicode-pdf.test.ts"
+  },
+  {
+    "id": "A12",
+    "scenario": "Deploy the German-first renderer with historical issued PDFs",
+    "status": "passed (isolated)",
+    "observed": "All 23 migrations preserve the synthetic historical version-2 PDF bytes/checksum/number/version/sequence. New renderer is version 3.",
+    "evidence": "evidence/legacy-migration.json"
+  },
+  {
+    "id": "A13",
+    "scenario": "Issue with unconfirmed tax settings or missing required translations",
+    "status": "passed (isolated)",
+    "observed": "Unknown tax or missing required German copy rejects issuance without a legal number; VAT ID cannot substitute tax choice.",
+    "evidence": "tests/rebuild-integration.test.ts; tests/bilingual-validation.test.ts"
+  },
+  {
+    "id": "A14",
+    "scenario": "Upload a spoofed image signature or excessive pixel dimensions",
+    "status": "passed (isolated)",
+    "observed": "Spoofed signatures, unsupported/corrupt images and excessive decoded dimensions reject; accepted images are re-encoded/metadata-stripped.",
+    "evidence": "tests/contact-images.test.ts; npm test log"
+  },
+  {
+    "id": "A15",
+    "scenario": "Finalize another actor's reservation or an oversized stored object",
+    "status": "partial",
+    "observed": "Wrong capability/purpose/expiry/repeated claims and changed-byte protection are exercised; stored reads are stat-bounded. Oversized stored-object injection and production provider identity are not separately exercised.",
+    "evidence": "tests/rebuild-integration.test.ts; apps/web/lib/upload-reservations.ts"
+  },
+  {
+    "id": "A16",
+    "scenario": "Put SQL and HTML payloads in messages, names, filters and filenames",
+    "status": "partial",
+    "observed": "Actual HTML/SQL-like enquiry payload remains exact stored data and is escaped in server-rendered private inbox; parameterized search and image filename stripping are covered separately. An exhaustive browser payload matrix over every filter/name/file path is not claimed.",
+    "evidence": "evidence/api-checks.json; tests/contact-images.test.ts"
+  },
+  {
+    "id": "A17",
+    "scenario": "Restore an isolated database and matching object backup",
+    "status": "passed (isolated)",
+    "observed": "A separate final restore matches all 38 public-table row fingerprints and all indexes. Both local object roots restore 23 files with exact SHA-256 bytes; all 23 accepted media keys have restored bytes. Source was not overwritten; productionBackupVerified remains false.",
+    "evidence": "evidence/database-restore.json; evidence/recovery-final.json"
+  },
+  {
+    "id": "A18",
+    "scenario": "Submit English, Ukrainian and Russian messages with newlines and emoji",
+    "status": "passed (isolated)",
+    "observed": "EN/UK/RU/DE newline/emoji/edge-space messages retain exact database text; private inbox renders original text, without automatic translation.",
+    "evidence": "tests/rebuild-browser.mjs; tests/rebuild-domain.test.ts"
+  },
+  {
+    "id": "A19",
+    "scenario": "Upload three 5MiB photos, one 5MiB+1-byte file and a 15MiB+1-byte total",
+    "status": "passed (isolated)",
+    "observed": "Three real valid 5MiB PNGs process/finalize at 15MiB; 5MiB+1 and total 15MiB+1 metadata reject, one racing claim succeeds.",
+    "evidence": "tests/rebuild-integration.test.ts"
+  },
+  {
+    "id": "A20",
+    "scenario": "Select HEIC, a corrupt image and a large phone photo on weak network",
+    "status": "partial",
+    "observed": "Unsupported HEIC/corrupt input has rejection guidance; bounded signature/decoder tests pass. Full weak-network phone/HEIC-conversion UX and production worker are unverified/unavailable.",
+    "evidence": "tests/contact-images.test.ts; ContactForm.tsx"
+  },
+  {
+    "id": "A21",
+    "scenario": "Double-click Send and lose the acknowledgement response",
+    "status": "passed (isolated)",
+    "observed": "The real browser loses an actual persisted 201 photo acknowledgement, then retries the same receipt: one photo PUT, one enquiry, exact original text and private attachment. Concurrent server claim/idempotency tests separately pass.",
+    "evidence": "tests/rebuild-browser.mjs; evidence/browser/results.json"
+  },
+  {
+    "id": "A22",
+    "scenario": "Persist an enquiry but fail to send the acknowledgement email",
+    "status": "partial",
+    "observed": "Persistence precedes receipt; durable acknowledgement reservation and unknown SMTP states are implemented. Tests use synthetic send callbacks/local disabled mail, not an end-to-end real acknowledgement SMTP sink failure.",
+    "evidence": "packages/db/src/outbox.ts; tests/rebuild-integration.test.ts; tests/contact-route.test.ts"
+  },
+  {
+    "id": "A23",
+    "scenario": "SMTP accepts a reply but recording its result fails",
+    "status": "passed (isolated)",
+    "observed": "Synthetic SMTP acceptance followed by record callback failure yields RECORD_FAILED; retry neither sends nor records again. No real recipient mail was used.",
+    "evidence": "tests/rebuild-integration.test.ts"
+  },
+  {
+    "id": "A24",
+    "scenario": "Use the same email for a household or several company contacts",
+    "status": "passed (isolated)",
+    "observed": "Two actual API client creations with a shared household email persist separate IDs; bounded lookup returns both for deliberate review. No auto-merge.",
+    "evidence": "evidence/api-checks.json"
+  },
+  {
+    "id": "A25",
+    "scenario": "Expire a session while editing a private draft",
+    "status": "partial",
+    "observed": "Expired/revoked credentials cannot mutate; 401 feedback retains newer editor input. Full reauthentication and stale recheck from an actively edited browser draft across all retained editors is not exercised.",
+    "evidence": "evidence/api-checks.json; record-workbench.tsx"
+  },
+  {
+    "id": "A26",
+    "scenario": "Edit the same draft in two browser tabs",
+    "status": "partial",
+    "observed": "Stale catalogue/project/task/invoice/quote versions reject and several concurrent requests are tested. Two interactive browser tabs with unsaved editor recovery are not separately exercised.",
+    "evidence": "tests/rebuild-integration.test.ts; evidence/api-checks.json"
+  },
+  {
+    "id": "A27",
+    "scenario": "Create clients, jobs and invoices concurrently at Berlin New Year",
+    "status": "passed (isolated)",
+    "observed": "Six concurrent allocations per scope on both sides of Berlin New Year remain unique in CUSTOMER/SERVICE_JOB/INVOICE; concurrent household API creation also succeeds.",
+    "evidence": "tests/rebuild-integration.test.ts; evidence/api-checks.json"
+  },
+  {
+    "id": "A28",
+    "scenario": "Select FROM, PERCENTAGE or MONTHLY catalogue pricing",
+    "status": "passed (isolated)",
+    "observed": "FROM/PERCENTAGE/MONTHLY need explicit agreement; monthly also needs ordered period; decimal calculation never creates recurring charges.",
+    "evidence": "tests/rebuild-domain.test.ts; tests/bilingual-validation.test.ts"
+  },
+  {
+    "id": "A29",
+    "scenario": "Accept an old or expired quote revision and retry conversion",
+    "status": "partial",
+    "observed": "Wrong/stale acceptance revision rejects; conversion/invoice retries bind one immutable exact revision. Past-expiry acceptance guard exists but an elapsed-time HTTP case is not separately executed.",
+    "evidence": "tests/rebuild-integration.test.ts; rebuild-domain.ts"
+  },
+  {
+    "id": "A30",
+    "scenario": "Attach an invoice to a job belonging to another client",
+    "status": "passed (isolated)",
+    "observed": "Actual invoice PATCH attempting a different client/job pair returns INVALID_INVOICE_RELATIONSHIP and preserves its original client. Task wrong-client job relations also reject in the database suite.",
+    "evidence": "tests/rebuild-integration.test.ts; invoice and business relation guards"
+  },
+  {
+    "id": "A31",
+    "scenario": "Rename a published project slug several times",
+    "status": "passed (isolated)",
+    "observed": "Actual published project renamed twice; both prior slugs return one-hop 308 to final canonical. Product aliases/withdrawal also exercised.",
+    "evidence": "tests/rebuild-api.mjs; evidence/api-checks.json; tests/portfolio-seo.test.ts"
+  },
+  {
+    "id": "A32",
+    "scenario": "Use a missing translation or a legacy ua language alias",
+    "status": "partial",
+    "observed": "Metadata includes only actual translated project/product counterparts; six locales and uk are retained, missing equivalents go to catalogue. Full legacy ua HTTP redirect/SEO matrix is not separately exercised.",
+    "evidence": "tests/portfolio-seo.test.ts; public browser routes; project-seo.ts"
+  },
+  {
+    "id": "A33",
+    "scenario": "Inspect the footer on desktop, tablet, phone and at 200% zoom",
+    "status": "partial",
+    "observed": "Five real footer columns/asserted sections at seven widths; production screenshots and 720px zoom-equivalent reflow pass. Actual browser 200% zoom/social-link/content manual review is not certified.",
+    "evidence": "evidence/browser; evidence/lab/results.json"
+  },
+  {
+    "id": "A34",
+    "scenario": "Open, scroll and close the phone menu using keyboard and navigation",
+    "status": "partial",
+    "observed": "Native phone menu opens below header and Escape restores trigger focus; source implements scroll lock/focus loop. Full scroll/Tab/navigation assistive-technology sequence remains manual.",
+    "evidence": "tests/rebuild-browser.mjs; Header.tsx"
+  },
+  {
+    "id": "A35",
+    "scenario": "Compare an empty list with a database outage",
+    "status": "partial",
+    "observed": "Unit/handler tests distinguish successful empty, failed and malformed responses; actual UI has loading/error/retry states. No whole-server database-outage injection was performed.",
+    "evidence": "tests/portfolio-seo.test.ts; tests/contact-route.test.ts"
+  },
+  {
+    "id": "A36",
+    "scenario": "Upload invalid STL, enormous mesh, archive or G-code",
+    "status": "blocked",
+    "observed": "Private model/file processing provider and bounded mesh validation worker are not configured/implemented as a production flow; STL/archive/G-code uploads remain unavailable.",
+    "evidence": "Launch-decisions.md; job-brief-editor.tsx"
+  },
+  {
+    "id": "A37",
+    "scenario": "Let provider restore history expire without an independent backup",
+    "status": "blocked",
+    "observed": "Production backup provider, independent retention and restore history are not provisioned or verified. A local synthetic restore does not satisfy this requirement.",
+    "evidence": "Migration-and-recovery.md; Launch-decisions.md"
+  },
+  {
+    "id": "A38",
+    "scenario": "Build both applications with deployed Node 24 and the actual lockfile",
+    "status": "passed (local build)",
+    "observed": "Both apps build with Node 24.21.0 and the actual npm lockfile; final Control changes have a separate successful build. No hosted deployment assertion.",
+    "evidence": "evidence/checks/build-final.log; evidence/checks/build-control-final.log"
+  },
+  {
+    "id": "A39",
+    "scenario": "Create a portfolio draft from a completed job containing private notes",
+    "status": "passed (isolated)",
+    "observed": "Completed private job containing a unique confidential marker creates one replay-safe DRAFT from reviewed public text, no images/private notes copied, public detail 404.",
+    "evidence": "evidence/api-checks.json"
+  },
+  {
+    "id": "A40",
+    "scenario": "Exercise rate limits across replicas and behind a shared public IP",
+    "status": "partial",
+    "observed": "Shared database rate-counter concurrency and untrusted forwarded-IP fallback tests pass; actual distributed replicas/shared-NAT load testing and provider proxy verification remain release checks.",
+    "evidence": "tests/contact-security.test.ts; login-limit.ts"
+  },
+  {
+    "id": "A41",
+    "scenario": "Open an unavailable template preview or purchase listing",
+    "status": "partial",
+    "observed": "Unpublished/unavailable catalogue products expose factual unavailable/contact behavior, validated external URLs and no invented checkout. Actual external merchant availability/failure remains provider/content-dependent.",
+    "evidence": "public browser catalogue routes; tests/rebuild-domain.test.ts"
+  },
+  {
+    "id": "A42",
+    "scenario": "Schedule an appointment in an ambiguous or nonexistent local DST time",
+    "status": "passed (isolated)",
+    "observed": "Browser explicitly selects the second repeated Europe/Berlin 02:30 occurrence, persists 01:30Z and the IANA zone, then finds that same UTC instant in the calendar. Domain tests separately reject a nonexistent DST time.",
+    "evidence": "tests/rebuild-domain.test.ts; tests/rebuild-browser.mjs"
+  },
+  {
+    "id": "A43",
+    "scenario": "Moderate a review with private photos and malicious text",
+    "status": "conditional / unavailable",
+    "observed": "Reviews/moderation are disabled, with no invented customer evidence or public private-photo path. Enabling requires a separate implemented consent/moderation flow.",
+    "evidence": "Launch-decisions.md; settings capabilities"
+  },
+  {
+    "id": "A44",
+    "scenario": "Report invoices issued in a different period from their payments, with mixed currencies",
+    "status": "conditional / unavailable",
+    "observed": "Reports/expenses and profit are unavailable; dashboard balances use exact decimal totals per currency rather than inventing mixed-currency profit.",
+    "evidence": "Launch-decisions.md; dashboard/page.tsx"
+  },
+  {
+    "id": "A45",
+    "scenario": "Export CSV containing formula payloads and a large file archive",
+    "status": "passed subset; file archive blocked",
+    "observed": "Actual CSV formula payload is neutralized; owner/session scope and expiry deny unauthorized downloads. The bounded 1000-row CSV export is real; large uploaded-file archive remains unavailable without a worker/inventory.",
+    "evidence": "evidence/api-checks.json; tests/rebuild-browser.mjs"
+  },
+  {
+    "id": "A46",
+    "scenario": "Compare 20% markup with 20% margin and convert grams to kilograms",
+    "status": "passed (isolated)",
+    "observed": "Decimal grams/kg cost conversion and distinct 20% markup versus 20% margin are asserted (18 versus 18.75 for base 15).",
+    "evidence": "tests/rebuild-domain.test.ts"
+  },
+  {
+    "id": "A47",
+    "scenario": "Use keyboard, screen reader, zoom and reduced-motion preferences",
+    "status": "partial",
+    "observed": "Visible focus, menu Escape, labels and production accessibility-tree names/reduced motion/reflow are checked. Manual screen reader, full keyboard flow, real zoom and complete WCAG 2.2 AA audit remain outstanding.",
+    "evidence": "evidence/browser; evidence/lab/results.json"
+  },
+  {
+    "id": "A48",
+    "scenario": "Load realistic public media on a phone",
+    "status": "passed local sample; field unverified",
+    "observed": "Production build on synthetic media: cold-browser-cache mobile 1.6Mbps/150ms/4x CPU sample LCP 1512ms, CLS 0, resource transfer 328716 bytes. One local sample; actual owner media, deployment latency and field INP/Core Web Vitals are unverified.",
+    "evidence": "evidence/lab/results.json"
+  },
+  {
+    "id": "A49",
+    "scenario": "Observe Neon managed-auth tables while custom login is active",
+    "status": "passed (local boundary)",
+    "observed": "Existing password plus secret-phrase login/session ownership is exercised; custom identity remains, no public registration or managed-auth migration introduced. No production auth table reads.",
+    "evidence": "evidence/api-checks.json; migration SQL"
+  },
+  {
+    "id": "A50",
+    "scenario": "Inspect browser bundles, exports and diagnostic logs",
+    "status": "partial",
+    "observed": "Exact known secret/synthetic credential scan has no matches in client bundles/implementation docs; safe lookup/export scope and redacted route errors tested. Unknown secret formats and complete production diagnostics are outside this local scan.",
+    "evidence": "evidence/client-secret-scan.json; tests/contact-route.test.ts; evidence/api-checks.json"
+  },
+  {
+    "id": "A51",
+    "scenario": "Request invoice cancellation when payments already exist",
+    "status": "conditional / unavailable",
+    "observed": "Correction/cancellation is deliberately unavailable; no issued status rewrite or fictitious payment reversal. Approved accounting workflow/artifact/ledger semantics are a separate dependency.",
+    "evidence": "Launch-decisions.md"
+  },
+  {
+    "id": "A52",
+    "scenario": "Download an issued invoice whose original PDF bytes are missing",
+    "status": "passed (isolated)",
+    "observed": "Missing issued original PDF returns 409 ISSUED_PDF_MISSING and is never regenerated from mutable current data; test restores original synthetic bytes.",
+    "evidence": "evidence/api-checks.json"
+  }
+]

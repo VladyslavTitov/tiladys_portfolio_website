@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "SMTP-01: reviewed UI reply reaches local TLS sink and marks only the synthetic enquiry REPLIED.",
+    "SMTP-02: identical request replay returns success without another SMTP delivery or reply audit record.",
+    "SMTP-03: outbox acceptance and persisted reply agree; relay rejects all non-example.test recipients."
+  ],
+  "provider": "loopback-only STARTTLS sink; test self-signed CA trusted only by QA child process; real provider delivery not tested"
+}

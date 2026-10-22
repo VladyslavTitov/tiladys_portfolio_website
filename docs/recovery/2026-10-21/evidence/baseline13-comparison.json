@@ -1,0 +1,124 @@
+{
+  "target": {
+    "projectId": "plain-sound-02437622",
+    "branchId": "br-winter-haze-b19z750x",
+    "parentId": "br-delicate-block-b19w0iqs",
+    "endpointId": "ep-morning-queen-b11zgtsf",
+    "host": "ep-morning-queen-b11zgtsf.c-5.eu-central-1.aws.neon.tech",
+    "parentLsn": "0/1DDE4C8",
+    "parentTimestamp": "2026-10-21T11:17:06Z"
+  },
+  "matched": [
+    "tables",
+    "columns (types, defaults, nullability, precision)",
+    "enum values and order",
+    "constraints and validation",
+    "index definitions including partial unique indexes"
+  ],
+  "tables": 25,
+  "columns": 331,
+  "constraints": 244,
+  "indexes": 64,
+  "counts": [
+    {
+      "table": "AdminUser",
+      "count": "0"
+    },
+    {
+      "table": "AuditLog",
+      "count": "0"
+    },
+    {
+      "table": "BusinessBillingSettings",
+      "count": "0"
+    },
+    {
+      "table": "Company",
+      "count": "0"
+    },
+    {
+      "table": "ContactAttachment",
+      "count": "0"
+    },
+    {
+      "table": "ContactMessage",
+      "count": "0"
+    },
+    {
+      "table": "ContactRateLimit",
+      "count": "0"
+    },
+    {
+      "table": "Customer",
+      "count": "0"
+    },
+    {
+      "table": "CustomerActivity",
+      "count": "0"
+    },
+    {
+      "table": "CustomerNote",
+      "count": "0"
+    },
+    {
+      "table": "FileAsset",
+      "count": "0"
+    },
+    {
+      "table": "Invoice",
+      "count": "0"
+    },
+    {
+      "table": "InvoiceLine",
+      "count": "0"
+    },
+    {
+      "table": "InvoicePayment",
+      "count": "0"
+    },
+    {
+      "table": "NumberSequence",
+      "count": "3"
+    },
+    {
+      "table": "PriceItem",
+      "count": "0"
+    },
+    {
+      "table": "PriceSection",
+      "count": "0"
+    },
+    {
+      "table": "Project",
+      "count": "0"
+    },
+    {
+      "table": "ProjectImage",
+      "count": "0"
+    },
+    {
+      "table": "ProjectSlugAlias",
+      "count": "0"
+    },
+    {
+      "table": "ServiceJob",
+      "count": "0"
+    },
+    {
+      "table": "ServiceJobLineItem",
+      "count": "0"
+    },
+    {
+      "table": "Session",
+      "count": "0"
+    },
+    {
+      "table": "VisitorDay",
+      "count": "0"
+    },
+    {
+      "table": "_prisma_migrations",
+      "count": "13"
+    }
+  ]
+}

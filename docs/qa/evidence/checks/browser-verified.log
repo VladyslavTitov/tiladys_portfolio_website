@@ -1,0 +1,34 @@
+Geometry public 320: 16 cases
+Geometry public 375: 32 cases
+Geometry public 390: 48 cases
+Geometry public 430: 64 cases
+Geometry public 768: 80 cases
+Geometry public 1024: 96 cases
+Geometry public 1280: 112 cases
+Geometry public 1440: 128 cases
+Geometry public 1920: 144 cases
+Geometry public 2560: 160 cases
+Geometry control 320: 172 cases
+Geometry control 375: 184 cases
+Geometry control 390: 196 cases
+Geometry control 430: 208 cases
+Geometry control 768: 220 cases
+Geometry control 1024: 232 cases
+Geometry control 1280: 244 cases
+Geometry control 1440: 256 cases
+Geometry control 1920: 268 cases
+Geometry control 2560: 280 cases
+{
+  "cases": 376,
+  "geometryFailures": 0,
+  "errors": [],
+  "network": [],
+  "axeCases": 56,
+  "axeViolations": 0,
+  "checks": [
+    "AUTH-UI: real credential form reaches authenticated dashboard; no session seeding.",
+    "REFLOW: 1440→720 (200%) and 1280→320 (400%) CSS equivalents plus short-height portrait/landscape; this is not OS-level browser zoom.",
+    "KEYBOARD: mobile menu Enter/Escape focus return; debounced search, Tab/Enter clear and focus retention.",
+    "AUTH-UI logout: real session revoked; protected navigation returns login."
+  ]
+}

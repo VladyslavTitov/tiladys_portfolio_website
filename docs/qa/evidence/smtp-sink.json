@@ -1,0 +1,24 @@
+{
+  "loopbackOnly": true,
+  "relay": false,
+  "messages": [
+    {
+      "recipients": [
+        "qa-smtp-cb0d1216-10f3-48e6-b365-925c3cf2e428@example.test"
+      ],
+      "bytes": 534,
+      "sha256": "2c386bd7836b463ab97ea0955ff22964d0150b08f633133252326d678f33f528",
+      "tls": true,
+      "reply": true
+    },
+    {
+      "recipients": [
+        "qa-smtp-bddb8ee8-2080-4846-9155-5cf99c8ec1a0@example.test"
+      ],
+      "bytes": 534,
+      "sha256": "cd4152e2418e07ff24f196f3f0495f5997398954a16c4712a0382cd1a0202568",
+      "tls": true,
+      "reply": true
+    }
+  ]
+}

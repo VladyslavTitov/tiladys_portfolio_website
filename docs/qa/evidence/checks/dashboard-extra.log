@@ -1,0 +1,20 @@
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: POST /estimate
+
+400 !== 422
+
+    at req (file:///home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/tests/qa-dashboard.playwright.mjs:6:170)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/tests/qa-dashboard.playwright.mjs:11:325 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 400,
+  expected: 422,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.23.1

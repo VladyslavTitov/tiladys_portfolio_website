@@ -1,0 +1,27 @@
+import Link from 'next/link';
+import { SocialLinks } from './SocialLinks';
+import { Shell } from './Shell';
+import content from '@/content/legal.json';
+import { t } from '@/lib/i18n';
+import { business } from '@/lib/business';
+export type LegalKind = 'impressum' | 'privacy' | 'terms';
+export function legalCopy(locale: string) { return content[locale as keyof typeof content] ?? content.en; }
+export function LegalPage({ locale, title, kind }: { locale: string; title: string; kind: LegalKind }) {
+  const c = legalCopy(locale);
+  return <Shell locale={locale}>
+    <section className="page-hero"><h1>{title}</h1></section>
+    <div className="section legal-content"><nav aria-label={locale==='de'?'Inhaltsverzeichnis':'Contents'}>{kind==='privacy'?c.privacySections.map(([heading],index)=><p key={heading}><a href={`#legal-section-${index}`}>{heading}</a></p>):null}<a href="#legal-contact">{c.contact}</a></nav>
+      {kind === 'impressum' ? <section><p>{c.operator}</p></section> : null}
+      {kind === 'privacy' ? <>{c.privacySections.map(([heading, text],index) => <section id={`legal-section-${index}`} key={heading}><h2>{heading}</h2><p>{text}</p></section>)}
+        {process.env.CONTACT_UPLOADS_ENABLED === 'true' ? <section><h2>{c.attachmentsTitle}</h2><p>{c.attachments}</p></section> : null}</> : null}
+      {kind === 'terms' ? <section><h2>{c.processTitle}</h2><p>{c.process}</p></section> : null}
+      <section id="legal-contact"><h2>{c.contact}</h2><address>{c.operator}<br />{t(locale).footer.location}<br /><a href={`mailto:${business.email}`}>{business.email}</a><br /><a href={`tel:${business.telephone}`}>{business.phone}</a></address></section>
+      <section><p>{c.socialText}</p><div className="legal-social-links"><SocialLinks /></div>
+        <nav className="actions" aria-label={t(locale).footer.linksTitle}>
+          <Link className="secondary" href={`/${locale}/services`}>{t(locale).nav[1]}</Link>
+          <Link className="secondary" href={`/${locale}/portfolio`}>{t(locale).nav[2]}</Link>
+        </nav>
+      </section>
+    </div>
+  </Shell>;
+}

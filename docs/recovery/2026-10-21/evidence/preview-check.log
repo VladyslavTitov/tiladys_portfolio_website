@@ -1,0 +1,5 @@
+
+> db:check:crm
+> node scripts/check-crm-schema.mjs
+
+Release blocked: migration history or database schema is incompatible. Review and apply required migrations through the recovery process before releasing.

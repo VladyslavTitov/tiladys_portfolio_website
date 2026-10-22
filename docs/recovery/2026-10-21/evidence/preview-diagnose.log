@@ -1,0 +1,275 @@
+
+> db:diagnose
+> node scripts/diagnose-production-schema.mjs
+
+{
+  "ledgerAvailable": true,
+  "migrations": [
+    {
+      "name": "20260725212133_init",
+      "state": "verified"
+    },
+    {
+      "name": "20260727160000_portfolio_images_and_fields",
+      "state": "verified"
+    },
+    {
+      "name": "20260904120000_rename_new_message_status_to_unread",
+      "state": "verified"
+    },
+    {
+      "name": "20260920120000_private_contact_attachments",
+      "state": "verified"
+    },
+    {
+      "name": "20260921100000_remove_project_featured",
+      "state": "verified"
+    },
+    {
+      "name": "20260921101000_project_seo_and_slug_history",
+      "state": "verified"
+    },
+    {
+      "name": "20260922110000_crm_service_jobs",
+      "state": "verified"
+    },
+    {
+      "name": "20260922150000_service_job_line_items",
+      "state": "verified"
+    },
+    {
+      "name": "20260922170000_invoices",
+      "state": "verified"
+    },
+    {
+      "name": "20260922230000_unique_draft_per_service_job",
+      "state": "verified"
+    },
+    {
+      "name": "20260923140000_invoice_billing_recipient",
+      "state": "verified"
+    },
+    {
+      "name": "20260927150000_bilingual_invoice_snapshots",
+      "state": "verified"
+    },
+    {
+      "name": "20260927151000_project_image_schema_guard",
+      "state": "verified"
+    },
+    {
+      "name": "20261013210000_rebuild_core",
+      "state": "absent"
+    },
+    {
+      "name": "20261013220000_mail_outbox",
+      "state": "absent"
+    },
+    {
+      "name": "20261013223000_quote_invoice_source",
+      "state": "absent"
+    },
+    {
+      "name": "20261013230000_enquiry_detail",
+      "state": "absent"
+    },
+    {
+      "name": "20261013233000_structured_catalogue",
+      "state": "absent"
+    },
+    {
+      "name": "20261014003000_private_exports",
+      "state": "absent"
+    },
+    {
+      "name": "20261014010000_editor_retention",
+      "state": "absent"
+    },
+    {
+      "name": "20261014013000_quote_expiry_reason",
+      "state": "absent"
+    },
+    {
+      "name": "20261014020000_task_timezone",
+      "state": "absent"
+    },
+    {
+      "name": "20261014023000_curation_unit_text",
+      "state": "absent"
+    }
+  ],
+  "unexpectedLedgerRecords": 0,
+  "missingColumns": [
+    "Project.homepageFeatured",
+    "ProjectImage.archivedAt",
+    "PriceSection.updatedAt",
+    "PriceItem.unitTranslations",
+    "PriceItem.priceMode",
+    "PriceItem.unitPrice",
+    "PriceItem.unit",
+    "PriceItem.currency",
+    "ServiceJob.brief",
+    "ServiceJob.dueAt",
+    "ServiceJob.revision",
+    "Invoice.quoteRevisionId",
+    "InvoicePayment.idempotencyKey",
+    "InvoicePayment.payloadHash",
+    "ContactMessage.customerId",
+    "ContactMessage.requestDetail",
+    "ContactMessage.requestMode",
+    "ContactMessage.replyLanguage",
+    "ContactMessage.publicReference",
+    "Quote.stateReason",
+    "Quote.id",
+    "Quote.quoteNumber",
+    "Quote.customerId",
+    "Quote.title",
+    "Quote.status",
+    "Quote.revision",
+    "Quote.draft",
+    "Quote.acceptedRevisionId",
+    "Quote.serviceJobId",
+    "Quote.acceptedAt",
+    "Quote.acceptanceSource",
+    "Quote.acceptanceReference",
+    "Quote.createdAt",
+    "Quote.updatedAt",
+    "QuoteRevision.id",
+    "QuoteRevision.quoteId",
+    "QuoteRevision.number",
+    "QuoteRevision.snapshot",
+    "QuoteRevision.validUntil",
+    "QuoteRevision.recordedById",
+    "QuoteRevision.createdAt",
+    "Product.id",
+    "Product.slug",
+    "Product.type",
+    "Product.status",
+    "Product.title",
+    "Product.description",
+    "Product.included",
+    "Product.license",
+    "Product.price",
+    "Product.currency",
+    "Product.priceConfirmed",
+    "Product.demoUrl",
+    "Product.purchaseUrl",
+    "Product.available",
+    "Product.rightsConfirmed",
+    "Product.revision",
+    "Product.sortOrder",
+    "Product.createdAt",
+    "Product.updatedAt",
+    "ProductImage.id",
+    "ProductImage.productId",
+    "ProductImage.filename",
+    "ProductImage.mimeType",
+    "ProductImage.size",
+    "ProductImage.data",
+    "ProductImage.alt",
+    "ProductImage.sortOrder",
+    "ProductImage.createdAt",
+    "ProductAlias.id",
+    "ProductAlias.slug",
+    "ProductAlias.productId",
+    "ProductAlias.createdAt",
+    "Task.timeZone",
+    "Task.id",
+    "Task.title",
+    "Task.description",
+    "Task.status",
+    "Task.priority",
+    "Task.dueAt",
+    "Task.customerId",
+    "Task.serviceJobId",
+    "Task.revision",
+    "Task.createdById",
+    "Task.createdAt",
+    "Task.updatedAt",
+    "EnquiryNote.id",
+    "EnquiryNote.messageId",
+    "EnquiryNote.body",
+    "EnquiryNote.createdById",
+    "EnquiryNote.createdAt",
+    "IdempotencyRecord.scope",
+    "IdempotencyRecord.key",
+    "IdempotencyRecord.payloadHash",
+    "IdempotencyRecord.resultId",
+    "IdempotencyRecord.createdAt",
+    "UploadReservation.id",
+    "UploadReservation.capabilityHash",
+    "UploadReservation.purpose",
+    "UploadReservation.expiresAt",
+    "UploadReservation.claimedAt",
+    "UploadReservation.createdAt",
+    "MediaObject.id",
+    "MediaObject.reservationId",
+    "MediaObject.storageKey",
+    "MediaObject.filename",
+    "MediaObject.mimeType",
+    "MediaObject.sourceBytes",
+    "MediaObject.checksum",
+    "MediaObject.accepted",
+    "MediaObject.createdAt",
+    "EmailOutbox.id",
+    "EmailOutbox.scope",
+    "EmailOutbox.key",
+    "EmailOutbox.payloadHash",
+    "EmailOutbox.state",
+    "EmailOutbox.createdAt",
+    "EmailOutbox.updatedAt",
+    "DeliveryAttempt.id",
+    "DeliveryAttempt.outboxId",
+    "DeliveryAttempt.outcome",
+    "DeliveryAttempt.createdAt",
+    "ExportArtifact.id",
+    "ExportArtifact.tokenHash",
+    "ExportArtifact.scope",
+    "ExportArtifact.filename",
+    "ExportArtifact.data",
+    "ExportArtifact.createdById",
+    "ExportArtifact.expiresAt",
+    "ExportArtifact.createdAt"
+  ],
+  "missingEnumValues": [
+    "QuoteStatus.EXPIRED",
+    "QuoteStatus.DRAFT",
+    "QuoteStatus.SENT",
+    "QuoteStatus.ACCEPTED",
+    "QuoteStatus.DECLINED",
+    "QuoteStatus.ARCHIVED",
+    "ProductType.FRAMER_TEMPLATE",
+    "ProductType.MODEL_3D",
+    "TaskStatus.TODO",
+    "TaskStatus.IN_PROGRESS",
+    "TaskStatus.DONE",
+    "TaskStatus.ARCHIVED"
+  ],
+  "counts": {
+    "Project": {
+      "total": "0",
+      "byStatus": {}
+    },
+    "ContactMessage": {
+      "total": "0",
+      "byStatus": {}
+    },
+    "Customer": {
+      "total": "0"
+    },
+    "ServiceJob": {
+      "total": "0"
+    },
+    "Invoice": {
+      "total": "0"
+    },
+    "ProjectImage": {
+      "total": "0"
+    },
+    "ContactAttachment": {
+      "total": "0"
+    }
+  },
+  "assessment": "A candidate: pending migrations; exclude C/E/F through schema/target review before mutation",
+  "productionTargetVerified": false
+}

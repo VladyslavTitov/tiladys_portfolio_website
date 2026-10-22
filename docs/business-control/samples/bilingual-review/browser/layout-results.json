@@ -1,0 +1,254 @@
+[
+  {
+    "name": "customer",
+    "width": 360,
+    "viewport": 360,
+    "scroll": 345,
+    "content": 919,
+    "overlay": false,
+    "path": "/dashboard/customers/cmujry97x0005ko7tgz0ho6o8"
+  },
+  {
+    "name": "company",
+    "width": 360,
+    "viewport": 360,
+    "scroll": 345,
+    "content": 537,
+    "overlay": false,
+    "path": "/dashboard/companies/cmujry97u0003ko7t2xpl5tbf"
+  },
+  {
+    "name": "job",
+    "width": 360,
+    "viewport": 360,
+    "scroll": 345,
+    "content": 1736,
+    "overlay": false,
+    "path": "/dashboard/service-jobs"
+  },
+  {
+    "name": "home",
+    "width": 360,
+    "viewport": 360,
+    "scroll": 345,
+    "content": 1991,
+    "overlay": false,
+    "path": "/en"
+  },
+  {
+    "name": "services",
+    "width": 360,
+    "viewport": 360,
+    "scroll": 345,
+    "content": 1935,
+    "overlay": false,
+    "path": "/en/services"
+  },
+  {
+    "name": "portfolio",
+    "width": 360,
+    "viewport": 360,
+    "scroll": 345,
+    "content": 1045,
+    "overlay": false,
+    "path": "/en/portfolio"
+  },
+  {
+    "name": "project",
+    "width": 360,
+    "viewport": 360,
+    "scroll": 345,
+    "content": 713,
+    "overlay": false,
+    "path": "/en/portfolio/synthetic-review"
+  },
+  {
+    "name": "customer",
+    "width": 390,
+    "viewport": 390,
+    "scroll": 375,
+    "content": 919,
+    "overlay": false,
+    "path": "/dashboard/customers/cmujry97x0005ko7tgz0ho6o8"
+  },
+  {
+    "name": "company",
+    "width": 390,
+    "viewport": 390,
+    "scroll": 375,
+    "content": 537,
+    "overlay": false,
+    "path": "/dashboard/companies/cmujry97u0003ko7t2xpl5tbf"
+  },
+  {
+    "name": "job",
+    "width": 390,
+    "viewport": 390,
+    "scroll": 375,
+    "content": 1736,
+    "overlay": false,
+    "path": "/dashboard/service-jobs"
+  },
+  {
+    "name": "home",
+    "width": 390,
+    "viewport": 390,
+    "scroll": 375,
+    "content": 1991,
+    "overlay": false,
+    "path": "/en"
+  },
+  {
+    "name": "services",
+    "width": 390,
+    "viewport": 390,
+    "scroll": 375,
+    "content": 1935,
+    "overlay": false,
+    "path": "/en/services"
+  },
+  {
+    "name": "portfolio",
+    "width": 390,
+    "viewport": 390,
+    "scroll": 375,
+    "content": 1045,
+    "overlay": false,
+    "path": "/en/portfolio"
+  },
+  {
+    "name": "project",
+    "width": 390,
+    "viewport": 390,
+    "scroll": 375,
+    "content": 713,
+    "overlay": false,
+    "path": "/en/portfolio/synthetic-review"
+  },
+  {
+    "name": "customer",
+    "width": 768,
+    "viewport": 768,
+    "scroll": 753,
+    "content": 919,
+    "overlay": false,
+    "path": "/dashboard/customers/cmujry97x0005ko7tgz0ho6o8"
+  },
+  {
+    "name": "company",
+    "width": 768,
+    "viewport": 768,
+    "scroll": 753,
+    "content": 537,
+    "overlay": false,
+    "path": "/dashboard/companies/cmujry97u0003ko7t2xpl5tbf"
+  },
+  {
+    "name": "job",
+    "width": 768,
+    "viewport": 768,
+    "scroll": 753,
+    "content": 1736,
+    "overlay": false,
+    "path": "/dashboard/service-jobs"
+  },
+  {
+    "name": "home",
+    "width": 768,
+    "viewport": 768,
+    "scroll": 753,
+    "content": 1991,
+    "overlay": false,
+    "path": "/en"
+  },
+  {
+    "name": "services",
+    "width": 768,
+    "viewport": 768,
+    "scroll": 753,
+    "content": 1935,
+    "overlay": false,
+    "path": "/en/services"
+  },
+  {
+    "name": "portfolio",
+    "width": 768,
+    "viewport": 768,
+    "scroll": 753,
+    "content": 1045,
+    "overlay": false,
+    "path": "/en/portfolio"
+  },
+  {
+    "name": "project",
+    "width": 768,
+    "viewport": 768,
+    "scroll": 753,
+    "content": 713,
+    "overlay": false,
+    "path": "/en/portfolio/synthetic-review"
+  },
+  {
+    "name": "customer",
+    "width": 1440,
+    "viewport": 1440,
+    "scroll": 1425,
+    "content": 919,
+    "overlay": false,
+    "path": "/dashboard/customers/cmujry97x0005ko7tgz0ho6o8"
+  },
+  {
+    "name": "company",
+    "width": 1440,
+    "viewport": 1440,
+    "scroll": 1425,
+    "content": 537,
+    "overlay": false,
+    "path": "/dashboard/companies/cmujry97u0003ko7t2xpl5tbf"
+  },
+  {
+    "name": "job",
+    "width": 1440,
+    "viewport": 1440,
+    "scroll": 1425,
+    "content": 1736,
+    "overlay": false,
+    "path": "/dashboard/service-jobs"
+  },
+  {
+    "name": "home",
+    "width": 1440,
+    "viewport": 1440,
+    "scroll": 1425,
+    "content": 2041,
+    "overlay": false,
+    "path": "/en"
+  },
+  {
+    "name": "services",
+    "width": 1440,
+    "viewport": 1440,
+    "scroll": 1425,
+    "content": 1985,
+    "overlay": false,
+    "path": "/en/services"
+  },
+  {
+    "name": "portfolio",
+    "width": 1440,
+    "viewport": 1440,
+    "scroll": 1425,
+    "content": 1095,
+    "overlay": false,
+    "path": "/en/portfolio"
+  },
+  {
+    "name": "project",
+    "width": 1440,
+    "viewport": 1440,
+    "scroll": 1425,
+    "content": 763,
+    "overlay": false,
+    "path": "/en/portfolio/synthetic-review"
+  }
+]

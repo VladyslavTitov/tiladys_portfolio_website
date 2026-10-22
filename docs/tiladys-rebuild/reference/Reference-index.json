@@ -1,0 +1,207 @@
+{
+  "version": "1.0",
+  "date": "2026-10-12",
+  "paths_relative_to": "reference/",
+  "canonical_page_ids": "Analysis/control register IDs; dashboard board Dxx IDs differ",
+  "public": [
+    {
+      "file": "public/P01_Home.png",
+      "canonical_pages": [
+        "P01"
+      ],
+      "role": "Approved visual concept; footer, sample copy and fake evidence superseded"
+    },
+    {
+      "file": "public/P03_Websites.png",
+      "canonical_pages": [
+        "P03"
+      ],
+      "role": "Approved visual concept; footer, sample copy and fake evidence superseded"
+    },
+    {
+      "file": "public/P04_3D_Printing.png",
+      "canonical_pages": [
+        "P04"
+      ],
+      "role": "Approved visual concept; footer, sample copy and fake evidence superseded"
+    },
+    {
+      "file": "public/P05_PC_Support.png",
+      "canonical_pages": [
+        "P05"
+      ],
+      "role": "Approved visual concept; footer, sample copy and fake evidence superseded"
+    },
+    {
+      "file": "public/P06_Portfolio.png",
+      "canonical_pages": [
+        "P06"
+      ],
+      "role": "Approved visual concept; footer, sample copy and fake evidence superseded"
+    },
+    {
+      "file": "public/P07_P09_Project_Product_Details.png",
+      "canonical_pages": [
+        "P07",
+        "P09"
+      ],
+      "role": "Approved visual concept; footer, sample copy and fake evidence superseded"
+    },
+    {
+      "file": "public/P10_About.png",
+      "canonical_pages": [
+        "P10"
+      ],
+      "role": "Approved visual concept; footer, sample copy and fake evidence superseded"
+    },
+    {
+      "file": "public/P11_Contact.png",
+      "canonical_pages": [
+        "P11"
+      ],
+      "role": "Approved visual concept; footer, sample copy and fake evidence superseded"
+    },
+    {
+      "file": "public/P12_Legal_Responsive.png",
+      "canonical_pages": [
+        "P12"
+      ],
+      "role": "Approved visual concept; footer, sample copy and fake evidence superseded"
+    }
+  ],
+  "dashboard": [
+    {
+      "board_id": "D01",
+      "title": "Overview",
+      "file": "dashboard/D01_Overview.png",
+      "canonical_pages": [
+        "D01"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D02",
+      "title": "Inbox",
+      "file": "dashboard/D02_Inbox.png",
+      "canonical_pages": [
+        "D02"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D03",
+      "title": "Clients",
+      "file": "dashboard/D03_Clients.png",
+      "canonical_pages": [
+        "D03"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D04",
+      "title": "Quotes & Invoices",
+      "file": "dashboard/D04_Invoices.png",
+      "canonical_pages": [
+        "D06"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D05",
+      "title": "Portfolio",
+      "file": "dashboard/D05_Portfolio.png",
+      "canonical_pages": [
+        "D08"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D06",
+      "title": "Jobs & Tasks",
+      "file": "dashboard/D06_Jobs.png",
+      "canonical_pages": [
+        "D04"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D07",
+      "title": "Products",
+      "file": "dashboard/D07_Products.png",
+      "canonical_pages": [
+        "D09"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D08",
+      "title": "Quote & Payment Details",
+      "file": "dashboard/D08_Quotes_Payments.png",
+      "canonical_pages": [
+        "D05",
+        "D07"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D09",
+      "title": "Client & Job Forms",
+      "file": "dashboard/D09_Client_Job_Forms.png",
+      "canonical_pages": [
+        "D03",
+        "D04"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D10",
+      "title": "Tasks & Service Catalogue",
+      "file": "dashboard/D10_Tasks_Catalogue.png",
+      "canonical_pages": [
+        "D10",
+        "D11"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D11",
+      "title": "Settings, Sign-in & Account Data",
+      "file": "dashboard/D11_Settings_Account.png",
+      "canonical_pages": [
+        "D12",
+        "D13",
+        "D14"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D12",
+      "title": "Responsive Layouts & UI Components",
+      "file": "dashboard/D12_Responsive_Components.png",
+      "canonical_pages": [
+        "all-responsive-components"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    },
+    {
+      "board_id": "D13",
+      "title": "Reports, Expenses & Reviews",
+      "file": "dashboard/D13_Reports_Reviews.png",
+      "canonical_pages": [
+        "D15",
+        "D16"
+      ],
+      "role": "Visual concept; actual data/behaviour from current master prompt and registers"
+    }
+  ],
+  "derived_public_pages": {
+    "P02": "Use the home three-service cards and service-page primitives",
+    "P08": "Use actual service-page product cards plus product-detail styling"
+  },
+  "overrides": [
+    "German-first then English invoices",
+    "Actual live footer",
+    "Real founder and factual portfolio/product media",
+    "Preserve current published data rather than generated clients/products/prices"
+  ]
+}

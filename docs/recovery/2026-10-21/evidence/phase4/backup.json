@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-10-21T14:27:04.056Z",
+  "sourceHost": "ep-purple-unit-b1brl6mf.c-5.eu-central-1.aws.neon.tech",
+  "branchId": "br-delicate-block-b19w0iqs",
+  "path": "/home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/.env.recovery-backups/2026-10-21/preview-phase4-before-20261021T142701059Z.dump",
+  "sha256": "14f9252b27e4a0e64d3c5be143f10f9320ad6904dc418276932a8742bc959a90",
+  "bytes": 68012,
+  "fileMode": "0600",
+  "directoryMode": "0700",
+  "gitIgnored": true,
+  "format": "PostgreSQL 18 custom; public schema/data; no owners/grants",
+  "restoreDatabase": "recovery_phase4_restore_1792592821271",
+  "restoreHost": "127.0.0.1:55435",
+  "allSchemaDefinitionsMatch": true,
+  "allTableCountsAndRowFingerprintsMatch": true,
+  "all13LedgerRowsMatch": true,
+  "sourceUnchangedAfterVerification": true,
+  "realTargetRestored": false
+}

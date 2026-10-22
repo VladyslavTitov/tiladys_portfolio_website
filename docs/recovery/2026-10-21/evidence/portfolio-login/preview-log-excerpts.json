@@ -1,0 +1,18 @@
+[
+  {
+    "id": "k2n44-1792596711379-f8efe739ae92",
+    "timestamp": 1792596711379,
+    "deploymentId": "dpl_5K9QHNr1z37CoSN97XFTjrouTtDJ",
+    "requestPath": "/api/auth/login",
+    "responseStatusCode": 403,
+    "message": ""
+  },
+  {
+    "id": "6cqgh-1792596561356-ca7b42349481",
+    "timestamp": 1792596561356,
+    "deploymentId": "dpl_5K9QHNr1z37CoSN97XFTjrouTtDJ",
+    "requestPath": "/api/auth/login",
+    "responseStatusCode": 401,
+    "message": ""
+  }
+]

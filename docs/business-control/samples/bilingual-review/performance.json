@@ -1,0 +1,199 @@
+{
+  "method": "Local production builds; 1 first request plus 7 warm sequential requests; fetch through complete response body. First request is not guaranteed cold. Query A/B is interleaved over identical rows.",
+  "node": "v22.23.1",
+  "measurements": {
+    "dashboard": {
+      "firstMs": 174.04,
+      "warmMs": [
+        32.05,
+        31.94,
+        31.21,
+        28.25,
+        28.59,
+        24.25,
+        25.57
+      ],
+      "medianWarmMs": 28.59,
+      "bytes": 19888
+    },
+    "customer": {
+      "firstMs": 41.81,
+      "warmMs": [
+        42.86,
+        37.03,
+        34.14,
+        33.06,
+        40.77,
+        34.2,
+        36.82
+      ],
+      "medianWarmMs": 36.82,
+      "bytes": 28388
+    },
+    "company": {
+      "firstMs": 40.48,
+      "warmMs": [
+        31.84,
+        32.07,
+        27.97,
+        27.02,
+        26.65,
+        28.39,
+        25.56
+      ],
+      "medianWarmMs": 27.97,
+      "bytes": 21946
+    },
+    "jobs": {
+      "firstMs": 27.8,
+      "warmMs": [
+        24.9,
+        26.15,
+        27.96,
+        35.35,
+        26.2,
+        34.43,
+        24.09
+      ],
+      "medianWarmMs": 26.2,
+      "bytes": 27821
+    },
+    "invoices": {
+      "firstMs": 36.49,
+      "warmMs": [
+        34.91,
+        25.62,
+        37.41,
+        26.65,
+        25,
+        25.62,
+        28.32
+      ],
+      "medianWarmMs": 26.65,
+      "bytes": 31928
+    },
+    "catalogue": {
+      "firstMs": 30.5,
+      "warmMs": [
+        27.8,
+        27.95,
+        29.02,
+        34.15,
+        26.06,
+        25.96,
+        25.96
+      ],
+      "medianWarmMs": 27.8,
+      "bytes": 176471
+    },
+    "pdf": {
+      "firstMs": 287.62,
+      "warmMs": [
+        180.58,
+        168.03,
+        154.78,
+        167.43,
+        150.84,
+        149.95,
+        150.32
+      ],
+      "medianWarmMs": 154.78,
+      "bytes": 47302
+    },
+    "home": {
+      "firstMs": 438.19,
+      "warmMs": [
+        58.76,
+        45.68,
+        40.96,
+        44.11,
+        34.92,
+        35.1,
+        40.46
+      ],
+      "medianWarmMs": 40.96,
+      "bytes": 66780
+    },
+    "services": {
+      "firstMs": 123.31,
+      "warmMs": [
+        44.96,
+        35.21,
+        39.92,
+        28.25,
+        36.07,
+        30.3,
+        30.69
+      ],
+      "medianWarmMs": 35.21,
+      "bytes": 60184
+    },
+    "portfolio": {
+      "firstMs": 52.22,
+      "warmMs": [
+        35.66,
+        39.09,
+        30.33,
+        27.81,
+        30.78,
+        30.27,
+        32.96
+      ],
+      "medianWarmMs": 30.78,
+      "bytes": 43446
+    },
+    "project": {
+      "firstMs": 52.86,
+      "warmMs": [
+        36.81,
+        40.04,
+        42.92,
+        36.02,
+        34.12,
+        33.91,
+        34.74
+      ],
+      "medianWarmMs": 36.02,
+      "bytes": 42135
+    }
+  },
+  "dataset": {
+    "customers": 1,
+    "companies": 1,
+    "jobs": 1,
+    "invoices": 1,
+    "services": 145,
+    "projects": 1
+  },
+  "queryComparison": {
+    "rows": 50,
+    "pdfBytesPerRow": 67680,
+    "archivedBytesAvoided": 3384000,
+    "beforeMs": [
+      64.42,
+      53.99,
+      54.86,
+      48.73,
+      49.8,
+      47.57,
+      47.85,
+      47.43,
+      58.95,
+      50.03
+    ],
+    "afterMs": [
+      11.31,
+      8.62,
+      9.04,
+      8.38,
+      10.65,
+      8.15,
+      9.85,
+      8.68,
+      8.38,
+      8.09
+    ],
+    "medianBeforeMs": 50.03,
+    "medianAfterMs": 8.68
+  }
+}

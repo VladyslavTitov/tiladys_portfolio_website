@@ -1,0 +1,1617 @@
+{
+  "rows": [
+    {
+      "id": "AUTH-ANON GET /api/admin/account",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/account",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/billing-settings",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PUT /api/admin/billing-settings",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PATCH /api/admin/catalogue/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/catalogue",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PATCH /api/admin/companies/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/companies",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/companies",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/customers/[id]/notes",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/customers/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PATCH /api/admin/customers/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON DELETE /api/admin/customers/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/customers",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/customers",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/estimate",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/export/[token]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/export",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/export",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/invoices/[id]/issue",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/invoices/[id]/payments",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/invoices/[id]/pdf",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/invoices/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PATCH /api/admin/invoices/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/invoices",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/invoices",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/messages/[id]/attachments/[attachmentId]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON DELETE /api/admin/messages/[id]/attachments/[attachmentId]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/messages/[id]/draft",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/messages/[id]/link",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/messages/[id]/link",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/messages/[id]/reply",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PATCH /api/admin/messages/[id]/status",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/prices",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PUT /api/admin/prices",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/products/[id]/images/[imageId]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON DELETE /api/admin/products/[id]/images/[imageId]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/products/[id]/images",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PATCH /api/admin/products/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/products",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/products",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/projects/[id]/images/[imageId]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/projects/[id]/images",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PATCH /api/admin/projects/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON DELETE /api/admin/projects/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/projects",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/quotes/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PATCH /api/admin/quotes/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/quotes",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/quotes",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/service-jobs/[id]/brief",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PATCH /api/admin/service-jobs/[id]/brief",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/service-jobs/[id]/portfolio",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/service-jobs/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PATCH /api/admin/service-jobs/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/service-jobs",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/service-jobs",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/tasks/[id]/complete",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON PATCH /api/admin/tasks/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/tasks/[id]",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON GET /api/admin/tasks",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-ANON POST /api/admin/tasks",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/companies/qa-missing missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/companies/qa-missing stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/companies missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/companies stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/customers/qa-missing missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/customers/qa-missing stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/customers missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/customers stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/invoices missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/invoices stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/messages missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/messages stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/prices missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/prices stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/products/qa-missing/preview missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/products/qa-missing/preview stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/products missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/products stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/projects/qa-missing/preview missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/projects/qa-missing/preview stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/projects missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/projects stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/quotes/qa-missing missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/quotes/qa-missing stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/quotes missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/quotes stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/search missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/search stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/service-jobs missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/service-jobs stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/settings/account missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/settings/account stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/settings missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/settings stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/tasks missing",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-PAGE /dashboard/tasks stale",
+      "status": "PASS",
+      "http": 307
+    },
+    {
+      "id": "AUTH-REAL-LOGIN",
+      "status": "PASS"
+    },
+    {
+      "id": "AUTH-EXPIRED-PAGE",
+      "status": "PASS"
+    },
+    {
+      "id": "AUTH-EXPIRED-API",
+      "status": "PASS"
+    },
+    {
+      "id": "CSRF /api/auth/login",
+      "status": "PASS",
+      "http": 403
+    },
+    {
+      "id": "CSRF /api/auth/logout",
+      "status": "PASS",
+      "http": 403
+    },
+    {
+      "id": "CSRF /api/admin/tasks",
+      "status": "PASS",
+      "http": 403
+    },
+    {
+      "id": "PUBLIC en/",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC en/about",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/about",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC en/contact",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/contact",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC en/portfolio",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/portfolio",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC en/services",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/services",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC en/services/websites",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/services/websites",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC en/services/pc-laptop",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/services/pc-laptop",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC en/services/3d-printing",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/services/3d-printing",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC en/services/business-it",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/services/business-it",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC en/products/framer",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/products/framer",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC en/products/3d-models",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/products/3d-models",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC en/impressum",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/impressum",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC en/privacy",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/privacy",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC en/terms",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/terms",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC en/portfolio/portfolio-qa-30147c23-0",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/portfolio/portfolio-qa-30147c23-0",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC en/products/portfolio-qa-30147c23-template",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/en/products/portfolio-qa-30147c23-template",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC de/",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC de/about",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/about",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC de/contact",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/contact",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC de/portfolio",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/portfolio",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC de/services",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/services",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC de/services/websites",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/services/websites",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC de/services/pc-laptop",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/services/pc-laptop",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC de/services/3d-printing",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/services/3d-printing",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC de/services/business-it",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/services/business-it",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC de/products/framer",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/products/framer",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC de/products/3d-models",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/products/3d-models",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC de/impressum",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/impressum",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC de/privacy",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/privacy",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC de/terms",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/terms",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC de/portfolio/portfolio-qa-30147c23-0",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/portfolio/portfolio-qa-30147c23-0",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC de/products/portfolio-qa-30147c23-template",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/de/products/portfolio-qa-30147c23-template",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC uk/",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC uk/about",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/about",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC uk/contact",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/contact",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC uk/portfolio",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/portfolio",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC uk/services",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/services",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC uk/services/websites",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/services/websites",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC uk/services/pc-laptop",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/services/pc-laptop",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC uk/services/3d-printing",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/services/3d-printing",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC uk/services/business-it",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/services/business-it",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC uk/products/framer",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/products/framer",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC uk/products/3d-models",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/products/3d-models",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC uk/impressum",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/impressum",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC uk/privacy",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/privacy",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC uk/terms",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/terms",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC uk/portfolio/portfolio-qa-30147c23-0",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/portfolio/portfolio-qa-30147c23-0",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC uk/products/portfolio-qa-30147c23-template",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/uk/products/portfolio-qa-30147c23-template",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC ru/",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC ru/about",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/about",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC ru/contact",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/contact",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC ru/portfolio",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/portfolio",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC ru/services",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/services",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC ru/services/websites",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/services/websites",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC ru/services/pc-laptop",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/services/pc-laptop",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC ru/services/3d-printing",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/services/3d-printing",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC ru/services/business-it",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/services/business-it",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC ru/products/framer",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/products/framer",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC ru/products/3d-models",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/products/3d-models",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC ru/impressum",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/impressum",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC ru/privacy",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/privacy",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC ru/terms",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/terms",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC ru/portfolio/portfolio-qa-30147c23-0",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/portfolio/portfolio-qa-30147c23-0",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC ru/products/portfolio-qa-30147c23-template",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/ru/products/portfolio-qa-30147c23-template",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC sk/",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC sk/about",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/about",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC sk/contact",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/contact",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC sk/portfolio",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/portfolio",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC sk/services",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/services",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC sk/services/websites",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/services/websites",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC sk/services/pc-laptop",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/services/pc-laptop",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC sk/services/3d-printing",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/services/3d-printing",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC sk/services/business-it",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/services/business-it",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC sk/products/framer",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/products/framer",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC sk/products/3d-models",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/products/3d-models",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC sk/impressum",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/impressum",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC sk/privacy",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/privacy",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC sk/terms",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/terms",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC sk/portfolio/portfolio-qa-30147c23-0",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/portfolio/portfolio-qa-30147c23-0",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC sk/products/portfolio-qa-30147c23-template",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/sk/products/portfolio-qa-30147c23-template",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC fr/",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC fr/about",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/about",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC fr/contact",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/contact",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC fr/portfolio",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/portfolio",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC fr/services",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/services",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC fr/services/websites",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/services/websites",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC fr/services/pc-laptop",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/services/pc-laptop",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC fr/services/3d-printing",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/services/3d-printing",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC fr/services/business-it",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/services/business-it",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC fr/products/framer",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/products/framer",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC fr/products/3d-models",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/products/3d-models",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC fr/impressum",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/impressum",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC fr/privacy",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/privacy",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC fr/terms",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/terms",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "PUBLIC fr/portfolio/portfolio-qa-30147c23-0",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/portfolio/portfolio-qa-30147c23-0",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": true
+    },
+    {
+      "id": "PUBLIC fr/products/portfolio-qa-30147c23-template",
+      "status": "PASS",
+      "http": 200,
+      "canonical": "http://127.0.0.1:3100/fr/products/portfolio-qa-30147c23-template",
+      "meaningful": true,
+      "localized": true,
+      "hreflang": true,
+      "ogImage": false
+    },
+    {
+      "id": "REDIRECT en/prices",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT en/services/network-wifi",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT en/services/it-support-diagnostics",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT de/prices",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT de/services/network-wifi",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT de/services/it-support-diagnostics",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT uk/prices",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT uk/services/network-wifi",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT uk/services/it-support-diagnostics",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT ru/prices",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT ru/services/network-wifi",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT ru/services/it-support-diagnostics",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT sk/prices",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT sk/services/network-wifi",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT sk/services/it-support-diagnostics",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT fr/prices",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT fr/services/network-wifi",
+      "status": "PASS"
+    },
+    {
+      "id": "REDIRECT fr/services/it-support-diagnostics",
+      "status": "PASS"
+    },
+    {
+      "id": "PRIVATE-PUBLIC /en/portfolio/portfolio-qa-30147c23-draft",
+      "status": "PASS",
+      "http": 404
+    },
+    {
+      "id": "PRIVATE-PUBLIC /api/public/media/cmvfj94sp0020kohz2uc0umau",
+      "status": "PASS",
+      "http": 404
+    },
+    {
+      "id": "PRIVATE-PUBLIC /api/public/media/cmvfj94sp0020kohz2uc0umau?w=320",
+      "status": "PASS",
+      "http": 404
+    },
+    {
+      "id": "PRIVATE-PUBLIC /en/portfolio/portfolio-qa-30147c23-archived",
+      "status": "PASS",
+      "http": 404
+    },
+    {
+      "id": "PRIVATE-PUBLIC /api/public/media/cmvfj94sy0022kohzho0qpyvt",
+      "status": "PASS",
+      "http": 404
+    },
+    {
+      "id": "PRIVATE-PUBLIC /api/public/media/cmvfj94sy0022kohzho0qpyvt?w=320",
+      "status": "PASS",
+      "http": 404
+    },
+    {
+      "id": "PRIVATE-PRODUCT-MEDIA",
+      "status": "PASS"
+    },
+    {
+      "id": "SEO-SITEMAP",
+      "status": "PASS"
+    },
+    {
+      "id": "SEO-ROBOTS",
+      "status": "PASS"
+    },
+    {
+      "id": "PUBLIC-404",
+      "status": "PASS"
+    },
+    {
+      "id": "HEADERS http://127.0.0.1:3100",
+      "status": "PASS"
+    },
+    {
+      "id": "HEADERS http://127.0.0.1:3101",
+      "status": "PASS"
+    }
+  ]
+}

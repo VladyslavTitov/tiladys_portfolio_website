@@ -1,0 +1,60 @@
+TAP version 13
+# Subtest: SEC-UPLOAD-01 rejects executable SVG and MIME/signature mismatch
+ok 1 - SEC-UPLOAD-01 rejects executable SVG and MIME/signature mismatch
+  ---
+  duration_ms: 33.872885
+  type: 'test'
+  ...
+# Subtest: SEC-UPLOAD-02 traversal filename is replaced, originals/metadata discarded
+ok 2 - SEC-UPLOAD-02 traversal filename is replaced, originals/metadata discarded
+  ---
+  duration_ms: 25.468884
+  type: 'test'
+  ...
+# Subtest: SEC-INPUT-01 executable URLs and bounded financial/task inputs reject
+not ok 3 - SEC-INPUT-01 executable URLs and bounded financial/task inputs reject
+  ---
+  duration_ms: 11.767759
+  type: 'test'
+  location: '/home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/tests/qa-security.mts:1:1854'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (/home/tiladys/Documents/Websites/Tiladys/tiladys_portfolio_website/tests/qa-security.mts:8:530)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: SEC-SSRF-01 optimizer rejects unallowlisted remote/private URL before fetch
+ok 4 - SEC-SSRF-01 optimizer rejects unallowlisted remote/private URL before fetch
+  ---
+  duration_ms: 196.526787
+  type: 'test'
+  ...
+# Subtest: SEC-CONTACT-01 same concurrent idempotency key yields one stored enquiry
+ok 5 - SEC-CONTACT-01 same concurrent idempotency key yields one stored enquiry
+  ---
+  duration_ms: 202.816253
+  type: 'test'
+  ...
+# Subtest: SEC-AUTH-01 bounded invalid attempts cannot evade shared IP throttle using forged forwarding
+ok 6 - SEC-AUTH-01 bounded invalid attempts cannot evade shared IP throttle using forged forwarding
+  ---
+  duration_ms: 360.390738
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 5
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3393.04241

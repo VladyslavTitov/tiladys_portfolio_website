@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "review_date": "2026-10-12",
+  "mode": "analysis-only",
+  "repository": "VladyslavTitov/tiladys_portfolio_website",
+  "deployed_commit": "e82bff04aac9915585b10cc853fe31c558a5964b",
+  "branch_observed": "feature/services-redesign",
+  "observations": {
+    "public_site": "https://tiladys.com",
+    "hosting_projects": [
+      "tiladys-public",
+      "tiladys-control"
+    ],
+    "runtime": "Node.js 24.x",
+    "functions_region": "iad1",
+    "database_metadata": "Neon tiladys-database, PostgreSQL 17, Frankfurt; actual application binding still to confirm",
+    "invoice_tables_and_bilingual_migrations": "verified present/completed by schema/migration metadata",
+    "private_customer_and_invoice_rows": "not read",
+    "mail_and_mutation_flows": "not exercised",
+    "application_tests": "not executed"
+  },
+  "precedence": [
+    "Latest explicit user requirements",
+    "Verified business data/current records",
+    "Written requirements/canonical tokens",
+    "Approved visual concepts",
+    "Generated sample copy"
+  ],
+  "overrides": {
+    "invoice_order": "de then en for new previews/new issued documents; retain historical stored bytes",
+    "footer": "Actual live five-column footer replaces generated alternatives"
+  },
+  "future_phases": [
+    "Review this specification",
+    "Prepare final Codex master prompt after review",
+    "Generate approved illustrative assets separately",
+    "Implement and verify in isolated environments"
+  ]
+}

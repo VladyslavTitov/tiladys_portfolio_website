@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-21T11:32:38.326Z",
+  "environment": "verified isolated synthetic database; SMTP disabled",
+  "checks": [
+    "Company create/update and linked customer create/update persist through actual APIs.",
+    "Quote sharing record (no SMTP), exact accepted revision and concurrent job conversion replay preserve frozen agreed lines.",
+    "Linked job task saves, completes, and retains its client/job/timezone relationships.",
+    "Accepted quote creates one unnumbered draft; synthetic issuance freezes a version-3 PDF with German page 1 and English page 2.",
+    "Synthetic partial payment replays once without altering PDF bytes; customer archive retains financial links."
+  ]
+}

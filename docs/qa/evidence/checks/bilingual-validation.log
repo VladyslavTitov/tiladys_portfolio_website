@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: decimal totals, agreed starting prices and ordered monthly periods are enforced on the server
+ok 1 - decimal totals, agreed starting prices and ordered monthly periods are enforced on the server
+  ---
+  duration_ms: 5.002952
+  type: 'test'
+  ...
+# Subtest: VAT identifier never supplies missing explicit tax treatment
+ok 2 - VAT identifier never supplies missing explicit tax treatment
+  ---
+  duration_ms: 1.045911
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 28.879992

@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "Mobile native Tab/Shift+Tab wrap; scroll lock releases; Escape restores trigger focus",
+    "Language menu native arrow/Enter selects German while preserving service/mode context",
+    "Preferred footer: 8 internal links return success/valid redirects; external links not contacted"
+  ],
+  "consoleErrors": [],
+  "networkErrors": []
+}

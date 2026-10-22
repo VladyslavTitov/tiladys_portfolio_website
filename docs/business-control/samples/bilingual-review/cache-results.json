@@ -1,0 +1,6 @@
+{
+  "publicApiUpdatedImmediately": true,
+  "publicPageUpdated": true,
+  "elapsedMs": 200,
+  "policy": "60-second stale-while-revalidate; first request after expiry triggers refresh"
+}

@@ -1,0 +1,9 @@
+{
+  "syntheticOnly": true,
+  "checks": [
+    "Actual dashboard title/localization editing saves a private draft and preserves the home-featured flag.",
+    "The unchanged handler rejects publication without explicit review.",
+    "Actual reviewed-publication UI still publishes the synthetic project and its unchanged detail URL becomes available.",
+    "Withdrawing that same test project returns its derivative media to private status."
+  ]
+}

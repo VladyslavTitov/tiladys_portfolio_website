@@ -1,0 +1,3250 @@
+{
+  "phase": "before",
+  "tool": "Playwright",
+  "version": "1.64.1",
+  "rows": [
+    {
+      "locale": "en",
+      "width": 375,
+      "overflow": false,
+      "spacing": "15px",
+      "cards": [
+        {
+          "title": "Threads",
+          "label": "Open Threads",
+          "href": "https://www.threads.com/@tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 95,
+            "y": 1837.90625,
+            "right": 242.71875,
+            "bottom": 1882.90625,
+            "width": 147.71875,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 1851.90625,
+            "right": 125,
+            "bottom": 1868.90625,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 1769.859375,
+            "right": 336,
+            "bottom": 1825.90625,
+            "width": 241,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 1748.859375,
+            "right": 357,
+            "bottom": 1903.90625,
+            "width": 339,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 1851.609375,
+            "right": 229.71875,
+            "bottom": 1868.609375,
+            "width": 97.71875,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "WhatsApp",
+          "label": "Open WhatsApp",
+          "href": "https://wa.me/491637235608",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 95,
+            "y": 2007.953125,
+            "right": 258.984375,
+            "bottom": 2052.953125,
+            "width": 163.984375,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2021.953125,
+            "right": 125,
+            "bottom": 2038.953125,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 1939.90625,
+            "right": 336,
+            "bottom": 1995.953125,
+            "width": 241,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 1918.90625,
+            "right": 357,
+            "bottom": 2073.953125,
+            "width": 339,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 2021.65625,
+            "right": 245.984375,
+            "bottom": 2038.65625,
+            "width": 113.984375,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Telegram",
+          "label": "Open Telegram",
+          "href": "https://t.me/tiladys_support",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 95,
+            "y": 2178,
+            "right": 250.0625,
+            "bottom": 2223,
+            "width": 155.0625,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2192,
+            "right": 125,
+            "bottom": 2209,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 2109.953125,
+            "right": 336,
+            "bottom": 2166,
+            "width": 241,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2088.953125,
+            "right": 357,
+            "bottom": 2244,
+            "width": 339,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 2191.703125,
+            "right": 237.0625,
+            "bottom": 2208.703125,
+            "width": 105.0625,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Instagram",
+          "label": "Open Instagram",
+          "href": "https://www.instagram.com/tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 95,
+            "y": 2348.046875,
+            "right": 255.46875,
+            "bottom": 2393.046875,
+            "width": 160.46875,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2362.046875,
+            "right": 125,
+            "bottom": 2379.046875,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 2280,
+            "right": 336,
+            "bottom": 2336.046875,
+            "width": 241,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2259,
+            "right": 357,
+            "bottom": 2414.046875,
+            "width": 339,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 2361.75,
+            "right": 242.46875,
+            "bottom": 2378.75,
+            "width": 110.46875,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Email",
+          "label": "Send Email",
+          "href": "mailto:contact@tiladys.com",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 95,
+            "y": 2518.09375,
+            "right": 221.234375,
+            "bottom": 2563.09375,
+            "width": 126.234375,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2532.09375,
+            "right": 125,
+            "bottom": 2549.09375,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 2450.046875,
+            "right": 336,
+            "bottom": 2506.09375,
+            "width": 241,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2429.046875,
+            "right": 357,
+            "bottom": 2584.09375,
+            "width": 339,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 2531.796875,
+            "right": 208.234375,
+            "bottom": 2548.796875,
+            "width": 76.234375,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Phone",
+          "label": "Call Now",
+          "href": "tel:+491637235608",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 95,
+            "y": 2688.140625,
+            "right": 205.953125,
+            "bottom": 2733.140625,
+            "width": 110.953125,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2702.140625,
+            "right": 125,
+            "bottom": 2719.140625,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 2620.09375,
+            "right": 336,
+            "bottom": 2676.140625,
+            "width": 241,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2599.09375,
+            "right": 357,
+            "bottom": 2754.140625,
+            "width": 339,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 2701.84375,
+            "right": 192.953125,
+            "bottom": 2718.84375,
+            "width": 60.953125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Location",
+          "label": "View on Map",
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 95,
+            "y": 2882.9375,
+            "right": 234.125,
+            "bottom": 2927.9375,
+            "width": 139.125,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2896.9375,
+            "right": 125,
+            "bottom": 2913.9375,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 2790.140625,
+            "right": 336,
+            "bottom": 2870.9375,
+            "width": 241,
+            "height": 80.796875
+          },
+          "card": {
+            "x": 18,
+            "y": 2769.140625,
+            "right": 357,
+            "bottom": 2948.9375,
+            "width": 339,
+            "height": 179.796875
+          },
+          "text": {
+            "x": 132,
+            "y": 2896.640625,
+            "right": 221.125,
+            "bottom": 2913.640625,
+            "width": 89.125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 430,
+      "overflow": false,
+      "spacing": "15px",
+      "cards": [
+        {
+          "title": "Threads",
+          "label": "Open Threads",
+          "href": "https://www.threads.com/@tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 95,
+            "y": 1835.78125,
+            "right": 242.71875,
+            "bottom": 1880.78125,
+            "width": 147.71875,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 1849.78125,
+            "right": 125,
+            "bottom": 1866.78125,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 1767.734375,
+            "right": 391,
+            "bottom": 1823.78125,
+            "width": 296,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 1746.734375,
+            "right": 412,
+            "bottom": 1901.78125,
+            "width": 394,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 1849.484375,
+            "right": 229.71875,
+            "bottom": 1866.484375,
+            "width": 97.71875,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "WhatsApp",
+          "label": "Open WhatsApp",
+          "href": "https://wa.me/491637235608",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 95,
+            "y": 2005.828125,
+            "right": 258.984375,
+            "bottom": 2050.828125,
+            "width": 163.984375,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2019.828125,
+            "right": 125,
+            "bottom": 2036.828125,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 1937.78125,
+            "right": 391,
+            "bottom": 1993.828125,
+            "width": 296,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 1916.78125,
+            "right": 412,
+            "bottom": 2071.828125,
+            "width": 394,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 2019.53125,
+            "right": 245.984375,
+            "bottom": 2036.53125,
+            "width": 113.984375,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Telegram",
+          "label": "Open Telegram",
+          "href": "https://t.me/tiladys_support",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 95,
+            "y": 2175.875,
+            "right": 250.0625,
+            "bottom": 2220.875,
+            "width": 155.0625,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2189.875,
+            "right": 125,
+            "bottom": 2206.875,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 2107.828125,
+            "right": 391,
+            "bottom": 2163.875,
+            "width": 296,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2086.828125,
+            "right": 412,
+            "bottom": 2241.875,
+            "width": 394,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 2189.578125,
+            "right": 237.0625,
+            "bottom": 2206.578125,
+            "width": 105.0625,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Instagram",
+          "label": "Open Instagram",
+          "href": "https://www.instagram.com/tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 95,
+            "y": 2345.921875,
+            "right": 255.46875,
+            "bottom": 2390.921875,
+            "width": 160.46875,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2359.921875,
+            "right": 125,
+            "bottom": 2376.921875,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 2277.875,
+            "right": 391,
+            "bottom": 2333.921875,
+            "width": 296,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2256.875,
+            "right": 412,
+            "bottom": 2411.921875,
+            "width": 394,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 2359.625,
+            "right": 242.46875,
+            "bottom": 2376.625,
+            "width": 110.46875,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Email",
+          "label": "Send Email",
+          "href": "mailto:contact@tiladys.com",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 95,
+            "y": 2515.96875,
+            "right": 221.234375,
+            "bottom": 2560.96875,
+            "width": 126.234375,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2529.96875,
+            "right": 125,
+            "bottom": 2546.96875,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 2447.921875,
+            "right": 391,
+            "bottom": 2503.96875,
+            "width": 296,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2426.921875,
+            "right": 412,
+            "bottom": 2581.96875,
+            "width": 394,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 2529.671875,
+            "right": 208.234375,
+            "bottom": 2546.671875,
+            "width": 76.234375,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Phone",
+          "label": "Call Now",
+          "href": "tel:+491637235608",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 95,
+            "y": 2686.015625,
+            "right": 205.953125,
+            "bottom": 2731.015625,
+            "width": 110.953125,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2700.015625,
+            "right": 125,
+            "bottom": 2717.015625,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 2617.96875,
+            "right": 391,
+            "bottom": 2674.015625,
+            "width": 296,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2596.96875,
+            "right": 412,
+            "bottom": 2752.015625,
+            "width": 394,
+            "height": 155.046875
+          },
+          "text": {
+            "x": 132,
+            "y": 2699.71875,
+            "right": 192.953125,
+            "bottom": 2716.71875,
+            "width": 60.953125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Location",
+          "label": "View on Map",
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 95,
+            "y": 2880.8125,
+            "right": 234.125,
+            "bottom": 2925.8125,
+            "width": 139.125,
+            "height": 45
+          },
+          "icon": {
+            "x": 108,
+            "y": 2894.8125,
+            "right": 125,
+            "bottom": 2911.8125,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 95,
+            "y": 2788.015625,
+            "right": 391,
+            "bottom": 2868.8125,
+            "width": 296,
+            "height": 80.796875
+          },
+          "card": {
+            "x": 18,
+            "y": 2767.015625,
+            "right": 412,
+            "bottom": 2946.8125,
+            "width": 394,
+            "height": 179.796875
+          },
+          "text": {
+            "x": 132,
+            "y": 2894.515625,
+            "right": 221.125,
+            "bottom": 2911.515625,
+            "width": 89.125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "overflow": false,
+      "spacing": "15px",
+      "cards": [
+        {
+          "title": "Threads",
+          "label": "Open Threads",
+          "href": "https://www.threads.com/@tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 581.28125,
+            "y": 1806.859375,
+            "right": 729,
+            "bottom": 1851.859375,
+            "width": 147.71875,
+            "height": 45
+          },
+          "icon": {
+            "x": 594.28125,
+            "y": 1820.859375,
+            "right": 611.28125,
+            "bottom": 1837.859375,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 91,
+            "y": 1801.328125,
+            "right": 569.28125,
+            "bottom": 1857.375,
+            "width": 478.28125,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 1770.359375,
+            "right": 750,
+            "bottom": 1888.359375,
+            "width": 732,
+            "height": 118
+          },
+          "text": {
+            "x": 618.28125,
+            "y": 1820.5625,
+            "right": 716,
+            "bottom": 1837.5625,
+            "width": 97.71875,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "WhatsApp",
+          "label": "Open WhatsApp",
+          "href": "https://wa.me/491637235608",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 569,
+            "y": 1933.765625,
+            "right": 729,
+            "bottom": 1990.953125,
+            "width": 160,
+            "height": 57.1875
+          },
+          "icon": {
+            "x": 582,
+            "y": 1953.859375,
+            "right": 599,
+            "bottom": 1970.859375,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 91,
+            "y": 1934.328125,
+            "right": 557,
+            "bottom": 1990.375,
+            "width": 466,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 1903.359375,
+            "right": 750,
+            "bottom": 2021.359375,
+            "width": 732,
+            "height": 118
+          },
+          "text": {
+            "x": 606,
+            "y": 1943.765625,
+            "right": 679.875,
+            "bottom": 1980.359375,
+            "width": 73.875,
+            "height": 36.59375,
+            "lines": 2,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Telegram",
+          "label": "Open Telegram",
+          "href": "https://t.me/tiladys_support",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 573.9375,
+            "y": 2072.859375,
+            "right": 729,
+            "bottom": 2117.859375,
+            "width": 155.0625,
+            "height": 45
+          },
+          "icon": {
+            "x": 586.9375,
+            "y": 2086.859375,
+            "right": 603.9375,
+            "bottom": 2103.859375,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 91,
+            "y": 2067.328125,
+            "right": 561.9375,
+            "bottom": 2123.375,
+            "width": 470.9375,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2036.359375,
+            "right": 750,
+            "bottom": 2154.359375,
+            "width": 732,
+            "height": 118
+          },
+          "text": {
+            "x": 610.9375,
+            "y": 2086.5625,
+            "right": 716,
+            "bottom": 2103.5625,
+            "width": 105.0625,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Instagram",
+          "label": "Open Instagram",
+          "href": "https://www.instagram.com/tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 569,
+            "y": 2199.765625,
+            "right": 729,
+            "bottom": 2256.953125,
+            "width": 160,
+            "height": 57.1875
+          },
+          "icon": {
+            "x": 582,
+            "y": 2219.859375,
+            "right": 599,
+            "bottom": 2236.859375,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 91,
+            "y": 2200.328125,
+            "right": 557,
+            "bottom": 2256.375,
+            "width": 466,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2169.359375,
+            "right": 750,
+            "bottom": 2287.359375,
+            "width": 732,
+            "height": 118
+          },
+          "text": {
+            "x": 606,
+            "y": 2209.765625,
+            "right": 676.34375,
+            "bottom": 2246.359375,
+            "width": 70.34375,
+            "height": 36.59375,
+            "lines": 2,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Email",
+          "label": "Send Email",
+          "href": "mailto:contact@tiladys.com",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 602.765625,
+            "y": 2338.859375,
+            "right": 729,
+            "bottom": 2383.859375,
+            "width": 126.234375,
+            "height": 45
+          },
+          "icon": {
+            "x": 615.765625,
+            "y": 2352.859375,
+            "right": 632.765625,
+            "bottom": 2369.859375,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 91,
+            "y": 2333.328125,
+            "right": 590.765625,
+            "bottom": 2389.375,
+            "width": 499.765625,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2302.359375,
+            "right": 750,
+            "bottom": 2420.359375,
+            "width": 732,
+            "height": 118
+          },
+          "text": {
+            "x": 639.765625,
+            "y": 2352.5625,
+            "right": 716,
+            "bottom": 2369.5625,
+            "width": 76.234375,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Phone",
+          "label": "Call Now",
+          "href": "tel:+491637235608",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 618.046875,
+            "y": 2471.859375,
+            "right": 729,
+            "bottom": 2516.859375,
+            "width": 110.953125,
+            "height": 45
+          },
+          "icon": {
+            "x": 631.046875,
+            "y": 2485.859375,
+            "right": 648.046875,
+            "bottom": 2502.859375,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 91,
+            "y": 2466.328125,
+            "right": 606.046875,
+            "bottom": 2522.375,
+            "width": 515.046875,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2435.359375,
+            "right": 750,
+            "bottom": 2553.359375,
+            "width": 732,
+            "height": 118
+          },
+          "text": {
+            "x": 655.046875,
+            "y": 2485.5625,
+            "right": 716,
+            "bottom": 2502.5625,
+            "width": 60.953125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Location",
+          "label": "View on Map",
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 589.875,
+            "y": 2604.859375,
+            "right": 729,
+            "bottom": 2649.859375,
+            "width": 139.125,
+            "height": 45
+          },
+          "icon": {
+            "x": 602.875,
+            "y": 2618.859375,
+            "right": 619.875,
+            "bottom": 2635.859375,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 91,
+            "y": 2599.328125,
+            "right": 577.875,
+            "bottom": 2655.375,
+            "width": 486.875,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 18,
+            "y": 2568.359375,
+            "right": 750,
+            "bottom": 2686.359375,
+            "width": 732,
+            "height": 118
+          },
+          "text": {
+            "x": 626.875,
+            "y": 2618.5625,
+            "right": 716,
+            "bottom": 2635.5625,
+            "width": 89.125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "overflow": false,
+      "spacing": "15px",
+      "cards": [
+        {
+          "title": "Threads",
+          "label": "Open Threads",
+          "href": "https://www.threads.com/@tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1071.265625,
+            "y": 604.5,
+            "right": 1218.984375,
+            "bottom": 649.5,
+            "width": 147.71875,
+            "height": 45
+          },
+          "icon": {
+            "x": 1084.265625,
+            "y": 618.5,
+            "right": 1101.265625,
+            "bottom": 635.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 824.65625,
+            "y": 598.96875,
+            "right": 1059.265625,
+            "bottom": 655.015625,
+            "width": 234.609375,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 751.65625,
+            "y": 568,
+            "right": 1239.984375,
+            "bottom": 686,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1108.265625,
+            "y": 618.203125,
+            "right": 1205.984375,
+            "bottom": 635.203125,
+            "width": 97.71875,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "WhatsApp",
+          "label": "Open WhatsApp",
+          "href": "https://wa.me/491637235608",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1058.984375,
+            "y": 731.40625,
+            "right": 1218.984375,
+            "bottom": 788.59375,
+            "width": 160,
+            "height": 57.1875
+          },
+          "icon": {
+            "x": 1071.984375,
+            "y": 751.5,
+            "right": 1088.984375,
+            "bottom": 768.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 824.65625,
+            "y": 731.96875,
+            "right": 1046.984375,
+            "bottom": 788.015625,
+            "width": 222.328125,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 751.65625,
+            "y": 701,
+            "right": 1239.984375,
+            "bottom": 819,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1095.984375,
+            "y": 741.40625,
+            "right": 1169.859375,
+            "bottom": 778,
+            "width": 73.875,
+            "height": 36.59375,
+            "lines": 2,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Telegram",
+          "label": "Open Telegram",
+          "href": "https://t.me/tiladys_support",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1063.921875,
+            "y": 870.5,
+            "right": 1218.984375,
+            "bottom": 915.5,
+            "width": 155.0625,
+            "height": 45
+          },
+          "icon": {
+            "x": 1076.921875,
+            "y": 884.5,
+            "right": 1093.921875,
+            "bottom": 901.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 824.65625,
+            "y": 864.96875,
+            "right": 1051.921875,
+            "bottom": 921.015625,
+            "width": 227.265625,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 751.65625,
+            "y": 834,
+            "right": 1239.984375,
+            "bottom": 952,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1100.921875,
+            "y": 884.203125,
+            "right": 1205.984375,
+            "bottom": 901.203125,
+            "width": 105.0625,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Instagram",
+          "label": "Open Instagram",
+          "href": "https://www.instagram.com/tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1058.984375,
+            "y": 997.40625,
+            "right": 1218.984375,
+            "bottom": 1054.59375,
+            "width": 160,
+            "height": 57.1875
+          },
+          "icon": {
+            "x": 1071.984375,
+            "y": 1017.5,
+            "right": 1088.984375,
+            "bottom": 1034.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 824.65625,
+            "y": 997.96875,
+            "right": 1046.984375,
+            "bottom": 1054.015625,
+            "width": 222.328125,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 751.65625,
+            "y": 967,
+            "right": 1239.984375,
+            "bottom": 1085,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1095.984375,
+            "y": 1007.40625,
+            "right": 1166.328125,
+            "bottom": 1044,
+            "width": 70.34375,
+            "height": 36.59375,
+            "lines": 2,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Email",
+          "label": "Send Email",
+          "href": "mailto:contact@tiladys.com",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 1092.75,
+            "y": 1136.5,
+            "right": 1218.984375,
+            "bottom": 1181.5,
+            "width": 126.234375,
+            "height": 45
+          },
+          "icon": {
+            "x": 1105.75,
+            "y": 1150.5,
+            "right": 1122.75,
+            "bottom": 1167.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 824.65625,
+            "y": 1130.96875,
+            "right": 1080.75,
+            "bottom": 1187.015625,
+            "width": 256.09375,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 751.65625,
+            "y": 1100,
+            "right": 1239.984375,
+            "bottom": 1218,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1129.75,
+            "y": 1150.203125,
+            "right": 1205.984375,
+            "bottom": 1167.203125,
+            "width": 76.234375,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Phone",
+          "label": "Call Now",
+          "href": "tel:+491637235608",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 1108.03125,
+            "y": 1269.5,
+            "right": 1218.984375,
+            "bottom": 1314.5,
+            "width": 110.953125,
+            "height": 45
+          },
+          "icon": {
+            "x": 1121.03125,
+            "y": 1283.5,
+            "right": 1138.03125,
+            "bottom": 1300.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 824.65625,
+            "y": 1263.96875,
+            "right": 1096.03125,
+            "bottom": 1320.015625,
+            "width": 271.375,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 751.65625,
+            "y": 1233,
+            "right": 1239.984375,
+            "bottom": 1351,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1145.03125,
+            "y": 1283.203125,
+            "right": 1205.984375,
+            "bottom": 1300.203125,
+            "width": 60.953125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Location",
+          "label": "View on Map",
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1079.859375,
+            "y": 1404.890625,
+            "right": 1218.984375,
+            "bottom": 1449.890625,
+            "width": 139.125,
+            "height": 45
+          },
+          "icon": {
+            "x": 1092.859375,
+            "y": 1418.890625,
+            "right": 1109.859375,
+            "bottom": 1435.890625,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 824.65625,
+            "y": 1387,
+            "right": 1067.859375,
+            "bottom": 1467.796875,
+            "width": 243.203125,
+            "height": 80.796875
+          },
+          "card": {
+            "x": 751.65625,
+            "y": 1366,
+            "right": 1239.984375,
+            "bottom": 1488.796875,
+            "width": 488.328125,
+            "height": 122.796875
+          },
+          "text": {
+            "x": 1116.859375,
+            "y": 1418.59375,
+            "right": 1205.984375,
+            "bottom": 1435.59375,
+            "width": 89.125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "overflow": false,
+      "spacing": "15px",
+      "cards": [
+        {
+          "title": "Threads",
+          "label": "Open Threads",
+          "href": "https://www.threads.com/@tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1151.265625,
+            "y": 604.5,
+            "right": 1298.984375,
+            "bottom": 649.5,
+            "width": 147.71875,
+            "height": 45
+          },
+          "icon": {
+            "x": 1164.265625,
+            "y": 618.5,
+            "right": 1181.265625,
+            "bottom": 635.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 904.65625,
+            "y": 598.96875,
+            "right": 1139.265625,
+            "bottom": 655.015625,
+            "width": 234.609375,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 831.65625,
+            "y": 568,
+            "right": 1319.984375,
+            "bottom": 686,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1188.265625,
+            "y": 618.203125,
+            "right": 1285.984375,
+            "bottom": 635.203125,
+            "width": 97.71875,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "WhatsApp",
+          "label": "Open WhatsApp",
+          "href": "https://wa.me/491637235608",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1138.984375,
+            "y": 731.40625,
+            "right": 1298.984375,
+            "bottom": 788.59375,
+            "width": 160,
+            "height": 57.1875
+          },
+          "icon": {
+            "x": 1151.984375,
+            "y": 751.5,
+            "right": 1168.984375,
+            "bottom": 768.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 904.65625,
+            "y": 731.96875,
+            "right": 1126.984375,
+            "bottom": 788.015625,
+            "width": 222.328125,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 831.65625,
+            "y": 701,
+            "right": 1319.984375,
+            "bottom": 819,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1175.984375,
+            "y": 741.40625,
+            "right": 1249.859375,
+            "bottom": 778,
+            "width": 73.875,
+            "height": 36.59375,
+            "lines": 2,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Telegram",
+          "label": "Open Telegram",
+          "href": "https://t.me/tiladys_support",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1143.921875,
+            "y": 870.5,
+            "right": 1298.984375,
+            "bottom": 915.5,
+            "width": 155.0625,
+            "height": 45
+          },
+          "icon": {
+            "x": 1156.921875,
+            "y": 884.5,
+            "right": 1173.921875,
+            "bottom": 901.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 904.65625,
+            "y": 864.96875,
+            "right": 1131.921875,
+            "bottom": 921.015625,
+            "width": 227.265625,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 831.65625,
+            "y": 834,
+            "right": 1319.984375,
+            "bottom": 952,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1180.921875,
+            "y": 884.203125,
+            "right": 1285.984375,
+            "bottom": 901.203125,
+            "width": 105.0625,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Instagram",
+          "label": "Open Instagram",
+          "href": "https://www.instagram.com/tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1138.984375,
+            "y": 997.40625,
+            "right": 1298.984375,
+            "bottom": 1054.59375,
+            "width": 160,
+            "height": 57.1875
+          },
+          "icon": {
+            "x": 1151.984375,
+            "y": 1017.5,
+            "right": 1168.984375,
+            "bottom": 1034.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 904.65625,
+            "y": 997.96875,
+            "right": 1126.984375,
+            "bottom": 1054.015625,
+            "width": 222.328125,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 831.65625,
+            "y": 967,
+            "right": 1319.984375,
+            "bottom": 1085,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1175.984375,
+            "y": 1007.40625,
+            "right": 1246.328125,
+            "bottom": 1044,
+            "width": 70.34375,
+            "height": 36.59375,
+            "lines": 2,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Email",
+          "label": "Send Email",
+          "href": "mailto:contact@tiladys.com",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 1172.75,
+            "y": 1136.5,
+            "right": 1298.984375,
+            "bottom": 1181.5,
+            "width": 126.234375,
+            "height": 45
+          },
+          "icon": {
+            "x": 1185.75,
+            "y": 1150.5,
+            "right": 1202.75,
+            "bottom": 1167.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 904.65625,
+            "y": 1130.96875,
+            "right": 1160.75,
+            "bottom": 1187.015625,
+            "width": 256.09375,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 831.65625,
+            "y": 1100,
+            "right": 1319.984375,
+            "bottom": 1218,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1209.75,
+            "y": 1150.203125,
+            "right": 1285.984375,
+            "bottom": 1167.203125,
+            "width": 76.234375,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Phone",
+          "label": "Call Now",
+          "href": "tel:+491637235608",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 1188.03125,
+            "y": 1269.5,
+            "right": 1298.984375,
+            "bottom": 1314.5,
+            "width": 110.953125,
+            "height": 45
+          },
+          "icon": {
+            "x": 1201.03125,
+            "y": 1283.5,
+            "right": 1218.03125,
+            "bottom": 1300.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 904.65625,
+            "y": 1263.96875,
+            "right": 1176.03125,
+            "bottom": 1320.015625,
+            "width": 271.375,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 831.65625,
+            "y": 1233,
+            "right": 1319.984375,
+            "bottom": 1351,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1225.03125,
+            "y": 1283.203125,
+            "right": 1285.984375,
+            "bottom": 1300.203125,
+            "width": 60.953125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Location",
+          "label": "View on Map",
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1159.859375,
+            "y": 1404.890625,
+            "right": 1298.984375,
+            "bottom": 1449.890625,
+            "width": 139.125,
+            "height": 45
+          },
+          "icon": {
+            "x": 1172.859375,
+            "y": 1418.890625,
+            "right": 1189.859375,
+            "bottom": 1435.890625,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 904.65625,
+            "y": 1387,
+            "right": 1147.859375,
+            "bottom": 1467.796875,
+            "width": 243.203125,
+            "height": 80.796875
+          },
+          "card": {
+            "x": 831.65625,
+            "y": 1366,
+            "right": 1319.984375,
+            "bottom": 1488.796875,
+            "width": 488.328125,
+            "height": 122.796875
+          },
+          "text": {
+            "x": 1196.859375,
+            "y": 1418.59375,
+            "right": 1285.984375,
+            "bottom": 1435.59375,
+            "width": 89.125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "overflow": false,
+      "spacing": "15px",
+      "cards": [
+        {
+          "title": "Threads",
+          "label": "Open Threads",
+          "href": "https://www.threads.com/@tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1391.265625,
+            "y": 604.5,
+            "right": 1538.984375,
+            "bottom": 649.5,
+            "width": 147.71875,
+            "height": 45
+          },
+          "icon": {
+            "x": 1404.265625,
+            "y": 618.5,
+            "right": 1421.265625,
+            "bottom": 635.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 1144.65625,
+            "y": 598.96875,
+            "right": 1379.265625,
+            "bottom": 655.015625,
+            "width": 234.609375,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 1071.65625,
+            "y": 568,
+            "right": 1559.984375,
+            "bottom": 686,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1428.265625,
+            "y": 618.203125,
+            "right": 1525.984375,
+            "bottom": 635.203125,
+            "width": 97.71875,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "WhatsApp",
+          "label": "Open WhatsApp",
+          "href": "https://wa.me/491637235608",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1378.984375,
+            "y": 731.40625,
+            "right": 1538.984375,
+            "bottom": 788.59375,
+            "width": 160,
+            "height": 57.1875
+          },
+          "icon": {
+            "x": 1391.984375,
+            "y": 751.5,
+            "right": 1408.984375,
+            "bottom": 768.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 1144.65625,
+            "y": 731.96875,
+            "right": 1366.984375,
+            "bottom": 788.015625,
+            "width": 222.328125,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 1071.65625,
+            "y": 701,
+            "right": 1559.984375,
+            "bottom": 819,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1415.984375,
+            "y": 741.40625,
+            "right": 1489.859375,
+            "bottom": 778,
+            "width": 73.875,
+            "height": 36.59375,
+            "lines": 2,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Telegram",
+          "label": "Open Telegram",
+          "href": "https://t.me/tiladys_support",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1383.921875,
+            "y": 870.5,
+            "right": 1538.984375,
+            "bottom": 915.5,
+            "width": 155.0625,
+            "height": 45
+          },
+          "icon": {
+            "x": 1396.921875,
+            "y": 884.5,
+            "right": 1413.921875,
+            "bottom": 901.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 1144.65625,
+            "y": 864.96875,
+            "right": 1371.921875,
+            "bottom": 921.015625,
+            "width": 227.265625,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 1071.65625,
+            "y": 834,
+            "right": 1559.984375,
+            "bottom": 952,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1420.921875,
+            "y": 884.203125,
+            "right": 1525.984375,
+            "bottom": 901.203125,
+            "width": 105.0625,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Instagram",
+          "label": "Open Instagram",
+          "href": "https://www.instagram.com/tiladys.de",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1378.984375,
+            "y": 997.40625,
+            "right": 1538.984375,
+            "bottom": 1054.59375,
+            "width": 160,
+            "height": 57.1875
+          },
+          "icon": {
+            "x": 1391.984375,
+            "y": 1017.5,
+            "right": 1408.984375,
+            "bottom": 1034.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 1144.65625,
+            "y": 997.96875,
+            "right": 1366.984375,
+            "bottom": 1054.015625,
+            "width": 222.328125,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 1071.65625,
+            "y": 967,
+            "right": 1559.984375,
+            "bottom": 1085,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1415.984375,
+            "y": 1007.40625,
+            "right": 1486.328125,
+            "bottom": 1044,
+            "width": 70.34375,
+            "height": 36.59375,
+            "lines": 2,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Email",
+          "label": "Send Email",
+          "href": "mailto:contact@tiladys.com",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 1412.75,
+            "y": 1136.5,
+            "right": 1538.984375,
+            "bottom": 1181.5,
+            "width": 126.234375,
+            "height": 45
+          },
+          "icon": {
+            "x": 1425.75,
+            "y": 1150.5,
+            "right": 1442.75,
+            "bottom": 1167.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 1144.65625,
+            "y": 1130.96875,
+            "right": 1400.75,
+            "bottom": 1187.015625,
+            "width": 256.09375,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 1071.65625,
+            "y": 1100,
+            "right": 1559.984375,
+            "bottom": 1218,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1449.75,
+            "y": 1150.203125,
+            "right": 1525.984375,
+            "bottom": 1167.203125,
+            "width": 76.234375,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Phone",
+          "label": "Call Now",
+          "href": "tel:+491637235608",
+          "target": null,
+          "rel": null,
+          "button": {
+            "x": 1428.03125,
+            "y": 1269.5,
+            "right": 1538.984375,
+            "bottom": 1314.5,
+            "width": 110.953125,
+            "height": 45
+          },
+          "icon": {
+            "x": 1441.03125,
+            "y": 1283.5,
+            "right": 1458.03125,
+            "bottom": 1300.5,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 1144.65625,
+            "y": 1263.96875,
+            "right": 1416.03125,
+            "bottom": 1320.015625,
+            "width": 271.375,
+            "height": 56.046875
+          },
+          "card": {
+            "x": 1071.65625,
+            "y": 1233,
+            "right": 1559.984375,
+            "bottom": 1351,
+            "width": 488.328125,
+            "height": 118
+          },
+          "text": {
+            "x": 1465.03125,
+            "y": 1283.203125,
+            "right": 1525.984375,
+            "bottom": 1300.203125,
+            "width": 60.953125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        },
+        {
+          "title": "Location",
+          "label": "View on Map",
+          "href": "https://maps.app.goo.gl/ofUTFfRH1XZ8TV4Z6",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "button": {
+            "x": 1399.859375,
+            "y": 1404.890625,
+            "right": 1538.984375,
+            "bottom": 1449.890625,
+            "width": 139.125,
+            "height": 45
+          },
+          "icon": {
+            "x": 1412.859375,
+            "y": 1418.890625,
+            "right": 1429.859375,
+            "bottom": 1435.890625,
+            "width": 17,
+            "height": 17
+          },
+          "copy": {
+            "x": 1144.65625,
+            "y": 1387,
+            "right": 1387.859375,
+            "bottom": 1467.796875,
+            "width": 243.203125,
+            "height": 80.796875
+          },
+          "card": {
+            "x": 1071.65625,
+            "y": 1366,
+            "right": 1559.984375,
+            "bottom": 1488.796875,
+            "width": 488.328125,
+            "height": 122.796875
+          },
+          "text": {
+            "x": 1436.859375,
+            "y": 1418.59375,
+            "right": 1525.984375,
+            "bottom": 1435.59375,
+            "width": 89.125,
+            "height": 17,
+            "lines": 1,
+            "clipped": false,
+            "fullLabel": ""
+          },
+          "style": {
+            "padding": [
+              "8px",
+              "12px",
+              "8px",
+              "12px"
+            ],
+            "cardPadding": [
+              "20px",
+              "20px",
+              "20px",
+              "20px"
+            ],
+            "border": [
+              "1px",
+              "1px",
+              "1px",
+              "1px"
+            ],
+            "radius": "8px",
+            "font": "14px",
+            "weight": "800",
+            "gap": "7px",
+            "minHeight": "45px",
+            "whiteSpace": "normal"
+          }
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "requests": []
+}

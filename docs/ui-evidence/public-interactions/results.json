@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "Featured previous/next change only the selected feature; no autoplay control/timer",
+    "Category chips and reset update real route-filtered results",
+    "Actual catalogue category dropdown and clear retain valid route semantics",
+    "Gallery opens/zooms within its own scroll region; native Escape closes and restores trigger focus",
+    "FAQ opens with the native Space key",
+    "Browser-boundary image failure produces an honest fallback with reserved 16:10 frames"
+  ],
+  "consoleErrors": [],
+  "networkErrors": [],
+  "testBoundaryFailure": "Only public project image requests intentionally fail in the final state test"
+}

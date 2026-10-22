@@ -1,0 +1,449 @@
+{
+  "method": "Same unchanged local production build, three cold-browser-cache runs per route/device; server/DB warm. Lighthouse simulated throttling, installed Chrome. No before/optimized comparison because no application optimization was made; no RUM, field p75 or field INP.",
+  "summary": [
+    {
+      "route": "home",
+      "mode": "mobile",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 0.96,
+          "min": 0.93,
+          "max": 0.96
+        },
+        "lcpMs": {
+          "median": 1968.9108999999999,
+          "min": 1454.4201,
+          "max": 2315.546375
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbtMs": {
+          "median": 244.50000000000023,
+          "min": 201,
+          "max": 270
+        },
+        "ttfbMs": {
+          "median": 23,
+          "min": 22,
+          "max": 25
+        },
+        "bytes": {
+          "median": 390666,
+          "min": 389743,
+          "max": 390669
+        }
+      }
+    },
+    {
+      "route": "home",
+      "mode": "desktop",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 1,
+          "min": 1,
+          "max": 1
+        },
+        "lcpMs": {
+          "median": 656.9845,
+          "min": 613.53625,
+          "max": 692.7436250000001
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbtMs": {
+          "median": 23,
+          "min": 18,
+          "max": 43
+        },
+        "ttfbMs": {
+          "median": 22,
+          "min": 18,
+          "max": 26
+        },
+        "bytes": {
+          "median": 373207,
+          "min": 358379,
+          "max": 373624
+        }
+      }
+    },
+    {
+      "route": "services",
+      "mode": "mobile",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 0.79,
+          "min": 0.79,
+          "max": 0.86
+        },
+        "lcpMs": {
+          "median": 3331.697875,
+          "min": 2583.9463,
+          "max": 3436.103675
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbtMs": {
+          "median": 483,
+          "min": 460.0000000000002,
+          "max": 516.5
+        },
+        "ttfbMs": {
+          "median": 25,
+          "min": 20,
+          "max": 26
+        },
+        "bytes": {
+          "median": 292847,
+          "min": 292426,
+          "max": 293113
+        }
+      }
+    },
+    {
+      "route": "services",
+      "mode": "desktop",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 0.99,
+          "min": 0.98,
+          "max": 1
+        },
+        "lcpMs": {
+          "median": 785.3936999999999,
+          "min": 744.774125,
+          "max": 792.944825
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbtMs": {
+          "median": 93,
+          "min": 39.99999999999994,
+          "max": 108.634975
+        },
+        "ttfbMs": {
+          "median": 15,
+          "min": 13,
+          "max": 25
+        },
+        "bytes": {
+          "median": 301310,
+          "min": 301148,
+          "max": 301773
+        }
+      }
+    },
+    {
+      "route": "portfolio",
+      "mode": "mobile",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 0.94,
+          "min": 0.9,
+          "max": 0.95
+        },
+        "lcpMs": {
+          "median": 2207.6688,
+          "min": 1617.1903750000001,
+          "max": 2860.9508000000005
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbtMs": {
+          "median": 250.5,
+          "min": 249.5,
+          "max": 252
+        },
+        "ttfbMs": {
+          "median": 18,
+          "min": 18,
+          "max": 19
+        },
+        "bytes": {
+          "median": 365077,
+          "min": 365076,
+          "max": 377424
+        }
+      }
+    },
+    {
+      "route": "portfolio",
+      "mode": "desktop",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 1,
+          "min": 0.84,
+          "max": 1
+        },
+        "lcpMs": {
+          "median": 672.004375,
+          "min": 653.214875,
+          "max": 710.2171249999999
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0.3115467367917762
+        },
+        "tbtMs": {
+          "median": 44.69912500000015,
+          "min": 26.5,
+          "max": 48.00000000000017
+        },
+        "ttfbMs": {
+          "median": 18,
+          "min": 18,
+          "max": 22
+        },
+        "bytes": {
+          "median": 427326,
+          "min": 427282,
+          "max": 436292
+        }
+      }
+    },
+    {
+      "route": "contact",
+      "mode": "mobile",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 0.89,
+          "min": 0.84,
+          "max": 0.89
+        },
+        "lcpMs": {
+          "median": 2685.2842,
+          "min": 2666.4108,
+          "max": 2698.4977
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbtMs": {
+          "median": 339.5,
+          "min": 337,
+          "max": 494.5
+        },
+        "ttfbMs": {
+          "median": 20,
+          "min": 19,
+          "max": 22
+        },
+        "bytes": {
+          "median": 305573,
+          "min": 305572,
+          "max": 305575
+        }
+      }
+    },
+    {
+      "route": "contact",
+      "mode": "desktop",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 1,
+          "min": 1,
+          "max": 1
+        },
+        "lcpMs": {
+          "median": 601.0922499999999,
+          "min": 598.33375,
+          "max": 602.9455
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbtMs": {
+          "median": 36.18154999999996,
+          "min": 35.33325000000002,
+          "max": 38.61089999999996
+        },
+        "ttfbMs": {
+          "median": 19,
+          "min": 19,
+          "max": 23
+        },
+        "bytes": {
+          "median": 329262,
+          "min": 328945,
+          "max": 329742
+        }
+      }
+    },
+    {
+      "route": "inbox",
+      "mode": "mobile",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 0.92,
+          "min": 0.9,
+          "max": 0.94
+        },
+        "lcpMs": {
+          "median": 2397.3711,
+          "min": 1740.8246,
+          "max": 2399.8067
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbtMs": {
+          "median": 289,
+          "min": 282.59664999999995,
+          "max": 338.81444999999997
+        },
+        "ttfbMs": {
+          "median": 46,
+          "min": 40,
+          "max": 114
+        },
+        "bytes": {
+          "median": 212518,
+          "min": 212493,
+          "max": 212519
+        }
+      }
+    },
+    {
+      "route": "inbox",
+      "mode": "desktop",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 1,
+          "min": 1,
+          "max": 1
+        },
+        "lcpMs": {
+          "median": 535.2513,
+          "min": 534.1351,
+          "max": 537.8129
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbtMs": {
+          "median": 40,
+          "min": 33,
+          "max": 43
+        },
+        "ttfbMs": {
+          "median": 35,
+          "min": 33,
+          "max": 35
+        },
+        "bytes": {
+          "median": 231394,
+          "min": 230847,
+          "max": 231490
+        }
+      }
+    },
+    {
+      "route": "invoices",
+      "mode": "mobile",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 0.92,
+          "min": 0.89,
+          "max": 0.93
+        },
+        "lcpMs": {
+          "median": 1826.7814000000003,
+          "min": 1456.1206000000002,
+          "max": 1831.7546
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbtMs": {
+          "median": 341.5000000000001,
+          "min": 302.50000000000034,
+          "max": 431.0000000000001
+        },
+        "ttfbMs": {
+          "median": 70,
+          "min": 63,
+          "max": 89
+        },
+        "bytes": {
+          "median": 235517,
+          "min": 235516,
+          "max": 235698
+        }
+      }
+    },
+    {
+      "route": "invoices",
+      "mode": "desktop",
+      "samples": 3,
+      "metrics": {
+        "score": {
+          "median": 1,
+          "min": 1,
+          "max": 1
+        },
+        "lcpMs": {
+          "median": 574.0725,
+          "min": 479.69720000000007,
+          "max": 578.9110000000001
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "tbtMs": {
+          "median": 46,
+          "min": 42.5,
+          "max": 52
+        },
+        "ttfbMs": {
+          "median": 66,
+          "min": 49,
+          "max": 69
+        },
+        "bytes": {
+          "median": 252121,
+          "min": 252022,
+          "max": 252403
+        }
+      }
+    }
+  ]
+}

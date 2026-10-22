@@ -1,0 +1,50 @@
+[
+  {
+    "id": "6w5tx-1792595669997-4abaed5ab579",
+    "timestamp": 1792595669997,
+    "deploymentId": "dpl_R2D4fuBc7MKSpc3CCqjuho1xjrmz",
+    "requestPath": "/en/portfolio/donetsfit",
+    "responseStatusCode": 500,
+    "message": "Error [PrismaClientKnownRequestError]: \nInvalid `prisma.project.findFirst()` invocation:\n\n\nThe column `ProjectImage.archivedAt` does not exist in the current database.\n    at async m (.next/server/chunks/89.js:1:3468) {\n  code: 'P2022',\n  meta: { modelName: 'Project', column: 'ProjectImage.archivedAt' },\n  clientVersion: '6.19.3',\n  digest: '3955836329'\n}"
+  },
+  {
+    "id": "ghcv5-1792595512378-24d353fddacb",
+    "timestamp": 1792595512378,
+    "deploymentId": "dpl_R2D4fuBc7MKSpc3CCqjuho1xjrmz",
+    "requestPath": "/en/portfolio",
+    "responseStatusCode": 200,
+    "message": ""
+  },
+  {
+    "id": "wrd2w-1792595510048-1c99ad93ecdf",
+    "timestamp": 1792595510048,
+    "deploymentId": "dpl_R2D4fuBc7MKSpc3CCqjuho1xjrmz",
+    "requestPath": "/en/portfolio",
+    "responseStatusCode": 200,
+    "message": "[PUBLIC_PORTFOLIO_UNAVAILABLE]"
+  },
+  {
+    "id": "wrd2w-1792595507478-c0529fdf5803",
+    "timestamp": 1792595507478,
+    "deploymentId": "dpl_R2D4fuBc7MKSpc3CCqjuho1xjrmz",
+    "requestPath": "/en/portfolio",
+    "responseStatusCode": 200,
+    "message": "[PUBLIC_PORTFOLIO_UNAVAILABLE]"
+  },
+  {
+    "id": "45dv7-1792595507068-72cc368a6863",
+    "timestamp": 1792595507068,
+    "deploymentId": "dpl_R2D4fuBc7MKSpc3CCqjuho1xjrmz",
+    "requestPath": "/en/portfolio",
+    "responseStatusCode": 200,
+    "message": "[PUBLIC_PORTFOLIO_UNAVAILABLE]"
+  },
+  {
+    "id": "z5rrt-1792595507029-287ca3af905c",
+    "timestamp": 1792595507029,
+    "deploymentId": "dpl_R2D4fuBc7MKSpc3CCqjuho1xjrmz",
+    "requestPath": "/en/portfolio",
+    "responseStatusCode": 200,
+    "message": ""
+  }
+]
