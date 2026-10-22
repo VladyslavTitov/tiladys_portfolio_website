@@ -1,5 +1,7 @@
 # Control Preview schema recovery — Phase 4 complete
 
+**Approved recovery completed:** [Public rollback, token revocation and remaining Preview steps](approved-recovery-results.md). The live public Portfolio is restored to the verified `e82bff0` release; Production data/schema and Control remain unchanged. The unintended public bypass token is revoked. Preview origin correction is prepared and administrator creation remains deferred.
+
 **New incident checkpoint:** [Preview login and Production Portfolio investigation](portfolio-login-incident.md) confirms separate Preview account/origin issues and a Production code/schema mismatch. Hosted recovery-candidate validation and explicit approval requirements are recorded there. The Phase 4 Preview migration approval below does not authorize Production changes.
 
 **Current status: Phase 4 was approved and completed on 21 October 2026 at 16:28 Europe/Amsterdam. Exactly the ten approved Preview migrations were applied; all 23 migrations are complete, the release guard passes, and original data is intact. Control Preview is ready for a new Vercel deployment from the schema/build standpoint. No deployment or Production change occurred.** See [final Phase 4 results and evidence](phase4-results.md).

@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-10-21T16:45:53.080Z",
+  "deployment": {
+    "id": "dpl_F5AN2yCPU9pjEEXzXzzjXM7z1e1i",
+    "url": "tiladys-control-e72rm02i0-tiladys.vercel.app",
+    "target": null,
+    "readyState": "READY",
+    "createdAt": 1792600658927,
+    "ready": 1792600792342,
+    "alias": [
+      "tiladys-control-git-recovery-vercel-neon-schema-fb31b4-tiladys.vercel.app"
+    ],
+    "sha": "ca04d4403566d9917c11725979ea5d9783c0afea",
+    "ref": "recovery/vercel-neon-schema-20261021",
+    "buildCommand": "npm --prefix ../.. run db:generate && npm --prefix ../.. run db:check:crm && npm run build"
+  },
+  "alias": "tiladys-control-git-recovery-vercel-neon-schema-fb31b4-tiladys.vercel.app",
+  "immutable": "https://tiladys-control-e72rm02i0-tiladys.vercel.app",
+  "environment": [
+    {
+      "key": "CONTROL_URL",
+      "gitBranch": "feature/services-redesign",
+      "effective": false,
+      "updatedAt": 1790196205997
+    }
+  ],
+  "requests": [
+    {
+      "origin": "https://tiladys-control-e72rm02i0-tiladys.vercel.app",
+      "status": 400,
+      "error": "Invalid"
+    },
+    {
+      "origin": "https://tiladys-control-git-recovery-vercel-neon-schema-fb31b4-tiladys.vercel.app",
+      "status": 403,
+      "error": "Invalid origin"
+    }
+  ],
+  "tests": {
+    "immutableAccepted": true,
+    "aliasCurrentlyRejected": true,
+    "proposedAliasAccepted": true,
+    "immutableStillAccepted": true,
+    "attackerRejected": true,
+    "missingOriginRejected": true,
+    "suffixAttackRejected": true
+  },
+  "accountState": {
+    "administrators": 0,
+    "sessions": 0
+  },
+  "fullPreviewReleaseGuard": "pass, all 23 migrations",
+  "proposal": {
+    "projectId": "prj_6YJMTiWWHE0lX8nzUYCUpA82tEvV",
+    "teamId": "team_xIA4aFDewxF4sHVLtMnss2me",
+    "operation": "Create or merge only this exact Preview branch origin after separate approval",
+    "key": "CONTROL_ALLOWED_ORIGINS",
+    "value": "https://tiladys-control-git-recovery-vercel-neon-schema-fb31b4-tiladys.vercel.app",
+    "type": "plain",
+    "target": [
+      "preview"
+    ],
+    "gitBranch": "recovery/vercel-neon-schema-20261021"
+  },
+  "configurationApplied": false,
+  "deployed": false,
+  "accountsCreated": 0,
+  "productionAuthenticationTouched": false
+}

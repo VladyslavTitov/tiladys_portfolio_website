@@ -1,0 +1,378 @@
+{
+  "checkedAt": "2026-10-21T16:41:29.745Z",
+  "projectId": "prj_JWa4iXqzV70GdY3TKDDL2Q5poRRv",
+  "identity": {
+    "sha256": "af9814811b9b54d859a8d6e32e2dae6cf6372f4530ef3876b296147f8ce90e90",
+    "scope": "automation-bypass",
+    "isEnvVar": true,
+    "createdAt": 1792596609679,
+    "createdBy": "f6pdOqPjSnenl2MfjOJPhYf3"
+  },
+  "environment": [
+    {
+      "id": "ZEcJ3B7bNkwvW5fV",
+      "key": "NEXT_PUBLIC_CONTROL_API_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "readable": false,
+      "matchesUnintendedToken": false
+    },
+    {
+      "id": "sYrV5Tl57IidFLoG",
+      "key": "CONTROL_API_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "readable": false,
+      "matchesUnintendedToken": false
+    }
+  ],
+  "integrationConfigurations": [],
+  "checkedIntegrationCount": 1,
+  "exactTokenReferencesInTrackedFiles": [],
+  "applicationAndCiBypassReferences": [],
+  "projectHookOrCronReferences": false,
+  "otherPublicTokenFingerprints": [],
+  "controlTokenFingerprints": [
+    {
+      "sha256": "d6c6e2d5a24b6bd662842013e3d823bd269d93910f243587a6072656c4aad84a",
+      "scope": "automation-bypass",
+      "isEnvVar": true,
+      "createdAt": 1790060005123,
+      "createdBy": "f6pdOqPjSnenl2MfjOJPhYf3"
+    }
+  ],
+  "publicProtection": {
+    "ssoProtection": {
+      "deploymentType": "all_except_custom_domains"
+    },
+    "autoExposeSystemEnvs": true
+  },
+  "controlProtection": {
+    "ssoProtection": {
+      "deploymentType": "all_except_custom_domains"
+    },
+    "autoExposeSystemEnvs": true
+  },
+  "publicEnv": [
+    {
+      "id": "1aGmdndodZCzkKZv",
+      "key": "SMTP_FROM",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119461373,
+      "updatedAt": 1791119461373
+    },
+    {
+      "id": "1SCVTAw512NX1dFt",
+      "key": "SMTP_REPLY_TO",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119464180,
+      "updatedAt": 1791119464180
+    },
+    {
+      "id": "3sCbzdPmeCuEfbVU",
+      "key": "POSTGRES_DATABASE",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "aFYy42Kb9AGVmweh",
+      "key": "CONTACT_IP_HEADER",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115228861,
+      "updatedAt": 1791115228861
+    },
+    {
+      "id": "bB59GvLOVWnuV51B",
+      "key": "DATABASE_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "BTm0JgxGBEFPuXBA",
+      "key": "PGHOST_UNPOOLED",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "c0fh8y9DTokkpmqY",
+      "key": "POSTGRES_PASSWORD",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "c9Q0jeQoNjQDAAeS",
+      "key": "SMTP_USER",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119458524,
+      "updatedAt": 1791119458524
+    },
+    {
+      "id": "DsokZofFKejd8EwY",
+      "key": "CONTACT_UPLOADS_ENABLED",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115277555,
+      "updatedAt": 1791115277555
+    },
+    {
+      "id": "EeeYLk4mhDrwzIou",
+      "key": "PGPASSWORD",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "EJx9XSsub9hxvRjR",
+      "key": "SMTP_HOST",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119452706,
+      "updatedAt": 1791119452706
+    },
+    {
+      "id": "fkFFVhLfKWBmVZck",
+      "key": "CONTACT_RATE_LIMIT_SECRET",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115225326,
+      "updatedAt": 1791115225326
+    },
+    {
+      "id": "gqPP0P0LHrbTxTF9",
+      "key": "POSTGRES_USER",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "H8Gakpkt7oSBz1Yv",
+      "key": "VITE_NEON_AUTH_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "JDudpk5SP8N8jYLf",
+      "key": "PGUSER",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "k6yQZPRRqj8mk9Zq",
+      "key": "POSTGRES_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "LkrRGXb2kYAc1m2U",
+      "key": "CONTACT_AUTO_REPLY_ENABLED",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119466930,
+      "updatedAt": 1791119466930
+    },
+    {
+      "id": "n0S2k6T1MSsnirDt",
+      "key": "POSTGRES_PRISMA_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "ncJG6SheNKhEfD9a",
+      "key": "SITE_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "customEnvironmentIds": [],
+      "createdAt": 1785949386102,
+      "updatedAt": 1785949386102
+    },
+    {
+      "id": "OD01yzVxtw4XlyAA",
+      "key": "POSTGRES_HOST",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "pz19MbCBzP1Ryugc",
+      "key": "NEON_PROJECT_ID",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203544,
+      "updatedAt": 1791115203544
+    },
+    {
+      "id": "quCx8hW4bu6ntAgz",
+      "key": "PGDATABASE",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "RLneqGh5GukdR9XN",
+      "key": "NEXT_PUBLIC_SITE_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "customEnvironmentIds": [],
+      "createdAt": 1785949373152,
+      "updatedAt": 1785949373152
+    },
+    {
+      "id": "sYrV5Tl57IidFLoG",
+      "key": "CONTROL_API_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "customEnvironmentIds": [],
+      "createdAt": 1785949350170,
+      "updatedAt": 1785949350170
+    },
+    {
+      "id": "vhfXRREXD26iOlgt",
+      "key": "DATABASE_URL_UNPOOLED",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "vXg4K5gAyOq3BSDr",
+      "key": "NEON_AUTH_BASE_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "wgNvJkRdiMq4o5ZD",
+      "key": "POSTGRES_URL_NO_SSL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "xtnQjWC9ZIp8wV0v",
+      "key": "SMTP_PORT",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119455577,
+      "updatedAt": 1791119455577
+    },
+    {
+      "id": "yj3ofqXaOQkPFLDn",
+      "key": "PGHOST",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "ZEcJ3B7bNkwvW5fV",
+      "key": "NEXT_PUBLIC_CONTROL_API_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "customEnvironmentIds": [],
+      "createdAt": 1785949362247,
+      "updatedAt": 1785949362247
+    },
+    {
+      "id": "zFH8CJvAMFtsHZfW",
+      "key": "POSTGRES_URL_NON_POOLING",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    }
+  ],
+  "legitimateDependencyFound": false,
+  "limitations": "Unmanaged external secret stores cannot be exhaustively inspected. The exact token was generated by this incident and no application, CI, configured environment, hook or connected integration dependency was found in the accessible audit."
+}

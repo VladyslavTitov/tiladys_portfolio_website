@@ -1,0 +1,12 @@
+{
+  "projectId": "prj_6YJMTiWWHE0lX8nzUYCUpA82tEvV",
+  "teamId": "team_xIA4aFDewxF4sHVLtMnss2me",
+  "operation": "Create or merge only this exact Preview branch origin after separate approval",
+  "key": "CONTROL_ALLOWED_ORIGINS",
+  "value": "https://tiladys-control-git-recovery-vercel-neon-schema-fb31b4-tiladys.vercel.app",
+  "type": "plain",
+  "target": [
+    "preview"
+  ],
+  "gitBranch": "recovery/vercel-neon-schema-20261021"
+}

@@ -1,0 +1,829 @@
+{
+  "checkedAt": "2026-10-21T16:43:45.769Z",
+  "projectId": "prj_JWa4iXqzV70GdY3TKDDL2Q5poRRv",
+  "tokenIdentity": {
+    "sha256": "af9814811b9b54d859a8d6e32e2dae6cf6372f4530ef3876b296147f8ce90e90",
+    "scope": "automation-bypass",
+    "isEnvVar": true,
+    "createdAt": 1792596609679,
+    "createdBy": "f6pdOqPjSnenl2MfjOJPhYf3"
+  },
+  "protectedDeploymentId": "dpl_4tCNWpYmKntCA5ycLtLVcQm4F8ui",
+  "protectedUrl": "https://tiladys-public-bb3d7e016-tiladys.vercel.app/en/contact",
+  "withoutToken": {
+    "status": 302,
+    "vercelAuthentication": true,
+    "contactForm": false
+  },
+  "withToken": {
+    "status": 200,
+    "vercelAuthentication": false,
+    "contactForm": true
+  },
+  "otherPublicTokens": [],
+  "controlTokens": [
+    {
+      "sha256": "d6c6e2d5a24b6bd662842013e3d823bd269d93910f243587a6072656c4aad84a",
+      "scope": "automation-bypass",
+      "isEnvVar": true,
+      "createdAt": 1790060005123,
+      "createdBy": "f6pdOqPjSnenl2MfjOJPhYf3"
+    }
+  ],
+  "publicProtection": {
+    "ssoProtection": {
+      "deploymentType": "all_except_custom_domains"
+    },
+    "autoExposeSystemEnvs": true
+  },
+  "controlProtection": {
+    "ssoProtection": {
+      "deploymentType": "all_except_custom_domains"
+    },
+    "autoExposeSystemEnvs": true
+  },
+  "publicEnv": [
+    {
+      "id": "1aGmdndodZCzkKZv",
+      "key": "SMTP_FROM",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119461373,
+      "updatedAt": 1791119461373
+    },
+    {
+      "id": "1SCVTAw512NX1dFt",
+      "key": "SMTP_REPLY_TO",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119464180,
+      "updatedAt": 1791119464180
+    },
+    {
+      "id": "3sCbzdPmeCuEfbVU",
+      "key": "POSTGRES_DATABASE",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "aFYy42Kb9AGVmweh",
+      "key": "CONTACT_IP_HEADER",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115228861,
+      "updatedAt": 1791115228861
+    },
+    {
+      "id": "bB59GvLOVWnuV51B",
+      "key": "DATABASE_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "BTm0JgxGBEFPuXBA",
+      "key": "PGHOST_UNPOOLED",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "c0fh8y9DTokkpmqY",
+      "key": "POSTGRES_PASSWORD",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "c9Q0jeQoNjQDAAeS",
+      "key": "SMTP_USER",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119458524,
+      "updatedAt": 1791119458524
+    },
+    {
+      "id": "DsokZofFKejd8EwY",
+      "key": "CONTACT_UPLOADS_ENABLED",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115277555,
+      "updatedAt": 1791115277555
+    },
+    {
+      "id": "EeeYLk4mhDrwzIou",
+      "key": "PGPASSWORD",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "EJx9XSsub9hxvRjR",
+      "key": "SMTP_HOST",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119452706,
+      "updatedAt": 1791119452706
+    },
+    {
+      "id": "fkFFVhLfKWBmVZck",
+      "key": "CONTACT_RATE_LIMIT_SECRET",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115225326,
+      "updatedAt": 1791115225326
+    },
+    {
+      "id": "gqPP0P0LHrbTxTF9",
+      "key": "POSTGRES_USER",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "H8Gakpkt7oSBz1Yv",
+      "key": "VITE_NEON_AUTH_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "JDudpk5SP8N8jYLf",
+      "key": "PGUSER",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "k6yQZPRRqj8mk9Zq",
+      "key": "POSTGRES_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "LkrRGXb2kYAc1m2U",
+      "key": "CONTACT_AUTO_REPLY_ENABLED",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119466930,
+      "updatedAt": 1791119466930
+    },
+    {
+      "id": "n0S2k6T1MSsnirDt",
+      "key": "POSTGRES_PRISMA_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "ncJG6SheNKhEfD9a",
+      "key": "SITE_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "customEnvironmentIds": [],
+      "createdAt": 1785949386102,
+      "updatedAt": 1785949386102
+    },
+    {
+      "id": "OD01yzVxtw4XlyAA",
+      "key": "POSTGRES_HOST",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "pz19MbCBzP1Ryugc",
+      "key": "NEON_PROJECT_ID",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203544,
+      "updatedAt": 1791115203544
+    },
+    {
+      "id": "quCx8hW4bu6ntAgz",
+      "key": "PGDATABASE",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "RLneqGh5GukdR9XN",
+      "key": "NEXT_PUBLIC_SITE_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "customEnvironmentIds": [],
+      "createdAt": 1785949373152,
+      "updatedAt": 1785949373152
+    },
+    {
+      "id": "sYrV5Tl57IidFLoG",
+      "key": "CONTROL_API_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "customEnvironmentIds": [],
+      "createdAt": 1785949350170,
+      "updatedAt": 1785949350170
+    },
+    {
+      "id": "vhfXRREXD26iOlgt",
+      "key": "DATABASE_URL_UNPOOLED",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "vXg4K5gAyOq3BSDr",
+      "key": "NEON_AUTH_BASE_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "wgNvJkRdiMq4o5ZD",
+      "key": "POSTGRES_URL_NO_SSL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "xtnQjWC9ZIp8wV0v",
+      "key": "SMTP_PORT",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119455577,
+      "updatedAt": 1791119455577
+    },
+    {
+      "id": "yj3ofqXaOQkPFLDn",
+      "key": "PGHOST",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    },
+    {
+      "id": "ZEcJ3B7bNkwvW5fV",
+      "key": "NEXT_PUBLIC_CONTROL_API_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "customEnvironmentIds": [],
+      "createdAt": 1785949362247,
+      "updatedAt": 1785949362247
+    },
+    {
+      "id": "zFH8CJvAMFtsHZfW",
+      "key": "POSTGRES_URL_NON_POOLING",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115203545,
+      "updatedAt": 1791115203545
+    }
+  ],
+  "controlEnv": [
+    {
+      "id": "1qUXZchXT6Eego4A",
+      "key": "POSTGRES_URL_NON_POOLING",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "2IACYdFCwqhixb4O",
+      "key": "POSTGRES_URL_NO_SSL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "3aRZICYQy6E8vGG2",
+      "key": "SITE_URL",
+      "type": "plain",
+      "target": [
+        "preview"
+      ],
+      "gitBranch": "feature/services-redesign",
+      "createdAt": 1790196208867,
+      "updatedAt": 1790196208867
+    },
+    {
+      "id": "63B8uA39NmDISIEs",
+      "key": "CONTROL_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "customEnvironmentIds": [],
+      "createdAt": 1785852141025,
+      "updatedAt": 1785852141025
+    },
+    {
+      "id": "7xiZOKua7eQuM0Jk",
+      "key": "POSTGRES_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "9EsooBqGt9yOu5es",
+      "key": "POSTGRES_HOST",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "AXuVHRqocZUirBiO",
+      "key": "CONTROL_URL",
+      "type": "plain",
+      "target": [
+        "preview"
+      ],
+      "gitBranch": "feature/services-redesign",
+      "createdAt": 1790196205997,
+      "updatedAt": 1790196205997
+    },
+    {
+      "id": "b13vffqEQg4jLUjq",
+      "key": "AUTH_SECRET",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "customEnvironmentIds": [],
+      "createdAt": 1785852108487,
+      "updatedAt": 1785852108487
+    },
+    {
+      "id": "c8q6ZociAM3de6Xf",
+      "key": "POSTGRES_USER",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "c9M379gKAl5dJ6ZH",
+      "key": "PGDATABASE",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "eLL4gqklRF6SXAcG",
+      "key": "PGHOST",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "FPRdrWkbVHahMUVV",
+      "key": "POSTGRES_HOST",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005741,
+      "updatedAt": 1790196005741
+    },
+    {
+      "id": "GHjivje60SPBJ431",
+      "key": "POSTGRES_PRISMA_URL",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "gJkRDjtKYF3NH75M",
+      "key": "PGHOST",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "GSemFULTTfQQ7WDf",
+      "key": "PGPASSWORD",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "IbciNHORbaca35k7",
+      "key": "POSTGRES_PASSWORD",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "in7KcIbxuL7h1cYz",
+      "key": "PGUSER",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "jqFSrc1WJsawAYqx",
+      "key": "POSTGRES_PRISMA_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "KlUTy7ESBL0U0blP",
+      "key": "DATABASE_URL",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "ljgDsyDCFXnQ6wqZ",
+      "key": "SMTP_HOST",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119438812,
+      "updatedAt": 1791119438812
+    },
+    {
+      "id": "LkDOhYxVcSN5Kg2c",
+      "key": "NEON_PROJECT_ID",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "lp37VhfVJakAWRrP",
+      "key": "POSTGRES_DATABASE",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "mfkLHPIknXMYTVIS",
+      "key": "VITE_NEON_AUTH_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "muTTuFLYMUhyQsVP",
+      "key": "PGDATABASE",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "oFUloV8UVjS80d9C",
+      "key": "NEON_AUTH_BASE_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "OY59LTzRsSKHlk0L",
+      "key": "POSTGRES_URL",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "pIcAPguhzEdDrmDs",
+      "key": "PGHOST_UNPOOLED",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "qPujt6WIkTb4U7pR",
+      "key": "SMTP_USER",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119444410,
+      "updatedAt": 1791119444410
+    },
+    {
+      "id": "QtvYiq0fL0m66yT3",
+      "key": "DATABASE_URL_UNPOOLED",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "rdD9J6oTXaVzQ9PI",
+      "key": "DATABASE_URL",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "ShoG1Hd4IT43kACY",
+      "key": "POSTGRES_URL_NO_SSL",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "SjRrTVRg2rKLZcVE",
+      "key": "SITE_URL",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "customEnvironmentIds": [],
+      "createdAt": 1785852129067,
+      "updatedAt": 1785852129067
+    },
+    {
+      "id": "Tkkbld9Tc1eAPCZq",
+      "key": "SMTP_PORT",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119441642,
+      "updatedAt": 1791119441642
+    },
+    {
+      "id": "txtSsi55vezmWKIf",
+      "key": "AUTH_SECRET",
+      "type": "sensitive",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196202985,
+      "updatedAt": 1790196202985
+    },
+    {
+      "id": "UMAqrAyKtWyqnDdf",
+      "key": "PGPASSWORD",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "vImiO95DtBd6VCbd",
+      "key": "NEON_PROJECT_ID",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "vJOPxcyFB0uvX1Wj",
+      "key": "SMTP_FROM",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119447249,
+      "updatedAt": 1791119447249
+    },
+    {
+      "id": "vQG1CP4RaGOzE1B1",
+      "key": "CONTROL_ALLOWED_ORIGINS",
+      "type": "plain",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1790229600806,
+      "updatedAt": 1790229600806
+    },
+    {
+      "id": "VwpT1t5miJeeST4t",
+      "key": "POSTGRES_DATABASE",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "WBQH7xXyCmNz04yx",
+      "key": "POSTGRES_URL_NON_POOLING",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "wCTgS9vkb0OPDVBP",
+      "key": "DATABASE_URL_UNPOOLED",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "XlsBB8ITjWqTxQIl",
+      "key": "POSTGRES_PASSWORD",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005741,
+      "updatedAt": 1790196005741
+    },
+    {
+      "id": "XQpEnmoOSzl5dfSL",
+      "key": "SMTP_REPLY_TO",
+      "type": "sensitive",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791119450012,
+      "updatedAt": 1791119450012
+    },
+    {
+      "id": "YwcN9Y2rEMfLcer3",
+      "key": "PGUSER",
+      "type": "encrypted",
+      "target": [
+        "preview"
+      ],
+      "createdAt": 1790196005742,
+      "updatedAt": 1790196005742
+    },
+    {
+      "id": "zCM9ijfotCP47KIP",
+      "key": "POSTGRES_USER",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    },
+    {
+      "id": "zcOgA2IjbaL6h4Ch",
+      "key": "PGHOST_UNPOOLED",
+      "type": "encrypted",
+      "target": [
+        "production"
+      ],
+      "createdAt": 1791115046546,
+      "updatedAt": 1791115046546
+    }
+  ],
+  "legitimateDependencyFound": false
+}

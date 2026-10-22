@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-21T16:47:19.646Z",
+  "deploymentId": "dpl_5B38LjUBUFpAGnfS3whyHVG9qmJx",
+  "since": "2026-10-21T16:41:10Z",
+  "limit": 100,
+  "requestsInspected": 50,
+  "errorRequests": 0,
+  "errorRequestSummaries": [],
+  "statuses": {
+    "200": 47,
+    "304": 1,
+    "403": 1,
+    "415": 1
+  }
+}
