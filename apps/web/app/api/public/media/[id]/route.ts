@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@tiladys/db';
-import sharp from 'sharp';
+import { publicThumbnail } from '@/lib/public-thumbnail';
 
 export const runtime = 'nodejs';
 
@@ -13,25 +13,22 @@ const responseHeaders = {
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  // Publication is checked on every request so archived/draft media is never exposed by this route.
+  const width = req.nextUrl.searchParams.get('w');
+  const size = width === null ? null : Number(width);
+  if (size !== null && (!Number.isInteger(size) || size < 16 || size > 1920)) {
+    return new NextResponse('Invalid size', { status: 400, headers: responseHeaders });
+  }
+  // Always validate publication live, including when a derivative is cached.
+  // Hot thumbnail requests fetch no original image bytes from Postgres.
   const image = await db.projectImage.findFirst({
     where: { id, archivedAt: null, project: { status: 'PUBLISHED' } },
-    select: { data: true, mimeType: true },
+    select: { id: true, ...(size === null ? { data: true, mimeType: true } : {}) },
   });
   if (!image) return new NextResponse('Not found', { status: 404, headers: responseHeaders });
 
-  const width = req.nextUrl.searchParams.get('w');
-  if (width !== null) {
-    const size = Number(width);
-    if (!Number.isInteger(size) || size < 16 || size > 1920) {
-      return new NextResponse('Invalid size', { status: 400, headers: responseHeaders });
-    }
+  if (size !== null) {
     try {
-      const data = await sharp(image.data, { limitInputPixels: 24_000_000 })
-        .rotate()
-        .resize({ width: size, withoutEnlargement: true })
-        .webp({ quality: 80 })
-        .toBuffer();
+      const data = await publicThumbnail('project', id, size);
       return new NextResponse(new Uint8Array(data), {
         headers: { ...responseHeaders, 'Content-Type': 'image/webp' },
       });

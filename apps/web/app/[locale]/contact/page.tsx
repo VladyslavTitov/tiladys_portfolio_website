@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+import { ContactFormFromQuery } from '@/components/ContactFormFromQuery';
 import {directUploadsAvailable} from '@/lib/upload-reservations';
 import Link from 'next/link';
 import {
@@ -15,7 +17,7 @@ import { PageHero } from '@/components/PageHero';
 import { t } from '@/lib/i18n';
 import { p } from '@/lib/page-copy';
 import { localizedMetadata } from '@/lib/seo';
-import { contactServiceId, serviceCopy, serviceDefinitions } from '@/lib/services';
+import { legacyServiceRedirects, serviceCopy, serviceDefinitions } from '@/lib/services';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -23,19 +25,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return localizedMetadata({ locale, pathname: 'contact', title: c.heroTitle, description: c.heroText });
 }
 
-export default async function ContactPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ service?: string | string[]; mode?: string; project?: string;product?:string;detail?:string }> }) {
+export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const query = await searchParams;
-  const requested = query.service;
-  const mode = typeof query.mode==='string'&&['idea','file','batch','local','remote'].includes(query.mode)?query.mode:'';
-  const detail=typeof query.detail==='string'&&['web-business','web-landing','web-maintenance','pc-setup','pc-troubleshooting','pc-cleaning','pc-upgrade','pc-backup','pc-remote'].includes(query.detail)?query.detail:'';
-  const context=query.project||query.product;
-  const project = typeof context==='string'&&/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(context)?context:'';
-  const requestedService = (Array.isArray(requested) ? requested[0] : requested)?.slice(0, 120) ?? '';
   const c = p(locale).contact;
   const serviceOptions = serviceDefinitions.map((service) => ({ value: service.id, label: serviceCopy(service.id, locale).title }));
-  const requestedServiceId = contactServiceId(requestedService);
-  const initialService = requestedServiceId ?? '';
+  const serviceAliases = { ...legacyServiceRedirects, ...Object.fromEntries(serviceOptions.map(option => [option.value, option.value])) };
+  const formProps = { uploadsEnabled: directUploadsAvailable(), locale, copy: c, serviceOptions };
   const contacts = [
     ...socialAccounts.map(({ key, handle, href, tone }) => ({ key, value: handle, href, tone, Icon: socialIcons[key] })),
     { key: 'email', value: 'contact@tiladys.com', href: 'mailto:contact@tiladys.com', Icon: Mail, tone: 'blue' },
@@ -61,7 +56,9 @@ export default async function ContactPage({ params, searchParams }: { params: Pr
             );
           })}
         </div>
-        <ContactForm initialDetail={detail} initialMode={mode} publicReference={project} uploadsEnabled={directUploadsAvailable()} locale={locale} copy={c} serviceOptions={serviceOptions} initialService={initialService} />
+        <Suspense fallback={<ContactForm {...formProps} />}>
+          <ContactFormFromQuery {...formProps} serviceAliases={serviceAliases} />
+        </Suspense>
       </section>
       <section className="section contact-benefits-section">
         <div className="contact-benefits">

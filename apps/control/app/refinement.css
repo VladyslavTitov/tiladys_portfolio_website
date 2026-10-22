@@ -139,3 +139,6 @@
   .price-sheet-group > summary { padding: 16px 20px; }
   .project-editor > .project-editor__toolbar { position: static; }
 }
+
+/* Immediate feedback during server-rendered dashboard transitions. */
+.control-loading-placeholder { height: 180px; border-radius: 12px; background: var(--admin-line, #e7ecf3); opacity: .55; }

@@ -20,6 +20,7 @@ const contentSecurityPolicy = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  experimental: { globalNotFound: true },
   allowedDevOrigins: ['127.0.0.1'],
   reactStrictMode: true,
   transpilePackages: ["@tiladys/db", "@tiladys/shared"],

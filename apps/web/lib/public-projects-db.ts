@@ -1,3 +1,4 @@
+import { connection } from 'next/server';
 import { Prisma } from '@prisma/client';
 import { db } from '@tiladys/db';
 import { focusedCategoryIds, focusedPortfolioCategories, resolvePortfolioFilter } from './portfolio-filters';
@@ -100,6 +101,7 @@ function serialize(project: PublishedProject): PublicProjectRecord {
 }
 
 export async function getPublishedProjects(options?:{homepageFeatured?:boolean;locale?:string;category?:string;take?:number;skip?:number}): Promise<PublicProjectRecord[]> {
+  await connection();
   const rows = await db.project.findMany({
     where: { status: 'PUBLISHED',...(options?.homepageFeatured?{homepageFeatured:true}:{}),...(options?.locale?{AND:['title','summary'].map(key=>({[key]:{path:[options.locale!],not:''}}))}:{}), ...(options?.category?{category:options.category}:{}) },
     ...(options?.take?{take:options.take,skip:options.skip||0}:{}),
@@ -110,6 +112,7 @@ export async function getPublishedProjects(options?:{homepageFeatured?:boolean;l
 }
 
 export async function getPublishedProjectBySlug(slug: string): Promise<PublicProjectRecord | null> {
+  await connection();
   const project = await db.project.findFirst({
     where: {
       status: 'PUBLISHED',
@@ -128,6 +131,7 @@ const portfolioCardSelect = {
 
 /** A bounded database page. Only published, localized public text participates. */
 export async function getPublishedPortfolio(locale:string, query:{category?:string;filter?:string;q?:string;page?:string}) {
+  await connection();
   const language = ['en','de','uk','ru','sk','fr'].includes(locale) ? locale : 'en';
   const filter = resolvePortfolioFilter(query);
   const search=(query.q||'').trim().slice(0,120);
