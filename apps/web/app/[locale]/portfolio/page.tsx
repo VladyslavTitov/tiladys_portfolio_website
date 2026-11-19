@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/lib/seo';
 import { ContactCta } from '@/components/ContactCta';
 import { PageHero } from '@/components/PageHero';
 import { PortfolioExplorer, type PublicProject } from '@/components/PortfolioExplorer';
@@ -8,7 +9,7 @@ import { p } from '@/lib/page-copy';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const c = p(locale).portfolio;
-  return { title: c.title, description: c.intro };
+  return { title: c.title, description: c.intro, alternates: localizedAlternates(locale, 'portfolio') };
 }
 
 export default async function PortfolioPage({ params }: { params: Promise<{ locale: string }> }) {
