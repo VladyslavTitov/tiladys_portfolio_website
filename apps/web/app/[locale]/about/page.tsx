@@ -1,4 +1,5 @@
 import { localizedAlternates } from '@/lib/seo';
+import { pageSeo } from '@/lib/seo-copy';
 import Image from 'next/image';
 import {
   Award,
@@ -47,7 +48,7 @@ type AboutLocaleContent = (typeof aboutContent)['en'];
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const data = ((aboutContent as Record<string, AboutLocaleContent>)[locale] ?? aboutContent.en) as AboutLocaleContent;
-  return { title: data.hero.title, description: data.hero.subtitle, alternates: localizedAlternates(locale, 'about') };
+  return { ...pageSeo(locale, 'about'), alternates: localizedAlternates(locale, 'about') };
 }
 
 function ListCard({ title, items, Icon }: { title: string; items: string[]; Icon: typeof UserRound }) {
