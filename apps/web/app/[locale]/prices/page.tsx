@@ -1,3 +1,5 @@
+import { localizedAlternates } from '@/lib/seo';
+import { pageSeo } from '@/lib/seo-copy';
 import { ContactCta } from '@/components/ContactCta';
 import { PageHero } from '@/components/PageHero';
 import { PriceExplorer, type PriceSection } from '@/components/PriceExplorer';
@@ -9,7 +11,7 @@ import fallback from '../../../../../packages/db/prisma/price-data.json';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const c = p(locale).prices;
-  return { title: c.heroTitle, description: c.heroText };
+  return { ...pageSeo(locale, 'prices'), alternates: localizedAlternates(locale, 'prices') };
 }
 
 export default async function PricesPage({ params }: { params: Promise<{ locale: string }> }) {

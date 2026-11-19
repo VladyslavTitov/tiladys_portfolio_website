@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/lib/seo';
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -38,9 +39,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const project = await api<ProjectDetail>(`/api/public/projects/${encodeURIComponent(slug)}`, { cache: 'no-store' });
     const title = translated(project.title, locale);
     const description = translated(project.summary, locale);
-    return { title: title || p(locale).project.notFound, description };
+    return { title: title || p(locale).project.notFound, description, alternates: localizedAlternates(locale, `portfolio/${slug}`) };
   } catch {
-    return { title: p(locale).project.notFound };
+    return { title: p(locale).project.notFound, robots: { index: false, follow: false } };
   }
 }
 
