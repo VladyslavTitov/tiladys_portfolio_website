@@ -7,7 +7,16 @@ function isLocale(value: string): value is Locale {
 
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
-  if (pathname.startsWith('/_next') || pathname.includes('.')) return NextResponse.next();
+  // The incoming Host header can differ from nextUrl's internal server host.
+  // Only exact allowlisted hosts are used, and the redirect destination is fixed.
+  const host = (request.headers.get('host') ?? request.nextUrl.host).toLowerCase().replace(/:443$/, '');
+  if (process.env.NODE_ENV === 'production' && process.env.VERCEL_ENV === 'production' && ['tiladys-public.vercel.app', 'www.tiladys.com'].includes(host)) {
+    const destination = new URL('https://tiladys.com');
+    destination.pathname = pathname;
+    destination.search = request.nextUrl.search;
+    return NextResponse.redirect(destination, 308);
+  }
+  if (pathname === '/api' || pathname.startsWith('/api/') || pathname.startsWith('/_next') || pathname.includes('.')) return NextResponse.next();
 
   const hasLocale = locales.some((locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`));
   if (!hasLocale) {
@@ -47,5 +56,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  matcher: ['/:path*'],
 };
