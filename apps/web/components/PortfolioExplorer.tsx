@@ -63,7 +63,7 @@ export function PortfolioExplorer({ locale, projects }: { locale: string; projec
             <p>{translated(featured.summary, locale)}</p>
             <Link className="primary" href={`/${locale}/portfolio/${featured.slug}`}>{c.viewCase}<ArrowRight aria-hidden="true" size={18} /></Link>
           </div>
-          <div className="featured-project__image"><img src={imageFor(featured)} alt={translated(featured.title, locale)} /></div>
+          <div className="featured-project__image"><img src={imageFor(featured)} alt={translated(featured.title, locale)} decoding="async" /></div>
         </article>
       ) : null}
 
@@ -71,7 +71,7 @@ export function PortfolioExplorer({ locale, projects }: { locale: string; projec
         <div className="portfolio-grid">
           {cards.map((project) => (
             <article className="portfolio-card" key={project.id}>
-              <Link href={`/${locale}/portfolio/${project.slug}`} className="portfolio-card__image"><img src={imageFor(project)} alt={translated(project.title, locale)} /></Link>
+              <Link href={`/${locale}/portfolio/${project.slug}`} className="portfolio-card__image"><img src={imageFor(project)} alt={translated(project.title, locale)} loading="lazy" decoding="async" /></Link>
               <div className="portfolio-card__body"><h2>{translated(project.title, locale)}</h2><p>{translated(project.summary, locale)}</p><Link href={`/${locale}/portfolio/${project.slug}`}>{c.viewProject}<ArrowRight aria-hidden="true" size={17} /></Link></div>
             </article>
           ))}

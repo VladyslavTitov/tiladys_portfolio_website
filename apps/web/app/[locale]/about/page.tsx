@@ -80,7 +80,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <p>{data.hero.subtitle}</p>
           </div>
           <div className="about-hero__visual">
-            <Image src="/hero/tiladys-hero.png" width={856} height={512} alt="TiLADYS laptop workspace" priority />
+            <Image src="/hero/tiladys-hero.png" width={856} height={512} alt={({ de: "TiLADYS IT-Arbeitsplatz", en: "TiLADYS IT workspace", uk: "Робоче місце TiLADYS", ru: "Рабочее место TiLADYS", sk: "Pracovisko TiLADYS", fr: "Espace informatique TiLADYS" } as Record<string, string>)[locale] ?? "TiLADYS IT workspace"} priority />
           </div>
         </div>
       </section>
