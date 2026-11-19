@@ -26,7 +26,9 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
   }
 
-  return NextResponse.next();
+  const forwardedHeaders = new Headers(request.headers);
+  forwardedHeaders.set('x-tiladys-locale', pathname.split('/')[1]);
+  return NextResponse.next({ request: { headers: forwardedHeaders } });
 }
 
 export const config = {
