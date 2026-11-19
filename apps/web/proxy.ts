@@ -6,6 +6,16 @@ function isLocale(value: string): value is Locale {
 }
 
 export function proxy(request: NextRequest) {
+  // Preserve the requested path and query while consolidating the public Vercel alias.
+  // Do not redirect branch previews or other development deployments.
+  if (request.nextUrl.hostname === 'tiladys-public.vercel.app') {
+    const destination = request.nextUrl.clone();
+    destination.protocol = 'https:';
+    destination.hostname = 'tiladys.com';
+    destination.port = '';
+    return NextResponse.redirect(destination, 308);
+  }
+
   const pathname = request.nextUrl.pathname;
   if (pathname.startsWith('/_next') || pathname.includes('.')) return NextResponse.next();
 
