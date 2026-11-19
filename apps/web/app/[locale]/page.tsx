@@ -1,4 +1,5 @@
 import { localizedAlternates } from '@/lib/seo';
+import { pageSeo } from '@/lib/seo-copy';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -26,7 +27,7 @@ const processIcons = [MessageSquareText, Search, ClipboardList, Wrench, ShieldCh
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const c = t(locale);
-  return { title: c.hero, description: c.sub, alternates: localizedAlternates(locale, '') };
+  return { ...pageSeo(locale, 'home'), alternates: localizedAlternates(locale, '') };
 }
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
