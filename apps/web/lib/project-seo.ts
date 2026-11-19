@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import {locales} from '@tiladys/shared';
-import { localizedMetadata, siteUrl } from './seo';
+import { localizedAlternates, localizedMetadata, siteUrl } from './seo';
 
 type Localized = Record<string, string>;
 export type ProjectSeo = {
@@ -29,7 +29,7 @@ export function projectMetadata(project: ProjectSeo, locale: string): Metadata {
   return {
     ...metadata,
     robots: { index: Boolean(project.title[locale]?.trim()&&project.summary[locale]?.trim()), follow: true },
-    alternates:{canonical:`${siteUrl}/${locale}/portfolio/${project.slug}`,languages:{...(project.title.en?.trim()&&project.summary.en?.trim()?{'x-default':`${siteUrl}/en/portfolio/${project.slug}`}:{ }),...Object.fromEntries(locales.filter(l=>project.title[l]?.trim()&&project.summary[l]?.trim()).map(l=>[l,`${siteUrl}/${l}/portfolio/${project.slug}`]))}},
+    alternates: localizedAlternates(locale, `portfolio/${project.slug}`, locales.filter((l) => Boolean(project.title[l]?.trim() && project.summary[l]?.trim()))),
     openGraph: { ...metadata.openGraph, title: socialTitle, description: socialDescription, images },
     twitter: { card: images ? 'summary_large_image' : 'summary', title: socialTitle, description: socialDescription, images },
   };

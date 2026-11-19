@@ -9,10 +9,13 @@ import { getPublishedPortfolio } from '@/lib/public-projects-db';
 import { p } from '@/lib/page-copy';
 import { localizedMetadata } from '@/lib/seo';
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ category?: string; filter?: string; q?: string; page?: string }> }) {
   const { locale } = await params;
   const c = p(locale).portfolio;
-  return localizedMetadata({ locale, pathname: 'portfolio', title: c.title, description: c.intro });
+  const metadata = localizedMetadata({ locale, pathname: 'portfolio', title: c.title, description: c.intro });
+  const query = await searchParams;
+  if (query.category || query.filter || query.q || query.page) metadata.robots = { index: false, follow: true };
+  return metadata;
 }
 
 export default async function PortfolioPage({ params, searchParams }: { params: Promise<{ locale: string }>;searchParams:Promise<{category?:string;filter?:string;q?:string;page?:string}> }) {

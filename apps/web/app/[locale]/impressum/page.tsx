@@ -1,10 +1,11 @@
-import { LegalPage } from '@/components/LegalPage';
+import { LegalPage, legalCopy } from '@/components/LegalPage';
 import { t } from '@/lib/i18n';
-import { localizedMetadata } from '@/lib/seo';
+import { localizedMetadata, siteUrl } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  return { ...localizedMetadata({ locale, pathname: 'impressum', title: t(locale).footer.impressum, description: t(locale).footer.impressum }), robots: { index: false, follow: true } };
+  const copy = legalCopy(locale);
+  return { ...localizedMetadata({ locale, pathname: 'impressum', title: t(locale).footer.impressum, description: `${copy.contact}: ${copy.operator}, ${t(locale).footer.location}.` }), alternates: { canonical: `${siteUrl}/${locale}/impressum` }, robots: { index: false, follow: true } };
 }
 
 export default async function ImpressumPage({ params }: { params: Promise<{ locale: string }> }) {

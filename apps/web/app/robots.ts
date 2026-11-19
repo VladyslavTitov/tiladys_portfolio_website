@@ -1,1 +1,9 @@
-import type { MetadataRoute } from 'next'; export default function robots():MetadataRoute.Robots{return{rules:{userAgent:'*',allow:'/',disallow:['/api/']},sitemap:`${process.env.NEXT_PUBLIC_SITE_URL??'https://tiladys.com'}/sitemap.xml`}}
+import type { MetadataRoute } from 'next';
+import { isProductionDeployment, siteUrl } from '@/lib/seo';
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: { userAgent: '*', allow: '/', disallow: ['/api/'] },
+    ...(isProductionDeployment() ? { sitemap: `${siteUrl}/sitemap.xml` } : {}),
+  };
+}
