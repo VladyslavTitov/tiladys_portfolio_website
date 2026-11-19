@@ -8,6 +8,20 @@ export const businessStructuredData = {
   '@type': 'ProfessionalService', name: business.name, email: business.email, telephone: business.telephone,
   address: { '@type': 'PostalAddress', streetAddress: 'Kronenstraße 19', postalCode: '45479', addressLocality: 'Mülheim an der Ruhr', addressCountry: 'DE' },
   '@id': `${siteUrl}/#business`, url: siteUrl, logo: `${siteUrl}/brand/logo.svg`,
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:30',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: 'Saturday',
+      opens: '10:00',
+      closes: '15:00',
+    },
+  ],
   founder: { '@type': 'Person', '@id': `${siteUrl}/#founder`, name: 'Vladyslav Titov' },
 };
 
