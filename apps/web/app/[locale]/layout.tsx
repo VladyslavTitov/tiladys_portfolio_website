@@ -3,10 +3,12 @@ import '../rebuild.css';
 import '../refinement.css';
 import type { Metadata, Viewport } from 'next';
 import { locales, type Locale } from '@tiladys/shared';
+import { siteUrl, isProductionDeployment } from '@/lib/seo';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tiladys.com'),
+  metadataBase: new URL(siteUrl),
+  robots: isProductionDeployment() ? undefined : { index: false, follow: false },
   title: { default: 'TiLADYS — Websites, 3D Printing & PC Support', template: '%s | TiLADYS' },
   description: 'Websites, 3D printing, PC support and digital solutions in Mülheim an der Ruhr, NRW, Germany.',
   openGraph: { type: 'website', siteName: 'TiLADYS' },
