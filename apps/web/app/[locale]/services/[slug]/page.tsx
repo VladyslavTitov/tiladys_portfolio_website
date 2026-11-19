@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params;
   if (!isServiceId(slug)) return { robots: { index: false, follow: true } };
   const copy = serviceCopy(slug, locale);
-  return localizedMetadata({ locale, pathname: `services/${slug}`, title: slug === 'pc-laptop' ? serviceAreaCopy(locale).title : copy.metaTitle, description: slug === 'pc-laptop' ? serviceAreaCopy(locale).description : copy.metaDescription, image: serviceById[slug].image });
+  return localizedMetadata({ locale, pathname: `services/${slug}`, title: slug === 'pc-laptop' ? serviceAreaCopy(locale).title : locale === 'de' && slug === 'websites' ? 'Webdesign & Website-Erstellung in Mülheim an der Ruhr' : copy.metaTitle, description: slug === 'pc-laptop' ? serviceAreaCopy(locale).description : locale === 'de' && slug === 'websites' ? 'TiLADYS erstellt und betreut responsive Websites für Unternehmen und Selbstständige in Mülheim an der Ruhr.' : copy.metaDescription, image: serviceById[slug].image });
 }
 
 export default async function ServicePage({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams: Promise<Record<string, string | string[] | undefined>> }) {
@@ -41,7 +41,7 @@ export default async function ServicePage({ params, searchParams }: { params: Pr
   const area = rebuildCopy(locale);
   const url = `${siteUrl}/${locale}/services/${slug}`;
   const structuredData = [
-    { '@context': 'https://schema.org', '@type': 'Service', name: copy.title, description: copy.short, url, provider: organizationStructuredData, ...(slug === 'pc-laptop' ? { areaServed: pcServiceArea } : {}), hasOfferCatalog: { '@type': 'OfferCatalog', name: copy.title, itemListElement: copy.groups?.map((group) => ({ '@type': 'OfferCatalog', name: group.title, itemListElement: group.items.map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })) })) } },
+    { '@context': 'https://schema.org', '@type': 'Service', name: copy.title, description: copy.short, url, provider: { '@id': organizationStructuredData['@id'] }, ...(slug === 'pc-laptop' ? { areaServed: pcServiceArea } : {}), hasOfferCatalog: { '@type': 'OfferCatalog', name: copy.title, itemListElement: copy.groups?.map((group) => ({ '@type': 'OfferCatalog', name: group.title, itemListElement: group.items.map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })) })) } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: common.breadcrumb, item: `${siteUrl}/${locale}/services` },
       { '@type': 'ListItem', position: 2, name: copy.title, item: url },

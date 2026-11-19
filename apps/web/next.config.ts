@@ -37,6 +37,7 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         headers: [
+          ...(process.env.NODE_ENV === 'production' && process.env.VERCEL_ENV === 'production' ? [] : [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }]),
           {
             key: "X-Content-Type-Options",
             value: "nosniff",

@@ -64,6 +64,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
   const workItems: string[] = project.workItems?.[locale] || project.workItems?.en || project.workItems?.ru || [];
   const images: ProjectImage[] = project.images ?? [];
   const cover = images[0]?.url || project.coverImage || '';
+  const coverAlt = translated(images[0]?.alt, locale) || title;
   const date = project.projectDate ? new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric' }).format(new Date(project.projectDate)) : '—';
   const category = projectCategoryLabel(project.category, locale);
   const linksLabel = projectLinksAvailable(locale);
@@ -81,7 +82,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
               <Link className="secondary secondary--dark" href={`/${locale}/portfolio`}><ArrowLeft aria-hidden="true" size={18} />{c.back}</Link>
             </div>
           </div>
-          <div className="project-detail-hero__image"><ProjectImage src={cover} alt={title} sizes="(max-width: 900px) 100vw, 50vw" priority /></div>
+          <div className="project-detail-hero__image"><ProjectImage src={cover} alt={coverAlt} sizes="(max-width: 900px) 100vw, 50vw" priority /></div>
         </div>
         <div className="project-meta">
           <div><CalendarDays aria-hidden="true" /><span><strong>{c.completed}</strong>{date}</span></div>
@@ -97,7 +98,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
           {role ? <><h2>{c.role}</h2><p>{role}</p></> : null}
           {workItems.length ? <><h2>{c.work}</h2><ul>{workItems.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul></> : null}
         </div>
-        <div className="project-detail-main-image"><ProjectImage src={cover} alt={title} sizes="(max-width: 900px) 100vw, 50vw" /></div>
+        <div className="project-detail-main-image"><ProjectImage src={cover} alt={coverAlt} sizes="(max-width: 900px) 100vw, 50vw" /></div>
       </section>
 
       {images.length ? <section className="section project-gallery-section"><h2>{c.screenshots}</h2><ProjectGallery locale={locale} images={images.map(im=>({id:im.id,url:im.url,alt:translated(im.alt,locale)||title}))} labels={{previous:(interfaceCopy[locale as keyof typeof interfaceCopy]||interfaceCopy.en).previous,next:(interfaceCopy[locale as keyof typeof interfaceCopy]||interfaceCopy.en).next,close:locale==='de'?'Schließen':'Close',open:locale==='de'?'Bild öffnen':'Open image'}}/></section> : null}
