@@ -1,3 +1,4 @@
+import { localizedAlternates } from '@/lib/seo';
 import Link from 'next/link';
 import {
   Bolt,
@@ -18,7 +19,7 @@ import { p } from '@/lib/page-copy';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const c = p(locale).contact;
-  return { title: c.heroTitle, description: c.heroText };
+  return { title: c.heroTitle, description: c.heroText, alternates: localizedAlternates(locale, 'contact') };
 }
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
